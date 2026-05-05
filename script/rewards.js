@@ -7,20 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
             // Reset all tabs to inactive styles
             tabs.forEach(t => {
                 t.classList.remove(
-                    "bg-white", "text-black", "font-bold",
-                    "rounded-md", "shadow-sm", "border", "border-gray-300"
+                    "bg-mint-cream", "text-green-light", "font-bold",
+                    "rounded-full", "shadow-sm", "border", "border-gray-300"
                 );
-                t.classList.add("bg-gray-100", "text-gray-600", "font-medium");
+                t.classList.add("bg-white", "text-gray", "font-medium", "rounded-full");
             });
 
             // Hide all tab contents
             contents.forEach(c => c.classList.add("hidden"));
 
             // Apply active styles to clicked tab
-            tab.classList.remove("bg-gray-100", "text-gray-600", "font-medium");
+            tab.classList.remove("bg-white", "text-gray", "font-medium", "rounded-full");
             tab.classList.add(
-                "bg-white", "text-black", "font-bold",
-                "rounded-md", "shadow-sm", "border", "border-gray-300"
+                "bg-mint-cream", "text-green-light", "font-bold",
+                "rounded-full", "shadow-sm", "border", "border-gray-300"
             );
 
             // Show the related content

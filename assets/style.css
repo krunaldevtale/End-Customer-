@@ -124,6 +124,7 @@
   --box-shadow-3: 0 8px 16px 0 rgba(8, 129, 120, 0.24);
   --box-shadow-4: 0 3px 4px 0 rgba(0, 0, 0, 0.10);
   --box-shadow-5: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  --box-shadow-6: 2px 3px 4px 0px #00000040;
   --shadow-records-card: 6px 6px 54px 0px #0000000D;
   --shadow-records-chart: 0px 2px 6px 0px #0D0A2C14;
 
@@ -563,3 +564,18 @@ input[type="time"]::-ms-expand {
   @apply text-teal-green bg-white border-b-2 border-teal-green font-semibold w-[11.063rem];
 }
 
+.account-input {
+  @apply border border-[#919EAB52] rounded-lg px-3 w-full text-sm focus:outline-none;
+}
+
+.inputs {
+  @apply w-full px-0.5 pt-2 pb-3 focus:outline-none;
+}
+
+.otp {
+  @apply w-8 h-8 text-center border-b-2 border-[#919EAB52] focus:outline-none text-sea-green-dark1 font-semibold;
+}
+
+.legend-title {
+  @apply text-gray-light1 text-xs font-normal
+}

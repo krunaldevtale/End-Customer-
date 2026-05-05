@@ -164,22 +164,22 @@
                 <div class="mt-5">
                     <nav>
                         <ul class="space-y-3">
-                            <li><a href="myaccount.html"
+                            <li><a href="/myaccount.html"
                                     class="flex items-center text-white text-sm bg-green-light px-4 py-2 rounded font-semibold"><i
                                         class="fas fa-user mr-3"></i> My Account</a></li>
-                            <li><a href="#"
+                            <li><a href="/mysave.html"
                                     class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
                                         class="fas fa-bookmark mr-3"></i> My Save</a></li>
-                            <li><a href="myuploads.html"
+                            <li><a href="/myuploads.html"
                                     class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
                                         class="fas fa-upload mr-3"></i> My Uploads</a></li>
-                            <li><a href="manageAddress.html"
+                            <li><a href="/manageAddress.html"
                                     class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
                                         class="fas fa-map-marker-alt mr-3"></i> Manage Address</a></li>
-                            <li><a href="payment_methods.html"
+                            <li><a href="/payment_methods.html"
                                     class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
                                         class="fas fa-credit-card mr-3"></i> Payment Methods</a></li>
-                            <li><a href="policy.html"
+                            <li><a href="/policy.html"
                                     class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
                                         class="fas fa-file-alt mr-3"></i> Policy</a></li>
                             <li><a href="/help-center.html"
@@ -213,7 +213,7 @@
                             </div>    
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-6 gap-y-3 border border-gray-light3 p-6 rounded-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-6 gap-y-3 border border-gray-light3 p-6 rounded-lg relative">
                         <div>
                             <label class="block text-gray-600 mb-1">First Name</label>
                             <span>Gaurav</span>
@@ -234,7 +234,6 @@
                             <label class="block text-gray-600 mb-1">Email</label>
                             <Span>gaurav@gmail.com</Span>
                         </div>
-                        
                         <div>
                             <label class="block text-gray-600 mb-1">Phone No.</label>
                             <span>+91 8345990258</span>
@@ -243,6 +242,9 @@
                             <label class="block text-gray-600 mb-1">Pan Card No.</label>
                            <span>MSPPALS6729A</span>
                         </div>
+                        <button onclick="openModal()" class="flex items-center justify-center w-7 h-7 rounded-lg bg-mint-cream absolute right-5 top-5 cursor-pointer">
+                            <img src="/assets/img/edit-icon.svg" alt="Edit">
+                        </button>
                     </div>
                 </div>
 
@@ -279,9 +281,106 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div id="edit-modal" class="fixed inset-0 bg-black/60 backdrop-blur-[2px] hidden items-start justify-center z-50 pt-18">
+                <div class="bg-white w-full max-w-[704px] rounded-xl border border-platinum-gray shadow-[var(--box-shadow-6)] p-6 relative overflow-y-auto">
+                    <h2 class="text-xl font-semibold text-center mb-6 text-gray-med">Edit your Account Details</h2>
+                    <!-- Form -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <fieldset class="account-input">
+                            <legend class="legend-title">First Name</legend>
+                            <input type="text" class="inputs" value="Gaurav">
+                        </fieldset>
+                        <fieldset class="account-input">
+                            <legend class="legend-title">Last Name</legend>
+                            <input type="text" class="inputs" value="Yadav">
+                        </fieldset>
+                        <fieldset class="account-input">
+                            <legend class="legend-title">Gender</legend>
+                            <input type="text" class="inputs" value="Male">
+                        </fieldset>
+                        <fieldset class="account-input">
+                            <legend class="legend-title">Age</legend>
+                            <input type="text" class="inputs" value="24">
+                        </fieldset>
+                        <fieldset class="account-input">
+                            <legend class="legend-title">Email</legend>
+                            <input type="email" class="inputs" value="gaurav@aibuzz.com">
+                        </fieldset>
+                        <fieldset class="account-input">
+                            <legend class="legend-title">Pan Card No.</legend>
+                            <input type="text" class="inputs" value="GXBPM1012T">
+                        </fieldset>
+                        <fieldset class="account-input">
+                            <legend class="legend-title">Phone no.</legend>
+                            <input type="text" class="inputs" value="7387263849">
+                        </fieldset>
+
+                        <!-- OTP Section -->
+                        <div class="flex items-center gap-3 flex-wrap">
+                            <button class="border border-gray-light1 px-2 py-1.5 rounded-sm text-xs text-gray-light1 font-normal cursor-pointer">Send OTP</button>
+                            <span class="text-gray-light1 text-xs">Resend OTP (00:29 sec)</span>
+                        </div>
+
+                        <!-- OTP Inputs -->
+                        <div class="flex gap-5 border border-pale-blue-gray rounded-lg py-2 px-3">
+                            <input maxlength="1" class="otp" />
+                            <input maxlength="1" class="otp" />
+                            <input maxlength="1" class="otp" />
+                            <input maxlength="1" class="otp" />
+                            
+                            <button class="bg-sea-green-dark1 text-white px-3 py-0.5 rounded text-xs">
+                                Verify OTP
+                            </button>
+                        </div>
+                        <p class="text-vivid-blue text-xs pt-3 font-semibold">
+                            Phone Number Verified Successfully !
+                        </p>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="flex justify-center gap-3 mt-6">
+                        <button onclick="closeModal()" class="border border-[#0881787A] text-sea-green2 font-semibold w-full max-w-[160px] px-4 py-2 rounded-lg">
+                            Cancel
+                        </button>
+                        <button class="bg-sea-green-dark1 text-white w-full max-w-[160px] px-4 py-2 rounded-lg">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <script>
+         function openModal() {
+                console.log("click")
+                document.getElementById('edit-modal').classList.remove('hidden');
+                document.getElementById('edit-modal').classList.add('flex');
+            }
+
+            function closeModal() {
+                document.getElementById('edit-modal').classList.add('hidden');
+                document.getElementById('edit-modal').classList.remove('flex');
+            }
+
+            // Auto move OTP input
+            const otpInputs = document.querySelectorAll('.otp');
+
+            otpInputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                if (input.value && index < otpInputs.length - 1) {
+                otpInputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !input.value && index > 0) {
+                otpInputs[index - 1].focus();
+                }
+            });
+            });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const editBtn = document.getElementById('editBtn');
@@ -314,6 +413,7 @@
                     alert('Information updated successfully!');
                 }
             });
+
         });
     </script>
 </body>

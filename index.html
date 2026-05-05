@@ -135,7 +135,7 @@
                             <li><a href="/src/records.html" class="">Records</a></li>
                             <li><a href="./rewards.html" class="">Rewards</a></li>
                             <li><a href="#" class="">Support</a></li>
-                            <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                            <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span class="text-[#238b6d]">Login/Sign Up</span></a></li>
                         </ul>
                     </div>
                     <!-- Mobile Menu -->
@@ -173,11 +173,11 @@
         <div class="flex-1 absolute  w-full top-0 z-0 bg-ice-gray">
             <!-- Map -->
             <div class="bg-white shadow-sm border-b p-4 pt-0">
-                <div class="flex items-center justify-between gap-4 absolute top-28 z-[999]">
+                <div class="flex items-center justify-between gap-4 absolute top-28 z-[999] w-full px-20">
                     <!-- Location Dropdown -->
                     <div class="relative" id="locationSelect">
                         <div id="locationDropdownBtn"
-                            class="flex items-center gap-2 bg-white h-10 w-45 justify-between  p-2 rounded-lg primary-box-shadow cursor-pointer">
+                            class="flex items-center gap-2 bg-white h-10 w-45 justify-between p-2 rounded-lg primary-box-shadow cursor-pointer">
                             <div class="flex items-center gap-2">
                                 <i data-lucide="map-pin" class="w-5 h-5 text-gray"></i>
                                 <span id="selectedLocation" class="font-medium text-gray text-nowrap">New York, NY</span>
@@ -206,6 +206,14 @@
                     <div id="resultsCount" class="hidden text-sm text-gray-600">
                         5 locations found
                     </div>
+                    <div class="flex items-center gap-4">
+                        <button class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
+                          <img src="/assets/img/notification-icon.svg" alt="notification">
+                        </button>
+                        <button class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
+                          <img src="/assets/img/shopping-cart.svg" alt="Cart">
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -224,17 +232,17 @@
             <!-- Category Filter Buttons -->
             <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-[1000]">
                 <div class="flex gap-2 p-2">
-                    <button data-category="Doctor"
+                    <button data-category="Pharmacy"
                         class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
-                        Doctor
+                        Pharmacy
                     </button>
                     <button data-category="Hospital"
                         class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
                         Hospital
                     </button>
-                    <button data-category="Pharmacy"
+                    <button data-category="Doctor"
                         class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
-                        Pharmacy
+                        Doctor
                     </button>
                     <button data-category="Lab"
                         class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
@@ -243,13 +251,15 @@
                 </div>
             </div>
             <div class="-mt-6 flex items-center justify-center">
-                <div class="w-full max-w-md rounded-lg primary-box-shadow z-[9999]">
+                <div class="w-full max-w-xl rounded-lg primary-box-shadow z-[9999]">
                     <div class="relative bg-white rounded-lg">
-                        <i data-lucide="search"
-                            class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"></i>
+                        <!-- <i data-lucide="search"
+                            class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"></i> -->
                         <input id="searchInput" type="text"
-                            placeholder="Search facilities, specialties, or locations..."
-                            class="pl-10 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
+                            placeholder="I want to search for Medicine, Brands, Doctor, Pharmacy, etc."
+                            class="w-full pl-4 pr-18 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none " />
+                        <i class="fa-solid fa-microphone absolute right-12 top-1/2 -translate-y-1/2 w-4 h-4"></i>
+                        <i class="fa-solid fa-camera absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4"></i>
                     </div>
                 </div>
             </div>
