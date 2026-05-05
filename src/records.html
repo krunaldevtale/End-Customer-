@@ -10,7 +10,7 @@
 </head>
 
 <body class="no-scrollbar">
-    <div class="container bg-gradient-to-r from-[#99EAD6] to-[#407672] min-h-screen">
+    <div class="container  min-h-screen">
         <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
             <div class="max-w-[150px] max-h-10">
                 <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
@@ -94,23 +94,22 @@
                         <li><a href="#" class="">Rewards</a></li>
                         <li><a href="#" class="">Support</a></li>
                         <li>
-                            <div
-                                class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
-                                <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p>
-                                <i data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="/assets/img/blog-profile.svg" alt="">
+                            <a href="#">
+                                <div class="flex items-center gap-1">
+                                    <img src="/assets/img/user.svg" alt="user">
+                                    <p class="font-semibold text-base text-sea-green-deep">Login / Sign Up</p>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <!-- Mobile Menu -->
-                <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                <ul id="mobile-menu"
+                    class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
                     <li><a href="#" class="block">Home</a></li>
                     <li><a href="#" class="block">About</a></li>
                     <li>
-                      <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                        <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
                             Services
                             <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -133,13 +132,31 @@
         </header>
         <!--Main Content-->
         <div class=" items-center  relative">
-            <div class="flex items-center justify-center  content-div">
-                <img src="/assets/img/records-img1.svg" alt=""
-                    class="left-img hidden md:block md:w-[11rem] md:h-[22rem] lg:w-[20.75rem] lg:h-[37.5rem]">
+            <div
+                class="bg-linear-to-r from-dark-teal-green to-teal-green2 w-full h-[237px] px-15 py-5 flex items-center justify-between mt-7">
+                <div class="flex items-center gap-[28px]">
+                    <img src="/assets/img/trophy.svg" alt="trophy">
+                    <div class="flex flex-col gap-1">
+                        <p class="font-semibold text-white text-[42px]">Congratulation Aniket,</p>
+                        <p class="text-lg font-semibold text-white max-w-[582px]">Collect points from referrals,
+                            purchases, donations, and app activity. Redeem them for
+                            exciting offers and healthcare benefits.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 items-center">
+                    <p class="font-bold text-[42px] text-white">500.25</p>
+                    <p class="font-semibold text-[27px] text-golden-yellow">Points</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center  content-div mt-[35px]">
+
                 <div class="flex flex-col gap-4 items-center">
-                    <h1 class="font-bold text-2xl md:text-3xl lg:text-5xl text-white main-heading">What Would You Like To Upload?
+                    <h1 class="font-bold text-2xl md:text-3xl lg:text-5xl text-sea-green-dark1 main-heading">What Would
+                        You Like
+                        To Upload?
                     </h1>
-                    <h4 class="font-normal text-xs text-white secondary-heading">Select a Category From The Dropdown
+                    <h4 class="font-normal text-xs text-smoky-blue-gray secondary-heading">Select a Category From The
+                        Dropdown
                         Below</h4>
                     <div
                         class="bg-white pl-2 rounded-full  flex items-center w-full max-w-[300px] relative custom-select-container border border-powder-aqua">
@@ -267,315 +284,243 @@
 
                         <!-- Right section with the main search button -->
                         <button
-                            class="bg-deep-teal-green text-white px-2 py-1 md:px-3 md:py-1.5 lg:px-6 lg:py-3 rounded-full font-semibold shadow-md  flex-shrink-0 w-1/2 md:w-[5rem] lg:w-auto mt-4 md:mt-0 search-btn cursor-pointer">
+                            class="bg-deep-teal-green text-white px-2 py-1 md:px-3 md:py-1.5 lg:px-6 lg:py-3 rounded-full font-semibold shadow-md  flex-shrink-0 w-1/2 md:w-[5rem] lg:w-auto mt-4 md:mt-0  cursor-pointer">
                             Search
                         </button>
                     </div>
 
                 </div>
-                <img src="/assets/img/records-img2.svg" alt=""
-                    class="right-img hidden md:block md:w-[11rem] md:h-[22rem] lg:w-[18.75rem] lg:h-[37.5rem]">
+
             </div>
-            <!--Grid-->
-            <div class="record-type hidden">
+            <div class="mt-10 grid grid-cols-4 gap-[30px]">
                 <div
-                    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-10 px-5 md:px-20 cards mt-60 md:mt-0 md:pt-10">
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/prescription-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-vivid-blue">Prescription</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                        <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-powder-blue">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-vivid-blue flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
+                    class="bg-white border border-cool-fog rounded-[20px] shadow-records-card p-4 flex flex-col gap-2 cursor-pointer">
+                    <img src="/assets/img/add-records.svg" alt="">
+                    <div class="flex items-center justify-between">
+                        <p class="font-bold text-xl text-medium-deep-blue">Add Records</p>
+                        <div
+                            class="w-[43px] h-[43px] rounded-full flex items-center justify-center bg-transparent-indigo-mist">
+                            <div
+                                class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-medium-deep-blue">
+                                <i data-lucide="arrow-right" class="text-white"></i>
                             </div>
-                        </a>
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/medicine-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-golden-yellow">Medicine</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
                         </div>
-                         <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-cream">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-golden-yellow flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/prescription-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-vivid-blue">Prescription</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                        <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-powder-blue">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-vivid-blue flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/prescription-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-vivid-blue">Prescription</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                         <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-powder-blue">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-vivid-blue flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/bill-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-lime-green">Bill</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                         <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-pale-mint">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-lime-green flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/bill-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-lime-green">Bill</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                        <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-pale-mint">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-lime-green flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/medicine-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-golden-yellow">Medicine</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                         <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-cream">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-golden-yellow flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/prescription-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-vivid-blue">Prescription</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                         <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-powder-blue">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-vivid-blue flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/prescription-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-vivid-blue">Prescription</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                        <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-powder-blue">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-vivid-blue flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/medicine-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-golden-yellow">Medicine</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                        <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-cream">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-golden-yellow flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/prescription-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-vivid-blue">Prescription</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                        <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-powder-blue">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-vivid-blue flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div
-                        class="bg-white rounded-[20px]  border border-pale-blue-gray p-4 relative w-full max-w-[18.75rem] max-h-[16.375rem]">
-                        <div class="flex flex-col gap-2">
-                            <img src="/assets/img/prescription-img.svg" alt="">
-                            <h1 class="font-bold text-2xl text-vivid-blue">Prescription</h1>
-                            <p class="font-semibold text-xs text-slate-gray pt-1">Patient: Monica Singh</p>
-                            <p class="font-semibold text-xs text-slate-gray">Doctor: Dr. Aisha Rahman</p>
-                            <p class="font-semibold text-xs text-cool-gray">12/05/25, 12:30 PM</p>
-                        </div>
-                        <a href="#">
-                            <div class="absolute top-37 md:top-40 right-2  md:right-4 cursor-pointer">
-                                <div class="relative w-10 h-10  md:w-15 md:h-15  rounded-full flex items-center justify-center md:p-8
-                            bg-light-powder-blue">
-                                    <!-- Inner, solid blue circle with the 'i' icon -->
-                                    <div
-                                        class="absolute w-5 h-5 md:w-10 md:h-10  rounded-full bg-vivid-blue flex items-center justify-center">
-                                        <!-- SVG for the information 'i' icon -->
-                                        <span class="text-white font-bold">i</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
                     </div>
                 </div>
-                <div class="flex justify-center mt-8 space-x-2">
-                    <button id="prev-page" class="px-4 py-2 text-medium-gray rounded-md">Previous</button>
-                    <div id="page-numbers" class="flex space-x-2">
+
+                <div
+                    class="bg-white border border-cool-fog rounded-[20px] shadow-records-card p-4 flex flex-col gap-2 cursor-pointer">
+                    <img src="/assets/img/add-member.svg" alt="">
+                    <div class="flex items-center justify-between">
+                        <p class="font-bold text-xl text-warm-yellow">Add Member</p>
+                        <div class="w-[43px] h-[43px] rounded-full flex items-center justify-center bg-warm-sun-tint">
+                            <div class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-warm-yellow">
+                                <i data-lucide="arrow-right" class="text-white"></i>
+                            </div>
+                        </div>
                     </div>
-                    <button id="next-page" class="px-4 py-2 text-medium-gray rounded-md">Next</button>
+                </div>
+
+                <div
+                    class="bg-white border border-cool-fog rounded-[20px] shadow-records-card p-4 flex flex-col gap-2 cursor-pointer">
+                    <img src="/assets/img/add-doctor.svg" alt="">
+                    <div class="flex items-center justify-between">
+                        <p class="font-bold text-xl text-azure-blue">Add Doctor</p>
+                        <div
+                            class="w-[43px] h-[43px] rounded-full flex items-center justify-center bg-transparent-azure-blue">
+                            <div class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-azure-blue">
+                                <i data-lucide="arrow-right" class="text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white border border-cool-fog rounded-[20px] shadow-records-card p-4 flex flex-col gap-2 cursor-pointer">
+                    <img src="/assets/img/view-history.svg" alt="">
+                    <div class="flex items-center justify-between">
+                        <p class="font-bold text-xl text-turquoise">View History</p>
+                        <div
+                            class="w-[43px] h-[43px] rounded-full flex items-center justify-center bg-transparent-turquoise">
+                            <div class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-turquoise">
+                                <i data-lucide="arrow-right" class="text-white"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="mt-[35px] bg-white rounded-[10px] shadow-records-chart px-10 py-7 flex flex-col gap-13">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-col gap-1">
+                        <p class="font-semibold text-[22px] text-gray">This month so far</p>
+                        <p class="text-lg"><span class="font-bold text-sea-green-dark1">1.89L</span> <span
+                                class="font-normal text-dark-gray">/ 1.05L</span> <span class="font-normal text-gray">
+                                Last month</span> <span class="font-bold text-[22px] text-gray">69.44k</span> </p>
+                    </div>
 
+                    <div class="flex items-center gap-[30px]">
+                        <div
+                            class="w-[253px] h-[42px] rounded-xl py-4 px-2.5 border border-platinum-gray flex items-center justify-between dropdown-wrapper relative cursor-pointer">
+                            <input type="text"
+                                class="focus:ring-0 focus:outline-none text-sm font-semibold text-gray placeholder:text-sm placeholder:font-normal placeholder:gray-dark-1 dropdown-text"
+                                placeholder="Select" readonly>
+                            <i data-lucide="chevron-down" class="text-gray"></i>
+
+                            <div
+                                class="absolute bg-white shadow-lg rounded-[10x] p-4 dropdown-menu w-full top-11 right-0 hidden">
+                                <ul class="font-normal text-sm text-gray space-y-2">
+                                    <li>Prescription</li>
+                                    <li>Medical Bill</li>
+                                    <li>Prescription</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div
+                            class="w-[253px] h-[42px] rounded-xl py-4 px-2.5 border border-platinum-gray flex items-center justify-between  relative cursor-pointer">
+                            <input type="text"
+                                class="focus:ring-0 focus:outline-none text-sm font-semibold text-gray placeholder:text-sm placeholder:font-normal placeholder:gray-dark-1"
+                                placeholder="Select Date" readonly>
+                            <i data-lucide="calendar-days" class="text-gray"></i>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="chart-container">
+                    <canvas id="salesChart" class="h-[350px]"></canvas>
+                </div>
+
+                <div class="flex items-center justify-center gap-[11px]">
+                    <button
+                        class="w-[88px] h-[34px] flex items-center justify-center rounded-lg border border-gray-light3 cursor-pointer dailyBtn hover:bg-sea-green-dark1 group">
+                        <span class="font-semibold text-sm text-gray group-hover:text-white">Daily</span>
+                    </button>
+                    <button
+                        class="w-[88px] h-[34px] flex items-center justify-center rounded-lg border border-gray-light3 cursor-pointer monthlyBtn hover:bg-sea-green-dark1 group">
+                        <span class="font-semibold text-sm text-gray group-hover:text-white">Monthly</span>
+                    </button>
+                </div>
+            </div>
         </div>
+
+        <footer class="w-full">
+            <!-- Top Footer Content -->
+            <div
+                class="bg-gray-tint px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+                <!-- Logo & Contact -->
+                <div class="flex flex-col gap-3.5">
+                    <a href="#">
+                        <img src="assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" />
+                    </a>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Phone:
+                            <span class="text-dim-gray text-15-normal">(+123) 456-7898</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Email:
+                            <span class="text-dim-gray text-15-normal">hello@drodo.com</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Address:
+                            <span class="text-dim-gray text-15-normal">6890 Blvd, The Bronx, NY 1058, USA</span>
+                        </h3>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex gap-3 flex-wrap">
+                        <a href="#"><img src="assets/img/facebook-icon.svg" alt="facebook-icon" /></a>
+                        <a href="#"><img src="assets/img/twitter-icon.svg" alt="twitter-icon" /></a>
+                        <a href="#"><img src="assets/img/Instagram-icon.svg" alt="Instagram-icon" /></a>
+                        <a href="#"><img src="assets/img/linkdin-icon.svg" alt="linkdin-icon" /></a>
+                        <a href="#"><img src="assets/img/Pinterest-icon.svg" alt="Pinterest-icon" /></a>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Information</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Customer Care -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Customer Care</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Help & FAQs</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Policy -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Policy</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Purchasing Policy</a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter -->
+                <nav class="flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Newsletter</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <p class="text-15-normal text-dim-gray">
+                        Sign up for our mailing list to get the latest updates & offers.
+                    </p>
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Enter your email address"
+                            class="h-[50px] w-full py-3 px-4 text-muted-gray placeholder:text-muted-gray focus:outline-none focus:ring-0 rounded border border-light-gray text-15-normal" />
+                        <button
+                            class="w-full py-3 px-6 flex items-center justify-center rounded bg-sea-green-deep text-15-semibold text-white hover:opacity-90 transition cursor-pointer">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Bottom Footer Strip -->
+            <div class="bg-snow-gray py-6 px-6 sm:px-10 md:px-16 xl:px-20 w-full">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                    <p class="text-dim-gray text-15-normal">
+                        @ Avatar. Designed By Aibuzz
+                    </p>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <p class="text-dim-gray text-15-normal">
+                            We accept payment via:
+                        </p>
+                        <div class="flex items-center flex-wrap gap-2 sm:gap-[10px] justify-center sm:justify-start">
+                            <img src="assets/img/payment-via-1.png" alt="payment-1" class="h-6" />
+                            <img src="assets/img/payment-via-5.png" alt="payment-2" class="h-6" />
+                            <img src="assets/img/payment-via-4.png" alt="payment-3" class="h-6" />
+                            <img src="assets/img/payment-via-3.png" alt="payment-4" class="h-6" />
+                            <img src="assets/img/payment-via-2.png" alt="payment-5" class="h-6" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!--Upload Popup-->
         <div class="uploadPopup fixed inset-0 flex justify-center   hidden bg-transparent-black  z-100">
@@ -887,6 +832,7 @@
         lucide.createIcons();
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/script/records.js"></script>
 </body>
 

@@ -46,7 +46,8 @@
   --color-gray-med: #161C24;
   --color-gray-700: #454F5B;
   --color-purple-10: rgba(122, 90, 248, 0.10);
-
+  --color-dark-teal-green: #115B46;
+  --color-teal-green2: #1B785D;
   /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
   --box-shadow-2: 0 12px 24px -4px rgba(145, 158, 171, 0.12);
@@ -108,7 +109,15 @@
   --color-medium-aquamarine: #5ED9BA;
   --color-stone-gray: #636465;
   --color-platinum-gray: #C4CDD5;
-  --text-jet-black:#1F1F1F;
+  --text-jet-black: #1F1F1F;
+  --color-cool-fog: #919EAB52;
+  --color-medium-deep-blue: #505ABB;
+  --color-transparent-indigo-mist: #505ABB29;
+  --color-warm-sun-tint: #FFC10729;
+  --color-azure-blue: #0B77AE;
+  --color-transparent-azure-blue: #0B77AE29;
+  --color-turquoise: #28BDB9;
+  --color-transparent-turquoise: #28BDB929;
   /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
   --box-shadow-btn: 0 8px 16px 0 rgba(145, 158, 171, 0.12);
@@ -116,6 +125,8 @@
   --box-shadow-4: 0 3px 4px 0 rgba(0, 0, 0, 0.10);
   --box-shadow-5: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   --box-shadow-6: 2px 3px 4px 0px #00000040;
+  --shadow-records-card: 6px 6px 54px 0px #0000000D;
+  --shadow-records-chart: 0px 2px 6px 0px #0D0A2C14;
 
   /* Font Size and Font Weight */
   --text-30-bold: 1.875rem;
@@ -253,7 +264,7 @@ body {
 }
 
 .carousel-section-donate {
-  @apply  mt-4;
+  @apply mt-4;
 }
 
 .carousel-container {
@@ -442,7 +453,7 @@ body {
   inset: 0;
   z-index: 9999;
   background-color: white;
-  
+
   /* <-- keeps it hidden initially */
   flex-direction: column;
   transition: opacity 0.3s ease;
@@ -482,27 +493,31 @@ body {
   @apply -top-2 left-2 text-xs;
 }
 
- /* width */
-  .tab-contents::-webkit-scrollbar {
-    width: 6px; /* scrollbar width */
-  }
+/* width */
+.tab-contents::-webkit-scrollbar {
+  width: 6px;
+  /* scrollbar width */
+}
 
-  /* Track (background) */
-  .tab-contents::-webkit-scrollbar-track {
-    background: #f1f1f1; /* light gray background */
-    border-radius: 6px;
-  }
+/* Track (background) */
+.tab-contents::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* light gray background */
+  border-radius: 6px;
+}
 
-  /* Handle (the draggable part) */
-  .tab-contents::-webkit-scrollbar-thumb {
-    background: #1A7A5E; /* Tailwind green-600 */
-    border-radius: 6px;
-  }
+/* Handle (the draggable part) */
+.tab-contents::-webkit-scrollbar-thumb {
+  background: #1A7A5E;
+  /* Tailwind green-600 */
+  border-radius: 6px;
+}
 
-  /* Handle on hover */
-  .tab-contents::-webkit-scrollbar-thumb:hover {
-    background: #15803d; /* Tailwind green-700 */
-  }
+/* Handle on hover */
+.tab-contents::-webkit-scrollbar-thumb:hover {
+  background: #15803d;
+  /* Tailwind green-700 */
+}
 
 .sidebar-overlay {
   position: fixed;
@@ -516,12 +531,13 @@ body {
 }
 
 .tab-btn {
-    @apply flex items-center h-9 px-6 rounded-[20px] border border-gainsboro-gray cursor-pointer 
-           font-semibold text-sm text-gray whitespace-nowrap;
+  @apply flex items-center h-9 px-6 rounded-[20px] border border-gainsboro-gray cursor-pointer font-semibold text-sm text-gray whitespace-nowrap;
 }
+
 .tab-btn.active {
-    @apply bg-mint-cream text-[#1A7A5E] border-none;
+  @apply bg-mint-cream text-[#1A7A5E] border-none;
 }
+
 /* Chrome, Safari, Edge */
 input[type="time"]::-webkit-calendar-picker-indicator {
   display: none;
@@ -541,10 +557,11 @@ input[type="time"]::-ms-expand {
 }
 
 .tab-btn-donation {
-    @apply text-dark-gray text-base font-normal pb-2 text-center
+  @apply text-dark-gray text-base font-normal pb-2 text-center
 }
+
 .tab-btn-donation.active {
-    @apply text-teal-green bg-white border-b-2 border-teal-green font-semibold w-[11.063rem];
+  @apply text-teal-green bg-white border-b-2 border-teal-green font-semibold w-[11.063rem];
 }
 
 .account-input {
