@@ -579,3 +579,21 @@ input[type="time"]::-ms-expand {
 .legend-title {
   @apply text-gray-light1 text-xs font-normal
 }
+
+/* Login Page */
+
+.login-btn {
+  @apply w-full bg-sea-green-dark1 p-2.5 border border-cool-fog rounded-lg text-white text-base font-semibold
+}
+
+.login-btn-2 {
+  @apply w-full p-2.5 border border-sea-green-dark1 rounded-lg text-sea-green-dark1 text-base font-semibold
+}
+
+.login-inputs {
+  @apply bg-[#FFFFFF66] w-full py-3 rounded-lg px-3 text-gray-dark-1 font-normal focus:outline-none
+}
+
+.login-otp-input {
+  @apply w-[54px] h-[54px] text-center rounded-lg bg-[#FFFFFF66] text-2xl font-semibold text-[#212B36] focus:outline-none
+}
