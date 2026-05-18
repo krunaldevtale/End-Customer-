@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation Form</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+
+<body class="no-scrollbar">
+    <section class="bg-white mt-[60px] mx-10 mb-[30px]">
+
+        <!-- Step Indicators -->
+        <div class="flex items-center justify-center gap-3 stepIndicator">
+            <!-- Step 1 (active by default) -->
+            <div class="w-[67px] h-[42px] rounded-lg flex items-center justify-center bg-sea-green-dark1">
+                <span class="font-normal text-base text-white">Step 1</span>
+            </div>
+
+            <!-- Connector line -->
+            <div class="w-[141px] h-0.5 rounded-full bg-dim-gray step-connector"></div>
+
+            <!-- Step 2 (highlighted after submit) -->
+            <div
+                class="w-[67px] h-[42px] rounded-lg flex items-center justify-center border border-sea-green-dark1 step2-indicator">
+                <span class="font-normal text-base text-black">Step 2</span>
+            </div>
+        </div>
+
+        <!-- Heading -->
+        <div class="pt-[56px] flex flex-col gap-2">
+            <p class="font-bold text-3xl text-dark-slate heading">Select as per your Preference</p>
+            <div class="w-full h-0.5 bg-smoke-white">
+                <div class="w-[100px] h-[3px] bg-sea-green-dark1"></div>
+            </div>
+        </div>
+
+        <form class="stepForm pt-[56px]">
+            <div class="flex flex-col gap-10">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    <!-- ── Health Issues (Multi-Select) ─────────────────────── -->
+                    <div class="flex flex-col gap-2 relative dropdown-wrapper" id="health-issues-wrapper">
+                        <label class="font-semibold text-sm text-gray">Health Issues</label>
+                        <!-- Tags + input live inside this box -->
+                        <div id="health-input-box"
+                            class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
+                            <span id="health-placeholder"
+                                class="text-sm text-medium-gray font-normal select-none">Select Health Issues</span>
+                            <!-- Arrow icon, absolutely positioned right -->
+                            <span
+                                class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                        </div>
+                        <!-- hidden real input so form still works -->
+                        <input type="hidden" id="health-hidden-input">
+                        <div class="dropdown-menu hidden absolute rounded-md bg-white border border-cool-fog shadow-lg z-[100] w-full h-[200px] overflow-y-auto no-scrollbar"
+                            style="top:100%; margin-top:4px;">
+                            <ul class="font-semibold text-base text-black space-y-2 cursor-pointer">
+                                <li class="hover:bg-light-gray px-3 py-1">Fever</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Cold</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Body Ache</li>
+                                <li class="hover:bg-light-gray px-3 py-1">General Advice</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Rashes</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Pimples</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Skin Infection</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Hair Fall</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Child Fever</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Vaccines</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Skin Allergy</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Irregular Periods</li>
+                                <li class="hover:bg-light-gray px-3 py-1">PCOS</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Pregnancy Issues</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Back Pain</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Joint Pain</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Fracture Support</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Anxiety</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Depression</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Stress</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Sleep Issues</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Ear Pain</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Sinus</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Throat Infection</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Nose Bleed</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Eye Pain</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Redness</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Vision Check</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Erectile Dysfunction (ED)</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Early Ejaculation</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Urine Infection</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Diabetes</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Thyroid Problems</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Chest Pain</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Palpitations</li>
+                                <li class="hover:bg-light-gray px-3 py-1">BP Management</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Acidity</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Constipation</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Liver Problems</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Asthma</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Breathing Difficulty</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Chronic Cough</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Migraine</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Seizures</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Numbness</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Second Opinion on Cancer</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Treatment Review</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Hernia</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Piles</li>
+                                <li class="hover:bg-light-gray px-3 py-1">Lump Evaluation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="flex flex-col gap-2">
+                        <label class="font-semibold text-sm text-gray">Describe in more detail</label>
+                        <input type="text"
+                            class="border border-cool-fog shadow-stepform-input rounded-2xl font-normal text-sm focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray w-full py-[11px] px-2"
+                            placeholder="Enter Description">
+                    </div>
+                </div>
+
+                <!-- ── Specialization (Single-Select with tag) ──────────────── -->
+                <div class="flex flex-col gap-2 dropdown-wrapper relative" id="specialization-wrapper">
+                    <label class="font-semibold text-sm text-gray">Specialization</label>
+                    <div id="spec-input-box"
+                        class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
+                        <span id="spec-placeholder" class="text-sm text-medium-gray font-normal select-none">Select
+                            Specialization</span>
+                        <span
+                            class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                    </div>
+                    <input type="hidden" id="spec-hidden-input">
+                    <div
+                        class="dropdown-menu hidden absolute top-[72px] bg-white rounded-md border border-cool-fog z-[100] w-full h-[200px] overflow-y-auto no-scrollbar shadow-lg">
+                        <ul class="font-semibold text-base text-gray">
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">medical_services</span>
+                                    <p>General Physician</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">dermatology</span>
+                                    <p>Dermatologist</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">child_care</span>
+                                    <p>Pediatrician</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">pregnant_woman</span>
+                                    <p>Gynecologist</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">orthopedics</span>
+                                    <p>Orthopedic</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">psychology</span>
+                                    <p>Psychiatrist / Counselor</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">hearing</span>
+                                    <p>ENT Specialist</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">urology</span>
+                                    <p>Sexologist / Urologist</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">endocrinology</span>
+                                    <p>Endocrinologist</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">cardiology</span>
+                                    <p>Cardiologist</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">gastroenterology</span>
+                                    <p>Gastroenterologist</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li
+                                class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">pulmonology</span>
+                                    <p>Pulmonologist</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                            <li class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined">neurology</span>
+                                    <p>Neurologist</p>
+                                </div>
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-10">
+                    <!-- Consultation Type -->
+                    <div class="flex flex-col gap-[17px]">
+                        <label class="font-semibold text-sm text-gray">Select Consultation Type</label>
+                        <div class="flex items-center gap-2">
+                            <div class="w-[205px] flex items-center gap-2">
+                                <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                <span class="font-normal text-sm text-dark-gray">Clinic Visit</span>
+                            </div>
+                            <div class="w-[205px] flex items-center gap-2">
+                                <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                <span class="font-normal text-sm text-dark-gray">Home Visit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Type -->
+                    <div class="flex flex-col gap-[17px]">
+                        <label class="font-semibold text-sm text-gray">Select Service Type</label>
+                        <div class="flex items-center gap-2">
+                            <div class="w-[205px] flex items-center gap-2">
+                                <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                <span class="font-normal text-sm text-dark-gray">Emergency</span>
+                            </div>
+                            <div class="w-[205px] flex items-center gap-2">
+                                <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                <span class="font-normal text-sm text-dark-gray">Normal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── Date & Time with Custom Picker ───────────────────── -->
+                    <div class="flex flex-col gap-2 relative">
+                        <label class="font-semibold text-sm text-gray">Preferred Date &amp; Time</label>
+                        <div
+                            class="border border-cool-fog shadow-stepform-input rounded-2xl flex items-center justify-between relative cursor-pointer py-2.5 px-2">
+                            <input type="text" id="datetime-input"
+                                class="cursor-pointer focus:ring-0 focus:outline-none w-full placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray"
+                                placeholder="Select Date &amp; Time" readonly>
+                            <span id="calendar-icon"
+                                class="material-symbols-outlined cursor-pointer text-lg!">calendar_month</span>
+                        </div>
+
+                        <!-- Custom DateTime Picker Popup -->
+                        <div id="datetime-picker"
+                            class="hidden absolute top-[72px] left-0 z-[200] bg-white border border-cool-fog rounded-2xl shadow-xl p-4 w-[320px]">
+                            <!-- Calendar Header -->
+                            <div class="flex items-center justify-between mb-3">
+                                <button type="button" id="cal-prev"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined text-base">chevron_left</span>
+                                </button>
+                                <span id="cal-month-year" class="font-semibold text-sm text-gray-700"></span>
+                                <button type="button" id="cal-next"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined text-base">chevron_right</span>
+                                </button>
+                            </div>
+
+                            <!-- Calendar Days Grid -->
+                            <div id="cal-days" class="mb-4"></div>
+
+                            <!-- Time Picker - 3 separate triggers -->
+                            <div class="border-t border-gray-100 pt-3 mt-1">
+                                <label class="font-semibold text-xs text-gray-500 block mb-2">Select Time</label>
+                                <div class="flex items-center gap-2">
+                                    <!-- Hour -->
+                                    <div class="relative time-part-wrapper" id="hour-wrapper">
+                                        <div id="hour-trigger"
+                                            class="time-part-trigger flex items-center justify-center gap-1 border-2 border-blue-400 bg-white rounded-xl px-3 py-2 cursor-pointer min-w-[64px]">
+                                            <span id="hour-display" class="text-sm font-semibold text-gray-500">9</span>
+                                            <span class="material-symbols-outlined text-gray-400"
+                                                style="font-size:16px;">keyboard_arrow_down</span>
+                                        </div>
+                                        <div id="hour-menu"
+                                            class="hidden absolute bottom-full mb-1 left-0 bg-white border border-cool-fog rounded-lg shadow-lg z-[300] w-[80px] max-h-[180px] overflow-y-auto no-scrollbar">
+                                        </div>
+                                    </div>
+
+                                    <span class="text-gray-400 font-bold text-base">:</span>
+
+                                    <!-- Minute -->
+                                    <div class="relative time-part-wrapper" id="minute-wrapper">
+                                        <div id="minute-trigger"
+                                            class="time-part-trigger flex items-center justify-center gap-1 border border-gray-200 bg-gray-100 rounded-xl px-3 py-2 cursor-pointer min-w-[64px]">
+                                            <span id="minute-display"
+                                                class="text-sm font-semibold text-gray-400">00</span>
+                                            <span class="material-symbols-outlined text-gray-400"
+                                                style="font-size:16px;">keyboard_arrow_down</span>
+                                        </div>
+                                        <div id="minute-menu"
+                                            class="hidden absolute bottom-full mb-1 left-0 bg-white border border-cool-fog rounded-lg shadow-lg z-[300] w-[80px] max-h-[180px] overflow-y-auto no-scrollbar">
+                                        </div>
+                                    </div>
+
+                                    <span class="text-gray-400 font-bold text-base">:</span>
+
+                                    <!-- AM/PM -->
+                                    <div class="relative time-part-wrapper" id="ampm-wrapper">
+                                        <div id="ampm-trigger"
+                                            class="time-part-trigger flex items-center justify-center gap-1 border border-gray-200 bg-gray-100 rounded-xl px-3 py-2 cursor-pointer min-w-[64px]">
+                                            <span id="ampm-display"
+                                                class="text-sm font-semibold text-gray-400">AM</span>
+                                            <span class="material-symbols-outlined text-gray-400"
+                                                style="font-size:16px;">keyboard_arrow_down</span>
+                                        </div>
+                                        <div id="ampm-menu"
+                                            class="hidden absolute bottom-full mb-1 left-0 bg-white border border-cool-fog rounded-lg shadow-lg z-[300] w-[80px] max-h-[180px] overflow-y-auto no-scrollbar">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Confirm Button -->
+                            <button type="button" id="confirm-datetime"
+                                class="mt-4 w-full py-2 rounded-lg text-white font-semibold text-sm cursor-pointer"
+                                style="background-color:#1a7a6e">
+                                Confirm
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Budget -->
+                    <div class="flex flex-col gap-2">
+                        <label class="font-semibold text-sm text-gray">Budget (Min: &#8377;3000)</label>
+                        <input type="number" onkeydown="return !['e','E','+','-'].includes(event.key)"
+                            class="border border-cool-fog shadow-stepform-input rounded-2xl font-normal text-sm focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray w-full py-3.5 px-2"
+                            placeholder="Enter Budget">
+                    </div>
+                </div>
+
+                <!-- Select Patient -->
+                <div class="flex flex-col gap-2">
+                    <label class="font-semibold text-sm text-gray">Select Patient</label>
+                    <div
+                        class="border border-deep-teal shadow-patient-dropdown rounded-[38px] flex items-center justify-between relative cursor-pointer py-2.5 px-[13px]">
+                        <div class="flex items-center gap-[5px]">
+                            <img src="/assets/img/patient-icon.svg" alt="">
+                            <input type="text"
+                                class="cursor-pointer focus:ring-0 focus:outline-none w-full placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray"
+                                placeholder="Select Patient" readonly>
+                        </div>
+                        <span class="material-symbols-outlined cursor-pointer text-lg!">keyboard_arrow_down</span>
+                    </div>
+                </div>
+
+                <!-- Select Address (hidden until submit) -->
+                <div class="flex flex-col gap-6 hidden addressBtn">
+                    <label class="font-bold text-lg text-gray">Select Address</label>
+                    <div
+                        class="border border-deep-aqua-teal rounded-lg flex items-center justify-center gap-2.5 py-[11px] cursor-pointer addNewAddress">
+                        <span class="material-symbols-outlined">add</span>
+                        <span class="font-bold text-base text-sea-green2">Add new address</span>
+                    </div>
+                </div>
+
+                <!--Selected Address-->
+                <div
+                    class="selectedAddress hidden border border-platinum rounded-lg p-3 flex items-center justify-between">
+                    <div class="flex items-center gap-[18px]">
+                        <div
+                            class="w-6 h-6 rounded-full flex items-center justify-center bg-linear-to-b from-near-white to-lavender-gray">
+                            <img src="/assets/img/location-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <p class="font-normal text-rich-black text-sm">Selected address - <span
+                                    class="font-semibold"> Saket Enclave</span></p>
+                            <p class="font-normal text-xs! text-jet-black">Chhatarpur, New Delhi</p>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined text-xl!">chevron_right</span>
+                </div>
+
+                <!-- Credit Points Banner -->
+                <div
+                    class="border border-sea-green-dark1 bg-deep-cyan-teal rounded-lg flex items-center justify-center gap-2.5 py-[21px]">
+                    <span class="font-medium text-xs text-dark-gray">Earn <span class="text-sea-green-dark1">2.8</span>
+                        Credit points on this service completion.</span>
+                    <img src="/assets/img/coin.svg" alt="">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex items-center justify-end">
+                    <button type="button"
+                        class="w-[343px] h-12 flex items-center justify-center rounded-lg bg-sea-green-dark1 cursor-pointer shadow-button stepBtn1">
+                        <span class="font-bold text-white text-base">Submit</span>
+                    </button>
+                </div>
+
+            </div>
+        </form>
+
+        <!--Add Address-->
+        <div class="addressForm mt-[56px] border border-gray-light3 rounded-[12px] p-4 hidden">
+            <form class="flex flex-col gap-4">
+                <input type="text"
+                    class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                    placeholder="First Name">
+                <input type="text"
+                    class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                    placeholder="Last Name">
+                <input type="number"
+                    class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                    placeholder="Phone">
+                <div
+                    class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                    <input type="text"
+                        class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="Country" readonly>
+                    <span class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                </div>
+
+                <div
+                    class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                    <input type="text"
+                        class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="City" readonly>
+                    <span class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                </div>
+
+                <div
+                    class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                    <input type="text"
+                        class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="Area" readonly>
+                    <span class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                </div>
+
+                <div
+                    class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                    <input type="text"
+                        class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="Zip Code" readonly>
+                    <span class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                </div>
+
+                <input type="text"
+                    class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                    placeholder="Address">
+
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <p class="font-semibold text-base text-gray">Choose Address Type</p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-[99px] h-9 flex items-center justify-center gap-2 bg-gray-light3 shadow-addressType rounded-lg cursor-pointer">
+                            <span class="material-symbols-outlined">home</span>
+                            <span class="font-medium text-sm text-gray">Home</span>
+                        </div>
+
+                        <div
+                            class="w-[99px] h-9 flex items-center justify-center gap-2 bg-gray-light3 shadow-addressType rounded-lg cursor-pointer">
+                            <span class="material-symbols-outlined">apartment</span>
+                            <span class="font-medium text-sm text-gray">Office</span>
+                        </div>
+
+                        <div
+                            class="w-[99px] h-9 flex items-center justify-center gap-2 bg-gray-light3 shadow-addressType rounded-lg cursor-pointer">
+                            <span class="material-symbols-outlined">location_city</span>
+                            <span class="font-medium text-sm text-gray">City</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" class="accent-sea-green-dark1 w-[18px] h-[18px] cursor-pointer">
+                    <p class="font-normal text-sm text-gray">Set Default Address</p>
+                </div>
+
+                <div class="flex items-center justify-end">
+                    <button
+                        class="w-[343px] h-12 flex items-center justify-center bg-sea-green2 shadow-button cursor-pointer saveNowBtn rounded-lg">
+                        <span class="font-bold text-[15px] text-white">Save Now</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script/doctor/form.js"></script>
+    <script src="/script/doctor/validation.js"></script>
+</body>
+
+</html>
