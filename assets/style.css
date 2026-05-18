@@ -11,7 +11,10 @@
   --color-gray-light1: #919EAB;
   --color-gray-light2: #637381;
   --color-warm-yellow: #FFC107;
+  --color-ochre-yellow: #F79E1B;
+  --color-ochre-yellow1:#FFDB1E;
   --color-gray-light3: #DFE3E8;
+  --color-gray-light4: #F6F6F6;
   --color-white: #ffffff;
   --color-gray: #212b36;
   --color-gray1: #5B5760;
@@ -24,6 +27,7 @@
   --color-dim-gray: #696969;
   --color-snow-gray: #F7F8FA;
   --color-muted-gray: #999999;
+  --color-muted-gray1: #919EAB3D;
   --color-light-gray: #EEEEEE;
   --color-gray-tint: #F4F6F8;
   --color-dark-charcoal: #111111;
@@ -33,7 +37,9 @@
   --color-light-sea-green: #99EAD6;
   --color-light-sea-green1: #08817880;
   --color-light-sea-green2: #00B69B;
+  --color-light-sea-green3:#0881787A;
   --color-transparent-light-sea-green: #3AAFA926;
+  --color-transparent-light-sea-green1:  #08817814;
   --color-sea-green-deep: #238B6D;
   --color-sea-green-dark: #407672;
   --color-sea-green-dark1: #1A7A5E;
