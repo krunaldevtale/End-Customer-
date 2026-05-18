@@ -5,132 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="/assets/output.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <title>MediFlow | Order History</title>
+    <title>Order History</title>
     <style>
-        @media (max-width: 768px) {
-            .order-table-header {
-                display: none;
-            }
-            .order-row {
-                display: block !important;
-                background: white;
-                border-radius: 20px;
-                margin-bottom: 1rem;
-                padding: 1rem;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-                border: 1px solid #eef2f2;
-            }
-            .order-row .grid-cols-5 {
-                display: flex;
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-            .order-row [data-label] {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                padding: 0.25rem 0;
-                border-bottom: 1px dashed #e9edef;
-            }
-            .order-row [data-label]:last-child {
-                border-bottom: none;
-            }
-            .order-row [data-label]::before {
-                content: attr(data-label);
-                font-weight: 600;
-                color: #2c7a6e;
-                background: #eaf7f5;
-                padding: 0.2rem 0.8rem;
-                border-radius: 30px;
-                font-size: 0.75rem;
-            }
-            .order-row .text-center {
-                text-align: left;
-            }
-            .flex.flex-col.lg\:flex-row {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .relative input {
-                width: 100% !important;
-                max-width: 100%;
-            }
-            .flex.flex-col.md\:flex-row.justify-between,
-            .flex.gap-4 {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 1rem;
-            }
-            .relative select {
-                width: 100%;
-                min-width: auto;
-            }
-            .tabs-scroll-wrapper {
-                overflow-x: auto;
-                white-space: nowrap;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: thin;
-                width: 100%;
-            }
-            .tabs-scroll-wrapper .flex {
-                display: inline-flex;
-                width: auto;
-            }
-            .referral-banner {
-                flex-direction: column;
-                text-align: center;
-            }
-            .referral-banner-img {
-                display: none;
-            }
-            .invite-btn-full {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-        @media (max-width: 480px) {
-            .text-\[24px\] {
-                font-size: 1.4rem;
-            }
-            .px-28 {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
-        }
-        .mobile-nav-open {
-            display: flex !important;
-            animation: fadeSlideDown 0.2s ease;
-        }
-        @keyframes fadeSlideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        /* active tab styles + smooth transition */
-        .tab-btn-active {
-            background-color: #1A7A5E !important;
-            color: white !important;
-            border-color: #1A7A5E !important;
-        }
-        .pagination-btn-active {
-            background-color: #088178 !important;
-            color: white !important;
-            border: none;
-        }
-        .transition-smooth {
-            transition: all 0.2s ease;
-        }
+        .container {
+  max-width: 1440px !important;
+  margin: 0 auto;
+  width: 100%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+
+  color: var(--color-gray-dark);
+
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
+.nav-menu {
+  max-height: 78px;
+  height: 78px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  width: 100%;
+}
+
+.nav-menu ul li {
+  @apply text-[var(--color-dark-charcoal)];
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.nav-menu ul li a:hover {
+  @apply text-[var(--color-sea-green-deep)];
+}
+
+.tab-btn.active {
+    background-color: #1A7A5E !important; /* Matches your table header green */
+    color: #ffffff !important;
+    border-color: #088178 !important;
+}
+
     </style>
 </head>
 <body class="no-scrollbar bg-gray-tint">
     <div class="w-full max-w-[1600px] mx-auto min-h-screen">
-        <!-- Header (unchanged) -->
+        
         <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
             <div class="max-w-[150px] max-h-10">
                 <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
@@ -161,7 +86,7 @@
             </nav>
         </header>
 
-        <!-- Main Order Section -->
+       
         <section class="bg-[#f7f9f9] min-h-screen px-4 md:px-6 lg:px-20 py-5 font-sans">
             <!-- Close Icon Row -->
             <div class="flex justify-end mb-2">
@@ -172,25 +97,25 @@
 
             <!-- Breadcrumb -->
             <div class="flex items-center gap-2 text-[16px] font-medium mb-6">
-                <a href="#" class="text-[#212B36] hover:text-teal-700">Home</a>
+                <a href="#" class="text-gray hover:text-teal-700">Home</a>
                 <span class="text-gray-400 font-light">&gt;</span>
-                <a href="#" class="text-[#212B36] hover:text-teal-700">Profile</a>
+                <a href="#" class="text-gray hover:text-teal-700">Profile</a>
                 <span class="text-gray-400 font-light">&gt;</span>
-                <a href="#" class="text-[#8E8E93] hover:text-teal-700">Appointment</a>
+                <a href="#" class="text-gray3 hover:text-teal-700">Appointment</a>
                 <span class="text-gray-400 font-light">&gt;</span>
-                <span class="text-[#8E8E93] font-medium">Order History</span>
+                <span class="text-gray3 font-medium">Order History</span>
             </div>
 
             <!-- Header & Action Row -->
             <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-8 gap-4">
-                <h2 class="text-[24px] font-semibold text-[#212B36]">Order Details</h2>
+                <h2 class="text-[24px] font-semibold text-gray">Order Details</h2>
                 <div class="flex flex-wrap items-center gap-5">
                     <div class="relative">
-                        <input type="text" placeholder="Search by name or categories" id="searchInput" class="w-[260px] md:w-[380px] bg-white border border-gray-200 rounded-md py-2.5 pl-10 pr-4 font-['Open_Sans'] font-normal text-[16px] text-[#929292] placeholder:text-[#929292] focus:outline-none focus:ring-1 focus:ring-teal-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#929292]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        <input type="text" placeholder="Search by name or categories" id="searchInput" class="w-[260px] md:w-[380px] bg-white border border-gray-200 rounded-md py-2.5 pl-10 pr-4 font-['Open_Sans'] font-normal text-[16px] text-gray4 placeholder:text-gray4 focus:outline-none focus:ring-1 focus:ring-teal-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                     </div>
-                    <button class="flex items-center gap-2 border border-[#088178] text-[#088178] rounded-md px-5 py-2 text-sm font-medium hover:bg-[#088178] hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 9l-7 7-7-7" /></svg>Filter</button>
-                    <button class="flex items-center gap-2 border border-[#088178] text-[#088178] rounded-md px-5 py-2 text-sm font-medium hover:bg-[#088178] hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16" /></svg>View</button>
+                    <button class="flex items-center gap-2 border border-sea-green2 text-sea-green2 rounded-md px-5 py-2 text-sm font-medium hover:bg-sea-green2 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 9l-7 7-7-7" /></svg>Filter</button>
+                    <button class="flex items-center gap-2 border border-sea-green2 text-sea-green2 rounded-md px-5 py-2 text-sm font-medium hover:bg-sea-green2 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16" /></svg>View</button>
                 </div>
             </div>
 
@@ -198,12 +123,12 @@
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
                 <div class="flex gap-4">
                     <div class="relative">
-                        <select class="appearance-none bg-[#eaf7f5] border-none rounded-full pl-10 pr-10 py-2.5 text-sm text-[#088178] font-semibold min-w-[310px] focus:outline-none"><option>Aniket</option></select>
+                        <select class="appearance-none bg-[#eaf7f5] border-none rounded-full pl-10 pr-10 py-2.5 text-sm text-sea-green2 font-semibold min-w-[310px] focus:outline-none"><option>Aniket</option></select>
                         <img src="/assets/img/Profile-acc.png" class="absolute left-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-teal-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                     </div>
                     <div class="relative">
-                        <select class="appearance-none bg-[#eaf7f5] border-none rounded-full pl-10 pr-10 py-2.5 text-sm text-[#088178] font-semibold min-w-[310px] focus:outline-none"><option>Dr. Monika</option></select>
+                        <select class="appearance-none bg-[#eaf7f5] border-none rounded-full pl-10 pr-10 py-2.5 text-sm text-sea-green2 font-semibold min-w-[310px] focus:outline-none"><option>Dr. Monika</option></select>
                         <img src="/assets/img/blog-profile.svg" class="absolute left-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-teal-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                     </div>
@@ -216,17 +141,19 @@
 
             <!-- TABS (All, Pharmacy, Doctor, Hospital, Labs) - fully interactive -->
             <div class="flex justify-between items-center mb-6 flex-wrap gap-3">
-                <div class="flex flex-wrap items-center gap-2" id="tabsContainer">
-                    <button data-category="all" class="tab-btn px-6 py-2 rounded-full border border-[#000000] bg-white text-sm text-gray-600 transition-smooth">All</button>
-                    <button data-category="Pharmacy" class="tab-btn px-6 py-2 rounded-full border border-[#000000] bg-white text-sm text-gray-600 transition-smooth">Pharmacy</button>
-                    <button data-category="Doctor" class="tab-btn px-6 py-2 rounded-full border border-[#000000] bg-white text-sm text-gray-600 transition-smooth">Doctor</button>
-                    <button data-category="Hospital" class="tab-btn px-6 py-2 rounded-full border border-[#000000] bg-white text-sm text-gray-600 transition-smooth">Hospital</button>
-                    <button data-category="Labs" class="tab-btn px-6 py-2 rounded-full border border-[#000000] bg-white text-sm text-gray-600 transition-smooth">Labs</button>
-                </div>
+               <div class="flex flex-wrap items-center gap-2 overflow-x-auto no-scrollbar pb-1 w-full sm:w-auto" id="tabsContainer">
+    <button data-category="all" class="tab-btn active px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">All</button>
+    <button data-category="Pharmacy" class="tab-btn px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">Pharmacy</button>
+    <button data-category="Doctor" class="tab-btn px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">Doctor</button>
+    <button data-category="Hospital" class="tab-btn px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">Hospital</button>
+    <button data-category="Labs" class="tab-btn px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">Labs</button>
+</div>
                 <button class="text-teal-700 hover:scale-110 transition">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 </button>
             </div>
+
+          
 
             <!-- Main Table (Grid based) -->
             <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
@@ -242,12 +169,12 @@
                 </div>
             </div>
 
-            <!-- SEPARATE PAGINATION COMPONENT (dynamic 1 2 3 ...) -->
+           
             <div id="paginationWrapper" class="flex items-center justify-center gap-4 mt-10">
                 <!-- pagination injected here -->
             </div>
 
-            <!-- Referral Banner -->
+           
             <div class="mt-12 bg-gradient-to-r from-[#53d4c3] to-[#21a495] rounded-xl p-2 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div class="text-white text-center md:text-left"><h3 class="font-bold text-2xl mb-1">Refer and Earn</h3><p class="text-base text-white/90">Invite family and friends to earn cashbacks</p></div>
                 <button class="bg-[#1A7A5E] text-white px-32 py-1 mr-50 rounded-full border border-white font-bold text-lg hover:bg-[#005a52] transition shadow-md">Invite Now</button>
