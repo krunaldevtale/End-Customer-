@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <!-- Material Symbols Outlined -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body>
+    <main class=" min-h-screen px-[80px]">
+        <section>
+            <header
+                class="nav-menu-records  py-2 mx-auto flex items-center justify-between relative z-10">
+                <div class="max-w-[150px] max-h-10">
+                    <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+                </div>
+                <nav class="">
+                    <div class="">
+                        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                        <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Home
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Medicine
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Maps
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="/src/records.html" class="">Records</a></li>
+                            <li><a href="#" class="">Rewards</a></li>
+                            <li><a href="#" class="">Support</a></li>
+                            <li>
+                                <a href="#">
+                                    <div class="flex items-center gap-1">
+                                        <img src="/assets/img/user.svg" alt="user">
+                                        <p class="font-semibold text-base text-sea-green-deep">Login / Sign Up</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <ul id="mobile-menu"
+                        class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                        <li><a href="#" class="block">Home</a></li>
+                        <li><a href="#" class="block">About</a></li>
+                        <li>
+                            <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                                Services
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                                <li>
+                                    <a href="#" class="block hover:text-gray-300">Web Design</a>
+                                </li>
+                                <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                                <li>
+                                    <a href="#" class="block hover:text-gray-300">Consulting</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="block hover:text-gray-300">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Breadcrumb + Top Right Icons -->
+            <div class="flex items-center justify-between mb-6 pt-[39px]">
+
+                <!-- Breadcrumb -->
+                <div class="flex items-center gap-2 text-base font-normal text-gray">
+
+                    <a href="home.html" class="hover:text-sea-green-dark1 transition">
+                        Home
+                    </a>
+
+                    <span>›</span>
+
+                    <a href="#" class="hover:text-sea-green-dark1 transition">
+                        Profile
+                    </a>
+                    <span>›</span>
+
+                    <a href="appointments.html" class="text-gray-700 font-medium hover:text-sea-green-dark1 transition">
+                        Appointment
+                    </a>
+
+                </div>
+
+                <!-- Right Icons -->
+                <div class="flex items-center gap-2">
+
+                    <!-- Calendar Icon -->
+                    <button class="w-10 h-10 flex items-center justify-center text-gray ">
+
+                        <span class="material-symbols-outlined text-[20px]">
+                            calendar_month
+                        </span>
+
+                    </button>
+
+                    <!-- Close Icon -->
+                    <a href="#" class="w-10 h-10 flex items-center justify-center text-gray ">
+
+                        <span class="material-symbols-outlined text-[20px]">
+                            close
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Main Card -->
+            <div class="bg-white border border-gray-light3 rounded-2xl p-6 shadow-sm">
+
+                <!-- Top Section -->
+                <div class="flex flex-col lg:flex-row justify-between gap-8">
+
+                    <!-- Left -->
+                    <div class="flex gap-4 items-start">
+
+                        <!-- Doctor Image -->
+                        <div class="w-16 h-16 rounded-full overflow-hidden  mt-2 shrink-0">
+
+                            <img src="/assets/img/appointments/dr-ritika-singh.png" alt="doctor"
+                                class="w-full h-full object-cover" />
+
+                        </div>
+
+                        <!-- Doctor Details -->
+                        <div>
+
+                            <!-- Name -->
+                            <div class="flex items-center gap-2">
+
+                                <h2 class="text-base font-semibold text-gray">
+                                    Dr. Ritika Singh
+                                </h2>
+
+                                <div class="flex items-center gap-1 text-sm">
+
+                                    <img src="/assets/img/appointments/quick-service.svg" alt="verified"
+                                        class="w-6 h-6 object-contain" />
+
+                                    <span class="text-dark-gray text-xs font-normal">4.3</span>
+
+                                    <span class="text-ochre-yellow">★</span>
+
+                                </div>
+                            </div>
+
+                            <!-- Degree -->
+                            <p class="text-base font-normal text-gray-dark-1 mt-1">
+                                MBBS, MD (Dermatology)
+                            </p>
+
+                            <!-- Experience -->
+                            <div class="space-y-1 mt-3 text-base font-normal text-gray-dark-1">
+
+                                <p>12 Years Experience</p>
+                                <p>Female Doctor</p>
+                                <p>24/04/2025 - 03:34 PM</p>
+
+                            </div>
+
+                            <!-- Progress -->
+                            <div class="flex items-center gap-4 mt-5">
+
+                                <div class="w-3 h-3 rounded-full bg-sea-green2"></div>
+                                <div class="w-12 h-[3px] bg-sea-green2"></div>
+
+                                <div class="w-3 h-3 rounded-full bg-sea-green2"></div>
+                                <div class="w-12 h-[3px] bg-sea-green2"></div>
+
+                                <div class="w-3 h-3 rounded-full bg-muted-gray1"></div>
+                                <div class="w-12 h-[3px] bg-muted-gray1"></div>
+
+
+
+                            </div>
+
+                            <!-- Labels -->
+                            <div class="flex gap-8 mt-3 text-sm font-normal">
+
+                                <span class="text-gray">Enquiry</span>
+                                <span class="text-gray-light1">Appointment</span>
+                                <span class="text-gray-light1">Completed</span>
+
+                            </div>
+
+                            <!-- Appointment Info -->
+                            <div class="mt-10 space-y-4 ">
+
+                                <div class="flex gap-16">
+                                    <span class="text-sm font-normal text-gray-dark-1">
+                                        Appointment
+                                    </span>
+                                </div>
+
+                                <div class="flex gap-16">
+                                    <span class="text-sm font-normal text-gray-dark-1">
+                                        Location
+                                    </span>
+                                </div>
+
+                                <div class="flex gap-16">
+                                    <span class="text-sm font-normal text-gray-dark-1">
+                                        Pay directly to the doctor
+                                    </span>
+                                </div>
+
+                                <div class="flex gap-16">
+                                    <span class="text-sm font-normal text-gray">
+                                        Emergency Service
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right -->
+                    <div class="flex flex-col items-end">
+
+                        <div class="space-y-2 text-right ">
+                            <p class="text-base font-normal">6 km</p>
+                            <p class="text-base font-normal">20 mins away</p>
+                            <p class="text-base font-normal text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                            <p class="text-base font-normal text-gray-dark-1">Order #R32512</p>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="flex gap-3 mt-6">
+
+                            <!-- Directions -->
+                            <button
+                                class="border border-gray-light3 px-4 py-2 rounded-lg text-sm font-normal text-gray flex items-center gap-2">
+
+
+                                <span class="material-symbols-outlined">
+                                    arrows_output
+                                </span>
+
+                                Directions
+
+                            </button>
+
+                            <!-- Call -->
+                            <button
+                                class="border border-gray-light3 px-4 py-2 rounded-lg text-sm font-normal text-gray flex items-center gap-2">
+
+                                <span class="material-symbols-outlined text-[18px]">
+                                    call
+                                </span>
+
+                                Call
+
+                            </button>
+
+                            <!-- Share -->
+                            <button
+                                class="share-open-btn border border-gray-light3 px-4 py-2 rounded-lg text-sm font-normal text-gray flex items-center gap-2 cursor-pointer ">
+
+                                <span class="material-symbols-outlined text-[18px]">
+                                    share
+                                </span>
+
+                                Share
+
+                            </button>
+
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="flex gap-4 mt-6 flex-wrap">
+
+                            <!-- UPI QR Payment -->
+                            <div
+                                class="bg-mint-cream border border-sea-green-dark1 rounded-lg px-5 py-3 text-sm font-normal text-gray w-[320px]">
+
+                                <div class="flex justify-between items-center gap-4">
+
+                                    <span class="leading-5">
+                                        Get QR pay via UPI confirm delivery
+                                    </span>
+
+                                    <!-- Image -->
+                                    <img src="/assets/img/appointments/upi.svg" alt="upi"
+                                        class="w-8 h-8 object-contain shrink-0" />
+
+                                </div>
+
+                            </div>
+
+                            <!-- Payment Gateway -->
+                            <div
+                                class="bg-mint-cream border border-sea-green-dark1 rounded-lg px-5 py-3 text-sm font-normal text-gray w-[320px]">
+
+                                <div class="flex justify-between items-center gap-4">
+
+                                    <span class="leading-5">
+                                        Pay via payment gateway confirm delivery
+                                    </span>
+
+                                    <!-- Rounded Rupee -->
+                                    <div
+                                        class="w-8 h-8 rounded-full border border-deep-teal-green flex items-center justify-center shrink-0">
+
+                                        <span class="text-deep-teal-green font-semibold text-sm">
+                                            ₹
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Clinic Info -->
+                        <div class="mt-6 text-right text-sm font-normal  space-y-2">
+                            <p class="text-gray">24/04/2025 - 4 PM to 6 PM</p>
+                            <p class="text-gray">Andheri E - 416001</p>
+                            <p class="text-gray">Clinic Visit <span class="text-sea-green-dark1">₹500</span></p>
+                        </div>
+
+                        <!-- Profile Visibility -->
+                        <div class="mt-4">
+
+                            <button
+                                class="proforma-open-btn border border-deep-teal-green bg-mint-cream text-gray px-5 py-2 rounded-lg text-sm font-normal flex items-center gap-2 cursor-pointer">
+
+                                Proforma Bill
+
+                                <span class="material-symbols-outlined text-[18px]">
+                                    visibility
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Share Popup -->
+            <div class="popup-overlay fixed inset-0 bg-black/40 flex items-center justify-center z-50 hidden">
+
+                <div class="popup-box bg-white w-full max-w-md rounded-2xl shadow-xl p-4 relative animate-fadeIn">
+
+                    <!-- Top Drag Line -->
+                    <div class="flex justify-center mb-4">
+
+                        <div class="w-14 h-2 bg-gray-light3 rounded-full"></div>
+
+                    </div>
+
+                    <!-- Header -->
+                    <div class="flex items-center justify-between border-b border-sea-green-dark1 pb-3">
+
+                        <h2 class="text-xl font-semibold">
+                            Share
+                        </h2>
+
+                        <!-- Close -->
+                        <button class="popup-close-btn ">
+
+                            <span class="material-symbols-outlined text-[32px] cursor-pointer">
+                                close
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Share Options -->
+                    <div class="bg-gray-light4 rounded-2xl p-6 mt-5">
+
+                        <div class="grid grid-cols-3 gap-y-8 text-center">
+
+                            <!-- WhatsApp -->
+                            <div class="flex flex-col items-center gap-2">
+
+                                <img src="/assets/img/appointments/whatsapp.svg" alt="whatsapp"
+                                    class="w-14 h-14 object-contain" />
+
+                                <span class="text-dark-gray text-lg font-normal">
+                                    WhatsApp
+                                </span>
+
+                            </div>
+
+                            <!-- Telegram -->
+                            <div class="flex flex-col items-center gap-2">
+
+                                <img src="/assets/img/appointments/telegram.svg" alt="telegram"
+                                    class="w-14 h-14 object-contain" />
+
+                                <span class="text-dark-gray text-lg font-normal">
+                                    Telegram
+                                </span>
+
+                            </div>
+
+                            <!-- Facebook -->
+                            <div class="flex flex-col items-center gap-2">
+
+                                <img src="/assets/img/appointments/facebook.svg" alt="facebook"
+                                    class="w-14 h-14 object-contain" />
+
+                                <span class="text-dark-gray text-lg font-normal">
+                                    Facebook
+                                </span>
+
+                            </div>
+
+                            <!-- Message -->
+                            <div class="flex flex-col items-center gap-2">
+
+                                <img src="/assets/img/appointments/message.svg" alt="message"
+                                    class="w-14 h-14 object-contain" />
+
+                                <span class="text-dark-gray text-lg font-normal">
+                                    Message
+                                </span>
+
+                            </div>
+
+                            <!-- Gmail -->
+                            <div class="flex flex-col items-center gap-2">
+
+                                <img src="/assets/img/appointments/mail.svg" alt="gmail"
+                                    class="w-14 h-14 object-contain" />
+
+                                <span class="text-dark-gray text-lg font-normal">
+                                    E mail
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Copy Link -->
+                    <div class="border border-slate-gray rounded-xl overflow-hidden flex items-center mt-5">
+
+                        <input type="text" placeholder="https://avatar.com/shorts........"
+                            class="w-full px-4 py-4 outline-none font-normal text-sm" />
+
+                        <button class="bg-sea-green-dark1 text-white px-6 py-4 text-sm font-normal">
+
+                            Copy
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proforma Popup -->
+            <div
+                class="proforma-popup-overlay fixed inset-0 bg-black/40 z-50 hidden flex items-center justify-center p-4">
+
+                <!-- Popup Box -->
+                <div class="bg-white rounded-2xl shadow-2xl relative max-w-lg w-full p-4 animate-fadeIn">
+
+                    <!-- Close Button -->
+                    <button class="proforma-close-btn absolute top-4 right-4 ">
+
+                        <span class="material-symbols-outlined text-[28px] cursor-pointer">
+                            close
+                        </span>
+
+                    </button>
+
+                    <!-- Image -->
+                    <img src="/assets/img/appointments/proforma-bill.png" alt="proforma bill"
+                        class="w-full h-auto rounded-xl object-contain mt-6" />
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Order Summary -->
+            <div class="bg-white border border-gray-light3 rounded-xl mt-5 overflow-hidden">
+
+                <!-- Header -->
+                <button
+                    class="w-full flex justify-between items-center px-5 py-4 text-gray text-base font-semibold border-b border-gray-200">
+
+                    <span>Order Summary</span>
+
+                    <span class="material-symbols-outlined text-[22px]">
+                        keyboard_arrow_down
+                    </span>
+
+                </button>
+
+
+            </div>
+
+            <!-- Completed Line -->
+            <div class="flex items-center justify-center gap-2 py-4 text-base font-bold text-dark-gray hidden">
+
+                <span>
+                    You have completed appointment
+                </span>
+
+                <span class="material-symbols-outlined text-sea-green-dark1 text-[18px]">
+                    thumb_up
+                </span>
+
+            </div>
+
+
+            <!-- Reviews Div -->
+            <div class="bg-white border border-gray-light3 rounded-xl mt-5 hidden">
+
+                <div class="px-5 py-4">
+
+                    <!-- Review Heading -->
+                    <h4 class="text-gray text-base  font-semibold mb-5">
+                        Reviews
+                    </h4>
+
+                    <!-- No Show -->
+                    <div class="flex items-center justify-between mb-5">
+
+                        <p class="text-base font-semibold text-gray">
+                            Mark as “No show”
+                        </p>
+
+                        <div class="w-5 h-5 rounded-full border-2 border-gray">
+                        </div>
+
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="flex items-center justify-between mb-5">
+
+                        <p class="text-base font-semibold text-gray">
+                            Rate your experience
+                        </p>
+
+                        <div class="flex items-center gap-1">
+
+                            <span class="material-symbols-outlined text-ochre-yellow1 text-[20px]">
+                                star
+                            </span>
+
+                            <span class="material-symbols-outlined text-ochre-yellow1 text-[20px]">
+                                star
+                            </span>
+
+                            <span class="material-symbols-outlined text-ochre-yellow1 text-[20px]">
+                                star
+                            </span>
+
+                            <span class="material-symbols-outlined text-gray text-[20px]">
+                                star
+                            </span>
+
+                            <span class="material-symbols-outlined text-gray text-[20px]">
+                                star
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Comments -->
+                    <div class="flex items-center gap-3">
+
+                        <label class="text-base font-semibold text-gray shrink-0">
+                            Comments
+                        </label>
+
+                        <div class="relative w-full">
+
+                            <input type="text"
+                                class="w-full h-10 rounded-xl border border-gray-200 bg-gray-50 px-4 outline-none focus:border-teal-500" />
+
+                        </div>
+
+                        <!-- Submit -->
+                        <button class="text-sea-green-dark1">
+
+                            <span class="material-symbols-outlined text-[28px]">
+                                input
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Credit -->
+            <div class="mt-5 text-dark-gray text-base font-medium flex items-center gap-2 flex-wrap">
+
+                <span>
+                    Congratulations!
+                </span>
+
+                <span class="text-sea-green-dark1 font-medium text-base">
+                    234
+                </span>
+
+                <span>
+                    Credit points to be credited
+                </span>
+
+                <!-- Coin Image -->
+                <img src="/assets/img/appointments/dollar.svg" alt="coin" class="w-5 h-5 object-contain" />
+
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row justify-end gap-5 mt-8 ">
+
+                <button class="border border-sea-green2 text-sea-green2 px-20 py-3 rounded-xl text-base font-bold ">
+                    Cancel
+                </button>
+
+                <a href="myorder.html" class="bg-sea-green2 text-white px-20 py-3 rounded-xl text-base font-bold ">
+                    Order History
+                </a>
+
+            </div>
+
+            <!-- Help Box -->
+            <div class="bg-white border border-gray-light3 rounded-2xl p-5 mt-8 flex items-center gap-4">
+
+                <!-- Call Icon -->
+                <div
+                    class="w-12 h-12 rounded-full border border-light-sea-green3  bg-transparent-light-sea-green1 flex items-center justify-center">
+
+                    <span class="material-symbols-outlined text-[24px]">
+                        call
+                    </span>
+
+                </div>
+
+                <!-- Text -->
+                <div>
+
+                    <p class="text-base font-normal text-gray-dark-1">
+                        Need help with anything ?
+                    </p>
+
+                    <p class="font-semibold text-base text-gray mt-1">
+                        Call: (239) 555-0108
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Refer Banner -->
+            <div
+                class="my-8 rounded-2xl overflow-hidden bg-gradient-to-r from-[#52d6b4] to-[#38b2ac] px-6 py-4 relative">
+
+                <div class="flex items-center justify-between gap-6">
+
+                    <!-- Left Section -->
+                    <div class="flex items-start gap-3 relative">
+
+                        <!-- Small Side Image -->
+                        <img src="/assets/img/appointments/half-dollar.svg" alt="refer"
+                            class="w-10 h-10 object-contain absolute -left-8 top-0" />
+
+                        <!-- Text -->
+                        <div class="text-white">
+
+                            <h3 class="text-lg font-bold ">
+                                Refer and Earn
+                            </h3>
+
+                            <p class="mt-1 text-lg font-normal">
+                                Invite family and friends to
+                                earn cashbacks
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Center Button -->
+                    <button
+                        class="border border-white text-white px-24 py-2 rounded-full font-bold text-lg bg-sea-green-dark1">
+
+                        Invite Now
+
+                    </button>
+
+                    <!-- Right Image -->
+                    <img src="/assets/img/appointments/refer-earn-banner.svg" alt="refer illustration"
+                        class="w-24 h-20 object-contain shrink-0" />
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        //Share Popup
+        const openPopupBtns = document.querySelectorAll('.share-open-btn');
+        const popupOverlay = document.querySelector('.popup-overlay');
+        const closePopupBtn = document.querySelector('.popup-close-btn');
+
+        // Open Popup
+        openPopupBtns.forEach(button => {
+
+            button.addEventListener('click', () => {
+
+                popupOverlay.classList.remove('hidden');
+
+            });
+
+        });
+
+        // Close Popup
+        closePopupBtn.addEventListener('click', () => {
+
+            popupOverlay.classList.add('hidden');
+
+        });
+
+        // Close On Outside Click
+        popupOverlay.addEventListener('click', (e) => {
+
+            if (e.target === popupOverlay) {
+
+                popupOverlay.classList.add('hidden');
+
+            }
+
+        });
+
+        //Proforma Popup
+        // Open Popup
+        const proformaOpenBtn = document.querySelector('.proforma-open-btn');
+        const proformaPopup = document.querySelector('.proforma-popup-overlay');
+        const proformaCloseBtn = document.querySelector('.proforma-close-btn');
+
+        proformaOpenBtn.addEventListener('click', () => {
+
+            proformaPopup.classList.remove('hidden');
+
+        });
+
+        // Close Popup Button
+        proformaCloseBtn.addEventListener('click', () => {
+
+            proformaPopup.classList.add('hidden');
+
+        });
+
+        // Outside Click Close
+        proformaPopup.addEventListener('click', (e) => {
+
+            if (e.target === proformaPopup) {
+
+                proformaPopup.classList.add('hidden');
+
+            }
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

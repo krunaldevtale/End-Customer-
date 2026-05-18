@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Material Symbols Outlined -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body class="no-scrollbar">
+    <main>
+        <div class="headerMapArea">
+            <div class="relative">
+                <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+                    <div class="max-w-[150px] max-h-10">
+                        <a href="home.html"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+                    </div>
+                    <nav class="">
+                        <div class="">
+                            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                            <ul id="menu" class="hidden md:flex space-x-6 items-center">
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Home
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Medicine
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Maps
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Services
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="/src/records.html" class="">Records</a></li>
+                                <li><a href="./rewards.html" class="">Rewards</a></li>
+                                <li><a href="#" class="">Support</a></li>
+                                <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
+                                            class="text-[#238b6d]">Login/Sign Up</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
+                            <li><a href="#" class="block">Home</a></li>
+                            <li><a href="#" class="block">About</a></li>
+                            <li>
+                                <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                                    Services
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                                    <li>
+                                        <a href="#" class="block hover:text-gray-300">Web Design</a>
+                                    </li>
+                                    <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                                    <li>
+                                        <a href="#" class="block hover:text-gray-300">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="">Records</a></li>
+                            <li><a href="rewards.html" class="">Rewards</a></li>
+                            <li><a href="#" class="">Support</a></li>
+                            <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+
+            <!-- Map Area -->
+            <div class="flex-1 absolute  w-full top-0 z-0 bg-ice-gray">
+                <!-- Map -->
+                <div class="bg-white shadow-sm border-b p-4 pt-0">
+                    <div class="flex items-center justify-between gap-4 absolute top-28 z-[999] w-full px-20">
+                        <!-- Location Dropdown -->
+                        <div class="relative" id="locationSelect">
+                            <div id="locationDropdownBtn"
+                                class="flex items-center gap-2 bg-white h-10 w-45 justify-between p-2 rounded-lg primary-box-shadow cursor-pointer">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-gray"></i>
+                                    <span id="selectedLocation" class="font-medium text-gray text-nowrap">New York,
+                                        NY</span>
+                                </div>
+
+                                <i class="fas fa-caret-down"></i>
+                            </div>
+                            <div id="locationDropdownMenu"
+                                class="absolute left-0  w-45 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50">
+                                <div class="py-1">
+                                    <div data-value="New York, NY"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">New York, NY
+                                    </div>
+                                    <div data-value="Los Angeles, CA"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Los Angeles,
+                                        CA
+                                    </div>
+                                    <div data-value="Chicago, IL"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Chicago, IL
+                                    </div>
+                                    <div data-value="Miami, FL"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Miami, FL
+                                    </div>
+                                    <div data-value="Houston, TX"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Houston, TX
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="resultsCount" class="hidden text-sm text-gray-600">
+                            5 locations found
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button
+                                class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
+                                <img src="/assets/img/notification-icon.svg" alt="notification">
+                            </button>
+                            <button
+                                class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
+                                <img src="/assets/img/shopping-cart.svg" alt="Cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="map"
+                    class="w-full rounded-tl-none rounded-tr-none [border-bottom-right-radius:100px] [border-bottom-left-radius:100px] h-[550px]">
+                </div>
+
+                <!-- Loading overlay -->
+                <div id="loadingOverlay" class="absolute inset-0 bg-gray-100 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
+                        <p class="text-gray-600">Loading map...</p>
+                    </div>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-[1000]">
+                    <div class="flex gap-2 p-2">
+                        <button data-category="Pharmacy"
+                            class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
+                            Pharmacy
+                        </button>
+                        <button data-category="Hospital"
+                            class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
+                            Hospital
+                        </button>
+                        <button data-category="Doctor"
+                            class="category-btn primary-btn rounded-lg  border-0 font-bold bg-[#238b6d] text-white">
+                            Doctor
+                        </button>
+                        <button data-category="Lab"
+                            class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
+                            Lab
+                        </button>
+                    </div>
+                </div>
+                <div class="-mt-6 flex items-center justify-center">
+                    <div class="w-full max-w-xl rounded-lg primary-box-shadow z-[9999]">
+                        <div class="relative bg-white rounded-lg">
+                            <!-- <i data-lucide="search"
+                            class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"></i> -->
+                            <input id="searchInput" type="text"
+                                placeholder="I want to search for Medicine, Brands, Doctor, Pharmacy, etc."
+                                class="w-full pl-4 pr-18 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none " />
+                            <i class="fa-solid fa-microphone absolute right-12 top-1/2 -translate-y-1/2 w-4 h-4"></i>
+                            <i class="fa-solid fa-camera absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-[500px]"></div>
+        </div>
+        <div class="homeSection mt-20">
+            <!-- Banner -->
+            <section class="h-[195px] w-full bg-[url('/assets/img/banner-bg.png')] bg-no-repeat bg-cover">
+                <div class="flex flex-col md:flex-row gap-5 justify-center items-center md:justify-around h-full">
+                    <div class="border-b border-light-yellow text-center py-4">
+                        <h3 class="text-xl md:text-[32px] font-bold text-white md:leading-12">Find the Right Doctor,
+                            Right
+                            When You Need</h3>
+                        <p class="text-sm md:text-base font-semibold text-light-yellow leading-6">Book trusted doctors
+                            anytime, anywhere instantly</p>
+                    </div>
+                    <button
+                        class="w-48 h-9 bg-light-yellow rounded-sm text-xs md:text-sm font-bold text-white flex items-center justify-center gap-2 cursor-pointer consultBtn">
+                        Consult a doctor now
+                        <span class="w-4 h-4 rounded-full bg-white flex items-center justify-center">
+                            <span class="material-symbols-outlined mini-icon text-light-yellow">
+                                keyboard_arrow_right
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Healthcare -->
+            <section class="flex flex-col items-center w-full gap-8 mt-20">
+                <h3 class="text-2xl md:text-[44px] font-bold text-night-black text-center">Access Healthcare Your Way
+                </h3>
+                <div class="flex justify-around w-full">
+                    <div class="flex flex-col items-center gap-3">
+                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">20K +</span>
+                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Trusted Consultations
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">2K +</span>
+                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Daily Appointments
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">30 +</span>
+                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Expert Departments
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Speciality Section -->
+            <section class="mt-20 px-14">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Find by Speciality</h2>
+                    <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
+                        <div class="w-20 h-1 bg-sea-green-deep"></div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/speciality/physician.svg" class="h-full object-cover" alt="Physician">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            General Physician
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/speciality/dentist.svg" class="h-full object-cover" alt="Dentist">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            Dentist
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/speciality/gynaelogist.svg" class="h-full object-cover"
+                                alt="Gynaelogist">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            Gynaelogist
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/speciality/dermatologist.svg" class="h-full object-cover"
+                                alt="Dermatologist">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            Dermatologist
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/speciality/pediatician.svg" class="h-full object-cover"
+                                alt="Pediatician">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            Pediatician
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/speciality/ent-specialist.svg" class="h-full object-cover"
+                                alt="ENT-Specialist">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            ENT Specialist
+                        </h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Doctors Section -->
+            <section class="mt-20 px-14">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Doctors rated nearby</h2>
+                    <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
+                        <div class="w-20 h-1 bg-sea-green-deep"></div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+                    <!-- DOCTOR CARD -->
+                    <a href="doctor-description.html">
+                        <div
+                            class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                            <div class="p-3">
+                                <img src="/assets/img/doctors/doctor-1.svg" class="w-full h-52 object-cover rounded-lg"
+                                    alt="doctor">
+                            </div>
+                            <div class="px-4 pb-4">
+                                <h3 class="text-xl font-bold text-dark-charcoal">
+                                    Dr. Anurag Verma
+                                </h3>
+
+                                <p class="text-sm text-smoky-blue-gray font-bold mt-1">
+                                    MBBS, MD, Internal Medicine
+                                </p>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-0.5 mt-3 text-3xl">
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-gray-light1">★</span>
+
+                                    <span class="text-sm text-gray-light1 ml-1">
+                                        (118)
+                                    </span>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                    <span class="material-symbols-outlined">
+                                        location_on
+                                    </span>
+                                    <p>Zenith Hospital, Malad East</p>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                    <button
+                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined mini-icon">
+                                            open_with
+                                        </span>
+                                        Directions
+                                    </button>
+
+                                    <button
+                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined mini-icon">
+                                            call
+                                        </span>
+                                        Call
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="doctor-description.html">
+                        <!-- DOCTOR CARD -->
+                        <div
+                            class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                            <div class="p-3">
+                                <img src="/assets/img/doctors/doctor-2.svg" class="w-full h-52 object-cover rounded-lg"
+                                    alt="doctor">
+                            </div>
+                            <div class="px-4 pb-4">
+                                <h3 class="text-xl font-bold text-dark-charcoal">
+                                    Dr. Anjali Mahalaxmi
+                                </h3>
+
+                                <p class="text-sm text-smoky-blue-gray font-bold mt-1">
+                                    MBBS, MD, Internal Medicine
+                                </p>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-0.5 mt-3 text-3xl">
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-gray-light1">★</span>
+
+                                    <span class="text-sm text-gray-light1 ml-1">
+                                        (118)
+                                    </span>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                    <span class="material-symbols-outlined">
+                                        location_on
+                                    </span>
+                                    <p>Zenith Hospital, Malad East</p>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                    <button
+                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined mini-icon">
+                                            open_with
+                                        </span>
+                                        Directions
+                                    </button>
+
+                                    <button
+                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined mini-icon">
+                                            call
+                                        </span>
+                                        Call
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="doctor-description.html">
+                        <!-- DOCTOR CARD -->
+                        <div
+                            class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                            <div class="p-3">
+                                <img src="/assets/img/doctors/doctor-1.svg" class="w-full h-52 object-cover rounded-lg"
+                                    alt="doctor">
+                            </div>
+                            <div class="px-4 pb-4">
+                                <h3 class="text-xl font-bold text-dark-charcoal">
+                                    Dr. Anurag Verma
+                                </h3>
+
+                                <p class="text-sm text-smoky-blue-gray font-bold mt-1">
+                                    MBBS, MD, Internal Medicine
+                                </p>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-0.5 mt-3 text-3xl">
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-gray-light1">★</span>
+
+                                    <span class="text-sm text-gray-light1 ml-1">
+                                        (118)
+                                    </span>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                    <span class="material-symbols-outlined">
+                                        location_on
+                                    </span>
+                                    <p>Zenith Hospital, Malad East</p>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                    <button
+                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined mini-icon">
+                                            open_with
+                                        </span>
+                                        Directions
+                                    </button>
+
+                                    <button
+                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined mini-icon">
+                                            call
+                                        </span>
+                                        Call
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="doctor-description.html"> <!-- DOCTOR CARD -->
+                        <div
+                            class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                            <div class="p-3">
+                                <img src="/assets/img/doctors/doctor-2.svg" class="w-full h-52 object-cover rounded-lg"
+                                    alt="doctor">
+                            </div>
+                            <div class="px-4 pb-4">
+                                <h3 class="text-xl font-bold text-dark-charcoal">
+                                    Dr. Anjali Mahalaxmi
+                                </h3>
+
+                                <p class="text-sm text-smoky-blue-gray font-bold mt-1">
+                                    MBBS, MD, Internal Medicine
+                                </p>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-0.5 mt-3 text-3xl">
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-golden-yellow">★</span>
+                                    <span class="text-gray-light1">★</span>
+
+                                    <span class="text-sm text-gray-light1 ml-1">
+                                        (118)
+                                    </span>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                    <span class="material-symbols-outlined">
+                                        location_on
+                                    </span>
+                                    <p>Zenith Hospital, Malad East</p>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                    <button
+                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined mini-icon">
+                                            open_with
+                                        </span>
+                                        Directions
+                                    </button>
+
+                                    <button
+                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined mini-icon">
+                                            call
+                                        </span>
+                                        Call
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Banner -->
+            <section class="h-[316px] w-full bg-[url('/assets/img/doctor-banner.svg')] bg-no-repeat bg-cover mt-20">
+                <div class="flex items-center justify-start h-full px-18">
+                    <div class="py-4 space-y-5">
+                        <div>
+                            <h3 class="text-2xl md:text-[32px] font-bold text-white leading-12">Are you a Doctor?</h3>
+                            <p class="text-sm md:text-base font-semibold text-light-yellow leading-6">Be a part of our
+                                panel
+                                of specialist from anywhere</p>
+                        </div>
+                        <button
+                            class="w-48 h-9 bg-light-yellow rounded-sm text-sm font-bold text-white flex items-center justify-center gap-2 cursor-pointer">
+                            Consult a doctor now
+                            <span class="w-4 h-4 rounded-full bg-white flex items-center justify-center">
+                                <span class="material-symbols-outlined mini-icon text-light-yellow">
+                                    keyboard_arrow_right
+                                </span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-10 px-14 py-3 bg-[#DBF8F2]">
+                <!-- TOP REVIEW SUMMARY -->
+                <div class="max-w-3xl">
+
+                    <!-- Rating Header -->
+                    <div class="flex flex-wrap items-center gap-3 text-sm text-gray-600">
+
+                        <div class="flex items-center gap-1">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                class="w-4 h-4" alt="google">
+
+                            <span class="font-semibold text-gray-800">
+                                4.6 Stars
+                            </span>
+                        </div>
+
+                        <span class="text-gray-300">|</span>
+
+                        <p>7+ Lakhs Ratings & Reviews</p>
+                    </div>
+
+                    <!-- Rating Bars -->
+                    <div class="mt-6 space-y-3">
+
+                        <!-- BAR -->
+                        <div class="flex items-center gap-3">
+
+                            <span class="w-10 text-sm text-gray-600">
+                                5 Star
+                            </span>
+
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="w-[84%] h-full bg-yellow-400 rounded-full"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- BAR -->
+                        <div class="flex items-center gap-3">
+
+                            <span class="w-10 text-sm text-gray-600">
+                                4 Star
+                            </span>
+
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="w-[75%] h-full bg-yellow-400 rounded-full"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- BAR -->
+                        <div class="flex items-center gap-3">
+
+                            <span class="w-10 text-sm text-gray-600">
+                                3 Star
+                            </span>
+
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="w-[66%] h-full bg-yellow-400 rounded-full"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- BAR -->
+                        <div class="flex items-center gap-3">
+
+                            <span class="w-10 text-sm text-gray-600">
+                                2 Star
+                            </span>
+
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="w-[57%] h-full bg-yellow-400 rounded-full"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- BAR -->
+                        <div class="flex items-center gap-3">
+
+                            <span class="w-10 text-sm text-gray-600">
+                                1 Star
+                            </span>
+
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="w-[14%] h-full bg-yellow-400 rounded-full"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- USERS -->
+                    <div class="flex items-center gap-4 mt-8">
+
+                        <!-- Users -->
+                        <div class="flex -space-x-3">
+
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg"
+                                class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="">
+
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                                class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="">
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-[#0f9d8f] text-lg">
+                                Over 10 million happy users
+                            </h3>
+
+                            <p class="text-gray-700 font-medium">
+                                PharmEasy Labs
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- REVIEWS -->
+                <div class="relative mt-10">
+
+                    <!-- Quote -->
+                    <div class="absolute -top-4 left-0 text-[80px] text-[#dbe7f3] leading-none font-serif">
+                        “
+                    </div>
+
+                    <!-- Scroll Area -->
+                    <div class="flex gap-5 overflow-x-auto pb-4 pl-8 hide-scrollbar scroll-smooth no-scrollbar">
+
+                        <!-- CARD -->
+                        <div
+                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                            <p class="text-gray-600 text-sm leading-6">
+                                Doctor was very polite and explained everything clearly.
+                                Highly recommended.
+                            </p>
+
+                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                                <span class="material-symbols-outlined text-[18px]">
+                                    person
+                                </span>
+
+                                <span class="font-medium text-gray-700">
+                                    Pankaj Roy
+                                </span>
+
+                                <span>30 Apr '25</span>
+                            </div>
+                        </div>
+
+                        <!-- CARD -->
+                        <div
+                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                            <p class="text-gray-600 text-sm leading-6">
+                                Good experience, consultation was smooth and helpful.
+                            </p>
+
+                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                                <span class="material-symbols-outlined text-[18px]">
+                                    person
+                                </span>
+
+                                <span class="font-medium text-gray-700">
+                                    Suryabhan
+                                </span>
+
+                                <span>01 Jul '24</span>
+                            </div>
+                        </div>
+
+                        <!-- CARD -->
+                        <div
+                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                            <p class="text-gray-600 text-sm leading-6">
+                                Best gynecologist I've visited. Very caring and professional.
+                            </p>
+
+                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                                <span class="material-symbols-outlined text-[18px]">
+                                    person
+                                </span>
+
+                                <span class="font-medium text-gray-700">
+                                    Sana
+                                </span>
+
+                                <span>06 May '25</span>
+                            </div>
+                        </div>
+
+                        <!-- CARD -->
+                        <div
+                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                            <p class="text-gray-600 text-sm leading-6">
+                                Good experience, consultation was smooth and helpful.
+                            </p>
+
+                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                                <span class="material-symbols-outlined text-[18px]">
+                                    person
+                                </span>
+
+                                <span class="font-medium text-gray-700">
+                                    Suryabhan
+                                </span>
+
+                                <span>01 Jul '24</span>
+                            </div>
+                        </div>
+
+                        <!-- CARD -->
+                        <div
+                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                            <p class="text-gray-600 text-sm leading-6">
+                                Staff was supportive and reports were delivered on time.
+                            </p>
+
+                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                                <span class="material-symbols-outlined text-[18px]">
+                                    person
+                                </span>
+
+                                <span class="font-medium text-gray-700">
+                                    Aakash
+                                </span>
+
+                                <span>11 Jan '25</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="mt-10 px-4 space-y-4 bg-gray-tint py-4">
+
+                <!-- FAQ ITEM -->
+                <div class="bg-white rounded-xl overflow-hidden">
+
+                    <button class="faq-btn w-full flex items-center justify-between px-5 py-5 text-left">
+
+                        <span class="text-gray-800 font-medium text-sm md:text-base">
+                            When will I get answer to my query?
+                        </span>
+
+                        <div
+                            class="w-8 h-8 rounded-full bg-[#e9eef5] flex items-center justify-center shrink-0 transition duration-300">
+
+                            <span class="material-symbols-outlined arrow">
+                                chevron_right
+                            </span>
+                        </div>
+
+                    </button>
+
+                    <!-- CONTENT -->
+                    <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-6">
+                        Our medical experts usually respond within 24 hours depending on
+                        the type of consultation and availability.
+                    </div>
+                </div>
+
+                <!-- FAQ ITEM -->
+                <div class="bg-white rounded-xl overflow-hidden">
+
+                    <button class="faq-btn w-full flex items-center justify-between px-5 py-5 text-left">
+
+                        <span class="text-gray-800 font-medium text-sm md:text-base">
+                            Who are the consulting doctors?
+                        </span>
+
+                        <div
+                            class="w-8 h-8 rounded-full bg-[#e9eef5] flex items-center justify-center shrink-0 transition duration-300">
+
+                            <span class="material-symbols-outlined arrow">
+                                chevron_right
+                            </span>
+                        </div>
+
+                    </button>
+
+                    <!-- CONTENT -->
+                    <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-6">
+                        All consultations are handled by certified and experienced
+                        medical professionals from reputed hospitals and clinics.
+                    </div>
+                </div>
+
+                <!-- FAQ ITEM -->
+                <div class="bg-white rounded-xl overflow-hidden">
+
+                    <button class="faq-btn w-full flex items-center justify-between px-5 py-5 text-left">
+
+                        <span class="text-gray-800 font-medium text-sm md:text-base">
+                            Will the doctor be able to resolve my problems?
+                        </span>
+
+                        <div
+                            class="w-8 h-8 rounded-full bg-[#e9eef5] flex items-center justify-center shrink-0 transition duration-300">
+
+                            <span class="material-symbols-outlined arrow">
+                                chevron_right
+                            </span>
+                        </div>
+
+                    </button>
+
+                    <!-- CONTENT -->
+                    <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-6">
+                        Doctors will provide guidance, diagnosis support, and treatment
+                        recommendations based on your symptoms and medical history.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Consultation Form-->
+        <section class="bg-white mt-[60px] mx-10 mb-[30px] consultationForm hidden">
+
+            <!-- Step Indicators -->
+            <div class="flex items-center justify-center gap-3 stepIndicator">
+                <!-- Step 1 (active by default) -->
+                <div class="w-[67px] h-[42px] rounded-lg flex items-center justify-center bg-sea-green-dark1">
+                    <span class="font-normal text-base text-white">Step 1</span>
+                </div>
+
+                <!-- Connector line -->
+                <div class="w-[141px] h-0.5 rounded-full bg-dim-gray step-connector"></div>
+
+                <!-- Step 2 (highlighted after submit) -->
+                <div
+                    class="w-[67px] h-[42px] rounded-lg flex items-center justify-center border border-sea-green-dark1 step2-indicator">
+                    <span class="font-normal text-base text-black">Step 2</span>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <div class="pt-[56px] flex flex-col gap-2">
+                <p class="font-bold text-3xl text-dark-slate heading">Select as per your Preference</p>
+                <div class="w-full h-0.5 bg-smoke-white">
+                    <div class="w-[100px] h-[3px] bg-sea-green-dark1"></div>
+                </div>
+            </div>
+
+            <form class="stepForm pt-[56px]">
+                <div class="flex flex-col gap-10">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                        <!-- ── Health Issues (Multi-Select) ─────────────────────── -->
+                        <div class="flex flex-col gap-2 relative dropdown-wrapper" id="health-issues-wrapper">
+                            <label class="font-semibold text-sm text-gray">Health Issues</label>
+                            <!-- Tags + input live inside this box -->
+                            <div id="health-input-box"
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
+                                <span id="health-placeholder"
+                                    class="text-sm text-medium-gray font-normal select-none">Select Health Issues</span>
+                                <!-- Arrow icon, absolutely positioned right -->
+                                <span
+                                    class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                            </div>
+                            <!-- hidden real input so form still works -->
+                            <input type="hidden" id="health-hidden-input">
+                            <div class="dropdown-menu hidden absolute rounded-md bg-white border border-cool-fog shadow-lg z-[100] w-full h-[200px] overflow-y-auto no-scrollbar"
+                                style="top:100%; margin-top:4px;">
+                                <ul class="font-semibold text-base text-black space-y-2 cursor-pointer">
+                                    <li class="hover:bg-light-gray px-3 py-1">Fever</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Cold</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Body Ache</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">General Advice</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Rashes</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Pimples</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Skin Infection</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Hair Fall</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Child Fever</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Vaccines</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Skin Allergy</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Irregular Periods</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">PCOS</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Pregnancy Issues</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Back Pain</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Joint Pain</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Fracture Support</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Anxiety</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Depression</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Stress</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Sleep Issues</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Ear Pain</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Sinus</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Throat Infection</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Nose Bleed</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Eye Pain</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Redness</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Vision Check</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Erectile Dysfunction (ED)</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Early Ejaculation</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Urine Infection</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Diabetes</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Thyroid Problems</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Chest Pain</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Palpitations</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">BP Management</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Acidity</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Constipation</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Liver Problems</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Asthma</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Breathing Difficulty</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Chronic Cough</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Migraine</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Seizures</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Numbness</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Second Opinion on Cancer</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Treatment Review</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Hernia</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Piles</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Lump Evaluation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="flex flex-col gap-2">
+                            <label class="font-semibold text-sm text-gray">Describe in more detail</label>
+                            <input type="text"
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl font-normal text-sm focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray w-full py-[11px] px-2"
+                                placeholder="Enter Description">
+                        </div>
+                    </div>
+
+                    <!-- ── Specialization (Single-Select with tag) ──────────────── -->
+                    <div class="flex flex-col gap-2 dropdown-wrapper relative" id="specialization-wrapper">
+                        <label class="font-semibold text-sm text-gray">Specialization</label>
+                        <div id="spec-input-box"
+                            class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
+                            <span id="spec-placeholder" class="text-sm text-medium-gray font-normal select-none">Select
+                                Specialization</span>
+                            <span
+                                class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                        </div>
+                        <input type="hidden" id="spec-hidden-input">
+                        <div
+                            class="dropdown-menu hidden absolute top-[72px] bg-white rounded-md border border-cool-fog z-[100] w-full h-[200px] overflow-y-auto no-scrollbar shadow-lg">
+                            <ul class="font-semibold text-base text-gray">
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">medical_services</span>
+                                        <p>General Physician</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">dermatology</span>
+                                        <p>Dermatologist</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">child_care</span>
+                                        <p>Pediatrician</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">pregnant_woman</span>
+                                        <p>Gynecologist</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">orthopedics</span>
+                                        <p>Orthopedic</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">psychology</span>
+                                        <p>Psychiatrist / Counselor</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">hearing</span>
+                                        <p>ENT Specialist</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">urology</span>
+                                        <p>Sexologist / Urologist</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">endocrinology</span>
+                                        <p>Endocrinologist</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">cardiology</span>
+                                        <p>Cardiologist</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">gastroenterology</span>
+                                        <p>Gastroenterologist</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">pulmonology</span>
+                                        <p>Pulmonologist</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray">
+                                    <div class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined">neurology</span>
+                                        <p>Neurologist</p>
+                                    </div>
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-10">
+                        <!-- Consultation Type -->
+                        <div class="flex flex-col gap-[17px]">
+                            <label class="font-semibold text-sm text-gray">Select Consultation Type</label>
+                            <div class="flex items-center gap-2">
+                                <div class="w-[205px] flex items-center gap-2">
+                                    <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                    <span class="font-normal text-sm text-dark-gray">Clinic Visit</span>
+                                </div>
+                                <div class="w-[205px] flex items-center gap-2">
+                                    <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                    <span class="font-normal text-sm text-dark-gray">Home Visit</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Type -->
+                        <div class="flex flex-col gap-[17px]">
+                            <label class="font-semibold text-sm text-gray">Select Service Type</label>
+                            <div class="flex items-center gap-2">
+                                <div class="w-[205px] flex items-center gap-2">
+                                    <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                    <span class="font-normal text-sm text-dark-gray">Emergency</span>
+                                </div>
+                                <div class="w-[205px] flex items-center gap-2">
+                                    <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                    <span class="font-normal text-sm text-dark-gray">Normal</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── Date & Time with Custom Picker ───────────────────── -->
+                        <div class="flex flex-col gap-2 relative">
+                            <label class="font-semibold text-sm text-gray">Preferred Date &amp; Time</label>
+                            <div
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl flex items-center justify-between relative cursor-pointer py-2.5 px-2">
+                                <input type="text" id="datetime-input"
+                                    class="cursor-pointer focus:ring-0 focus:outline-none w-full placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray"
+                                    placeholder="Select Date &amp; Time" readonly>
+                                <span id="calendar-icon"
+                                    class="material-symbols-outlined cursor-pointer text-lg!">calendar_month</span>
+                            </div>
+
+                            <!-- Custom DateTime Picker Popup -->
+                            <div id="datetime-picker"
+                                class="hidden absolute top-[72px] left-0 z-[200] bg-white border border-cool-fog rounded-2xl shadow-xl p-4 w-[320px]">
+                                <!-- Calendar Header -->
+                                <div class="flex items-center justify-between mb-3">
+                                    <button type="button" id="cal-prev"
+                                        class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined text-base">chevron_left</span>
+                                    </button>
+                                    <span id="cal-month-year" class="font-semibold text-sm text-gray-700"></span>
+                                    <button type="button" id="cal-next"
+                                        class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined text-base">chevron_right</span>
+                                    </button>
+                                </div>
+
+                                <!-- Calendar Days Grid -->
+                                <div id="cal-days" class="mb-4"></div>
+
+                                <!-- Time Picker - 3 separate triggers -->
+                                <div class="border-t border-gray-100 pt-3 mt-1">
+                                    <label class="font-semibold text-xs text-gray-500 block mb-2">Select Time</label>
+                                    <div class="flex items-center gap-2">
+                                        <!-- Hour -->
+                                        <div class="relative time-part-wrapper" id="hour-wrapper">
+                                            <div id="hour-trigger"
+                                                class="time-part-trigger flex items-center justify-center gap-1 border-2 border-blue-400 bg-white rounded-xl px-3 py-2 cursor-pointer min-w-[64px]">
+                                                <span id="hour-display"
+                                                    class="text-sm font-semibold text-gray-500">9</span>
+                                                <span class="material-symbols-outlined text-gray-400"
+                                                    style="font-size:16px;">keyboard_arrow_down</span>
+                                            </div>
+                                            <div id="hour-menu"
+                                                class="hidden absolute bottom-full mb-1 left-0 bg-white border border-cool-fog rounded-lg shadow-lg z-[300] w-[80px] max-h-[180px] overflow-y-auto no-scrollbar">
+                                            </div>
+                                        </div>
+
+                                        <span class="text-gray-400 font-bold text-base">:</span>
+
+                                        <!-- Minute -->
+                                        <div class="relative time-part-wrapper" id="minute-wrapper">
+                                            <div id="minute-trigger"
+                                                class="time-part-trigger flex items-center justify-center gap-1 border border-gray-200 bg-gray-100 rounded-xl px-3 py-2 cursor-pointer min-w-[64px]">
+                                                <span id="minute-display"
+                                                    class="text-sm font-semibold text-gray-400">00</span>
+                                                <span class="material-symbols-outlined text-gray-400"
+                                                    style="font-size:16px;">keyboard_arrow_down</span>
+                                            </div>
+                                            <div id="minute-menu"
+                                                class="hidden absolute bottom-full mb-1 left-0 bg-white border border-cool-fog rounded-lg shadow-lg z-[300] w-[80px] max-h-[180px] overflow-y-auto no-scrollbar">
+                                            </div>
+                                        </div>
+
+                                        <span class="text-gray-400 font-bold text-base">:</span>
+
+                                        <!-- AM/PM -->
+                                        <div class="relative time-part-wrapper" id="ampm-wrapper">
+                                            <div id="ampm-trigger"
+                                                class="time-part-trigger flex items-center justify-center gap-1 border border-gray-200 bg-gray-100 rounded-xl px-3 py-2 cursor-pointer min-w-[64px]">
+                                                <span id="ampm-display"
+                                                    class="text-sm font-semibold text-gray-400">AM</span>
+                                                <span class="material-symbols-outlined text-gray-400"
+                                                    style="font-size:16px;">keyboard_arrow_down</span>
+                                            </div>
+                                            <div id="ampm-menu"
+                                                class="hidden absolute bottom-full mb-1 left-0 bg-white border border-cool-fog rounded-lg shadow-lg z-[300] w-[80px] max-h-[180px] overflow-y-auto no-scrollbar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Confirm Button -->
+                                <button type="button" id="confirm-datetime"
+                                    class="mt-4 w-full py-2 rounded-lg text-white font-semibold text-sm cursor-pointer"
+                                    style="background-color:#1a7a6e">
+                                    Confirm
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Budget -->
+                        <div class="flex flex-col gap-2">
+                            <label class="font-semibold text-sm text-gray">Budget (Min: &#8377;3000)</label>
+                            <input type="number" onkeydown="return !['e','E','+','-'].includes(event.key)"
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl font-normal text-sm focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray w-full py-3.5 px-2"
+                                placeholder="Enter Budget">
+                        </div>
+                    </div>
+
+                    <!-- Select Patient -->
+                    <div class="flex flex-col gap-2">
+                        <label class="font-semibold text-sm text-gray">Select Patient</label>
+                        <div
+                            class="border border-deep-teal shadow-patient-dropdown rounded-[38px] flex items-center justify-between relative cursor-pointer py-2.5 px-[13px]">
+                            <div class="flex items-center gap-[5px]">
+                                <img src="/assets/img/patient-icon.svg" alt="">
+                                <input type="text"
+                                    class="cursor-pointer focus:ring-0 focus:outline-none w-full placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray"
+                                    placeholder="Select Patient" readonly>
+                            </div>
+                            <span class="material-symbols-outlined cursor-pointer text-lg!">keyboard_arrow_down</span>
+                        </div>
+                    </div>
+
+                    <!-- Select Address (hidden until submit) -->
+                    <div class="flex flex-col gap-6 hidden addressBtn">
+                        <label class="font-bold text-lg text-gray">Select Address</label>
+                        <div
+                            class="border border-deep-aqua-teal rounded-lg flex items-center justify-center gap-2.5 py-[11px] cursor-pointer addNewAddress">
+                            <span class="material-symbols-outlined">add</span>
+                            <span class="font-bold text-base text-sea-green2">Add new address</span>
+                        </div>
+                    </div>
+
+                    <!--Selected Address-->
+                    <div
+                        class="selectedAddress hidden border border-platinum rounded-lg p-3 flex items-center justify-between">
+                        <div class="flex items-center gap-[18px]">
+                            <div
+                                class="w-6 h-6 rounded-full flex items-center justify-center bg-linear-to-b from-near-white to-lavender-gray">
+                                <img src="/assets/img/location-icon.svg" alt="">
+                            </div>
+                            <div class="flex flex-col gap-1.5">
+                                <p class="font-normal text-rich-black text-sm">Selected address - <span
+                                        class="font-semibold"> Saket Enclave</span></p>
+                                <p class="font-normal text-xs! text-jet-black">Chhatarpur, New Delhi</p>
+                            </div>
+                        </div>
+                        <span class="material-symbols-outlined text-xl!">chevron_right</span>
+                    </div>
+
+                    <!-- Credit Points Banner -->
+                    <div
+                        class="border border-sea-green-dark1 bg-deep-cyan-teal rounded-lg flex items-center justify-center gap-2.5 py-[21px]">
+                        <span class="font-medium text-xs text-dark-gray">Earn <span
+                                class="text-sea-green-dark1">2.8</span>
+                            Credit points on this service completion.</span>
+                        <img src="/assets/img/coin.svg" alt="">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex items-center justify-end">
+                        <button type="button"
+                            class="w-[343px] h-12 flex items-center justify-center rounded-lg bg-sea-green-dark1 cursor-pointer shadow-button stepBtn1">
+                            <span class="font-bold text-white text-base">Submit</span>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+
+            <!--Add Address-->
+            <div class="addressForm mt-[56px] border border-gray-light3 rounded-[12px] p-4 hidden">
+                <form class="flex flex-col gap-4">
+                    <input type="text"
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="First Name">
+                    <input type="text"
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="Last Name">
+                    <input type="number"
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="Phone">
+                    <div
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                        <input type="text"
+                            class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                            placeholder="Country" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <div
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                        <input type="text"
+                            class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                            placeholder="City" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <div
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                        <input type="text"
+                            class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                            placeholder="Area" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <div
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                        <input type="text"
+                            class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                            placeholder="Zip Code" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <input type="text"
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="Address">
+
+                    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                        <p class="font-semibold text-base text-gray">Choose Address Type</p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-[99px] h-9 flex items-center justify-center gap-2 bg-gray-light3 shadow-addressType rounded-lg cursor-pointer">
+                                <span class="material-symbols-outlined">home</span>
+                                <span class="font-medium text-sm text-gray">Home</span>
+                            </div>
+
+                            <div
+                                class="w-[99px] h-9 flex items-center justify-center gap-2 bg-gray-light3 shadow-addressType rounded-lg cursor-pointer">
+                                <span class="material-symbols-outlined">apartment</span>
+                                <span class="font-medium text-sm text-gray">Office</span>
+                            </div>
+
+                            <div
+                                class="w-[99px] h-9 flex items-center justify-center gap-2 bg-gray-light3 shadow-addressType rounded-lg cursor-pointer">
+                                <span class="material-symbols-outlined">location_city</span>
+                                <span class="font-medium text-sm text-gray">City</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" class="accent-sea-green-dark1 w-[18px] h-[18px] cursor-pointer">
+                        <p class="font-normal text-sm text-gray">Set Default Address</p>
+                    </div>
+
+                    <div class="flex items-center justify-end">
+                        <button type="button"
+                            class="w-[343px] h-12 flex items-center justify-center bg-sea-green2 shadow-button cursor-pointer saveNowBtn rounded-lg">
+                            <span class="font-bold text-[15px] text-white">Save Now</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!--Searching Doctors-->
+        <div class="container  min-h-screen searchingDoctorsSection hidden">
+            <div class="relative">
+                <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+                    <div class="max-w-[150px] max-h-10">
+                        <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+                    </div>
+                    <nav class="">
+                        <div class="">
+                            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                            <ul id="menu" class="hidden md:flex space-x-6 items-center">
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Home
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Medicine
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Maps
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Services
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="/src/records.html" class="">Records</a></li>
+                                <li><a href="./rewards.html" class="">Rewards</a></li>
+                                <li><a href="#" class="">Support</a></li>
+                                <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
+                                            class="text-[#238b6d]">Login/Sign Up</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
+                            <li><a href="#" class="block">Home</a></li>
+                            <li><a href="#" class="block">About</a></li>
+                            <li>
+                                <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                                    Services
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                                    <li>
+                                        <a href="#" class="block hover:text-gray-300">Web Design</a>
+                                    </li>
+                                    <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                                    <li>
+                                        <a href="#" class="block hover:text-gray-300">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="">Records</a></li>
+                            <li><a href="rewards.html" class="">Rewards</a></li>
+                            <li><a href="#" class="">Support</a></li>
+                            <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div class="min-h-screen">
+                <div
+                    class="mt-[50px] mx-[50px] mb-[22px] bg-white rounded-xl py-4 px-3 border border-gray-light3 shadow-request-box flex items-center justify-between">
+                    <div class="flex flex-col gap-3">
+                        <div class="flex flex-col gap-1">
+                            <p class="font-semibold text-base text-gray">Request has been sent successfully :)</p>
+                            <p class="font-medium text-xs text-gray">You will be notified of the offers from doctors</p>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <p class="font-medium text-xs text-gray">Date & Time: <span
+                                    class="text-gray-dark-1">12/05/2025
+                                    14:40</span></p>
+                            <p class="font-medium text-xs text-gray">Order No: <span
+                                    class="text-gray-dark-1">#3454645</span></p>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="w-[142px] h-12 flex items-center justify-center rounded-lg bg-sea-green2 shadow-button font-bold text-[15px] text-white">Go
+                        to Orders</a>
+                </div>
+                <div class="w-full h-[600px] relative">
+                    <div id="doctors-map" class="w-full h-full"></div>
+                    <div id="searchingOverlay"
+                        class="absolute inset-0 z-[1000] flex items-center justify-center pointer-events-none bg-transparent-black">
+
+                        <!-- Pulse rings -->
+                        <div
+                            class="absolute w-[779px] h-[779px] rounded-full bg-seafoam-green animate-[pulse-out_2.4s_ease-out_infinite]">
+                        </div>
+
+
+                        <!-- Center circle -->
+                        <div
+                            class="absolute w-[250px] h-[250px] bg-sea-green-dark1 rounded-full flex flex-col items-center justify-center gap-1.5 animate-[breathe_2.4s_ease-in-out_infinite]">
+                            <p class="text-white text-sm font-semibold text-center leading-snug">Searching for<br>Doctor
+                            </p>
+
+                            <!-- Bouncing dots -->
+                            <div class="flex gap-1">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/70 animate-[dot-bounce_1.2s_ease-in-out_0s_infinite]"></span>
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/70 animate-[dot-bounce_1.2s_ease-in-out_0.2s_infinite]"></span>
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/70 animate-[dot-bounce_1.2s_ease-in-out_0.4s_infinite]"></span>
+                            </div>
+
+                            <p class="text-white/75 text-[10px] text-center max-w-[120px] leading-tight">List will
+                                appear
+                                within 1 min. Don't close the page.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="pt-[22px] px-[50px] pb-[50px]">
+                    <div class="flex flex-col gap-2.5">
+                        <p class="font-bold text-[22px]">Accept a suitable offer</p>
+                        <div class="flex items-center ga-2.5">
+                            <p class="font-medium text-sm text-dark-gray">Earn <span
+                                    class="text-sea-green-dark1">2.8</span>
+                                Credit points on this service completion.</p>
+                            <img src="/assets/img/coin.svg" alt="coin">
+                        </div>
+                    </div>
+
+                    <div class="pt-[22px] px-4 h-[650px] overflow-y-auto no-scrollbar flex flex-col gap-[22px]">
+                        <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                            <div class="flex items-center justify-between border-b border-deep-teal">
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-11 h-11 rounded-full">
+                                        <img src="/assets/img/doctor.svg" alt="Doctor image">
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="flex items-center gap-1">
+                                            <p class="font-semibold text-base text-gray">Doctor #1234</p>
+                                            <img src="/assets/img/badge.svg" alt="badge">
+                                            <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                            <img src="/assets/img/star.svg" alt="star">
+                                        </div>
+                                        <p class="font-normal text-xs text-gray-dark-1">MBBS, MD (Dermatelogy)</p>
+                                        <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2.5">
+                                    <p></p>
+                                    <p class="font-normal text-xs text-gray-dark-1">12 Years Experience</p>
+                                    <div class="flex items-center gap-2.5">
+                                        <p class="font-normal text-xs text-gray-dark-1">Female Doctor</p>
+                                        <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center justify-between pt-1.5">
+                                    <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                    <div class="flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                        <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
+                                    <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Location</p>
+                                    <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2.5 flex flex-col gap-2.5">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Clinic</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;500</p>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Home</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;700</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-end mt-5 gap-5">
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                    <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                                </button>
+
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                    <span class="font-bold text-xs text-white">Accept</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                            <div class="flex items-center justify-between border-b border-deep-teal">
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-11 h-11 rounded-full">
+                                        <img src="/assets/img/doctor.svg" alt="Doctor image">
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="flex items-center gap-1">
+                                            <p class="font-semibold text-base text-gray">Doctor #1234</p>
+                                            <img src="/assets/img/badge.svg" alt="badge">
+                                            <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                            <img src="/assets/img/star.svg" alt="star">
+                                        </div>
+                                        <p class="font-normal text-xs text-gray-dark-1">MBBS, MD (Dermatelogy)</p>
+                                        <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2.5">
+                                    <p></p>
+                                    <p class="font-normal text-xs text-gray-dark-1">12 Years Experience</p>
+                                    <div class="flex items-center gap-2.5">
+                                        <p class="font-normal text-xs text-gray-dark-1">Female Doctor</p>
+                                        <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center justify-between pt-1.5">
+                                    <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                    <div class="flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                        <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
+                                    <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Location</p>
+                                    <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2.5 flex flex-col gap-2.5">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Clinic</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;500</p>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Home</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;700</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-end mt-5 gap-5">
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                    <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                                </button>
+
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                    <span class="font-bold text-xs text-white">Accept</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                            <div class="flex items-center justify-between border-b border-deep-teal">
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-11 h-11 rounded-full">
+                                        <img src="/assets/img/doctor.svg" alt="Doctor image">
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="flex items-center gap-1">
+                                            <p class="font-semibold text-base text-gray">Doctor #1234</p>
+                                            <img src="/assets/img/badge.svg" alt="badge">
+                                            <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                            <img src="/assets/img/star.svg" alt="star">
+                                        </div>
+                                        <p class="font-normal text-xs text-gray-dark-1">MBBS, MD (Dermatelogy)</p>
+                                        <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2.5">
+                                    <p></p>
+                                    <p class="font-normal text-xs text-gray-dark-1">12 Years Experience</p>
+                                    <div class="flex items-center gap-2.5">
+                                        <p class="font-normal text-xs text-gray-dark-1">Female Doctor</p>
+                                        <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center justify-between pt-1.5">
+                                    <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                    <div class="flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                        <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
+                                    <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Location</p>
+                                    <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2.5 flex flex-col gap-2.5">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Clinic</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;500</p>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Home</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;700</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-end mt-5 gap-5">
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                    <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                                </button>
+
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                    <span class="font-bold text-xs text-white">Accept</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Order Details Popup-->
+                <div
+                    class="fixed inset-0 bg-transparent-black flex items-center justify-center hidden orderDetailsPopup z-9999">
+                    <div class="w-[432px] bg-white rounded-[10px] flex flex-col gap-7 p-5">
+                        <div class="flex items-center justify-between">
+                            <p class="font-semibold text-[22px] text-dark-gray">Order Details</p>
+                            <div
+                                class="w-[50px] h-[50px] flex items-center justify-center border border-deep-teal rounded-[10px] cursor-pointer closePopupBtn">
+                                <span class="material-symbols-outlined">close</span>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-light3 rounded-2xl p-4">
+                            <div class="flex items-start justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-11 h-11 rounded-full">
+                                        <img src="/assets/img/doctor.svg" alt="doctor">
+                                    </div>
+
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center gap-2.5">
+                                            <p class="font-semibold text-xl text-gray">Dr Ritika Singh </p>
+                                            <img src="/assets/img/badge.svg" alt="badge">
+                                        </div>
+                                        <div class="flex items-center gap-2.5">
+                                            <p class="font-normal text-base text-dark-gray">4.3</p>
+                                            <div class="flex items-center gap-0.5">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                            </div>
+                                        </div>
+                                        <p class="font-normal text-base text-gray-dark-1">MBBS, MD (Dermatelogy)</p>
+                                        <p class="font-normal text-base text-gray-dark-1">12 Years Experience</p>
+                                        <p class="font-normal text-base text-gray-dark-1">Female Doctor</p>
+                                    </div>
+                                </div>
+
+                                <p class="font-normal text-xs">Order #R32512</p>
+                            </div>
+
+
+                            <hr class="text-deep-teal mt-5">
+                            <p class="pt-2 font-normal text-base text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                            <div class="flex flex-col gap-2.5 pt-2.5">
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center justify-between pt-1.5">
+                                        <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                        <div class="flex items-center gap-1">
+                                            <span
+                                                class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                            <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between ">
+                                        <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
+                                        <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
+                                    </div>
+                                    <div class="flex items-center justify-between ">
+                                        <p class="font-normal text-xs text-gray-dark-1">Location</p>
+                                        <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-2">
+                                            <input type="radio" class="accent-sea-green-dark1 cursor-pointer" checked>
+                                            <p class="font-normal text-sm text-gray">Clinic</p>
+                                        </div>
+                                        <p class="font-normal text-base text-gray">Pay directly to the doctor</p>
+                                    </div>
+                                    <hr class="text-deep-teal">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center gap-[26px]">
+                            <button
+                                class="w-[160px] h-[38px] flex items-center justify-center border border-coral-red cursor-pointer rounded-[10px] cancelBtnPopup">
+                                <span class="font-bold text-tomato-red text-[15px]">Cancel</span>
+                            </button>
+
+                            <a href="appointments.html"
+                                class="w-[160px] h-[38px] flex items-center justify-center bg-teal-green cursor-pointer rounded-[10px] viewAppointmentBtn">
+                                <span class="font-bold text-white text-[15px]">View Appointment</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Cancellation Reasons Popup-->
+                <div
+                    class="fixed inset-0 bg-transparent-black flex items-center justify-center hidden cancelReasonPopup z-9999">
+                    <div class="bg-white w-[432px] rounded-[10px] p-5 flex flex-col gap-7">
+                        <div class="flex flex-col gap-1.5 items-center">
+                            <p class="font-semibold text-[22px] text-dark-gray">Why do you want to cancel ?</p>
+                            <p class="font-medium text-dark-gray text-[15px]">Earn <span
+                                    class="text-sea-green-dark1">2.8</span> Credit points on this service completion.
+                            </p>
+                        </div>
+
+                        <div class="p-4 flex flex-col gap-2">
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Change of mind.</p>
+                            </div>
+
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Found a better price elsewhere.</p>
+                            </div>
+
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Service provider not available on
+                                    appointment
+                                </p>
+                            </div>
+
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Wrong selection / Made a mistake in request
+                                </p>
+                            </div>
+
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Service provider told me to cancel</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-0.5 flex items-center justify-center">
+                            <button
+                                class="w-[360px] h-12 flex items-center justify-center rounded-lg bg-tomato-red cursor-pointer cancelReasonBtn shadow-cancelBtn">
+                                <span class="font-bold text-[15px] text-white">Cancel</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Cancel Confirmation Popup-->
+                <div
+                    class="fixed inset-0 bg-transparent-black flex items-center justify-center hidden z-9999 cancelConfirmationPopup">
+                    <div class="bg-white w-[432px] rounded-tl-2xl rounded-tr-2xl py-6 flex flex-col items-center">
+                        <img src="/assets/img/warning-illustration.svg" alt="Warning">
+                        <p class="font-normal text-[22px] text-black pt-2 text-center">You have done ___(x) out ___(y)
+                            free
+                            cancellations in this month , charges applicable beyond free cancellations.</p>
+                        <p class="font-normal text-base text-dark-gray pt-2.5">17-Dec-2025</p>
+                        <p class="font-bold text-lg text-gray pt-1.5">Order Request Cancel ?</p>
+                        <p class="font-normal text-base text-gray-dark-1 pt-1.5 text-center">Are you sure? do you want
+                            to
+                            <br> cancel your order ?
+                        </p>
+                        <div class="flex items-center justify-center pt-6 gap-[25px]">
+                            <button
+                                class="w-[160px] h-12 rounded-[10px] cursor-pointer border border-deep-aqua-teal flex items-center justify-center keepOrderBtn">
+                                <span class="text-sea-green2 font-bold text-base">Keep Order</span>
+                            </button>
+
+                            <button
+                                class="w-[160px] h-12 rounded-[10px] cursor-pointer bg-sea-green2 shadow-button flex items-center justify-center confirmBtn">
+                                <span class="text-white font-bold text-base">Confirmed</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Cancellation Successfull Popup-->
+                <div
+                    class="flex items-center justify-center hidden fixed inset-0 bg-transparent-black z-9999 cancellationSuccessfullPopup">
+                    <div
+                        class="bg-white w-[432px] rounded-tl-2xl rounded-tr-2xl flex flex-col gap-[18px] items-center py-6">
+                        <img src="/assets/img/success-illustration.svg" alt="Success">
+                        <div class="flex flex-col gap-3 items-center">
+                            <p class="font-bold text-lg text-gray">Successfully</p>
+                            <p class="font-normal text-base text-gray-dark-1 max-w-[323px] text-center">Your Enquiry Has
+                                Been Successfully cancelled ! Enquiry ID: 854455</p>
+                            <div class="flex items-center justify-center gap-[25px]">
+                                <button
+                                    class="w-[160px] h-12 rounded-[10px] cursor-pointer border border-deep-aqua-teal flex items-center justify-center">
+                                    <span class="text-sea-green2 font-bold text-base">Go to Orders</span>
+                                </button>
+
+                                <a href="#"
+                                    class="w-[160px] h-12 rounded-[10px] cursor-pointer bg-sea-green2 shadow-button flex items-center justify-center">
+                                    <span class="text-white font-bold text-base">Back to Home</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Appointment Fixed Success Popup-->
+                <div
+                    class="flex items-center justify-center hidden fixed inset-0 bg-transparent-black z-9999 appointmentFixedSuccessPopup">
+                    <div
+                        class="bg-white w-[432px] rounded-tl-2xl rounded-tr-2xl flex flex-col gap-[18px] items-center py-6">
+                        <img src="/assets/img/success-illustration.svg" alt="Success">
+                        <div class="flex flex-col gap-3 items-center">
+                            <p class="font-bold text-lg text-gray">Congratulations</p>
+                            <p class="font-normal text-base text-gray-dark-1 max-w-[323px] text-center">Your Appointment
+                                is
+                                fixed today ! Doctor: 24/04/2025 - 03:34 PM</p>
+                            <div class="flex items-center justify-center gap-[25px] pt-3">
+                                <button
+                                    class="w-[160px] h-12 rounded-[10px] cursor-pointer border border-deep-aqua-teal flex items-center justify-center">
+                                    <span class="text-sea-green2 font-bold text-base">Go to Orders</span>
+                                </button>
+
+                                <a href="#"
+                                    class="w-[160px] h-12 rounded-[10px] cursor-pointer bg-sea-green2 shadow-button flex items-center justify-center">
+                                    <span class="text-white font-bold text-base">Back to Home</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <!-- Top Footer Content -->
+            <div
+                class="bg-gray-tint px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+                <!-- Logo & Contact -->
+                <div class="flex flex-col gap-3.5">
+                    <a href="#">
+                        <img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" />
+                    </a>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Phone:
+                            <span class="text-dim-gray text-15-normal">(+123) 456-7898</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Email:
+                            <span class="text-dim-gray text-15-normal">hello@drodo.com</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Address:
+                            <span class="text-dim-gray text-15-normal">6890 Blvd, The Bronx, NY 1058, USA</span>
+                        </h3>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex gap-3 flex-wrap">
+                        <a href="#"><img src="/assets/img/facebook-icon.svg" alt="facebook-icon" /></a>
+                        <a href="#"><img src="/assets/img/twitter-icon.svg" alt="twitter-icon" /></a>
+                        <a href="#"><img src="/assets/img/Instagram-icon.svg" alt="Instagram-icon" /></a>
+                        <a href="#"><img src="/assets/img/linkdin-icon.svg" alt="linkdin-icon" /></a>
+                        <a href="#"><img src="/assets/img/Pinterest-icon.svg" alt="Pinterest-icon" /></a>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Information</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Customer Care -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Customer Care</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Help & FAQs</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Policy -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Policy</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Purchasing Policy</a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter -->
+                <nav class="flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Newsletter</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <p class="text-15-normal text-dim-gray">
+                        Sign up for our mailing list to get the latest updates & offers.
+                    </p>
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Enter your email address"
+                            class="h-[50px] w-full py-3 px-4 text-muted-gray placeholder:text-muted-gray focus:outline-none focus:ring-0 rounded border border-light-gray text-15-normal" />
+                        <button
+                            class="w-full py-3 px-6 flex items-center justify-center rounded bg-sea-green-deep text-15-semibold text-white hover:opacity-90 transition cursor-pointer">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Bottom Footer Strip -->
+            <div class="bg-snow-gray py-6 px-6 sm:px-10 md:px-16 xl:px-20 w-full">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                    <p class="text-dim-gray text-15-normal">
+                        @ Avatar. Designed By Aibuzz
+                    </p>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <p class="text-dim-gray text-15-normal">
+                            We accept payment via:
+                        </p>
+                        <div class="flex items-center flex-wrap gap-2 sm:gap-[10px] justify-center sm:justify-start">
+                            <img src="/assets/img/payment-via-1.png" alt="payment-1" class="h-6" />
+                            <img src="/assets/img/payment-via-5.png" alt="payment-2" class="h-6" />
+                            <img src="/assets/img/payment-via-4.png" alt="payment-3" class="h-6" />
+                            <img src="/assets/img/payment-via-3.png" alt="payment-4" class="h-6" />
+                            <img src="/assets/img/payment-via-2.png" alt="payment-5" class="h-6" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <script>
+        const faqButtons = document.querySelectorAll(".faq-btn");
+
+        faqButtons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector(".arrow");
+
+                // Close all others
+                document.querySelectorAll(".faq-content").forEach((item) => {
+                    if (item !== content) {
+                        item.classList.add("hidden");
+                    }
+                });
+
+                document.querySelectorAll(".arrow").forEach((icon) => {
+                    if (icon !== arrow) {
+                        icon.style.transform = "rotate(0deg)";
+                    }
+                });
+
+                // Toggle current
+                content.classList.toggle("hidden");
+
+                if (!content.classList.contains("hidden")) {
+                    arrow.style.transform = "rotate(90deg)";
+                } else {
+                    arrow.style.transform = "rotate(0deg)";
+                }
+
+            });
+
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/script/map.js"></script>
+    <script src="/script/doctor/form.js"></script>
+    <script src="/script/doctor/validation.js"></script>
+    <script src="/script/doctor/searching.js"></script>
+</body>
+
+</html>

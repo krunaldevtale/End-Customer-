@@ -11,7 +11,11 @@
   --color-gray-light1: #919EAB;
   --color-gray-light2: #637381;
   --color-warm-yellow: #FFC107;
+  --color-light-yellow:#F5B326;
+  --color-ochre-yellow: #F79E1B;
+  --color-ochre-yellow1:#FFDB1E;
   --color-gray-light3: #DFE3E8;
+  --color-gray-light4: #F6F6F6;
   --color-white: #ffffff;
   --color-gray: #212b36;
   --color-gray1: #5B5760;
@@ -24,6 +28,7 @@
   --color-dim-gray: #696969;
   --color-snow-gray: #F7F8FA;
   --color-muted-gray: #999999;
+  --color-muted-gray1: #919EAB3D;
   --color-light-gray: #EEEEEE;
   --color-gray-tint: #F4F6F8;
   --color-dark-charcoal: #111111;
@@ -33,7 +38,9 @@
   --color-light-sea-green: #99EAD6;
   --color-light-sea-green1: #08817880;
   --color-light-sea-green2: #00B69B;
+  --color-light-sea-green3:#0881787A;
   --color-transparent-light-sea-green: #3AAFA926;
+  --color-transparent-light-sea-green1:  #08817814;
   --color-sea-green-deep: #238B6D;
   --color-sea-green-dark: #407672;
   --color-sea-green-dark1: #1A7A5E;
@@ -48,6 +55,8 @@
   --color-purple-10: rgba(122, 90, 248, 0.10);
   --color-dark-teal-green: #115B46;
   --color-teal-green2: #1B785D;
+  --color-banner-blue:#3B7AEF;
+  --color-deep-aqua-teal: #0881787A;
   /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
   --box-shadow-2: 0 12px 24px -4px rgba(145, 158, 171, 0.12);
@@ -118,6 +127,13 @@
   --color-transparent-azure-blue: #0B77AE29;
   --color-turquoise: #28BDB9;
   --color-transparent-turquoise: #28BDB929;
+  --color-deep-cyan-teal: #04535C0D;
+  --color-coral-red: #FF48427A;
+  --color-platinum: #E9E9E9;
+  --color-near-white: #FEFEFE;
+  --color-lavender-gray: #B7BAC9;
+  --color-rich-black: #202020;
+  --color-seafoam-green:#7ACDB566;
   /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
   --box-shadow-btn: 0 8px 16px 0 rgba(145, 158, 171, 0.12);
@@ -127,6 +143,14 @@
   --box-shadow-6: 2px 3px 4px 0px #00000040;
   --shadow-records-card: 6px 6px 54px 0px #0000000D;
   --shadow-records-chart: 0px 2px 6px 0px #0D0A2C14;
+  --shadow-stepform-input: -1px -1px 8px 0px #00000014 inset, 1px 1px 8px 0px #00000014 inset;
+  --shadow-patient-dropdown: 0px 16px 32px -4px #919EAB1F;
+  --shadow-button: 0px 8px 16px 0px #0881783D;
+  --shadow-request-box: 4px 4px 10px 0px #00000026;
+  --shadow-addressType: 0px 8px 16px 0px #919EAB1F;
+  --shadow-cancelBtn: 0px 8px 16px 0px #FF48423D;
+
+
 
   /* Font Size and Font Weight */
   --text-30-bold: 1.875rem;
@@ -178,9 +202,25 @@ body {
 
 }
 
+.material-symbols-outlined.mini-icon{
+  font-size: 18px;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
   /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .nav-menu {
@@ -596,4 +636,41 @@ input[type="time"]::-ms-expand {
 
 .login-otp-input {
   @apply w-[54px] h-[54px] text-center rounded-lg bg-[#FFFFFF66] text-2xl font-semibold text-[#212B36] focus:outline-none
+}
+
+@keyframes pulse-out {
+  0% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes dot-bounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  40% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
 }
