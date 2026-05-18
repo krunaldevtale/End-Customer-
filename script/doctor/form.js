@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  $(".consultBtn").on("click", function () {
+    $(".homeSection").hide();
+    $(".consultationForm").removeClass("hidden");
+  });
   // ─── Health Issues Multi-Select ─────────────────────────────────────────────
   const healthWrapper = $("#health-issues-wrapper");
   const healthInputBox = $("#health-input-box");
@@ -459,13 +463,30 @@ $(document).ready(function () {
   }
 
   // ─── Submit ──────────────────────────────────────────────────────────────────
-  $(".stepBtn1").on("click", function () {
-    $(".addressBtn").removeClass("hidden");
-    const step2 = $(".step2-indicator");
-    step2.removeClass("border border-sea-green-dark1");
-    step2.css("background-color", "#1a7a6e");
-    step2.find("span").css("color", "white");
-    $(".step-connector").css("background-color", "#1a7a6e");
+  let submitState = 0;
+
+  $(".stepBtn1").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    console.log("stepBtn1 clicked, submitState =", submitState);
+
+    if (submitState === 0) {
+      submitState = 1;
+      $(".addressBtn").removeClass("hidden");
+
+      const step2 = $(".step2-indicator");
+      step2.removeClass("border border-sea-green-dark1");
+      step2.css("background-color", "#1a7a6e");
+      step2.find("span").css("color", "white");
+      $(".step-connector").css("background-color", "#1a7a6e");
+    } else if (submitState === 1) {
+      submitState = 2;
+      console.log("Transitioning to searchingDoctorsSection");
+      $(".consultationForm").addClass("hidden");
+      $(".searchingDoctorsSection").removeClass("hidden");
+      $('.headerMapArea').removeClass('hidden')
+    }
   });
 
   $(".addNewAddress").on("click", function () {
@@ -868,27 +889,26 @@ $(document).ready(function () {
     $(this).find("span.font-medium").css("color", "#1a7a6e");
   });
 
-  $(".saveNowBtn").on("click", function (e) {
-    e.preventDefault(); // prevent any native form submission
+ $(".saveNowBtn").on("click", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
 
-    // Hide address form, restore heading
-    $(".addressForm").addClass("hidden");
-    $(".heading").text("Select as per your Preference");
-    $(".stepIndicator").show();
+  console.log("saveNowBtn clicked, submitState before =", submitState);
 
-    // Show the step form
-    $(".stepForm").removeClass("hidden");
+  $(".addressForm").addClass("hidden");
+  $(".heading").text("Select as per your Preference");
+  $(".stepIndicator").show();
+  $(".stepForm").removeClass("hidden");
 
-    // Make sure we stay on Step 2 appearance
-    // (Step 2 indicator was already highlighted by stepBtn1)
-    const step2 = $(".step2-indicator");
-    step2.removeClass("border border-sea-green-dark1");
-    step2.css("background-color", "#1a7a6e");
-    step2.find("span").css("color", "white");
-    $(".step-connector").css("background-color", "#1a7a6e");
+  const step2 = $(".step2-indicator");
+  step2.removeClass("border border-sea-green-dark1");
+  step2.css("background-color", "#1a7a6e");
+  step2.find("span").css("color", "white");
+  $(".step-connector").css("background-color", "#1a7a6e");
 
-    // Keep the address button visible (user is now on step 2)
-    $(".addressBtn").addClass("hidden");
-    $(".selectedAddress").removeClass("hidden");
-  });
+  $(".addressBtn").addClass("hidden");
+  $(".selectedAddress").removeClass("hidden");
+
+  console.log("saveNowBtn done, submitState after =", submitState);
+});
 });

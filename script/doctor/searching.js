@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // Show overlay when search starts
   function showSearchOverlay() {
     $("#searchingOverlay").removeClass("hidden");
@@ -8,6 +7,10 @@ $(document).ready(function () {
   // Hide overlay when doctors are found
   function hideSearchOverlay() {
     $("#searchingOverlay").addClass("hidden");
+    // Invalidate after overlay is hidden so map fills space correctly
+    setTimeout(() => {
+      if (map) map.invalidateSize();
+    }, 100);
   }
 
   // Map Integration
@@ -18,10 +21,13 @@ $(document).ready(function () {
       map.remove();
     }
 
-    map = L.map("map").setView([lat, lng], 14);
+    // showSearchOverlay();
+
+    map = L.map("doctors-map").setView([lat, lng], 14);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution:
+        '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
     const userIcon = L.divIcon({
@@ -36,9 +42,14 @@ $(document).ready(function () {
       .bindPopup("<strong>Your Location</strong>")
       .openPopup();
 
-    // Show overlay before fetching
-    showSearchOverlay();
-    fetchNearbyDoctors(lat, lng);
+    // First invalidateSize so map renders correctly
+    setTimeout(() => {
+      map.invalidateSize();
+      // Then fetch after map is properly sized
+      setTimeout(() => {
+        fetchNearbyDoctors(lat, lng);
+      }, 200);
+    }, 300);
   }
 
   function fetchNearbyDoctors(lat, lng) {
@@ -106,20 +117,26 @@ $(document).ready(function () {
     });
   }
 
-  // Auto-detect location on page load
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      function (pos) {
-        initMap(pos.coords.latitude, pos.coords.longitude);
-      },
-      function () {
-        initMap(28.6139, 77.209); // Delhi fallback
-      }
-    );
-  } else {
-    initMap(28.6139, 77.209);
+  // Replace your existing geolocation block at the bottom with this:
+
+  function initMapWhenVisible() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function (pos) {
+          initMap(pos.coords.latitude, pos.coords.longitude);
+        },
+        function () {
+          initMap(28.6139, 77.209);
+        },
+      );
+    } else {
+      initMap(28.6139, 77.209);
+    }
   }
 
+  $(document).on("searchingSectionVisible", function () {
+    initMapWhenVisible();
+  });
   $("#locate-btn").on("click", function () {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (pos) {
@@ -155,5 +172,4 @@ $(document).ready(function () {
     $(".cancelConfirmationPopup").addClass("hidden");
     $(".cancellationSuccessfullPopup").removeClass("hidden");
   });
-
 });

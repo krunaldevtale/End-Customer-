@@ -1,19 +1,8 @@
-/* ============================================================
-   Real-time Validation — Doctor Booking Step Form
-   Drop this BELOW your existing form.js, or merge at the end
-   of the $(document).ready block.
-   ============================================================ */
-
 $(document).ready(function () {
-
-  /* ─────────────────────────────────────────────────────────────
-     UTILITY HELPERS
-  ───────────────────────────────────────────────────────────── */
-
   /**
    * Show an error message beneath a field wrapper.
-   * @param {jQuery} $el   – the field's root container element
-   * @param {string} msg   – error text
+   * @param {jQuery} $el
+   * @param {string} msg
    */
   function showError($el, msg) {
     // Remove any existing error first
@@ -21,15 +10,19 @@ $(document).ready(function () {
 
     const $err = $(
       '<p class="val-error text-xs font-medium mt-1" style="color:#e53e3e;">' +
-        '<span style="margin-right:3px;">&#9888;</span>' + msg +
-      "</p>"
+        '<span style="margin-right:3px;">&#9888;</span>' +
+        msg +
+        "</p>",
     );
     $el.append($err);
 
     // Red border on the input / custom-box inside the element
-    $el.find(
-      "input:not([type=hidden]):not([type=checkbox]), .border.rounded-2xl, .border.rounded-lg, #health-input-box, #spec-input-box"
-    ).first().addClass("!border-red-400");
+    $el
+      .find(
+        "input:not([type=hidden]):not([type=checkbox]), .border.rounded-2xl, .border.rounded-lg, #health-input-box, #spec-input-box",
+      )
+      .first()
+      .addClass("!border-red-400");
   }
 
   /**
@@ -38,9 +31,12 @@ $(document).ready(function () {
    */
   function clearError($el) {
     $el.find(".val-error").remove();
-    $el.find(
-      "input:not([type=hidden]):not([type=checkbox]), .border.rounded-2xl, .border.rounded-lg, #health-input-box, #spec-input-box"
-    ).first().removeClass("!border-red-400");
+    $el
+      .find(
+        "input:not([type=hidden]):not([type=checkbox]), .border.rounded-2xl, .border.rounded-lg, #health-input-box, #spec-input-box",
+      )
+      .first()
+      .removeClass("!border-red-400");
   }
 
   /** Show inline success tick (subtle, non-intrusive). */
@@ -49,26 +45,28 @@ $(document).ready(function () {
     // Optional: you could add a green border here if desired
   }
 
-
   /* ─────────────────────────────────────────────────────────────
      STEP FORM — FIELD REFERENCES
   ───────────────────────────────────────────────────────────── */
 
-  const $healthWrapper      = $("#health-issues-wrapper");
-  const $specWrapper        = $("#specialization-wrapper");
-  const $descriptionInput   = $('input[placeholder="Enter Description"]');
-  const $descWrapper        = $descriptionInput.closest(".flex.flex-col.gap-2");
-  const $consultCheckboxes  = $('input[type="checkbox"]').slice(0, 2);   // Clinic / Home
-  const $consultWrapper     = $consultCheckboxes.first().closest(".flex.flex-col.gap-\\[17px\\]");
-  const $serviceCheckboxes  = $('input[type="checkbox"]').slice(2, 4);   // Emergency / Normal
-  const $serviceWrapper     = $serviceCheckboxes.first().closest(".flex.flex-col.gap-\\[17px\\]");
-  const $dateInput          = $("#datetime-input");
-  const $dateWrapper        = $dateInput.closest(".flex.flex-col.gap-2.relative");
-  const $budgetInput        = $('input[placeholder="Enter Budget"]');
-  const $budgetWrapper      = $budgetInput.closest(".flex.flex-col.gap-2");
-  const $patientInput       = $('input[placeholder="Select Patient"]');
-  const $patientWrapper     = $patientInput.closest(".flex.flex-col.gap-2");
-
+  const $healthWrapper = $("#health-issues-wrapper");
+  const $specWrapper = $("#specialization-wrapper");
+  const $descriptionInput = $('input[placeholder="Enter Description"]');
+  const $descWrapper = $descriptionInput.closest(".flex.flex-col.gap-2");
+  const $consultCheckboxes = $('input[type="checkbox"]').slice(0, 2); // Clinic / Home
+  const $consultWrapper = $consultCheckboxes
+    .first()
+    .closest(".flex.flex-col.gap-\\[17px\\]");
+  const $serviceCheckboxes = $('input[type="checkbox"]').slice(2, 4); // Emergency / Normal
+  const $serviceWrapper = $serviceCheckboxes
+    .first()
+    .closest(".flex.flex-col.gap-\\[17px\\]");
+  const $dateInput = $("#datetime-input");
+  const $dateWrapper = $dateInput.closest(".flex.flex-col.gap-2.relative");
+  const $budgetInput = $('input[placeholder="Enter Budget"]');
+  const $budgetWrapper = $budgetInput.closest(".flex.flex-col.gap-2");
+  const $patientInput = $('input[placeholder="Select Patient"]');
+  const $patientWrapper = $patientInput.closest(".flex.flex-col.gap-2");
 
   /* ─────────────────────────────────────────────────────────────
      INDIVIDUAL VALIDATORS — Step Form
@@ -165,125 +163,127 @@ $(document).ready(function () {
     markValid($patientWrapper);
     return true;
   }
+  // ── Consultation Type: only one selectable ──────────────────────────────
+  $consultCheckboxes.on("change", function () {
+    if ($(this).is(":checked")) {
+      $consultCheckboxes.not(this).prop("checked", false);
+    }
+    validateConsultationType();
+  });
 
-
+  // ── Service Type: only one selectable ───────────────────────────────────
+  $serviceCheckboxes.on("change", function () {
+    if ($(this).is(":checked")) {
+      $serviceCheckboxes.not(this).prop("checked", false);
+    }
+    validateServiceType();
+  });
   /* ─────────────────────────────────────────────────────────────
      REAL-TIME LISTENERS — Step Form
   ───────────────────────────────────────────────────────────── */
 
-  // Health Issues — validate whenever a tag is added/removed
-  // We hook into the hidden input change (triggered in form.js renderHealthTags)
   $("#health-hidden-input").on("change input", validateHealthIssues);
 
-  // Because form.js sets .val() programmatically (no native 'change' fires),
-  // we observe mutations on the hidden input via a MutationObserver alternative:
-  // Instead, we wrap validation into the existing tag-render cycle using a
-  // short polling approach on dropdown close.
-  $("#health-input-box").on("click", function () {
-    // Revalidate after a tick so the hidden value is already updated
-    setTimeout(validateHealthIssues, 50);
+  $("#health-issues-wrapper .dropdown-menu").on("click", "li", function () {
+    setTimeout(validateHealthIssues, 150);
   });
-  // Also revalidate whenever a tag remove-button is clicked (bubbles up)
+  // Validate after tag removal
   $("#health-input-box").on("click", ".remove-tag", function () {
-    setTimeout(validateHealthIssues, 50);
+    setTimeout(validateHealthIssues, 150);
   });
 
-  // Specialization — revalidate on dropdown close
-  $("#spec-input-box").on("click", function () {
-    setTimeout(validateSpecialization, 50);
+  $("#specialization-wrapper .dropdown-menu").on("click", "li", function () {
+    setTimeout(validateSpecialization, 150);
   });
   $("#spec-input-box").on("click", ".remove-spec", function () {
-    setTimeout(validateSpecialization, 50);
-  });
-  // Also validate when a spec option is chosen (li click closes menu)
-  $("#specialization-wrapper .dropdown-menu").on("click", "li", function () {
-    setTimeout(validateSpecialization, 100);
+    setTimeout(validateSpecialization, 150);
   });
 
   // Description — live as user types
   $descriptionInput.on("input blur", validateDescription);
 
-  // Consultation type checkboxes
-  $consultCheckboxes.on("change", validateConsultationType);
-
-  // Service type checkboxes
-  $serviceCheckboxes.on("change", validateServiceType);
+  
 
   // Date input — set by calendar confirm button
-  // We re-validate each time the value changes
   $dateInput.on("change input", validateDateTime);
-  // The confirm button in the calendar also sets the value; hook it
   $("#confirm-datetime").on("click", function () {
     setTimeout(validateDateTime, 100);
   });
 
-  // Budget — live as user types
+  // Budget
   $budgetInput.on("input blur", validateBudget);
 
-  // Patient — programmatic; validate when dropdown closes (keyboard_arrow_down click)
+  // Patient 
   $patientWrapper.find(".material-symbols-outlined").on("click", function () {
     setTimeout(validatePatient, 100);
   });
   $patientInput.on("change input", validatePatient);
 
-
   /* ─────────────────────────────────────────────────────────────
-     STEP FORM SUBMIT — full validation gate
-  ───────────────────────────────────────────────────────────── */
+   STEP FORM SUBMIT — full validation gate
+───────────────────────────────────────────────────────────── */
 
-  // Override (supplement) the existing stepBtn1 handler
-  // We re-bind so our check runs BEFORE the UI transition
-  $(".stepBtn1").off("click").on("click", function () {
-    const ok = [
-      validateHealthIssues(),
-      validateSpecialization(),
-      validateDescription(),
-      validateConsultationType(),
-      validateServiceType(),
-      validateDateTime(),
-      validateBudget(),
-      // Patient is optional if not yet shown — only validate if visible
-      // validatePatient(),
-    ].every(Boolean);
+  $(".stepBtn1")
+    .off("click")
+    .on("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
 
-    if (!ok) {
-      // Scroll to the first error
-      const $firstError = $(".val-error").first();
-      if ($firstError.length) {
-        $("html, body").animate(
-          { scrollTop: $firstError.offset().top - 120 },
-          300
-        );
+    
+      if (!$(".selectedAddress").hasClass("hidden")) {
+        $(".consultationForm").addClass("hidden");
+        $(".searchingDoctorsSection").removeClass("hidden");
+        $(".headerMapArea").addClass("hidden");
+        $(document).trigger("searchingSectionVisible");
+        return;
       }
-      return; // Stop — don't advance to Step 2
-    }
 
-    // ── All valid: run original step-advance logic ──────────────
-    $(".addressBtn").removeClass("hidden");
-    const step2 = $(".step2-indicator");
-    step2.removeClass("border border-sea-green-dark1");
-    step2.css("background-color", "#1a7a6e");
-    step2.find("span").css("color", "white");
-    $(".step-connector").css("background-color", "#1a7a6e");
-  });
+      // ── Step 1 validation ────────────────────────────────────────────
+      const ok = [
+        validateHealthIssues(),
+        validateSpecialization(),
+        validateDescription(),
+        validateConsultationType(),
+        validateServiceType(),
+        validateDateTime(),
+        validateBudget(),
+      ].every(Boolean);
 
+      if (!ok) {
+        const $firstError = $(".val-error").first();
+        if ($firstError.length) {
+          $("html, body").animate(
+            { scrollTop: $firstError.offset().top - 120 },
+            300,
+          );
+        }
+        return;
+      }
+
+      // ── All valid: show address button and highlight Step 2 ──────────
+      $(".addressBtn").removeClass("hidden");
+      const step2 = $(".step2-indicator");
+      step2.removeClass("border border-sea-green-dark1");
+      step2.css("background-color", "#1a7a6e");
+      step2.find("span").css("color", "white");
+      $(".step-connector").css("background-color", "#1a7a6e");
+    });
 
   /* ─────────────────────────────────────────────────────────────
      ADDRESS FORM — FIELD REFERENCES
   ───────────────────────────────────────────────────────────── */
 
-  const $addrForm     = $(".addressForm form");
-  const $firstName    = $addrForm.find('input[placeholder="First Name"]');
-  const $lastName     = $addrForm.find('input[placeholder="Last Name"]');
-  const $phone        = $addrForm.find('input[placeholder="Phone"]');
-  const $addressLine  = $addrForm.find('input[placeholder="Address"]');
+  const $addrForm = $(".addressForm form");
+  const $firstName = $addrForm.find('input[placeholder="First Name"]');
+  const $lastName = $addrForm.find('input[placeholder="Last Name"]');
+  const $phone = $addrForm.find('input[placeholder="Phone"]');
+  const $addressLine = $addrForm.find('input[placeholder="Address"]');
 
   // Wrapper helpers for address dropdowns (country/city/area/zip inputs are read-only)
-  const $countryWrap  = $(".addressForm .dropdown-wrapper").eq(0);
-  const $cityWrap     = $(".addressForm .dropdown-wrapper").eq(1);
-  const $areaWrap     = $(".addressForm .dropdown-wrapper").eq(2);
-  const $zipWrap      = $(".addressForm .dropdown-wrapper").eq(3);
-
+  const $countryWrap = $(".addressForm .dropdown-wrapper").eq(0);
+  const $cityWrap = $(".addressForm .dropdown-wrapper").eq(1);
+  const $areaWrap = $(".addressForm .dropdown-wrapper").eq(2);
+  const $zipWrap = $(".addressForm .dropdown-wrapper").eq(3);
 
   /* ─────────────────────────────────────────────────────────────
      INDIVIDUAL VALIDATORS — Address Form
@@ -300,7 +300,10 @@ $(document).ready(function () {
       return false;
     }
     if (!/^[A-Za-z\s'-]{2,50}$/.test(val)) {
-      showInputError($firstName, "Enter a valid first name (letters only, 2–50 chars).");
+      showInputError(
+        $firstName,
+        "Enter a valid first name (letters only, 2–50 chars).",
+      );
       return false;
     }
     clearInputError($firstName);
@@ -390,9 +393,10 @@ $(document).ready(function () {
   }
 
   function validateAddressType() {
-    const isSelected = $(".addressForm .shadow-addressType").filter(function () {
-      return $(this).css("background-color") === "rgb(232, 245, 240)";
-    }).length > 0;
+    const isSelected =
+      $(".addressForm .shadow-addressType").filter(function () {
+        return $(this).css("background-color") === "rgb(232, 245, 240)";
+      }).length > 0;
 
     const $typeRow = $(".addressForm .flex.flex-col.gap-3");
     if (!isSelected) {
@@ -403,7 +407,6 @@ $(document).ready(function () {
     return true;
   }
 
-
   /* ─────────────────────────────────────────────────────────────
      ERROR HELPERS for plain <input> elements
   ───────────────────────────────────────────────────────────── */
@@ -413,8 +416,9 @@ $(document).ready(function () {
     $input.addClass("!border-red-400");
     const $err = $(
       '<p class="val-error text-xs font-medium mt-1" style="color:#e53e3e;">' +
-        '<span style="margin-right:3px;">&#9888;</span>' + msg +
-      "</p>"
+        '<span style="margin-right:3px;">&#9888;</span>' +
+        msg +
+        "</p>",
     );
     $input.after($err);
   }
@@ -429,8 +433,9 @@ $(document).ready(function () {
     $wrap.addClass("!border-red-400");
     const $err = $(
       '<p class="val-error text-xs font-medium mt-1" style="color:#e53e3e;">' +
-        '<span style="margin-right:3px;">&#9888;</span>' + msg +
-      "</p>"
+        '<span style="margin-right:3px;">&#9888;</span>' +
+        msg +
+        "</p>",
     );
     $wrap.after($err);
   }
@@ -439,7 +444,6 @@ $(document).ready(function () {
     $wrap.removeClass("!border-red-400");
     $wrap.siblings(".val-error").first().remove();
   }
-
 
   /* ─────────────────────────────────────────────────────────────
      REAL-TIME LISTENERS — Address Form
@@ -480,62 +484,58 @@ $(document).ready(function () {
     setTimeout(validateAddressType, 50);
   });
 
-
   /* ─────────────────────────────────────────────────────────────
      ADDRESS FORM SUBMIT — full validation gate
   ───────────────────────────────────────────────────────────── */
 
-  $(".saveNowBtn").off("click").on("click", function (e) {
-    e.preventDefault();
+  $(".saveNowBtn")
+    .off("click")
+    .on("click", function (e) {
+      e.preventDefault();
 
-    const ok = [
-      validateFirstName(),
-      validateLastName(),
-      validatePhone(),
-      validateCountry(),
-      validateCity(),
-      validateArea(),
-      validateZip(),
-      validateAddressLine(),
-      validateAddressType(),
-    ].every(Boolean);
+      const ok = [
+        validateFirstName(),
+        validateLastName(),
+        validatePhone(),
+        validateCountry(),
+        validateCity(),
+        validateArea(),
+        validateZip(),
+        validateAddressLine(),
+        validateAddressType(),
+      ].every(Boolean);
 
-    if (!ok) {
-      // Scroll to first error inside the address form
-      const $firstErr = $(".addressForm .val-error").first();
-      if ($firstErr.length) {
-        $("html, body").animate(
-          { scrollTop: $firstErr.offset().top - 120 },
-          300
-        );
+      if (!ok) {
+        // Scroll to first error inside the address form
+        const $firstErr = $(".addressForm .val-error").first();
+        if ($firstErr.length) {
+          $("html, body").animate(
+            { scrollTop: $firstErr.offset().top - 120 },
+            300,
+          );
+        }
+        return;
       }
-      return;
-    }
 
-    // ── All valid: run original save logic ──────────────────────
-    $(".addressForm").addClass("hidden");
-    $(".heading").text("Select as per your Preference");
-    $(".stepIndicator").show();
-    $(".stepForm").removeClass("hidden");
+      // ── All valid: run original save logic ──────────────────────
+      $(".addressForm").addClass("hidden");
+      $(".heading").text("Select as per your Preference");
+      $(".stepIndicator").show();
+      $(".stepForm").removeClass("hidden");
 
-    const step2 = $(".step2-indicator");
-    step2.removeClass("border border-sea-green-dark1");
-    step2.css("background-color", "#1a7a6e");
-    step2.find("span").css("color", "white");
-    $(".step-connector").css("background-color", "#1a7a6e");
+      const step2 = $(".step2-indicator");
+      step2.removeClass("border border-sea-green-dark1");
+      step2.css("background-color", "#1a7a6e");
+      step2.find("span").css("color", "white");
+      $(".step-connector").css("background-color", "#1a7a6e");
 
-    $(".addressBtn").addClass("hidden");
-    $(".selectedAddress").removeClass("hidden");
-  });
-
-  /* ─────────────────────────────────────────────────────────────
-     RESET ERRORS when switching between form views
-  ───────────────────────────────────────────────────────────── */
+      $(".addressBtn").addClass("hidden");
+      $(".selectedAddress").removeClass("hidden");
+    });
 
   // When the address form is opened, clear its errors
   $(".addNewAddress").on("click", function () {
     $(".addressForm .val-error").remove();
-    $(".addressForm .!border-red-400").removeClass("!border-red-400");
+    $(".addressForm .border-red-400").removeClass("border-red-400");
   });
-
 });
