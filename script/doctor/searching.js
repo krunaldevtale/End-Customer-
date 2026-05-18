@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     // showSearchOverlay();
 
-    map = L.map("map").setView([lat, lng], 14);
+    map = L.map("doctors-map").setView([lat, lng], 14);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
@@ -134,6 +134,9 @@ $(document).ready(function () {
     }
   }
 
+  $(document).on("searchingSectionVisible", function () {
+    initMapWhenVisible();
+  });
   $("#locate-btn").on("click", function () {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (pos) {

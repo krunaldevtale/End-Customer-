@@ -485,9 +485,7 @@ $(document).ready(function () {
       console.log("Transitioning to searchingDoctorsSection");
       $(".consultationForm").addClass("hidden");
       $(".searchingDoctorsSection").removeClass("hidden");
-      setTimeout(function () {
-  initMapWhenVisible();
-}, 50);
+      $('.headerMapArea').removeClass('hidden')
     }
   });
 

@@ -163,61 +163,57 @@ $(document).ready(function () {
     markValid($patientWrapper);
     return true;
   }
+  // ── Consultation Type: only one selectable ──────────────────────────────
+  $consultCheckboxes.on("change", function () {
+    if ($(this).is(":checked")) {
+      $consultCheckboxes.not(this).prop("checked", false);
+    }
+    validateConsultationType();
+  });
 
+  // ── Service Type: only one selectable ───────────────────────────────────
+  $serviceCheckboxes.on("change", function () {
+    if ($(this).is(":checked")) {
+      $serviceCheckboxes.not(this).prop("checked", false);
+    }
+    validateServiceType();
+  });
   /* ─────────────────────────────────────────────────────────────
      REAL-TIME LISTENERS — Step Form
   ───────────────────────────────────────────────────────────── */
 
-  // Health Issues — validate whenever a tag is added/removed
-  // We hook into the hidden input change (triggered in form.js renderHealthTags)
   $("#health-hidden-input").on("change input", validateHealthIssues);
 
-  // Because form.js sets .val() programmatically (no native 'change' fires),
-  // we observe mutations on the hidden input via a MutationObserver alternative:
-  // Instead, we wrap validation into the existing tag-render cycle using a
-  // short polling approach on dropdown close.
-  $("#health-input-box").on("click", function () {
-    // Revalidate after a tick so the hidden value is already updated
-    setTimeout(validateHealthIssues, 50);
+  $("#health-issues-wrapper .dropdown-menu").on("click", "li", function () {
+    setTimeout(validateHealthIssues, 150);
   });
-  // Also revalidate whenever a tag remove-button is clicked (bubbles up)
+  // Validate after tag removal
   $("#health-input-box").on("click", ".remove-tag", function () {
-    setTimeout(validateHealthIssues, 50);
+    setTimeout(validateHealthIssues, 150);
   });
 
-  // Specialization — revalidate on dropdown close
-  $("#spec-input-box").on("click", function () {
-    setTimeout(validateSpecialization, 50);
+  $("#specialization-wrapper .dropdown-menu").on("click", "li", function () {
+    setTimeout(validateSpecialization, 150);
   });
   $("#spec-input-box").on("click", ".remove-spec", function () {
-    setTimeout(validateSpecialization, 50);
-  });
-  // Also validate when a spec option is chosen (li click closes menu)
-  $("#specialization-wrapper .dropdown-menu").on("click", "li", function () {
-    setTimeout(validateSpecialization, 100);
+    setTimeout(validateSpecialization, 150);
   });
 
   // Description — live as user types
   $descriptionInput.on("input blur", validateDescription);
 
-  // Consultation type checkboxes
-  $consultCheckboxes.on("change", validateConsultationType);
-
-  // Service type checkboxes
-  $serviceCheckboxes.on("change", validateServiceType);
+  
 
   // Date input — set by calendar confirm button
-  // We re-validate each time the value changes
   $dateInput.on("change input", validateDateTime);
-  // The confirm button in the calendar also sets the value; hook it
   $("#confirm-datetime").on("click", function () {
     setTimeout(validateDateTime, 100);
   });
 
-  // Budget — live as user types
+  // Budget
   $budgetInput.on("input blur", validateBudget);
 
-  // Patient — programmatic; validate when dropdown closes (keyboard_arrow_down click)
+  // Patient 
   $patientWrapper.find(".material-symbols-outlined").on("click", function () {
     setTimeout(validatePatient, 100);
   });
@@ -233,12 +229,12 @@ $(document).ready(function () {
       e.preventDefault();
       e.stopPropagation();
 
-      // ── Step 2 transition (address already saved, submitState === 1) ──
-      // If selectedAddress is visible, we're on Step 2 — skip validation and go
+    
       if (!$(".selectedAddress").hasClass("hidden")) {
         $(".consultationForm").addClass("hidden");
         $(".searchingDoctorsSection").removeClass("hidden");
-       
+        $(".headerMapArea").addClass("hidden");
+        $(document).trigger("searchingSectionVisible");
         return;
       }
 

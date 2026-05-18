@@ -382,7 +382,7 @@ let markers = [];
 // Initialize the application
 function init() {
   // Initialize Lucide icons
-  lucide.createIcons();
+  // lucide.createIcons();
 
   // Set up event listeners
   setupEventListeners();
