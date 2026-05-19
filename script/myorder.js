@@ -1,5 +1,16 @@
  
-        // ----------------------------- SEPARATE MODULE: Orders, Tabs & Pagination ----------------------------------
+        const tabs = document.querySelectorAll('.tab-btn');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Remove the active class from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        
+        // Add the active class to the clicked tab
+        tab.classList.add('active');
+        
+    });
+}); 
         // Rich dataset with categories: Doctor, Pharmacy, Hospital, Labs
         const ordersDataset = [
             { id: "10023", agendaName: "General Consultation", datetime: "28/04/2025 - 09:30 AM", price: "₹850", status: "Successful", category: "Doctor" },
@@ -207,3 +218,5 @@
         // Additional fix for dynamic row responsiveness: ensure data-label stays consistent
         // Also manually handle ongoing/successful icons
     
+
+        
