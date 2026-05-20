@@ -87,7 +87,7 @@ body {
         </header>
 
        
-        <section class="bg-[#f7f9f9] min-h-screen px-4 md:px-6 lg:px-20 py-5 font-sans">
+        <section class="bg-white min-h-screen px-4 md:px-6 lg:px-20 py-5 font-sans">
             <!-- Close Icon Row -->
             <div class="flex justify-end mb-2">
                 <button class="text-gray-800 hover:text-black transition">
@@ -108,7 +108,7 @@ body {
 
             <!-- Header & Action Row -->
             <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-8 gap-4">
-                <h2 class="text-[24px] font-semibold text-gray">Order Details</h2>
+                <h2 class="md:text-[24px] font-semibold text-gray">Order Details</h2>
                 <div class="flex flex-wrap items-center gap-5">
                     <div class="relative">
                         <input type="text" placeholder="Search by name or categories" id="searchInput" class="w-[260px] md:w-[380px] bg-white border border-gray-200 rounded-md py-2.5 pl-10 pr-4 font-['Open_Sans'] font-normal text-[16px] text-gray4 placeholder:text-gray4 focus:outline-none focus:ring-1 focus:ring-teal-500">
@@ -140,18 +140,19 @@ body {
             </div>
 
             <!-- TABS (All, Pharmacy, Doctor, Hospital, Labs) - fully interactive -->
-            <div class="flex justify-between items-center mb-6 flex-wrap gap-3">
-               <div class="flex flex-wrap items-center gap-2 overflow-x-auto no-scrollbar pb-1 w-full sm:w-auto" id="tabsContainer">
-    <button data-category="all" class="tab-btn active px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">All</button>
-    <button data-category="Pharmacy" class="tab-btn px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">Pharmacy</button>
-    <button data-category="Doctor" class="tab-btn px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">Doctor</button>
-    <button data-category="Hospital" class="tab-btn px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">Hospital</button>
-    <button data-category="Labs" class="tab-btn px-5 md:px-6 py-2 whitespace-nowrap rounded-full border border-charcoal-black bg-white text-sm text-gray transition-smooth">Labs</button>
-</div>
-                <button class="text-teal-700 hover:scale-110 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                </button>
+              <!-- Tabs -->
+        <div class="flex justify-between items-center mb-6 flex-wrap gap-3">
+            <div class="flex flex-wrap items-center gap-2 overflow-x-auto no-scrollbar pb-1 w-full sm:w-auto" id="tabsContainer">
+                <button data-category="all" class="tab-btn active px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold">All</button>
+                <button data-category="Pharmacy" class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold">Pharmacy</button>
+                <button data-category="Doctor" class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold">Doctor</button>
+                <button data-category="Hospital" class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold">Hospital</button>
+                <button data-category="Labs" class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold">Labs</button>
             </div>
+            <button class="text-teal-700 hover:scale-110 transition">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+            </button>
+        </div>
 
           
 
