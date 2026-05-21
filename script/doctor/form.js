@@ -136,7 +136,65 @@ $(document).ready(function () {
         renderSpecTag();
       });
   }
+  // ─── Beds & Rooms Single-Select with tag ─────────────────────────────────────
+  const roomsWrapper = $("#rooms-wrapper");
+  const roomsInputBox = $("#rooms-input-box");
+  const roomsPlaceholder = $("#rooms-placeholder");
+  const roomsHidden = $("#rooms-hidden-input");
+  const roomsMenu = roomsWrapper.find(".dropdown-menu");
+  const roomsToggle = roomsWrapper.find(".dropdown-toggle");
+  let selectedRoom = null;
 
+  roomsInputBox.on("click", function (e) {
+    e.stopPropagation();
+    closeAllDropdowns(roomsWrapper[0]);
+    roomsMenu.toggleClass("hidden");
+    roomsToggle.text(
+      roomsMenu.hasClass("hidden")
+        ? "keyboard_arrow_down"
+        : "keyboard_arrow_up",
+    );
+  });
+
+  roomsMenu.find("li").on("click", function (e) {
+    e.stopPropagation();
+    selectedRoom = $(this).find("p").text().trim();
+    roomsMenu.find("li").css("background", "");
+    $(this).css("background", "#e8f5f0");
+    roomsMenu.addClass("hidden");
+    roomsToggle.text("keyboard_arrow_down");
+    renderRoomTag();
+  });
+
+  function renderRoomTag() {
+    roomsInputBox.find(".room-tag").remove();
+    if (!selectedRoom) {
+      roomsPlaceholder.show();
+    } else {
+      roomsPlaceholder.hide();
+      const tag = $(
+        '<span class="room-tag inline-flex items-center gap-1 bg-white shadow-request-box text-black text-sm font-semibold px-2.5 py-1 rounded-full mr-0.5">' +
+          "<span>" +
+          selectedRoom +
+          "</span>" +
+          '<button type="button" class="remove-room focus:outline-none flex items-center cursor-pointer">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">' +
+          '<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>' +
+          "</svg></button></span>",
+      );
+      roomsToggle.before(tag);
+    }
+    roomsHidden.val(selectedRoom || "");
+    roomsInputBox
+      .find(".remove-room")
+      .off("click")
+      .on("click", function (e) {
+        e.stopPropagation();
+        selectedRoom = null;
+        roomsMenu.find("li").css("background", "");
+        renderRoomTag();
+      });
+  }
   // ─── Close all dropdowns ─────────────────────────────────────────────────────
   function closeAllDropdowns(except) {
     $(".dropdown-menu").each(function () {
@@ -485,7 +543,7 @@ $(document).ready(function () {
       console.log("Transitioning to searchingDoctorsSection");
       $(".consultationForm").addClass("hidden");
       $(".searchingDoctorsSection").removeClass("hidden");
-      $('.headerMapArea').removeClass('hidden')
+      $(".headerMapArea").removeClass("hidden");
     }
   });
 
@@ -889,26 +947,26 @@ $(document).ready(function () {
     $(this).find("span.font-medium").css("color", "#1a7a6e");
   });
 
- $(".saveNowBtn").on("click", function (e) {
-  e.preventDefault();
-  e.stopPropagation();
+  $(".saveNowBtn").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
 
-  console.log("saveNowBtn clicked, submitState before =", submitState);
+    console.log("saveNowBtn clicked, submitState before =", submitState);
 
-  $(".addressForm").addClass("hidden");
-  $(".heading").text("Select as per your Preference");
-  $(".stepIndicator").show();
-  $(".stepForm").removeClass("hidden");
+    $(".addressForm").addClass("hidden");
+    $(".heading").text("Select as per your Preference");
+    $(".stepIndicator").show();
+    $(".stepForm").removeClass("hidden");
 
-  const step2 = $(".step2-indicator");
-  step2.removeClass("border border-sea-green-dark1");
-  step2.css("background-color", "#1a7a6e");
-  step2.find("span").css("color", "white");
-  $(".step-connector").css("background-color", "#1a7a6e");
+    const step2 = $(".step2-indicator");
+    step2.removeClass("border border-sea-green-dark1");
+    step2.css("background-color", "#1a7a6e");
+    step2.find("span").css("color", "white");
+    $(".step-connector").css("background-color", "#1a7a6e");
 
-  $(".addressBtn").addClass("hidden");
-  $(".selectedAddress").removeClass("hidden");
+    $(".addressBtn").addClass("hidden");
+    $(".selectedAddress").removeClass("hidden");
 
-  console.log("saveNowBtn done, submitState after =", submitState);
-});
+    console.log("saveNowBtn done, submitState after =", submitState);
+  });
 });

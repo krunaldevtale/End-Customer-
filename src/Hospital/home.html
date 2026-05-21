@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab - Home</title>
+    <title>Hospital - Home</title>
     <link rel="stylesheet" href="/assets/output.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <!-- Material Symbols Outlined -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:FILL@0..1" />
 </head>
 
 <body class="no-scrollbar">
     <main>
-        <div class="headerMapArea">
-            <div class="relative">
-                <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+        <div class="headerMapArea relative overflow-x-hidden w-full max-w-full">
+            <div class="relative ">
+                <header
+                    class="nav-menu px-4 sm:px-6 lg:px-10 xl:px-20 py-2 flex items-center justify-between relative z-10 w-full">
                     <div class="max-w-[150px] max-h-10">
                         <a href="home.html"><img src="/assets/img/logo.png" alt="logo"
                                 class="max-w-[150px] max-h-10" /></a>
@@ -164,10 +166,11 @@
             </div>
 
             <!-- Map Area -->
-            <div class="flex-1 absolute  w-full top-0 z-0 bg-ice-gray">
+            <div class="absolute inset-0 w-full max-w-full overflow-hidden z-0 bg-ice-gray pb-20">
                 <!-- Map -->
-                <div class="bg-white shadow-sm border-b sm:p-4 pt-0">
-                    <div class="flex items-center justify-between  absolute top-28 z-[999] w-full sm:px-20">
+                <div class="bg-white shadow-sm border-b sm:p-4 pb-0">
+                    <div
+                        class="flex items-center justify-between absolute top-28 z-[999] left-0 right-0 px-4 sm:px-6 lg:px-10 xl:px-20">
                         <!-- Location Dropdown -->
                         <div class="relative" id="locationSelect">
                             <div id="locationDropdownBtn"
@@ -220,7 +223,7 @@
                 </div>
 
                 <div id="map"
-                    class="w-full rounded-tl-none rounded-tr-none [border-bottom-right-radius:100px] [border-bottom-left-radius:100px] h-[550px]">
+                    class="w-full rounded-tl-none rounded-tr-none [border-bottom-right-radius:100px] [border-bottom-left-radius:100px] h-[550px] pb-20">
                 </div>
 
                 <!-- Loading overlay -->
@@ -232,14 +235,14 @@
                 </div>
 
                 <!-- Category Filter Buttons -->
-                <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-[1000]">
+                <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-[999]">
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 ">
                         <button data-category="Pharmacy"
                             class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
                             Pharmacy
                         </button>
                         <button data-category="Hospital"
-                            class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
+                            class="category-btn primary-btn rounded-lg bg-[#238b6d] border-0 font-bold text-white">
                             Hospital
                         </button>
                         <button data-category="Doctor"
@@ -247,13 +250,13 @@
                             Doctor
                         </button>
                         <button data-category="Lab"
-                            class="category-btn primary-btn rounded-lg  border-0 font-bold bg-[#238b6d] text-white">
+                            class="category-btn primary-btn rounded-lg  border-0 font-bold hover:bg-[#238b6d] hover:text-white bg-white">
                             Lab
                         </button>
                     </div>
                 </div>
-                <div class="-mt-6 flex items-center justify-center">
-                    <div class="w-full max-w-xl rounded-lg primary-box-shadow z-[9999]">
+                <div class="relative -mt-6 z-[1000] flex items-center justify-center px-4">
+                    <div class="w-[90%] sm:w-full max-w-xl rounded-lg primary-box-shadow z-[999]">
                         <div class="relative bg-white rounded-lg">
                             <!-- <i data-lucide="search"
                             class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"></i> -->
@@ -267,22 +270,21 @@
                 </div>
             </div>
 
-            <div class="h-[500px]"></div>
+            <div class="h-[500px] sm:h-[550px]"></div>
         </div>
-        <div class="homeSection mt-20">
+        <div class="homeSection mt-20 space-y-28">
             <!-- Banner -->
-            <section class="h-[195px] w-full bg-[url('/assets/img/banner-bg.png')] bg-no-repeat bg-cover">
+            <section class="h-[195px] w-full bg-[url('/assets/img/banner-bg.png')] bg-no-repeat bg-cover px-4">
                 <div class="flex flex-col md:flex-row gap-5 justify-center items-center md:justify-around h-full">
-                    <div class="border-b border-light-yellow text-center py-4">
-                        <h3 class="text-xl md:text-[32px] font-bold text-white md:leading-12">Find the Right Lab,
-                            Right
-                            When You Need</h3>
-                        <p class="text-sm md:text-base font-semibold text-light-yellow leading-6">Book trusted labs
+                    <div class="border-b border-gradient-yellow text-center py-4">
+                        <h3 class="text-xl md:text-[32px] font-bold text-white md:leading-12">Find the Right Hospital,
+                            Right When You Need</h3>
+                        <p class="text-sm md:text-base font-semibold text-light-yellow leading-6">Book trusted hospital
                             anytime, anywhere instantly</p>
                     </div>
                     <button
                         class="w-48 h-9 bg-light-yellow rounded-sm text-xs md:text-sm font-bold text-white flex items-center justify-center gap-2 cursor-pointer consultBtn">
-                        Consult a lab now
+                        Find Hospital now
                         <span class="w-4 h-4 rounded-full bg-white flex items-center justify-center">
                             <span class="material-symbols-outlined mini-icon text-light-yellow">
                                 keyboard_arrow_right
@@ -293,45 +295,46 @@
             </section>
 
             <!-- Healthcare -->
-            <section class="flex flex-col items-center w-full gap-8 mt-20">
+            <section class="flex flex-col items-center w-full gap-8">
                 <h3 class="text-2xl md:text-[44px] font-bold text-night-black text-center">Access Healthcare Your Way
                 </h3>
-                <div class="flex justify-around w-full">
+                <div class="flex flex-col sm:flex-row justify-around w-full gap-3">
                     <div class="flex flex-col items-center gap-3">
-                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">50K +</span>
-                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Tests Completed
+                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">20K +</span>
+                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Trusted Consultations
                         </p>
                     </div>
                     <div class="flex flex-col items-center gap-3">
                         <span class="text-base md:text-2xl font-bold text-sea-green-deep">2K +</span>
-                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Daily Lab Bookings
+                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Daily Appointments
                         </p>
                     </div>
                     <div class="flex flex-col items-center gap-3">
                         <span class="text-base md:text-2xl font-bold text-sea-green-deep">30 +</span>
-                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Certified Lab Experts
+                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Expert Departments
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Speciality Section -->
-            <section class="mt-20 px-4 sm:px-14">
+            <!-- Hospital Service Section -->
+            <section class="px-4 sm:px-14">
                 <div class="mb-6">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Find tests & packages for your needs</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Browse Hospital Services</h2>
                     <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
                         <div class="w-20 h-1 bg-sea-green-deep"></div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 sm:gap-5">
+                <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 sm:gap-5">
                     <!-- CARD -->
                     <div class="text-center group cursor-pointer">
                         <div
                             class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/Tests/blood-test.svg" class="h-full object-cover" alt="Blood-Test">
+                            <img src="/assets/img/hospital-services/orthopaedic-service.svg"
+                                class="h-full rounded-[10px] object-cover shrink-0" alt="orthopaedix">
                         </div>
                         <h3 class="mt-2 text-lg font-semibold text-black">
-                            Blood Test
+                            Orthopaedic
                         </h3>
                     </div>
 
@@ -339,10 +342,11 @@
                     <div class="text-center group cursor-pointer">
                         <div
                             class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/Tests/full-body.svg" class="h-full object-cover" alt="Full-Body">
+                            <img src="/assets/img/hospital-services/cardiology-service.svg"
+                                class="h-full object-cover shrink-0 rounded-[10px]" alt="cardiology">
                         </div>
                         <h3 class="mt-2 text-lg font-semibold text-black">
-                            Full Body
+                            Cardiology
                         </h3>
                     </div>
 
@@ -350,10 +354,11 @@
                     <div class="text-center group cursor-pointer">
                         <div
                             class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/Tests/diabetes.svg" class="h-full object-cover" alt="Diabetes">
+                            <img src="/assets/img/hospital-services/maternity-service.svg"
+                                class="h-full shrink-0 object-cover rounded-[10px]" alt="maternity">
                         </div>
                         <h3 class="mt-2 text-lg font-semibold text-black">
-                            Diabetes
+                            Maternity
                         </h3>
                     </div>
 
@@ -361,10 +366,11 @@
                     <div class="text-center group cursor-pointer">
                         <div
                             class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/Tests/thyroid.svg" class="h-full object-cover" alt="Thyroid">
+                            <img src="/assets/img/hospital-services/icu-service.svg"
+                                class="h-full shrink-0 object-cover rounded-[10px]" alt="icu">
                         </div>
                         <h3 class="mt-2 text-lg font-semibold text-black">
-                            Thyroid
+                            ICU
                         </h3>
                     </div>
 
@@ -372,10 +378,11 @@
                     <div class="text-center group cursor-pointer">
                         <div
                             class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/Tests/covid-test.svg" class="h-full object-cover" alt="Covid-Test">
+                            <img src="/assets/img/hospital-services/neurology-service.svg"
+                                class="h-full shrink-0 object-cover rounded-[10px]" alt="Neurology">
                         </div>
                         <h3 class="mt-2 text-lg font-semibold text-black">
-                            Covid Test
+                            Neurology
                         </h3>
                     </div>
 
@@ -383,581 +390,990 @@
                     <div class="text-center group cursor-pointer">
                         <div
                             class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/Tests/cancer.svg" class="h-full object-cover" alt="Cancer">
+                            <img src="/assets/img/hospital-services/homecare-service.svg"
+                                class="h-full shrink-0 object-cover rounded-[10px]" alt="Homecare">
                         </div>
                         <h3 class="mt-2 text-lg font-semibold text-black">
-                            Cancer
+                            Home Care
                         </h3>
                     </div>
                 </div>
             </section>
 
-            <!-- Labs Section -->
-            <section class="mt-20 px-14">
+            <!-- Hospital Section -->
+            <section class="px-4 sm:px-14">
                 <div class="mb-6">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Laboratory rated nearby</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Hospital rated nearby</h2>
                     <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
                         <div class="w-20 h-1 bg-sea-green-deep"></div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-                    <!-- Lab CARD -->
-                    <a href="#">
-                        <div
-                            class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
-                            <div class="p-3">
-                                <img src="/assets/img/laboratory.svg" class="w-full h-52 object-cover rounded-lg"
-                                    alt="Lab">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+                    <!-- Hospital CARD -->
+                    <div
+                        class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
+                        <div class="p-3">
+                            <img src="/assets/img/hospitals/hospital-1.svg" class="w-full h-48 object-cover rounded-lg"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h3 class="text-xl font-bold text-dark-charcoal">
+                                Ambani Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-3">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
                             </div>
-                            <div class="px-4 pb-4">
-                                <h3 class="text-xl font-bold text-dark-charcoal">
-                                    Apollo Diagnostic
-                                </h3>
 
-                                <!-- Rating -->
-                                <div class="flex items-center gap-0.5 mt-3 text-3xl">
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-gray-light1">★</span>
+                            <!-- Location -->
+                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <p>Zenith Diagnostic, Malad East</p>
+                            </div>
 
-                                    <span class="text-sm text-gray-light1 ml-1">
-                                        (118)
+                            <!-- Buttons -->
+                            <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        open_with
                                     </span>
-                                </div>
+                                    Directions
+                                </button>
 
-                                <!-- Location -->
-                                <div class="flex items-center gap-2 mt-3 text-black text-sm">
-                                    <span class="material-symbols-outlined">
-                                        location_on
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        call
                                     </span>
-                                    <p>Zenith Diagnostic, Malad East</p>
-                                </div>
-
-                                <!-- Buttons -->
-                                <div class="grid grid-cols-2 gap-3 mt-5">
-
-                                    <button
-                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                        <span class="material-symbols-outlined mini-icon">
-                                            open_with
-                                        </span>
-                                        Directions
-                                    </button>
-
-                                    <button
-                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                        <span class="material-symbols-outlined mini-icon">
-                                            call
-                                        </span>
-                                        Call
-                                    </button>
-                                </div>
+                                    Call
+                                </button>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="#">
-                        <div
-                            class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
-                            <div class="p-3">
-                                <img src="/assets/img/laboratory.svg" class="w-full h-52 object-cover rounded-lg"
-                                    alt="Lab">
+                    <div
+                        class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
+                        <div class="p-3">
+                            <img src="/assets/img/hospitals/hospital-2.svg" class="w-full h-48 object-cover rounded-lg"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h3 class="text-xl font-bold text-dark-charcoal">
+                                Ambani Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-3">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
                             </div>
-                            <div class="px-4 pb-4">
-                                <h3 class="text-xl font-bold text-dark-charcoal">
-                                    Thyro Care
-                                </h3>
 
-                                <!-- Rating -->
-                                <div class="flex items-center gap-0.5 mt-3 text-3xl">
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-gray-light1">★</span>
+                            <!-- Location -->
+                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <p>Zenith Diagnostic, Malad East</p>
+                            </div>
 
-                                    <span class="text-sm text-gray-light1 ml-1">
-                                        (118)
+                            <!-- Buttons -->
+                            <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        open_with
                                     </span>
-                                </div>
+                                    Directions
+                                </button>
 
-                                <!-- Location -->
-                                <div class="flex items-center gap-2 mt-3 text-black text-sm">
-                                    <span class="material-symbols-outlined">
-                                        location_on
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        call
                                     </span>
-                                    <p>Zenith Diagnostic, Malad East</p>
-                                </div>
-
-                                <!-- Buttons -->
-                                <div class="grid grid-cols-2 gap-3 mt-5">
-
-                                    <button
-                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                        <span class="material-symbols-outlined mini-icon">
-                                            open_with
-                                        </span>
-                                        Directions
-                                    </button>
-
-                                    <button
-                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                        <span class="material-symbols-outlined mini-icon">
-                                            call
-                                        </span>
-                                        Call
-                                    </button>
-                                </div>
+                                    Call
+                                </button>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="#">
-                        <div
-                            class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
-                            <div class="p-3">
-                                <img src="/assets/img/laboratory.svg" class="w-full h-52 object-cover rounded-lg"
-                                    alt="Lab">
+                    <div
+                        class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
+                        <div class="p-3">
+                            <img src="/assets/img/hospitals/hospital-3.svg" class="w-full h-48 object-cover rounded-lg"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h3 class="text-xl font-bold text-dark-charcoal">
+                                Ambani Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-3">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
                             </div>
-                            <div class="px-4 pb-4">
-                                <h3 class="text-xl font-bold text-dark-charcoal">
-                                    Apollo Diagnostic
-                                </h3>
 
-                                <!-- Rating -->
-                                <div class="flex items-center gap-0.5 mt-3 text-3xl">
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-gray-light1">★</span>
+                            <!-- Location -->
+                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <p>Zenith Diagnostic, Malad East</p>
+                            </div>
 
-                                    <span class="text-sm text-gray-light1 ml-1">
-                                        (118)
+                            <!-- Buttons -->
+                            <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        open_with
                                     </span>
-                                </div>
+                                    Directions
+                                </button>
 
-                                <!-- Location -->
-                                <div class="flex items-center gap-2 mt-3 text-black text-sm">
-                                    <span class="material-symbols-outlined">
-                                        location_on
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        call
                                     </span>
-                                    <p>Zenith Diagnostic, Malad East</p>
-                                </div>
-
-                                <!-- Buttons -->
-                                <div class="grid grid-cols-2 gap-3 mt-5">
-
-                                    <button
-                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                        <span class="material-symbols-outlined mini-icon">
-                                            open_with
-                                        </span>
-                                        Directions
-                                    </button>
-
-                                    <button
-                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                        <span class="material-symbols-outlined mini-icon">
-                                            call
-                                        </span>
-                                        Call
-                                    </button>
-                                </div>
+                                    Call
+                                </button>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="#">
-                        <div
-                            class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
-                            <div class="p-3">
-                                <img src="/assets/img/laboratory.svg" class="w-full h-52 object-cover rounded-lg"
-                                    alt="Lab">
+                    <div
+                        class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
+                        <div class="p-3">
+                            <img src="/assets/img/hospitals/hospital-4.svg" class="w-full h-48 object-cover rounded-lg"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h3 class="text-xl font-bold text-dark-charcoal">
+                                Ambani Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-3">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
                             </div>
-                            <div class="px-4 pb-4">
-                                <h3 class="text-xl font-bold text-dark-charcoal">
-                                    Apollo Diagnostic
-                                </h3>
 
-                                <!-- Rating -->
-                                <div class="flex items-center gap-0.5 mt-3 text-3xl">
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-golden-yellow">★</span>
-                                    <span class="text-gray-light1">★</span>
+                            <!-- Location -->
+                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <p>Zenith Diagnostic, Malad East</p>
+                            </div>
 
-                                    <span class="text-sm text-gray-light1 ml-1">
-                                        (118)
+                            <!-- Buttons -->
+                            <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        open_with
                                     </span>
-                                </div>
+                                    Directions
+                                </button>
 
-                                <!-- Location -->
-                                <div class="flex items-center gap-2 mt-3 text-black text-sm">
-                                    <span class="material-symbols-outlined">
-                                        location_on
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        call
                                     </span>
-                                    <p>Zenith Diagnostic, Malad East</p>
-                                </div>
-
-                                <!-- Buttons -->
-                                <div class="grid grid-cols-2 gap-3 mt-5">
-
-                                    <button
-                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                        <span class="material-symbols-outlined mini-icon">
-                                            open_with
-                                        </span>
-                                        Directions
-                                    </button>
-
-                                    <button
-                                        class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                        <span class="material-symbols-outlined mini-icon">
-                                            call
-                                        </span>
-                                        Call
-                                    </button>
-                                </div>
+                                    Call
+                                </button>
                             </div>
                         </div>
-                    </a>
-
-
+                    </div>
                 </div>
             </section>
 
-
-
-            <section class="mt-10 px-14 py-3 bg-[#DBF8F2]">
-                <!-- TOP REVIEW SUMMARY -->
-                <div class="max-w-3xl">
-
-                    <!-- Rating Header -->
-                    <div class="flex flex-wrap items-center gap-3 text-sm text-gray-600">
-
-                        <div class="flex items-center gap-1">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                class="w-4 h-4" alt="google">
-
-                            <span class="font-semibold text-gray-800">
-                                4.6 Stars
-                            </span>
-                        </div>
-
-                        <span class="text-gray-300">|</span>
-
-                        <p>7+ Lakhs Ratings & Reviews</p>
+            <!-- Hospital Banner -->
+            <section
+                class="w-full h-[316px] bg-gradient-primary flex items-center justify-center sm:justify-between px-3 lg:px-20">
+                <div class="space-y-6">
+                    <div class="space-y-2 text-center">
+                        <h3 class="text-lg md:text-3xl font-bol text-white">Need Expert Medical Advice ?</h3>
+                        <p class="text-xs md:text-sm font-semibold text-light-yellow">Ask questions and get answers from
+                            certified doctors.</p>
                     </div>
-
-                    <!-- Rating Bars -->
-                    <div class="mt-6 space-y-3">
-
-                        <!-- BAR -->
-                        <div class="flex items-center gap-3">
-
-                            <span class="w-10 text-sm text-gray-600">
-                                5 Star
-                            </span>
-
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="w-[84%] h-full bg-yellow-400 rounded-full"></div>
-                            </div>
-
-                        </div>
-
-                        <!-- BAR -->
-                        <div class="flex items-center gap-3">
-
-                            <span class="w-10 text-sm text-gray-600">
-                                4 Star
-                            </span>
-
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="w-[75%] h-full bg-yellow-400 rounded-full"></div>
-                            </div>
-
-                        </div>
-
-                        <!-- BAR -->
-                        <div class="flex items-center gap-3">
-
-                            <span class="w-10 text-sm text-gray-600">
-                                3 Star
-                            </span>
-
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="w-[66%] h-full bg-yellow-400 rounded-full"></div>
-                            </div>
-
-                        </div>
-
-                        <!-- BAR -->
-                        <div class="flex items-center gap-3">
-
-                            <span class="w-10 text-sm text-gray-600">
-                                2 Star
-                            </span>
-
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="w-[57%] h-full bg-yellow-400 rounded-full"></div>
-                            </div>
-
-                        </div>
-
-                        <!-- BAR -->
-                        <div class="flex items-center gap-3">
-
-                            <span class="w-10 text-sm text-gray-600">
-                                1 Star
-                            </span>
-
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="w-[14%] h-full bg-yellow-400 rounded-full"></div>
-                            </div>
-
-                        </div>
-
+                    <div class="flex items-center gap-2 md:gap-5">
+                        <img src="/assets/img/wing-l.svg" alt="wing">
+                        <span class="text-sm md:text-xl font-semibold text-white">More Than 1 Lakh users trusted our
+                            Doctors</span>
+                        <img src="/assets/img/wing-r.svg" alt="wing">
                     </div>
+                </div>
+                <img src="/assets/img/doctors/doctor-3.svg" class="hidden sm:block" alt="doctor">
+            </section>
 
-                    <!-- USERS -->
-                    <div class="flex items-center gap-4 mt-8">
-
-                        <!-- Users -->
-                        <div class="flex -space-x-3">
-
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg"
-                                class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="">
-
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg"
-                                class="w-10 h-10 rounded-full border-2 border-white object-cover" alt="">
-                        </div>
-
+            <!-- Hospital Near Section -->
+            <section class="px-4 sm:px-6 lg:px-10 xl:px-14">
+                <div class="mb-6">
+                    <div class="flex items-center justify-between gap-4 flex-wrap">
+                        <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Hospital Near You</h2>
+                        <button
+                            class="text-sm sm:text-base md:text-xl text-sea-green-deep underline font-semibold cursor-pointer">View
+                            All</button>
+                    </div>
+                    <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
+                        <div class="w-16 sm:w-20 h-1 bg-sea-green-deep"></div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+                    <!-- Hospital CARD -->
+                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
                         <div>
-                            <h3 class="font-bold text-[#0f9d8f] text-lg">
-                                Over 10 million happy users
+                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 py-4">
+                            <h3 class="text-base font-semibold text-gray">
+                                Zenith Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-1">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                                <div class="font-semibold">
+                                    $999 <span class="line-through font-normal">$2500</span>
+                                </div>
+                                <span
+                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="mt-7">
+                                <button
+                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                        <div>
+                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 py-4">
+                            <h3 class="text-base font-semibold text-gray">
+                                Zenith Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                                <div class="font-semibold">
+                                    $999 <span class="line-through font-normal">$2500</span>
+                                </div>
+                                <span
+                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="mt-7">
+                                <button
+                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                        <div>
+                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 py-4">
+                            <h3 class="text-base font-semibold text-gray">
+                                Zenith Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                                <div class="font-semibold">
+                                    $999 <span class="line-through font-normal">$2500</span>
+                                </div>
+                                <span
+                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="mt-7">
+                                <button
+                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                        <div>
+                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 py-4">
+                            <h3 class="text-base font-semibold text-gray">
+                                Zenith Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                                <div class="font-semibold">
+                                    $999 <span class="line-through font-normal">$2500</span>
+                                </div>
+                                <span
+                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="mt-7">
+                                <button
+                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                        <div>
+                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 py-4">
+                            <h3 class="text-base font-semibold text-gray">
+                                Zenith Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                                <div class="font-semibold">
+                                    $999 <span class="line-through font-normal">$2500</span>
+                                </div>
+                                <span
+                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="mt-7">
+                                <button
+                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                        <div>
+                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 py-4">
+                            <h3 class="text-base font-semibold text-gray">
+                                Zenith Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                                <div class="font-semibold">
+                                    $999 <span class="line-through font-normal">$2500</span>
+                                </div>
+                                <span
+                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="mt-7">
+                                <button
+                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                        <div>
+                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 py-4">
+                            <h3 class="text-base font-semibold text-gray">
+                                Zenith Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                                <div class="font-semibold">
+                                    $999 <span class="line-through font-normal">$2500</span>
+                                </div>
+                                <span
+                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="mt-7">
+                                <button
+                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                        <div>
+                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 py-4">
+                            <h3 class="text-base font-semibold text-gray">
+                                Zenith Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                                <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                                </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                                <div class="font-semibold">
+                                    $999 <span class="line-through font-normal">$2500</span>
+                                </div>
+                                <span
+                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="mt-7">
+                                <button
+                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                    Book Appointment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Consult section -->
+            <section class="w-full px-4">
+                <div class="max-w-7xl mx-auto">
+                    <!-- Heading -->
+                    <h2 class="text-3xl md:text-5xl font-bold text-center text-night-black mb-12">
+                        How would you like to Consult?
+                    </h2>
+                    <!-- Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <!-- Card 1 -->
+                        <div class="flex flex-col items-center">
+                            <h3 class="text-2xl font-semibold text-sea-green-deep mb-4">
+                                In- Clinic Visit
                             </h3>
 
-                            <p class="text-gray-700 font-medium">
-                                PharmEasy Labs
+                            <p class="text-night-black font-semibold leading-relaxed max-w-sm mb-6">
+                                Vist the Doctor for a face to face consultation
+                                and physical examination
                             </p>
+
+                            <button class="bg-sea-green-deep text-white px-12 py-3 rounded-[10px] w-full max-w-[220px]">
+                                Get Started
+                            </button>
                         </div>
 
+                        <!-- Card 2 -->
+                        <div class="flex flex-col items-center">
+                            <h3 class="text-2xl font-semibold text-sea-green-deep mb-4">
+                                Video Consultation
+                            </h3>
+
+                            <p class="text-night-black font-semibold leading-relaxed max-w-sm mb-6">
+                                Connect with Top Doctors via HD Video Call
+                                from the comfort of your home.
+                            </p>
+
+                            <button class="bg-sea-green-deep text-white px-12 py-3 rounded-[10px] w-full max-w-[220px]">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flex flex-col items-center">
+                            <h3 class="text-2xl font-semibold text-sea-green-deep mb-4">
+                                Chat Consultation
+                            </h3>
+
+                            <p class="text-night-black font-semibold leading-relaxed max-w-sm mb-6">
+                                Message a doctor anytime for quick advice,
+                                prescriptions and follow-ups.
+                            </p>
+
+                            <button class="bg-sea-green-deep text-white px-12 py-3 rounded-[10px] w-full max-w-[220px]">
+                                Get Started
+                            </button>
+                        </div>
                     </div>
-
-                </div>
-
-                <!-- REVIEWS -->
-                <div class="relative mt-10">
-
-                    <!-- Quote -->
-                    <div class="absolute -top-4 left-0 text-[80px] text-[#dbe7f3] leading-none font-serif">
-                        “
-                    </div>
-
-                    <!-- Scroll Area -->
-                    <div class="flex gap-5 overflow-x-auto pb-4 pl-8 hide-scrollbar scroll-smooth no-scrollbar">
-
-                        <!-- CARD -->
-                        <div
-                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
-
-                            <p class="text-gray-600 text-sm leading-6">
-                                Doctor was very polite and explained everything clearly.
-                                Highly recommended.
-                            </p>
-
-                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
-
-                                <span class="material-symbols-outlined text-[18px]">
-                                    person
-                                </span>
-
-                                <span class="font-medium text-gray-700">
-                                    Pankaj Roy
-                                </span>
-
-                                <span>30 Apr '25</span>
-                            </div>
-                        </div>
-
-                        <!-- CARD -->
-                        <div
-                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
-
-                            <p class="text-gray-600 text-sm leading-6">
-                                Good experience, consultation was smooth and helpful.
-                            </p>
-
-                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
-
-                                <span class="material-symbols-outlined text-[18px]">
-                                    person
-                                </span>
-
-                                <span class="font-medium text-gray-700">
-                                    Suryabhan
-                                </span>
-
-                                <span>01 Jul '24</span>
-                            </div>
-                        </div>
-
-                        <!-- CARD -->
-                        <div
-                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
-
-                            <p class="text-gray-600 text-sm leading-6">
-                                Best gynecologist I've visited. Very caring and professional.
-                            </p>
-
-                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
-
-                                <span class="material-symbols-outlined text-[18px]">
-                                    person
-                                </span>
-
-                                <span class="font-medium text-gray-700">
-                                    Sana
-                                </span>
-
-                                <span>06 May '25</span>
-                            </div>
-                        </div>
-
-                        <!-- CARD -->
-                        <div
-                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
-
-                            <p class="text-gray-600 text-sm leading-6">
-                                Good experience, consultation was smooth and helpful.
-                            </p>
-
-                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
-
-                                <span class="material-symbols-outlined text-[18px]">
-                                    person
-                                </span>
-
-                                <span class="font-medium text-gray-700">
-                                    Suryabhan
-                                </span>
-
-                                <span>01 Jul '24</span>
-                            </div>
-                        </div>
-
-                        <!-- CARD -->
-                        <div
-                            class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
-
-                            <p class="text-gray-600 text-sm leading-6">
-                                Staff was supportive and reports were delivered on time.
-                            </p>
-
-                            <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
-
-                                <span class="material-symbols-outlined text-[18px]">
-                                    person
-                                </span>
-
-                                <span class="font-medium text-gray-700">
-                                    Aakash
-                                </span>
-
-                                <span>11 Jan '25</span>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
             </section>
 
-            <div class="mt-10 px-4 space-y-4 bg-gray-tint py-4">
+            <!--Payment Partner Offers and Our Blog-->
+            <section class="bg-ice-gray px-14 py-14 space-y-28">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h1 class="font-bold text-xl md:text-3xl text-charcoal-black">Payment Partner Offers</h1>
+                        <a href="#"
+                            class="text-sea-green-deep font-bold text-lg md:text-xl border-b-2 border-sea-green-deep">View
+                            All</a>
+                    </div>
 
-                <!-- FAQ ITEM -->
-                <div class="bg-white rounded-xl overflow-hidden">
+                    <div class="custom-hr"></div>
 
-                    <button class="faq-btn w-full flex items-center justify-between px-5 py-5 text-left">
+                    <!-- Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+                        <!-- Card Start -->
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                                <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                            </div>
 
-                        <span class="text-gray-800 font-medium text-sm md:text-base">
-                            When will I get answer to my query?
-                        </span>
+                            <div class="flex-1">
+                                <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                                <div class="flex items-center justify-between mt-1">
+                                    <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                    <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                                </div>
 
-                        <div
-                            class="w-8 h-8 rounded-full bg-[#e9eef5] flex items-center justify-center shrink-0 transition duration-300">
+                                <div class="flex items-center justify-start mt-2 gap-3">
+                                    <span
+                                        class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                    <button class="cursor-pointer">
+                                        <img src="/assets/img/copy-icon.svg" alt="copy">
+                                    </button>
+                                </div>
 
-                            <span class="material-symbols-outlined arrow">
-                                chevron_right
-                            </span>
+                            </div>
                         </div>
 
-                    </button>
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                                <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                            </div>
 
-                    <!-- CONTENT -->
-                    <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-6">
-                        Our medical experts usually respond within 24 hours depending on
-                        the type of consultation and availability.
+                            <div class="flex-1">
+                                <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                                <div class="flex items-center justify-between mt-1">
+                                    <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                    <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                                </div>
+
+                                <div class="flex items-center justify-start mt-2 gap-3">
+                                    <span
+                                        class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                    <button class="cursor-pointer">
+                                        <img src="/assets/img/copy-icon.svg" alt="copy">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                                <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                            </div>
+
+                            <div class="flex-1">
+                                <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                                <div class="flex items-center justify-between mt-1">
+                                    <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                    <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                                </div>
+
+                                <div class="flex items-center justify-start mt-2 gap-3">
+                                    <span
+                                        class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                    <button class="cursor-pointer">
+                                        <img src="/assets/img/copy-icon.svg" alt="copy">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                                <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                            </div>
+
+                            <div class="flex-1">
+                                <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                                <div class="flex items-center justify-between mt-1">
+                                    <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                    <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                                </div>
+
+                                <div class="flex items-center justify-start mt-2 gap-3">
+                                    <span
+                                        class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                    <button class="cursor-pointer">
+                                        <img src="/assets/img/copy-icon.svg" alt="copy">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- FAQ ITEM -->
-                <div class="bg-white rounded-xl overflow-hidden">
-
-                    <button class="faq-btn w-full flex items-center justify-between px-5 py-5 text-left">
-
-                        <span class="text-gray-800 font-medium text-sm md:text-base">
-                            Who are the consulting doctors?
-                        </span>
-
-                        <div
-                            class="w-8 h-8 rounded-full bg-[#e9eef5] flex items-center justify-center shrink-0 transition duration-300">
-
-                            <span class="material-symbols-outlined arrow">
-                                chevron_right
-                            </span>
+                <div>
+                    <h1 class="font-bold text-xl md:text-3xl text-charcoal-black">
+                        Our Blog
+                    </h1>
+                    <div class="custom-hr"></div>
+                    <div class="flex pt-5 items-center gap-5 overflow-x-auto no-scrollbar">
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img1.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash
+                                your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
                         </div>
-
-                    </button>
-
-                    <!-- CONTENT -->
-                    <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-6">
-                        All consultations are handled by certified and experienced
-                        medical professionals from reputed hospitals and clinics.
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img2.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash
+                                your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img1.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash
+                                your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img2.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash
+                                your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img1.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash
+                                your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img2.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash
+                                your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- FAQ ITEM -->
-                <div class="bg-white rounded-xl overflow-hidden">
-
-                    <button class="faq-btn w-full flex items-center justify-between px-5 py-5 text-left">
-
-                        <span class="text-gray-800 font-medium text-sm md:text-base">
-                            Will the doctor be able to resolve my problems?
-                        </span>
-
-                        <div
-                            class="w-8 h-8 rounded-full bg-[#e9eef5] flex items-center justify-center shrink-0 transition duration-300">
-
-                            <span class="material-symbols-outlined arrow">
-                                chevron_right
-                            </span>
+            <!-- On Going Campaigns Section -->
+            <section class="w-full h-[500px]">
+                <div class="px-6 sm:px-10 md:px-16 xl:px-20">
+                    <div>
+                        <h2 class="text-dark-slate text-30-bold pb-[9px]">On Going Campaigns</h2>
+                        <div class="w-full flex items-center">
+                            <div class="w-[100px] h-[3px] bg-sea-green-deep"></div>
+                            <div class="flex-1 h-[1.6px] bg-[#EEEEEE] mt-[0.2px]"></div>
                         </div>
-
-                    </button>
-
-                    <!-- CONTENT -->
-                    <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-6">
-                        Doctors will provide guidance, diagnosis support, and treatment
-                        recommendations based on your symptoms and medical history.
                     </div>
                 </div>
-
-            </div>
+                <div class="py-5 px-6 sm:px-10 md:px-16 xl:px-20 flex gap-[20px] overflow-x-auto no-scrollbar">
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-1.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-2.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-1.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-2.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-1.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <!--Consultation Form-->
@@ -995,12 +1411,12 @@
 
                         <!-- ── Health Issues (Multi-Select) ─────────────────────── -->
                         <div class="flex flex-col gap-2 relative dropdown-wrapper" id="health-issues-wrapper">
-                            <label class="font-semibold text-sm text-gray">Select Test Type</label>
+                            <label class="font-semibold text-sm text-gray">Select Services Type</label>
                             <!-- Tags + input live inside this box -->
                             <div id="health-input-box"
                                 class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
                                 <span id="health-placeholder"
-                                    class="text-sm text-medium-gray font-normal select-none">Select Test Type</span>
+                                    class="text-sm text-medium-gray font-normal select-none">Select Services Type</span>
                                 <!-- Arrow icon, absolutely positioned right -->
                                 <span
                                     class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
@@ -1009,108 +1425,208 @@
                             <input type="hidden" id="health-hidden-input">
                             <div class="dropdown-menu hidden absolute rounded-md bg-white border border-cool-fog shadow-lg z-[100] w-full h-[200px] overflow-y-auto no-scrollbar"
                                 style="top:100%; margin-top:4px;">
-                                <ul class="font-semibold text-base text-black space-y-2 cursor-pointer">
-                                    <li class="hover:bg-light-gray px-3 py-1">Blood/Urine Tests</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Special Panels</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Health Packages</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Vitamin & Hormonal</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Infectious Diseases</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Pre-surgery Clearance</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Fertility Tests</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Pregnancy Testing</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Imaging – Basic</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Imaging – Advanced</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Bone & Joint Tests</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Cancer Screening</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Lifestyle Conditionals</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Senior Citizen Package</li>
-                                    <li class="hover:bg-light-gray px-3 py-1">Home Sample Collection</li>
+                                <ul class="font-semibold text-base text-black space-y-2 cursor-pointer px-1.5">
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Wound Dressing
+                                    </li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">IV Fluids</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Injection</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Nebulizer</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Fever</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Food Poisoning
+                                    </li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Asthma</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Snake Bite
+                                    </li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Appendicitis
+                                    </li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Hernia</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Gallbladder
+                                    </li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Piles</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Fistula</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Knee
+                                        Replacement</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Hip Surgery
+                                    </li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Fracture
+                                        Repair</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Cataract</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Glaucoma</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Normal
+                                        Delivery</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">C-Section</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Pregnancy
+                                        Management</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">MTP
+                                        (Medical/Surgical)</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">Legal Abortion
+                                    </li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">In-hospital
+                                        drug administration</li>
+                                    <li class="hover:bg-light-gray px-3 py-1 border-b border-gray-light3">One-time
+                                        dialysis session</li>
                                 </ul>
                             </div>
                         </div>
 
                         <!-- Description -->
                         <div class="flex flex-col gap-2">
-                            <label class="font-semibold text-sm text-gray">Describe your Test/ Package request</label>
+                            <label class="font-semibold text-sm text-gray">Describe your Requirement</label>
                             <input type="text"
                                 class="border border-cool-fog shadow-stepform-input rounded-2xl font-normal text-sm focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray w-full py-[11px] px-2"
                                 placeholder="Enter Description">
                         </div>
                     </div>
 
-                    <!-- ── Specialization (Single-Select with tag) ──────────────── -->
-                    <div class="flex flex-col gap-2 dropdown-wrapper relative" id="specialization-wrapper">
-                        <label class="font-semibold text-sm text-gray">Example Test/ Packages</label>
-                        <div id="spec-input-box"
-                            class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
-                            <span id="spec-placeholder" class="text-sm text-medium-gray font-normal select-none">Example
-                                Test/ Packages</span>
-                            <span
-                                class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-10">
+                        <div class="flex flex-col gap-2 dropdown-wrapper relative" id="specialization-wrapper">
+                            <label class="font-semibold text-sm text-gray">Select Category</label>
+                            <div id="spec-input-box"
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
+                                <span id="spec-placeholder"
+                                    class="text-sm text-medium-gray font-normal select-none">Category</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                            </div>
+                            <input type="hidden" id="spec-hidden-input">
+                            <div
+                                class="dropdown-menu hidden absolute top-[72px] bg-white rounded-md border border-cool-fog z-[100] w-full h-[200px] overflow-y-auto no-scrollbar shadow-lg">
+                                <ul class="font-semibold text-base text-gray">
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>OPD / Daycare</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Emergency Admission</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Inpatient Admission</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>ICU / High-Dependency</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Surgery Package</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Ortho Surgery</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Eye Surgery</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Maternity - Delivery</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Abortion Services</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Post-Surgical Recovery</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Elderly Admission</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Palliative / Hospice</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Chemotherapy Session</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Dialysis Support</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Baby Care (Post-Birth)</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <input type="hidden" id="spec-hidden-input">
-                        <div
-                            class="dropdown-menu hidden absolute top-[72px] bg-white rounded-md border border-cool-fog z-[100] w-full h-[200px] overflow-y-auto no-scrollbar shadow-lg">
-                            <ul class="font-semibold text-base text-gray">
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>CBC, LFT, KFT, Sugar, Cholesterol, TSH</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>Thyroid Panel, Diabetes Monitoring, Cardiac Panel</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>Full Body Checkup, Executive Package, Lifestyle</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>Vitamin D, B12, AMH, HCG, Testosterone</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>Dengue, Typhoid, Malaria, HIV, Hepatitis, TB</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>Fitness Panel, Clotting Profile, ECG, Blood Group</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>AMH, FSH, LH, Semen Analysis, Progesterone</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>HCG, USG (Ultrasound), Double/Triple Marker</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>X-Ray, USG (Abdomen, Pelvis), Echo</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>MRI, CT Scan, PET Scan, DEXA</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>Bone DEXA, Uric Acid, Rheumatoid Panel</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>PSA, CA-125, Mammogram, Pap Smear</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>Obesity Panel, Smoking Effect Panel, Stress Tests</p>
-                                </li>
-                                <li
-                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
-                                    <p>Liver, Kidney, Cardiac, Bone Health, Vitamins</p>
-                                </li>
-                            </ul>
+
+                        <div class="flex flex-col gap-2 dropdown-wrapper relative" id="rooms-wrapper">
+                            <label class="font-semibold text-sm text-gray">Beds & Rooms</label>
+                            <div id="rooms-input-box"
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
+                                <span id="rooms-placeholder"
+                                    class="text-sm text-medium-gray font-normal select-none">Beds & Rooms</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                            </div>
+                            <input type="hidden" id="rooms-hidden-input">
+                            <div
+                                class="dropdown-menu hidden absolute top-[72px] bg-white rounded-md border border-cool-fog z-[100] w-full h-[200px] overflow-y-auto no-scrollbar shadow-lg">
+                                <ul class="font-semibold text-base text-gray">
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>General Ward</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Private Room</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Semi-private Room</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>ICU Bed (Non-ventilator)</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Monitored Stay</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Short stay for rest after operations </p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>General elderly care</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Fall recovery</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Observation</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>End-of-life support </p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Chronic care beds</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Neonatal stay </p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Newborn observation</p>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-10">
                         <!-- Consultation Type -->
@@ -1119,11 +1635,11 @@
                             <div class="flex items-center gap-2">
                                 <div class="w-[205px] flex items-center gap-2">
                                     <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
-                                    <span class="font-normal text-sm text-dark-gray">Visit Lab</span>
+                                    <span class="font-normal text-sm text-dark-gray">Visit Hospital</span>
                                 </div>
                                 <div class="w-[205px] flex items-center gap-2">
                                     <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
-                                    <span class="font-normal text-sm text-dark-gray">Home Sample Collection</span>
+                                    <span class="font-normal text-sm text-dark-gray">Home Visit</span>
                                 </div>
                             </div>
                         </div>
@@ -1581,7 +2097,7 @@
                         <!-- Center circle -->
                         <div
                             class="absolute w-[250px] h-[250px] bg-sea-green-dark1 rounded-full flex flex-col items-center justify-center gap-1.5 animate-[breathe_2.4s_ease-in-out_infinite]">
-                            <p class="text-white text-sm font-semibold text-center leading-snug">Searching for Labs
+                            <p class="text-white text-sm font-semibold text-center leading-snug">Searching for Hospital
                                 .....
                             </p>
 
@@ -1623,19 +2139,19 @@
                                     </div>
                                     <div class="flex flex-col gap-1">
                                         <div class="flex items-center gap-1">
-                                            <p class="font-semibold text-base text-gray">Lab #12355</p>
+                                            <p class="font-semibold text-base text-gray">Hospital #1234</p>
                                             <img src="/assets/img/badge.svg" alt="badge">
                                             <span class="font-normal text-xs text-dark-gray">4.3</span>
                                             <img src="/assets/img/star.svg" alt="star">
                                         </div>
-                                        <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                        <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
                                     </div>
                                 </div>
 
                                 <div class="flex flex-col gap-2.5">
-                                    <p></p>
-                                    <p></p>
-                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                    <p class="font-normal text-xs text-gray-dark-1">12 Years Experience</p>
+                                    <p class="font-normal text-xs text-gray-dark-1">Female Doctor 24/04/2026 - 03:43 PM
+                                    </p>
                                 </div>
                             </div>
 
@@ -1662,17 +2178,92 @@
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <input type="radio" class="cursor-pointer accent-sea-green-dark1">
-                                        <p class="font-normal text-sm text-gray">Visit Lab</p>
+                                        <p class="font-normal text-sm text-gray">Clinic</p>
                                     </div>
-                                    <p class="font-semibold text-sm text-teal-green">&#8377;900</p>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;500</p>
                                 </div>
 
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <input type="radio" class="cursor-pointer accent-sea-green-dark1">
-                                        <p class="font-normal text-sm text-gray">Home Sample</p>
+                                        <p class="font-normal text-sm text-gray">Home</p>
                                     </div>
-                                    <p class="font-semibold text-sm text-teal-green">&#8377;1200</p>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;700</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-end mt-5 gap-5">
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                    <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                                </button>
+
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                    <span class="font-bold text-xs text-white">Accept</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                            <div class="flex items-center justify-between border-b border-deep-teal">
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-11 h-11 rounded-full">
+                                        <img src="/assets/img/lab.svg" alt="Lab image">
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="flex items-center gap-1">
+                                            <p class="font-semibold text-base text-gray">Hospital #5866</p>
+                                            <img src="/assets/img/badge.svg" alt="badge">
+                                            <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                            <img src="/assets/img/star.svg" alt="star">
+                                        </div>
+                                        <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2.5">
+                                    <p class="font-normal text-xs text-gray-dark-1">12 Years Experience</p>
+                                    <p class="font-normal text-xs text-gray-dark-1">Female Doctor 24/04/2026 - 03:43 PM
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center justify-between pt-1.5">
+                                    <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                    <div class="flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                        <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
+                                    <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Location</p>
+                                    <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2.5 flex flex-col gap-2.5">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Clinic</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;600</p>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Home</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;800</p>
                                 </div>
                             </div>
 
@@ -1697,19 +2288,19 @@
                                     </div>
                                     <div class="flex flex-col gap-1">
                                         <div class="flex items-center gap-1">
-                                            <p class="font-semibold text-base text-gray">Lab #12355</p>
+                                            <p class="font-semibold text-base text-gray">Hospital #1234</p>
                                             <img src="/assets/img/badge.svg" alt="badge">
                                             <span class="font-normal text-xs text-dark-gray">4.3</span>
                                             <img src="/assets/img/star.svg" alt="star">
                                         </div>
-                                        <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                        <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
                                     </div>
                                 </div>
 
                                 <div class="flex flex-col gap-2.5">
-                                    <p></p>
-                                    <p></p>
-                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                    <p class="font-normal text-xs text-gray-dark-1">12 Years Experience</p>
+                                    <p class="font-normal text-xs text-gray-dark-1">Female Doctor 24/04/2026 - 03:43 PM
+                                    </p>
                                 </div>
                             </div>
 
@@ -1736,91 +2327,17 @@
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <input type="radio" class="cursor-pointer accent-sea-green-dark1">
-                                        <p class="font-normal text-sm text-gray">Visit Lab</p>
+                                        <p class="font-normal text-sm text-gray">Clinic</p>
                                     </div>
-                                    <p class="font-semibold text-sm text-teal-green">&#8377;900</p>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;500</p>
                                 </div>
 
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
                                         <input type="radio" class="cursor-pointer accent-sea-green-dark1">
-                                        <p class="font-normal text-sm text-gray">Home Sample</p>
+                                        <p class="font-normal text-sm text-gray">Home</p>
                                     </div>
-                                    <p class="font-semibold text-sm text-teal-green">&#8377;1200</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center justify-end mt-5 gap-5">
-                                <button
-                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
-                                    <span class="font-bold text-xs text-tomato-red">Cancel</span>
-                                </button>
-
-                                <button
-                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
-                                    <span class="font-bold text-xs text-white">Accept</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
-                            <div class="flex items-center justify-between border-b border-deep-teal">
-                                <div class="flex items-start gap-2.5">
-                                    <div class="w-11 h-11 rounded-full">
-                                        <img src="/assets/img/lab.svg" alt="Lab image">
-                                    </div>
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex items-center gap-1">
-                                            <p class="font-semibold text-base text-gray">Lab #12355</p>
-                                            <img src="/assets/img/badge.svg" alt="badge">
-                                            <span class="font-normal text-xs text-dark-gray">4.3</span>
-                                            <img src="/assets/img/star.svg" alt="star">
-                                        </div>
-                                        <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col gap-2.5">
-                                    <p></p>
-                                    <p></p>
-                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col gap-2">
-                                <div class="flex items-center justify-between pt-1.5">
-                                    <p class="font-normal text-xs text-gray-dark-1">6km away</p>
-                                    <div class="flex items-center gap-1">
-                                        <span
-                                            class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
-                                        <p class="font-semibold text-sm text-gray">20 minutes </p>
-                                    </div>
-                                </div>
-                                <div class="flex items-center justify-between ">
-                                    <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
-                                    <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
-                                </div>
-                                <div class="flex items-center justify-between ">
-                                    <p class="font-normal text-xs text-gray-dark-1">Location</p>
-                                    <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
-                                </div>
-                            </div>
-
-                            <div class="pt-2.5 flex flex-col gap-2.5">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
-                                        <p class="font-normal text-sm text-gray">Visit Lab</p>
-                                    </div>
-                                    <p class="font-semibold text-sm text-teal-green">&#8377;900</p>
-                                </div>
-
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center gap-2">
-                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
-                                        <p class="font-normal text-sm text-gray">Home Sample</p>
-                                    </div>
-                                    <p class="font-semibold text-sm text-teal-green">&#8377;1200</p>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;700</p>
                                 </div>
                             </div>
 
@@ -1857,12 +2374,13 @@
                             <div class="flex items-start justify-between">
                                 <div class="flex items-center gap-3">
                                     <div class="w-11 h-11 rounded-full">
-                                        <img src="/assets/img/lab.svg" alt="Lab">
+                                        <img src="/assets/img/doctor.svg" alt="Doctor">
                                     </div>
 
                                     <div class="flex flex-col gap-2">
                                         <div class="flex items-center gap-2.5">
-                                            <p class="font-semibold text-xl text-gray text-nowrap">RedLab Diagnostics </p>
+                                            <p class="font-semibold text-xl text-gray text-nowrap">ABC Hospital
+                                            </p>
                                             <img src="/assets/img/badge.svg" alt="badge">
                                         </div>
                                         <div class="flex items-center gap-2.5">
@@ -1875,7 +2393,7 @@
                                                 <img src="/assets/img/star.svg" alt="star">
                                             </div>
                                         </div>
-                                       
+
                                     </div>
                                 </div>
 
@@ -1908,7 +2426,7 @@
                                             <input type="radio" class="accent-sea-green-dark1 cursor-pointer" checked>
                                             <p class="font-normal text-sm text-gray">Visit Lab</p>
                                         </div>
-                                        <p class="font-normal text-base text-gray">Pay directly to the Lab</p>
+                                        <p class="font-normal text-base text-gray">Pay directly to the Doctor</p>
                                     </div>
                                     <hr class="text-deep-teal">
                                 </div>
@@ -2023,7 +2541,7 @@
                                     <span class="text-sea-green2 font-bold text-base">Go to Orders</span>
                                 </button>
 
-                                <a href="appointments-cancel.html"
+                                <a href="appointment-cancel.html"
                                     class="w-[160px] h-12 rounded-[10px] cursor-pointer bg-sea-green2 shadow-button flex items-center justify-center">
                                     <span class="text-white font-bold text-base">Back to Home</span>
                                 </a>
@@ -2063,7 +2581,7 @@
         <footer>
             <!-- Top Footer Content -->
             <div
-                class="bg-gray-tint px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+                class="bg-footer-green px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
                 <!-- Logo & Contact -->
                 <div class="flex flex-col gap-3.5">
                     <a href="#">
@@ -2156,7 +2674,7 @@
             </div>
 
             <!-- Bottom Footer Strip -->
-            <div class="bg-snow-gray py-6 px-6 sm:px-10 md:px-16 xl:px-20 w-full">
+            <div class="bg-footer-green py-6 px-6 sm:px-10 md:px-16 xl:px-20 w-full">
                 <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
                     <p class="text-dim-gray text-15-normal">
                         @ Avatar. Designed By Aibuzz
