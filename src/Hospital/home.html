@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital - Home</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Material Symbols Outlined -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:FILL@0..1" />
+</head>
+<body class="no-scrollbar">
+    <main>
+        <div class="headerMapArea relative overflow-x-hidden w-full max-w-full">
+            <div class="relative ">
+                <header class="nav-menu px-4 sm:px-6 lg:px-10 xl:px-20 py-2 flex items-center justify-between relative z-10 w-full">
+                    <div class="max-w-[150px] max-h-10">
+                        <a href="home.html"><img src="/assets/img/logo.png" alt="logo"
+                                class="max-w-[150px] max-h-10" /></a>
+                    </div>
+                    <nav class="">
+                        <div class="">
+                            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                            <ul id="menu" class="hidden md:flex space-x-6 items-center">
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Home
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Medicine
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Maps
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Services
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="/src/records.html" class="">Records</a></li>
+                                <li><a href="./rewards.html" class="">Rewards</a></li>
+                                <li><a href="#" class="">Support</a></li>
+                                <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
+                                            class="text-[#238b6d]">Login/Sign Up</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
+                            <li><a href="#" class="block">Home</a></li>
+                            <li><a href="#" class="block">About</a></li>
+                            <li>
+                                <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                                    Services
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                                    <li>
+                                        <a href="#" class="block hover:text-gray-300">Web Design</a>
+                                    </li>
+                                    <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                                    <li>
+                                        <a href="#" class="block hover:text-gray-300">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="">Records</a></li>
+                            <li><a href="rewards.html" class="">Rewards</a></li>
+                            <li><a href="#" class="">Support</a></li>
+                            <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+
+            <!-- Map Area -->
+            <div class="absolute inset-0 w-full max-w-full overflow-hidden z-0 bg-ice-gray pb-20">
+                <!-- Map -->
+                <div class="bg-white shadow-sm border-b sm:p-4 pb-0">
+                    <div class="flex items-center justify-between absolute top-28 z-[999] left-0 right-0 px-4 sm:px-6 lg:px-10 xl:px-20">
+                        <!-- Location Dropdown -->
+                        <div class="relative" id="locationSelect">
+                            <div id="locationDropdownBtn"
+                                class="flex items-center gap-2 bg-white h-10 w-45 justify-between p-2 rounded-lg primary-box-shadow cursor-pointer">
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-gray"></i>
+                                    <span id="selectedLocation" class="font-medium text-gray text-nowrap">New York,
+                                        NY</span>
+                                </div>
+
+                                <i class="fas fa-caret-down"></i>
+                            </div>
+                            <div id="locationDropdownMenu"
+                                class="absolute left-0  w-45 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50">
+                                <div class="py-1">
+                                    <div data-value="New York, NY"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">New York, NY
+                                    </div>
+                                    <div data-value="Los Angeles, CA"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Los Angeles,
+                                        CA
+                                    </div>
+                                    <div data-value="Chicago, IL"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Chicago, IL
+                                    </div>
+                                    <div data-value="Miami, FL"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Miami, FL
+                                    </div>
+                                    <div data-value="Houston, TX"
+                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Houston, TX
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="resultsCount" class="hidden text-sm text-gray-600">
+                            5 locations found
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button
+                                class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
+                                <img src="/assets/img/notification-icon.svg" alt="notification">
+                            </button>
+                            <button
+                                class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
+                                <img src="/assets/img/shopping-cart.svg" alt="Cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="map"
+                    class="w-full rounded-tl-none rounded-tr-none [border-bottom-right-radius:100px] [border-bottom-left-radius:100px] h-[550px] pb-20">
+                </div>
+
+                <!-- Loading overlay -->
+                <div id="loadingOverlay" class="absolute inset-0 bg-gray-100 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
+                        <p class="text-gray-600">Loading map...</p>
+                    </div>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-[999]">
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 ">
+                        <button data-category="Pharmacy"
+                            class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
+                            Pharmacy
+                        </button>
+                        <button data-category="Hospital"
+                            class="category-btn primary-btn rounded-lg bg-[#238b6d] border-0 font-bold text-white">
+                            Hospital
+                        </button>
+                        <button data-category="Doctor"
+                            class="category-btn primary-btn rounded-lg  bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
+                            Doctor
+                        </button>
+                        <button data-category="Lab"
+                            class="category-btn primary-btn rounded-lg  border-0 font-bold hover:bg-[#238b6d] hover:text-white bg-white">
+                            Lab
+                        </button>
+                    </div>
+                </div>
+                <div class="relative -mt-6 z-[1000] flex items-center justify-center px-4">
+                    <div class="w-[90%] sm:w-full max-w-xl rounded-lg primary-box-shadow z-[999]">
+                        <div class="relative bg-white rounded-lg">
+                            <!-- <i data-lucide="search"
+                            class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"></i> -->
+                            <input id="searchInput" type="text"
+                                placeholder="I want to search for Medicine, Brands, Doctor, Pharmacy, etc."
+                                class="w-full pl-4 pr-18 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none " />
+                            <i class="fa-solid fa-microphone absolute right-12 top-1/2 -translate-y-1/2 w-4 h-4"></i>
+                            <i class="fa-solid fa-camera absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-[500px] sm:h-[550px]"></div>
+        </div>
+        <div class="homeSection mt-20 space-y-28">
+            <!-- Banner -->
+            <section class="h-[195px] w-full bg-[url('/assets/img/banner-bg.png')] bg-no-repeat bg-cover px-4">
+                <div class="flex flex-col md:flex-row gap-5 justify-center items-center md:justify-around h-full">
+                    <div class="border-b border-gradient-yellow text-center py-4">
+                        <h3 class="text-xl md:text-[32px] font-bold text-white md:leading-12">Find the Right Hospital, Right When You Need</h3>
+                        <p class="text-sm md:text-base font-semibold text-light-yellow leading-6">Book trusted hospital
+                            anytime, anywhere instantly</p>
+                    </div>
+                    <button
+                        class="w-48 h-9 bg-light-yellow rounded-sm text-xs md:text-sm font-bold text-white flex items-center justify-center gap-2 cursor-pointer consultBtn">
+                        Find Hospital now
+                        <span class="w-4 h-4 rounded-full bg-white flex items-center justify-center">
+                            <span class="material-symbols-outlined mini-icon text-light-yellow">
+                                keyboard_arrow_right
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Healthcare -->
+            <section class="flex flex-col items-center w-full gap-8">
+                <h3 class="text-2xl md:text-[44px] font-bold text-night-black text-center">Access Healthcare Your Way
+                </h3>
+                <div class="flex flex-col sm:flex-row justify-around w-full gap-3">
+                    <div class="flex flex-col items-center gap-3">
+                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">20K +</span>
+                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Trusted Consultations
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">2K +</span>
+                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Daily Appointments
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-3">
+                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">30 +</span>
+                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Expert Departments
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hospital Service Section -->
+            <section class="px-4 sm:px-14">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Browse Hospital Services</h2>
+                    <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
+                        <div class="w-20 h-1 bg-sea-green-deep"></div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 sm:gap-5">
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/hospital-services/orthopaedic-service.svg" class="h-full rounded-[10px] object-cover shrink-0" alt="orthopaedix">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            Orthopaedic
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/hospital-services/cardiology-service.svg" class="h-full object-cover shrink-0 rounded-[10px]" alt="cardiology">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            Cardiology
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/hospital-services/maternity-service.svg" class="h-full shrink-0 object-cover rounded-[10px]" alt="maternity">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            Maternity
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/hospital-services/icu-service.svg" class="h-full shrink-0 object-cover rounded-[10px]" alt="icu">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            ICU
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/hospital-services/neurology-service.svg" class="h-full shrink-0 object-cover rounded-[10px]" alt="Neurology">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            Neurology
+                        </h3>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="text-center group cursor-pointer">
+                        <div
+                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                            <img src="/assets/img/hospital-services/homecare-service.svg" class="h-full shrink-0 object-cover rounded-[10px]" alt="Homecare">
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-black">
+                            Home Care
+                        </h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hospital Section -->
+            <section class="px-4 sm:px-14">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Hospital rated nearby</h2>
+                    <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
+                        <div class="w-20 h-1 bg-sea-green-deep"></div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+                    <!-- Hospital CARD -->
+                    <div class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
+                        <div class="p-3">
+                            <img src="/assets/img/hospitals/hospital-1.svg" class="w-full h-48 object-cover rounded-lg"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h3 class="text-xl font-bold text-dark-charcoal">
+                                Ambani Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-3">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                               <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                               </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <p>Zenith Diagnostic, Malad East</p>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        open_with
+                                    </span>
+                                    Directions
+                                </button>
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        call
+                                    </span>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
+                        <div class="p-3">
+                            <img src="/assets/img/hospitals/hospital-2.svg" class="w-full h-48 object-cover rounded-lg"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h3 class="text-xl font-bold text-dark-charcoal">
+                                Ambani Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-3">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                               <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                               </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <p>Zenith Diagnostic, Malad East</p>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        open_with
+                                    </span>
+                                    Directions
+                                </button>
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        call
+                                    </span>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
+                        <div class="p-3">
+                            <img src="/assets/img/hospitals/hospital-3.svg" class="w-full h-48 object-cover rounded-lg"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h3 class="text-xl font-bold text-dark-charcoal">
+                                Ambani Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-3">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                               <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                               </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <p>Zenith Diagnostic, Malad East</p>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        open_with
+                                    </span>
+                                    Directions
+                                </button>
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        call
+                                    </span>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
+                        <div class="p-3">
+                            <img src="/assets/img/hospitals/hospital-4.svg" class="w-full h-48 object-cover rounded-lg"
+                                alt="Hospital">
+                        </div>
+                        <div class="px-4 pb-4">
+                            <h3 class="text-xl font-bold text-dark-charcoal">
+                                Ambani Hospital
+                            </h3>
+                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
+
+                            <!-- Rating -->
+                            <div class="flex items-center gap-0.5 mt-3">
+                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                               <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                               <span class="text-xs text-gray-light2 ml-1">
+                                    (118)
+                               </span>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                                <span class="material-symbols-outlined">
+                                    location_on
+                                </span>
+                                <p>Zenith Diagnostic, Malad East</p>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="grid grid-cols-2 gap-3 mt-5">
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        open_with
+                                    </span>
+                                    Directions
+                                </button>
+
+                                <button
+                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                    <span class="material-symbols-outlined mini-icon">
+                                        call
+                                    </span>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hospital Banner -->
+            <section class="w-full h-[316px] bg-gradient-primary flex items-center justify-center sm:justify-between px-3 lg:px-20">
+            <div class="space-y-6">
+                <div class="space-y-2 text-center">
+                    <h3 class="text-lg md:text-3xl font-bol text-white">Need Expert Medical Advice ?</h3>
+                    <p class="text-xs md:text-sm font-semibold text-light-yellow">Ask questions and get answers from certified doctors.</p>
+                </div>
+                <div class="flex items-center gap-2 md:gap-5">
+                    <img src="/assets/img/wing-l.svg" alt="wing">
+                    <span class="text-sm md:text-xl font-semibold text-white">More Than 1 Lakh users trusted our Doctors</span>
+                    <img src="/assets/img/wing-r.svg" alt="wing">
+                </div>
+            </div>
+            <img src="/assets/img/doctors/doctor-3.svg" class="hidden sm:block" alt="doctor">
+            </section>
+
+             <!-- Hospital Near Section -->
+            <section class="px-4 sm:px-6 lg:px-10 xl:px-14">
+            <div class="mb-6">
+                <div class="flex items-center justify-between gap-4 flex-wrap">
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Hospital Near You</h2>
+                    <button class="text-sm sm:text-base md:text-xl text-sea-green-deep underline font-semibold cursor-pointer">View All</button>
+                </div>
+                <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
+                    <div class="w-16 sm:w-20 h-1 bg-sea-green-deep"></div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+                <!-- Hospital CARD -->
+                <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                    <div>
+                        <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover" alt="Hospital">
+                    </div>
+                    <div class="px-4 py-4">
+                        <h3 class="text-base font-semibold text-gray">
+                            Zenith Hospital
+                        </h3>
+                        <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-1">
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                            <span class="text-xs text-gray-light2 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                            <div class="font-semibold">
+                                $999 <span class="line-through font-normal">$2500</span>
+                            </div>  
+                            <span class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-7">
+                            <button class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                    <div>
+                        <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover" alt="Hospital">
+                    </div>
+                    <div class="px-4 py-4">
+                        <h3 class="text-base font-semibold text-gray">
+                            Zenith Hospital
+                        </h3>
+                        <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                            <span class="text-xs text-gray-light2 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                            <div class="font-semibold">
+                                $999 <span class="line-through font-normal">$2500</span>
+                            </div>  
+                            <span class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-7">
+                            <button class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                    <div>
+                        <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover" alt="Hospital">
+                    </div>
+                    <div class="px-4 py-4">
+                        <h3 class="text-base font-semibold text-gray">
+                            Zenith Hospital
+                        </h3>
+                        <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                            <span class="text-xs text-gray-light2 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                            <div class="font-semibold">
+                                $999 <span class="line-through font-normal">$2500</span>
+                            </div>  
+                            <span class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-7">
+                            <button class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                    <div>
+                        <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover" alt="Hospital">
+                    </div>
+                    <div class="px-4 py-4">
+                        <h3 class="text-base font-semibold text-gray">
+                            Zenith Hospital
+                        </h3>
+                        <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                            <span class="text-xs text-gray-light2 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                            <div class="font-semibold">
+                                $999 <span class="line-through font-normal">$2500</span>
+                            </div>  
+                            <span class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-7">
+                            <button class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                    <div>
+                        <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover" alt="Hospital">
+                    </div>
+                    <div class="px-4 py-4">
+                        <h3 class="text-base font-semibold text-gray">
+                            Zenith Hospital
+                        </h3>
+                        <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                            <span class="text-xs text-gray-light2 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                            <div class="font-semibold">
+                                $999 <span class="line-through font-normal">$2500</span>
+                            </div>  
+                            <span class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-7">
+                            <button class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                    <div>
+                        <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover" alt="Hospital">
+                    </div>
+                    <div class="px-4 py-4">
+                        <h3 class="text-base font-semibold text-gray">
+                            Zenith Hospital
+                        </h3>
+                        <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                            <span class="text-xs text-gray-light2 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                            <div class="font-semibold">
+                                $999 <span class="line-through font-normal">$2500</span>
+                            </div>  
+                            <span class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-7">
+                            <button class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                    <div>
+                        <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover" alt="Hospital">
+                    </div>
+                    <div class="px-4 py-4">
+                        <h3 class="text-base font-semibold text-gray">
+                            Zenith Hospital
+                        </h3>
+                        <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                            <span class="text-xs text-gray-light2 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                            <div class="font-semibold">
+                                $999 <span class="line-through font-normal">$2500</span>
+                            </div>  
+                            <span class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-7">
+                            <button class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
+                    <div>
+                        <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover" alt="Hospital">
+                    </div>
+                    <div class="px-4 py-4">
+                        <h3 class="text-base font-semibold text-gray">
+                            Zenith Hospital
+                        </h3>
+                        <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-1 text-3xl">
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
+                            <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
+                            <span class="text-xs text-gray-light2 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center justify-between mt-4 text-gray text-2xl">
+                            <div class="font-semibold">
+                                $999 <span class="line-through font-normal">$2500</span>
+                            </div>  
+                            <span class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="mt-7">
+                            <button class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+             <!-- Consult section -->
+             <section class="w-full px-4">
+                <div class="max-w-7xl mx-auto">
+                    <!-- Heading -->
+                    <h2 class="text-3xl md:text-5xl font-bold text-center text-night-black mb-12">
+                        How would you like to Consult?
+                    </h2>
+                    <!-- Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <!-- Card 1 -->
+                        <div class="flex flex-col items-center">
+                            <h3 class="text-2xl font-semibold text-sea-green-deep mb-4">
+                                In- Clinic Visit
+                            </h3>
+
+                            <p class="text-night-black font-semibold leading-relaxed max-w-sm mb-6">
+                                Vist the Doctor for a face to face consultation
+                                and physical examination
+                            </p>
+
+                            <button
+                                class="bg-sea-green-deep text-white px-12 py-3 rounded-[10px] w-full max-w-[220px]">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flex flex-col items-center">
+                            <h3 class="text-2xl font-semibold text-sea-green-deep mb-4">
+                                Video Consultation
+                            </h3>
+
+                            <p class="text-night-black font-semibold leading-relaxed max-w-sm mb-6">
+                                Connect with Top Doctors via HD Video Call
+                                from the comfort of your home.
+                            </p>
+
+                            <button
+                                class="bg-sea-green-deep text-white px-12 py-3 rounded-[10px] w-full max-w-[220px]">
+                                Get Started
+                            </button>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flex flex-col items-center">
+                            <h3 class="text-2xl font-semibold text-sea-green-deep mb-4">
+                                Chat Consultation
+                            </h3>
+
+                            <p class="text-night-black font-semibold leading-relaxed max-w-sm mb-6">
+                                Message a doctor anytime for quick advice,
+                                prescriptions and follow-ups.
+                            </p>
+
+                            <button
+                                class="bg-sea-green-deep text-white px-12 py-3 rounded-[10px] w-full max-w-[220px]">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+             </section>
+
+            <!--Payment Partner Offers and Our Blog-->
+            <section class="bg-ice-gray px-14 py-14 space-y-28">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h1 class="font-bold text-xl md:text-3xl text-charcoal-black">Payment Partner Offers</h1>
+                        <a href="#" class="text-sea-green-deep font-bold text-lg md:text-xl border-b-2 border-sea-green-deep">View All</a>
+                    </div>
+
+                    <div class="custom-hr"></div>
+
+                    <!-- Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+                        <!-- Card Start -->
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                                <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                            </div>
+
+                            <div class="flex-1">
+                                <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                                <div class="flex items-center justify-between mt-1">
+                                    <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                    <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                                </div>
+
+                                <div class="flex items-center justify-start mt-2 gap-3">
+                                    <span class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                    <button class="cursor-pointer">
+                                        <img src="/assets/img/copy-icon.svg" alt="copy">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                                <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                            </div>
+
+                            <div class="flex-1">
+                                <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                                <div class="flex items-center justify-between mt-1">
+                                    <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                    <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                                </div>
+
+                                <div class="flex items-center justify-start mt-2 gap-3">
+                                    <span class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                    <button class="cursor-pointer">
+                                        <img src="/assets/img/copy-icon.svg" alt="copy">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                                <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                            </div>
+
+                            <div class="flex-1">
+                                <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                                <div class="flex items-center justify-between mt-1">
+                                    <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                    <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                                </div>
+
+                                <div class="flex items-center justify-start mt-2 gap-3">
+                                    <span class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                    <button class="cursor-pointer">
+                                        <img src="/assets/img/copy-icon.svg" alt="copy">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                                <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                            </div>
+
+                            <div class="flex-1">
+                                <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                                <div class="flex items-center justify-between mt-1">
+                                    <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                    <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                                </div>
+
+                                <div class="flex items-center justify-start mt-2 gap-3">
+                                    <span class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                    <button class="cursor-pointer">
+                                        <img src="/assets/img/copy-icon.svg" alt="copy">
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1 class="font-bold text-xl md:text-3xl text-charcoal-black">
+                        Our Blog
+                    </h1>
+                    <div class="custom-hr"></div>
+                    <div class="flex pt-5 items-center gap-5 overflow-x-auto no-scrollbar">
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img1.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img2.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img1.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img2.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img1.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                        <div class="blog-card card flex flex-col">
+                            <img src="/assets/img/blog-img2.svg" alt="image">
+                            <p class="font-bold text-[21px] text-dark-charcoal pt-5 tracking-tight">You have to wash your
+                                hands for 20 seconds to keep yourself free</p>
+                            <div class="flex items-center gap-2 pt-2.5">
+                                <img src="/assets/img/blog-profile.svg" alt="Profile Image" class=" w-10 h-10">
+                                <p class="text-dim-gray text-[15px] font-semibold">Randy Osborne</p>
+                                <div class="w-px h-3.5 bg-warm-gray"></div>
+                                <p class="text-dim-gray text-[15px] font-semibold">05-06-2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- On Going Campaigns Section -->
+            <section class="w-full h-[500px]">
+                <div class="px-6 sm:px-10 md:px-16 xl:px-20">
+                    <div>
+                        <h2 class="text-dark-slate text-30-bold pb-[9px]">On Going Campaigns</h2>
+                        <div class="w-full flex items-center">
+                            <div class="w-[100px] h-[3px] bg-sea-green-deep"></div>
+                            <div class="flex-1 h-[1.6px] bg-[#EEEEEE] mt-[0.2px]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-5 px-6 sm:px-10 md:px-16 xl:px-20 flex gap-[20px] overflow-x-auto no-scrollbar">
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-1.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-2.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-1.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-2.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="campaign-card">
+                        <div class="w-full h-[180px] rounded-md overflow-hidden">
+                            <img src="/assets/img/campaign-1.jpg" alt="Campaigns" class="w-full h-full">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="pr-5 border-r border-muted-rose">
+                                <span class="text-16-semibold text-onyx">Sankapl Foundation</span>
+                                <ul class="text-16-normal list-disc pl-4 mb-2.5">
+                                    <li class="whitespace-nowrap">Poverty Relief</li>
+                                </ul>
+                                <a href="#" class="text-16-normal text-sea-green-deep">Read More</a>
+                            </div>
+                            <div class="pl-5 flex flex-col gap-[10px] items-center">
+                                <span class="text-24-semibold text-sea-green-deep">₹700</span>
+                                <button
+                                    class="h-[42px] w-[125px] px-4 rounded-[10px] bg-sea-green-deep text-16-normal text-white cursor-pointer transition-all duration-300 hover:delay-300 hover:bg-orange-peach">
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--Consultation Form-->
+        <section class="bg-white mt-[60px] mx-10 mb-[30px] consultationForm hidden">
+
+            <!-- Step Indicators -->
+            <div class="flex items-center justify-center gap-3 stepIndicator">
+                <!-- Step 1 (active by default) -->
+                <div class="w-[67px] h-[42px] rounded-lg flex items-center justify-center bg-sea-green-dark1">
+                    <span class="font-normal text-base text-white">Step 1</span>
+                </div>
+
+                <!-- Connector line -->
+                <div class="w-[141px] h-0.5 rounded-full bg-dim-gray step-connector"></div>
+
+                <!-- Step 2 (highlighted after submit) -->
+                <div
+                    class="w-[67px] h-[42px] rounded-lg flex items-center justify-center border border-sea-green-dark1 step2-indicator">
+                    <span class="font-normal text-base text-black">Step 2</span>
+                </div>
+            </div>
+
+            <!-- Heading -->
+            <div class="pt-[56px] flex flex-col gap-2">
+                <p class="font-bold text-3xl text-dark-slate heading">Select as per your Preference</p>
+                <div class="w-full h-0.5 bg-smoke-white">
+                    <div class="w-[100px] h-[3px] bg-sea-green-dark1"></div>
+                </div>
+            </div>
+
+            <form class="stepForm pt-[56px]">
+                <div class="flex flex-col gap-10">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                        <!-- ── Health Issues (Multi-Select) ─────────────────────── -->
+                        <div class="flex flex-col gap-2 relative dropdown-wrapper" id="health-issues-wrapper">
+                            <label class="font-semibold text-sm text-gray">Select Test Type</label>
+                            <!-- Tags + input live inside this box -->
+                            <div id="health-input-box"
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
+                                <span id="health-placeholder"
+                                    class="text-sm text-medium-gray font-normal select-none">Select Test Type</span>
+                                <!-- Arrow icon, absolutely positioned right -->
+                                <span
+                                    class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                            </div>
+                            <!-- hidden real input so form still works -->
+                            <input type="hidden" id="health-hidden-input">
+                            <div class="dropdown-menu hidden absolute rounded-md bg-white border border-cool-fog shadow-lg z-[100] w-full h-[200px] overflow-y-auto no-scrollbar"
+                                style="top:100%; margin-top:4px;">
+                                <ul class="font-semibold text-base text-black space-y-2 cursor-pointer">
+                                    <li class="hover:bg-light-gray px-3 py-1">Blood/Urine Tests</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Special Panels</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Health Packages</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Vitamin & Hormonal</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Infectious Diseases</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Pre-surgery Clearance</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Fertility Tests</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Pregnancy Testing</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Imaging – Basic</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Imaging – Advanced</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Bone & Joint Tests</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Cancer Screening</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Lifestyle Conditionals</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Senior Citizen Package</li>
+                                    <li class="hover:bg-light-gray px-3 py-1">Home Sample Collection</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="flex flex-col gap-2">
+                            <label class="font-semibold text-sm text-gray">Describe your Test/ Package request</label>
+                            <input type="text"
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl font-normal text-sm focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray w-full py-[11px] px-2"
+                                placeholder="Enter Description">
+                        </div>
+                    </div>
+
+                    <!-- ── Specialization (Single-Select with tag) ──────────────── -->
+                    <div class="flex flex-col gap-2 dropdown-wrapper relative" id="specialization-wrapper">
+                        <label class="font-semibold text-sm text-gray">Example Test/ Packages</label>
+                        <div id="spec-input-box"
+                            class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
+                            <span id="spec-placeholder" class="text-sm text-medium-gray font-normal select-none">Example
+                                Test/ Packages</span>
+                            <span
+                                class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                        </div>
+                        <input type="hidden" id="spec-hidden-input">
+                        <div
+                            class="dropdown-menu hidden absolute top-[72px] bg-white rounded-md border border-cool-fog z-[100] w-full h-[200px] overflow-y-auto no-scrollbar shadow-lg">
+                            <ul class="font-semibold text-base text-gray">
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>CBC, LFT, KFT, Sugar, Cholesterol, TSH</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>Thyroid Panel, Diabetes Monitoring, Cardiac Panel</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>Full Body Checkup, Executive Package, Lifestyle</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>Vitamin D, B12, AMH, HCG, Testosterone</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>Dengue, Typhoid, Malaria, HIV, Hepatitis, TB</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>Fitness Panel, Clotting Profile, ECG, Blood Group</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>AMH, FSH, LH, Semen Analysis, Progesterone</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>HCG, USG (Ultrasound), Double/Triple Marker</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>X-Ray, USG (Abdomen, Pelvis), Echo</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>MRI, CT Scan, PET Scan, DEXA</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>Bone DEXA, Uric Acid, Rheumatoid Panel</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>PSA, CA-125, Mammogram, Pap Smear</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>Obesity Panel, Smoking Effect Panel, Stress Tests</p>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                    <p>Liver, Kidney, Cardiac, Bone Health, Vitamins</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-10">
+                        <!-- Consultation Type -->
+                        <div class="flex flex-col gap-[17px]">
+                            <label class="font-semibold text-sm text-gray">Select Consultation Type</label>
+                            <div class="flex items-center gap-2">
+                                <div class="w-[205px] flex items-center gap-2">
+                                    <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                    <span class="font-normal text-sm text-dark-gray">Visit Lab</span>
+                                </div>
+                                <div class="w-[205px] flex items-center gap-2">
+                                    <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                    <span class="font-normal text-sm text-dark-gray">Home Sample Collection</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Type -->
+                        <div class="flex flex-col gap-[17px]">
+                            <label class="font-semibold text-sm text-gray">Select Service Type</label>
+                            <div class="flex items-center gap-2">
+                                <div class="w-[205px] flex items-center gap-2">
+                                    <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                    <span class="font-normal text-sm text-dark-gray">Emergency</span>
+                                </div>
+                                <div class="w-[205px] flex items-center gap-2">
+                                    <input type="checkbox" class="cursor-pointer w-[16px] h-[16px] accent-sea-green2">
+                                    <span class="font-normal text-sm text-dark-gray">Normal</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ── Date & Time with Custom Picker ───────────────────── -->
+                        <div class="flex flex-col gap-2 relative">
+                            <label class="font-semibold text-sm text-gray">Preferred Date &amp; Time</label>
+                            <div
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl flex items-center justify-between relative cursor-pointer py-2.5 px-2">
+                                <input type="text" id="datetime-input"
+                                    class="cursor-pointer focus:ring-0 focus:outline-none w-full placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray"
+                                    placeholder="Select Date &amp; Time" readonly>
+                                <span id="calendar-icon"
+                                    class="material-symbols-outlined cursor-pointer text-lg!">calendar_month</span>
+                            </div>
+
+                            <!-- Custom DateTime Picker Popup -->
+                            <div id="datetime-picker"
+                                class="hidden absolute top-[72px] left-0 z-[200] bg-white border border-cool-fog rounded-2xl shadow-xl p-4 w-[320px]">
+                                <!-- Calendar Header -->
+                                <div class="flex items-center justify-between mb-3">
+                                    <button type="button" id="cal-prev"
+                                        class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined text-base">chevron_left</span>
+                                    </button>
+                                    <span id="cal-month-year" class="font-semibold text-sm text-gray-700"></span>
+                                    <button type="button" id="cal-next"
+                                        class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
+                                        <span class="material-symbols-outlined text-base">chevron_right</span>
+                                    </button>
+                                </div>
+
+                                <!-- Calendar Days Grid -->
+                                <div id="cal-days" class="mb-4"></div>
+
+                                <!-- Time Picker - 3 separate triggers -->
+                                <div class="border-t border-gray-100 pt-3 mt-1">
+                                    <label class="font-semibold text-xs text-gray-500 block mb-2">Select Time</label>
+                                    <div class="flex items-center gap-2">
+                                        <!-- Hour -->
+                                        <div class="relative time-part-wrapper" id="hour-wrapper">
+                                            <div id="hour-trigger"
+                                                class="time-part-trigger flex items-center justify-center gap-1 border-2 border-blue-400 bg-white rounded-xl px-3 py-2 cursor-pointer min-w-[64px]">
+                                                <span id="hour-display"
+                                                    class="text-sm font-semibold text-gray-500">9</span>
+                                                <span class="material-symbols-outlined text-gray-400"
+                                                    style="font-size:16px;">keyboard_arrow_down</span>
+                                            </div>
+                                            <div id="hour-menu"
+                                                class="hidden absolute bottom-full mb-1 left-0 bg-white border border-cool-fog rounded-lg shadow-lg z-[300] w-[80px] max-h-[180px] overflow-y-auto no-scrollbar">
+                                            </div>
+                                        </div>
+
+                                        <span class="text-gray-400 font-bold text-base">:</span>
+
+                                        <!-- Minute -->
+                                        <div class="relative time-part-wrapper" id="minute-wrapper">
+                                            <div id="minute-trigger"
+                                                class="time-part-trigger flex items-center justify-center gap-1 border border-gray-200 bg-gray-100 rounded-xl px-3 py-2 cursor-pointer min-w-[64px]">
+                                                <span id="minute-display"
+                                                    class="text-sm font-semibold text-gray-400">00</span>
+                                                <span class="material-symbols-outlined text-gray-400"
+                                                    style="font-size:16px;">keyboard_arrow_down</span>
+                                            </div>
+                                            <div id="minute-menu"
+                                                class="hidden absolute bottom-full mb-1 left-0 bg-white border border-cool-fog rounded-lg shadow-lg z-[300] w-[80px] max-h-[180px] overflow-y-auto no-scrollbar">
+                                            </div>
+                                        </div>
+
+                                        <span class="text-gray-400 font-bold text-base">:</span>
+
+                                        <!-- AM/PM -->
+                                        <div class="relative time-part-wrapper" id="ampm-wrapper">
+                                            <div id="ampm-trigger"
+                                                class="time-part-trigger flex items-center justify-center gap-1 border border-gray-200 bg-gray-100 rounded-xl px-3 py-2 cursor-pointer min-w-[64px]">
+                                                <span id="ampm-display"
+                                                    class="text-sm font-semibold text-gray-400">AM</span>
+                                                <span class="material-symbols-outlined text-gray-400"
+                                                    style="font-size:16px;">keyboard_arrow_down</span>
+                                            </div>
+                                            <div id="ampm-menu"
+                                                class="hidden absolute bottom-full mb-1 left-0 bg-white border border-cool-fog rounded-lg shadow-lg z-[300] w-[80px] max-h-[180px] overflow-y-auto no-scrollbar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Confirm Button -->
+                                <button type="button" id="confirm-datetime"
+                                    class="mt-4 w-full py-2 rounded-lg text-white font-semibold text-sm cursor-pointer"
+                                    style="background-color:#1a7a6e">
+                                    Confirm
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Budget -->
+                        <div class="flex flex-col gap-2">
+                            <label class="font-semibold text-sm text-gray">Budget (Min: &#8377;3000)</label>
+                            <input type="number" onkeydown="return !['e','E','+','-'].includes(event.key)"
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl font-normal text-sm focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray w-full py-3.5 px-2"
+                                placeholder="Enter Budget">
+                        </div>
+                    </div>
+
+                    <!-- Select Patient -->
+                    <div class="flex flex-col gap-2">
+                        <label class="font-semibold text-sm text-gray">Select Patient</label>
+                        <div
+                            class="border border-deep-teal shadow-patient-dropdown rounded-[38px] flex items-center justify-between relative cursor-pointer py-2.5 px-[13px]">
+                            <div class="flex items-center gap-[5px]">
+                                <img src="/assets/img/patient-icon.svg" alt="">
+                                <input type="text"
+                                    class="cursor-pointer focus:ring-0 focus:outline-none w-full placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray"
+                                    placeholder="Select Patient" readonly>
+                            </div>
+                            <span class="material-symbols-outlined cursor-pointer text-lg!">keyboard_arrow_down</span>
+                        </div>
+                    </div>
+
+                    <!-- Select Address (hidden until submit) -->
+                    <div class="flex flex-col gap-6 hidden addressBtn">
+                        <label class="font-bold text-lg text-gray">Select Address</label>
+                        <div
+                            class="border border-deep-aqua-teal rounded-lg flex items-center justify-center gap-2.5 py-[11px] cursor-pointer addNewAddress">
+                            <span class="material-symbols-outlined">add</span>
+                            <span class="font-bold text-base text-sea-green2">Add new address</span>
+                        </div>
+                    </div>
+
+                    <!--Selected Address-->
+                    <div
+                        class="selectedAddress hidden border border-platinum rounded-lg p-3 flex items-center justify-between">
+                        <div class="flex items-center gap-[18px]">
+                            <div
+                                class="w-6 h-6 rounded-full flex items-center justify-center bg-linear-to-b from-near-white to-lavender-gray">
+                                <img src="/assets/img/location-icon.svg" alt="">
+                            </div>
+                            <div class="flex flex-col gap-1.5">
+                                <p class="font-normal text-rich-black text-sm">Selected address - <span
+                                        class="font-semibold"> Saket Enclave</span></p>
+                                <p class="font-normal text-xs! text-jet-black">Chhatarpur, New Delhi</p>
+                            </div>
+                        </div>
+                        <span class="material-symbols-outlined text-xl!">chevron_right</span>
+                    </div>
+
+                    <!-- Credit Points Banner -->
+                    <div
+                        class="border border-sea-green-dark1 bg-deep-cyan-teal rounded-lg flex items-center justify-center gap-2.5 py-[21px]">
+                        <span class="font-medium text-xs text-dark-gray">Earn <span
+                                class="text-sea-green-dark1">2.8</span>
+                            Credit points on this service completion.</span>
+                        <img src="/assets/img/coin.svg" alt="">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex items-center justify-end">
+                        <button type="button"
+                            class="w-[343px] h-12 flex items-center justify-center rounded-lg bg-sea-green-dark1 cursor-pointer shadow-button stepBtn1">
+                            <span class="font-bold text-white text-base">Submit</span>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+
+            <!--Add Address-->
+            <div class="addressForm mt-[56px] border border-gray-light3 rounded-[12px] p-4 hidden">
+                <form class="flex flex-col gap-4">
+                    <input type="text"
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="First Name">
+                    <input type="text"
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="Last Name">
+                    <input type="number"
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="Phone">
+                    <div
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                        <input type="text"
+                            class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                            placeholder="Country" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <div
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                        <input type="text"
+                            class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                            placeholder="City" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <div
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                        <input type="text"
+                            class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                            placeholder="Area" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <div
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 flex items-center justify-between dropdown-wrapper relative">
+                        <input type="text"
+                            class=" focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                            placeholder="Zip Code" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <input type="text"
+                        class="border border-cool-fog rounded-lg py-3 px-3.5 focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base"
+                        placeholder="Address">
+
+                    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                        <p class="font-semibold text-base text-gray">Choose Address Type</p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-[99px] h-9 flex items-center justify-center gap-2 bg-gray-light3 shadow-addressType rounded-lg cursor-pointer">
+                                <span class="material-symbols-outlined">home</span>
+                                <span class="font-medium text-sm text-gray">Home</span>
+                            </div>
+
+                            <div
+                                class="w-[99px] h-9 flex items-center justify-center gap-2 bg-gray-light3 shadow-addressType rounded-lg cursor-pointer">
+                                <span class="material-symbols-outlined">apartment</span>
+                                <span class="font-medium text-sm text-gray">Office</span>
+                            </div>
+
+                            <div
+                                class="w-[99px] h-9 flex items-center justify-center gap-2 bg-gray-light3 shadow-addressType rounded-lg cursor-pointer">
+                                <span class="material-symbols-outlined">location_city</span>
+                                <span class="font-medium text-sm text-gray">City</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" class="accent-sea-green-dark1 w-[18px] h-[18px] cursor-pointer">
+                        <p class="font-normal text-sm text-gray">Set Default Address</p>
+                    </div>
+
+                    <div class="flex items-center justify-end">
+                        <button type="button"
+                            class="w-[343px] h-12 flex items-center justify-center bg-sea-green2 shadow-button cursor-pointer saveNowBtn rounded-lg">
+                            <span class="font-bold text-[15px] text-white">Save Now</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!--Searching Doctors-->
+        <div class="container  min-h-screen searchingDoctorsSection hidden">
+            <div class="relative">
+                <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+                    <div class="max-w-[150px] max-h-10">
+                        <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+                    </div>
+                    <nav class="">
+                        <div class="">
+                            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                            <ul id="menu" class="hidden md:flex space-x-6 items-center">
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Home
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Medicine
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Maps
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="relative group">
+                                    <a class="flex items-center focus:outline-none">
+                                        Services
+                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </a>
+                                    <!-- Submenu -->
+                                    <ul
+                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                                Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="/src/records.html" class="">Records</a></li>
+                                <li><a href="./rewards.html" class="">Rewards</a></li>
+                                <li><a href="#" class="">Support</a></li>
+                                <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
+                                            class="text-[#238b6d]">Login/Sign Up</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
+                            <li><a href="#" class="block">Home</a></li>
+                            <li><a href="#" class="block">About</a></li>
+                            <li>
+                                <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                                    Services
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                                    <li>
+                                        <a href="#" class="block hover:text-gray-300">Web Design</a>
+                                    </li>
+                                    <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                                    <li>
+                                        <a href="#" class="block hover:text-gray-300">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="">Records</a></li>
+                            <li><a href="rewards.html" class="">Rewards</a></li>
+                            <li><a href="#" class="">Support</a></li>
+                            <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div class="min-h-screen">
+                <div
+                    class="mt-[50px] mx-[50px] mb-[22px] bg-white rounded-xl py-4 px-3 border border-gray-light3 shadow-request-box flex items-center justify-between">
+                    <div class="flex flex-col gap-3">
+                        <div class="flex flex-col gap-1">
+                            <p class="font-semibold text-base text-gray">Request has been sent successfully :)</p>
+                            <p class="font-medium text-xs text-gray">You will be notified of the offers from doctors</p>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <p class="font-medium text-xs text-gray">Date & Time: <span
+                                    class="text-gray-dark-1">12/05/2025
+                                    14:40</span></p>
+                            <p class="font-medium text-xs text-gray">Order No: <span
+                                    class="text-gray-dark-1">#3454645</span></p>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="w-[142px] h-12 flex items-center justify-center rounded-lg bg-sea-green2 shadow-button font-bold text-[15px] text-white">Go
+                        to Orders</a>
+                </div>
+                <div class="w-full h-[600px] relative">
+                    <div id="doctors-map" class="w-full h-full"></div>
+                    <div id="searchingOverlay"
+                        class="absolute inset-0 z-[1000] flex items-center justify-center pointer-events-none bg-transparent-black">
+
+                        <!-- Pulse rings -->
+                        <div
+                            class="absolute w-[779px] h-[779px] rounded-full bg-seafoam-green animate-[pulse-out_2.4s_ease-out_infinite]">
+                        </div>
+
+
+                        <!-- Center circle -->
+                        <div
+                            class="absolute w-[250px] h-[250px] bg-sea-green-dark1 rounded-full flex flex-col items-center justify-center gap-1.5 animate-[breathe_2.4s_ease-in-out_infinite]">
+                            <p class="text-white text-sm font-semibold text-center leading-snug">Searching for Labs
+                                .....
+                            </p>
+
+                            <!-- Bouncing dots -->
+                            <div class="flex gap-1">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/70 animate-[dot-bounce_1.2s_ease-in-out_0s_infinite]"></span>
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/70 animate-[dot-bounce_1.2s_ease-in-out_0.2s_infinite]"></span>
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/70 animate-[dot-bounce_1.2s_ease-in-out_0.4s_infinite]"></span>
+                            </div>
+
+                            <p class="text-white/75 text-[10px] text-center max-w-[120px] leading-tight">List will
+                                appear
+                                within 1 min. Don't close the page.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="pt-[22px] px-[50px] pb-[50px]">
+                    <div class="flex flex-col gap-2.5">
+                        <p class="font-bold text-[22px]">Accept a suitable offer</p>
+                        <div class="flex items-center ga-2.5">
+                            <p class="font-medium text-sm text-dark-gray">Earn <span
+                                    class="text-sea-green-dark1">2.8</span>
+                                Credit points on this service completion.</p>
+                            <img src="/assets/img/coin.svg" alt="coin">
+                        </div>
+                    </div>
+
+                    <div class="pt-[22px] px-4 h-[650px] overflow-y-auto no-scrollbar flex flex-col gap-[22px]">
+                        <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                            <div class="flex items-center justify-between border-b border-deep-teal">
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-11 h-11 rounded-full">
+                                        <img src="/assets/img/lab.svg" alt="Lab image">
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="flex items-center gap-1">
+                                            <p class="font-semibold text-base text-gray">Lab #12355</p>
+                                            <img src="/assets/img/badge.svg" alt="badge">
+                                            <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                            <img src="/assets/img/star.svg" alt="star">
+                                        </div>
+                                        <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2.5">
+                                    <p></p>
+                                    <p></p>
+                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center justify-between pt-1.5">
+                                    <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                    <div class="flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                        <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
+                                    <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Location</p>
+                                    <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2.5 flex flex-col gap-2.5">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Visit Lab</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;900</p>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Home Sample</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;1200</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-end mt-5 gap-5">
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                    <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                                </button>
+
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                    <span class="font-bold text-xs text-white">Accept</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                            <div class="flex items-center justify-between border-b border-deep-teal">
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-11 h-11 rounded-full">
+                                        <img src="/assets/img/lab.svg" alt="Lab image">
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="flex items-center gap-1">
+                                            <p class="font-semibold text-base text-gray">Lab #12355</p>
+                                            <img src="/assets/img/badge.svg" alt="badge">
+                                            <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                            <img src="/assets/img/star.svg" alt="star">
+                                        </div>
+                                        <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2.5">
+                                    <p></p>
+                                    <p></p>
+                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center justify-between pt-1.5">
+                                    <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                    <div class="flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                        <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
+                                    <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Location</p>
+                                    <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2.5 flex flex-col gap-2.5">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Visit Lab</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;900</p>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Home Sample</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;1200</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-end mt-5 gap-5">
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                    <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                                </button>
+
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                    <span class="font-bold text-xs text-white">Accept</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                            <div class="flex items-center justify-between border-b border-deep-teal">
+                                <div class="flex items-start gap-2.5">
+                                    <div class="w-11 h-11 rounded-full">
+                                        <img src="/assets/img/lab.svg" alt="Lab image">
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <div class="flex items-center gap-1">
+                                            <p class="font-semibold text-base text-gray">Lab #12355</p>
+                                            <img src="/assets/img/badge.svg" alt="badge">
+                                            <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                            <img src="/assets/img/star.svg" alt="star">
+                                        </div>
+                                        <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2.5">
+                                    <p></p>
+                                    <p></p>
+                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex items-center justify-between pt-1.5">
+                                    <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                    <div class="flex items-center gap-1">
+                                        <span
+                                            class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                        <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
+                                    <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
+                                </div>
+                                <div class="flex items-center justify-between ">
+                                    <p class="font-normal text-xs text-gray-dark-1">Location</p>
+                                    <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2.5 flex flex-col gap-2.5">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Visit Lab</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;900</p>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <input type="radio" class="cursor-pointer accent-sea-green-dark1">
+                                        <p class="font-normal text-sm text-gray">Home Sample</p>
+                                    </div>
+                                    <p class="font-semibold text-sm text-teal-green">&#8377;1200</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-end mt-5 gap-5">
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                    <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                                </button>
+
+                                <button
+                                    class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                    <span class="font-bold text-xs text-white">Accept</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!--Order Details Popup-->
+                <div
+                    class="fixed inset-0 bg-transparent-black flex items-center justify-center hidden orderDetailsPopup z-9999">
+                    <div class="w-[452px] bg-white rounded-[10px] flex flex-col gap-7 p-5">
+                        <div class="flex items-center justify-between">
+                            <p class="font-semibold text-[22px] text-dark-gray">Order Details</p>
+                            <div
+                                class="w-[50px] h-[50px] flex items-center justify-center border border-deep-teal rounded-[10px] cursor-pointer closePopupBtn">
+                                <span class="material-symbols-outlined">close</span>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-light3 rounded-2xl p-4">
+                            <div class="flex items-start justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-11 h-11 rounded-full">
+                                        <img src="/assets/img/lab.svg" alt="Lab">
+                                    </div>
+
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center gap-2.5">
+                                            <p class="font-semibold text-xl text-gray text-nowrap">RedLab Diagnostics </p>
+                                            <img src="/assets/img/badge.svg" alt="badge">
+                                        </div>
+                                        <div class="flex items-center gap-2.5">
+                                            <p class="font-normal text-base text-dark-gray">4.3</p>
+                                            <div class="flex items-center gap-0.5">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                                <img src="/assets/img/star.svg" alt="star">
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+
+                                <p class="font-normal text-xs">Order #R32512</p>
+                            </div>
+
+
+                            <hr class="text-deep-teal mt-5">
+                            <p class="pt-2 font-normal text-base text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                            <div class="flex flex-col gap-2.5 pt-2.5">
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center justify-between pt-1.5">
+                                        <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                        <div class="flex items-center gap-1">
+                                            <span
+                                                class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                            <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between ">
+                                        <p class="font-normal text-xs text-gray-dark-1">Appointment</p>
+                                        <p class="font-semibold text-sm text-gray">24/04/2025 - 4 to 6 PM</p>
+                                    </div>
+                                    <div class="flex items-center justify-between ">
+                                        <p class="font-normal text-xs text-gray-dark-1">Location</p>
+                                        <p class="font-semibold text-sm text-gray">Andheri E - 416001</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-2">
+                                            <input type="radio" class="accent-sea-green-dark1 cursor-pointer" checked>
+                                            <p class="font-normal text-sm text-gray">Visit Lab</p>
+                                        </div>
+                                        <p class="font-normal text-base text-gray">Pay directly to the Lab</p>
+                                    </div>
+                                    <hr class="text-deep-teal">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center gap-[26px]">
+                            <button
+                                class="w-[160px] h-[38px] flex items-center justify-center border border-coral-red cursor-pointer rounded-[10px] cancelBtnPopup">
+                                <span class="font-bold text-tomato-red text-[15px]">Cancel</span>
+                            </button>
+
+                            <a href="appointments.html"
+                                class="w-[160px] h-[38px] flex items-center justify-center bg-teal-green cursor-pointer rounded-[10px] viewAppointmentBtn">
+                                <span class="font-bold text-white text-[15px]">View Appointment</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Cancellation Reasons Popup-->
+                <div
+                    class="fixed inset-0 bg-transparent-black flex items-center justify-center hidden cancelReasonPopup z-9999">
+                    <div class="bg-white w-[432px] rounded-[10px] p-5 flex flex-col gap-7">
+                        <div class="flex flex-col gap-1.5 items-center">
+                            <p class="font-semibold text-[22px] text-dark-gray">Why do you want to cancel ?</p>
+                            <p class="font-medium text-dark-gray text-[15px]">Earn <span
+                                    class="text-sea-green-dark1">2.8</span> Credit points on this service completion.
+                            </p>
+                        </div>
+
+                        <div class="p-4 flex flex-col gap-2">
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Change of mind.</p>
+                            </div>
+
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Found a better price elsewhere.</p>
+                            </div>
+
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Service provider not available on
+                                    appointment
+                                </p>
+                            </div>
+
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Wrong selection / Made a mistake in request
+                                </p>
+                            </div>
+
+                            <div class="flex items-center gap-[22px] border-b border-gray-light3 py-2">
+                                <input type="checkbox" class="w-[15px] h-[15px] cursor-pointer accent-sea-green-dark1">
+                                <p class="font-semibold text-base text-gray">Service provider told me to cancel</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-0.5 flex items-center justify-center">
+                            <button
+                                class="w-[360px] h-12 flex items-center justify-center rounded-lg bg-tomato-red cursor-pointer cancelReasonBtn shadow-cancelBtn">
+                                <span class="font-bold text-[15px] text-white">Cancel</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Cancel Confirmation Popup-->
+                <div
+                    class="fixed inset-0 bg-transparent-black flex items-center justify-center hidden z-9999 cancelConfirmationPopup">
+                    <div class="bg-white w-[432px] rounded-tl-2xl rounded-tr-2xl py-6 flex flex-col items-center">
+                        <img src="/assets/img/warning-illustration.svg" alt="Warning">
+                        <p class="font-normal text-[22px] text-black pt-2 text-center">You have done ___(x) out ___(y)
+                            free
+                            cancellations in this month , charges applicable beyond free cancellations.</p>
+                        <p class="font-normal text-base text-dark-gray pt-2.5">17-Dec-2025</p>
+                        <p class="font-bold text-lg text-gray pt-1.5">Order Request Cancel ?</p>
+                        <p class="font-normal text-base text-gray-dark-1 pt-1.5 text-center">Are you sure? do you want
+                            to
+                            <br> cancel your order ?
+                        </p>
+                        <div class="flex items-center justify-center pt-6 gap-[25px]">
+                            <button
+                                class="w-[160px] h-12 rounded-[10px] cursor-pointer border border-deep-aqua-teal flex items-center justify-center keepOrderBtn">
+                                <span class="text-sea-green2 font-bold text-base">Keep Order</span>
+                            </button>
+
+                            <button
+                                class="w-[160px] h-12 rounded-[10px] cursor-pointer bg-sea-green2 shadow-button flex items-center justify-center confirmBtn">
+                                <span class="text-white font-bold text-base">Confirmed</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Cancellation Successfull Popup-->
+                <div
+                    class="flex items-center justify-center hidden fixed inset-0 bg-transparent-black z-9999 cancellationSuccessfullPopup">
+                    <div
+                        class="bg-white w-[432px] rounded-tl-2xl rounded-tr-2xl flex flex-col gap-[18px] items-center py-6">
+                        <img src="/assets/img/success-illustration.svg" alt="Success">
+                        <div class="flex flex-col gap-3 items-center">
+                            <p class="font-bold text-lg text-gray">Successfully</p>
+                            <p class="font-normal text-base text-gray-dark-1 max-w-[323px] text-center">Your Enquiry Has
+                                Been Successfully cancelled ! Enquiry ID: 854455</p>
+                            <div class="flex items-center justify-center gap-[25px]">
+                                <button
+                                    class="w-[160px] h-12 rounded-[10px] cursor-pointer border border-deep-aqua-teal flex items-center justify-center">
+                                    <span class="text-sea-green2 font-bold text-base">Go to Orders</span>
+                                </button>
+
+                                <a href="home.html"
+                                    class="w-[160px] h-12 rounded-[10px] cursor-pointer bg-sea-green2 shadow-button flex items-center justify-center">
+                                    <span class="text-white font-bold text-base">Back to Home</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Appointment Fixed Success Popup-->
+                <div
+                    class="flex items-center justify-center hidden fixed inset-0 bg-transparent-black z-9999 appointmentFixedSuccessPopup">
+                    <div
+                        class="bg-white w-[432px] rounded-tl-2xl rounded-tr-2xl flex flex-col gap-[18px] items-center py-6">
+                        <img src="/assets/img/success-illustration.svg" alt="Success">
+                        <div class="flex flex-col gap-3 items-center">
+                            <p class="font-bold text-lg text-gray">Congratulations</p>
+                            <p class="font-normal text-base text-gray-dark-1 max-w-[323px] text-center">Your Appointment
+                                is
+                                fixed today ! Doctor: 24/04/2025 - 03:34 PM</p>
+                            <div class="flex items-center justify-center gap-[25px] pt-3">
+                                <button
+                                    class="w-[160px] h-12 rounded-[10px] cursor-pointer border border-deep-aqua-teal flex items-center justify-center">
+                                    <span class="text-sea-green2 font-bold text-base">Go to Orders</span>
+                                </button>
+
+                                <a href="#"
+                                    class="w-[160px] h-12 rounded-[10px] cursor-pointer bg-sea-green2 shadow-button flex items-center justify-center">
+                                    <span class="text-white font-bold text-base">Back to Home</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <!-- Top Footer Content -->
+            <div
+                class="bg-footer-green px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+                <!-- Logo & Contact -->
+                <div class="flex flex-col gap-3.5">
+                    <a href="#">
+                        <img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" />
+                    </a>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Phone:
+                            <span class="text-dim-gray text-15-normal">(+123) 456-7898</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Email:
+                            <span class="text-dim-gray text-15-normal">hello@drodo.com</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Address:
+                            <span class="text-dim-gray text-15-normal">6890 Blvd, The Bronx, NY 1058, USA</span>
+                        </h3>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex gap-3 flex-wrap">
+                        <a href="#"><img src="/assets/img/facebook-icon.svg" alt="facebook-icon" /></a>
+                        <a href="#"><img src="/assets/img/twitter-icon.svg" alt="twitter-icon" /></a>
+                        <a href="#"><img src="/assets/img/Instagram-icon.svg" alt="Instagram-icon" /></a>
+                        <a href="#"><img src="/assets/img/linkdin-icon.svg" alt="linkdin-icon" /></a>
+                        <a href="#"><img src="/assets/img/Pinterest-icon.svg" alt="Pinterest-icon" /></a>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Information</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Customer Care -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Customer Care</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Help & FAQs</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Policy -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Policy</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Purchasing Policy</a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter -->
+                <nav class="flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Newsletter</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <p class="text-15-normal text-dim-gray">
+                        Sign up for our mailing list to get the latest updates & offers.
+                    </p>
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Enter your email address"
+                            class="h-[50px] w-full py-3 px-4 text-muted-gray placeholder:text-muted-gray focus:outline-none focus:ring-0 rounded border border-light-gray text-15-normal" />
+                        <button
+                            class="w-full py-3 px-6 flex items-center justify-center rounded bg-sea-green-deep text-15-semibold text-white hover:opacity-90 transition cursor-pointer">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Bottom Footer Strip -->
+            <div class="bg-footer-green py-6 px-6 sm:px-10 md:px-16 xl:px-20 w-full">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                    <p class="text-dim-gray text-15-normal">
+                        @ Avatar. Designed By Aibuzz
+                    </p>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <p class="text-dim-gray text-15-normal">
+                            We accept payment via:
+                        </p>
+                        <div class="flex items-center flex-wrap gap-2 sm:gap-[10px] justify-center sm:justify-start">
+                            <img src="/assets/img/payment-via-1.png" alt="payment-1" class="h-6" />
+                            <img src="/assets/img/payment-via-5.png" alt="payment-2" class="h-6" />
+                            <img src="/assets/img/payment-via-4.png" alt="payment-3" class="h-6" />
+                            <img src="/assets/img/payment-via-3.png" alt="payment-4" class="h-6" />
+                            <img src="/assets/img/payment-via-2.png" alt="payment-5" class="h-6" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <script>
+        const faqButtons = document.querySelectorAll(".faq-btn");
+
+        faqButtons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector(".arrow");
+
+                // Close all others
+                document.querySelectorAll(".faq-content").forEach((item) => {
+                    if (item !== content) {
+                        item.classList.add("hidden");
+                    }
+                });
+
+                document.querySelectorAll(".arrow").forEach((icon) => {
+                    if (icon !== arrow) {
+                        icon.style.transform = "rotate(0deg)";
+                    }
+                });
+
+                // Toggle current
+                content.classList.toggle("hidden");
+
+                if (!content.classList.contains("hidden")) {
+                    arrow.style.transform = "rotate(90deg)";
+                } else {
+                    arrow.style.transform = "rotate(0deg)";
+                }
+
+            });
+
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/script/map.js"></script>
+    <script src="/script/doctor/form.js"></script>
+    <script src="/script/doctor/validation.js"></script>
+    <script src="/script/doctor/searching.js"></script>
+</body>
+
+</html>
