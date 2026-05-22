@@ -233,7 +233,8 @@
                     </button>
 
                     <button
-                        class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer" id="shareBtn">
+                        class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer"
+                        id="shareBtn">
                         <span class="material-symbols-outlined text-lg! text-gray">share</span>
                         <span class="font-normal text-xs text-gray">Share</span>
                     </button>
@@ -418,9 +419,12 @@
                 Cancel
             </button>
 
-            <a href="myorder.html" class="bg-sea-green2 text-white px-20 py-3 rounded-xl text-base font-bold ">
+            <button onclick="window.location.href='myorder.html'"
+                class="bg-sea-green2 text-white px-20 py-3 rounded-xl text-base font-bold flex items-center justify-center text-center">
+
                 Order History
-            </a>
+
+            </button>
 
         </div>
 
@@ -453,25 +457,26 @@
         </div>
 
         <!-- Refer Banner -->
-        <div class="my-8 rounded-2xl overflow-hidden bg-gradient-to-r from-[#52d6b4] to-[#38b2ac] px-6 py-4 relative">
+        <div
+            class="my-8 rounded-2xl overflow-hidden bg-gradient-to-r from-[#52d6b4] to-[#38b2ac] px-4 sm:px-6 py-5 relative mt-8">
 
-            <div class="flex items-center justify-between gap-6">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
 
                 <!-- Left Section -->
-                <div class="flex items-start gap-3 relative">
+                <div class="flex items-start gap-3 relative pl-4 sm:pl-6">
 
                     <!-- Small Side Image -->
                     <img src="/assets/img/appointments/half-dollar.svg" alt="refer"
-                        class="w-10 h-10 object-contain absolute -left-8 top-0" />
+                        class="w-8 h-8 sm:w-10 sm:h-10 object-contain absolute left-0 sm:-left-2 top-0" />
 
                     <!-- Text -->
                     <div class="text-white">
 
-                        <h3 class="text-lg font-bold ">
+                        <h3 class="text-lg font-bold">
                             Refer and Earn
                         </h3>
 
-                        <p class="mt-1 text-lg font-normal">
+                        <p class="mt-1 text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
                             Invite family and friends to
                             earn cashbacks
                         </p>
@@ -482,22 +487,25 @@
 
                 <!-- Center Button -->
                 <button
-                    class="border border-white text-white px-24 py-2 rounded-full font-bold text-lg bg-sea-green-dark1">
+                    class="border border-white text-white px-24 sm:px-16 lg:px-24 py-2 rounded-full font-bold text-sm sm:text-base lg:text-lg bg-sea-green-dark1  sm:w-fit">
 
                     Invite Now
 
                 </button>
 
                 <!-- Right Image -->
-                <img src="/assets/img/appointments/refer-earn-banner.svg" alt="refer illustration"
-                    class="w-24 h-20 object-contain shrink-0" />
+                <div class="flex justify-center lg:justify-end">
+                    <img src="/assets/img/appointments/refer-earn-banner.svg" alt="refer illustration"
+                        class="w-20 h-16 sm:w-24 sm:h-20 object-contain shrink-0" />
+                </div>
 
             </div>
 
         </div>
 
         <!-- Proforma Popup -->
-        <div id="proformaPopup" class="proforma-popup-overlay fixed inset-0 bg-black/40 z-50 hidden flex items-center justify-center p-4">
+        <div id="proformaPopup"
+            class="proforma-popup-overlay fixed inset-0 bg-black/40 z-50 hidden flex items-center justify-center p-4">
 
             <!-- Popup Box -->
             <div class="bg-white rounded-2xl shadow-2xl relative max-w-lg w-full p-4 animate-fadeIn">
@@ -520,7 +528,8 @@
         </div>
 
         <!-- Share Popup -->
-        <div id="sharePopup" class="popup-overlay fixed inset-0 bg-black/40 flex items-center justify-center z-50 hidden">
+        <div id="sharePopup"
+            class="popup-overlay fixed inset-0 bg-black/40 flex items-center justify-center z-50 hidden">
 
             <div class="popup-box bg-white w-full max-w-md rounded-2xl shadow-xl p-4 relative animate-fadeIn">
 
