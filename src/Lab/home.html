@@ -13,9 +13,10 @@
 
 <body class="no-scrollbar">
     <main>
-        <div class="headerMapArea">
-            <div class="relative">
-                <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+        <div class="headerMapArea relative overflow-x-hidden w-full max-w-full">
+            <div class="relative ">
+                <header
+                    class="nav-menu px-4 sm:px-6 lg:px-10 xl:px-20 py-2 flex items-center justify-between relative z-10 w-full">
                     <div class="max-w-[150px] max-h-10">
                         <a href="home.html"><img src="/assets/img/logo.png" alt="logo"
                                 class="max-w-[150px] max-h-10" /></a>
@@ -164,10 +165,11 @@
             </div>
 
             <!-- Map Area -->
-            <div class="flex-1 absolute  w-full top-0 z-0 bg-ice-gray">
+            <div class="absolute inset-0 w-full max-w-full overflow-hidden z-0 bg-ice-gray pb-20">
                 <!-- Map -->
-                <div class="bg-white shadow-sm border-b sm:p-4 pt-0">
-                    <div class="flex items-center justify-between  absolute top-28 z-[999] w-full sm:px-20">
+                <div class="bg-white shadow-sm border-b sm:p-4 pb-0">
+                    <div
+                        class="flex items-center justify-between absolute top-28 z-[999] left-0 right-0 px-4 sm:px-6 lg:px-10 xl:px-20">
                         <!-- Location Dropdown -->
                         <div class="relative" id="locationSelect">
                             <div id="locationDropdownBtn"
@@ -220,7 +222,7 @@
                 </div>
 
                 <div id="map"
-                    class="w-full rounded-tl-none rounded-tr-none [border-bottom-right-radius:100px] [border-bottom-left-radius:100px] h-[550px]">
+                    class="w-full rounded-tl-none rounded-tr-none [border-bottom-right-radius:100px] [border-bottom-left-radius:100px] h-[550px] pb-20">
                 </div>
 
                 <!-- Loading overlay -->
@@ -232,7 +234,7 @@
                 </div>
 
                 <!-- Category Filter Buttons -->
-                <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-[1000]">
+                <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-[999]">
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 ">
                         <button data-category="Pharmacy"
                             class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
@@ -243,17 +245,17 @@
                             Hospital
                         </button>
                         <button data-category="Doctor"
-                            class="category-btn primary-btn rounded-lg  bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
+                            class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
                             Doctor
                         </button>
                         <button data-category="Lab"
-                            class="category-btn primary-btn rounded-lg  border-0 font-bold bg-[#238b6d] text-white">
+                            class="category-btn primary-btn rounded-lg bg-[#238b6d] border-0 font-bold text-white">
                             Lab
                         </button>
                     </div>
                 </div>
-                <div class="-mt-6 flex items-center justify-center">
-                    <div class="w-full max-w-xl rounded-lg primary-box-shadow z-[9999]">
+                <div class="relative -mt-6 z-[1000] flex items-center justify-center px-4">
+                    <div class="w-[90%] sm:w-full max-w-xl rounded-lg primary-box-shadow z-[999]">
                         <div class="relative bg-white rounded-lg">
                             <!-- <i data-lucide="search"
                             class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"></i> -->
@@ -267,7 +269,7 @@
                 </div>
             </div>
 
-            <div class="h-[500px]"></div>
+            <div class="h-[500px] sm:h-[550px]"></div>
         </div>
         <div class="homeSection mt-20">
             <!-- Banner -->

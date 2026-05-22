@@ -210,12 +210,9 @@
 
 body {
   font-family: "Nunito", sans-serif;
-
   color: var(--color-gray-dark);
-
 }
 
-.material-symbols-outlined.mini-icon {
 .filled {
   font-variation-settings:
     'FILL' 1,
@@ -223,7 +220,7 @@ body {
     'GRAD' 0,
     'opsz' 24;
 }
-}
+
 .material-symbols-sharp.mini-icon {
   font-size: 14px;
 }
