@@ -195,6 +195,64 @@ $(document).ready(function () {
         renderRoomTag();
       });
   }
+
+  // ─── Description Single-Select with tag ─────────────────────────────────────
+  const descWrapper = $("#description-wrapper");
+  const descInputBox = $("#desc-input-box");
+  const descPlaceholder = $("#desc-placeholder");
+  const descHidden = $("#desc-hidden-input");
+  const descMenu = descWrapper.find(".dropdown-menu");
+  const descToggle = descWrapper.find(".dropdown-toggle");
+  let selectedDesc = null;
+
+  descInputBox.on("click", function (e) {
+    e.stopPropagation();
+    closeAllDropdowns(descWrapper[0]);
+    descMenu.toggleClass("hidden");
+    descToggle.text(
+      descMenu.hasClass("hidden") ? "keyboard_arrow_down" : "keyboard_arrow_up",
+    );
+  });
+
+  descMenu.find("li").on("click", function (e) {
+    e.stopPropagation();
+    selectedDesc = $(this).find("p").text().trim();
+    descMenu.find("li").css("background", "");
+    $(this).css("background", "#e8f5f0");
+    descMenu.addClass("hidden");
+    descToggle.text("keyboard_arrow_down");
+    renderDescTag();
+  });
+
+  function renderDescTag() {
+    descInputBox.find(".desc-tag").remove();
+    if (!selectedDesc) {
+      descPlaceholder.show();
+    } else {
+      descPlaceholder.hide();
+      const tag = $(
+        '<span class="desc-tag inline-flex items-center gap-1 bg-white shadow-request-box text-black text-sm font-semibold px-2.5 py-1 rounded-full mr-0.5">' +
+          "<span>" +
+          selectedDesc +
+          "</span>" +
+          '<button type="button" class="remove-desc focus:outline-none flex items-center cursor-pointer">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">' +
+          '<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>' +
+          "</svg></button></span>",
+      );
+      descToggle.before(tag);
+    }
+    descHidden.val(selectedDesc || "");
+    descInputBox
+      .find(".remove-desc")
+      .off("click")
+      .on("click", function (e) {
+        e.stopPropagation();
+        selectedDesc = null;
+        descMenu.find("li").css("background", "");
+        renderDescTag();
+      });
+  }
   // ─── Close all dropdowns ─────────────────────────────────────────────────────
   function closeAllDropdowns(except) {
     $(".dropdown-menu").each(function () {
@@ -968,5 +1026,9 @@ $(document).ready(function () {
     $(".selectedAddress").removeClass("hidden");
 
     console.log("saveNowBtn done, submitState after =", submitState);
+  });
+  
+  $(document).on("click", ".addressDropdownToggle", function (e) {
+    $(".savedAddress").removeClass("hidden");
   });
 });

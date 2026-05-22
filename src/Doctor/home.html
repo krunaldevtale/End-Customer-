@@ -17,7 +17,8 @@
             <div class="relative">
                 <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
                     <div class="max-w-[150px] max-h-10">
-                        <a href="home.html"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+                        <a href="home.html"><img src="/assets/img/logo.png" alt="logo"
+                                class="max-w-[150px] max-h-10" /></a>
                     </div>
                     <nav class="">
                         <div class="">
@@ -1388,7 +1389,11 @@
 
                     <!-- Select Address (hidden until submit) -->
                     <div class="flex flex-col gap-6 hidden addressBtn">
-                        <label class="font-bold text-lg text-gray">Select Address</label>
+                        <div class="flex items-center justify-between">
+                            <label class="font-bold text-lg text-gray">Select Address</label>
+                            <span
+                                class="material-symbols-outlined cursor-pointer addressDropdownToggle">chevron_right</span>
+                        </div>
                         <div
                             class="border border-deep-aqua-teal rounded-lg flex items-center justify-center gap-2.5 py-[11px] cursor-pointer addNewAddress">
                             <span class="material-symbols-outlined">add</span>
@@ -1413,6 +1418,50 @@
                         <span class="material-symbols-outlined text-xl!">chevron_right</span>
                     </div>
 
+                    <!--Saved Addresses-->
+                    <div class="savedAddress h-[300px] overflow-y-auto no-scrollbar flex flex-col gap-4 hidden">
+                        <div class="border border-gray-light3 rounded-xl savedAddressCard">
+                            <div
+                                class="border-b border-gray-light3 h-[60px] flex items-center justify-between bg-mist-white rounded-tr-xl rounded-tl-xl px-4 py-2.5">
+                                <div class="flex items-center gap-[9px]">
+                                    <span class="material-symbols-outlined">home</span>
+                                    <p class="font-semibold text-base text-gray">Home Address</p>
+                                </div>
+
+                                <div class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined cursor-pointer text-lg!">border_color</span>
+                                    <input type="radio" class="accent-sea-green-dark1 cursor-pointer" />
+                                </div>
+                            </div>
+
+                            <div class="px-4 py-2.5">
+                                <p class="max-w-[257px]">
+                                    8502 Preston Rd. Inglewood, Maine 98380, USA
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-light3 rounded-xl savedAddressCard">
+                            <div
+                                class="border-b border-gray-light3 h-[60px] flex items-center justify-between bg-mist-white rounded-tr-xl rounded-tl-xl px-4 py-2.5">
+                                <div class="flex items-center gap-[9px]">
+                                    <span class="material-symbols-outlined">apartment</span>
+                                    <p class="font-semibold text-base text-gray">Office Address</p>
+                                </div>
+
+                                <div class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined cursor-pointer text-lg!">border_color</span>
+                                    <input type="radio" class="accent-sea-green-dark1 cursor-pointer" />
+                                </div>
+                            </div>
+
+                            <div class="px-4 py-2.5">
+                                <p class="max-w-[257px]">
+                                    8502 Preston Rd. Inglewood, Maine 98380, USA
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Credit Points Banner -->
                     <div
                         class="border border-sea-green-dark1 bg-deep-cyan-teal rounded-lg flex items-center justify-center gap-2.5 py-[21px]">

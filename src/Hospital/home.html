@@ -1470,11 +1470,81 @@
                         </div>
 
                         <!-- Description -->
-                        <div class="flex flex-col gap-2">
-                            <label class="font-semibold text-sm text-gray">Describe your Requirement</label>
-                            <input type="text"
-                                class="border border-cool-fog shadow-stepform-input rounded-2xl font-normal text-sm focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-sm placeholder:text-medium-gray w-full py-[11px] px-2"
-                                placeholder="Enter Description">
+                        <div class="flex flex-col gap-2 dropdown-wrapper relative" id="description-wrapper">
+                            <label class="font-semibold text-sm text-gray">Describe Your Requirement</label>
+                            <div id="desc-input-box"
+                                class="border border-cool-fog shadow-stepform-input rounded-2xl flex flex-wrap items-center gap-1 relative cursor-pointer min-h-[44px] py-2 px-2 pr-8">
+                                <span id="desc-placeholder"
+                                    class="text-sm text-medium-gray font-normal select-none">Select Description</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer text-lg! dropdown-toggle absolute right-2 top-1/2 -translate-y-1/2">keyboard_arrow_down</span>
+                            </div>
+                            <input type="hidden" id="desc-hidden-input">
+                            <div
+                                class="dropdown-menu hidden absolute top-[72px] bg-white rounded-md border border-cool-fog z-[100] w-full h-[200px] overflow-y-auto no-scrollbar shadow-lg">
+                                <ul class="font-semibold text-base text-gray">
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Minor treatments without admission</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Semi-critical short-stay support</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Multi-day care for non-surgical conditions</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Short-term serious condition monitoring</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Full surgery with pre/post-care</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Bone and joint surgery</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Hospital-based ophthalmologic procedures</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Delivery packages and care</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Legal pregnancy termination in hospital</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Recovery with nurse/doctor supervision</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>For aging patients needing rest or basic treatment</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Comfort care for terminal illness</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Hospital chemo only (no diagnostics)</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Hospital-run dialysis setup</p>
+                                    </li>
+                                    <li
+                                        class="flex items-center justify-between py-3 px-4 cursor-pointer hover:bg-light-gray border-b border-gray-light3">
+                                        <p>Short baby admissions or packages</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -1777,7 +1847,11 @@
 
                     <!-- Select Address (hidden until submit) -->
                     <div class="flex flex-col gap-6 hidden addressBtn">
-                        <label class="font-bold text-lg text-gray">Select Address</label>
+                        <div class="flex items-center justify-between">
+                            <label class="font-bold text-lg text-gray">Select Address</label>
+                            <span
+                                class="material-symbols-outlined cursor-pointer addressDropdownToggle">chevron_right</span>
+                        </div>
                         <div
                             class="border border-deep-aqua-teal rounded-lg flex items-center justify-center gap-2.5 py-[11px] cursor-pointer addNewAddress">
                             <span class="material-symbols-outlined">add</span>
@@ -1800,6 +1874,51 @@
                             </div>
                         </div>
                         <span class="material-symbols-outlined text-xl!">chevron_right</span>
+                    </div>
+
+                    <!--Saved Addresses-->
+                    <div class="savedAddress h-[300px] overflow-y-auto no-scrollbar flex flex-col gap-4 hidden">
+                        <div class="border border-gray-light3 rounded-xl savedAddressCard">
+                            <div
+                                class="border-b border-gray-light3 h-[60px] flex items-center justify-between bg-mist-white rounded-tr-xl rounded-tl-xl px-4 py-2.5">
+                                <div class="flex items-center gap-[9px]">
+                                    <span class="material-symbols-outlined">home</span>
+                                    <p class="font-semibold text-base text-gray">Home Address</p>
+                                </div>
+
+                                <div class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined cursor-pointer text-lg!">border_color</span>
+                                    <input type="radio" class="accent-sea-green-dark1 cursor-pointer" />
+                                </div>
+                            </div>
+
+                            <div class="px-4 py-2.5">
+                                <p class="max-w-[257px]">
+                                    8502 Preston Rd. Inglewood, Maine 98380, USA
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-light3 rounded-xl savedAddressCard">
+                            <div
+                                class="border-b border-gray-light3 h-[60px] flex items-center justify-between bg-mist-white rounded-tr-xl rounded-tl-xl px-4 py-2.5">
+                                <div class="flex items-center gap-[9px]">
+                                    <span class="material-symbols-outlined">apartment</span>
+                                    <p class="font-semibold text-base text-gray">Office Address</p>
+                                </div>
+
+                                <div class="flex items-center gap-4">
+                                    <span class="material-symbols-outlined cursor-pointer text-lg!">border_color</span>
+                                    <input type="radio" class="accent-sea-green-dark1 cursor-pointer" />
+                                </div>
+                            </div>
+
+                            <div class="px-4 py-2.5">
+                                <p class="max-w-[257px]">
+                                    8502 Preston Rd. Inglewood, Maine 98380, USA
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Credit Points Banner -->
