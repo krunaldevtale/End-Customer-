@@ -129,7 +129,7 @@
                                 <li><a href="/src/records.html" class="">Records</a></li>
                                 <li><a href="./rewards.html" class="">Rewards</a></li>
                                 <li><a href="#" class="">Support</a></li>
-                                <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
+                                <li><a href="#" class="open-auth-popup flex items-center gap-2"><i class="fa-regular fa-user"></i><span
                                             class="text-[#238b6d]">Login/Sign Up</span></a></li>
                             </ul>
                         </div>
@@ -158,7 +158,7 @@
                             <li><a href="#" class="">Records</a></li>
                             <li><a href="rewards.html" class="">Rewards</a></li>
                             <li><a href="#" class="">Support</a></li>
-                            <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                            <li><a href="#" class="open-auth-popup text-[#238b6d]">Login/Sign Up</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -1689,7 +1689,7 @@
                                 <li><a href="/src/records.html" class="">Records</a></li>
                                 <li><a href="./rewards.html" class="">Rewards</a></li>
                                 <li><a href="#" class="">Support</a></li>
-                                <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
+                                <li><a href="#" class="open-auth-popup flex items-center gap-2"><i class="fa-regular fa-user"></i><span
                                             class="text-[#238b6d]">Login/Sign Up</span></a></li>
                             </ul>
                         </div>
@@ -1718,7 +1718,7 @@
                             <li><a href="#" class="">Records</a></li>
                             <li><a href="rewards.html" class="">Rewards</a></li>
                             <li><a href="#" class="">Support</a></li>
-                            <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                            <li><a href="#" class="open-auth-popup text-[#238b6d]">Login/Sign Up</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -2249,6 +2249,189 @@
             </div>
         </div>
 
+        <!-- Sign in and OTP Popup -->
+        <div class="auth-popup-overlay authPopupOverlay hidden">
+            <div class="auth-popup-modal">
+                <!-- Left sidebar -->
+                <div class="relative w-full md:w-[38%] min-h-[200px] md:min-h-[520px] shrink-0 bg-gradient-auth-popup overflow-hidden flex flex-col p-6 sm:p-8">
+                    <!-- Sign-in sidebar -->
+                    <div class="auth-sidebar-signin relative z-10 flex flex-col h-full min-h-[220px] md:min-h-0">
+                        <div class="flex-1 flex flex-col items-center justify-center py-4">
+                            <div class="relative w-[140px] h-[140px] sm:w-[160px] sm:h-[160px]">
+                                <div class="absolute inset-3 rounded-[32px] bg-white-1a border border-white-4d shadow-auth-popup-inset backdrop-blur-[24px] flex items-center justify-center">
+                                    <img src="/assets/img/sheild.svg" alt="shield" class="w-16 h-16">
+                                </div>
+                                <span
+                                    class="absolute top-1 right-1 w-8 h-8 rounded-full bg-green-light-2 flex items-center justify-center border-2 border-white">
+                                    <span class="material-symbols-outlined text-white mini-icon">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-start gap-2.5 mt-auto">
+                            <div
+                                class="flex items-center gap-2 px-4 py-2.5 rounded-full border border-white-33 bg-white-1a text-white text-sm">
+                                <span class="bg-white-33 rounded-full p-1">
+                                    <img src="/assets/img/sheild.svg" alt="shield" class="w-4 h-4">
+                                </span>
+                                <span>100% Secure</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 px-4 py-2.5 rounded-full border border-white-33 bg-white-1a text-white text-sm">
+                                <span class="bg-white-33 rounded-full p-1 flex items-center justify-center">
+                                    <span class="material-symbols-outlined tiny-icon">electric_bolt</span>
+                                </span>
+                                <span>Quick Access</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 px-4 py-2.5 rounded-full border border-white-33 bg-white-1a text-white text-sm">
+                                <span class="bg-white-33 rounded-full p-1 flex items-center justify-center">
+                                    <span class="material-symbols-outlined tiny-icon">domain</span>
+                                </span>
+                                <span>Trusted Platform</span>
+                            </div>
+                        </div>
+                        <p class="text-center text-white-b2 font-light text-[10px] uppercase tracking-[0.2em] mt-10">Your Health Partner</p>
+                    </div>
+
+                    <!-- OTP sidebar -->
+                    <div class="auth-sidebar-otp hidden relative z-10 flex flex-col h-full min-h-[220px] md:min-h-0">
+                        <div class="flex-1 flex flex-col items-center justify-center text-center py-4">
+                            <div class="relative">
+                                <div
+                                    class="w-20 h-20 sm:w-48 sm:h-48 flex items-center justify-center">
+                                    <img src="/assets/img/otp-shield.svg" alt="shield" class="w-full h-full">
+                                </div>
+                            </div>
+                            <p class="text-white italic text-sm sm:text-base max-w-[220px] leading-relaxed">
+                                "Almost there! Verify your number to continue."
+                            </p>
+                            <div class="mt-4 flex items-center justify-center gap-2 px-10 py-2.5 rounded-full bg-white/10 text-white-cc text-xs sm:text-sm font-light">
+                            <span>OTP expires in 10 minutes</span>
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Right content -->
+                <div class="relative flex-1 flex flex-col p-6 sm:p-8 md:py-10 md:px-14 min-w-0">
+                    <button type="button" aria-label="Close" class="auth-popup-close absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 rounded-full flex items-center justify-center bg-mist-white hover:bg-gray-50 transition cursor-pointer z-10">
+                        <span class="material-symbols-outlined mini-icon">close</span>
+                    </button>
+
+                    <!-- Sign In step -->
+                    <div class="auth-step-signin flex flex-col pt-8 sm:pt-4">
+                        <h2 class="text-dark-gray-1 font-bold text-2xl sm:text-[28px] leading-tight pr-10">Sign In / Sign
+                            Up</h2>
+                        <p class="text-gray-dark-1 font-normal text-sm sm:text-base mt-2 mb-6 sm:mb-8">
+                            Access your orders, special offers, health tips and more!
+                        </p>
+
+                        <label class="text-gray-light-5 font-semibold text-sm mb-2">Enter your Mobile
+                            Number</label>
+                        <div
+                            class="flex items-center border border-gray-light-3 rounded-[16px]  overflow-hidden mb-5 transition pl-2">
+                            <div
+                                class="flex items-center justify-between gap-2 w-24 px-3 h-10 text-gray-light-6 border border-gray-50 bg-gray-light-4 rounded-[14px] text-sm font-semibold shrink-0">
+                                <span>+91</span>
+                                <span class="material-symbols-outlined mini-icon">expand_more</span>
+                            </div>
+                            <input type="tel" inputmode="numeric" autocomplete="tel-national"
+                                placeholder="00000 00000"
+                                class="auth-mobile-input flex-1 min-w-0 px-3 sm:px-4 py-3.5 text-gray-light-6 placeholder:text-gray-light-7 text-sm sm:text-base focus:outline-none" />
+                            <div class="flex items-center px-3 text-gray-light-7 shrink-0">
+                                <span class="material-symbols-outlined">smartphone</span>
+                            </div>
+                        </div>
+
+                        <button type="button"
+                            class="auth-send-otp-btn w-full flex items-center justify-center gap-2 py-3.5 rounded-[16px] bg-gradient-auth-button text-white font-semibold text-base shadow-auth-button hover:opacity-95 transition cursor-pointer">
+                            Send OTP
+                            <span class="material-symbols-outlined mini-icon">arrow_forward</span>
+                        </button>
+
+                        <div class="flex items-center gap-4 my-10">
+                            <div class="flex-1 h-px bg-gray-50"></div>
+                            <span class="text-gray-light-8 text-xs font-medium uppercase">or</span>
+                            <div class="flex-1 h-px bg-gray-50"></div>
+                        </div>
+
+                        <button type="button"
+                            class="w-full flex items-center justify-center gap-3 py-3.5 rounded-[16px] border border-gray-light-3 bg-white text-gray-light-5 font-semibold text-sm sm:text-base transition cursor-pointer">
+                            <img src="/assets/img/GoogleIcon.svg" alt="Google" class="w-5 h-5" />
+                            Continue with Google
+                        </button>
+
+                        <p class="text-gray-light-8 text-[11px] sm:text-xs font-normal text-center mt-8 leading-relaxed">
+                            By continuing, you agree to our
+                            <a href="#" class="text-sea-green-deep-2 font-semibold">Terms of Use</a>
+                            and
+                            <a href="#" class="text-sea-green-deep-2 font-semibold">Privacy Policy</a>
+                        </p>
+                    </div>
+
+                    <!-- OTP step -->
+                    <div class="auth-step-otp hidden flex flex-col pt-8 sm:pt-4">
+                        <h2 class="text-gray-dark-4 font-bold text-2xl sm:text-[28px] leading-tight pr-10">OTP Verification
+                        </h2>
+                        <p class="text-gray-light-9 text-sm sm:text-base mt-1 mb-1">
+                            We have sent a 4 digit OTP on
+                        </p>
+                        <p class="text-gray-dark-4 font-semibold text-sm sm:text-base mb-6 sm:mb-8">
+                            <span class="auth-phone-display">+91 00000 00000</span>
+                            <button type="button"
+                                class="auth-change-phone text-sea-green-deep-2 font-semibold ml-2 underline cursor-pointer text-sm">Change</button>
+                        </p>
+
+                        <div class="flex gap-3 sm:gap-4 justify-center sm:justify-start mb-5">
+                            <input type="text" inputmode="numeric" maxlength="1"
+                                class="auth-otp-field w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-[14px] border-2 border-sea-green2 ring-2 ring-sea-green-deep-2 text-gray-dark-4 focus:outline-none"
+                                aria-label="OTP digit 1" />
+                            <input type="text" inputmode="numeric" maxlength="1"
+                                class="auth-otp-field w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-[14px] border-2 border-gray-light-3 text-gray-dark-4 focus:outline-none"
+                                aria-label="OTP digit 2" />
+                            <input type="text" inputmode="numeric" maxlength="1"
+                                class="auth-otp-field w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-[14px] border-2 border-gray-light-3 text-gray-dark-4 focus:outline-none"
+                                aria-label="OTP digit 3" />
+                            <input type="text" inputmode="numeric" maxlength="1"
+                                class="auth-otp-field w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-[14px] border-2 border-gray-light-3 text-gray-dark-4 focus:outline-none"
+                                aria-label="OTP digit 4" />
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                            <button type="button"
+                                class="auth-resend-btn text-gray-light-10 text-sm font-medium transition cursor-pointer">
+                                Resend OTP
+                            </button>
+                            <div class="flex items-center gap-1.5 text-sea-green-deep-2 text-sm font-semibold">
+                                <span class="auth-resend-timer">00:30</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-light-10 text-xs font-light mb-6">Resend available after timer ends</p>
+
+                        <button type="button"
+                            class="w-full flex items-center justify-center gap-2 py-3.5 rounded-[14px] bg-gradient-auth-button text-white font-semibold text-base shadow-auth-button hover:opacity-95 transition cursor-pointer">
+                            Verify OTP
+                            <span class="material-symbols-outlined text-lg">check</span>
+                        </button>
+
+                        <p
+                            class="flex items-center justify-center gap-1.5 text-sea-green-deep-2 text-[10px] tracking-wide uppercase mt-3 text-center font-medium">
+                            <span class="material-symbols-outlined tiny-icon">lock</span>
+                            Your OTP is secured with 256-bit encryption
+                        </p>
+
+                        <p class="text-gray-light-8 text-[11px] sm:text-xs font-normal text-center mt-8 leading-relaxed border-t border-gray-50 pt-9">
+                            By continuing, you agree to our
+                            <a href="#" class="text-sea-green-deep-2 font-semibold">Terms of Use</a>
+                            and
+                            <a href="#" class="text-sea-green-deep-2 font-semibold">Privacy Policy</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer>
             <!-- Top Footer Content -->
             <div
@@ -2410,6 +2593,7 @@
     <script src="/script/doctor/form.js"></script>
     <script src="/script/doctor/validation.js"></script>
     <script src="/script/doctor/searching.js"></script>
+    <script src="/script/doctor/auth-popup.js"></script>
 </body>
 
 </html>
