@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Prescription</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body class="no-scrollbar">
+    <div class="relative">
+        <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+            <div class="max-w-[150px] max-h-10">
+                <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+            </div>
+            <nav class="">
+                <div class="">
+                    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <ul id="menu" class="hidden md:flex space-x-6 items-center">
+                        <li class="relative group">
+                            <a class="flex items-center focus:outline-none">
+                                Home
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                            <!-- Submenu -->
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                        Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a class="flex items-center focus:outline-none">
+                                Medicine
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                            <!-- Submenu -->
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                        Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a class="flex items-center focus:outline-none">
+                                Maps
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                            <!-- Submenu -->
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                        Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a class="flex items-center focus:outline-none">
+                                Services
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                            <!-- Submenu -->
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                        Design</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/src/records.html" class="">Records</a></li>
+                        <li><a href="./rewards.html" class="">Rewards</a></li>
+                        <li><a href="#" class="">Support</a></li>
+                        <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
+                                    class="text-[#238b6d]">Login/Sign Up</span></a></li>
+                    </ul>
+                </div>
+                <!-- Mobile Menu -->
+                <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
+                    <li><a href="#" class="block">Home</a></li>
+                    <li><a href="#" class="block">About</a></li>
+                    <li>
+                        <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                            Services
+                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                            <li>
+                                <a href="#" class="block hover:text-gray-300">Web Design</a>
+                            </li>
+                            <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                            <li>
+                                <a href="#" class="block hover:text-gray-300">Consulting</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="">Records</a></li>
+                    <li><a href="rewards.html" class="">Rewards</a></li>
+                    <li><a href="#" class="">Support</a></li>
+                    <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="flex items-center justify-center gap-[38px] pb-2.5">
+            <p class="font-bold text-sm cursor-pointer">Buy Medicines</p>
+            <p class="font-bold text-sm cursor-pointer">Find Doctors</p>
+            <p class="font-bold text-sm cursor-pointer">Lab Tests</p>
+            <p class="font-bold text-sm cursor-pointer">Circle Membership</p>
+            <p class="font-bold text-sm cursor-pointer">Health Records</p>
+            <p class="font-bold text-sm cursor-pointer">Credit Card New</p>
+            <p class="font-bold text-sm cursor-pointer">Buy Insurance New</p>
+        </div>
+        <div
+            class="w-full h-[316px] bg-linear-to-r from-deep-pine-green to-sea-green-deep flex items-center justify-between px-[120px]">
+
+            <div class="flex flex-col gap-1">
+                <p class="font-bold text-[32px] text-white">Order via Prescription</p>
+                <p class="font-semibold text-base text-light-yellow">Upload prescription and we will do the rest for
+                    you!</p>
+                <div class="flex items-center gap-4 pt-9">
+                    <img src="/assets/img/left-leaf.svg" alt="leaf">
+                    <p class="font-semibold text-[22px] text-white">1 Lakh users prefer this method</p>
+                    <img src="/assets/img/right-leaf.svg" alt="leaf">
+                </div>
+            </div>
+            <img src="/assets/img/banner-doctor.png" alt="doctor" class="w-[225.66px] h-[296.18px]">
+
+        </div>
+
+        <div class="py-[50px] px-[120px] grid grid-cols-2 gap-[22px] bg-snow-gray">
+            <div class="bg-polar-mist rounded-[20px] w-[622px]">
+                <div class="bg-white rounded-[20px] p-8 shadow-upload-grid flex flex-col gap-8 ">
+                    <div class="flex items-center justify-between">
+                        <div class="flex flex-col gap-2">
+                            <p class="font-semibold text-xl text-obsidian-black">File Upload</p>
+                            <p class="font-normal text-base text-ash-slate">Choose a file and upload securely to
+                                proceed.</p>
+                        </div>
+
+                        <div
+                            class="w-[104px] h-[50px] flex items-center justify-center border border-b-2 border-winter-sky bg-white shadow-timecard gap-3 rounded-lg">
+                            <div class="flex flex-col ">
+                                <p class="font-semibold text-[10px] text-verdant-teal">In Just</p>
+                                <p class="font-bold text-sm text-verdant-teal">5 mins</p>
+                            </div>
+                            <img src="/assets/img/clock.svg" alt="clock">
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-full border border-dashed border-silver-lilac rounded-2xl p-8 flex flex-col items-center gap-6">
+                        <img src="/assets/img/upload-placeholder.svg" alt="upload-placeholder">
+                        <div class="flex flex-col gap-3 items-center">
+                            <p class="font-medium text-lg text-obsidian-black">Drag and drop your files</p>
+                            <p class="font-normal text-sm text-ash-slate">JPEG, PNG, PDF, and MP4 formats, up to 10MB
+                            </p>
+                        </div>
+
+                        <button
+                            class="w-[104px] h-9 rounded-[10px] flex items-center justify-center border border-dusty-lavender cursor-pointer selectFileBtn">
+                            <span class="font-medium text-sm text-graphite-slate">Select file</span>
+                        </button>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <p class="font-medium text-lg text-obsidian-navy">Uploaded Files</p>
+                        <div class="h-[150px] overflow-y-auto flex flex-col gap-3 hidden"></div>
+                    </div>
+                </div>
+                <div
+                    class="bg-polar-mist border border-t-0 border-aurora-blue rounded-br-2xl rounded-bl-2xl px-4 py-7 flex items-center gap-2">
+                    <img src="/assets/img/offer-badge.svg" alt="">
+                    <p class="font-bold text-base text-banner-blue">Upto 25%* discount <span
+                            class="font-normal text-sm">on every order</span></p>
+                </div>
+            </div>
+
+            <div class="w-[514px] h-[565px] bg-white rounded-2xl py-6 px-4 flex flex-col gap-7">
+                <p class="font-normal text-sm text-phantom-ash">Make sure the prescription you upload contains the
+                    following elements:</p>
+                <div class="flex items-center justify-between px-4">
+                    <div class="flex flex-col gap-2 items-center">
+                        <div class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil">
+                            <p class="font-semibold text-sm text-ocean-slate">10 MB</p>
+                        </div>
+                        <p class="font-medium text-xs text-ocean-slate max-w-[54px] text-center">Maximum File Size</p>
+                    </div>
+
+                    <div class="flex flex-col gap-2 items-center">
+                        <div class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil">
+                            <img src="/assets/img/medicine-details.svg" alt="">
+                        </div>
+                        <p class="font-medium text-xs text-ocean-slate max-w-[54px] text-center">Medicine Details</p>
+                    </div>
+
+                    <div class="flex flex-col gap-2 items-center">
+                        <div class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil">
+                            <img src="/assets/img/date-of-prescription.svg" alt="">
+                        </div>
+                        <p class="font-medium text-xs text-ocean-slate max-w-[54px] text-center">Date Of Prescription
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2.5 px-2.5">
+                    <span class="material-symbols-outlined text-sun-yellow">error</span>
+                    <p class="font-normal text-xs italic text-phantom-ash max-w-[425px]">Our pharmacist will dispense
+                        medicines only if the prescription is valid & it meets all
+                        government regulations.</p>
+                </div>
+
+                <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
+                    <label for="doctor" class="font-semibold text-sm text-gray">Select Doctor</label>
+                    <div
+                        class=" flex items-center justify-between rounded-2xl py-2.5 px-1 shadow-stepform-input bg-white-smoke">
+                        <input type="text"
+                            class="w-full focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
+                            placeholder="Select Doctor" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <div
+                        class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown">
+                        <ul class="space-y-2 px-4">
+                            <li class="font-normal text-base text-dark-gray cursor-pointer">Gaurav</li>
+                            <li class="font-normal text-base text-dark-gray cursor-pointer">Priyansh</li>
+                            <li class="font-normal text-base text-dark-gray cursor-pointer">Rishi</li>
+                            <li class="font-normal text-base text-dark-gray cursor-pointer">Custom : ___________</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
+                    <label for="doctor" class="font-semibold text-sm text-gray">Select Patient</label>
+                    <div
+                        class=" flex items-center justify-between rounded-2xl py-2.5 px-1 shadow-stepform-input bg-white-smoke">
+                        <input type="text"
+                            class="w-full focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
+                            placeholder="Select Patient" readonly>
+                        <span
+                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                    </div>
+
+                    <div
+                        class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown">
+                        <ul class="space-y-2 px-4">
+                            <li class="font-normal text-base text-dark-gray cursor-pointer">Gaurav</li>
+                            <li class="font-normal text-base text-dark-gray cursor-pointer">Priyansh</li>
+                            <li class="font-normal text-base text-dark-gray cursor-pointer">Rishi</li>
+                            <li class="font-normal text-base text-dark-gray cursor-pointer">Custom : ___________</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button
+                        class="w-[460px] h-12 rounded-lg flex items-center justify-center gap-2.5 shadow-uploadbtn bg-sea-green-dark1 cursor-pointer uploadPrescriptionBtn">
+                        <span class="material-symbols-outlined text-white">upload_file</span>
+                        <span class="font-semibold text-sm text-white">Upload Prescription</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="w-full">
+            <!-- Top Footer Content -->
+            <div
+                class="bg-gray-tint px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+                <!-- Logo & Contact -->
+                <div class="flex flex-col gap-3.5">
+                    <a href="#">
+                        <img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" />
+                    </a>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Phone:
+                            <span class="text-dim-gray text-15-normal">(+123) 456-7898</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Email:
+                            <span class="text-dim-gray text-15-normal">hello@drodo.com</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Address:
+                            <span class="text-dim-gray text-15-normal">6890 Blvd, The Bronx, NY 1058, USA</span>
+                        </h3>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex gap-3 flex-wrap">
+                        <a href="#"><img src="/assets/img/facebook-icon.svg" alt="facebook-icon" /></a>
+                        <a href="#"><img src="/assets/img/twitter-icon.svg" alt="twitter-icon" /></a>
+                        <a href="#"><img src="/assets/img/Instagram-icon.svg" alt="Instagram-icon" /></a>
+                        <a href="#"><img src="/assets/img/linkdin-icon.svg" alt="linkdin-icon" /></a>
+                        <a href="#"><img src="/assets/img/Pinterest-icon.svg" alt="Pinterest-icon" /></a>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Information</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Customer Care -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Customer Care</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Help & FAQs</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Policy -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Policy</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Purchasing Policy</a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter -->
+                <nav class="flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Newsletter</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <p class="text-15-normal text-dim-gray">
+                        Sign up for our mailing list to get the latest updates & offers.
+                    </p>
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Enter your email address"
+                            class="h-[50px] w-full py-3 px-4 text-muted-gray placeholder:text-muted-gray focus:outline-none focus:ring-0 rounded border border-light-gray text-15-normal" />
+                        <button
+                            class="w-full py-3 px-6 flex items-center justify-center rounded bg-sea-green-deep text-15-semibold text-white hover:opacity-90 transition cursor-pointer">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Bottom Footer Strip -->
+            <div class="bg-snow-gray py-6 px-6 sm:px-10 md:px-16 xl:px-20 w-full">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                    <p class="text-dim-gray text-15-normal">
+                        @ Avatar. Designed By Aibuzz
+                    </p>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <p class="text-dim-gray text-15-normal">
+                            We accept payment via:
+                        </p>
+                        <div class="flex items-center flex-wrap gap-2 sm:gap-[10px] justify-center sm:justify-start">
+                            <img src="/assets/img/payment-via-1.png" alt="payment-1" class="h-6" />
+                            <img src="/assets/img/payment-via-5.png" alt="payment-2" class="h-6" />
+                            <img src="/assets/img/payment-via-4.png" alt="payment-3" class="h-6" />
+                            <img src="/assets/img/payment-via-3.png" alt="payment-4" class="h-6" />
+                            <img src="/assets/img/payment-via-2.png" alt="payment-5" class="h-6" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script/pharmacy/upload-prescription.js"></script>
+</body>
+
+</html>
