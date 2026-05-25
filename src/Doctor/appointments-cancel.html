@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor-Appointments</title>
+    <title>Appointments Cancel</title>
     <link rel="stylesheet" href="/assets/output.css">
     <!-- Material Symbols Outlined -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 
 <body>
-    <main class=" min-h-screen px-[80px]">
+    <main class="min-h-screen px-4 md:px-6 lg:px-8 ">
         <section>
             <header class="nav-menu-records  py-2 mx-auto flex items-center justify-between relative z-10">
                 <div class="max-w-[150px] max-h-10">
@@ -208,6 +208,7 @@
                             <p class="font-normal text-base text-gray-dark-1 mt-1 ">Female Doctor</p>
                             <p class="font-normal text-base text-gray-dark-1 mt-1">24/04/2025 - 03:34 PM</p>
                         </div>
+
                     </div>
 
                     <div class="flex flex-col gap-2.5">
@@ -224,14 +225,14 @@
                             <div class="w-2.5 h-2.5 rounded-full bg-sea-green2"></div>
                             <div class="w-[52px] h-0.5 bg-sea-green2"></div>
                             <div class="w-2.5 h-2.5 rounded-full bg-sea-green2"></div>
-                            <div class="w-[52px] h-0.5 bg-muted-gray1"></div>
-                            <div class="w-2.5 h-2.5 rounded-full bg-muted-gray1"></div>
+                            <div class="w-[52px] h-0.5  bg-sea-green2"></div>
+                            <div class="w-2.5 h-2.5 rounded-full  bg-sea-green2"></div>
                         </div>
 
                         <div class="flex items-center gap-5">
                             <p class="font-medium text-sm text-gray">Enquiry</p>
-                            <p class="font-medium text-sm text-gray-light1">Appointment</p>
-                            <p class="font-medium text-sm text-gray-light1">Completed</p>
+                            <p class="font-medium text-sm text-gray">Appointment</p>
+                            <p class="font-medium text-sm text-gray">Cancelled</p>
                         </div>
                     </div>
 
@@ -242,11 +243,6 @@
                             <span class="font-normal text-xs text-gray">Directions</span>
                         </button>
 
-                        <button
-                            class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer">
-                            <span class="material-symbols-outlined text-lg! text-gray">call</span>
-                            <span class="font-normal text-xs text-gray">Call</span>
-                        </button>
 
                         <button
                             class=" share-open-btn w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer">
@@ -256,24 +252,9 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col sm:flex-row sm:items-center justify-end gap-2.5">
-                    <button
-                        class="w-[233px] h-12 rounded-md border border-sea-green-dark-1 flex items-center justify-center gap-2 bg-mint-cream cursor-pointer">
-                        <span class="font-medium text-sm text-gray max-w-[166px] text-left">Get QR pay via UPI
-                            confirm delivery</span>
-                        <span class="material-symbols-outlined text-sea-green-dark1">currency_rupee_circle</span>
-                    </button>
 
-                    <button
-                        class="w-[233px] h-12 rounded-md border border-sea-green-dark-1 flex items-center justify-center gap-2 bg-mint-cream cursor-pointer">
-                        <span class="font-medium text-sm text-gray max-w-[166px] text-left">Pay via payment gateway
-                            confirm
-                            delivery</span>
-                        <span class="material-symbols-outlined text-sea-green-dark1">currency_rupee_circle</span>
-                    </button>
-                </div>
 
-                <div class="flex flex-col gap-2.5">
+                <div class="flex flex-col gap-2.5 mt-6">
                     <div class="flex items-center justify-between">
                         <p class="font-normal text-sm text-gray-dark-1">Appointment</p>
                         <p class="font-normal text-sm text-gray">24/04/2025 - 4 PM to 6 PM</p>
@@ -465,102 +446,20 @@
             </div>
 
             <!-- Completed Line -->
-            <div class="flex items-center justify-center gap-2 py-4 text-base font-bold text-dark-gray hidden">
+            <div class="flex items-center justify-center gap-2 py-4 text-base font-bold text-dark-gray ">
 
                 <span>
-                    You have completed appointment
+                    You have cancelled the appointment
                 </span>
 
-                <span class="material-symbols-outlined text-sea-green-dark1 text-[18px]">
-                    thumb_up
+                <span class="material-symbols-outlined  text-[18px]">
+                    sentiment_dissatisfied
                 </span>
 
             </div>
 
 
-            <!-- Reviews Div -->
-            <div class="bg-white border border-gray-light3 rounded-xl mt-5 hidden">
 
-                <div class="px-5 py-4">
-
-                    <!-- Review Heading -->
-                    <h4 class="text-gray text-base  font-semibold mb-5">
-                        Reviews
-                    </h4>
-
-                    <!-- No Show -->
-                    <div class="flex items-center justify-between mb-5">
-
-                        <p class="text-base font-semibold text-gray">
-                            Mark as “No show”
-                        </p>
-
-                        <div class="w-5 h-5 rounded-full border-2 border-gray">
-                        </div>
-
-                    </div>
-
-                    <!-- Rating -->
-                    <div class="flex items-center justify-between mb-5">
-
-                        <p class="text-base font-semibold text-gray">
-                            Rate your experience
-                        </p>
-
-                        <div class="flex items-center gap-1">
-
-                            <span class="material-symbols-outlined text-ochre-yellow1 text-[20px]">
-                                star
-                            </span>
-
-                            <span class="material-symbols-outlined text-ochre-yellow1 text-[20px]">
-                                star
-                            </span>
-
-                            <span class="material-symbols-outlined text-ochre-yellow1 text-[20px]">
-                                star
-                            </span>
-
-                            <span class="material-symbols-outlined text-gray text-[20px]">
-                                star
-                            </span>
-
-                            <span class="material-symbols-outlined text-gray text-[20px]">
-                                star
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Comments -->
-                    <div class="flex items-center gap-3">
-
-                        <label class="text-base font-semibold text-gray shrink-0">
-                            Comments
-                        </label>
-
-                        <div class="relative w-full">
-
-                            <input type="text"
-                                class="w-full h-10 rounded-xl border border-gray-200 bg-gray-50 px-4 outline-none focus:border-teal-500" />
-
-                        </div>
-
-                        <!-- Submit -->
-                        <button class="text-sea-green-dark1">
-
-                            <span class="material-symbols-outlined text-[28px]">
-                                input
-                            </span>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
 
             <!-- Credit -->
             <div class="mt-5 text-dark-gray text-base font-medium flex items-center gap-2 flex-wrap">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Hospital Appointment</title>
     <link rel="stylesheet" href="/assets/output.css">
     <!-- Material Symbols Outlined -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
@@ -13,8 +13,7 @@
 <body>
     <main class="min-h-screen px-[80px]">
         <section>
-            <header
-                class="nav-menu-records py-2 mx-auto flex flex-wrap items-center justify-between relative z-10">
+            <header class="nav-menu-records  py-2 mx-auto flex items-center justify-between relative z-10">
                 <div class="max-w-[150px] max-h-10">
                     <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
                 </div>
@@ -134,10 +133,10 @@
                 </nav>
             </header>
             <!-- Breadcrumb + Top Right Icons -->
-            <div class="flex flex-wrap items-center justify-between mb-6 pt-[39px] gap-2">
+            <div class="flex items-center justify-between mb-6 pt-[39px]">
 
                 <!-- Breadcrumb -->
-                <div class="flex items-center gap-2 text-base font-normal text-gray flex-wrap">
+                <div class="flex items-center gap-2 text-base font-normal text-gray">
 
                     <a href="home.html" class="hover:text-sea-green-dark1 transition">
                         Home
@@ -181,16 +180,11 @@
 
             </div>
 
-            <!-- Main Card -->
-            <div class="bg-white border border-gray-light3 rounded-2xl p-6 shadow-sm">
 
-                <!-- Top Section -->
-                <div class="flex flex-col lg:flex-row justify-between gap-8">
 
-                    <!-- Left -->
-                    <div class="flex flex-wrap sm:flex-nowrap gap-4 items-start">
-
-                        <!-- Doctor Image -->
+            <div class="mt-1 border border-gray-light3 rounded-xl p-3 flex flex-col gap-2 w-full">
+                <div class="flex flex-col sm:flex-row justify-between">
+                    <div class="flex items-start gap-2.5">
                         <div class="w-16 h-16 rounded-full overflow-hidden  mt-2 shrink-0">
 
                             <img src="/assets/img/appointments/dr-ritika-singh.png" alt="doctor"
@@ -198,220 +192,111 @@
 
                         </div>
 
-                        <!-- Doctor Details -->
-                        <div>
 
-                            <!-- Name -->
-                            <div class="flex flex-wrap items-center gap-2">
-                                         Hospital #5866
-                                <h2 class="text-base font-semibold text-gray">
-                                   
-                                </h2>
-
-                                <div class="flex items-center gap-1 text-sm">
-
-                                    <img src="/assets/img/appointments/quick-service.svg" alt="verified"
-                                        class="w-6 h-6 object-contain" />
-
-                                    <span class="text-dark-gray text-xs font-normal">4.3</span>
-
-                                    <span class="text-ochre-yellow">★</span>
-
+                        <div class="flex flex-col gap-0.5">
+                            <div class="flex items-center gap-1">
+                                <p class="font-semibold text-xl text-gray">Hospital #5866</p>
+                                <img src="/assets/img/badge.svg" alt="Badge">
+                                <div class="flex items-center gap-0.5">
+                                    <p class="font-normal text-xs text-dark-gray">4.3</p>
+                                    <img src="/assets/img/star.svg" alt="Star">
                                 </div>
                             </div>
 
-                            <!-- Degree -->
-                            <p class="text-base font-normal text-charcoal-black mt-1">
-                               Order #R32512
-                            </p>
-
-                           <br>
-
-                            <!-- Progress -->
-                            <div class="flex flex-wrap items-center gap-4 mt-5">
-
-                                <div class="w-3 h-3 rounded-full bg-sea-green2"></div>
-                                <div class="w-12 h-[3px] bg-sea-green2"></div>
-
-                                <div class="w-3 h-3 rounded-full bg-sea-green2"></div>
-                                <div class="w-12 h-[3px] bg-sea-green2"></div>
-
-                                <div class="w-3 h-3 rounded-full bg-muted-gray1"></div>
-                                <div class="w-12 h-[3px] bg-muted-gray1"></div>
-
-
-
-                            </div>
-
-                            <!-- Labels -->
-                            <div class="flex flex-wrap gap-4 sm:gap-8 mt-3 text-sm font-normal">
-
-                                <span class="text-gray">Enquiry</span>
-                                <span class="text-gray-light1">Appointment</span>
-                                <span class="text-gray-light1">Completed</span>
-
-                            </div>
-
-                            <!-- Appointment Info -->
-                            <div class="mt-10 space-y-4 ">
-
-                                <div class="flex gap-16">
-                                    <span class="text-sm font-normal text-gray-dark-1">
-                                        Appointment
-                                    </span>
-                                </div>
-
-                                <div class="flex gap-16">
-                                    <span class="text-sm font-normal text-gray-dark-1">
-                                        Location
-                                    </span>
-                                </div>
-
-                                <div class="flex gap-16">
-                                    <span class="text-sm font-normal text-gray-dark-1">
-                                        Pay directly to the doctor
-                                    </span>
-                                </div>
-
-                                <div class="flex gap-16">
-                                    <span class="text-sm font-normal text-gray">
-                                        Emergency Service
-                                    </span>
-                                </div>
-
-                            </div>
+                            <p class="font-normal text-sm mt-2">Order #R32512</p>
 
                         </div>
-
                     </div>
 
-                    <!-- Right (keep original alignment: items-end) -->
-                    <div class="flex flex-col items-end w-full lg:w-auto">
-
-                        <div class="space-y-2 text-right w-full">
-                            <p class="text-base font-normal">6 km</p>
-                            <p class="text-base font-normal">20 mins away</p>
-                            <p class="text-base font-normal text-gray-dark-1">24/04/2025 - 03:34 PM</p>
-                            <p class="text-base font-normal text-gray-dark-1">Order #R32512</p>
-                        </div>
-
-                        <!-- Buttons -->
-                        <div class="flex flex-wrap gap-3 mt-6 justify-end w-full">
-
-                            <!-- Directions -->
-                            <button
-                                class="border border-gray-light3 px-4 py-2 rounded-lg text-sm font-normal text-gray flex items-center gap-2">
-
-
-                                <span class="material-symbols-outlined">
-                                    arrows_output
-                                </span>
-
-                                Directions
-
-                            </button>
-
-                            <!-- Call -->
-                            <button
-                                class="border border-gray-light3 px-4 py-2 rounded-lg text-sm font-normal text-gray flex items-center gap-2">
-
-                                <span class="material-symbols-outlined text-[18px]">
-                                    call
-                                </span>
-
-                                Call
-
-                            </button>
-
-                            <!-- Share -->
-                            <button
-                                class="share-open-btn border border-gray-light3 px-4 py-2 rounded-lg text-sm font-normal text-gray flex items-center gap-2 cursor-pointer ">
-
-                                <span class="material-symbols-outlined text-[18px]">
-                                    share
-                                </span>
-
-                                Share
-
-                            </button>
-
-                        </div>
-
-                        <!-- Payment boxes: keep right-aligned, wrap on small screens -->
-                        <div class="flex flex-wrap gap-4 mt-6 justify-end w-full">
-
-                            <!-- UPI QR Payment -->
-                            <div
-                                class="bg-mint-cream border border-sea-green-dark1 rounded-lg px-5 py-3 text-sm font-normal text-gray w-[320px]">
-
-                                <div class="flex justify-between items-center gap-4">
-
-                                    <span class="leading-5">
-                                        Get QR pay via UPI confirm delivery
-                                    </span>
-
-                                    <!-- Image -->
-                                    <img src="/assets/img/appointments/upi.svg" alt="upi"
-                                        class="w-8 h-8 object-contain shrink-0" />
-
-                                </div>
-
-                            </div>
-
-                            <!-- Payment Gateway -->
-                            <div
-                                class="bg-mint-cream border border-sea-green-dark1 rounded-lg px-5 py-3 text-sm font-normal text-gray w-[320px]">
-
-                                <div class="flex justify-between items-center gap-4">
-
-                                    <span class="leading-5">
-                                        Pay via payment gateway confirm delivery
-                                    </span>
-
-                                    <!-- Rounded Rupee -->
-                                    <div
-                                        class="w-8 h-8 rounded-full border border-deep-teal-green flex items-center justify-center shrink-0">
-
-                                        <span class="text-deep-teal-green font-semibold text-sm">
-                                            ₹
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Clinic Info -->
-                        <div class="mt-6 text-right text-sm font-normal space-y-2 w-full">
-                            <p class="text-gray">24/04/2025 - 4 PM to 6 PM</p>
-                            <p class="text-gray">Andheri E - 416001</p>
-                            <p class="text-gray">Clinic Visit <span class="text-sea-green-dark1">₹500</span></p>
-                        </div>
-
-                        <!-- Profile Visibility -->
-                        <div class="mt-4 w-full flex justify-end">
-
-                            <button
-                                class="proforma-open-btn border border-deep-teal-green bg-mint-cream text-gray px-5 py-2 rounded-lg text-sm font-normal flex items-center gap-2 cursor-pointer">
-
-                                Proforma Bill
-
-                                <span class="material-symbols-outlined text-[18px]">
-                                    visibility
-                                </span>
-
-                            </button>
-
-                        </div>
-
-
+                    <div class="flex flex-col gap-2.5">
+                        <p class="font-normal text-base sm:text-right">6 km</p>
+                        <p class="font-normal text-base sm:text-right">20 mins away</p>
+                        <p class="font-normal text-base text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                        <p class="font-normal text-base text-gray-dark-1 sm:text-right">Order #R32512</p>
                     </div>
-
                 </div>
 
+                <div class="flex flex-col sm:flex-row gap-2 items-center justify-between mt-2">
+                    <div class="flex flex-col gap-2.5 px-3">
+                        <div class="flex items-center gap-2.5 px-6">
+                            <div class="w-2.5 h-2.5 rounded-full bg-sea-green2"></div>
+                            <div class="w-[52px] h-0.5 bg-sea-green2"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-sea-green2"></div>
+                            <div class="w-[52px] h-0.5 bg-muted-gray1"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-muted-gray1"></div>
+                        </div>
+
+                        <div class="flex items-center gap-5">
+                            <p class="font-medium text-sm text-gray">Enquiry</p>
+                            <p class="font-medium text-sm text-gray-light1">Appointment</p>
+                            <p class="font-medium text-sm text-gray-light1">Completed</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-1 sm:gap-2.5 ">
+                        <button
+                            class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer">
+                            <span class="material-symbols-outlined text-lg! text-gray">open_with</span>
+                            <span class="font-normal text-xs text-gray">Directions</span>
+                        </button>
+
+                        <button
+                            class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer">
+                            <span class="material-symbols-outlined text-lg! text-gray">call</span>
+                            <span class="font-normal text-xs text-gray">Call</span>
+                        </button>
+
+                        <button
+                            class=" share-open-btn w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer">
+                            <span class="material-symbols-outlined text-lg! text-gray">share</span>
+                            <span class="font-normal text-xs text-gray">Share</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-end gap-2.5">
+                    <button
+                        class="w-[233px] h-12 rounded-md border border-sea-green-dark-1 flex items-center justify-center gap-2 bg-mint-cream cursor-pointer">
+                        <span class="font-medium text-sm text-gray max-w-[166px] text-left">Get QR pay via UPI
+                            confirm delivery</span>
+                        <span class="material-symbols-outlined text-sea-green-dark1">currency_rupee_circle</span>
+                    </button>
+
+                    <button
+                        class="w-[233px] h-12 rounded-md border border-sea-green-dark-1 flex items-center justify-center gap-2 bg-mint-cream cursor-pointer">
+                        <span class="font-medium text-sm text-gray max-w-[166px] text-left">Pay via payment gateway
+                            confirm
+                            delivery</span>
+                        <span class="material-symbols-outlined text-sea-green-dark1">currency_rupee_circle</span>
+                    </button>
+                </div>
+
+                <div class="flex flex-col gap-2.5">
+                    <div class="flex items-center justify-between">
+                        <p class="font-normal text-sm text-gray-dark-1">Appointment</p>
+                        <p class="font-normal text-sm text-gray">24/04/2025 - 4 PM to 6 PM</p>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <p class="font-normal text-sm text-gray-dark-1">Location</p>
+                        <p class="font-normal text-sm text-gray">Andheri E - 416001</p>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <p class="font-normal text-sm text-gray-dark-1">Pay directly to the doctor</p>
+                        <p class="font-normal text-sm text-gray">Clinic Visit <span
+                                class="font-semibold text-sea-green-dark1">&#8377;500</span></p>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <p class="font-normal text-sm text-gray">Emergency Service</p>
+                        <button
+                            class="proforma-open-btn w-[132px] h-[30px] rounded-lg bg-transparent-light-sea-green1 border border-sea-green-dark1 flex items-center justify-center gap-2 cursor-pointer">
+                            <span class="font-normal text-sm text-gray">Proforma Bill</span>
+                            <span class="material-symbols-outlined text-gray text-xl">visibility</span>
+                        </button>
+                    </div>
+                </div>
             </div>
 
 
@@ -702,14 +587,16 @@
                     Cancel
                 </button>
 
-                <a href="myorder.html" class="bg-sea-green2 text-white px-20 py-3 rounded-xl text-base font-bold ">
-                    Order History
-                </a>
+                <button onclick="window.location.href='myorder.html'"
+                    class="bg-sea-green2 text-white px-20 py-3 rounded-xl text-base font-bold flex items-center justify-center text-center">
 
+                    Order History
+
+                </button>
             </div>
 
             <!-- Help Box -->
-            <div class="bg-white border border-gray-light3 rounded-2xl p-5 mt-8 flex flex-wrap items-center gap-4">
+            <div class="bg-white border border-gray-light3 rounded-2xl p-5 mt-8 flex items-center gap-4">
 
                 <!-- Call Icon -->
                 <div
@@ -736,32 +623,52 @@
 
             </div>
 
-            <!-- Refer Banner (responsive but preserves original layout on desktop) -->
-           <div class="my-8 rounded-2xl overflow-hidden bg-gradient-to-r from-[#52d6b4] to-[#38b2ac] px-4 sm:px-6 py-4">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-5">
-        
-        <!-- Left section: small icon + text (no absolute positioning) -->
-        <div class="flex items-center gap-3 text-white">
-            <img src="/assets/img/appointments/half-dollar.svg" alt="refer" 
-                 class="w-10 h-10 object-contain shrink-0" />
-            <div class="text-center md:text-left">
-                <h3 class="text-lg font-bold">Refer and Earn</h3>
-                <p class="mt-1 text-base sm:text-lg font-normal">
-                    Invite family and friends to earn cashbacks
-                </p>
+            <!-- Refer Banner -->
+            <div
+                class="my-8 rounded-2xl overflow-hidden bg-gradient-to-r from-[#52d6b4] to-[#38b2ac] px-4 sm:px-6 py-5 relative mt-8">
+
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+
+                    <!-- Left Section -->
+                    <div class="flex items-start gap-3 relative pl-4 sm:pl-6">
+
+                        <!-- Small Side Image -->
+                        <img src="/assets/img/appointments/half-dollar.svg" alt="refer"
+                            class="w-8 h-8 sm:w-10 sm:h-10 object-contain absolute left-0 sm:-left-2 top-0" />
+
+                        <!-- Text -->
+                        <div class="text-white">
+
+                            <h3 class="text-lg font-bold">
+                                Refer and Earn
+                            </h3>
+
+                            <p class="mt-1 text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
+                                Invite family and friends to
+                                earn cashbacks
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Center Button -->
+                    <button
+                        class="border border-white text-white px-24 sm:px-16 lg:px-24 py-2 rounded-full font-bold text-sm sm:text-base lg:text-lg bg-sea-green-dark1  sm:w-fit">
+
+                        Invite Now
+
+                    </button>
+
+                    <!-- Right Image -->
+                    <div class="flex justify-center lg:justify-end">
+                        <img src="/assets/img/appointments/refer-earn-banner.svg" alt="refer illustration"
+                            class="w-20 h-16 sm:w-24 sm:h-20 object-contain shrink-0" />
+                    </div>
+
+                </div>
+
             </div>
-        </div>
-
-        <!-- Center Button – full width on mobile, auto on larger -->
-        <button class="border border-white text-white px-6 sm:px-8 md:px-10 py-2 rounded-full font-bold text-base sm:text-lg bg-sea-green-dark1 w-full md:w-auto whitespace-nowrap">
-            Invite Now
-        </button>
-
-       
-        <img src="/assets/img/appointments/refer-earn-banner.svg" alt="refer illustration" 
-             class="w-20 h-16 sm:w-24 sm:h-20 object-contain shrink-0" />
-    </div>
-</div>
 
         </section>
     </main>
