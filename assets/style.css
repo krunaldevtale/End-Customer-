@@ -7,6 +7,7 @@
   --color-gray: #212B36;
 
   --color-gray-dark-1: #637381;
+  --color-gray-light: #474747;
   --color-light-blackk: #30363C;
   --color-gray-darkk: #4F585E;
   --color-gray-light: #F8FAFC;
@@ -65,6 +66,10 @@
   --color-gray-medium: #7D7D7D;
   --color-border-light-1: #E6EBF4;
   --color-green-light-5: #45A081;
+  --color-phantom-ash: #121414;
+  --color-ocean-slate: #02475B;
+  --color-emerald-veil: #1A7A5E40;
+  --color-sun-yellow: #FC9916;
   /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
   --box-shadow-2: 0 12px 24px -4px rgba(145, 158, 171, 0.12);
@@ -112,6 +117,7 @@
   --color-persian-blue: #1939B7;
   --color-deep-aquamarine: #408677;
   --color-dark-gray: #484848;
+  --color-light-green-b: #E7FFF8;
   --color-pewter-blue: #89C3BF;
   --color-teal-green: #088178;
   --color-charcoal-gray: #333333;
@@ -149,6 +155,18 @@
   --color-seafoam-green: #7ACDB566;
   --color-light-green: #C8EAE0;
   --color-footer-green: #1A7A5E26;
+  --color-deep-pine-green: #084433;
+  --color-obsidian-black: #101111;
+  --color-ash-slate: #7D7D7D;
+  --color-winter-sky: #E6EBF4;
+  --color-verdant-teal: #45A081;
+  --color-silver-lilac: #D8DAEB;
+  --color-dusty-lavender: #D5D3E0;
+  --color-graphite-slate: #2E3037;
+  --color-obsidian-navy: #0C1421;
+  --color-polar-mist: #EBF2FF;
+  --color-aurora-blue: #B5CDF7;
+  --color-white-smoke: #F5F5F5;
   --color-mist-white:#F9FAFB;
   --color-white-1a: #FFFFFF1A;
   --color-white-4d: #FFFFFF4D;
@@ -196,6 +214,10 @@
   --shadow-cancelBtn: 0px 8px 16px 0px #FF48423D;
   --shadow-calendar: 0px 8px 16px 0px #00000026;
   --shadow-hospital-card: 4px 4px 10px 4px #00000033;
+  --shadow-upload-grid: 0px 8px 50px 0px #0000000A;
+  --shadow-timecard: 0px 4px 0px 0px #E6EBF4;
+  --shadow-dropdown: 4px 4px 10px 2px #00000026;
+  --shadow-uploadbtn: 2px 5px 4px 0px #0881782E;
   --shadow-auth-popup: 0px 25px 60px 0px #00000026;
   --shadow-auth-popup-inset: 0px 2px 4px 1px #0000000D inset;
   --shadow-auth-button: 0px 20px 25px -5px #004F3B33;
