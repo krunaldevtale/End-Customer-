@@ -264,4 +264,440 @@ $(document).ready(function () {
 
             </style>
         `);
+
+  $(function () {
+    /* ── STATE ── */
+    let selectedDoctor = null;
+    let selectedPatients = [];
+
+    /* ── ADD data-value ATTRS TO EXISTING LI ITEMS ── */
+    $("#doctorList li").each(function () {
+      const text = $.trim($(this).text());
+      if (text.startsWith("Custom")) $(this).attr("data-value", "custom");
+      else $(this).attr("data-value", text);
+    });
+    $("#patientList li").each(function () {
+      const text = $.trim($(this).text());
+      if (text.startsWith("Custom")) $(this).attr("data-value", "custom");
+      else $(this).attr("data-value", text);
+    });
+
+    /* ── WRAP INPUTS IN TAG CONTAINERS ── */
+    $("#doctorBox input").wrap(
+      '<div id="doctorTags" class="flex flex-wrap gap-1.5 flex-1 items-center"></div>',
+    );
+    $("#patientBox input").wrap(
+      '<div id="patientTags" class="flex flex-wrap gap-1.5 flex-1 items-center"></div>',
+    );
+
+    /* ── INJECT MODALS ── */
+    $("body").append(`
+    <div id="addDoctorModal" class="hidden fixed inset-0 bg-black/40 z-[9999] flex items-center justify-center">
+      <div class="bg-white rounded-2xl p-6 w-[800px] shadow-2xl">
+        <h3 class="text-base font-semibold text-gray-800 mb-4">Add New Doctor</h3>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="mb-3">
+            <input id="newDoctorFirstName" type="text" placeholder="First Name"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-0">
+          </div>
+          <div class="mb-3">
+            <input id="newDoctorLastName" type="text" placeholder="Last Name"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-0">
+          </div>
+        </div>
+        <div class="mb-3 dropdown-wrapper relative">
+          <label class="block text-xs font-medium text-gray-600 mb-1">Speciality</label>
+          <div class="flex items-center justify-between px-3 py-2 border border-gray-300 rounded-lg cursor-pointer" id="specBox">
+            <input id="newDoctorSpec" type="text" placeholder="e.g. Cardiologist"
+              class="w-full text-sm focus:outline-none focus:ring-0 cursor-pointer bg-transparent" readonly>
+            <span class="material-symbols-outlined dropdown-toggle" id="specArrow">keyboard_arrow_down</span>
+          </div>
+          <div class="dropdown-menu absolute bg-white rounded-2xl py-2 px-3 hidden w-full z-10 shadow-lg top-full mt-1" id="specMenu">
+            <ul class="space-y-2 font-normal text-sm text-[#484848]" id="specList">
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Cardiology">Cardiology</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="General Physician">General Physician</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Dermatologist">Dermatologist</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Neurologist">Neurologist</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Psychiatrist">Psychiatrist</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Dentist">Dentist</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="ENT Specialist">ENT Specialist</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Endocrinologist">Endocrinologist</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Ophthalmologist">Ophthalmologist</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex gap-2.5 justify-end mt-4">
+          <button id="cancelDoctorModal"
+            class="px-4 py-2 rounded-lg text-sm font-medium border border-gray-300 bg-white text-gray-700 cursor-pointer hover:bg-gray-50">Cancel</button>
+          <button id="saveDoctorBtn"
+            class="px-4 py-2 rounded-lg text-sm font-medium bg-sea-green-dark1 text-white border-none cursor-pointer">Add Doctor</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="addPatientModal" class="hidden fixed inset-0 bg-black/40 z-[9999] flex items-center justify-center">
+      <div class="bg-white rounded-2xl p-6 w-[800px] shadow-2xl">
+        <h3 class="text-base font-semibold text-gray-800 mb-4">Add New Patient</h3>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="mb-3">
+            <input id="newPatientFirstName" type="text" placeholder="First Name"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-0">
+          </div>
+          <div class="mb-3">
+            <input id="newPatientLastName" type="text" placeholder="Last Name"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-0">
+          </div>
+          <div class="mb-3 dropdown-wrapper relative">
+            <div class="flex items-center justify-between px-3 py-2 border border-gray-300 rounded-lg cursor-pointer" id="genderBox">
+              <input id="gender" type="text" placeholder="Select Gender"
+                class="w-full text-sm focus:outline-none focus:ring-0 cursor-pointer bg-transparent" readonly>
+              <span class="material-symbols-outlined dropdown-toggle" id="genderArrow">keyboard_arrow_down</span>
+            </div>
+            <div class="dropdown-menu absolute bg-white rounded-2xl py-2 px-3 hidden w-full z-10 shadow-lg top-full mt-1" id="genderMenu">
+              <ul class="space-y-2 font-normal text-sm text-[#484848]" id="genderList">
+                <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Male">Male</li>
+                <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Female">Female</li>
+                <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Others">Others</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input id="newPatientAge" type="number" placeholder="Age"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-0">
+          </div>
+        </div>
+        <div class="mb-3 dropdown-wrapper relative">
+          <label class="block text-xs font-medium text-gray-600 mb-1">Relation</label>
+          <div class="flex items-center justify-between px-3 py-2 border border-gray-300 rounded-lg cursor-pointer" id="relationBox">
+            <input id="relation" type="text" placeholder="Select Relation"
+              class="w-full text-sm focus:outline-none focus:ring-0 cursor-pointer bg-transparent" readonly>
+            <span class="material-symbols-outlined dropdown-toggle" id="relationArrow">keyboard_arrow_down</span>
+          </div>
+          <div class="dropdown-menu absolute bg-white rounded-2xl py-2 px-3 hidden w-full z-10 shadow-lg top-full mt-1" id="relationMenu">
+            <ul class="space-y-2 font-normal text-sm text-[#484848]" id="relationList">
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Father">Father</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Mother">Mother</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Brother">Brother</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Sister">Sister</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Husband">Husband</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Wife">Wife</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Son">Son</li>
+              <li class="py-1 px-1 rounded-md cursor-pointer hover:bg-green-50" data-value="Daughter">Daughter</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex gap-2.5 justify-end mt-4">
+          <button id="cancelPatientModal"
+            class="px-4 py-2 rounded-lg text-sm font-medium border border-gray-300 bg-white text-gray-700 cursor-pointer hover:bg-gray-50">Cancel</button>
+          <button id="savePatientBtn"
+            class="px-4 py-2 rounded-lg text-sm font-medium bg-sea-green-dark1 text-white border-none cursor-pointer">Add Patient</button>
+        </div>
+      </div>
+    </div>
+  `);
+
+    /* ── HELPERS ── */
+
+    function makeTag(value, type) {
+      return $(`
+      <span class="inline-flex items-center gap-1 bg-white text-black text-xs font-semibold px-2.5 py-2 rounded-full shadow-request-box">
+        ${value}
+        <span class="material-symbols-outlined text-[#484848] cursor-pointer tag-close"
+          style="font-size:14px;" data-type="${type}" data-value="${value}">close</span>
+      </span>`);
+    }
+
+    function renderDoctorTag() {
+      $("#doctorTags").empty();
+      if (selectedDoctor) {
+        $("#doctorTags").append(makeTag(selectedDoctor, "doctor"));
+      } else {
+        $("#doctorTags").append(
+          $(
+            '<input type="text" class="flex-1 bg-transparent border-none outline-none text-sm placeholder:text-sm placeholder:font-normal focus:outline-none focus:ring-0 min-w-[80px]" placeholder="Select Doctor" readonly>',
+          ),
+        );
+      }
+      renderDoctorList();
+    }
+
+    function renderPatientTags() {
+      $("#patientTags").empty();
+      selectedPatients.forEach((val) =>
+        $("#patientTags").append(makeTag(val, "patient")),
+      );
+      $("#patientTags").append(
+        $(
+          `<input type="text" class="flex-1 bg-transparent border-none outline-none text-sm placeholder:text-sm placeholder:font-normal focus:outline-none focus:ring-0 min-w-[60px]" placeholder="${selectedPatients.length ? "" : "Select Patient"}" readonly>`,
+        ),
+      );
+      renderPatientList();
+    }
+
+    function renderDoctorList() {
+      $("#doctorList li").each(function () {
+        const val = $(this).data("value");
+        if (val === "custom") {
+          $(this).html(
+            `<span class="flex items-center gap-1.5"><span class="inline-block w-5"></span>Custom : ___________</span>`,
+          );
+          return;
+        }
+        if (val === selectedDoctor) {
+          $(this).html(
+            `<span class="flex items-center gap-1.5 text-green-700 font-semibold"><span class="material-symbols-outlined text-green-700" style="font-size:16px;">check</span>${val}</span>`,
+          );
+        } else {
+          $(this).html(
+            `<span class="flex items-center gap-1.5"><span class="inline-block w-5"></span>${val}</span>`,
+          );
+        }
+      });
+    }
+
+    function renderPatientList() {
+      $("#patientList li").each(function () {
+        const val = $(this).data("value");
+        if (val === "custom") {
+          $(this).html(
+            `<span class="flex items-center gap-1.5"><span class="inline-block w-5"></span>Custom : ___________</span>`,
+          );
+          return;
+        }
+        if (selectedPatients.includes(val)) {
+          $(this).html(
+            `<span class="flex items-center gap-1.5 text-green-700 font-semibold"><span class="material-symbols-outlined text-green-700" style="font-size:16px;">check</span>${val}</span>`,
+          );
+        } else {
+          $(this).html(
+            `<span class="flex items-center gap-1.5"><span class="inline-block w-5"></span>${val}</span>`,
+          );
+        }
+      });
+    }
+
+    /* ── CLOSE ALL DROPDOWNS (main + modal) ── */
+    function closeAllDropdowns() {
+      $(
+        "#doctorMenu, #patientMenu, #specMenu, #genderMenu, #relationMenu",
+      ).addClass("hidden");
+      $(".dropdown-toggle").text("keyboard_arrow_down");
+    }
+
+    /* ── GENERIC MODAL DROPDOWN TOGGLE HELPER ── */
+    function bindModalDropdown(boxId, menuId, arrowId, inputId, listId) {
+      $(document).on("click", "#" + boxId, function (e) {
+        e.stopPropagation();
+        const $menu = $("#" + menuId);
+        const isOpen = !$menu.hasClass("hidden");
+        // close only modal dropdowns
+        $("#specMenu, #genderMenu, #relationMenu").addClass("hidden");
+        $("#specArrow, #genderArrow, #relationArrow").text(
+          "keyboard_arrow_down",
+        );
+        if (!isOpen) {
+          $menu.removeClass("hidden");
+          $("#" + arrowId).text("keyboard_arrow_up");
+        }
+      });
+
+      $(document).on("click", "#" + listId + " li", function (e) {
+        e.stopPropagation();
+        const val = $(this).data("value");
+        $("#" + inputId).val(val);
+        // tick mark
+        $("#" + listId + " li").each(function () {
+          const v = $(this).data("value");
+          if (v === val) {
+            $(this).html(
+              `<span class="flex items-center gap-1.5 text-green-700 font-semibold"><span class="material-symbols-outlined text-green-700" style="font-size:16px;">check</span>${v}</span>`,
+            );
+          } else {
+            $(this).html(
+              `<span class="flex items-center gap-1.5"><span class="inline-block w-5"></span>${v}</span>`,
+            );
+          }
+        });
+        $("#" + menuId).addClass("hidden");
+        $("#" + arrowId).text("keyboard_arrow_down");
+      });
+    }
+
+    // Bind all three modal dropdowns
+    bindModalDropdown(
+      "specBox",
+      "specMenu",
+      "specArrow",
+      "newDoctorSpec",
+      "specList",
+    );
+    bindModalDropdown(
+      "genderBox",
+      "genderMenu",
+      "genderArrow",
+      "gender",
+      "genderList",
+    );
+    bindModalDropdown(
+      "relationBox",
+      "relationMenu",
+      "relationArrow",
+      "relation",
+      "relationList",
+    );
+
+    /* ── MAIN DOCTOR BOX TOGGLE ── */
+    $("#doctorBox").on("click", function (e) {
+      e.stopPropagation();
+      const $menu = $("#doctorMenu");
+      const isOpen = !$menu.hasClass("hidden");
+      closeAllDropdowns();
+      if (!isOpen) {
+        $menu.removeClass("hidden");
+        $(this).find(".dropdown-toggle").text("keyboard_arrow_up");
+      }
+    });
+
+    /* ── MAIN PATIENT BOX TOGGLE ── */
+    $("#patientBox").on("click", function (e) {
+      e.stopPropagation();
+      const $menu = $("#patientMenu");
+      const isOpen = !$menu.hasClass("hidden");
+      closeAllDropdowns();
+      if (!isOpen) {
+        $menu.removeClass("hidden");
+        $(this).find(".dropdown-toggle").text("keyboard_arrow_up");
+      }
+    });
+
+    /* ── DOCTOR ITEM CLICK ── */
+    $("#doctorList").on("click", "li", function (e) {
+      e.stopPropagation();
+      const val = $(this).data("value");
+      if (val === "custom") {
+        closeAllDropdowns();
+        $("#newDoctorFirstName, #newDoctorLastName, #newDoctorSpec").val("");
+        // reset spec list ticks
+        $("#specList li").each(function () {
+          const v = $(this).data("value");
+          $(this).html(
+            `<span class="flex items-center gap-1.5"><span class="inline-block w-5"></span>${v}</span>`,
+          );
+        });
+        $("#addDoctorModal").removeClass("hidden");
+        return;
+      }
+      selectedDoctor = selectedDoctor === val ? null : val;
+      renderDoctorTag();
+      closeAllDropdowns();
+    });
+
+    /* ── PATIENT ITEM CLICK ── */
+    $("#patientList").on("click", "li", function (e) {
+      e.stopPropagation();
+      const val = $(this).data("value");
+      if (val === "custom") {
+        closeAllDropdowns();
+        $(
+          "#newPatientFirstName, #newPatientLastName, #newPatientAge, #gender, #relation",
+        ).val("");
+        // reset gender & relation list ticks
+        $("#genderList li, #relationList li").each(function () {
+          const v = $(this).data("value");
+          $(this).html(
+            `<span class="flex items-center gap-1.5"><span class="inline-block w-5"></span>${v}</span>`,
+          );
+        });
+        $("#addPatientModal").removeClass("hidden");
+        return;
+      }
+      const idx = selectedPatients.indexOf(val);
+      if (idx === -1) selectedPatients.push(val);
+      else selectedPatients.splice(idx, 1);
+      renderPatientTags();
+    });
+
+    /* ── TAG CLOSE ── */
+    $(document).on("mousedown", ".tag-close", function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      const type = $(this).data("type");
+      const val = $(this).data("value");
+      if (type === "doctor") {
+        selectedDoctor = null;
+        renderDoctorTag();
+      } else {
+        selectedPatients = selectedPatients.filter((v) => v !== val);
+        renderPatientTags();
+      }
+    });
+
+    /* ── OUTSIDE CLICK ── */
+    $(document).on("click", function () {
+      closeAllDropdowns();
+    });
+    $(document).on("click", ".dropdown-menu", function (e) {
+      e.stopPropagation();
+    });
+
+    /* ── DOCTOR MODAL SAVE ── */
+    $("#cancelDoctorModal").on("click", function () {
+      $("#addDoctorModal").addClass("hidden");
+    });
+
+    $("#saveDoctorBtn").on("click", function () {
+      const firstName = $.trim($("#newDoctorFirstName").val());
+      const lastName = $.trim($("#newDoctorLastName").val());
+      if (!firstName) {
+        alert("First name is required.");
+        return;
+      }
+      const fullName = lastName ? firstName + " " + lastName : firstName;
+      const exists = $("#doctorList li").filter(function () {
+        return $(this).data("value") === fullName;
+      }).length;
+      if (!exists) {
+        $('#doctorList li[data-value="custom"]').before(
+          $(
+            `<li class="font-normal text-base text-dark-gray cursor-pointer hover:bg-green-50 rounded-md" data-value="${fullName}"></li>`,
+          ),
+        );
+      }
+      selectedDoctor = fullName;
+      renderDoctorTag();
+      $("#addDoctorModal").addClass("hidden");
+    });
+
+    /* ── PATIENT MODAL SAVE ── */
+    $("#cancelPatientModal").on("click", function () {
+      $("#addPatientModal").addClass("hidden");
+    });
+
+    $("#savePatientBtn").on("click", function () {
+      const firstName = $.trim($("#newPatientFirstName").val());
+      const lastName = $.trim($("#newPatientLastName").val());
+      if (!firstName) {
+        alert("First name is required.");
+        return;
+      }
+      const fullName = lastName ? firstName + " " + lastName : firstName;
+      const exists = $("#patientList li").filter(function () {
+        return $(this).data("value") === fullName;
+      }).length;
+      if (!exists) {
+        $('#patientList li[data-value="custom"]').before(
+          $(
+            `<li class="font-normal text-base text-dark-gray cursor-pointer hover:bg-green-50 rounded-md" data-value="${fullName}"></li>`,
+          ),
+        );
+      }
+      if (!selectedPatients.includes(fullName)) selectedPatients.push(fullName);
+      renderPatientTags();
+      $("#addPatientModal").addClass("hidden");
+    });
+
+    /* ── INITIAL RENDER ── */
+    renderDoctorTag();
+    renderPatientTags();
+  });
 });

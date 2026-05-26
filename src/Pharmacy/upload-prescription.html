@@ -264,17 +264,17 @@
                 <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
                     <label for="doctor" class="font-semibold text-sm text-gray">Select Doctor</label>
                     <div
-                        class=" flex items-center justify-between rounded-2xl py-2.5 px-1 shadow-stepform-input bg-white-smoke">
+                        class=" flex items-center justify-between rounded-2xl py-2.5 px-1 cursor-pointer shadow-stepform-input bg-white-smoke" id="doctorBox">
                         <input type="text"
-                            class="w-full focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
+                            class="w-full cursor-pointer focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
                             placeholder="Select Doctor" readonly>
                         <span
                             class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
                     </div>
 
                     <div
-                        class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown">
-                        <ul class="space-y-2 px-4">
+                        class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown z-9999" id="doctorMenu">
+                        <ul class="space-y-2 " id="doctorList">
                             <li class="font-normal text-base text-dark-gray cursor-pointer">Gaurav</li>
                             <li class="font-normal text-base text-dark-gray cursor-pointer">Priyansh</li>
                             <li class="font-normal text-base text-dark-gray cursor-pointer">Rishi</li>
@@ -286,17 +286,17 @@
                 <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
                     <label for="doctor" class="font-semibold text-sm text-gray">Select Patient</label>
                     <div
-                        class=" flex items-center justify-between rounded-2xl py-2.5 px-1 shadow-stepform-input bg-white-smoke">
+                        class=" flex items-center justify-between rounded-2xl py-2.5 px-1 cursor-pointer shadow-stepform-input bg-white-smoke" id="patientBox">
                         <input type="text"
-                            class="w-full focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
+                            class="w-full cursor-pointer focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
                             placeholder="Select Patient" readonly>
                         <span
                             class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
                     </div>
 
                     <div
-                        class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown">
-                        <ul class="space-y-2 px-4">
+                        class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown z-9999" id="patientMenu">
+                        <ul class="space-y-2" id="patientList">
                             <li class="font-normal text-base text-dark-gray cursor-pointer">Gaurav</li>
                             <li class="font-normal text-base text-dark-gray cursor-pointer">Priyansh</li>
                             <li class="font-normal text-base text-dark-gray cursor-pointer">Rishi</li>
