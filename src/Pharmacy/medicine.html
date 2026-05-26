@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital - Home</title>
+    <title>Medicine</title>
     <link rel="stylesheet" href="/assets/output.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <!-- Material Symbols Outlined -->
@@ -13,1051 +14,1488 @@
 
 <body class="no-scrollbar">
     <main>
-        <div class="headerMapArea relative overflow-x-hidden w-full max-w-full">
-            <div class="relative ">
-                <header
-                    class="nav-menu px-4 sm:px-6 lg:px-10 xl:px-20 py-2 flex items-center justify-between relative z-10 w-full">
-                    <div class="max-w-[150px] max-h-10">
-                        <a href="home.html"><img src="/assets/img/logo.png" alt="logo"
-                                class="max-w-[150px] max-h-10" /></a>
-                    </div>
-                    <nav class="">
-                        <div class="">
-                            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 6h16M4 12h16M4 18h16" />
-                                </svg>
-                            </button>
-                            <ul id="menu" class="hidden md:flex space-x-6 items-center">
-                                <li class="relative group">
-                                    <a class="flex items-center focus:outline-none">
-                                        Home
-                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </a>
-                                    <!-- Submenu -->
-                                    <ul
-                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
-                                                Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="relative group">
-                                    <a class="flex items-center focus:outline-none">
-                                        Medicine
-                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </a>
-                                    <!-- Submenu -->
-                                    <ul
-                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
-                                                Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="relative group">
-                                    <a class="flex items-center focus:outline-none">
-                                        Maps
-                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </a>
-                                    <!-- Submenu -->
-                                    <ul
-                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
-                                                Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="relative group">
-                                    <a class="flex items-center focus:outline-none">
-                                        Services
-                                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </a>
-                                    <!-- Submenu -->
-                                    <ul
-                                        class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
-                                                Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="/src/records.html" class="">Records</a></li>
-                                <li><a href="./rewards.html" class="">Rewards</a></li>
-                                <li><a href="#" class="">Support</a></li>
-                                <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
-                                            class="text-[#238b6d]">Login/Sign Up</span></a></li>
-                            </ul>
-                        </div>
-                        <!-- Mobile Menu -->
-                        <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
-                            <li><a href="#" class="block">Home</a></li>
-                            <li><a href="#" class="block">About</a></li>
-                            <li>
-                                <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+
+        <div class="relative ">
+            <header
+                class="nav-menu px-4 sm:px-6 lg:px-10 xl:px-20 py-2 flex items-center justify-between relative z-10 w-full">
+                <div class="max-w-[150px] max-h-10">
+                    <a href="home.html"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+                </div>
+                <nav class="">
+                    <div class="">
+                        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                        <ul id="menu" class="hidden md:flex space-x-6 items-center">
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Home
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Medicine
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Maps
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
                                     Services
                                     <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M19 9l-7 7-7-7" />
                                     </svg>
-                                </button>
-                                <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
                                     <li>
-                                        <a href="#" class="block hover:text-gray-300">Web Design</a>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
                                     </li>
-                                    <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
                                     <li>
-                                        <a href="#" class="block hover:text-gray-300">Consulting</a>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="#" class="">Records</a></li>
-                            <li><a href="rewards.html" class="">Rewards</a></li>
+                            <li><a href="/src/records.html" class="">Records</a></li>
+                            <li><a href="./rewards.html" class="">Rewards</a></li>
                             <li><a href="#" class="">Support</a></li>
-                            <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                            <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
+                                        class="text-[#238b6d]">Login/Sign Up</span></a></li>
                         </ul>
-                    </nav>
-                </header>
-            </div>
-
-            <!-- Map Area -->
-            <div class="absolute inset-0 w-full max-w-full overflow-hidden z-0 bg-ice-gray pb-20">
-                <!-- Map -->
-                <div class="bg-white shadow-sm border-b sm:p-4 pb-0">
-                    <div
-                        class="flex items-center justify-between absolute top-28 z-[999] left-0 right-0 px-4 sm:px-6 lg:px-10 xl:px-20">
-                        <!-- Location Dropdown -->
-                        <div class="relative" id="locationSelect">
-                            <div id="locationDropdownBtn"
-                                class="flex items-center gap-2 bg-white h-10 w-45 justify-between p-2 rounded-lg primary-box-shadow cursor-pointer">
-                                <div class="flex items-center gap-2">
-                                    <i data-lucide="map-pin" class="w-5 h-5 text-gray"></i>
-                                    <span id="selectedLocation" class="font-medium text-gray text-nowrap">New York,
-                                        NY</span>
-                                </div>
-
-                                <i class="fas fa-caret-down"></i>
-                            </div>
-                            <div id="locationDropdownMenu"
-                                class="absolute left-0  w-45 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50">
-                                <div class="py-1">
-                                    <div data-value="New York, NY"
-                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">New York, NY
-                                    </div>
-                                    <div data-value="Los Angeles, CA"
-                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Los Angeles,
-                                        CA
-                                    </div>
-                                    <div data-value="Chicago, IL"
-                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Chicago, IL
-                                    </div>
-                                    <div data-value="Miami, FL"
-                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Miami, FL
-                                    </div>
-                                    <div data-value="Houston, TX"
-                                        class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Houston, TX
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="resultsCount" class="hidden text-sm text-gray-600">
-                            5 locations found
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <button
-                                class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
-                                <img src="/assets/img/notification-icon.svg" alt="notification">
+                    </div>
+                    <!-- Mobile Menu -->
+                    <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
+                        <li><a href="#" class="block">Home</a></li>
+                        <li><a href="#" class="block">About</a></li>
+                        <li>
+                            <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                                Services
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
                             </button>
-                            <button
-                                class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
-                                <img src="/assets/img/shopping-cart.svg" alt="Cart">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="map"
-                    class="w-full rounded-tl-none rounded-tr-none [border-bottom-right-radius:100px] [border-bottom-left-radius:100px] h-[550px] pb-20">
-                </div>
-
-                <!-- Loading overlay -->
-                <div id="loadingOverlay" class="absolute inset-0 bg-gray-100 flex items-center justify-center">
-                    <div class="text-center">
-                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
-                        <p class="text-gray-600">Loading map...</p>
-                    </div>
-                </div>
-
-                <!-- Category Filter Buttons -->
-                <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-[999]">
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 ">
-                        <button data-category="Pharmacy"
-                            class="category-btn primary-btn rounded-lg bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
-                            Pharmacy
-                        </button>
-                        <button data-category="Hospital"
-                            class="category-btn primary-btn rounded-lg bg-[#238b6d] border-0 font-bold text-white">
-                            Hospital
-                        </button>
-                        <button data-category="Doctor"
-                            class="category-btn primary-btn rounded-lg  bg-white border-0 font-bold hover:bg-[#238b6d] hover:text-white">
-                            Doctor
-                        </button>
-                        <button data-category="Lab"
-                            class="category-btn primary-btn rounded-lg  border-0 font-bold hover:bg-[#238b6d] hover:text-white bg-white">
-                            Lab
-                        </button>
-                    </div>
-                </div>
-                <div class="relative -mt-6 z-[1000] flex items-center justify-center px-4">
-                    <div class="w-[90%] sm:w-full max-w-xl rounded-lg primary-box-shadow z-[999]">
-                        <div class="relative bg-white rounded-lg">
-                            <!-- <i data-lucide="search"
-                            class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"></i> -->
-                            <input id="searchInput" type="text"
-                                placeholder="I want to search for Medicine, Brands, Doctor, Pharmacy, etc."
-                                class="w-full pl-4 pr-18 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none " />
-                            <i class="fa-solid fa-microphone absolute right-12 top-1/2 -translate-y-1/2 w-4 h-4"></i>
-                            <i class="fa-solid fa-camera absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="h-[500px] sm:h-[550px]"></div>
+                            <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                                <li>
+                                    <a href="#" class="block hover:text-gray-300">Web Design</a>
+                                </li>
+                                <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                                <li>
+                                    <a href="#" class="block hover:text-gray-300">Consulting</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="">Records</a></li>
+                        <li><a href="rewards.html" class="">Rewards</a></li>
+                        <li><a href="#" class="">Support</a></li>
+                        <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                    </ul>
+                </nav>
+            </header>
         </div>
-        <div class="homeSection mt-20 space-y-28">
-            <!-- Banner -->
-            <section class="h-[195px] w-full bg-[url('/assets/img/banner-bg.png')] bg-no-repeat bg-cover px-4">
-                <div class="flex flex-col md:flex-row gap-5 justify-center items-center md:justify-around h-full">
-                    <div class="border-b border-gradient-yellow text-center py-4">
-                        <h3 class="text-xl md:text-[32px] font-bold text-white md:leading-12">Find the Right Hospital,
-                            Right When You Need</h3>
-                        <p class="text-sm md:text-base font-semibold text-light-yellow leading-6">Book trusted hospital
-                            anytime, anywhere instantly</p>
-                    </div>
-                    <button
-                        class="w-48 h-9 bg-light-yellow rounded-sm text-xs md:text-sm font-bold text-white flex items-center justify-center gap-2 cursor-pointer consultBtn">
-                        Find Hospital now
-                        <span class="w-4 h-4 rounded-full bg-white flex items-center justify-center">
-                            <span class="material-symbols-outlined mini-icon text-light-yellow">
-                                keyboard_arrow_right
-                            </span>
-                        </span>
-                    </button>
-                </div>
-            </section>
 
-            <!-- Healthcare -->
-            <section class="flex flex-col items-center w-full gap-8">
-                <h3 class="text-2xl md:text-[44px] font-bold text-night-black text-center">Access Healthcare Your Way
-                </h3>
-                <div class="flex flex-col sm:flex-row justify-around w-full gap-3">
-                    <div class="flex flex-col items-center gap-3">
-                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">20K +</span>
-                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Trusted Consultations
-                        </p>
+        <div class="w-full max-w-full overflow-hidden bg-ice-gray pb-20">
+
+            <!-- Top Bar -->
+            <div>
+                <div class="flex items-center justify-between px-4 sm:px-6 lg:px-12 xl:px-24 pt-6">
+
+                    <!-- Location Dropdown -->
+                    <div class="relative" id="locationSelect">
+
+                        <div id="locationDropdownBtn"
+                            class="flex items-center gap-2 bg-white h-12 min-w-[170px] justify-between px-4 rounded-xl primary-box-shadow cursor-pointer border border-gray-200 shadow-sm">
+
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-gray-500"></i>
+
+                                <span id="selectedLocation"
+                                    class="font-medium text-[#0f172a] text-sm whitespace-nowrap">
+                                    New York, NY
+                                </span>
+                            </div>
+
+                            <i class="fas fa-caret-down text-gray-400 text-sm"></i>
+                        </div>
+
+                        <!-- Dropdown -->
+                        <div id="locationDropdownMenu"
+                            class="absolute left-0 mt-2 w-full bg-white border border-gray-200 rounded-xl shadow-lg hidden z-50 overflow-hidden">
+
+                            <div class="py-1">
+
+                                <div data-value="New York, NY"
+                                    class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                    New York, NY
+                                </div>
+
+                                <div data-value="Los Angeles, CA"
+                                    class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                    Los Angeles, CA
+                                </div>
+
+                                <div data-value="Chicago, IL"
+                                    class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                    Chicago, IL
+                                </div>
+
+                                <div data-value="Miami, FL"
+                                    class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                    Miami, FL
+                                </div>
+
+                                <div data-value="Houston, TX"
+                                    class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                    Houston, TX
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-center gap-3">
-                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">2K +</span>
-                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Daily Appointments
-                        </p>
-                    </div>
-                    <div class="flex flex-col items-center gap-3">
-                        <span class="text-base md:text-2xl font-bold text-sea-green-deep">30 +</span>
-                        <p class="text-sm md:text-base font-semibold text-night-black text-center">Expert Departments
-                        </p>
+
+                    <!-- Right Icons -->
+                    <div class="flex items-center gap-5">
+
+                        <button
+                            class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center cursor-pointer shadow-sm hover:shadow-md transition-all">
+                            <img src="/assets/img/notification-icon.svg" alt="notification" class="w-5 h-5">
+                        </button>
+
+                        <button
+                            class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center cursor-pointer shadow-sm hover:shadow-md transition-all">
+                            <img src="/assets/img/shopping-cart.svg" alt="Cart" class="w-5 h-5">
+                        </button>
+
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- Main Section -->
+            <div class="px-4 sm:px-6 lg:px-12 xl:px-24 pt-10 pb-12">
+
+                <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-start">
+
+                    <!-- Left Section -->
+                    <div class="pt-6">
+
+                        <!-- Badge -->
+                        <div
+                            class="inline-flex items-center gap-2 bg-lightest-pale-pink border border-mint-green rounded-full px-4 py-2 text-sm font-semibold text-dark-green mb-8">
+
+                            <span class="text-sm leading-none flex items-center">🌟</span>
+
+                            <span class="leading-none">
+                                Trusted by 50,000+ users in Mumbai
+                            </span>
+
+                        </div>
+
+                        <!-- Heading -->
+                        <h1
+                            class="text-4xl sm:text-6xl font-bold leading-[1.08] text-charcoal-black1 max-w-[700px] tracking-[-2px]">
+
+                            Find Medicines at the <br>
+
+                            <span class="text-bright-green1">
+                                Best Prices Nearby
+                            </span>
+
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="text-dusty-blue-gray text-base font-normal mt-8 max-w-[640px] leading-9 text-xl">
+
+                            Compare offers from trusted pharmacies, upload prescriptions,
+                            and get fast delivery.
+
+                        </p>
+
+                        <!-- Search -->
+                        <div
+                            class="bg-white rounded-2xl border border-light-gray1 mt-6 flex items-center px-6 py-4 shadow-sm max-w-[680px]">
+
+                            <!-- Search Icon -->
+                            <span class="material-symbols-outlined text-soft-slate-gray text-[22px]">
+                                search
+                            </span>
+
+                            <!-- Input -->
+                            <input type="text" placeholder="Search medicines, brands..."
+                                class="w-full px-4 outline-none text-base bg-transparent placeholder:text-soft-slate-gray placeholder:text-base placeholder:font-semibold" />
+
+                            <!-- Mic Icon -->
+                            <span class="material-symbols-outlined text-soft-slate-gray text-[22px] cursor-pointer">
+                                mic
+                            </span>
+
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-3 mt-5">
+
+                            <button
+                                class="px-4 py-2 rounded-full bg-white border border-gray-300 text-sm text-gray-700 hover:border-[#22c55e] transition-all">
+                                Dolo 650
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-full bg-white border border-gray-300 text-sm text-gray-700 hover:border-[#22c55e] transition-all">
+                                Vitamin D3
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-full bg-white border border-gray-300 text-sm text-gray-700 hover:border-[#22c55e] transition-all">
+                                Metformin
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-full bg-white border border-gray-300 text-sm text-gray-700 hover:border-[#22c55e] transition-all">
+                                Paracetamol
+                            </button>
+
+                        </div>
+
+                        <!-- Upload Button -->
+                        <button
+                            class="mt-8 bg-golden-amber text-white px-7 py-4 rounded-2xl flex items-center gap-3 font-bold text-sm shadow-md">
+
+                            <span class="material-symbols-outlined text-[22px]">
+                                upload
+                            </span>
+
+                            Upload Prescription or Medicine Images
+
+                        </button>
+
+                        <!-- Bottom Cards -->
+                        <div class="flex flex-wrap lg:flex-nowrap items-stretch gap-4 mt-10">
+
+                            <!-- Card 1 -->
+                            <div
+                                class="relative flex-1 min-w-[240px] bg-white border border-[#E5E7EB] rounded-2xl px-7 py-3 flex items-center gap-3 shadow-sm overflow-hidden">
+
+                                <!-- Left Border -->
+                                <div class="absolute left-0 top-0 h-full w-1.5 bg-bright-fresh-green rounded-l-2xl">
+                                </div>
+
+                                <!-- Icon -->
+                                <span>
+                                    🏪
+                                </span>
+
+                                <!-- Text -->
+                                <span class="text-deep-steel-blue font-medium text-sm leading-5">
+                                    12 Pharmacies Bidding Nearby
+                                </span>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div
+                                class="relative flex-1 min-w-[220px] bg-white border border-[#E5E7EB] rounded-2xl px-7 py-3 flex items-center gap-3 shadow-sm overflow-hidden">
+
+                                <!-- Left Border -->
+                                <div class="absolute left-0 top-0 h-full w-1.5 bg-bright-fresh-green rounded-l-2xl">
+                                </div>
+
+                                <!-- Icon -->
+                                <span>
+                                    ⚡
+                                </span>
+
+                                <!-- Text -->
+                                <span class="text-deep-steel-blue font-medium text-sm leading-5 whitespace-nowrap">
+                                    Delivery in 20 mins
+                                </span>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div
+                                class="relative flex-1 min-w-[200px] bg-white border border-[#E5E7EB] rounded-2xl px-7 py-3 flex items-center gap-3 shadow-sm overflow-hidden">
+
+                                <!-- Left Border -->
+                                <div class="absolute left-0 top-0 h-full w-1.5 bg-bright-fresh-green rounded-l-2xl">
+                                </div>
+
+                                <!-- Icon -->
+                                <span>
+                                    💰
+                                </span>
+
+                                <!-- Text -->
+                                <span class="text-deep-steel-blue font-medium text-sm leading-5 whitespace-nowrap">
+                                    Save up to 30%
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div
+                        class="bg-white rounded-3xl shadow-md overflow-hidden w-full max-w-[600px] min-h-[500px] mt-4 lg:mt-0 justify-self-end">
+
+                        <!-- Top -->
+                        <div class="bg-sea-green-deep text-white px-8 py-7 text-center">
+
+                            <h2 class="text-xl font-bold leading-tight">
+                                The Smarter Way to Buy Medicines
+                            </h2>
+                            <p class="text-base font-normal mt-2 text-white leading-7 max-w-[500px] mx-auto">
+                                Let nearby pharmacies compete for your order.
+                                Get the best price, guaranteed.
+                            </p>
+
+                        </div>
+
+                        <!-- Steps -->
+                        <div class="p-8 space-y-9">
+
+                            <!-- Step -->
+                            <div class="flex gap-3">
+
+                                <div
+                                    class="w-11 h-11 rounded-full bg-bright-green1 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    1
+                                </div>
+
+                                <div>
+                                    <h3 class="font-bold text-lg text-charcoal-black1 leading-7">
+                                        Search or upload your prescription
+                                    </h3>
+
+                                    <p class="text-dusty-blue-gray mt-2 leading-7 text-base font-normal">
+                                        Type the medicine name or upload your prescription
+                                        photo directly.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <!-- Step -->
+                            <div class="flex gap-3">
+
+                                <div
+                                    class="w-11 h-11 rounded-full bg-bright-green1 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    2
+                                </div>
+
+                                <div>
+                                    <h3 class="font-bold text-lg text-charcoal-black1 leading-7">
+                                        Nearby pharmacies receive your request
+                                    </h3>
+
+                                    <p class="text-dusty-blue-gray mt-2 leading-7 text-base font-normal">
+                                        Verified pharmacies within 5 km instantly get notified of your request.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <!-- Step -->
+                            <div class="flex gap-3">
+
+                                <div
+                                    class="w-11 h-11 rounded-full bg-bright-green1 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    3
+                                </div>
+
+                                <div>
+                                    <h3 class="font-bold text-lg text-charcoal-black1 leading-7">
+                                        Pharmacies send price offers
+                                    </h3>
+
+                                    <p class="text-dusty-blue-gray mt-2 leading-7 text-base font-normal">
+                                        Multiple pharmacies compete and send you their best price in minutes.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <!-- Step -->
+                            <div class="flex gap-3">
+
+                                <div
+                                    class="w-11 h-11 rounded-full bg-bright-green1 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    4
+                                </div>
+
+                                <div>
+                                    <h3 class="font-bold text-lg text-charcoal-black1 leading-7">
+                                        Compare & choose the best offer
+                                    </h3>
+
+                                    <p class="text-dusty-blue-gray mt-2 leading-7 text-base font-normal">
+                                        See price, delivery time, and ratings — pick the offer that works for you.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
             <!-- Hospital Service Section -->
-            <section class="px-4 sm:px-14">
+            <section class="px-4 sm:px-14 mt-10">
                 <div class="mb-6">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Browse Hospital Services</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Selling Categories</h2>
                     <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
                         <div class="w-20 h-1 bg-sea-green-deep"></div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 sm:gap-5">
-                    <!-- CARD -->
-                    <div class="text-center group cursor-pointer">
-                        <div
-                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/hospital-services/orthopaedic-service.svg"
-                                class="h-full rounded-[10px] object-cover shrink-0" alt="orthopaedix">
+                <!-- Horizontal Scroll Wrapper -->
+                <div class="2xl:overflow-visible overflow-x-auto scrollbar-hide">
+
+                    <!-- Grid Container -->
+                    <div class="grid grid-flow-col auto-cols-[220px] 2xl:grid-cols-6 gap-5 min-w-max 2xl:min-w-0">
+
+                        <!-- CARD -->
+                        <div class="text-center group cursor-pointer">
+
+                            <!-- Image Box -->
+                            <div
+                                class="bg-cream-brown rounded-[10px] overflow-hidden p-4 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+
+                                <img src="/assets/img/medicines/personal-care.svg"
+                                    class="h-full rounded-[10px] object-contain shrink-0" alt="Personal Care">
+
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="mt-2 text-lg font-semibold text-black">
+                                Personal Care
+                            </h3>
+
                         </div>
-                        <h3 class="mt-2 text-lg font-semibold text-black">
-                            Orthopaedic
-                        </h3>
+
+                        <!-- CARD -->
+                        <div class="text-center group cursor-pointer">
+
+                            <!-- Image Box -->
+                            <div
+                                class="bg-cream-brown rounded-[10px] overflow-hidden p-4 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+
+                                <img src="/assets/img/medicines/health-care.svg"
+                                    class="h-full rounded-[10px] object-contain shrink-0" alt="Heart Health">
+
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="mt-2 text-lg font-semibold text-black">
+                                Heart Health
+                            </h3>
+
+                        </div>
+
+                        <!-- CARD -->
+                        <div class="text-center group cursor-pointer">
+
+                            <!-- Image Box -->
+                            <div
+                                class="bg-cream-brown rounded-[10px] overflow-hidden p-4 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+
+                                <img src="/assets/img/medicines/skin-care.svg"
+                                    class="h-full rounded-[10px] object-contain shrink-0" alt="Skin Care">
+
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="mt-2 text-lg font-semibold text-black">
+                                Skin Care
+                            </h3>
+
+                        </div>
+
+                        <!-- CARD -->
+                        <div class="text-center group cursor-pointer">
+
+                            <!-- Image Box -->
+                            <div
+                                class="bg-cream-brown rounded-[10px] overflow-hidden p-4 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+
+                                <img src="/assets/img/medicines/vital-care.svg"
+                                    class="h-full rounded-[10px] object-contain shrink-0" alt="Vital Care">
+
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="mt-2 text-lg font-semibold text-black">
+                                Vital Care
+                            </h3>
+
+                        </div>
+
+                        <!-- CARD -->
+                        <div class="text-center group cursor-pointer">
+
+                            <!-- Image Box -->
+                            <div
+                                class="bg-cream-brown rounded-[10px] overflow-hidden p-4 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+
+                                <img src="/assets/img/medicines/health-care.svg"
+                                    class="h-full rounded-[10px] object-contain shrink-0" alt="Heart Health">
+
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="mt-2 text-lg font-semibold text-black">
+                                Heart Health
+                            </h3>
+
+                        </div>
+
+                        <!-- CARD -->
+                        <div class="text-center group cursor-pointer">
+
+                            <!-- Image Box -->
+                            <div
+                                class="bg-cream-brown rounded-[10px] overflow-hidden p-4 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+
+                                <img src="/assets/img/medicines/skin-care.svg"
+                                    class="h-full rounded-[10px] object-contain shrink-0" alt="Skin Care">
+
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="mt-2 text-lg font-semibold text-black">
+                                Skin Care
+                            </h3>
+
+                        </div>
+
                     </div>
 
-                    <!-- CARD -->
-                    <div class="text-center group cursor-pointer">
-                        <div
-                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/hospital-services/cardiology-service.svg"
-                                class="h-full object-cover shrink-0 rounded-[10px]" alt="cardiology">
-                        </div>
-                        <h3 class="mt-2 text-lg font-semibold text-black">
-                            Cardiology
-                        </h3>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="text-center group cursor-pointer">
-                        <div
-                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/hospital-services/maternity-service.svg"
-                                class="h-full shrink-0 object-cover rounded-[10px]" alt="maternity">
-                        </div>
-                        <h3 class="mt-2 text-lg font-semibold text-black">
-                            Maternity
-                        </h3>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="text-center group cursor-pointer">
-                        <div
-                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/hospital-services/icu-service.svg"
-                                class="h-full shrink-0 object-cover rounded-[10px]" alt="icu">
-                        </div>
-                        <h3 class="mt-2 text-lg font-semibold text-black">
-                            ICU
-                        </h3>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="text-center group cursor-pointer">
-                        <div
-                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/hospital-services/neurology-service.svg"
-                                class="h-full shrink-0 object-cover rounded-[10px]" alt="Neurology">
-                        </div>
-                        <h3 class="mt-2 text-lg font-semibold text-black">
-                            Neurology
-                        </h3>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="text-center group cursor-pointer">
-                        <div
-                            class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
-                            <img src="/assets/img/hospital-services/homecare-service.svg"
-                                class="h-full shrink-0 object-cover rounded-[10px]" alt="Homecare">
-                        </div>
-                        <h3 class="mt-2 text-lg font-semibold text-black">
-                            Home Care
-                        </h3>
-                    </div>
                 </div>
             </section>
 
-            <!-- Hospital Section -->
-            <section class="px-4 sm:px-14">
-                <div class="mb-6">
-                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Hospital rated nearby</h2>
-                    <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
-                        <div class="w-20 h-1 bg-sea-green-deep"></div>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-                    <!-- Hospital CARD -->
-                    <div
-                        class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
-                        <div class="p-3">
-                            <img src="/assets/img/hospitals/hospital-1.svg" class="w-full h-48 object-cover rounded-lg"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 pb-4">
-                            <h3 class="text-xl font-bold text-dark-charcoal">
-                                Ambani Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
+        </div>
 
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-3">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
-
-                            <!-- Location -->
-                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
-                                <span class="material-symbols-outlined">
-                                    location_on
-                                </span>
-                                <p>Zenith Diagnostic, Malad East</p>
-                            </div>
-
-                            <!-- Buttons -->
-                            <div class="grid grid-cols-2 gap-3 mt-5">
-
-                                <button
-                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                    <span class="material-symbols-outlined mini-icon">
-                                        open_with
-                                    </span>
-                                    Directions
-                                </button>
-
-                                <button
-                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                    <span class="material-symbols-outlined mini-icon">
-                                        call
-                                    </span>
-                                    Call
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
-                        <div class="p-3">
-                            <img src="/assets/img/hospitals/hospital-2.svg" class="w-full h-48 object-cover rounded-lg"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 pb-4">
-                            <h3 class="text-xl font-bold text-dark-charcoal">
-                                Ambani Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
-
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-3">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
-
-                            <!-- Location -->
-                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
-                                <span class="material-symbols-outlined">
-                                    location_on
-                                </span>
-                                <p>Zenith Diagnostic, Malad East</p>
-                            </div>
-
-                            <!-- Buttons -->
-                            <div class="grid grid-cols-2 gap-3 mt-5">
-
-                                <button
-                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                    <span class="material-symbols-outlined mini-icon">
-                                        open_with
-                                    </span>
-                                    Directions
-                                </button>
-
-                                <button
-                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                    <span class="material-symbols-outlined mini-icon">
-                                        call
-                                    </span>
-                                    Call
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
-                        <div class="p-3">
-                            <img src="/assets/img/hospitals/hospital-3.svg" class="w-full h-48 object-cover rounded-lg"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 pb-4">
-                            <h3 class="text-xl font-bold text-dark-charcoal">
-                                Ambani Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
-
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-3">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
-
-                            <!-- Location -->
-                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
-                                <span class="material-symbols-outlined">
-                                    location_on
-                                </span>
-                                <p>Zenith Diagnostic, Malad East</p>
-                            </div>
-
-                            <!-- Buttons -->
-                            <div class="grid grid-cols-2 gap-3 mt-5">
-
-                                <button
-                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                    <span class="material-symbols-outlined mini-icon">
-                                        open_with
-                                    </span>
-                                    Directions
-                                </button>
-
-                                <button
-                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                    <span class="material-symbols-outlined mini-icon">
-                                        call
-                                    </span>
-                                    Call
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-[10px] w-full max-w-[305px] h-[401px] shadow-request-box overflow-hidden">
-                        <div class="p-3">
-                            <img src="/assets/img/hospitals/hospital-4.svg" class="w-full h-48 object-cover rounded-lg"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 pb-4">
-                            <h3 class="text-xl font-bold text-dark-charcoal">
-                                Ambani Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray mt-1">ICU, Surgery 24x7</p>
-
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-3">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
-
-                            <!-- Location -->
-                            <div class="flex items-center gap-2 mt-3 text-black text-sm">
-                                <span class="material-symbols-outlined">
-                                    location_on
-                                </span>
-                                <p>Zenith Diagnostic, Malad East</p>
-                            </div>
-
-                            <!-- Buttons -->
-                            <div class="grid grid-cols-2 gap-3 mt-5">
-
-                                <button
-                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                    <span class="material-symbols-outlined mini-icon">
-                                        open_with
-                                    </span>
-                                    Directions
-                                </button>
-
-                                <button
-                                    class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
-                                    <span class="material-symbols-outlined mini-icon">
-                                        call
-                                    </span>
-                                    Call
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Hospital Banner -->
-            <section
-                class="w-full h-[316px] bg-gradient-primary flex items-center justify-center sm:justify-between px-3 lg:px-20">
-                <div class="space-y-6">
-                    <div class="space-y-2 text-center">
-                        <h3 class="text-lg md:text-3xl font-bol text-white">Need Expert Medical Advice ?</h3>
-                        <p class="text-xs md:text-sm font-semibold text-light-yellow">Ask questions and get answers from
-                            certified doctors.</p>
-                    </div>
-                    <div class="flex items-center gap-2 md:gap-5">
-                        <img src="/assets/img/wing-l.svg" alt="wing">
-                        <span class="text-sm md:text-xl font-semibold text-white">More Than 1 Lakh users trusted our
-                            Doctors</span>
-                        <img src="/assets/img/wing-r.svg" alt="wing">
-                    </div>
-                </div>
-                <img src="/assets/img/doctors/doctor-3.svg" class="hidden sm:block" alt="doctor">
-            </section>
+        <div class=" mt-10 space-y-20">
 
             <!-- Hospital Near Section -->
-            <section class="px-4 sm:px-6 lg:px-10 xl:px-14">
+            <section class="px-4 sm:px-6 lg:px-10 xl:px-14 py-10">
+
+                <!-- Heading -->
                 <div class="mb-6">
                     <div class="flex items-center justify-between gap-4 flex-wrap">
-                        <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Hospital Near You</h2>
-                        <button
-                            class="text-sm sm:text-base md:text-xl text-sea-green-deep underline font-semibold cursor-pointer">View
-                            All</button>
+                        <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">
+                            Popular Medicines
+                        </h2>
+
+                        <button class="text-sm sm:text-base text-sea-green-deep underline font-semibold cursor-pointer">
+                            View All
+                        </button>
                     </div>
+
                     <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
-                        <div class="w-16 sm:w-20 h-1 bg-sea-green-deep"></div>
+                        <div class="w-20 h-1 bg-sea-green-deep rounded-full"></div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-                    <!-- Hospital CARD -->
-                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
-                        <div>
-                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 py-4">
-                            <h3 class="text-base font-semibold text-gray">
-                                Zenith Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
 
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-1">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-3 mb-8">
 
-                            <!-- Location -->
-                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
-                                <div class="font-semibold">
-                                    $999 <span class="line-through font-normal">$2500</span>
+                    <button
+                        class="filter-tab active-filter flex items-center gap-2 px-4 py-2 rounded-full border border-snow-gray1 bg-bright-green1 text-white text-xs font-bold transition-all">
+
+                        <span>
+                            🏪
+                        </span>
+
+                        Nearby
+                    </button>
+
+                    <button
+                        class="filter-tab flex items-center gap-2 px-4 py-2 rounded-full border border-snow-gray1 bg-white text-snow-gray5 text-xs font-bold transition-all">
+
+                        <span>
+                            💰
+                        </span>
+
+                        Lowest Price
+                    </button>
+
+                    <button
+                        class="filter-tab flex items-center gap-2 px-4 py-2 rounded-full border border-snow-gray1 bg-white text-snow-gray5 text-xs font-bold transition-all">
+
+                        <span>
+                            ⚡
+                        </span>
+
+                        Fastest Delivery
+                    </button>
+
+                    <button
+                        class="filter-tab flex items-center gap-2 px-4 py-2 rounded-full border border-snow-gray1 bg-white text-snow-gray5 text-xs font-bold transition-all">
+
+                        <span>
+                            📋
+                        </span>
+
+                        Rx Required
+                    </button>
+
+                    <button
+                        class="filter-tab flex items-center gap-2 px-4 py-2 rounded-full border border-snow-gray1 bg-white text-snow-gray5 text-xs font-bold transition-all">
+
+                        <span>
+                            🌿
+                        </span>
+
+                        Generic
+                    </button>
+
+                    <button
+                        class="filter-tab flex items-center gap-2 px-4 py-2 rounded-full border border-snow-gray1 bg-white text-snow-gray5 text-xs font-bold transition-all">
+
+                        <span>
+                            🏷️
+                        </span>
+
+                        Brand
+                    </button>
+
+                    <button
+                        class="filter-tab flex items-center gap-2 px-4 py-2 rounded-full border border-snow-gray1 bg-white text-snow-gray5 text-xs font-bold transition-all">
+
+                        <span>
+                            ✅
+                        </span>
+
+                        In Stock
+                    </button>
+
+                    <button
+                        class="filter-tab flex items-center gap-2 px-4 py-2 rounded-full border border-snow-gray1 bg-white text-snow-gray5 text-xs font-bold transition-all">
+
+                        <span>
+                            🚀
+                        </span>
+
+                        Under 30 min
+                    </button>
+
+                </div>
+
+                <!-- Cards -->
+
+                <div class="mt-4 max-h-[950px] overflow-y-auto pr-2">
+
+                    <!-- RESPONSIVE WRAPPER -->
+                    <div class="overflow-x-auto xl:overflow-visible scrollbar-hide">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-4">
+
+                            <div
+                                class="bg-white rounded-2xl   shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/shelcal.png" class="object-contain max-h-[170px]"
+                                        alt="medicine">
+
                                 </div>
-                                <span
-                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
-                            </div>
 
-                            <!-- Buttons -->
-                            <div class="mt-7">
-                                <button
-                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
-                                    Book Appointment
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Shelcal 500mg Strip of 15 Tablets
+                                </h3>
 
-                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
-                        <div>
-                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 py-4">
-                            <h3 class="text-base font-semibold text-gray">
-                                Zenith Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
 
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
+                                    <div class="flex items-center ">
 
-                            <!-- Location -->
-                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
-                                <div class="font-semibold">
-                                    $999 <span class="line-through font-normal">$2500</span>
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
                                 </div>
-                                <span
-                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
-                            </div>
 
-                            <!-- Buttons -->
-                            <div class="mt-7">
-                                <button
-                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
-                                    Book Appointment
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
 
-                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
-                        <div>
-                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 py-4">
-                            <h3 class="text-base font-semibold text-gray">
-                                Zenith Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
 
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
 
-                            <!-- Location -->
-                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
-                                <div class="font-semibold">
-                                    $999 <span class="line-through font-normal">$2500</span>
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <!-- Wishlist -->
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
                                 </div>
-                                <span
-                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
-                            </div>
 
-                            <!-- Buttons -->
-                            <div class="mt-7">
+                                <!-- Button -->
                                 <button
-                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
-                                    Book Appointment
+                                    class="w-full mt-4 bg-sea-green-deep  text-white py-3 rounded-xl text-base font-normal">
+
+                                    Add to Cart
+
                                 </button>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
-                        <div>
-                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 py-4">
-                            <h3 class="text-base font-semibold text-gray">
-                                Zenith Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
-
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
                             </div>
 
-                            <!-- Location -->
-                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
-                                <div class="font-semibold">
-                                    $999 <span class="line-through font-normal">$2500</span>
+                            <div
+                                class="bg-white rounded-2xl   shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
                                 </div>
-                                <span
-                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
-                            </div>
 
-                            <!-- Buttons -->
-                            <div class="mt-7">
-                                <button
-                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
-                                    Book Appointment
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
 
-                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
-                        <div>
-                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 py-4">
-                            <h3 class="text-base font-semibold text-gray">
-                                Zenith Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
 
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
+                                    <div class="flex items-center ">
 
-                            <!-- Location -->
-                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
-                                <div class="font-semibold">
-                                    $999 <span class="line-through font-normal">$2500</span>
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
                                 </div>
-                                <span
-                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
-                            </div>
 
-                            <!-- Buttons -->
-                            <div class="mt-7">
-                                <button
-                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
-                                    Book Appointment
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
 
-                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
-                        <div>
-                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 py-4">
-                            <h3 class="text-base font-semibold text-gray">
-                                Zenith Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
 
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
 
-                            <!-- Location -->
-                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
-                                <div class="font-semibold">
-                                    $999 <span class="line-through font-normal">$2500</span>
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
                                 </div>
-                                <span
-                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
-                            </div>
 
-                            <!-- Buttons -->
-                            <div class="mt-7">
+                                <!-- Button -->
                                 <button
-                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
-                                    Book Appointment
+                                    class="w-full mt-4 bg-sea-green-deep  text-white py-3 rounded-xl text-base font-normal">
+
+                                    Add to Cart
+
                                 </button>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
-                        <div>
-                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 py-4">
-                            <h3 class="text-base font-semibold text-gray">
-                                Zenith Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
-
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
                             </div>
 
-                            <!-- Location -->
-                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
-                                <div class="font-semibold">
-                                    $999 <span class="line-through font-normal">$2500</span>
+                            <div
+                                class="bg-white rounded-2xl   shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/shelcal.png" class="object-contain max-h-[170px]"
+                                        alt="medicine">
+
                                 </div>
-                                <span
-                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
-                            </div>
 
-                            <!-- Buttons -->
-                            <div class="mt-7">
-                                <button
-                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
-                                    Book Appointment
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Shelcal 500mg Strip of 15 Tablets
+                                </h3>
 
-                    <div class="bg-white rounded-[10px] w-full max-w-[300px] shadow-hospital-card overflow-hidden">
-                        <div>
-                            <img src="/assets/img/hospitals/hospital-5.svg" class="w-full h-28 object-cover"
-                                alt="Hospital">
-                        </div>
-                        <div class="px-4 py-4">
-                            <h3 class="text-base font-semibold text-gray">
-                                Zenith Hospital
-                            </h3>
-                            <p class="text-xs font-bold text-smoky-blue-gray">ICU, Surgery 24x7</p>
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
 
-                            <!-- Rating -->
-                            <div class="flex items-center gap-0.5 mt-1 text-3xl">
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-golden-yellow mini-icon filled">kid_star</span>
-                                <span class="material-symbols-sharp text-gray-light2 mini-icon">kid_star</span>
-                                <span class="text-xs text-gray-light2 ml-1">
-                                    (118)
-                                </span>
-                            </div>
+                                    <div class="flex items-center ">
 
-                            <!-- Location -->
-                            <div class="flex items-center justify-between mt-4 text-gray text-2xl">
-                                <div class="font-semibold">
-                                    $999 <span class="line-through font-normal">$2500</span>
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
                                 </div>
-                                <span
-                                    class="p-1 text-sea-green-dark1 text-[10px] font-bold rounded-md bg-light-green">Today</span>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+                                <button
+                                    class="w-full mt-4 bg-sea-green-deep  text-white py-3 rounded-xl text-base font-normal">
+
+                                    Add to Cart
+
+                                </button>
+
                             </div>
 
-                            <!-- Buttons -->
-                            <div class="mt-7">
+                            <div
+                                class="bg-white rounded-2xl   shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
                                 <button
-                                    class="w-full bg-sea-green-deep rounded-[10px] py-2.5 text-white text-base font-normal">
-                                    Book Appointment
+                                    class="w-full mt-4 bg-sea-green-deep  text-white py-3 rounded-xl text-base font-normal">
+
+                                    Add to Cart
+
                                 </button>
+
                             </div>
+
+                            <div
+                                class="bg-white rounded-2xl   shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/shelcal.png" class="object-contain max-h-[170px]"
+                                        alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Shelcal 500mg Strip of 15 Tablets
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+                                <button
+                                    class="w-full mt-4 bg-sea-green-deep  text-white py-3 rounded-xl text-base font-normal">
+
+                                    Add to Cart
+
+                                </button>
+
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl   shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+                                <button
+                                    class="w-full mt-4 bg-sea-green-deep  text-white py-3 rounded-xl text-base font-normal">
+
+                                    Add to Cart
+
+                                </button>
+
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl   shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/shelcal.png" class="object-contain max-h-[170px]"
+                                        alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Shelcal 500mg Strip of 15 Tablets
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+                                <button
+                                    class="w-full mt-4 bg-sea-green-deep  text-white py-3 rounded-xl text-base font-normal">
+
+                                    Add to Cart
+
+                                </button>
+
+                            </div>
+
+                            <div
+                                class="bg-white rounded-2xl   shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+                                <button
+                                    class="w-full mt-4 bg-sea-green-deep  text-white py-3 rounded-xl text-base font-normal">
+
+                                    Add to Cart
+
+                                </button>
+
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
+
             </section>
+            
 
-            <!-- Consult section -->
-            <section class="w-full px-4">
-                <div class="max-w-7xl mx-auto">
-                    <!-- Heading -->
-                    <h2 class="text-3xl md:text-5xl font-bold text-center text-night-black mb-12">
-                        How would you like to Consult?
-                    </h2>
-                    <!-- Cards -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <!-- Card 1 -->
-                        <div class="flex flex-col items-center">
-                            <h3 class="text-2xl font-semibold text-sea-green-deep mb-4">
-                                In- Clinic Visit
-                            </h3>
 
-                            <p class="text-night-black font-semibold leading-relaxed max-w-sm mb-6">
-                                Vist the Doctor for a face to face consultation
-                                and physical examination
-                            </p>
 
-                            <button class="bg-sea-green-deep text-white px-12 py-3 rounded-[10px] w-full max-w-[220px]">
-                                Get Started
-                            </button>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="flex flex-col items-center">
-                            <h3 class="text-2xl font-semibold text-sea-green-deep mb-4">
-                                Video Consultation
-                            </h3>
-
-                            <p class="text-night-black font-semibold leading-relaxed max-w-sm mb-6">
-                                Connect with Top Doctors via HD Video Call
-                                from the comfort of your home.
-                            </p>
-
-                            <button class="bg-sea-green-deep text-white px-12 py-3 rounded-[10px] w-full max-w-[220px]">
-                                Get Started
-                            </button>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="flex flex-col items-center">
-                            <h3 class="text-2xl font-semibold text-sea-green-deep mb-4">
-                                Chat Consultation
-                            </h3>
-
-                            <p class="text-night-black font-semibold leading-relaxed max-w-sm mb-6">
-                                Message a doctor anytime for quick advice,
-                                prescriptions and follow-ups.
-                            </p>
-
-                            <button class="bg-sea-green-deep text-white px-12 py-3 rounded-[10px] w-full max-w-[220px]">
-                                Get Started
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!--Payment Partner Offers and Our Blog-->
             <section class="bg-ice-gray px-14 py-14 space-y-28">
@@ -2197,7 +2635,7 @@
                         </div>
                     </div>
 
-                    <a href="appointments.html"
+                    <a href="#"
                         class="w-[142px] h-12 flex items-center justify-center rounded-lg bg-sea-green2 shadow-button font-bold text-[15px] text-white">Go
                         to Orders</a>
                 </div>
@@ -2854,9 +3292,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="/script/map.js"></script>
-    <script src="/script/doctor/form.js"></script>
-    <script src="/script/doctor/validation.js"></script>
-    <script src="/script/doctor/searching.js"></script>
+    <script src="/script/pharmacy/medicine.js"></script>
+
+
+
+
+
+
 </body>
 
 </html>
