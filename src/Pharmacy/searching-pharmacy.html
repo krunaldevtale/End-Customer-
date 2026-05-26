@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Pharmacy</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+    <div class="container  min-h-screen">
+        <div class="relative">
+            <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+                <div class="max-w-[150px] max-h-10">
+                    <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+                </div>
+                <nav class="">
+                    <div class="">
+                        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                        <ul id="menu" class="hidden md:flex space-x-6 items-center">
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Home
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Medicine
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Maps
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Services
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="/src/records.html" class="">Records</a></li>
+                            <li><a href="./rewards.html" class="">Rewards</a></li>
+                            <li><a href="#" class="">Support</a></li>
+                            <li><a href="#" class="open-auth-popup flex items-center gap-2"><i
+                                        class="fa-regular fa-user"></i><span class="text-[#238b6d]">Login/Sign
+                                        Up</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
+                        <li><a href="#" class="block">Home</a></li>
+                        <li><a href="#" class="block">About</a></li>
+                        <li>
+                            <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                                Services
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                                <li>
+                                    <a href="#" class="block hover:text-gray-300">Web Design</a>
+                                </li>
+                                <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                                <li>
+                                    <a href="#" class="block hover:text-gray-300">Consulting</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="">Records</a></li>
+                        <li><a href="rewards.html" class="">Rewards</a></li>
+                        <li><a href="#" class="">Support</a></li>
+                        <li><a href="#" class="open-auth-popup text-[#238b6d]">Login/Sign Up</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="min-h-screen">
+            <div
+                class="mt-[50px] mx-[50px] mb-[22px] bg-white rounded-xl py-4 px-3 border border-gray-light3 shadow-request-box flex items-center justify-between">
+                <div class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-1">
+                        <p class="font-semibold text-base text-gray">Request has been sent successfully :)</p>
+                        <p class="font-medium text-xs text-gray">You will be notified of the offers from doctors</p>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <p class="font-medium text-xs text-gray">Date & Time: <span class="text-gray-dark-1">12/05/2025
+                                14:40</span></p>
+                        <p class="font-medium text-xs text-gray">Order No: <span
+                                class="text-gray-dark-1">#3454645</span></p>
+                    </div>
+                </div>
+
+                <a href="appointments.html"
+                    class="w-[142px] h-12 flex items-center justify-center rounded-lg bg-sea-green2 shadow-button font-bold text-[15px] text-white">Go
+                    to Orders</a>
+            </div>
+            <div class="w-full h-[600px] relative">
+                <div id="pharmacy-map" class="w-full h-full"></div>
+                <div id="searchingOverlay"
+                    class="absolute inset-0 z-[1000] flex items-center justify-center pointer-events-none bg-transparent-black">
+
+                    <!-- Pulse rings -->
+                    <div
+                        class="absolute w-[779px] h-[779px] rounded-full bg-seafoam-green animate-[pulse-out_2.4s_ease-out_infinite]">
+                    </div>
+
+
+                    <!-- Center circle -->
+                    <div
+                        class="absolute w-[250px] h-[250px] bg-sea-green-dark1 rounded-full flex flex-col items-center justify-center gap-1.5 animate-[breathe_2.4s_ease-in-out_infinite]">
+                        <p class="text-white text-sm font-semibold text-center leading-snug">Searching for  Pharmacy .....
+                        </p>
+
+                        <!-- Bouncing dots -->
+                        <div class="flex gap-1">
+                            <span
+                                class="w-1.5 h-1.5 rounded-full bg-white/70 animate-[dot-bounce_1.2s_ease-in-out_0s_infinite]"></span>
+                            <span
+                                class="w-1.5 h-1.5 rounded-full bg-white/70 animate-[dot-bounce_1.2s_ease-in-out_0.2s_infinite]"></span>
+                            <span
+                                class="w-1.5 h-1.5 rounded-full bg-white/70 animate-[dot-bounce_1.2s_ease-in-out_0.4s_infinite]"></span>
+                        </div>
+
+                        <p class="text-white/75 text-[10px] text-center  leading-tight">List will
+                            appear
+                            within 1 min. Don't close the page.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="pt-[22px] px-[50px] pb-[50px]">
+                <div class="flex flex-col gap-2.5">
+                    <p class="font-bold text-[22px]">Accept a suitable offer</p>
+                    <div class="flex items-center ga-2.5">
+                        <p class="font-medium text-sm text-dark-gray">Earn <span class="text-sea-green-dark1">2.8</span>
+                            Credit points on this service completion.</p>
+                        <img src="/assets/img/coin.svg" alt="coin">
+                    </div>
+                </div>
+
+                <div class="pt-[22px] px-4 h-[650px] overflow-y-auto no-scrollbar flex flex-col gap-[22px]">
+                    <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                        <div class="flex items-center justify-between border-b border-deep-teal">
+                            <div class="flex items-start gap-2.5">
+                                <div class="w-11 h-11 rounded-full">
+                                    <img src="/assets/img/pharma-img.svg" alt="Pharmacy image">
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex items-center gap-1">
+                                        <p class="font-semibold text-base text-gray">Pharmacy #1234</p>
+                                        <img src="/assets/img/badge.svg" alt="badge">
+                                        <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                        <img src="/assets/img/star.svg" alt="star">
+                                    </div>
+                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2.5">
+                                <p></p>
+                                <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                <p></p>
+
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center justify-between pt-1.5">
+                                <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                    <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-1.5">
+                                <p class="font-normal text-xs text-gray-dark-1">Price</p>
+                                <p class="font-semibold text-sm text-teal-green">&#8377;500</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flex items-center justify-end mt-5 gap-5">
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-sea-green-dark1 offerDetailsBtn">
+                                <span class="font-bold text-xs text-sea-green-dark1">Offer Details</span>
+                            </button>
+
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                            </button>
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                <span class="font-bold text-xs text-white">Accept</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                        <div class="flex items-center justify-between border-b border-deep-teal">
+                            <div class="flex items-start gap-2.5">
+                                <div class="w-11 h-11 rounded-full">
+                                    <img src="/assets/img/pharma-img.svg" alt="Pharmacy image">
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex items-center gap-1">
+                                        <p class="font-semibold text-base text-gray">Pharmacy #1234</p>
+                                        <img src="/assets/img/badge.svg" alt="badge">
+                                        <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                        <img src="/assets/img/star.svg" alt="star">
+                                    </div>
+                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2.5">
+                                <p></p>
+                                <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                <p></p>
+
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center justify-between pt-1.5">
+                                <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                    <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-1.5">
+                                <p class="font-normal text-xs text-gray-dark-1">Price</p>
+                                <p class="font-semibold text-sm text-teal-green">&#8377;500</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flex items-center justify-end mt-5 gap-5">
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-sea-green-dark1 offerDetailsBtn">
+                                <span class="font-bold text-xs text-sea-green-dark1">Offer Details</span>
+                            </button>
+
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                            </button>
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                <span class="font-bold text-xs text-white">Accept</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                        <div class="flex items-center justify-between border-b border-deep-teal">
+                            <div class="flex items-start gap-2.5">
+                                <div class="w-11 h-11 rounded-full">
+                                    <img src="/assets/img/pharma-img.svg" alt="Pharmacy image">
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex items-center gap-1">
+                                        <p class="font-semibold text-base text-gray">Pharmacy #1234</p>
+                                        <img src="/assets/img/badge.svg" alt="badge">
+                                        <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                        <img src="/assets/img/star.svg" alt="star">
+                                    </div>
+                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2.5">
+                                <p></p>
+                                <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                <p></p>
+
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center justify-between pt-1.5">
+                                <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                    <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-1.5">
+                                <p class="font-normal text-xs text-gray-dark-1">Price</p>
+                                <p class="font-semibold text-sm text-teal-green">&#8377;500</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flex items-center justify-end mt-5 gap-5">
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-sea-green-dark1 offerDetailsBtn">
+                                <span class="font-bold text-xs text-sea-green-dark1">Offer Details</span>
+                            </button>
+
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                            </button>
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                <span class="font-bold text-xs text-white">Accept</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white w-full border border-gray-light3 rounded-xl p-3 shadow-request-box">
+                        <div class="flex items-center justify-between border-b border-deep-teal">
+                            <div class="flex items-start gap-2.5">
+                                <div class="w-11 h-11 rounded-full">
+                                    <img src="/assets/img/pharma-img.svg" alt="Pharmacy image">
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex items-center gap-1">
+                                        <p class="font-semibold text-base text-gray">Pharmacy #1234</p>
+                                        <img src="/assets/img/badge.svg" alt="badge">
+                                        <span class="font-normal text-xs text-dark-gray">4.3</span>
+                                        <img src="/assets/img/star.svg" alt="star">
+                                    </div>
+                                    <p class="font-normal text-[10px] py-1.5">Order #R32512</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2.5">
+                                <p></p>
+                                <p class="font-normal text-xs text-gray-dark-1">24/04/2025 - 03:34 PM</p>
+                                <p></p>
+
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center justify-between pt-1.5">
+                                <p class="font-normal text-xs text-gray-dark-1">6km away</p>
+                                <div class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm! text-gray-dark-1">schedule</span>
+                                    <p class="font-semibold text-sm text-gray">20 minutes </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-1.5">
+                                <p class="font-normal text-xs text-gray-dark-1">Price</p>
+                                <p class="font-semibold text-sm text-teal-green">&#8377;500</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flex items-center justify-end mt-5 gap-5">
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-sea-green-dark1 offerDetailsBtn">
+                                <span class="font-bold text-xs text-sea-green-dark1">Offer Details</span>
+                            </button>
+
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-coral-red cancelBtn">
+                                <span class="font-bold text-xs text-tomato-red">Cancel</span>
+                            </button>
+
+                            <button
+                                class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer bg-teal-green acceptBtn">
+                                <span class="font-bold text-xs text-white">Accept</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/script/pharmacy/searching-pharmacy.js"></script>
+</body>
+
+</html>

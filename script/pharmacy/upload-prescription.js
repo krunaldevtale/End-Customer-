@@ -700,4 +700,10 @@ $(document).ready(function () {
     renderDoctorTag();
     renderPatientTags();
   });
+
+
+  $(".uploadPrescriptionBtn").on('click',function(){
+    $('.uploadSection').hide();
+    $('.reviewPrescriptionSection').removeClass('hidden')
+  })
 });
