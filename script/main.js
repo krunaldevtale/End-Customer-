@@ -257,4 +257,12 @@ $(document).ready(function () {
     }
     closeCalendar();
   });
+
+  $('.uploadButton').on('click',function(){
+    $('.uploadOptionsPopup').removeClass('hidden')
+  })
+
+  $('.closeOptionsPopup').on('click',function(){
+    $('.uploadOptionsPopup').addClass('hidden')
+  })
 });

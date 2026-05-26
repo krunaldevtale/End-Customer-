@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>End Customer page</title>
     <link rel="stylesheet" href="assets/output.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <style>
         .bg-mg {
             background-image: url(./assets/img/map.png);
@@ -211,21 +212,22 @@
                     <div id="resultsCount" class="hidden text-sm text-gray-600">
                         5 locations found
                     </div>
-                   <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-4">
 
-    <!-- Notification Button -->
-    <a href="././src/Pharmacy/notification.html">
-        <button class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
-            <img src="/assets/img/notification-icon.svg" alt="notification">
-        </button>
-    </a>
+                        <!-- Notification Button -->
+                        <a href="././src/Pharmacy/notification.html">
+                            <button
+                                class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
+                                <img src="/assets/img/notification-icon.svg" alt="notification">
+                            </button>
+                        </a>
 
-    <!-- Cart Button -->
-    <button class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
-        <img src="/assets/img/shopping-cart.svg" alt="Cart">
-    </button>
+                        <!-- Cart Button -->
+                        <button class="w-10 h-10 rounded-lg bg-white flex items-center justify-center cursor-pointer">
+                            <img src="/assets/img/shopping-cart.svg" alt="Cart">
+                        </button>
 
-</div>
+                    </div>
                 </div>
             </div>
 
@@ -271,7 +273,8 @@
                             placeholder="I want to search for Medicine, Brands, Doctor, Pharmacy, etc."
                             class="w-full pl-4 pr-18 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none " />
                         <i class="fa-solid fa-microphone absolute right-12 top-1/2 -translate-y-1/2 w-4 h-4"></i>
-                        <i class="fa-solid fa-camera absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4"></i>
+                        <i
+                            class="fa-solid fa-camera absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 uploadButton cursor-pointer"></i>
                     </div>
                 </div>
             </div>
@@ -1041,6 +1044,126 @@
                 </div>
             </div>
         </section>
+
+        <!--Upload Options Popup-->
+        <div class="fixed inset-0 bg-transparent-black flex items-center justify-center hidden uploadOptionsPopup">
+            <div
+                class="bg-white w-[790px] rounded-[15px] p-4 shadow-records-card flex flex-col gap-4 lg:h-[600px] overflow-y-auto no-scrollbar">
+                <div class="flex flex-col gap-1.5">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <span class="material-symbols-outlined">upload_file</span>
+                            <span class="font-normal text-xl text-gray">Upload</span>
+                        </div>
+
+                        <span class="material-symbols-outlined cursor-pointer closeOptionsPopup">close</span>
+                    </div>
+                    <p class="font-normal text-sm text-gray-dark">Review the extracted data below. You can edit and
+                        manage it before sharing</p>
+                </div>
+
+                <!--Click a Picture-->
+                <div
+                    class="border border-gray border-dashed rounded-[20px] p-2.5 flex items-center justify-center w-full cursor-pointer">
+                    <div class="flex flex-col gap-2.5 items-center">
+                        <div class="w-9 h-9 flex items-center justify-center rounded-full bg-mint-cream">
+                            <span class="material-symbols-outlined">photo_camera</span>
+                        </div>
+
+                        <div class="flex flex-col gap-1.5 items-center">
+                            <p class="font-bold text-base text-sea-green-dark1">Click a Picture</p>
+                            <span class="font-normal text-xs text-gray-dark-1">Please upload a clear image of the
+                                prescription showing doctor and patient details.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Upload Prescription-->
+                <a href="/src/Pharmacy/upload-prescription.html">
+                    <div
+                        class="border border-gray border-dashed rounded-[20px] p-2.5 flex items-center justify-center w-full cursor-pointer">
+                        <div class="flex flex-col gap-2.5 items-center">
+                            <div class="w-9 h-9 flex items-center justify-center rounded-full bg-mint-cream">
+                                <span class="material-symbols-outlined">upload_file</span>
+                            </div>
+
+                            <div class="flex flex-col gap-1.5 items-center">
+                                <p class="font-bold text-base text-sea-green-dark1">Upload Prescription</p>
+                                <span class="font-normal text-xs text-gray-dark-1">Please upload a clear image of the
+                                    prescription showing doctor and patient details.</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!--Upload Pharmacy Bill-->
+                <a href="/src/Pharmacy/upload-prescription.html">
+                    <div
+                        class="border border-gray border-dashed rounded-[20px] p-2.5 flex items-center justify-center w-full cursor-pointer">
+                        <div class="flex flex-col gap-2.5 items-center">
+                            <div class="w-9 h-9 flex items-center justify-center rounded-full bg-mint-cream">
+                                <span class="material-symbols-outlined">receipt</span>
+                            </div>
+
+                            <div class="flex flex-col gap-1.5 items-center">
+                                <p class="font-bold text-base text-sea-green-dark1">Upload Pharmacy Bill</p>
+                                <span class="font-normal text-xs text-gray-dark-1">Please upload a clear image of the
+                                    prescription showing doctor and patient details.</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!--Upload Medicine Pictures-->
+                <div
+                    class="border border-gray border-dashed rounded-[20px] p-2.5 flex items-center justify-center w-full cursor-pointer">
+                    <div class="flex flex-col gap-2.5 items-center">
+                        <div class="w-9 h-9 flex items-center justify-center rounded-full bg-mint-cream">
+                            <span class="material-symbols-outlined">pill</span>
+                        </div>
+
+                        <div class="flex flex-col gap-1.5 items-center">
+                            <p class="font-bold text-base text-sea-green-dark1">Upload Medicine Pictures</p>
+                            <span class="font-normal text-xs text-gray-dark-1">Please upload a clear image of the
+                                prescription showing doctor and patient details.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="border border-gray rounded-[20px] p-1.5 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <img src="/assets/img/patient-icon.svg" alt="patient-icon">
+                            <input type="text"
+                                class="w-full focus:ring-0 focus:outline-none placeholder:font-medium placeholder:text-sm placeholder:text-gray font-medium text-sm text-gray"
+                                placeholder="Patient">
+                        </div>
+
+                        <span class="material-symbols-outlined cursor-pointer ">arrow_drop_down</span>
+                    </div>
+
+                    <div class="border border-gray rounded-[20px] p-1.5 flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <img src="/assets/img/doctor-icon.svg" alt="doctor-icon">
+                            <input type="text"
+                                class="w-full focus:ring-0 focus:outline-none placeholder:font-medium placeholder:text-sm placeholder:text-gray font-medium text-sm text-gray"
+                                placeholder="Doctor">
+                        </div>
+
+                        <span class="material-symbols-outlined cursor-pointer ">arrow_drop_down</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <button
+                        class="w-[200px] h-10 flex items-center justify-center rounded-lg bg-sea-green-dark1 border border-cool-fog cursor-pointer">
+                        <span class="text-white text-sm font-semibold">Get Details</span>
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <footer class="w-full">
             <!-- Top Footer Content -->
