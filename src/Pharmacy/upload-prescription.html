@@ -179,140 +179,281 @@
 
         </div>
 
-        <div class="py-[50px] px-[120px] grid grid-cols-2 gap-[22px] bg-snow-gray">
-            <div class="bg-polar-mist rounded-[20px] w-[622px]">
-                <div class="bg-white rounded-[20px] p-8 shadow-upload-grid flex flex-col gap-8 ">
-                    <div class="flex items-center justify-between">
-                        <div class="flex flex-col gap-2">
-                            <p class="font-semibold text-xl text-obsidian-black">File Upload</p>
-                            <p class="font-normal text-base text-ash-slate">Choose a file and upload securely to
-                                proceed.</p>
+        <div class="  bg-snow-gray">
+            <section class="uploadSection grid grid-cols-2 gap-[22px] py-[50px] px-[120px]">
+                <div class="bg-polar-mist rounded-[20px] w-[622px]">
+                    <div class="bg-white rounded-[20px] p-8 shadow-upload-grid flex flex-col gap-8 ">
+                        <div class="flex items-center justify-between">
+                            <div class="flex flex-col gap-2">
+                                <p class="font-semibold text-xl text-obsidian-black">File Upload</p>
+                                <p class="font-normal text-base text-ash-slate">Choose a file and upload securely to
+                                    proceed.</p>
+                            </div>
+
+                            <div
+                                class="w-[104px] h-[50px] flex items-center justify-center border border-b-2 border-winter-sky bg-white shadow-timecard gap-3 rounded-lg">
+                                <div class="flex flex-col ">
+                                    <p class="font-semibold text-[10px] text-verdant-teal">In Just</p>
+                                    <p class="font-bold text-sm text-verdant-teal">5 mins</p>
+                                </div>
+                                <img src="/assets/img/clock.svg" alt="clock">
+                            </div>
                         </div>
 
                         <div
-                            class="w-[104px] h-[50px] flex items-center justify-center border border-b-2 border-winter-sky bg-white shadow-timecard gap-3 rounded-lg">
-                            <div class="flex flex-col ">
-                                <p class="font-semibold text-[10px] text-verdant-teal">In Just</p>
-                                <p class="font-bold text-sm text-verdant-teal">5 mins</p>
+                            class="w-full border border-dashed border-silver-lilac rounded-2xl p-8 flex flex-col items-center gap-6">
+                            <img src="/assets/img/upload-placeholder.svg" alt="upload-placeholder">
+                            <div class="flex flex-col gap-3 items-center">
+                                <p class="font-medium text-lg text-obsidian-black">Drag and drop your files</p>
+                                <p class="font-normal text-sm text-ash-slate">JPEG, PNG, PDF, and MP4 formats, up to
+                                    10MB
+                                </p>
                             </div>
-                            <img src="/assets/img/clock.svg" alt="clock">
+
+                            <button
+                                class="w-[104px] h-9 rounded-[10px] flex items-center justify-center border border-dusty-lavender cursor-pointer selectFileBtn">
+                                <span class="font-medium text-sm text-graphite-slate">Select file</span>
+                            </button>
+                        </div>
+
+                        <div class="flex flex-col gap-3">
+                            <p class="font-medium text-lg text-obsidian-navy">Uploaded Files</p>
+                            <div class="h-[150px] overflow-y-auto flex flex-col gap-3 hidden"></div>
                         </div>
                     </div>
-
                     <div
-                        class="w-full border border-dashed border-silver-lilac rounded-2xl p-8 flex flex-col items-center gap-6">
-                        <img src="/assets/img/upload-placeholder.svg" alt="upload-placeholder">
-                        <div class="flex flex-col gap-3 items-center">
-                            <p class="font-medium text-lg text-obsidian-black">Drag and drop your files</p>
-                            <p class="font-normal text-sm text-ash-slate">JPEG, PNG, PDF, and MP4 formats, up to 10MB
+                        class="bg-polar-mist border border-t-0 border-aurora-blue rounded-br-2xl rounded-bl-2xl px-4 py-7 flex items-center gap-2">
+                        <img src="/assets/img/offer-badge.svg" alt="">
+                        <p class="font-bold text-base text-banner-blue">Upto 25%* discount <span
+                                class="font-normal text-sm">on every order</span></p>
+                    </div>
+                </div>
+
+                <div class="w-[514px] h-[565px] bg-white rounded-2xl py-6 px-4 flex flex-col gap-7">
+                    <p class="font-normal text-sm text-phantom-ash">Make sure the prescription you upload contains the
+                        following elements:</p>
+                    <div class="flex items-center justify-between px-4">
+                        <div class="flex flex-col gap-2 items-center">
+                            <div
+                                class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil">
+                                <p class="font-semibold text-sm text-ocean-slate">10 MB</p>
+                            </div>
+                            <p class="font-medium text-xs text-ocean-slate max-w-[54px] text-center">Maximum File Size
                             </p>
                         </div>
 
+                        <div class="flex flex-col gap-2 items-center">
+                            <div
+                                class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil">
+                                <img src="/assets/img/medicine-details.svg" alt="">
+                            </div>
+                            <p class="font-medium text-xs text-ocean-slate max-w-[54px] text-center">Medicine Details
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col gap-2 items-center">
+                            <div
+                                class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil">
+                                <img src="/assets/img/date-of-prescription.svg" alt="">
+                            </div>
+                            <p class="font-medium text-xs text-ocean-slate max-w-[54px] text-center">Date Of
+                                Prescription
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2.5 px-2.5">
+                        <span class="material-symbols-outlined text-sun-yellow">error</span>
+                        <p class="font-normal text-xs italic text-phantom-ash max-w-[425px]">Our pharmacist will
+                            dispense
+                            medicines only if the prescription is valid & it meets all
+                            government regulations.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
+                        <label for="doctor" class="font-semibold text-sm text-gray">Select Doctor</label>
+                        <div class=" flex items-center justify-between rounded-2xl py-2.5 px-1 cursor-pointer shadow-stepform-input bg-white-smoke"
+                            id="doctorBox">
+                            <input type="text"
+                                class="w-full cursor-pointer focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
+                                placeholder="Select Doctor" readonly>
+                            <span
+                                class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                        </div>
+
+                        <div class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown z-9999"
+                            id="doctorMenu">
+                            <ul class="space-y-2 " id="doctorList">
+                                <li class="font-normal text-base text-dark-gray cursor-pointer">Gaurav</li>
+                                <li class="font-normal text-base text-dark-gray cursor-pointer">Priyansh</li>
+                                <li class="font-normal text-base text-dark-gray cursor-pointer">Rishi</li>
+                                <li class="font-normal text-base text-dark-gray cursor-pointer">Custom : ___________
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
+                        <label for="doctor" class="font-semibold text-sm text-gray">Select Patient</label>
+                        <div class=" flex items-center justify-between rounded-2xl py-2.5 px-1 cursor-pointer shadow-stepform-input bg-white-smoke"
+                            id="patientBox">
+                            <input type="text"
+                                class="w-full cursor-pointer focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
+                                placeholder="Select Patient" readonly>
+                            <span
+                                class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                        </div>
+
+                        <div class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown z-9999"
+                            id="patientMenu">
+                            <ul class="space-y-2" id="patientList">
+                                <li class="font-normal text-base text-dark-gray cursor-pointer">Gaurav</li>
+                                <li class="font-normal text-base text-dark-gray cursor-pointer">Priyansh</li>
+                                <li class="font-normal text-base text-dark-gray cursor-pointer">Rishi</li>
+                                <li class="font-normal text-base text-dark-gray cursor-pointer">Custom : ___________
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center">
                         <button
-                            class="w-[104px] h-9 rounded-[10px] flex items-center justify-center border border-dusty-lavender cursor-pointer selectFileBtn">
-                            <span class="font-medium text-sm text-graphite-slate">Select file</span>
+                            class="w-[460px] h-12 rounded-lg flex items-center justify-center gap-2.5 shadow-uploadbtn bg-sea-green-dark1 cursor-pointer uploadPrescriptionBtn">
+                            <span class="material-symbols-outlined text-white">upload_file</span>
+                            <span class="font-semibold text-sm text-white">Upload Prescription</span>
                         </button>
                     </div>
 
-                    <div class="flex flex-col gap-3">
-                        <p class="font-medium text-lg text-obsidian-navy">Uploaded Files</p>
-                        <div class="h-[150px] overflow-y-auto flex flex-col gap-3 hidden"></div>
+                </div>
+            </section>
+
+            <!--Review Prescription-->
+            <section class="reviewPrescriptionSection hidden py-[55px] px-10">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-col gap-1">
+                        <p class="font-bold text-[28px] text-eerie-black">Review Prescription</p>
+                        <span class="font-normal text-sm text-gray-light-9">Review and edit medicines before comparing
+                            prices and placing your order.</span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button
+                            class="w-[161px] h-[39px] flex items-center justify-center gap-2 rounded-lg bg-white border border-gray-light-3 cursor-pointer">
+                            <span class="material-symbols-outlined">cached</span>
+                            <span class="font-medium text-sm text-gray-dark-2">Reprocess OCR</span>
+                        </button>
+
+                        <button
+                            class="w-[170px] h-[39px] flex items-center justify-center gap-2 rounded-lg bg-white border border-gray-light-3 cursor-pointer">
+                            <span class="material-symbols-outlined">edit</span>
+                            <span class="font-medium text-sm text-gray-dark-2">Edit All Medicines</span>
+                        </button>
                     </div>
                 </div>
-                <div
-                    class="bg-polar-mist border border-t-0 border-aurora-blue rounded-br-2xl rounded-bl-2xl px-4 py-7 flex items-center gap-2">
-                    <img src="/assets/img/offer-badge.svg" alt="">
-                    <p class="font-bold text-base text-banner-blue">Upto 25%* discount <span
-                            class="font-normal text-sm">on every order</span></p>
-                </div>
-            </div>
 
-            <div class="w-[514px] h-[565px] bg-white rounded-2xl py-6 px-4 flex flex-col gap-7">
-                <p class="font-normal text-sm text-phantom-ash">Make sure the prescription you upload contains the
-                    following elements:</p>
-                <div class="flex items-center justify-between px-4">
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil">
-                            <p class="font-semibold text-sm text-ocean-slate">10 MB</p>
+                <div class="mt-4 border border-warm-sand bg-warm-ivory p-4 rounded-[10px] flex items-center gap-3">
+                    <div
+                        class="bg-transparent-orange w-8 h-8 rounded-full flex items-center justify-center text-tangerine">
+                        <span class="material-symbols-outlined text-lg!">warning</span>
+                    </div>
+                    <p class="font-normal text-xs text-copper-brown">Please review extracted medicines. You can edit any
+                        details before proceeding.</p>
+                </div>
+
+                <div class="mt-6 flex items-start gap-6">
+                    
+                    <div
+                        class="w-[280px] rounded-[14px] p-5 bg-white border border-gray-light-3 shadow-prescriptionbox flex flex-col gap-5">
+                        <div class="flex flex-col gap-2">
+                            <p class="font-medium text-[11px] text-muted-silver">Prescription Image</p>
+                            <div
+                                class="bg-pale-blue-white border border-gray-light-3 shadow-medicine-box rounded-[10px] p-4 flex flex-col gap-4">
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center justify-between">
+                                        <p class="font-bold text-xl italic text-corporate-blue">Cipla</p>
+                                        <div class="w-12 h-0.5 bg-gray-light-3 mt-2"></div>
+                                    </div>
+                                    <hr class="text-gray-light-3">
+                                </div>
+
+                                <p class="font-bold italic text-2xl text-gray-light-5">Rx</p>
+
+                                <div class="flex flex-col gap-[5px]">
+                                    <p class="font-normal text-sm text-slate-navy">1. Crocin 500mg</p>
+                                    <p class="font-normal text-sm text-slate-navy">2. Crocin 650mg</p>
+                                    <p class="font-normal text-sm text-slate-navy">3. Azithromycin 250mg</p>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <p class="font-normal text-[10px] italic max-w-[83px] text-slate-blue-gray">Take
+                                        medicines as directed</p>
+                                    <div class="flex flex-col gap-0.5">
+                                        <p class="font-medium text-xs text-deep-steel-blue">Dr. Monika</p>
+                                        <p class="text-gray-light-8 font-normal text-[8px]">Reg. No. 12345</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="font-medium text-xs text-ocean-slate max-w-[54px] text-center">Maximum File Size</p>
-                    </div>
 
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil">
-                            <img src="/assets/img/medicine-details.svg" alt="">
+                        <button
+                            class="w-[238px] h-12 bg-white border border-gray-light-3 rounded-[10px] flex items-center justify-center gap-2 cursor-pointer">
+                            <span class="material-symbols-outlined text-gray-dark-2 text-lg!">open_in_full</span>
+                            <span class="font-medium text-xs text-gray-dark-2">View Full Size</span>
+                        </button>
+
+                        <hr class="text-gray-50">
+                        <div class="flex flex-col gap-2">
+                            <p class="font-medium text-[10px] text-muted-silver uppercase">Patient</p>
+                            <div class="flex items-center gap-3">
+                                <img src="/assets/img/patient.svg" alt="Patient Image">
+                                <div class="flex flex-col">
+                                    <p class="font-bold text-sm text-eerie-black">Gaurav (Self)</p>
+                                    <p class="font-normal text-xs text-gray-light-9">+91 98765 43210</p>
+                                </div>
+                            </div>
                         </div>
-                        <p class="font-medium text-xs text-ocean-slate max-w-[54px] text-center">Medicine Details</p>
-                    </div>
 
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil">
-                            <img src="/assets/img/date-of-prescription.svg" alt="">
+                        <div class="flex flex-col gap-2">
+                            <p class="font-medium text-[10px] text-muted-silver uppercase">Doctor</p>
+                            <div class="flex items-center gap-3">
+                                <img src="/assets/img/Doctor-Monika.svg" alt="Doctor Image">
+                                <div class="flex flex-col">
+                                    <div class="flex items-center gap-1">
+                                        <p class="font-bold text-sm text-eerie-black">Dr.Monika</p>
+                                        <div class="w-[14px] h-[14px] rounded-full flex items-center justify-center bg-sea-green-dark1">
+                                            <span class="material-symbols-outlined text-white text-[10px]!">check</span>
+                                        </div>
+                                    </div>
+                                    <p class="font-normal text-xs text-gray-light-9">Dentist • Reg. No.12345</p>
+                                </div>
+                            </div>
                         </div>
-                        <p class="font-medium text-xs text-ocean-slate max-w-[54px] text-center">Date Of Prescription
-                        </p>
-                    </div>
-                </div>
 
-                <div class="flex items-center gap-2.5 px-2.5">
-                    <span class="material-symbols-outlined text-sun-yellow">error</span>
-                    <p class="font-normal text-xs italic text-phantom-ash max-w-[425px]">Our pharmacist will dispense
-                        medicines only if the prescription is valid & it meets all
-                        government regulations.</p>
-                </div>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-[11px] font-medium text-muted-silver uppercase">Prescription Date</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-muted-green-tint rounded-[10px] flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-sea-green-dark1">calendar_today</span>
+                                </div>
 
-                <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
-                    <label for="doctor" class="font-semibold text-sm text-gray">Select Doctor</label>
-                    <div
-                        class=" flex items-center justify-between rounded-2xl py-2.5 px-1 shadow-stepform-input bg-white-smoke">
-                        <input type="text"
-                            class="w-full focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
-                            placeholder="Select Doctor" readonly>
-                        <span
-                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
+                                <div class="flex flex-col gap-0.5">
+                                    <p class="font-medium text-[11px] text-muted-silver">Prescription Date</p>
+                                    <p class="font-bold text-sm text-eerie-black">12 February 2026</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div
-                        class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown">
-                        <ul class="space-y-2 px-4">
-                            <li class="font-normal text-base text-dark-gray cursor-pointer">Gaurav</li>
-                            <li class="font-normal text-base text-dark-gray cursor-pointer">Priyansh</li>
-                            <li class="font-normal text-base text-dark-gray cursor-pointer">Rishi</li>
-                            <li class="font-normal text-base text-dark-gray cursor-pointer">Custom : ___________</li>
-                        </ul>
+                    <div class="flex-1 bg-white rounded-[14px] border border-gray-light-3 shadow-prescriptionbox p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 flex items-center justify-center bg-muted-green-tint rounded-full">
+                                    <img src="/assets/img/shield.svg" alt="Shield">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
-                    <label for="doctor" class="font-semibold text-sm text-gray">Select Patient</label>
-                    <div
-                        class=" flex items-center justify-between rounded-2xl py-2.5 px-1 shadow-stepform-input bg-white-smoke">
-                        <input type="text"
-                            class="w-full focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
-                            placeholder="Select Patient" readonly>
-                        <span
-                            class="material-symbols-outlined cursor-pointer dropdown-toggle">keyboard_arrow_down</span>
-                    </div>
-
-                    <div
-                        class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown">
-                        <ul class="space-y-2 px-4">
-                            <li class="font-normal text-base text-dark-gray cursor-pointer">Gaurav</li>
-                            <li class="font-normal text-base text-dark-gray cursor-pointer">Priyansh</li>
-                            <li class="font-normal text-base text-dark-gray cursor-pointer">Rishi</li>
-                            <li class="font-normal text-base text-dark-gray cursor-pointer">Custom : ___________</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center">
-                    <button
-                        class="w-[460px] h-12 rounded-lg flex items-center justify-center gap-2.5 shadow-uploadbtn bg-sea-green-dark1 cursor-pointer uploadPrescriptionBtn">
-                        <span class="material-symbols-outlined text-white">upload_file</span>
-                        <span class="font-semibold text-sm text-white">Upload Prescription</span>
-                    </button>
-                </div>
-
-            </div>
+            </section>
         </div>
 
         <footer class="w-full">
