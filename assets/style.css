@@ -29,9 +29,12 @@
   --color-gray-dark: #212529;
   --color-dim-gray: #696969;
   --color-snow-gray: #F7F8FA;
+  --color-snow-gray1: #CAD5E2;
+  --color-snow-gray5: #4A5565;
   --color-muted-gray: #999999;
   --color-muted-gray1: #919EAB3D;
   --color-light-gray: #EEEEEE;
+  --color-light-gray1:#E5E7EB;
   --color-gray-tint: #F4F6F8;
   --color-dark-charcoal: #111111;
   --color-charcoal-black: #000000;
@@ -49,15 +52,18 @@
   --color-sea-green-dark2: #1A504C;
   --color-dark-slate: #212529;
   --color-muted-rose: #FF6F6180;
+  --color-cream-brown: #D8CCBD;
   --color-onyx: #1F1F1F;
   --color-vibrant-purple: #3C0EB9;
   --color-pale-pink: #FBE7E8;
+  --color-lightest-pale-pink:#FDF2F8;
   --color-green-light: #1A7A5E;
   --color-gray-med: #161C24;
   --color-gray-700: #454F5B;
   --color-purple-10: rgba(122, 90, 248, 0.10);
   --color-dark-teal-green: #115B46;
   --color-teal-green2: #1B785D;
+  --color-mint-green: #B9F8CF;
   --color-banner-blue: #3B7AEF;
   --color-deep-aqua-teal: #0881787A;
   /* Box Shadow */
@@ -69,11 +75,13 @@
   --color-sea-green: #10b981;
   --color-sea-green-deep: #238B6D;
   --color-charcoal-black: #212529;
+  --color-charcoal-black1: #101828;
   --color-smoke-white: #EEEEEE;
   --color-ash-gray: #D9D9D9;
   --color-light-coral: #FF916C;
   --color-mint-leaf: #58D36A;
   --color-pastel-blue: #6CA4FF;
+  --color-deep-steel-blue: #314158;
   --color-pastel-red: #FF6C6C;
   --color-orchid: #D36CFF;
   --color-mustard-yellow: #D6B71D;
@@ -91,6 +99,7 @@
   --color-slate-gray: #646B73;
   --color-cool-gray: #929DA7;
   --color-golden-yellow: #FFC107;
+  --color-golden-amber: #FBBC05;
   --color-light-powder-blue: #DAEDFF;
   --color-light-cream: #FFF5D7;
   --color-lime-green: #54D62C;
@@ -102,11 +111,14 @@
   --color-deep-teal: #08817833;
   --color-smoky-blue-gray: #637381;
   --color-sea-green: #5FA28F;
+   --color-dark-green: #008236;
   --color-gainsboro-gray: #DBE0E4;
   --color-strong-red: #B72136;
   --color-persian-blue: #1939B7;
   --color-deep-aquamarine: #408677;
   --color-dark-gray: #484848;
+  --color-dusty-blue-gray: #6A7282;
+  --color-soft-slate-gray: #99A1AF;
   --color-pewter-blue: #89C3BF;
   --color-teal-green: #088178;
   --color-charcoal-gray: #333333;
@@ -117,6 +129,8 @@
   --color-granite-gray: #4D4D4D;
   --color-seafoam-blue: #83BEBB;
   --color-bright-green: #54D62C;
+  --color-bright-fresh-green: #00C950;
+  --color-bright-green1: #00A63E;
   --color-soft-cloud: #FAFBFE;
   --color-tea-green: #E9FCD4;
   --color-medium-aquamarine: #5ED9BA;
@@ -964,3 +978,20 @@ input[type="time"]::-ms-expand {
     height: 1.5rem;
   }
 }
+
+/* Whislist icon */
+ .wishlist-icon {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+    }
+
+    .wishlist-icon.active {
+        font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+    }
