@@ -701,9 +701,196 @@ $(document).ready(function () {
     renderPatientTags();
   });
 
+  $(".uploadPrescriptionBtn").on("click", function () {
+    $(".uploadSection").hide();
+    $(".reviewPrescriptionSection").removeClass("hidden");
+  });
 
-  $(".uploadPrescriptionBtn").on('click',function(){
-    $('.uploadSection').hide();
-    $('.reviewPrescriptionSection').removeClass('hidden')
-  })
+  // ── Edit row
+  function buildEditRow(data) {
+    return `
+        <tr id="editPanelRow" class="">
+            <td colspan="9" class="px-6 py-5">
+                <div class="bg-fresh-ivory border-l-3 border-sea-green-dark1  rounded-[10px] p-6">
+ 
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sea-green-dark1" style="font-size:18px">edit</span>
+                            <p class="font-bold text-xs text-sea-green-dark1" id="editPanelTitle">Editing ${data.medicine}</p>
+                        </div>
+                        <span class="material-symbols-outlined cursor-pointer text-gray-dark-2 hover:text-eerie-black" id="closeEditPanel">close</span>
+                    </div>
+ 
+                    <div class="grid grid-cols-5 gap-4 mb-5">
+                        <div class="flex flex-col gap-1.5">
+                            <label class="font-medium text-[11px] uppercase tracking-wide text-muted-silver">Medicine</label>
+                            <input type="text" id="editMedicine" value="${data.medicine}"
+                                class="w-full border border-gray-light-3 rounded-lg py-2.5 px-3 font-medium text-xs text-gray-dark-2 focus:outline-none focus:border-sea-green-dark1 focus:ring-1 focus:ring-sea-green-dark1 bg-white" />
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <label class="font-medium text-[11px] uppercase tracking-wide text-muted-silver">Dosage</label>
+                            <input type="text" id="editDosage" value="${data.dosage}"
+                                class="w-full border border-gray-light-3 rounded-lg py-2.5 px-3 font-normal text-sm text-eerie-black focus:outline-none focus:border-sea-green-dark1 focus:ring-1 focus:ring-sea-green-dark1 bg-white" />
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <label class="font-medium text-[11px] uppercase tracking-wide text-muted-silver">Method</label>
+                            <input type="text" id="editMethod" value="${data.method}"
+                                class="w-full border border-gray-light-3 rounded-lg py-2.5 px-3 font-normal text-sm text-eerie-black focus:outline-none focus:border-sea-green-dark1 focus:ring-1 focus:ring-sea-green-dark1 bg-white" />
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <label class="font-medium text-[11px] uppercase tracking-wide text-muted-silver">Duration</label>
+                            <input type="text" id="editDuration" value="${data.duration}"
+                                class="w-full border border-gray-light-3 rounded-lg py-2.5 px-3 font-normal text-sm text-eerie-black focus:outline-none focus:border-sea-green-dark1 focus:ring-1 focus:ring-sea-green-dark1 bg-white" />
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <label class="font-medium text-[11px] uppercase tracking-wide text-muted-silver">Instruction</label>
+                            <input type="text" id="editInstruction" value="${data.instruction}"
+                                class="w-full border border-gray-light-3 rounded-lg py-2.5 px-3 font-normal text-sm text-eerie-black focus:outline-none focus:border-sea-green-dark1 focus:ring-1 focus:ring-sea-green-dark1 bg-white" />
+                        </div>
+                    </div>
+ 
+                    <div class="flex items-center justify-between">
+                        <p class="font-normal text-xs italic text-muted-silver">Press Save to confirm changes or Cancel to discard</p>
+                        <div class="flex items-center gap-3">
+                            <button id="cancelEditBtn"
+                                class="w-[90px] h-[38px] flex items-center justify-center border border-gray-light-3 rounded-lg bg-white cursor-pointer font-medium text-sm text-gray-dark-2 hover:bg-gray-50 transition-colors">
+                                Cancel
+                            </button>
+                            <button id="saveEditBtn"
+                                class="w-[150px] h-[38px] flex items-center justify-center gap-2 rounded-lg bg-sea-green-dark1 cursor-pointer font-semibold text-sm text-white hover:opacity-90 transition-opacity">
+                                <span class="material-symbols-outlined text-white" style="font-size:16px">check_circle</span>
+                                Save Changes
+                            </button>
+                        </div>
+                    </div>
+ 
+                </div>
+            </td>
+        </tr>`;
+  }
+
+  let $activeRow = null;
+
+  // ── Helper: read cell data from a row ────────────────────────────────────
+  function getRowData($row) {
+    return {
+      medicine: $row.find("td:eq(1) .font-bold").text().trim(),
+      dosage: $row.find("td:eq(2) span").text().trim(),
+      method: $row.find("td:eq(3) span").text().trim(),
+      duration: $row.find("td:eq(4) span").text().trim(),
+      instruction: $row.find("td:eq(5) span").text().trim(),
+    };
+  }
+
+  // ── Helper: write edited values back into the row ────────────────────────
+  function setRowData($row, data) {
+    $row.find("td:eq(1) .font-bold").text(data.medicine);
+    $row.find("td:eq(2) span").text(data.dosage);
+    $row.find("td:eq(3) span").text(data.method);
+    $row.find("td:eq(4) span").text(data.duration);
+    $row.find("td:eq(5) span").text(data.instruction);
+  }
+
+  // ── Open edit panel below the clicked row ────────────────────────────────
+  $(document).on("click", ".editBtn", function () {
+    const $row = $(this).closest("tr");
+
+    // Toggle off if same row clicked again
+    if ($activeRow && $activeRow.is($row)) {
+      closePanel();
+      return;
+    }
+
+    // Remove any existing edit row
+    $("#editPanelRow").remove();
+
+    if ($activeRow) {
+      $activeRow.removeClass("bg-[#e8f8f2]");
+      const $prevBtn = $activeRow.find(".editBtn");
+      $prevBtn
+        .removeClass("bg-sea-green-dark1 border-sea-green-dark1")
+        .find("span.font-semibold")
+        .text("Edit");
+      $prevBtn
+        .find("span.material-symbols-outlined")
+        .removeClass("text-white")
+        .addClass("text-sea-green-dark1");
+    }
+
+    // Remove highlight from previous row
+    // $("tbody tr").removeClass("bg-[#e8f8f2]");
+
+    $activeRow = $row;
+
+    const data = getRowData($row);
+
+    // Highlight active row
+    // $row.addClass("bg-[#e8f8f2]");
+
+    // Update Edit button to active state
+    const $btn = $row.find(".editBtn");
+    $btn
+      .addClass("bg-sea-green-dark1 border-sea-green-dark1")
+      .find("span.font-semibold")
+      .text("Editing...");
+    $btn
+      .find("span.material-symbols-outlined")
+      .addClass("text-white")
+      .removeClass("text-sea-green-dark1");
+
+    // Build the edit row and insert it after the clicked row
+    const $editRow = $(buildEditRow(data));
+    $editRow.hide();
+    $row.after($editRow);
+    $editRow.slideDown(220);
+
+    // Scroll into view
+    $editRow[0].scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+
+  // ── Save Changes ─────────────────────────────────────────────────────────
+  $(document).on("click", "#saveEditBtn", function () {
+    if (!$activeRow) return;
+
+    const updatedData = {
+      medicine: $("#editMedicine").val().trim(),
+      dosage: $("#editDosage").val().trim(),
+      method: $("#editMethod").val().trim(),
+      duration: $("#editDuration").val().trim(),
+      instruction: $("#editInstruction").val().trim(),
+    };
+
+    setRowData($activeRow, updatedData);
+
+    // Brief green flash on the saved row
+    // $activeRow.addClass("bg-[#d4f5e5]");
+    // setTimeout(() => $activeRow.removeClass("bg-[#d4f5e5] bg-[#e8f8f2]"), 1200);
+
+    closePanel();
+  });
+
+  // ── Cancel / ✕ close ─────────────────────────────────────────────────────
+  $(document).on("click", "#cancelEditBtn, #closeEditPanel", function () {
+    closePanel();
+  });
+
+  // ── Close helper ─────────────────────────────────────────────────────────
+  function closePanel() {
+    $("#editPanelRow").slideUp(180, function () {
+      $(this).remove();
+    });
+    if ($activeRow) {
+      $activeRow.removeClass("bg-[#e8f8f2]");
+      const $btn = $activeRow.find(".editBtn");
+      $btn
+        .removeClass("bg-sea-green-dark1 border-sea-green-dark1 text-white")
+        .find("span.font-semibold")
+        .text("Edit");
+      $btn
+        .find("span.material-symbols-outlined")
+        .removeClass("text-white")
+        .addClass("text-sea-green-dark1");
+      $activeRow = null;
+    }
+  }
 });

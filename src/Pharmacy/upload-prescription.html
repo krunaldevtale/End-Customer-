@@ -360,7 +360,7 @@
                 </div>
 
                 <div class="mt-6 flex items-start gap-6">
-                    
+
                     <div
                         class="w-[280px] rounded-[14px] p-5 bg-white border border-gray-light-3 shadow-prescriptionbox flex flex-col gap-5">
                         <div class="flex flex-col gap-2">
@@ -419,7 +419,8 @@
                                 <div class="flex flex-col">
                                     <div class="flex items-center gap-1">
                                         <p class="font-bold text-sm text-eerie-black">Dr.Monika</p>
-                                        <div class="w-[14px] h-[14px] rounded-full flex items-center justify-center bg-sea-green-dark1">
+                                        <div
+                                            class="w-[14px] h-[14px] rounded-full flex items-center justify-center bg-sea-green-dark1">
                                             <span class="material-symbols-outlined text-white text-[10px]!">check</span>
                                         </div>
                                     </div>
@@ -431,7 +432,8 @@
                         <div class="flex flex-col gap-2">
                             <p class="text-[11px] font-medium text-muted-silver uppercase">Prescription Date</p>
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-muted-green-tint rounded-[10px] flex items-center justify-center">
+                                <div
+                                    class="w-10 h-10 bg-muted-green-tint rounded-[10px] flex items-center justify-center">
                                     <span class="material-symbols-outlined text-sea-green-dark1">calendar_today</span>
                                 </div>
 
@@ -443,15 +445,269 @@
                         </div>
                     </div>
 
-                    <div class="flex-1 bg-white rounded-[14px] border border-gray-light-3 shadow-prescriptionbox p-6">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 flex items-center justify-center bg-muted-green-tint rounded-full">
-                                    <img src="/assets/img/shield.svg" alt="Shield">
+                    <div class="flex-1  flex-col">
+                        <div
+                            class="flex flex-col bg-white rounded-[14px] border border-gray-light-3 shadow-prescriptionbox">
+                            <div class="flex items-center justify-between p-6 border-b border-gray-50">
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-muted-green-tint rounded-full">
+                                        <img src="/assets/img/shield.svg" alt="Shield">
+                                    </div>
+                                    <p class="font-bold text-xl text-eerie-black">Extracted Medicines (3)</p>
+                                    <div
+                                        class="w-[146px] h-6 flex items-center justify-center bg-pale-emerald border border-spring-green rounded-full">
+                                        <span class="font-semibold text-xs text-forest-teal">AI Analysis Complete</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-6">
+                                    <div class="flex items-center gap-2">
+                                        <input type="checkbox"
+                                            class="accent-sea-green-dark1 cursor-pointer w-[18px] h-[18px]">
+                                        <span class="font-medium text-sm text-gray-dark-2">Select All</span>
+                                    </div>
+
+                                    <a href="cart.html"
+                                        class="w-[163px] h-[45px] flex items-center justify-center rounded-lg bg-sea-green-dark1 text-white font-bold text-base">
+                                        View Cart
+                                    </a>
+                                </div>
+                            </div>
+
+                            <table class="w-full">
+                                <thead class="font-medium text-xs text-muted-silver">
+                                    <th class="p-4"></th>
+                                    <th class="p-4">
+                                        <div class="flex items-center gap-1.5">
+                                            <span>Medicine</span>
+                                            <span class="material-symbols-outlined text-xs! pt-0.5">info</span>
+                                        </div>
+                                    </th>
+                                    <th class="p-4">Dosage</th>
+                                    <th class="p-4">Method</th>
+                                    <th class="p-4">Duration</th>
+                                    <th class="p-4">Instruction</th>
+                                    <th class="p-4">Status</th>
+                                    <th class="p-4">Confidence</th>
+                                    <th class="p-4">Action</th>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="border-b border-gray-50">
+                                        <td class="p-4">
+                                            <input type="checkbox"
+                                                class="w-[18px] h-[18px] cursor-pointer accent-sea-green-dark1">
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex flex-col gap-0.5">
+                                                <p class="font-bold text-[13px] text-eerie-black">Crocin 500mg</p>
+                                                <p class="font-normal text-[11px] text-muted-silver">Paracetamol</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">500 mg</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">Oral</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">5 days</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">After meal</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex items-center justify-center">
+                                                <div
+                                                    class="w-[120px] h-10 flex items-center justify-center rounded-[10px] bg-blush-pink">
+                                                    <span class="font-semibold text-base text-raspberry-pink">Rx
+                                                        Required</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-center flex items-center justify-center">
+                                            <div class="flex items-center gap-1.5 pt-2">
+                                                <div class="w-2 h-2 rounded-full bg-tangerine"></div>
+                                                <span class="font-medium text-sm text-gray-dark-2">82%</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 ">
+                                            <div class="flex items-center justify-center">
+                                                <button
+                                                    class="py-1 px-2.5 flex items-center justify-center gap-1.5 border border-sea-green-dark1 rounded-md cursor-pointer editBtn">
+                                                    <span
+                                                        class="material-symbols-outlined text-sea-green-dark1 text-lg!">edit</span>
+                                                    <span
+                                                        class="font-semibold text-[13px] text-sea-green-dark1">Edit</span>
+                                                </button>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr class="border-b border-gray-50">
+                                        <td class="p-4">
+                                            <input type="checkbox"
+                                                class="w-[18px] h-[18px] cursor-pointer accent-sea-green-dark1">
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex flex-col gap-0.5">
+                                                <p class="font-bold text-[13px] text-eerie-black">Crocin 650mg</p>
+                                                <p class="font-normal text-[11px] text-muted-silver">Paracetamol</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">650 mg</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">Oral</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">3 days</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">After meal</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex items-center justify-center">
+                                                <div
+                                                    class="w-[120px] h-10 flex items-center justify-center rounded-[10px] bg-blush-pink">
+                                                    <span class="font-semibold text-base text-raspberry-pink">Rx
+                                                        Required</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-center flex items-center justify-center">
+                                            <div class="flex items-center gap-1.5 pt-2">
+                                                <div class="w-2 h-2 rounded-full bg-tangerine"></div>
+                                                <span class="font-medium text-sm text-gray-dark-2">78%</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 ">
+                                            <div class="flex items-center justify-center">
+                                                <button
+                                                    class="py-1 px-2.5 flex items-center justify-center gap-1.5 border border-sea-green-dark1 rounded-md cursor-pointer editBtn">
+                                                    <span
+                                                        class="material-symbols-outlined text-sea-green-dark1 text-lg!">edit</span>
+                                                    <span
+                                                        class="font-semibold text-[13px] text-sea-green-dark1">Edit</span>
+                                                </button>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="p-4">
+                                            <input type="checkbox"
+                                                class="w-[18px] h-[18px] cursor-pointer accent-sea-green-dark1">
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex flex-col gap-0.5">
+                                                <p class="font-bold text-[13px] text-eerie-black">Azithromycin</p>
+                                                <p class="font-normal text-[11px] text-muted-silver">Azithromycin</p>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">250 mg</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">Oral</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">3 days</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="border border-dashed border-cloud-gray rounded-sm py-1 px-2">
+                                                <span class="font-medium text-[13px] text-gray-dark-2">Before meal</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex items-center justify-center">
+                                                <div
+                                                    class="w-[120px] h-10 flex items-center justify-center rounded-[10px] bg-[#EDE9FE]">
+                                                    <span class="font-semibold text-base text-[#5B21B6]">NPPA</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-center flex items-center justify-center">
+                                            <div class="flex items-center gap-1.5 pt-2">
+                                                <div class="w-2 h-2 rounded-full bg-sea-green-dark1"></div>
+                                                <span class="font-medium text-sm text-gray-dark-2">91%</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 ">
+                                            <div class="flex items-center justify-center">
+                                                <button
+                                                    class="py-1 px-2.5 flex items-center justify-center gap-1.5 border border-sea-green-dark1 rounded-md cursor-pointer editBtn">
+                                                    <span
+                                                        class="material-symbols-outlined text-sea-green-dark1 text-lg!">edit</span>
+                                                    <span
+                                                        class="font-semibold text-[13px] text-sea-green-dark1">Edit</span>
+                                                </button>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div
+                                class=" border border-spring-green bg-fresh-ivory rounded-[10px] p-4 flex items-center gap-3 m-6">
+                                <div class="bg-muted-green-tint w-8 h-8 rounded-sm flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-sea-green-dark1 text-lg!">save</span>
+                                </div>
+
+                                <div class="flex items-center gap-1.5">
+                                    <p class="font-bold text-xs text-forest-teal">Changes saved automatically</p>
+                                    <div class="w-2 h-2 rounded-full bg-transparent-emerald-green"></div>
+                                    <p class="font-normal text-xs text-forest-teal">All edits are tracked for your
+                                        safety</p>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="mt-8 flex items-center justify-end gap-[54px]">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full flex items-center justify-center bg-muted-green-tint">
+                                    <img src="/assets/img/shield.svg" alt="Shield">
+                                </div>
+                                <div class="flex flex-col">
+                                    <p class="font-bold text-sm text-gray-dark-2">Review complete?</p>
+                                    <p class="font-normal text-xs text-gray-light-9">Continue to compare prices from trusted sellers.</p>
+                                </div>
+                            </div>
+
+                            <a href="cart.html" class="w-[163px] h-[45px] flex items-center justify-center cursor-pointer bg-sea-green-dark1 rounded-xl">
+                                <span class="text-white font-bold text-base">Add to Cart</span>
+                            </a>
+                        </div>
                     </div>
+
+
                 </div>
             </section>
         </div>

@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Searching Pharmacy</title>
+    <title>Order Details</title>
     <link rel="stylesheet" href="/assets/output.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
-<body>
+<body class="no-scrollbar">
     <div class="container  min-h-screen">
         <div class="relative">
             <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
@@ -156,13 +155,395 @@
                 </nav>
             </header>
         </div>
-        <div class="min-h-screen">
-            
+        <div class="pt-[47px] flex flex-col gap-5">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-0.5">
+                    <a href="/index.html" class="font-normal text-base text-gray">Home</a>
+                    <span class="material-symbols-outlined text-dark-charcoal text-xl!">chevron_right</span>
+                    <a href="#" class="font-normal text-base text-gray">Profile</a>
+                    <span class="material-symbols-outlined text-dark-charcoal text-xl!">chevron_right</span>
+                    <a href="#" class="font-normal text-base text-medium-gray">My Order</a>
+                    <span class="material-symbols-outlined text-dark-charcoal text-xl!">chevron_right</span>
+                    <a href="#" class="font-normal text-base text-medium-gray">Order Details</a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined cursor-pointer">calendar_month</span>
+                    <span class="material-symbols-outlined cursor-pointer text-3xl! pt-0.5">close</span>
+                </div>
+            </div>
+
+            <div class="border border-gray-light3 bg-white rounded-xl p-3 flex flex-col gap-4">
+                <div class="border border-gray-light3 rounded-xl p-3">
+                    <div class="flex items-start justify-between">
+                        <div class="flex items-start gap-2.5">
+                            <img src="/assets/img/pharma-img.svg" alt="Pharmacy">
+                            <div class="flex flex-col gap-0.5">
+                                <div class="flex items-center gap-2.5">
+                                    <p class="font-semibold text-base text-gray">Pharmacy #1234 </p>
+                                    <img src="/assets/img/quick-delivery.svg" alt="Badge">
+                                </div>
+
+                                <div class="flex items-center gap-0.5">
+                                    <p class="font-normal text-xs text-dark-gray">4.3</p>
+                                    <img src="/assets/img/star.svg" alt="Star">
+                                    <img src="/assets/img/star.svg" alt="Star">
+                                    <img src="/assets/img/star.svg" alt="Star">
+                                    <img src="/assets/img/star.svg" alt="Star">
+                                    <img src="/assets/img/star.svg" alt="Star">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-normal text-base">Order #R32512</p>
+                    </div>
+
+                    <div class="flex flex-col  pt-1.5">
+                        <div class="flex items-center justify-between">
+                            <p class="font-normal text-xs text-smoky-blue-gray">Placed today at - 03:43 PM</p>
+                            <p class="font-normal text-xs text-gray">Item X4</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="font-normal text-xs text-smoky-blue-gray">6km away</p>
+                            <div class="gap-2 flex items-center">
+                                <span class="material-symbols-outlined text-smoky-blue-gray text-lg!">schedule</span>
+                                <p class="font-semibold text-sm text-gray">4 hours</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="font-normal text-xs text-smoky-blue-gray">Price</p>
+                            <div class="flex items-center gap-2">
+                                <p class="font-normal text-sm text-smoky-blue-gray line-through">$640</p>
+                                <p class="font-semibold text-sm text-sea-green-dark1">$384</p>
+                                <p class="font-normal text-xs text-gray">GST $40</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2 px-[34px] pt-6">
+                                <div class="w-2 h-2 rounded-full bg-sea-green-dark1"></div>
+                                <div class="w-[84px] h-0.5 bg-sea-green-dark1"></div>
+                                <div class="w-2 h-2 rounded-full bg-sea-green-dark1"></div>
+                                <div class="w-[84px] h-0.5 bg-sea-green-dark1"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-light1"></div>
+                                <div class="w-[84px] h-0.5 bg-gray-light1"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-light1"></div>
+                                <div class="w-[84px] h-0.5 bg-gray-light1"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-light1"></div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <p class="font-semibold text-sm text-gray">Order Placed</p>
+                                <p class="font-semibold text-sm text-gray">Confirmed</p>
+                                <p class="font-semibold text-sm text-gray-light1">Packed</p>
+                                <p class="font-semibold text-sm text-gray-light1">Shipped</p>
+                                <p class="font-semibold text-sm text-gray-light1">Delivered</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2.5 pt-6">
+                            <button
+                                class="w-[154px] h-10 rounded-md border border-gray-light3 flex items-center justify-center gap-1.5 cursor-pointer">
+                                <span class="material-symbols-outlined text-lg!">arrows_output</span>
+                                <p class="font-normal text-xs text-gray">Directions</p>
+                            </button>
+
+                            <button
+                                class="w-[154px] h-10 rounded-md border border-gray-light3 flex items-center justify-center gap-1.5 cursor-pointer">
+                                <span class="material-symbols-outlined text-lg!">share</span>
+                                <p class="font-normal text-xs text-gray">Share</p>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-end gap-2.5 mt-2">
+                        <button
+                            class="w-[233px] h-12 rounded-md border border-sea-green-dark1 flex items-center justify-center gap-2 bg-mint-cream cursor-pointer">
+                            <span class="font-medium text-sm text-gray max-w-[166px] text-left">Get QR Pay via UPI
+                                confirm
+                                delivery</span>
+                            <img src="/assets/img/upi.svg" alt="">
+                        </button>
+
+                        <button
+                            class="w-[233px] h-12 rounded-md border border-sea-green-dark1 flex items-center justify-center gap-2 bg-mint-cream cursor-pointer">
+                            <span class="font-medium text-sm text-gray max-w-[166px] text-left">Pay via payment
+                                gateway confirm
+                                delivery</span>
+                            <span class="material-symbols-outlined text-sea-green-dark1">currency_rupee_circle</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="border border-gray-light3 rounded-xl">
+                    <div class="bg-mist-white py-2.5 px-4 rounded-tr-xl rounded-tl-xl flex items-center gap-2 border-b border-gray-light3">
+                        <span class="material-symbols-outlined">apartment</span>
+                        <p class="font-semibold text-base text-gray">Delivery Address</p>
+                    </div>
+                    <div class="py-3 px-4 flex flex-col gap-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-[34px]">
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-gray-dark-1 text-lg!">person</span>
+                                    <p class="font-normal text-sm text-gray">Name</p>
+                                </div>
+                                <p class="font-normal text-sm text-gray-dark-1 pl-3.5">:</p>
+                            </div>
+
+                            <p class="font-normal text-sm text-gray">Alexa Smith</p>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-[34px]">
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-gray-dark-1 text-lg!">call</span>
+                                    <p class="font-normal text-sm text-gray">Phone</p>
+                                </div>
+                                <p class="font-normal text-sm text-gray-dark-1 pl-3">:</p>
+                            </div>
+
+                            <p class="font-normal text-sm text-gray">+100 12457896</p>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-[34px]">
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-gray-dark-1 text-lg!">globe_location_pin</span>
+                                    <p class="font-normal text-sm text-gray">Address</p>
+                                </div>
+                                <p class="font-normal text-sm text-gray-dark-1">:</p>
+                            </div>
+
+                            <p class="font-normal text-sm text-gray">California City, USA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-light3 rounded-xl mt-5 overflow-hidden">
+                    <!-- Header -->
+                    <button
+                        class="w-full flex justify-between items-center px-5 py-4 text-gray text-base font-semibold border-b border-gray-200">
+
+                        <span>Order Summary</span>
+
+                        <span class="material-symbols-outlined text-[22px]">
+                            keyboard_arrow_down
+                        </span>
+
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 py-4 text-base font-bold text-dark-gray hidden">
+                    <span>
+                        You have completed appointment
+                    </span>
+                    <span class="material-symbols-outlined text-sea-green-dark1 text-[18px]">
+                        thumb_up
+                    </span>
+                </div>
+
+                <!-- Reviews Div -->
+                <div class="bg-white border border-gray-light3 rounded-xl mt-5 hidden">
+
+                    <div class="px-5 py-4">
+
+                        <!-- Review Heading -->
+                        <h4 class="text-gray text-base  font-semibold mb-5">
+                            Reviews
+                        </h4>
+
+                        <!-- No Show -->
+                        <div class="flex items-center justify-between mb-5">
+
+                            <p class="text-base font-semibold text-gray">
+                                Mark as “No show”
+                            </p>
+
+                            <div class="w-5 h-5 rounded-full border-2 border-gray">
+                            </div>
+
+                        </div>
+
+                        <!-- Rating -->
+                        <div class="flex items-center justify-between mb-5">
+
+                            <p class="text-base font-semibold text-gray">
+                                Rate your experience
+                            </p>
+
+                            <div class="flex items-center gap-1">
+
+                                <span class="material-symbols-outlined text-ochre-yellow1 text-[20px]">
+                                    star
+                                </span>
+
+                                <span class="material-symbols-outlined text-ochre-yellow1 text-[20px]">
+                                    star
+                                </span>
+
+                                <span class="material-symbols-outlined text-ochre-yellow1 text-[20px]">
+                                    star
+                                </span>
+
+                                <span class="material-symbols-outlined text-gray text-[20px]">
+                                    star
+                                </span>
+
+                                <span class="material-symbols-outlined text-gray text-[20px]">
+                                    star
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Comments -->
+                        <div class="flex items-center gap-3">
+
+                            <label class="text-base font-semibold text-gray shrink-0">
+                                Comments
+                            </label>
+
+                            <div class="relative w-full">
+
+                                <input type="text"
+                                    class="w-full h-10 rounded-xl border border-gray-200 bg-gray-50 px-4 outline-none focus:border-teal-500" />
+
+                            </div>
+
+                            <!-- Submit -->
+                            <button class="text-sea-green-dark1">
+
+                                <span class="material-symbols-outlined text-[28px]">
+                                    input
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Credit -->
+                <div class=" text-dark-gray text-base font-medium flex items-center gap-2 flex-wrap">
+
+                    <span>
+                        Congratulations!
+                    </span>
+
+                    <span class="text-sea-green-dark1 font-medium text-base">
+                        234
+                    </span>
+
+                    <span>
+                        Credit points to be credited
+                    </span>
+
+                    <!-- Coin Image -->
+                    <img src="/assets/img/appointments/dollar.svg" alt="coin" class="w-5 h-5 object-contain" />
+
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row justify-end gap-5 mt-8 ">
+
+                    <button class="border border-sea-green2 text-sea-green2 px-20 py-3 rounded-xl text-base font-bold ">
+                        Cancel
+                    </button>
+
+                    <button 
+                        class="cursor-pointer bg-sea-green2 text-white px-20 py-3 rounded-xl text-base font-bold flex items-center justify-center text-center">
+
+                        Order History
+
+                    </button>
+
+                </div>
+
+                <!-- Help Box -->
+                <div class="bg-white border border-gray-light3 rounded-2xl p-5 mt-8 flex items-center gap-4">
+
+                    <!-- Call Icon -->
+                    <div
+                        class="w-12 h-12 rounded-full border border-light-sea-green3  bg-transparent-light-sea-green1 flex items-center justify-center">
+
+                        <span class="material-symbols-outlined text-[24px]">
+                            call
+                        </span>
+
+                    </div>
+
+                    <!-- Text -->
+                    <div>
+
+                        <p class="text-base font-normal text-gray-dark-1">
+                            Need help with anything ?
+                        </p>
+
+                        <p class="font-semibold text-base text-gray mt-1">
+                            Call: (239) 555-0108
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Refer Banner -->
+                <div
+                    class="my-8 rounded-2xl overflow-hidden bg-gradient-to-r from-[#52d6b4] to-[#38b2ac] px-4 sm:px-6 py-5 relative mt-8">
+
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+
+                        <!-- Left Section -->
+                        <div class="flex items-start gap-3 relative pl-4 sm:pl-6">
+
+                            <!-- Small Side Image -->
+                            <img src="/assets/img/appointments/half-dollar.svg" alt="refer"
+                                class="w-8 h-8 sm:w-10 sm:h-10 object-contain absolute left-0 sm:-left-2 top-0" />
+
+                            <!-- Text -->
+                            <div class="text-white">
+
+                                <h3 class="text-lg font-bold">
+                                    Refer and Earn
+                                </h3>
+
+                                <p class="mt-1 text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
+                                    Invite family and friends to
+                                    earn cashbacks
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Center Button -->
+                        <button
+                            class="border border-white text-white px-24 sm:px-16 lg:px-24 py-2 rounded-full font-bold text-sm sm:text-base lg:text-lg bg-sea-green-dark1  sm:w-fit">
+
+                            Invite Now
+
+                        </button>
+
+                        <!-- Right Image -->
+                        <div class="flex justify-center lg:justify-end">
+                            <img src="/assets/img/appointments/refer-earn-banner.svg" alt="refer illustration"
+                                class="w-20 h-16 sm:w-24 sm:h-20 object-contain shrink-0" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
 </body>
 
 </html>
