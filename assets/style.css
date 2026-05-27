@@ -70,7 +70,9 @@
   --color-ocean-slate: #02475B;
   --color-emerald-veil: #1A7A5E40;
   --color-sun-yellow: #FC9916;
-  /* Box Shadow */
+  --color-gray-light-13: #D1D5DB;
+  --color-purple-5:#EDE9FE;
+    /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
   --box-shadow-2: 0 12px 24px -4px rgba(145, 158, 171, 0.12);
 
@@ -191,7 +193,17 @@
   --color-gray-light-10: #99A1AF;
   --color-blue-light-1: #EBF2FF;
   --color-blue-light-2: #B5CDF7;
-
+  --color-gray-light-11: #111827;
+  --color-orange-light: #FFF7ED;
+  --color-orange-light-2: #FED7AA;
+  --color-orange-light-3: #92400E;
+  --color-gray-light-12: #9CA3AF;
+  --color-mint-cream-1: #1A7A5E1A;
+  --color-mint-cream-2: #D1FAE5;
+  --color-mint-cream-3: #065F46;
+  --color-white-4d: #F9FAFB4D;
+  --color-green-light-6: #F0FDF4;
+  --color-green-light-7: #BBF7D0;
   --gradient-primary: linear-gradient(101.19deg, #088178 7.07%, #238B6D 104.98%);
   --gradient-yellow: linear-gradient(90deg, #EAA91F 0%, rgba(234, 169, 31, 0) 97.57%);
   --gradient-auth-popup: linear-gradient(135deg, #138A72 0%, #0D9488 100%);
@@ -222,6 +234,8 @@
   --shadow-auth-popup-inset: 0px 2px 4px 1px #0000000D inset;
   --shadow-auth-button: 0px 20px 25px -5px #004F3B33;
   --shadow-box-1: 0px 4px 0px 0px #E6EBF4;
+  --shadow-box-2: 0px 1px 3px 0px #0000001A;
+  --shadow-box-3: 0px 1px 4px 0px #0000000A;
 
 
   /* Font Size and Font Weight */
