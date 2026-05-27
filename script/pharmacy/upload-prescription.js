@@ -810,7 +810,8 @@ $(document).ready(function () {
       $prevBtn
         .removeClass("bg-sea-green-dark1 border-sea-green-dark1")
         .find("span.font-semibold")
-        .text("Edit");
+        .text("Edit")
+        .removeClass('text-white')
       $prevBtn
         .find("span.material-symbols-outlined")
         .removeClass("text-white")
@@ -832,7 +833,8 @@ $(document).ready(function () {
     $btn
       .addClass("bg-sea-green-dark1 border-sea-green-dark1")
       .find("span.font-semibold")
-      .text("Editing...");
+      .text("Editing...")
+      .addClass('text-white')
     $btn
       .find("span.material-symbols-outlined")
       .addClass("text-white")
@@ -885,7 +887,8 @@ $(document).ready(function () {
       $btn
         .removeClass("bg-sea-green-dark1 border-sea-green-dark1 text-white")
         .find("span.font-semibold")
-        .text("Edit");
+        .text("Edit")
+        .removeClass('text-white')
       $btn
         .find("span.material-symbols-outlined")
         .removeClass("text-white")

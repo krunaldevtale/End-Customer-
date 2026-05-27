@@ -1,6 +1,13 @@
 $(document).ready(function () {
   (function () {
-    const statusEl = document.getElementById("map-status");
+    function hideOverlay() {
+      const overlay = document.getElementById("searchingOverlay");
+      if (overlay) {
+        overlay.style.transition = "opacity 0.6s ease";
+        overlay.style.opacity = "0";
+        setTimeout(() => (overlay.style.display = "none"), 600);
+      }
+    }
 
     const pharmacyIcon = L.divIcon({
       className: "",
@@ -40,16 +47,15 @@ $(document).ready(function () {
           '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(map);
 
-      // User location marker
       L.marker([lat, lng], { icon: userIcon })
         .addTo(map)
         .bindPopup("<b>Your location</b>")
         .openPopup();
 
-      // Fetch pharmacies via Overpass API (1.5km radius)
-      const radius = 1500;
-      statusEl.textContent = "Searching for nearby pharmacies...";
+      // Fallback: hide overlay after 10s no matter what
+      setTimeout(hideOverlay, 10000);
 
+      const radius = 1500;
       const query = `[out:json][timeout:25];
       (node["amenity"="pharmacy"](around:${radius},${lat},${lng});
        way["amenity"="pharmacy"](around:${radius},${lat},${lng}););
@@ -83,35 +89,31 @@ $(document).ready(function () {
             const dist = Math.round(getDistance(lat, lng, elLat, elLng));
 
             const popup = `
-            <div style="min-width:180px;">
-              <b>💊 ${name}</b><br>
-              <small>${addr}</small><br>
-              ${phone ? `📞 <small>${phone}</small><br>` : ""}
-              ${opening ? `🕐 <small>${opening}</small><br>` : ""}
-              ${website ? `<a href="${website}" target="_blank">Visit website</a><br>` : ""}
-              <small style="color:#888;">~${dist}m away</small>
-            </div>`;
+              <div style="min-width:180px;">
+                <b>💊 ${name}</b><br>
+                <small>${addr}</small><br>
+                ${phone ? `📞 <small>${phone}</small><br>` : ""}
+                ${opening ? `🕐 <small>${opening}</small><br>` : ""}
+                ${website ? `<a href="${website}" target="_blank">Visit website</a><br>` : ""}
+                <small style="color:#888;">~${dist}m away</small>
+              </div>`;
 
             L.marker([elLat, elLng], { icon: pharmacyIcon })
               .addTo(map)
               .bindPopup(popup);
           });
 
-          statusEl.textContent = `Found ${elements.length} pharmacies within 1.5km.`;
+          hideOverlay(); // ✅ hide on success
         })
         .catch(() => {
-          statusEl.textContent = "Could not load pharmacy data.";
+          hideOverlay(); // ✅ hide on error
         });
     }
 
-    // Get user location, fallback to Bengaluru
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (pos) => initMap(pos.coords.latitude, pos.coords.longitude),
-        () => {
-          statusEl.textContent = "Location denied — using default.";
-          initMap(12.9716, 77.5946);
-        },
+        () => initMap(12.9716, 77.5946),
         { timeout: 8000 },
       );
     } else {
