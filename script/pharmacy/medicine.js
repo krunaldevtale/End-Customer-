@@ -417,3 +417,106 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+
+// =========================================================
+// CUSTOM SORT DROPDOWN
+// =========================================================
+
+const customSortDropdownBtn =
+    document.querySelector(".custom-sort-dropdown-btn");
+
+const customSortDropdownMenu =
+    document.querySelector(".custom-sort-dropdown-menu");
+
+const customSortSelectedText =
+    document.querySelector(".custom-sort-selected-text");
+
+const customSortItems =
+    document.querySelectorAll(".custom-sort-item");
+
+
+// TOGGLE
+customSortDropdownBtn.addEventListener("click", function (e) {
+
+    e.stopPropagation();
+
+    customSortDropdownMenu.classList.toggle("hidden");
+
+});
+
+
+// SELECT
+customSortItems.forEach(item => {
+
+    item.addEventListener("click", function () {
+
+        const selectedValue =
+            this.dataset.value;
+
+        customSortSelectedText.textContent =
+            selectedValue;
+
+        customSortDropdownMenu.classList.add("hidden");
+
+    });
+
+});
+
+
+// =========================================================
+// CUSTOM FILTER DROPDOWN
+// =========================================================
+
+const customFilterDropdownBtn =
+    document.querySelector(".custom-filter-dropdown-btn");
+
+const customFilterDropdownMenu =
+    document.querySelector(".custom-filter-dropdown-menu");
+
+const customFilterSelectedText =
+    document.querySelector(".custom-filter-selected-text");
+
+const customFilterItems =
+    document.querySelectorAll(".custom-filter-item");
+
+
+// TOGGLE
+customFilterDropdownBtn.addEventListener("click", function (e) {
+
+    e.stopPropagation();
+
+    customFilterDropdownMenu.classList.toggle("hidden");
+
+});
+
+
+// SELECT
+customFilterItems.forEach(item => {
+
+    item.addEventListener("click", function () {
+
+        const selectedValue =
+            this.textContent.trim();
+
+        customFilterSelectedText.textContent =
+            selectedValue;
+
+        customFilterDropdownMenu.classList.add("hidden");
+
+    });
+
+});
+
+
+// =========================================================
+// CLOSE ON OUTSIDE CLICK
+// =========================================================
+
+document.addEventListener("click", function () {
+
+    customSortDropdownMenu.classList.add("hidden");
+
+    customFilterDropdownMenu.classList.add("hidden");
+
+});
