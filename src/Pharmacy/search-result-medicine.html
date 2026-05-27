@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Material Symbols Outlined -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:FILL@0..1" />
+</head>
+
+<body class="no-scrollbar">
+    <main>
+
+        <div class="relative ">
+            <header
+                class="nav-menu px-4 sm:px-6 lg:px-10 xl:px-20 py-2 flex items-center justify-between relative z-10 w-full">
+                <div class="max-w-[150px] max-h-10">
+                    <a href="home.html"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+                </div>
+                <nav class="">
+                    <div class="">
+                        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                        <ul id="menu" class="hidden md:flex space-x-6 items-center">
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Home
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Medicine
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Maps
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a class="flex items-center focus:outline-none">
+                                    Services
+                                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </a>
+                                <!-- Submenu -->
+                                <ul
+                                    class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web
+                                            Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="/src/records.html" class="">Records</a></li>
+                            <li><a href="./rewards.html" class="">Rewards</a></li>
+                            <li><a href="#" class="">Support</a></li>
+                            <li><a href="#" class="flex items-center gap-2"><i class="fa-regular fa-user"></i><span
+                                        class="text-[#238b6d]">Login/Sign Up</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
+                        <li><a href="#" class="block">Home</a></li>
+                        <li><a href="#" class="block">About</a></li>
+                        <li>
+                            <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
+                                Services
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                                <li>
+                                    <a href="#" class="block hover:text-gray-300">Web Design</a>
+                                </li>
+                                <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                                <li>
+                                    <a href="#" class="block hover:text-gray-300">Consulting</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="">Records</a></li>
+                        <li><a href="rewards.html" class="">Rewards</a></li>
+                        <li><a href="#" class="">Support</a></li>
+                        <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="w-full max-w-full  bg-ice-gray pb-10 ">
+
+            <!-- Breadcrumb -->
+            <div class="px-4 sm:px-6 lg:px-12 xl:px-24 pt-10">
+
+                <div class="flex items-center gap-2 text-sm font-normal">
+
+                    <a href="/index.html" class="text-light-blackk hover:text-bright-green transition-all">
+                        Home
+                    </a>
+
+
+
+                    <span class="material-symbols-outlined">
+                        chevron_forward
+                    </span>
+
+                    <span class="text-bright-green  text-sm font-normal">
+                        Oziva
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Top Bar -->
+            <div class="mt-5">
+
+                <div
+                    class="flex items-center justify-between gap-5 px-4 sm:px-6 lg:px-12 xl:px-24 flex-wrap lg:flex-nowrap">
+
+                    <!-- LEFT -->
+                    <div class="flex items-center gap-4">
+
+                        <!-- Location Dropdown -->
+                        <div class="relative" id="locationSelect">
+
+                            <div id="locationDropdownBtn"
+                                class="flex items-center gap-2 bg-white h-12 min-w-[170px] justify-between px-4 rounded-xl primary-box-shadow cursor-pointer border border-gray-200 shadow-sm">
+
+                                <!-- Left -->
+                                <div class="flex items-center gap-2">
+
+                                    <span class="material-symbols-outlined text-gray-500 text-[16px]">
+                                        add_location
+                                    </span>
+
+                                    <span id="selectedLocation"
+                                        class="font-medium text-[#0f172a] text-sm whitespace-nowrap">
+
+                                        New York, USA
+
+                                    </span>
+
+                                </div>
+
+                                <!-- Arrow -->
+                                <i class="fas fa-caret-down text-gray-400 text-sm"></i>
+
+                            </div>
+
+                            <!-- Dropdown -->
+                            <div id="locationDropdownMenu"
+                                class="absolute left-0 mt-2 w-full bg-white border border-gray-200 rounded-xl shadow-lg hidden z-100 overflow-hidden">
+
+                                <div class="py-1">
+
+                                    <div data-value="New York, USA"
+                                        class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                        New York, USA
+                                    </div>
+
+                                    <div data-value="Los Angeles, CA"
+                                        class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                        Los Angeles, CA
+                                    </div>
+
+                                    <div data-value="Chicago, IL"
+                                        class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                        Chicago, IL
+                                    </div>
+
+                                    <div data-value="Miami, FL"
+                                        class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                        Miami, FL
+                                    </div>
+
+                                    <div data-value="Houston, TX"
+                                        class="dropdown-item px-4 py-3 cursor-pointer hover:bg-powder-aqua text-sm">
+                                        Houston, TX
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CENTER SEARCH -->
+                    <div class="flex-1 flex justify-center">
+
+                        <div class="w-full max-w-2xl rounded-xl primary-box-shadow">
+
+                            <div class="relative bg-white rounded-xl border border-gray-200 shadow-sm">
+
+                                <!-- Input -->
+                                <input id="searchInput" type="text"
+                                    placeholder="I want to search for Medicine, Brands, Doctor, Pharmacy, etc."
+                                    class="w-full pl-5 pr-24 py-4 rounded-xl focus:outline-none text-base placeholder:text-[#9CA3AF]" />
+
+                                <!-- Mic -->
+                                <span
+                                    class="material-symbols-outlined absolute right-14 top-1/2 -translate-y-1/2 text-[#6B7280] text-[22px] cursor-pointer">
+
+                                    mic
+
+                                </span>
+
+                                <!-- Camera -->
+                                <span
+                                    class="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-[#6B7280] text-[22px] cursor-pointer">
+
+                                    photo_camera
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="flex items-center gap-5">
+
+
+                        <!-- Notification -->
+                        <button
+                            class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center cursor-pointer shadow-sm hover:shadow-md transition-all">
+
+                            <img src="/assets/img/notification-icon.svg" alt="notification" class="w-5 h-5">
+
+                        </button>
+
+                        <!-- Cart -->
+                        <a href="/src/Pharmacy/cart.html">
+
+                            <button
+                                class="w-12 h-12 rounded-xl bg-white border border-gray-200 flex items-center justify-center cursor-pointer shadow-sm hover:shadow-md transition-all">
+
+                                <img src="/assets/img/shopping-cart.svg" alt="Cart" class="w-5 h-5">
+
+                            </button>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Hospital Near Section -->
+        <section class="px-4 sm:px-6 lg:px-10 xl:px-14 py-10 mt-10">
+
+            <!-- Heading -->
+            <div class="mb-6">
+                <div class="flex items-center justify-between gap-4 flex-wrap">
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">
+                        Popular Medicines
+                    </h2>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Cards -->
+
+            <div class="mt-4 max-h-[950px] overflow-y-auto pr-2">
+
+                <!-- RESPONSIVE WRAPPER -->
+                <div class="overflow-x-auto xl:overflow-visible scrollbar-hide">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-4">
+
+                        <!-- CARD -->
+                         <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+
+                        <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+                         <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+                         <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+                          <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="w-full h-7 bg-[#F3F4F6]"></div>
+
+
+        <!--Payment Partner Offers and Our Blog-->
+        <section class="bg-ice-gray px-14 py-14 space-y-28">
+            <div>
+                <div class="flex justify-between items-center mb-4">
+                    <h1 class="font-bold text-xl md:text-3xl text-charcoal-black">Payment Partner Offers</h1>
+                    <a href="#"
+                        class="text-sea-green-deep font-bold text-lg md:text-xl border-b-2 border-sea-green-deep">View
+                        All</a>
+                </div>
+
+                <div class="custom-hr"></div>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+                    <!-- Card Start -->
+                    <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                            <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                        </div>
+
+                        <div class="flex-1">
+                            <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                            <div class="flex items-center justify-between mt-1">
+                                <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                            </div>
+
+                            <div class="flex items-center justify-start mt-2 gap-3">
+                                <span class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                <button class="cursor-pointer">
+                                    <img src="/assets/img/copy-icon.svg" alt="copy">
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                            <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                        </div>
+
+                        <div class="flex-1">
+                            <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                            <div class="flex items-center justify-between mt-1">
+                                <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                            </div>
+
+                            <div class="flex items-center justify-start mt-2 gap-3">
+                                <span class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                <button class="cursor-pointer">
+                                    <img src="/assets/img/copy-icon.svg" alt="copy">
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                            <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                        </div>
+
+                        <div class="flex-1">
+                            <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                            <div class="flex items-center justify-between mt-1">
+                                <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                            </div>
+
+                            <div class="flex items-center justify-start mt-2 gap-3">
+                                <span class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                <button class="cursor-pointer">
+                                    <img src="/assets/img/copy-icon.svg" alt="copy">
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-sea-green-deep flex items-center justify-center text-white font-bold">
+                            <img src="/assets/img/ticket-coupon.svg" alt="coupon">
+                        </div>
+
+                        <div class="flex-1">
+                            <p class="text-base font-semibold text-gray-700">50% OFF UP TO</p>
+                            <div class="flex items-center justify-between mt-1">
+                                <p class="text-sm font-normal mt-1 text-gray-500">Save $120 Using Code</p>
+                                <span class="text-sea-green-deep text-base font-bold">$120 </span>
+                            </div>
+
+                            <div class="flex items-center justify-start mt-2 gap-3">
+                                <span class="bg-golden-yellow text-xs px-3 py-1 rounded-md font-bold">WELCOME50</span>
+                                <button class="cursor-pointer">
+                                    <img src="/assets/img/copy-icon.svg" alt="copy">
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+        <!--Local Medicine Hub-->
+
+        <section class="bg-ice-gray p-5  md:p-20">
+
+            <!-- Heading -->
+            <div class=" mx-auto  mb-12">
+                <h1
+                    class="font-bold text-[44px] leading-[56px] tracking-[-1.12px] text-center text-gray-dark font-inter">
+                    Your local medicine hub — compare offers, find the best prices, and get care from trusted
+                    pharmacies, all from home.
+                </h1>
+
+            </div>
+
+            <!-- Stats Row -->
+            <div class="mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                <!-- Stat 1 -->
+                <div>
+                    <h3 class="count text-[77.5px] leading-[64px] tracking-normal text-center font-bold text-gray-dark font-inter"
+                        data-target="55">0</h3>
+
+                    <p class="text-base font-semibold text-gray-dark mt-1">cities</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div>
+                    <h3 class="count font-bold text-[77.5px] leading-[64px] text-center align-middle font-inter text-gray-dark"
+                        data-target="2">0</h3>
+
+                    <p class="text-base font-semibold text-gray-dark mt-1">countries</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div>
+                    <div class="flex items-center justify-center">
+                        <h3 class="count font-bold text-[56px] md:text-[64px] lg:text-[77.5px] leading-[48px] md:leading-[56px] lg:leading-[64px] text-center align-middle font-inter text-gray-dark"
+                            data-target="10">0</h3>
+                        <span
+                            class="ml-1 font-bold text-[56px] md:text-[64px] lg:text-[77.5px] leading-[48px] md:leading-[56px] lg:leading-[64px] text-center align-middle font-inter text-gray-dark">+</span>
+                    </div>
+
+
+                    <p class="text-base font-semibold text-gray-dark mt-1">million app downloads</p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+        <footer>
+            <!-- Top Footer Content -->
+            <div
+                class="bg-footer-green px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+                <!-- Logo & Contact -->
+                <div class="flex flex-col gap-3.5">
+                    <a href="#">
+                        <img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" />
+                    </a>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Phone:
+                            <span class="text-dim-gray text-15-normal">(+123) 456-7898</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Email:
+                            <span class="text-dim-gray text-15-normal">hello@drodo.com</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Address:
+                            <span class="text-dim-gray text-15-normal">6890 Blvd, The Bronx, NY 1058, USA</span>
+                        </h3>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex gap-3 flex-wrap">
+                        <a href="#"><img src="/assets/img/facebook-icon.svg" alt="facebook-icon" /></a>
+                        <a href="#"><img src="/assets/img/twitter-icon.svg" alt="twitter-icon" /></a>
+                        <a href="#"><img src="/assets/img/Instagram-icon.svg" alt="Instagram-icon" /></a>
+                        <a href="#"><img src="/assets/img/linkdin-icon.svg" alt="linkdin-icon" /></a>
+                        <a href="#"><img src="/assets/img/Pinterest-icon.svg" alt="Pinterest-icon" /></a>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Information</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Customer Care -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Customer Care</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Help & FAQs</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Policy -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Policy</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Purchasing Policy</a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter -->
+                <nav class="flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Newsletter</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <p class="text-15-normal text-dim-gray">
+                        Sign up for our mailing list to get the latest updates & offers.
+                    </p>
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Enter your email address"
+                            class="h-[50px] w-full py-3 px-4 text-muted-gray placeholder:text-muted-gray focus:outline-none focus:ring-0 rounded border border-light-gray text-15-normal" />
+                        <button
+                            class="w-full py-3 px-6 flex items-center justify-center rounded bg-sea-green-deep text-15-semibold text-white hover:opacity-90 transition cursor-pointer">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Bottom Footer Strip -->
+            <div class="bg-footer-green py-6 px-6 sm:px-10 md:px-16 xl:px-20 w-full">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                    <p class="text-dim-gray text-15-normal">
+                        @ Avatar. Designed By Aibuzz
+                    </p>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <p class="text-dim-gray text-15-normal">
+                            We accept payment via:
+                        </p>
+                        <div class="flex items-center flex-wrap gap-2 sm:gap-[10px] justify-center sm:justify-start">
+                            <img src="/assets/img/payment-via-1.png" alt="payment-1" class="h-6" />
+                            <img src="/assets/img/payment-via-5.png" alt="payment-2" class="h-6" />
+                            <img src="/assets/img/payment-via-4.png" alt="payment-3" class="h-6" />
+                            <img src="/assets/img/payment-via-3.png" alt="payment-4" class="h-6" />
+                            <img src="/assets/img/payment-via-2.png" alt="payment-5" class="h-6" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <script>
+        const faqButtons = document.querySelectorAll(".faq-btn");
+
+        faqButtons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector(".arrow");
+
+                // Close all others
+                document.querySelectorAll(".faq-content").forEach((item) => {
+                    if (item !== content) {
+                        item.classList.add("hidden");
+                    }
+                });
+
+                document.querySelectorAll(".arrow").forEach((icon) => {
+                    if (icon !== arrow) {
+                        icon.style.transform = "rotate(0deg)";
+                    }
+                });
+
+                // Toggle current
+                content.classList.toggle("hidden");
+
+                if (!content.classList.contains("hidden")) {
+                    arrow.style.transform = "rotate(90deg)";
+                } else {
+                    arrow.style.transform = "rotate(0deg)";
+                }
+
+            });
+
+        });
+
+        // Counter animation
+
+        document.querySelectorAll('.count').forEach((counter) => {
+            const target = +counter.getAttribute('data-target');
+            const duration = 2000; // total time in milliseconds
+            const steps = target; // steps = target number (e.g., count to 2 in 2 steps)
+            const incrementTime = duration / steps;
+
+            let current = 0;
+
+            const updateCount = () => {
+                current++;
+                counter.innerText = current;
+
+                if (current < target) {
+                    setTimeout(updateCount, incrementTime);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/script/map.js"></script>
+    <script src="/script/pharmacy/medicine.js"></script>
+    <script src="/script/main.js"></script>
+
+
+</body>
+
+</html>
