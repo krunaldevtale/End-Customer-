@@ -376,6 +376,9 @@ $(document).ready(function () {
 
   // Set monthly as default active
   setActiveBtn($(".monthlyBtn")[0], $(".dailyBtn")[0]);
+
+
+  
 });
 
 function showPreview(file) {
@@ -430,7 +433,7 @@ $.getScript("https://cdn.jsdelivr.net/npm/flatpickr", function () {
 });
 
 
-
+// --------------------------------------
 
 
 

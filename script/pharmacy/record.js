@@ -1,177 +1,65 @@
- <section class="bg-white min-h-screen px-4 md:px-6 lg:px-20 py-4 md:py-5 font-sans">
-            <!-- Breadcrumb + Close -->
-            <div class="flex flex-wrap justify-between items-center gap-3 mb-6">
-                <div class="flex items-center gap-1 text-xs md:text-[16px] font-medium flex-wrap">
-                    <a href="home.html" class="text-gray hover:text-teal-700">Home</a><span class="text-gray-400">&gt;</span>
-                    <a href="#" class="text-gray hover:text-teal-700">Profile</a><span class="text-gray-400">&gt;</span>
-                    <a href="appointments.html" class="text-gray3 hover:text-teal-700">Appointment</a><span
-                        class="text-gray-400">&gt;</span>
-                    <span class="text-gray3 font-medium">Order History</span>
-                </div>
-                <button class="text-gray-800 hover:text-black transition flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-9 md:h-9" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
 
-            <!-- Header Actions -->
-            <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 gap-4">
-                <h2 class="text-[24px] font-semibold text-gray">Order Details</h2>
-                <div class="flex flex-wrap items-center gap-3">
-                    <div class="relative w-full sm:w-auto">
-                        <input type="text" placeholder="Search by name or categories" id="searchInput"
-                            class="w-full sm:w-[260px] md:w-[380px] bg-white border border-gray-200 rounded-md py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
-                    <button
-                        class="flex items-center gap-1 border border-teal-700 text-sea-green2 rounded-md px-3 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-medium hover:bg-teal-700 hover:text-white transition"><svg
-                            xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 md:w-4 md:h-4" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M19 9l-7 7-7-7" />
-                        </svg>Filter</button>
-                    <button
-                        class="view-btn flex items-center gap-1 border border-teal-700 text-sea-green2 rounded-md px-3 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-medium hover:bg-teal-700 hover:text-white transition">
+         (function() {
+        const dashboard = document.getElementById('dashboardContent');
+        const orderSection = document.getElementById('orderDetailsSection');
+        const footer = document.querySelector('footer'); // footer select karo
+        const searchBtn = document.getElementById('searchDashboardBtn');
+        const closeBtn = document.getElementById('closeOrderDetailsBtn');
 
-                        <img src="/assets/img/file_export.svg" alt="" class="view-icon transition duration-200">
+        function showOrderDetails() {
+            if (dashboard) dashboard.style.display = 'none';
+            if (orderSection) orderSection.classList.remove('hidden');
+            if (footer) footer.style.display = 'none'; // footer hide
+        }
 
-                        View
-                    </button>
-                </div>
-            </div>
+        function showDashboard() {
+            if (dashboard) dashboard.style.display = 'block';
+            if (orderSection) orderSection.classList.add('hidden');
+            if (footer) footer.style.display = 'block'; // footer dikhao
+        }
 
-            <!-- Dropdowns (fixed image positioning) -->
-            <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-6">
-                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                    <div class="relative flex items-center w-full sm:w-auto">
-                        <select
-                            class="appearance-none bg-[#F3FFFB] border border-teal-green/20 rounded-full pl-10 pr-8 py-2 text-sm text-sea-green2 font-semibold w-full sm:min-w-[280px] md:min-w-[380px] h-[38px] focus:outline-none">
-                            <option>Aniket</option>
-                        </select>
-                        <img src="/assets/img/Profile-acc.png" class="dropdown-img"
-                            onerror="this.src='https://placehold.co/24x24?text=A'">
-                        <span class="material-symbols-outlined absolute right-2 pointer-events-none text-xl"
-                            style="color:#088178;">arrow_drop_down</span>
-                    </div>
-                    <div class="relative flex items-center w-full sm:w-auto">
-                        <select
-                            class="appearance-none bg-[#F3FFFB] border border-teal-green/20 rounded-full pl-10 pr-8 py-2 text-sm text-sea-green2 font-semibold w-full sm:min-w-[240px] md:min-w-[280px] h-[38px] focus:outline-none">
-                            <option>Dr. Monika Singh</option>
-                        </select>
-                        <img src="/assets/img/blog-profile.svg" class="dropdown-img"
-                            onerror="this.src='https://placehold.co/24x24?text=DM'">
-                        <span class="material-symbols-outlined absolute right-2 pointer-events-none text-xl"
-                            style="color:#088178;">arrow_drop_down</span>
-                    </div>
-                </div>
-                <div class="relative w-full md:w-auto">
-                    <select
-                        class="appearance-none bg-white border border-gray-200 rounded-md pl-4 pr-10 py-2 text-sm text-gray-light1 w-full md:min-w-[320px] focus:outline-none">
-                        <option>Featured first</option>
-                    </select>
-                    <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </div>
-            </div>
+        if (searchBtn) {
+            searchBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                showOrderDetails();
+            });
+        }
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                showDashboard();
+            });
+        }
+        // initially dashboard visible, footer visible
+        showDashboard();
+    })();
 
-            <!-- Tabs -->
-            <div class="flex justify-between items-center mb-6 flex-wrap gap-3">
-                <div class="flex flex-wrap items-center gap-2 overflow-x-auto no-scrollbar pb-1 w-full sm:w-auto"
-                    id="tabsContainer">
-                    <button data-category="all"
-                        class="tab-btn active px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">All</button>
-                    <button data-category="Pharmacy"
-                        class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Pharmacy</button>
-                    <button data-category="Doctor"
-                        class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Doctor</button>
-                    <button data-category="Hospital"
-                        class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Hospital</button>
-                    <button data-category="Labs"
-                        class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Labs</button>
-                </div>
-                <div class="relative">
-                    <button class="text-teal-700 hover:scale-110 transition calendarBtn cursor-pointer">
-                        <img src="/assets/img/arrow.svg" alt="">
-                    </button>
-                    <!-- Calendar Popup -->
-                    <div id="calendarOverlay"
-                        class="hidden   z-[9999] absolute right-0">
-                        <div id="calendarBox"
-                            class="bg-white border border-light-slate-tint rounded-lg p-[14px] w-[345px] shadow-calendar">
 
-                            <div class="flex items-center justify-between mb-4">
-                                <button id="calPrev" class="cursor-pointer  px-3 py-1 text-xl transition">
-                                    <span class="material-symbols-outlined">chevron_left</span>
-                                </button>
-                                <span id="calMonthLabel" class="text-[15px] font-semibold "></span>
-                                <button id="calNext" class="cursor-pointer  px-3 py-1 text-xl transition">
-                                    <span class="material-symbols-outlined">chevron_right</span>
-                                </button>
-                            </div>
-
-                            <div id="calDow" class="grid grid-cols-7 mb-1 bg-ghost-white p-1"></div>
-                            <div id="calDays" class="grid grid-cols-7 gap-y-1"></div>
-
-                            <div class="flex justify-end gap-2 mt-4">
-                                <button id="calCancel"
-                                    class="px-5 py-1.5 rounded-lg  text-sm font-semibold  transition cursor-pointer">Cancel</button>
-                                <button id="calApply"
-                                    class="px-5 py-1.5 rounded-lg bg-teal-green text-white text-sm font-semibold  transition cursor-pointer">Apply</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        document.addEventListener('click', function(e) {
+    const popup = document.querySelector('.uploadPopup');
+    if (!popup) return;
+    
+    // Close on X button
+    if (e.target.closest('.close-popup')) {
+        popup.classList.add('hidden');
+    }
+    
+    // Close on dark background
+    if (e.target === popup) {
+        popup.classList.add('hidden');
+    }
+    
+    // Close on Cancel button
+    if (e.target.closest('.cancelBtn')) {
+        popup.classList.add('hidden');
+    }
+});
 
 
 
 
-            <!-- Orders Table -->
-            <div class="table-container">
-                <div class="bg-white shadow-sm border border-gray-100 rounded-lg">
-                    <div class="grid grid-cols-5 bg-teal-green text-white text-sm font-bold table-header">
-                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Order ID</div>
-                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Agenda’s</div>
-                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Price</div>
-                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Status</div>
-                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Actions</div>
-                    </div>
-                    <div id="ordersListContainer"></div>
-                </div>
-            </div>
 
-            <!-- Pagination -->
-            <div id="paginationWrapper" class="flex items-center justify-center gap-1 mt-8 flex-wrap"></div>
-
-            <!-- Referral Banner (poster always visible) -->
-            <div
-                class="mt-10 md:mt-12 bg-gradient-to-r from-[#53d4c3] to-[#21a495] rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="text-white text-center md:text-left">
-                    <h3 class="font-bold text-xl md:text-2xl mb-1">Refer and Earn</h3>
-                    <p class="text-sm md:text-base text-white/90">Invite family and friends to earn cashbacks</p>
-                </div>
-                <button
-                    class="bg-[#1A7A5E] text-white px-6 md:px-8 py-1.5 rounded-full border border-white font-bold text-base md:text-lg hover:bg-[#005a52] transition shadow-md whitespace-nowrap">Invite
-                    Now</button>
-                <!-- Poster image with fallback – never hidden -->
-                <img src="/assets/img/Group.svg" class="w-24 md:w-32 object-contain" alt="referral"
-                    onerror="this.src='https://placehold.co/128x80?text=Refer+Earn'">
-            </div>
-        </section>
-
-
-         <script>
-        // ========== DATASET (unchanged) ==========
-        const baseOrders = [
+          const baseOrders = [
             { id: "10023", agendaName: "General Consultation", datetime: "28/04/2025 - 09:30 AM", price: "₹850", status: "Successful", category: "Doctor" },
             { id: "10024", agendaName: "Medicine Delivery", datetime: "28/04/2025 - 11:15 AM", price: "₹420", status: "Successful", category: "Pharmacy" },
             { id: "65555", agendaName: "Lab", datetime: "27/04/2025 - 04:00 PM", price: "₹750", status: "Ongoing", category: "Labs" },
@@ -295,7 +183,29 @@
             });
             ordersContainer.innerHTML = rowsHtml;
             document.querySelectorAll('.view-details-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => alert(`Order details for ID ${btn.getAttribute('data-id')} — (demo)`));
+              btn.addEventListener('click', (e) => {
+    const popup = document.querySelector('.uploadPopup');
+    const detailsSection = popup?.querySelector('.detailsSection');
+    const uploadArea = popup?.querySelector('.upload-area');
+    const dropdowns = popup?.querySelector('.patient-doctor-dropdowns');
+    const getDetailsBtn = popup?.querySelector('.getDetailsBtn');
+    
+    if (uploadArea) uploadArea.closest('.mt-4.p-2\\.5')?.classList.add('hidden');
+    if (dropdowns) dropdowns.classList.add('hidden');
+    if (getDetailsBtn) getDetailsBtn.classList.add('hidden');
+    if (detailsSection) detailsSection.classList.remove('hidden');
+    
+    if (popup) popup.classList.remove('hidden');
+});
+
+
+document.querySelectorAll('.close-popup, .uploadPopup').forEach(el => {
+    el.addEventListener('click', function(e) {
+        if (e.target === this || this.classList?.contains('close-popup')) {
+            document.querySelector('.uploadPopup').classList.add('hidden');
+        }
+    });
+});
             });
         }
 
@@ -378,8 +288,4 @@
         if (typeof lucide !== 'undefined') lucide.createIcons();
         document.addEventListener('DOMContentLoaded', init);
 
-
-
-
-
-    </script>
+    
