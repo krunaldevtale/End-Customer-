@@ -135,4 +135,28 @@
     if (ALLOWED_MIME.has(file.type)) return true;
     return ALLOWED_EXT.test(file.name);
   }
+
+  const selectAll = document.querySelector(".medicine-select-all");
+  const rowChecks = document.querySelectorAll(".medicine-row-check");
+
+  if (selectAll && rowChecks.length) {
+    selectAll.addEventListener("change", function () {
+      rowChecks.forEach(function (checkbox) {
+        checkbox.checked = selectAll.checked;
+      });
+    });
+
+    rowChecks.forEach(function (checkbox) {
+      checkbox.addEventListener("change", function () {
+        const allChecked = Array.from(rowChecks).every(function (cb) {
+          return cb.checked;
+        });
+        selectAll.checked = allChecked;
+        selectAll.indeterminate =
+          !allChecked && Array.from(rowChecks).some(function (cb) {
+            return cb.checked;
+          });
+      });
+    });
+  }
 })();

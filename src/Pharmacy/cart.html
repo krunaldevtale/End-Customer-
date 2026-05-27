@@ -11,6 +11,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./script/main.js"></script>
+
+    <style>
+         .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+   /* Custom card sizing – larger cards, no scroll */
+  .product-card-large {
+    width: 100%;
+    max-width: 260px;
+    min-width: 210px;
+    transition: all 0.2s ease;
+  }
+  .product-img-area {
+    height: 170px;
+  }
+  @media (min-width: 1280px) {
+    .product-card-large {
+      min-width: 230px;
+    }
+    .product-img-area {
+      height: 180px;
+    }
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
     
 </head>
 <body class="bg-gray-tint no-scrollbar">
@@ -65,33 +97,77 @@
             </nav>
         </header>
 
+
+
+         <!-- ======================= BREADCRUMB: Home > Cart ======================= -->
+      <div class="px-4 md:px-5 lg:px-20 py-3 mt-2">
+    <nav class="flex items-center space-x-2 text-sm text-gray-500" aria-label="Breadcrumb">
+        <a href="/index.html" class="text-light-blackk hover:text-teal-700 transition cursor-pointer">Home</a>
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="font-medium text-green-light">Cart</span>
+    </nav>
+</div>
+
         <div class="w-full max-w-full mx-auto px-4 py-8 flex flex-col lg:flex-row gap-6 items-start">
     
    <div class="flex-1 w-full space-y-5">
     
-    <div class="flex justify-between items-center px-5 py-4 rounded-xl border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
-        <h2 class="text-[22px] font-bold text-slate-800 tracking-tight">6 Items in your Cart</h2>
+    <div class=" rounded-2xl overflow-hidden border border-[#DCE6F5] shadow-sm">
+
+    <!-- Row 1 -->
+    <div class="flex justify-between items-center px-5 py-4 border-b border-[#D7E2F2]">
+        <h2 class="text-[22px] font-bold text-light-blackk tracking-tight">
+            6 Items in your Cart
+        </h2>
+
         <button class="flex items-center gap-1.5 text-teal-600 font-semibold text-sm hover:text-teal-700 transition-colors">
             <div class="relative flex items-center justify-center">
-                <i data-lucide="heart" class="w-5 h-5 text-rose-400"></i>
-                <span class="absolute -top-1.5 -right-2 bg-rose-500 text-white text-[9px] font-bold px-1 py-0.2 rounded-full min-w-[14px] text-center">2</span>
+                <!-- <i data-lucide="heart" class="w-5 h-5 text-rose-400"></i> -->
+                 <i class="fa-regular fa-heart"></i>
+
+               
             </div>
-            <span class="ml-1.5 text-slate-600 font-medium">Saved for Later</span>
+
+            <span class="ml-1.5 text-green-light font-bold">
+                Saved for Later
+            </span>
         </button>
     </div>
 
-    <div class="flex items-center justify-between bg-[#E6EBF4] px-5 py-4 rounded-xl border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+    <!-- Row 2 -->
+    <div class="flex items-center justify-between px-5 py-4">
+
         <div class="flex items-center gap-4">
-            <div class="p-2.5 bg-rose-50 rounded-lg text-rose-500 flex items-center justify-center">
-                <i data-lucide="map-pin" class="w-5 h-5 fill-rose-50 text-rose-500"></i>
+
+            <div class=" mb-4 rounded-lg text-rose-500 flex items-center justify-center">
+                <!-- <i data-lucide="map-pin" class="w-5 h-5 fill-rose-50 text-rose-500"></i> -->
+                 <img src="/assets/img/location.svg" alt="">
             </div>
+
             <div class="space-y-0.5">
-                <h4 class="font-bold text-slate-700 text-[15px]">Deliver to Home <span class="text-slate-400 font-normal ml-1">(462022)</span></h4>
-                <p class="text-xs text-slate-400 font-medium">house no 12, piplani petrol pump, Bhopal</p>
+                <h4 class="font-normal text-light-blackk text-[15px]">
+                    Deliver to Home
+                    <span class="text-light-blackk font-normal ml-1">
+                        (462022)
+                    </span>
+                </h4>
+
+                <p class="text-xs text-gray-darkk font-medium">
+                    house no 12, piplani petrol pump, Bhopal
+                </p>
             </div>
+
         </div>
-        <button class="text-teal-600 font-bold text-xs tracking-wide hover:text-teal-700">Change Address</button>
+
+        <button class="text-green-light font-bold text-sm tracking-wide hover:text-teal-700">
+            Change Address
+        </button>
+
     </div>
+
+</div>
 
     <div class="bg-white rounded-2xl border border-gray-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)] p-5 space-y-5">
         
@@ -106,11 +182,11 @@
                     </div>
                 </div>
                 <div class="space-y-0.5">
-                    <h4 class="font-medium text-slate-400 text-[14px]">Please Upload prescription</h4>
-                    <p class="text-xs text-slate-400">continue with the order</p>
+                    <h4 class="font-medium text-gray-light1 text-[14px]">Please Upload prescription</h4>
+                    <p class="text-xs text-gray-light1">continue with the order</p>
                 </div>
             </div>
-            <button class="bg-teal-800 hover:bg-teal-900 text-white font-semibold text-xs px-5 py-2.5 rounded-lg transition-colors tracking-wide">
+            <button class="bg-sea-green-dark1 hover:bg-teal-900 text-white font-semibold text-xs px-4 py-2.5 rounded-full transition-colors tracking-wide">
                 Upload Now
             </button>
         </div>
@@ -139,455 +215,455 @@
         </div>
 
         <div class="flex justify-between items-center pt-2">
-            <h3 class="text-[15px] font-extrabold text-cyan-900 tracking-wide uppercase">3 Items in your cart</h3>
-            <button class="text-amber-500 hover:text-amber-600 font-extrabold text-xs tracking-wider uppercase">Add Items</button>
+            <h3 class="text-[15px] font-extrabold text-ocean-slate tracking-wide uppercase">3 Items in your cart</h3>
+            <button class="text-sun-yellow hover:text-amber-600 font-extrabold text-xs tracking-wider uppercase">Add Items</button>
         </div>
 
-        <div class="border border-slate-100 rounded-xl overflow-hidden">
+       <div class="border border-slate-200/80 rounded-xl overflow-hidden shadow-sm bg-white font-sans max-w-6xl w-full">
+    
+    <div class="px-5 py-4 flex justify-between items-center bg-white border-b border-slate-100">
+        <div class="flex items-center gap-3 text-slate-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-slate-700">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125a1.125 1.125 0 0 0 1.125-1.125V9.75M8.25 18.75a1.5 1.5 0 0 1-3 0M15.75 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125a1.125 1.125 0 0 0 1.125-1.125V14.25m-14.625 0h14.625M2.25 14.25v-3.375c0-.621.504-1.125 1.125-1.125h12.75c.621 0 1.125.504 1.125 1.125V14.25m-15 0h15M16.5 9.75l-2.25-3.375a1.125 1.125 0 0 0-.93-.5H8.68a1.125 1.125 0 0 0-.93.5L5.5 9.75m11 0h-11" />
+            </svg>
+            <span class="font-bold text-lg tracking-tight text-phantom-ash">In 3 hr</span>
+        </div>
+        <span class="text-sm text-slate-400 font-medium">Shipment 1/2</span>
+    </div>
+
+    <div class="divide-y divide-slate-100">
+        
+        <div class="p-5 flex items-center justify-between gap-6 bg-white hover:bg-slate-50/30 transition-colors">
             
-            <div class="px-4 py-3 flex justify-between items-center bg-slate-50/50 border-b border-slate-100">
-                <div class="flex items-center gap-2.5 text-slate-800">
-                    <i data-lucide="truck" class="w-[18px] h-[18px] text-slate-600"></i>
-                    <span class="font-extrabold text-base tracking-tight">In 3 hr</span>
+            <div class="flex items-start gap-4 flex-1">
+                <div class="w-16 h-25 rounded-xl  flex items-center justify-center  flex-shrink-0 overflow-hidden">
+                   <img src="/assets/img/Img - product_margin.svg" alt="">
                 </div>
-                <span class="text-xs text-slate-400 font-medium">Shipment 1/2</span>
+
+                <div class="space-y-1">
+                    <h5 class="font-medium text-phantom-ash text-[15px] leading-tight max-w-xl">Apollo Pharmacy SPF 40 PA+++ Sunscreen Cream, 60 gm</h5>
+                    <p class="text-xs text-sea-green-dark2 font-medium">Tube of 1</p>
+                    
+                    <div class="flex flex-wrap items-center gap-2 pt-1.5">
+                        <span class="text-[11px] bg-purple-50 text-light-pink1 px-2 py-1 rounded-md font-semibold tracking-wide flex items-center gap-1">
+                            ADD 2 MORE, SAVE 2% EXTRA 
+                            <span class="inline-flex items-center justify-center border border-purple-400 rounded-full w-3.5 h-3.5 text-center text-[9px] font-bold leading-none">i</span>
+                        </span>
+                        <span class="text-[11px] bg-sea-green-dark1 text-white px-2 py-1 rounded-md font-semibold tracking-wide flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 text-emerald-600">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143z" clip-rule="evenodd" />
+                            </svg>
+                            Prescription Received
+                        </span>
+                    </div>
+
+                    <div class="flex items-center gap-2 pt-2">
+                        <span class="text-base font-bold text-slate-900">₹198</span>
+                        <span class="text-xs text-slate-400">MRP <span class="line-through">₹220</span></span>
+                        <span class="text-xs text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">10% off</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="divide-y divide-dashed divide-slate-200">
-                
-                <div class="p-4 flex items-start gap-4 bg-white">
-                    <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-1 flex-shrink-0">
-                        <div class="w-10 h-full bg-amber-400/90 rounded-sm relative flex flex-col items-center justify-end pb-1 shadow-sm">
-                            <div class="absolute top-1 w-6 h-2 bg-white/40 rounded-xs"></div>
-                            <div class="w-2 h-4 bg-orange-500 rounded-xs mb-2"></div>
-                        </div>
-                    </div>
-                    <div class="flex-1 space-y-1.5">
-                        <h5 class="font-semibold text-slate-700 text-[14px] leading-snug tracking-tight">Apollo Pharmacy SPF 40 PA+++ Sunscreen Cream, 60 gm</h5>
-                        <p class="text-[11px] text-slate-400 font-bold">Tube of 1</p>
-                        
-                        <div class="flex flex-wrap items-center gap-2 pt-0.5">
-                            <span class="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded font-bold tracking-wide">ADD 2 MORE, SAVE 2% EXTRA <span class="inline-block border border-indigo-400 rounded-full w-3 h-3 text-center text-[8px] leading-none ml-0.5">i</span></span>
-                            <span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-0.5 rounded font-bold tracking-wide flex items-center gap-1 border border-rose-100">
-                                <i data-lucide="alert-circle" class="w-3 h-3 fill-rose-50 text-rose-500"></i> Prescription Not Received <span class="text-rose-600 font-black ml-1 text-xs leading-none">×</span>
-                            </span>
-                        </div>
-
-                        <div class="flex items-baseline gap-2 pt-1">
-                            <span class="text-sm font-extrabold text-slate-800">₹198</span>
-                            <span class="text-[11px] line-through text-slate-400">MRP <span class="line-through">₹220</span></span>
-                            <span class="text-[11px] text-emerald-600 font-bold">10% off</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex-shrink-0 self-center">
-                        <div class="relative">
-                            <select class="appearance-none bg-white border border-slate-200 pl-3 pr-8 py-1.5 text-xs rounded-lg focus:outline-none focus:border-teal-500 text-slate-700 font-bold cursor-pointer shadow-sm">
-                                <option>Qty 1</option>
-                                <option>Qty 2</option>
-                            </select>
-                            <div class="absolute inset-y-0 right-2.5 flex items-center pointer-events-none text-slate-400">
-                                <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
-                            </div>
-                        </div>
+            
+            <div class="flex-shrink-0 self-center pl-4">
+                <div class="relative">
+                    <select class="appearance-none bg-white border border-slate-200 pl-4 pr-10 py-2 text-sm rounded-xl focus:outline-none focus:border-teal-600 text-slate-800 font-semibold cursor-pointer shadow-sm transition-all hover:border-slate-300">
+                        <option>Qty 1</option>
+                        <option>Qty 2</option>
+                        <option>Qty 3</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-3.5 flex items-center pointer-events-none text-slate-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <div class="p-4 flex items-start gap-4 bg-white">
-                    <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-1 flex-shrink-0">
-                        <div class="w-7 h-full bg-emerald-600 rounded-sm relative flex flex-col items-center justify-start pt-1 shadow-sm">
-                            <div class="w-5 h-2 bg-white/80 rounded-xs mb-1"></div>
-                            <div class="w-4 h-4 bg-white/20 rounded-xs"></div>
-                        </div>
-                    </div>
-                    <div class="flex-1 space-y-1.5">
-                        <h5 class="font-semibold text-slate-700 text-[14px] leading-snug tracking-tight">Himalaya Bresol Syrup, 200 ml</h5>
-                        <p class="text-[11px] text-slate-400 font-bold">Bottle of 1</p>
-                        
-                        <div class="flex flex-wrap items-center gap-2 pt-0.5">
-                            <span class="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded font-bold tracking-wide">ADD 2 MORE, SAVE 2% EXTRA <span class="inline-block border border-indigo-400 rounded-full w-3 h-3 text-center text-[8px] leading-none ml-0.5">i</span></span>
-                            <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold tracking-wide flex items-center gap-1 border border-emerald-100">
-                                <i data-lucide="check" class="w-3 h-3 text-emerald-600 stroke-[3px]"></i> Prescription Received <span class="text-emerald-600 font-bold ml-1 text-[11px]">✓</span>
-                            </span>
-                        </div>
-
-                        <div class="flex items-baseline gap-2 pt-1">
-                            <span class="text-sm font-extrabold text-slate-800">MRP ₹210</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex-shrink-0 self-center">
-                        <div class="relative">
-                            <select class="appearance-none bg-white border border-slate-200 pl-3 pr-8 py-1.5 text-xs rounded-lg focus:outline-none focus:border-teal-500 text-slate-700 font-bold cursor-pointer shadow-sm">
-                                <option>Qty 1</option>
-                                <option>Qty 2</option>
-                            </select>
-                            <div class="absolute inset-y-0 right-2.5 flex items-center pointer-events-none text-slate-400">
-                                <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
-                            </div>
-                        </div>
-                    </div>
+        <div class="p-5 flex items-center justify-between gap-6 bg-white hover:bg-slate-50/30 transition-colors">
+            
+            <div class="flex items-start gap-4 flex-1">
+                <div class="w-16 h-16  flex items-center justify-center p-2 flex-shrink-0 overflow-hidden">
+                   <img src="/assets/img/Medical img products for poster.svg" alt="">
                 </div>
 
+                <div class="space-y-1">
+                    <h5 class="font-medium text-phantom-ash text-[15px] leading-tight max-w-xl">Himalaya Bresol Syrup, 200 ml</h5>
+                    <p class="text-xs text-sea-green-dark2 font-medium">Bottle of 1</p>
+                    
+                    <div class="flex flex-wrap items-center gap-2 pt-1.5">
+                        <span class="text-[11px] bg-purple-50 text-light-pink1 px-2 py-1 rounded-md font-semibold tracking-wide flex items-center gap-1">
+                            ADD 2 MORE, SAVE 2% EXTRA 
+                            <span class="inline-flex items-center justify-center border border-purple-400 rounded-full w-3.5 h-3.5 text-center text-[9px] font-bold leading-none">i</span>
+                        </span>
+                        <span class="text-[11px] bg-sea-green-dark1 text-white px-2 py-1 rounded-md font-semibold tracking-wide flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 text-emerald-600">
+                                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143z" clip-rule="evenodd" />
+                            </svg>
+                            Prescription Received
+                        </span>
+                    </div>
+
+                    <div class="flex items-center gap-2 pt-2">
+                        <span class="text-base font-bold text-slate-900"> MRP ₹210</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-shrink-0 self-center pl-4">
+                <div class="relative">
+                    <select class="appearance-none bg-white border border-slate-200 pl-4 pr-10 py-2 text-sm rounded-xl focus:outline-none focus:border-teal-600 text-slate-800 font-semibold cursor-pointer shadow-sm transition-all hover:border-slate-300">
+                        <option>Qty 1</option>
+                        <option>Qty 2</option>
+                        <option>Qty 3</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-3.5 flex items-center pointer-events-none text-slate-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 </div>
 
-    <div class="w-full lg:w-[380px] lg:sticky lg:top-4 space-y-4 flex-shrink-0">
+    </div>
+</div>
+
+   <div class="w-full lg:w-[480px] lg:sticky lg:top-4 space-y-4 flex-shrink-0 font-sans">
     
-    <div class="bg-white rounded-2xl border border-gray-100 shadow-[0_4px_16px_rgba(0,0,0,0.03)] p-5 space-y-5">
+    <div class="bg-white rounded-2xl border border-gray-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.02)] p-5 space-y-5 overflow-hidden">
         
-        <div class="flex justify-between items-center pt-1">
-            <span class="text-base text-slate-500 font-medium">Cart total:</span>
-            <span class="text-[22px] font-black text-slate-800 tracking-tight">$28.90</span>
+        <div class="flex items-center pt-1 gap-2">
+            <span class="text-[17px] text-light-blackk font-medium">Cart total:</span>
+            <span class="text-[22px] font-bold text-light-blackk tracking-tight">$28.90</span>
         </div>
 
-        <button class="w-full bg-[#e9edf0] hover:bg-slate-200 text-slate-800 font-extrabold py-3.5 px-4 rounded-xl text-center transition-colors shadow-sm tracking-wide text-sm">
+        <button class="w-full bg-sea-green-deep hover:bg-[#0c6b66] text-white font-bold py-3 px-4 rounded-xl text-center transition-colors shadow-sm tracking-wide text-[15px]">
             Submit Request
         </button>
 
-        <div class="relative flex py-2 items-center justify-center">
+        <div class="relative flex py-1 items-center justify-center">
             <div class="flex-grow border-t border-slate-200/60"></div>
-            <span class="flex-shrink mx-4 text-[10px] font-extrabold tracking-widest text-slate-400 uppercase">Coupons & Offers</span>
+            <span class="flex-shrink mx-4 text-[10px] font-extrabold tracking-widest text-gray-darkk uppercase">Coupons & Offers</span>
             <div class="flex-grow border-t border-slate-200/60"></div>
         </div>
 
-        <div class="space-y-3">
-            <div class="border border-emerald-200 bg-[#f4faf7] rounded-xl p-4 relative">
-                <div class="flex items-start justify-between">
-                    <div class="flex gap-3">
-                        <div class="w-5 h-5 rounded-full bg-emerald-600 flex items-center justify-center text-white mt-0.5 flex-shrink-0">
-                            <span class="text-[10px] font-bold">✓</span>
-                        </div>
-                        <div class="space-y-0.5">
-                            <span class="font-extrabold text-emerald-800 text-[14px] block tracking-wide">PE25MED Applied</span>
-                            <span class="text-xs text-slate-500 block">Saved <span class="font-bold text-slate-700">₹6.16 EXTRA</span> with this coupon</span>
-                        </div>
-                    </div>
-                    <button class="text-xs text-slate-400 font-bold hover:text-rose-500 transition-colors tracking-wide">Remove</button>
+       <div class="border border-slate-200/80 rounded-2xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.02)] max-w-[450px] w-full font-sans">
+    
+    <div class="bg-white p-4 border-b border-dashed border-slate-200/60">
+        <div class="flex items-start justify-between gap-3">
+            <div class="flex gap-3.5">
+                <div class="w-6 h-6 rounded-full bg-[#10847e] flex items-center justify-center text-white flex-shrink-0 shadow-sm mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5">
+                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                
+                <div class="space-y-0.5">
+                    <span class="font-bold text-sea-green-dark1 text-[15px] block tracking-wide">PE25MED Applied</span>
+                    <span class="text-xs text-slate-500 block font-medium">
+                        <span class="font-bold text-light-blackk"> Saved ₹6.16 EXTRA</span> with this coupon
+                    </span>
                 </div>
             </div>
-
-            <button class="w-full flex items-center justify-between px-4 py-3 text-xs font-bold text-slate-600 bg-white border border-slate-100 rounded-xl hover:bg-slate-50/80 shadow-[0_2px_6px_rgba(0,0,0,0.01)] transition-colors">
-                <span class="text-teal-600 tracking-wide text-[13px] font-semibold">Explore more coupons</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+            
+            <button class="text-xs text-slate-400 font-bold hover:text-rose-500 transition-colors tracking-wide pt-0.5 underline decoration-slate-300 underline-offset-4">
+                Remove
             </button>
         </div>
+    </div>
+
+    <button class="w-full flex items-center justify-between px-4 py-3.5 bg-[#f4faf7] hover:bg-[#eef7f4] transition-colors group">
+        <span class="text-light-blackk tracking-wide text-[13px]  group-hover:text-[#10847e] transition-colors">
+            Explore more coupons
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3.5 h-3.5 text-slate-700 group-hover:translate-x-0.5 transition-transform">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+    </button>
+    
+</div>
 
         <div class="flex items-center justify-between border border-slate-200/80 p-4 rounded-xl bg-white shadow-[0_2px_6px_rgba(0,0,0,0.01)]">
             <div class="flex items-center gap-3">
                 <div class="w-9 h-7 bg-[#edf7f4] rounded-md flex items-center justify-center text-teal-600">
-                    <i data-lucide="wallet" class="w-[18px] h-[18px] fill-teal-600/10"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-[18px] h-[18px]">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12m18 0V9a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9v3M3 12V9m18 3v3" />
+                    </svg>
                 </div>
                 <div class="space-y-0.5">
-                    <span class="text-[14px] font-bold text-slate-700 block tracking-tight">Use Health Credits</span>
-                    <span class="text-[11px] text-rose-500 block font-medium">No available health credits</span>
+                    <span class="text-[14px] font-bold text-sea-green-dark1 block tracking-tight">Use Health Credits</span>
+                    <span class="text-[11px] text-red-dark block font-medium">No available health credits</span>
                 </div>
             </div>
             <div class="flex items-center gap-3">
                 <span class="font-extrabold text-slate-400 text-sm">₹0</span>
-                <input type="checkbox" disabled class="w-5 h-5 text-teal-600 border-slate-300 rounded focus:ring-teal-500 opacity-40 cursor-not-allowed">
+                <input type="checkbox" disabled class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500 opacity-40 cursor-not-allowed">
             </div>
         </div>
 
-        <div class="space-y-3">
-            <label class="flex items-center justify-between p-4 rounded-xl border border-slate-200/80 cursor-pointer hover:bg-slate-50/50 transition-colors bg-white">
-                <div class="flex items-center gap-3.5">
-                    <input type="radio" name="delivery_speed" class="w-4 h-4 text-teal-600 border-slate-300 focus:ring-teal-500">
-                    <div class="text-[13px]">
-                        <span class="font-semibold text-slate-700">Regular Delivery</span>
-                        <span class="text-slate-400 ml-1 text-xs">(Within 24 hour)</span>
-                    </div>
-                </div>
-                <span class="text-sm font-bold text-slate-700">$0.00</span>
-            </label>
-
-            <label class="flex items-center justify-between p-4 rounded-xl border-2 border-teal-600 bg-[#f4faf8] cursor-pointer">
-                <div class="flex items-center gap-3.5">
-                    <input type="radio" name="delivery_speed" checked class="w-4 h-4 text-teal-600 border-teal-600 focus:ring-teal-500">
-                    <div class="text-[13px]">
-                        <span class="font-extrabold text-slate-800">Quick Delivery</span>
-                        <span class="text-teal-600 ml-1 text-xs font-bold">(Within 1 hour)</span>
-                    </div>
-                </div>
-                <span class="text-sm font-extrabold text-slate-800">$250.00</span>
-            </label>
+        <div class="space-y-0.5">
+    
+    <label class="flex items-center justify-between py-2 px-1 cursor-pointer hover:bg-slate-50/50 transition-colors bg-white">
+        <div class="flex items-center gap-3.5">
+            <input type="checkbox" name="delivery_type" class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500">
+            <div class="text-[13px]">
+                <span class=" text-gray">Regular Delivery</span>
+                <span class="text-sea-green2 ml-1 text-xs">(Within 24 hour)</span>
+            </div>
         </div>
+        <span class="text-sm  text-gray">$0.00</span>
+    </label>
 
-        <div class="space-y-4 pt-1">
-            <h4 class="font-extrabold text-slate-800 text-[15px] tracking-tight">Bill Summary</h4>
+    <label class="flex items-center justify-between py-2 px-1 cursor-pointer hover:bg-slate-50/50 transition-colors bg-white">
+        <div class="flex items-center gap-3.5">
+            <input type="checkbox" name="delivery_type" checked class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500">
+            <div class="text-[13px]">
+                <span class=" text-gray">Quick Delivery</span>
+                <span class="text-sea-green2 ml-1 text-xs ">(Within 1 hour)</span>
+            </div>
+        </div>
+        <span class="text-sm  text-gray">$250.00</span>
+    </label>
+    
+</div>
+
+        <div class="border border-slate-200/90 rounded-2xl p-4 space-y-4 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.01)]">
+            <h4 class="font-bold text-light-blackk text-[15px] ">Bill Summary</h4>
             
             <div class="space-y-3 text-[13px] text-slate-500">
-                <div class="flex justify-between items-center">
-                    <span>MRP</span>
-                    <span class="text-slate-700 font-semibold">₹616.20</span>
+                <div class="flex justify-between text-sm items-center">
+                    <span class="text-extra-gray">MRP</span>
+                    <span class="text-light-blackk text-sm">₹616.20</span>
                 </div>
                 
                 <div class="flex justify-between items-center text-teal-600 font-medium">
-                    <span class="flex items-center gap-1">Discount <i data-lucide="chevron-up" class="w-3.5 h-3.5"></i></span>
-                    <span class="font-bold">- ₹190.70</span>
+                    <span class="flex items-center text-extra-gray text-sm gap-1">Discount 
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                        </svg>
+                    </span>
+                    <span class="text-verdant-teal font-normal text-sm">- ₹190.70</span>
                 </div>
 
-                <div class="border border-slate-100 bg-slate-50/50 rounded-xl p-3 space-y-2.5 text-xs text-slate-500 shadow-[inset_0_1px_3px_rgba(0,0,0,0.01)]">
-                    <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Discount breakup</div>
-                    <div class="flex justify-between items-center">
-                        <span>MRP Discount</span>
-                        <span class="font-medium text-slate-600">- ₹184.54</span>
+                <div class="border border-slate-100 bg-slate-50/60 rounded-xl p-3 space-y-2.5 text-xs text-slate-500">
+                    <div class="text-[13px]  text-slate-400 uppercase tracking-wider mb-0.5 text-sm text-extra-gray">Discount breakup</div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-extra-gray">MRP Discount</span>
+                        <span class="font-normal text-verdant-teal">- ₹184.54</span>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span>Coupon discount</span>
-                        <span class="font-medium text-slate-600">- ₹6.16</span>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-extra-gray">Coupon discount</span>
+                        <span class=" text-verdant-teal">- ₹6.16</span>
                     </div>
                 </div>
 
-                <div class="border-t border-slate-100"></div>
+                <div class="border-t border-slate-100 my-2"></div>
 
-                <div class="flex justify-between items-center text-slate-600">
-                    <span>Discounted Value</span>
-                    <span class="font-bold text-slate-700">₹425.50</span>
+                <div class="flex justify-between items-center text-slate-600 text-sm">
+                    <span class="text-extra-gray">Discounted Value</span>
+                    <span class=" text-slate-700">₹425.50</span>
                 </div>
                 
-                <div class="flex justify-between items-center">
-                    <span>Delivery Fee</span>
+                <div class="flex justify-between items-center text-sm">
+                    <span class="text-extra-gray">Delivery Fee</span>
                     <span class="text-emerald-600 font-bold flex items-center gap-1.5">
-                        <span class="line-through text-slate-400 font-normal text-xs">₹75.00</span>
-                        <span>FREE</span>
+                        <span class="line-through text-erdant-teal font-normal  text-xs">₹75.00</span>
+                        <span class="font-normal text-erdant-teal">FREE</span>
                     </span>
                 </div>
 
-                <div class="flex justify-between items-center">
-                    <span>Platform Fee</span>
-                    <span class="text-slate-700 font-semibold">₹12.00</span>
+                <div class="flex justify-between items-center text-sm">
+                    <span class="text-extra-gray">Platform Fee</span>
+                    <span class="text-slate-700 ">₹12.00</span>
                 </div>
             </div>
 
-            <div class="border-t border-slate-200/80"></div>
+            <div class="border-t border-slate-200/80 pt-1"></div>
 
-            <div class="flex justify-between items-center pt-1">
-                <span class="font-extrabold text-slate-700 text-[14px]">Estimated amount to be paid</span>
-                <span class="text-xl font-black text-slate-900 tracking-tight">₹437.50</span>
+            <div class="flex justify-between items-center pt-1 text-sm">
+                <span class="font-bold text-extra-gray text-[14px]">Estimated amount to be paid</span>
+                <span class="text-xl font-bold  text-light-blackk tracking-tight">₹437.50</span>
             </div>
         </div>
 
-    </div>
-
-    <div class="bg-[#24906f] text-white rounded-xl p-3.5 flex items-center justify-between shadow-sm cursor-pointer hover:bg-emerald-800 transition-colors">
-        <div class="flex items-center gap-2.5">
-            <div class="bg-amber-400 text-amber-950 w-5 h-5 rounded-full flex items-center justify-center font-black text-xs shadow-sm">
-                ₹
+        <div class="bg-[#24906f] text-white rounded-xl p-3.5 flex items-center justify-between shadow-sm cursor-pointer hover:bg-[#1a6e54] transition-colors mt-4 text-sm">
+            <div class="flex items-center gap-2.5">
+                <div class="bg-amber-400 text-amber-950 w-5 h-5 rounded-full flex items-center justify-center font-black text-xs shadow-sm">
+                    ₹
+                </div>
+                <span class="text-[13px] font-bold tracking-wide">₹266 Saved on this order</span>
             </div>
-            <span class="text-[13px] font-bold tracking-wide">₹266 Saved on this order</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 text-emerald-200">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
         </div>
-        <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-200"></i>
+
     </div>
+</div>
+
 
 </div>
-</div>
 
 
 
-
-<div class="max-w-7xl mx-auto px-4 pb-12 space-y-8 mt-6">
-
-    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-        
-        <div class="bg-indigo-50/60 px-6 py-3 flex items-center gap-2 border-b border-indigo-50">
-            <span class="text-sm text-gray-700 font-medium flex items-center gap-1.5">
-                You get 
-                <span class="inline-flex items-center gap-1 text-indigo-600 font-bold bg-white px-2 py-0.5 rounded-md shadow-sm text-xs">
-                    🚚 FREE Delivery
-                </span> 
-                on this order
-            </span>
-        </div>
-
-        <div class="p-6 space-y-4">
-            <h3 class="text-lg font-bold text-gray-800">Before you check out</h3>
-
-            <div class="flex items-center gap-6 border-b border-gray-100 overflow-x-auto no-scrollbar text-sm font-semibold text-gray-400">
-                <button class="text-teal-600 border-b-2 border-teal-600 pb-2.5 px-1 whitespace-nowrap">Discount Store</button>
-                <button class="hover:text-gray-600 pb-2.5 px-1 whitespace-nowrap">Unlock Higher Discount</button>
-                <button class="hover:text-gray-600 pb-2.5 px-1 whitespace-nowrap">For You</button>
-                <button class="hover:text-gray-600 pb-2.5 px-1 whitespace-nowrap">Summer Store</button>
-            </div>
-
-            <p class="text-xs text-gray-500">Hot deals on wellness picks! Available while stocks last.</p>
-
-            <div class="relative group">
-                <div class="flex items-stretch gap-4 overflow-x-auto no-scrollbar pb-2">
-                    
-                    <div class="w-[165px] flex-shrink-0 bg-white border border-gray-100 rounded-xl p-3 flex flex-col justify-between hover:shadow-md transition-shadow">
-                        <div class="space-y-2">
-                            <div class="h-28 bg-gray-50/50 rounded-lg flex items-center justify-center p-2 relative">
-                                <img src="https://via.placeholder.com/100" alt="Antacid" class="max-h-full object-contain">
-                                <button class="absolute bottom-2 right-2 bg-teal-50 hover:bg-teal-100 text-teal-600 border border-teal-200 p-1.5 rounded-lg shadow-sm transition-colors">
-                                    <i data-lucide="plus" class="w-4 h-4"></i>
-                                </button>
-                            </div>
-                            <h4 class="text-xs font-medium text-gray-700 line-clamp-2 leading-tight">Liveasy Wellness Antacid Powder Lemo...</h4>
-                        </div>
-                        <div class="pt-2">
-                            <span class="text-[10px] line-through text-gray-400 block">₹10</span>
-                            <div class="flex items-baseline gap-1.5">
-                                <span class="text-xs font-bold text-gray-900">₹7</span>
-                                <span class="text-[10px] text-rose-500 font-bold">30% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-[165px] flex-shrink-0 bg-white border border-gray-100 rounded-xl p-3 flex flex-col justify-between hover:shadow-md transition-shadow">
-                        <div class="space-y-2">
-                            <div class="h-28 bg-gray-50/50 rounded-lg flex items-center justify-center p-2 relative">
-                                <img src="https://via.placeholder.com/100" alt="Seed Mix" class="max-h-full object-contain">
-                                <button class="absolute bottom-2 right-2 bg-teal-50 hover:bg-teal-100 text-teal-600 border border-teal-200 p-1.5 rounded-lg shadow-sm transition-colors">
-                                    <i data-lucide="plus" class="w-4 h-4"></i>
-                                </button>
-                            </div>
-                            <h4 class="text-xs font-medium text-gray-700 line-clamp-2 leading-tight">Liveasy Foods Healthy Seed Mix - Blend Of 6...</h4>
-                        </div>
-                        <div class="pt-2">
-                            <span class="text-[10px] line-through text-gray-400 block">₹327</span>
-                            <div class="flex items-baseline gap-1.5">
-                                <span class="text-xs font-bold text-gray-900">₹141</span>
-                                <span class="text-[10px] text-rose-500 font-bold">57% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-[165px] flex-shrink-0 bg-white border border-gray-100 rounded-xl p-3 flex flex-col justify-between hover:shadow-md transition-shadow">
-                        <div class="space-y-2">
-                            <div class="h-28 bg-gray-50/50 rounded-lg flex items-center justify-center p-2 relative">
-                                <img src="https://via.placeholder.com/100" alt="Amla Juice" class="max-h-full object-contain">
-                                <button class="absolute bottom-2 right-2 bg-teal-50 hover:bg-teal-100 text-teal-600 border border-teal-200 p-1.5 rounded-lg shadow-sm transition-colors">
-                                    <i data-lucide="plus" class="w-4 h-4"></i>
-                                </button>
-                            </div>
-                            <h4 class="text-xs font-medium text-gray-700 line-clamp-2 leading-tight">Everherb (By Pharmeasy) Amla Juic...</h4>
-                        </div>
-                        <div class="pt-2">
-                            <span class="text-[10px] line-through text-gray-400 block">₹374</span>
-                            <div class="flex items-baseline gap-1.5">
-                                <span class="text-xs font-bold text-gray-900">₹131</span>
-                                <span class="text-[10px] text-rose-500 font-bold">65% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-[165px] flex-shrink-0 bg-white border border-gray-100 rounded-xl p-3 flex flex-col justify-between hover:shadow-md transition-shadow">
-                        <div class="space-y-2">
-                            <div class="h-28 bg-gray-50/50 rounded-lg flex items-center justify-center p-2 relative">
-                                <img src="https://via.placeholder.com/100" alt="Neem" class="max-h-full object-contain">
-                                <button class="absolute bottom-2 right-2 bg-teal-50 hover:bg-teal-100 text-teal-600 border border-teal-200 p-1.5 rounded-lg shadow-sm transition-colors">
-                                    <i data-lucide="plus" class="w-4 h-4"></i>
-                                </button>
-                            </div>
-                            <h4 class="text-xs font-medium text-gray-700 line-clamp-2 leading-tight">Everherb (By Pharmeasy) Neem -...</h4>
-                        </div>
-                        <div class="pt-2">
-                            <span class="text-[10px] line-through text-gray-400 block">₹562</span>
-                            <div class="flex items-baseline gap-1.5">
-                                <span class="text-xs font-bold text-gray-900">₹203</span>
-                                <span class="text-[10px] text-rose-500 font-bold">64% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-[165px] flex-shrink-0 bg-white border border-gray-100 rounded-xl p-3 flex flex-col justify-between hover:shadow-md transition-shadow">
-                        <div class="space-y-2">
-                            <div class="h-28 bg-gray-50/50 rounded-lg flex items-center justify-center p-2 relative">
-                                <img src="https://via.placeholder.com/100" alt="Biotin" class="max-h-full object-contain">
-                                <button class="absolute bottom-2 right-2 bg-teal-50 hover:bg-teal-100 text-teal-600 border border-teal-200 p-1.5 rounded-lg shadow-sm transition-colors">
-                                    <i data-lucide="plus" class="w-4 h-4"></i>
-                                </button>
-                            </div>
-                            <h4 class="text-xs font-medium text-gray-700 line-clamp-2 leading-tight">Pharmeasy Biotin 10000mcg - For Hair |...</h4>
-                        </div>
-                        <div class="pt-2">
-                            <span class="text-[10px] line-through text-gray-400 block">₹655</span>
-                            <div class="flex items-baseline gap-1.5">
-                                <span class="text-xs font-bold text-gray-900">₹269</span>
-                                <span class="text-[10px] text-rose-500 font-bold">59% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w-[165px] flex-shrink-0 bg-white border border-gray-100 rounded-xl p-3 flex flex-col justify-between hover:shadow-md transition-shadow">
-                        <div class="space-y-2">
-                            <div class="h-28 bg-gray-50/50 rounded-lg flex items-center justify-center p-2 relative">
-                                <img src="https://via.placeholder.com/100" alt="Glutathione" class="max-h-full object-contain">
-                                <button class="absolute bottom-2 right-2 bg-teal-50 hover:bg-teal-100 text-teal-600 border border-teal-200 p-1.5 rounded-lg shadow-sm transition-colors">
-                                    <i data-lucide="plus" class="w-4 h-4"></i>
-                                </button>
-                            </div>
-                            <h4 class="text-xs font-medium text-gray-700 line-clamp-2 leading-tight">Pharmeasy Glutathione - Promotes Healthy Skin...</h4>
-                        </div>
-                        <div class="pt-2">
-                            <span class="text-[10px] line-through text-gray-400 block">₹1245</span>
-                            <div class="flex items-baseline gap-1.5">
-                                <span class="text-xs font-bold text-gray-900">₹474</span>
-                                <span class="text-[10px] text-rose-500 font-bold">62% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <button class="absolute top-1/2 -translate-y-1/2 right-1 w-8 h-8 bg-slate-800/80 hover:bg-slate-800 text-white rounded-full flex items-center justify-center shadow shadow-black/20 opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                </button>
-            </div>
-        </div>
+<div class="bg-[#E8F0FB] p-6 md:p-8  w-full">
+    <!-- FREE DELIVERY BANNER -->
+    <div class="bg-blue-50/60 px-6 py-3 flex items-center rounded-full gap-2 border-b border-blue-100/50">
+        <span class="text-sm font-normal text-light-blackk font-semibold">You get</span>
+        <span class="flex items-center gap-1 text-sm font-bold text-indigo-600">🚚 FREE Delivery</span>
+        <span class="text-sm font-medium text-light-blackk font-semibold">on this order</span>
     </div>
-
-    <div class="bg-indigo-600 text-indigo-100 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm border border-indigo-700 relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700">
+    
+    <div class="p-6 md:p-8">
+        <h2 class="text-xl font-bold text-light-blackk mb-4">Before you check out</h2>
         
-        <div class="flex items-center gap-6 z-10">
-            <div class="hidden sm:block w-32 h-20 bg-white/10 rounded-lg flex items-center justify-center border border-white/10 backdrop-blur-sm">
-                <i data-lucide="users" class="w-8 h-8 text-white/60"></i>
-            </div>
-            
-            <div class="space-y-1">
-                <div class="flex items-center gap-1.5 flex-wrap">
-                    <span class="text-white text-lg font-bold">Become a</span>
-                    <span class="inline-flex items-center gap-1 bg-amber-400 text-amber-950 font-black text-xs px-2 py-0.5 rounded-md tracking-wider">
-                        ★ Plus
-                    </span>
-                    <span class="text-white text-lg font-bold">Member</span>
-                </div>
-                <p class="text-xs text-indigo-200">And enjoy extra bachat on every order</p>
-            </div>
-        </div>
+        <!-- Tab Navigation -->
+        <div class=" p-5 w-full bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="flex border-b border-gray-200 text-sm font-medium text-gray-500 mb-6 overflow-x-auto no-scrollbar whitespace-nowrap">
+        <button class="border-b-2 border-teal-600 text-teal-600 px-4 py-2 font-semibold">Discount Store</button>
+        <button class="px-4 py-2 text-extra-gray font-bold hover:text-gray-700">Unlock Higher Discount</button>
+        <button class="px-4 py-2 text-extra-gray font-bold hover:text-gray-700">For You</button>
+        <button class="px-4 py-2 text-extra-gray font-bold hover:text-gray-700">Summer Store</button>
+      </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-2 text-xs font-medium max-w-2xl z-10">
-            <div class="flex items-center gap-2">
-                <i data-lucide="percent" class="w-4 h-4 text-amber-400 bg-white/10 p-0.5 rounded-full flex-shrink-0"></i>
-                <span>6% PharmEasy Credits on all medicine & healthcare orders</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <i data-lucide="percent" class="w-4 h-4 text-amber-400 bg-white/10 p-0.5 rounded-full flex-shrink-0"></i>
-                <span>20% PharmEasy Credits on all diagnostics orders</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <i data-lucide="sparkles" class="w-4 h-4 text-amber-400 bg-white/10 p-0.5 rounded-full flex-shrink-0"></i>
-                <span>FREE* delivery on orders</span>
-            </div>
-        </div>
+      <p class="text-sm text-light-blackk font-medium mb-4">Hot deals on wellness picks! Available while stocks last.</p>
 
-        <button class="bg-amber-400 hover:bg-amber-300 text-amber-950 font-bold text-sm px-5 py-2.5 rounded-lg flex items-center gap-1.5 transition-colors shadow-sm flex-shrink-0 z-10">
-            <span>Explore Now</span>
-            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      <!-- ========== HORIZONTAL SCROLL CAROUSEL WITH BUTTONS ========== -->
+      <div class="relative group">
+        <!-- Left scroll button -->
+        <button id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-gray-100 text-gray-700 rounded-full p-2 shadow-md border border-gray-200 transition-all opacity-0 group-hover:opacity-100 focus:outline-none ml-[-12px]">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
         </button>
-    </div>
 
-    <div class="space-y-2 text-[11px] text-gray-400 leading-relaxed px-2">
-        <p>• A licensed pharmacy would be delivering your order basis availability of product & fastest delivery. <a href="#" class="text-teal-600 font-semibold hover:underline">Details</a></p>
-        <p>• Prices are indicative and may change after billing.</p>
-        <p class="text-justify">• PharmEasy is a technology platform to connect sellers and buyers and is not involved in sales of any product. Offer for sale on the products and services are provided/sold by the sellers only. For details read <a href="#" class="text-teal-600 font-semibold hover:underline">Terms and Conditions</a></p>
-    </div>
+        <!-- Scrollable container -->
+        <div id="scrollContainer" class="flex gap-5 overflow-x-auto no-scrollbar scroll-smooth snap-x pb-4">
+          
+          <!-- Card 1 (Antacid) -->
+          <div class="min-w-[210px] max-w-[210px] bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col snap-start hover:shadow-md transition-shadow">
+            <div class="h-[170px] relative bg-gray-50 rounded-lg p-3 flex items-center justify-center mb-4">
+             <img src="/assets/img/Liveasy Wellness Antacid Powder Lemon Flavour Sachet Of 5gm.svg" alt="">
+              <button class="absolute bottom-2 right-2 bg-white border border-teal-600 text-teal-600 w-8 h-8 rounded-lg font-bold text-lg shadow-sm">+</button>
+            </div>
+            <h3 class="text-sm font-normal text-light-blackk line-clamp-2 h-10">Liveasy Wellness Antacid Powder Lemon</h3>
+            <p class="text-[13px] text-sm text-gray-400 line-through">₹10</p>
+            <div class="flex items-center gap-2 mt-1"><span class="text-base  text-light-blackk font-semibold">₹7</span><span class="text-[14px] font-bold text-light-red">30% OFF</span></div>
+          </div>
 
+          <!-- Card 2 (Seed Mix) -->
+          <div class="min-w-[210px] max-w-[210px] bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col snap-start hover:shadow-md">
+            <div class="h-[170px] relative bg-gray-50 rounded-lg p-3 flex items-center justify-center mb-4">
+              <img src="/assets/img/Liveasy Foods Healthy Seed Mix - Blend Of 6 Fibre Rich Healthy Seeds - 200 Gms.svg" alt="">
+              <button class="absolute bottom-2 right-2 bg-white border border-teal-600 text-teal-600 w-8 h-8 rounded-lg font-bold">+</button>
+            </div>
+            <h3 class="text-sm font-normal text-light-blackk line-clamp-2 h-10">Liveasy Foods Healthy Seed Mix - Blend Of 6</h3>
+            <p class="text-[13px] text-gray-400 line-through">₹327</p>
+            <div class="flex items-center gap-2 mt-1"><span class="text-base text-light-blackk font-semibold">₹141</span><span class="text-[14px] font-bold text-light-red">57% OFF</span></div>
+          </div>
+
+          <!-- Card 3 (Amla Juice) -->
+          <div class="min-w-[210px] max-w-[210px] bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col snap-start hover:shadow-md">
+            <div class="h-[170px] relative  rounded-lg p-3 flex items-center justify-center mb-4">
+              <img src="/assets/img/Everherb (By Pharmeasy) Amla Juice-Rich In Vitamin C-Natural Immunity Booster - 1 Litre Bottle.svg" alt="">
+              <button class="absolute bottom-2 right-2 bg-white border border-teal-600 text-teal-600 w-8 h-8 rounded-lg font-bold">+</button>
+            </div>
+            <h3 class="text-sm font-normal text-light-blackk line-clamp-2 h-10">Everherb (By Pharmeasy) Amla Juice</h3>
+            <p class="text-[13px] text-gray-400 line-through">₹374</p>
+            <div class="flex items-center gap-2 mt-1"><span class="text-base text-light-blackk font-semibold">₹131</span><span class="text-[14px] font-bold text-light-red">65% OFF</span></div>
+          </div>
+
+          <!-- Card 4 (Neem) -->
+          <div class="min-w-[210px] max-w-[210px] bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col snap-start hover:shadow-md">
+            <div class="h-[170px] relative rounded-lg p-3 flex items-center justify-center mb-4">
+             <img src="/assets/img/Everherb (By Pharmeasy) Neem - Immunity Booster - Hair & Skin Detoxifier - Bottle Of 60.svg" alt="">
+              <button class="absolute bottom-2 right-2 bg-white border border-teal-600 text-teal-600 w-8 h-8 rounded-lg font-bold">+</button>
+            </div>
+            <h3 class="text-sm font-normal text-light-blackk line-clamp-2 h-10">Everherb (By Pharmeasy) Neem Capsules</h3>
+            <p class="text-[13px] text-gray-400 line-through">₹562</p>
+            <div class="flex items-center gap-2 mt-1"><span class="text-base text-light-blackk font-semibold">₹203</span><span class="text-[14px] font-bold text-light-red">64% OFF</span></div>
+          </div>
+
+          <!-- Card 5 (Biotin) - from your image -->
+          <div class="min-w-[210px] max-w-[210px] bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col snap-start hover:shadow-md">
+            <div class="h-[170px] relative  rounded-lg p-3 flex items-center justify-center mb-4">
+             <img src="/assets/img/Pharmeasy Biotin 10000mcg - For Hair _ Skin & Nails - Bottle Of 60.svg" alt="">
+              <button class="absolute bottom-2 right-2 bg-white border border-teal-600 text-teal-600 w-8 h-8 rounded-lg font-bold">+</button>
+            </div>
+            <h3 class="text-sm font-normal text-light-blackk line-clamp-2 h-10">Pharmeasy Biotin 10000mcg - For Hair</h3>
+            <p class="text-[13px] text-gray-400 line-through">₹655</p>
+            <div class="flex items-center gap-2 mt-1"><span class="text-base text-light-blackk font-semibold">₹269</span><span class="text-[14px] font-bold text-light-red">59% OFF</span></div>
+          </div>
+
+          <!-- Card 6 (Glutathione) - from your image -->
+          <div class="min-w-[210px] max-w-[210px] bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col snap-start hover:shadow-md">
+            <div class="h-[170px] relative  rounded-lg p-3 flex items-center justify-center mb-4">
+             <img src="/assets/img/Pharmeasy Glutathione - Promotes Healthy Skin - Reverses Signs Of Ageing - Bottle Of 30.svg" alt="">
+              <button class="absolute bottom-2 right-2 bg-white border border-teal-600 text-teal-600 w-8 h-8 rounded-lg font-bold">+</button>
+            </div>
+            <h3 class="text-sm font-normal text-light-blackk line-clamp-2 h-10">Pharmeasy Glutathione - Healthy Skin</h3>
+            <p class="text-[13px] text-gray-400 line-through">₹1245</p>
+            <div class="flex items-center gap-2 mt-1"><span class="text-base text-light-blackk font-semibold">₹474</span><span class="text-[14px] font-bold text-light-red">62% OFF</span></div>
+          </div>
+
+          <!-- Card 7 (Vitamin C - NEW from your image) -->
+          <div class="min-w-[210px] max-w-[210px] bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col snap-start hover:shadow-md">
+            <div class="h-[170px] relative  rounded-lg p-3 flex items-center justify-center mb-4">
+             <img src="/assets/img/Everherb (By Pharmeasy) Amla Juice-Rich In Vitamin C-Natural Immunity Booster - 1 Litre Bottle.svg" alt="">
+              <button class="absolute bottom-2 right-2 bg-white border border-teal-600 text-teal-600 w-8 h-8 rounded-lg font-bold">+</button>
+            </div>
+            <h3 class="text-sm font-normal text-light-blackk line-clamp-2 h-10">Pharmeasy Vitamin C 1000mg - Immunity</h3>
+            <p class="text-[13px] text-gray-400 line-through">₹578</p>
+            <div class="flex items-center gap-2 mt-1"><span class="text-base text-light-blackk font-semibold">₹226</span><span class="text-[14px] font-bold  text-light-red">60% OFF</span></div>
+          </div>
+
+          <!-- Card 8 (Extra deal - Calcium) -->
+          <div class="min-w-[210px] max-w-[210px] bg-white border border-gray-200/80 rounded-xl p-4 flex flex-col snap-start hover:shadow-md">
+            <div class="h-[170px] relative  rounded-lg p-3 flex items-center justify-center mb-4">
+              <img src="/assets/img/Everherb (By Pharmeasy) Neem - Immunity Booster - Hair & Skin Detoxifier - Bottle Of 60.svg" alt="">
+              <button class="absolute bottom-2 right-2 bg-white border border-teal-600 text-teal-600 w-8 h-8 rounded-lg font-bold">+</button>
+            </div>
+            <h3 class="text-smfont-normal text-light-blackk line-clamp-2 h-10">HealthAid Calcium + Vitamin D3</h3>
+            <p class="text-[13px] text-gray-400 line-through">₹499</p>
+            <div class="flex items-center gap-2 mt-1"><span class="text-base text-light-blackk font-semibold">₹299</span><span class="text-[14px] font-bold text-lg text-light-red">40% OFF</span></div>
+          </div>
+
+        </div>
+
+        <!-- Right scroll button -->
+        <button id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-gray-100 text-gray-700 rounded-full p-2 shadow-md border border-gray-200 transition-all opacity-0 group-hover:opacity-100 focus:outline-none mr-[-12px]">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      </div>
 </div>
+</div>
+</div>
+      <!-- PLUS MEMBERSHIP BANNER (unchanged) -->
+      <div class="bg-gradient-to-r from-purple-600 to-indigo-700 py-0 mt-8 flex flex-col sm:flex-row sm:items-center justify-center text-white gap-4">
+        <div class="flex items-center gap-4">
+            <img src="/assets/img/family.png" alt="">
+         
+          <div><h4 class=" mb-3 font-bold text-[#FFFFFF] text-sm">Become a <span class="text-light-orange">👑 Plus</span> Member</h4><p class="text-sm mb-10 text-purple-100">And enjoy extra bachat on every order</p></div>
+        </div>
+        <div class=" mb-5 flex flex-col gap-1 text-[15px] text-[#FFFFFF]"><span>⚡ 6% PharmEasy Credits on all medicine & healthcare orders</span><span>⚡ 20% PharmEasy Credits on all diagnostics orders</span><span>⚡ FREE* delivery on orders</span></div>
+        <button class="bg-light-yellow hover:bg-amber-400 text-[#FFFFFF] font-bold text-sm px-5 py-2.5 ">Explore Now ➔</button>
+      </div>
+
+      <!-- LEGAL DISCLAIMER -->
+      <div class="mt-8 mb-8 pt-4 border-t border-gray-100 text-[15.5px] text-extra-gray space-y-1.5">
+        <p>• A licensed pharmacy would be delivering your order basis availability of product & fastest delivery. <a href="#" class="text-green-light font-bold hover:underline">Details</a></p>
+        <p>• Prices are indicative and may change after billing.</p>
+        <p>• PharmEasy is a technology platform to connect sellers and buyers and is not involved in sales of any product. Offer for sale on the products and services are provided/sold by the sellers only. For details read  <a href="#" class=" font-bold text-green-light ml-2 hover:underline">Terms and Conditions</a></p>
+      </div>
+    
+  
 
 
  <footer>
@@ -596,6 +672,7 @@
                 class="bg-gray-tint px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
                 <!-- Logo & Contact -->
                 <div class="flex flex-col gap-3.5">
+                    
                     <a href="#">
                         <img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" />
                     </a>
@@ -709,5 +786,35 @@
 </div>
         
     
+<script>
+  (function() {
+    const container = document.getElementById('scrollContainer');
+    const leftBtn = document.getElementById('scrollLeftBtn');
+    const rightBtn = document.getElementById('scrollRightBtn');
+
+    if (!container || !leftBtn || !rightBtn) return;
+
+    // Scroll by approximately 2 cards width (adjust as needed)
+    const scrollAmount = 420; // pixels
+
+    leftBtn.addEventListener('click', () => {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    rightBtn.addEventListener('click', () => {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    // Optional: hide buttons when at start/end (adds polish)
+    const updateButtons = () => {
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      leftBtn.style.opacity = container.scrollLeft <= 10 ? '0.4' : '1';
+      rightBtn.style.opacity = container.scrollLeft >= maxScroll - 10 ? '0.4' : '1';
+    };
+    container.addEventListener('scroll', updateButtons);
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+  })();
+</script>
 </body>
 </html>

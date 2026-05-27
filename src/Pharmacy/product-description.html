@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Doctor Description</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+     
+</head>
+
+<body>
+    
+    <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+        <div class="max-w-[150px] max-h-10">
+            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+        </div>
+        <nav>
+            <div>
+                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                    <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a>
+                        <ul
+                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group"><a class="flex items-center">Medicine <svg class="ml-1 w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a>
+                        <ul
+                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible">
+                            <li><a href="#" class="block px-4 py-2">Web Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a></li>
+                    <li><a href="/src/records.html">Records</a></li>
+                    <li><a href="#">Rewards</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li>
+                        <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                            <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                        </div>
+                    </li>
+                    <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                </ul>
+            </div>
+            <ul id="mobile-menu"
+                class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                <li><a href="#" class="block">Home</a></li>
+                <li><a href="#" class="block">About</a></li>
+                <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                        <li><a href="#" class="block">Web Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="block">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="bg-gray-50 min-h-screen pb-12">
+        <div class="py-6 text-center" style="background: linear-gradient(135deg, #084433, #238B6D);">
+            <h2 class="text-white text-2xl font-bold">Flat 20% OFF on First Order</h2>
+            <p class="text-[#F5B326] text-sm mt-1">Upload prescription and we will do the rest for you!</p>
+        </div>
+
+
+      <div class="w-full max-w-8xl mx-auto bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-12">
+  
+<div class="md:col-span-5 bg-[#F1F1F1] relative flex flex-col justify-between overflow-visible px-6">
+  <div class="w-full overflow-visible">
+    <img 
+      src="/assets/img/Medical img products for poster.svg" 
+      alt="Oziva Plant Based Products" 
+    class="w-full  h-auto max-h-[400px] md:max-h-[500px] mt-5 object-contain scale-105"
+    />
+  </div>
+  <div class="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-10">
+    <span class="w-2.5 h-2.5 rounded-full bg-[#008060]"></span>
+    <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+    <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+  </div>
+</div>
+
+  <div class="md:col-span-7 bg-[#F8F9FA] p-6 md:p-10 flex flex-col justify-between">
+    
+    <div class="space-y-4">
+      <div class="bg-white border border-gray-200 rounded-xl p-4 flex items-center justify-between shadow-sm">
+        <div class="flex items-center space-x-3">
+          <div class="text-2xl text-blue-500">📋</div>
+          <div>
+            <p class="text-sm text-gray-light1 font-medium">Please Upload prescription</p>
+            <p class="text-sm text-gray-light1">continue with the order</p>
+          </div>
+        </div>
+        <button class="bg-sea-green-dark1 hover:bg-[#005c46] text-white text-xs  px-4 py-2.5 rounded-full transition-colors">
+          Upload Now
+        </button>
+      </div>
+
+      <div class="pt-2">
+        <h1 class="text-xl md:text-2xl  text-gray">Oziva Plant Based Biotin 10000mcg</h1>
+        <p class="text-sm text-sea-green-dark2 font-bold mt-1">Bottle of 1</p>
+        
+        <div class="flex flex-wrap gap-2 items-center mt-4">
+          <span class="text-[12px] uppercase font-bold tracking-wider text-light-pink1 bg-pink-light-1 px-2 py-1 rounded">
+            ADD 2 MORE, SAVE 2% EXTRA ⓘ
+          </span>
+          <span class="flex items-center text-xs font-semibold text-white bg-strong-red px-2.5 py-1 rounded gap-1">
+            ⚠️ Prescription Required
+          </span>
+          <span class="flex items-center text-xs font-semibold text-white bg-persian-blue px-2.5 py-1 rounded gap-1">
+            ⚠️ NPPA Regulated
+          </span>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between  py-4 mt-6">
+        <div class="flex items-baseline space-x-3">
+          <span class="text-2xl md:text-3xl font-bold text-gray">$25.00</span>
+          <span class="text-2xl  md:text-3xl text-gray-dark-1 line-through">$25.00</span>
+        </div>
+        
+       
+      </div>
+
+      <div class="pt-2">
+        <div class="flex items-center justify-between">
+          <h2 class="text-[18px] font-bold text-gray">Product Info</h2>
+          <div class="flex space-x-3 text-gray-400">
+            <button class="hover:text-red-500 transition-colors"><span class="material-symbols-outlined">
+favorite
+</span></button>
+            <button class="hover:text-blue-500 transition-colors"><span class="material-symbols-outlined">
+share
+</span></button>
+          </div>
+        </div>
+        <p class="text-[18px] text-gray-dark-1 mt-2 leading-relaxed">
+          Unleash Your Boldness Embrace Elegance with Our Luxurious Kiss Lipstick Collection
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-4 border-t border-gray-100 flex justify-end">
+      <button class="w-full md:w-auto bg-sea-green2 hover:bg-[#005c46] text-white font-medium px-15 py-3 rounded-xl shadow-md hover:shadow-lg transition-all text-center">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+</div>
+        
+
+        <section class="max-w-8xl mx-auto mt-8 px-4 mb-12">
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 font-sans">
+
+        <div class="flex items-center space-x-3 mb-6 ml-35">
+            <div class="w-10 h-10 border border-gray-100 rounded-md p-1 flex items-center justify-center bg-[#F9FAFB]">
+                <img src="/assets/img/BIOTINBOX.png" alt="variant" class="object-contain max-h-full">
+            </div>
+            <div class="w-10 h-10 border border-gray-100 rounded-md p-1 flex items-center justify-center bg-[#F9FAFB]">
+                <img src="/assets/img/BIOTINBOX.png" alt="variant" class="object-contain max-h-full">
+            </div>
+            <div class="w-10 h-10 border border-gray-100 rounded-md p-1 flex items-center justify-center bg-[#F9FAFB]">
+                <img src="/assets/img/BIOTINBOX.png" alt="variant" class="object-contain max-h-full">
+            </div>
+            <div class="w-10 h-10 border border-gray-100 rounded-md p-1 flex items-center justify-center bg-[#F9FAFB]">
+                <img src="/assets/img/BIOTINBOX.png" alt="variant" class="object-contain max-h-full">
+            </div>
+        </div>
+
+        <h2 class="text-[18px] font-semibold  text-gray mb-4">About the Product</h2>
+
+        <p class="text-sm text-sea-green-dark2 leading-relaxed max-w-8xl mb-6">
+            Oziva is a clean, vegan, and plant-based protein powder designed for daily wellness and fitness, typically blending Organic Pea Protein Isolate, Brown Rice Protein, and Quinoa. It provides a complete amino acid profile (approx. 20-30g per serving) to support muscle recovery, immune health, and energy, while being soy-free, gluten-free, lactose-free, and non-GMO.
+        </p>
+
+        <div class="mb-6">
+            <h3 class="text-[15px] font-semibold text-gray mb-3">Key Features & Benefits</h3>
+            <ul class="space-y-2.5 max-w-8xl">
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-sea-green-dark2 mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Protein Blend: Combines Pea Protein Isolate, Brown Rice Protein, and Quinoa to provide a complete protein source containing all essential amino acids.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-sea-green-dark2 mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Nutritional Support: Each serving generally provides 20-30g of protein and 5.2-5.5g of BCAAs (Branched Chain Amino Acids) to support muscle repair, growth, and metabolism.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-sea-green-dark2 mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Clean Label: Oziva products are certified by the Clean Label Project (US CLP), ensuring they are tested for over 400 contaminants, including heavy metals and pesticides.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-sea-green-dark2 mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Digestibility: Contains digestive enzymes to ensure better absorption and easy digestion, making it gentle on the stomach.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-sea-green-dark2 mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Versatility: Ideal for everyday fitness, it can be consumed by men and women to improve metabolism and energy.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-[15px] font-semibold text-gray mb-3">Common Variants & Ingredients</h3>
+            <ul class="space-y-2.5 max-w-6xl">
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-sea-green-dark2 mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Focuses on everyday fitness and weight management, typically unflavoured.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-[#1A7A5E] mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Includes Ayurvedic herbs like Ashwagandha and Tulsi for immunity and energy.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-[#1A7A5E] mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Enriched with ingredients like turmeric and ginger extract for better endurance and muscle recovery.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-[#1A7A5E] mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Digestibility: Contains digestive enzymes to ensure better absorption and easy digestion, making it gentle on the stomach.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-[#1A7A5E] mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Versatility: Ideal for everyday fitness, it can be consumed by men and women to improve metabolism and energy.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="text-[15px] font-semibold text-gray mb-3">How to Use it</h3>
+            <ul class="space-y-2.5 max-w-6xl">
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-[#1A7A5E] mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Focuses on everyday fitness and weight management, typically unflavoured.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-[#1A7A5E] mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Includes Ayurvedic herbs like Ashwagandha and Tulsi for immunity and energy.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-[#1A7A5E] mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Enriched with ingredients like turmeric and ginger extract for better endurance and muscle recovery.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-[#1A7A5E] mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Digestibility: Contains digestive enzymes to ensure better absorption and easy digestion, making it gentle on the stomach.</span>
+                </li>
+                <li class="flex items-start text-sm text-sea-green-dark2 leading-relaxed">
+                    <span class="text-[#1A7A5E] mr-2.5 mt-1 text-[8px]">●</span>
+                    <span>Versatility: Ideal for everyday fitness, it can be consumed by men and women to improve metabolism and energy.</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+        <section class="max-w-8xl mx-auto mt-8 px-4 mb-20">
+            <div class="bg-[#E9F9F4] rounded-xl p-8 relative overflow-hidden">
+
+                <!-- Rating Section -->
+                <div class="mb-10">
+                    <!-- SAME LINE -->
+                    <div class="flex items-center gap-2 mb-6 flex-wrap">
+                        <img src="/assets/img/GoogleIcon.svg" class="w-5 h-5" alt="Google">
+
+                        <span class="font-bold text-gray-800 text-sm">4.6 Stars</span>
+
+                        <!-- Stars -->
+                        <div class="flex items-center text-gray-300 text-xs gap-[2px]">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-gray-300 text-gray-300"></i>
+                        </div>
+
+                        <span class="text-sm text-[#4F585E] border-l border-gray-300 pl-2">
+                            | 7+ Lakhs Ratings & Reviews
+                        </span>
+                    </div>
+
+                    <!-- Increased Slider Width -->
+                    <div class="space-y-2 max-w-2xl">
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">5 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[83%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">4 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[74%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">3 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[66%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">2 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[57%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">1 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[14%] rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=100"
+                            alt="User">
+
+                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=100"
+                            alt="User">
+                    </div>
+
+                    <div>
+                        <h3 class="text-[#10847E] font-semibold text-lg leading-tight">
+                            Over 10 million happy users
+                        </h3>
+
+                        <p class="text-[#30363C] font-semibold">PharmEasyLabs</p>
+                    </div>
+                </div>
+
+                <!-- Quote -->
+                <i data-lucide="quote" class="absolute left-4 bottom-32 w-24 h-24 text-emerald-100 -z-0 opacity-50"></i>
+
+                <!-- BOXES untouched -->
+                <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide relative z-10">
+
+                    <div
+                        class="min-w-[290px] h-[200px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-[#30363C] text-sm leading-relaxed mb-6">
+                           Value for money and reasonable rates
+after discounts..
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-[#4F585E]">
+                                    Pankaj Roy   30 Apr '25
+                                </span>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[220px] h-[200px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            The phlebotomist and other staff
+involved are really accurate and
+helpful. Wish I could give more than
+10.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-[#4F585E]">
+                                    Suryabhan... 01 Jul '24
+                                </span>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                           Best service provided by pharmacy
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-[#4F585E]">
+                                    Sana 06 May '25
+                                </span>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Aqib Khan, who came to collect the
+sample is one the best technicians I
+have seen so far. He is very efficient,
+calm and the sample collection was a
+painless pr
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-[#4F585E]">
+                                    Suryabhan...
+                                </span>
+                            </div>
+
+                            <span class="text-[10px] text-[#4F585E]">
+                                01 Jul '24
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="max-w-9xl mx-auto mt-1 px-4  font-sans">
+  
+  <div class="bg-white shadow-sm border border-gray-100 p-8">
+    
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-xl font-bold text-gray-800 tracking-tight">Similar Products</h2>
+      <a href="#" class="text-sm font-semibold text-[#147E6E] hover:underline">See all</a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      
+      <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 p-4 flex flex-col justify-between relative">
+        <div>
+          <div class="w-full h-44 bg-white flex items-center justify-center relative mb-4">
+            <span class="absolute top-0 left-0 bg-red-500 text-white font-bold text-[10px] px-2 py-0.5 rounded-sm tracking-wide shadow-sm">
+              SALE
+            </span>
+            <img src="/assets/img/BIOTINBOX.png" alt="Shelcal 500mg" class="object-contain max-h-full max-w-full">
+          </div>
+
+          <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px]">
+            Shelcal 500mg Strip of 15 Tablets
+          </h3>
+          
+          <div class="flex items-center space-x-1 mt-1.5 mb-3">
+            <div class="flex text-amber-400 text-xs">★★★★</div>
+            <div class="text-gray-300 text-xs">★</div>
+            <span class="text-xs text-gray-400 pl-1">(118)</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-baseline space-x-1.5">
+              <span class="text-lg font-bold text-gray-800">$28.56</span>
+              <span class="text-sm text-gray-400 line-through">$29.56</span>
+            </div>
+            <button class="w-8 h-8 bg-gray-50 hover:bg-gray-100 border border-gray-100 text-gray-400 hover:text-red-500 rounded-lg flex items-center justify-center transition-colors">
+              ♡
+            </button>
+          </div>
+          <button class="w-full bg-[#147E6E] hover:bg-[#0f6356] text-white text-sm font-medium py-2 rounded-lg transition-colors shadow-sm">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 p-4 flex flex-col justify-between">
+        <div>
+          <div class="w-full h-44 bg-white flex items-center justify-center relative mb-4">
+            <img src="/assets/img/BIOTINBOX.png" alt="Oziva Biotin" class="object-contain max-h-full max-w-full">
+          </div>
+          <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px]">
+            Oziva Plant Based Biotin 10000mcg
+          </h3>
+          <div class="flex items-center space-x-1 mt-1.5 mb-3">
+            <div class="flex text-amber-400 text-xs">★★★★</div>
+            <div class="text-gray-300 text-xs">★</div>
+            <span class="text-xs text-gray-400 pl-1">(118)</span>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-baseline space-x-1.5">
+              <span class="text-lg font-bold text-gray-800">$28.56</span>
+              <span class="text-sm text-gray-400 line-through">$29.56</span>
+            </div>
+            <button class="w-8 h-8 bg-gray-50 hover:bg-gray-100 border border-gray-100 text-gray-400 hover:text-red-500 rounded-lg flex items-center justify-center transition-colors">
+              ♡
+            </button>
+          </div>
+          <button class="w-full bg-[#147E6E] hover:bg-[#0f6356] text-white text-sm font-medium py-2 rounded-lg transition-colors shadow-sm">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 p-4 flex flex-col justify-between">
+        <div>
+          <div class="w-full h-44 bg-white flex items-center justify-center relative mb-4">
+            <img src="/assets/img/BIOTINBOX.png" alt="Shelcal 500mg" class="object-contain max-h-full max-w-full">
+          </div>
+          <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px]">
+            Shelcal 500mg Strip of 15 Tablets
+          </h3>
+          <div class="flex items-center space-x-1 mt-1.5 mb-3">
+            <div class="flex text-amber-400 text-xs">★★★★</div>
+            <div class="text-gray-300 text-xs">★</div>
+            <span class="text-xs text-gray-400 pl-1">(118)</span>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-baseline space-x-1.5">
+              <span class="text-lg font-bold text-gray-800">$28.56</span>
+              <span class="text-sm text-gray-400 line-through">$29.56</span>
+            </div>
+            <button class="w-8 h-8 bg-gray-50 hover:bg-gray-100 border border-gray-100 text-gray-400 hover:text-red-500 rounded-lg flex items-center justify-center transition-colors">
+              ♡
+            </button>
+          </div>
+          <button class="w-full bg-[#147E6E] hover:bg-[#0f6356] text-white text-sm font-medium py-2 rounded-lg transition-colors shadow-sm">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 p-4 flex flex-col justify-between">
+        <div>
+          <div class="w-full h-44 bg-white flex items-center justify-center relative mb-4">
+            <img src="/assets/img/BIOTINBOX.png" alt="Shelcal 500mg alternative" class="object-contain max-h-full max-w-full">
+          </div>
+          <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px]">
+            Shelcal 500mg Strip of 15 Tablets
+          </h3>
+          <div class="flex items-center space-x-1 mt-1.5 mb-3">
+            <div class="flex text-amber-400 text-xs">★★★★</div>
+            <div class="text-gray-300 text-xs">★</div>
+            <span class="text-xs text-gray-400 pl-1">(118)</span>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-baseline space-x-1.5">
+              <span class="text-lg font-bold text-gray-800">$28.56</span>
+              <span class="text-sm text-gray-400 line-through">$29.56</span>
+            </div>
+            <button class="w-8 h-8 bg-gray-50 hover:bg-gray-100 border border-gray-100 text-gray-400 hover:text-red-500 rounded-lg flex items-center justify-center transition-colors">
+              ♡
+            </button>
+          </div>
+          <button class="w-full bg-[#147E6E] hover:bg-[#0f6356] text-white text-sm font-medium py-2 rounded-lg transition-colors shadow-sm">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+       
+
+        <section class="max-w-8xl mx-auto mt-12 px-4 mb-20">
+            <h2 class="text-lg font-bold text-[#30363C] mb-8">People Also Ask</h2>
+
+            <div class="flex flex-col gap-5">
+                <!-- Each FAQ item gets consistent min-height and expands naturally -->
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">What is this product used for?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                       Helps users quickly understand the purpose (e.g., immunity, hair growth, pain relief).
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">How should I take/use this product?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                        Yes, video consultations are available for select slots.
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">Are there any side effects or precautions?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                        Dr. Anjali Mehta specializes in pregnancy care, PCOS, infertility, and general women's health
+                        issues.
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">Do I need a prescription for this product?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                        The standard consultation fee is ₹499.
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">When will I start seeing results?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                        The clinic is open Mon – Sat: 10:00 AM – 7:00 PM.
+                    </div>
+                </details>
+            </div>
+
+            <!-- Button with same height as each FAQ item (64px) -->
+            <div class="mt-5">
+                <button
+                    class="w-full h-16 bg-white border border-gray-200 rounded-xl text-sm text-[#4F585E] hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-2">
+                    View More Questions
+                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </section>
+
+        <footer class="bg-[#d5e3e0] pt-16 pb-8">
+            <div class="max-w-8xl mx-auto px-4 md:px-10 lg:px-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+
+                    <div class="lg:col-span-1">
+                        <div class="flex items-center gap-2 mb-6">
+                            <img src="/assets/img/logo.png" alt="Drodo" class="h-8">
+                        </div>
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><span class="font-semibold text-dark-charcoal">Phone:</span> (+123) 456-7898</p>
+                            <p><span class="font-semibold text-dark-charcoal">Email:</span> hello@drodo.com</p>
+                            <p><span class="font-semibold text-dark-charcoal">Address:</span> 6890 Blvd, The Bronx, NY 1058,
+                                USA</p>
+                        </div>
+
+                        <div class="flex gap-1 mt-6">
+                            <a href=""><img src="/assets/img/Item → Link.svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (1).svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (2).svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (3).svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (4).svg" alt=""></a>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gray-dark mb-6 relative">
+                            Information
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• About Us</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Contact Us</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-6 relative">
+                            Customer Care
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• My Account</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Order History</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Wishlist</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Records</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Rewards</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Help & FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-6 relative">
+                            Policy
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Purchasing Policy</a>
+                            </li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Orders and Returns</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-1">
+                        <h4 class="font-bold text-gray-800 mb-6 relative">
+                            Newsletter
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-4">Sign up for our mailing list to get the latest updates &
+                            offers.</p>
+                        <div class="space-y-3">
+                            <input type="email" placeholder="Enter your email address"
+                                class="w-full px-4 py-3 rounded-md bg-white/50 border border-transparent focus:border-emerald-500 focus:outline-none text-sm">
+                            <button
+                                class="w-full bg-sea-green-deep hover:bg-emerald-800 text-white font-bold py-3 rounded-md transition-colors text-sm">
+                                Subscribe Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mt-16 pt-8 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-sm text-gray-500">@ Avatar. Designed By Aibuzz</p>
+                    <div class="flex items-center gap-4">
+                        <span class="text-sm text-gray-500">We accept payment via:</span>
+                        <div class="flex gap-2">
+                            <img src="/assets/img/VISA1.svg" alt="">
+                            <img src="/assets/img/2ndvia.svg" alt="">
+                            <img src="/assets/img/paypal.svg" alt="">
+                            <img src="/assets/img/4thvia.svg" alt="">
+                            <img src="/assets/img/Discover.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+ <script src="/script/doctor-description.js"></script>
+   
+</body>
+
+</html>

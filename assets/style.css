@@ -7,6 +7,13 @@
   --color-gray: #212B36;
 
   --color-gray-dark-1: #637381;
+  --color-pink-light-1: #F1EDFD;
+  --color-light-orange: #FDBA2B;
+  --color-red-dark:#D0483D;
+  --color-light-red: #F47779;
+  --color-extra-gray: #6E787E;
+  --color-light-pink1:#6B45C6;
+  --color-green-light: #10847E;
   --color-gray-light: #474747;
   --color-light-blackk: #30363C;
   --color-gray-darkk: #4F585E;
@@ -76,7 +83,9 @@
   --color-ocean-slate: #02475B;
   --color-emerald-veil: #1A7A5E40;
   --color-sun-yellow: #FC9916;
-  /* Box Shadow */
+  --color-gray-light-13: #D1D5DB;
+  --color-purple-5:#EDE9FE;
+    /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
   --box-shadow-2: 0 12px 24px -4px rgba(145, 158, 171, 0.12);
 
@@ -110,6 +119,8 @@
   --color-cool-gray: #929DA7;
   --color-golden-yellow: #FFC107;
   --color-golden-amber: #FBBC05;
+  --color-amber-orange: #D97706;
+  --color-light-amber-orange: #D9770615;
   --color-light-powder-blue: #DAEDFF;
   --color-light-cream: #FFF5D7;
   --color-lime-green: #54D62C;
@@ -136,6 +147,8 @@
   --color-carbon-gray: #666666;
   --color-night-black: #141414;
   --color-tomato-red: #FF4842;
+  --color-tomato-red1: #DC2626;
+  --color-creamish-red: #DC262615;
   --color-pale-slate: #AEAEB2;
   --color-granite-gray: #4D4D4D;
   --color-seafoam-blue: #83BEBB;
@@ -203,8 +216,20 @@
   --color-gray-dark-4: #1F2937;
   --color-gray-light-9: #6B7280;
   --color-gray-light-10: #99A1AF;
+  --color-gray-light-11: #6B728015;
   --color-blue-light-1: #EBF2FF;
   --color-blue-light-2: #B5CDF7;
+  --color-gray-light-11: #111827;
+  --color-orange-light: #FFF7ED;
+  --color-orange-light-2: #FED7AA;
+  --color-orange-light-3: #92400E;
+  --color-gray-light-12: #9CA3AF;
+  --color-mint-cream-1: #1A7A5E1A;
+  --color-mint-cream-2: #D1FAE5;
+  --color-mint-cream-3: #065F46;
+  --color-white-4d: #F9FAFB4D;
+  --color-green-light-6: #F0FDF4;
+  --color-green-light-7: #BBF7D0;
   --color-eerie-black: #111827;
   --color-warm-sand: #FED7AA;
   --color-warm-ivory: #FFF7ED;
@@ -255,6 +280,8 @@
   --shadow-auth-popup-inset: 0px 2px 4px 1px #0000000D inset;
   --shadow-auth-button: 0px 20px 25px -5px #004F3B33;
   --shadow-box-1: 0px 4px 0px 0px #E6EBF4;
+  --shadow-box-2: 0px 1px 3px 0px #0000001A;
+  --shadow-box-3: 0px 1px 4px 0px #0000000A;
   --shadow-prescriptionbox: 0px 1px 4px 0px #0000000A;
   --shadow-medicine-box: 0px 1px 2px -1px #0000001A, 0px 1px 3px 0px #0000001A;
 
