@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/output.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <title>Doctor Description</title>
+    <title>Product Description</title>
     <script src="https://unpkg.com/lucide@latest"></script>
      
 </head>
 
-<body>
+<body class= "bg-gray-tint no-scrollbar">
     
     <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
         <div class="max-w-[150px] max-h-10">
@@ -37,15 +37,9 @@
                             <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
                         </ul>
                     </li>
-                    <li class="relative group"><a class="flex items-center">Medicine <svg class="ml-1 w-4 h-4"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg></a>
-                        <ul
-                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible">
-                            <li><a href="#" class="block px-4 py-2">Web Design</a></li>
-                        </ul>
+                    <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
+                               </a>
+                       
                     </li>
                     <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +73,9 @@
                 <li><a href="#" class="block">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </header> 
+
+    
 
     <main class="bg-gray-50 min-h-screen pb-12">
         <div class="py-6 text-center" style="background: linear-gradient(135deg, #084433, #238B6D);">
@@ -175,7 +171,7 @@ share
 </div>
         
 
-        <section class="max-w-8xl mx-auto mt-8 px-4 mb-12">
+        <section class="max-w-8xl mx-auto mt-8 px-4 mb-0">
     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 font-sans">
 
         <div class="flex items-center space-x-3 mb-6 ml-35">
@@ -280,7 +276,7 @@ share
     </div>
 </section>
 
-        <section class="max-w-8xl mx-auto mt-8 px-4 mb-20">
+        <section class="max-w-8xl mx-auto mt-8 px-4 mb-3">
             <div class="bg-[#E9F9F4] rounded-xl p-8 relative overflow-hidden">
 
                 <!-- Rating Section -->
@@ -393,8 +389,8 @@ after discounts..
                         </div>
                     </div>
 
-                    <div
-                        class="min-w-[220px] h-[200px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                  <div
+    class="min-w-[205px] h-[200px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
                             The phlebotomist and other staff
 involved are really accurate and
@@ -479,141 +475,401 @@ painless pr
       <a href="#" class="text-sm font-semibold text-[#147E6E] hover:underline">See all</a>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      
-      <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 p-4 flex flex-col justify-between relative">
-        <div>
-          <div class="w-full h-44 bg-white flex items-center justify-center relative mb-4">
-            <span class="absolute top-0 left-0 bg-red-500 text-white font-bold text-[10px] px-2 py-0.5 rounded-sm tracking-wide shadow-sm">
-              SALE
-            </span>
-            <img src="/assets/img/BIOTINBOX.png" alt="Shelcal 500mg" class="object-contain max-h-full max-w-full">
-          </div>
+  <div class="mt-4 max-h-[950px] overflow-y-auto pr-2">
 
-          <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px]">
-            Shelcal 500mg Strip of 15 Tablets
-          </h3>
-          
-          <div class="flex items-center space-x-1 mt-1.5 mb-3">
-            <div class="flex text-amber-400 text-xs">★★★★</div>
-            <div class="text-gray-300 text-xs">★</div>
-            <span class="text-xs text-gray-400 pl-1">(118)</span>
-          </div>
-        </div>
+                <!-- RESPONSIVE WRAPPER -->
+                <div class="overflow-x-auto xl:overflow-visible scrollbar-hide">
 
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-baseline space-x-1.5">
-              <span class="text-lg font-bold text-gray-800">$28.56</span>
-              <span class="text-sm text-gray-400 line-through">$29.56</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-4">
+
+                        <!-- CARD -->
+                        <a href="/src/Pharmacy/product-description.html" class="block">
+
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/shelcal.png" class="object-contain max-h-[170px]"
+                                        alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Shelcal 500mg Strip of 15 Tablets
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+
+                            </div>
+
+                        </a>
+
+
+                        <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="/src/Pharmacy/product-description.html" class="block">
+
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/shelcal.png" class="object-contain max-h-[170px]"
+                                        alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Shelcal 500mg Strip of 15 Tablets
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+
+                            </div>
+
+                        </a>
+
+                        <a href="/src/Pharmacy/product-description.html" class="block">
+                            <div
+                                class="bg-white rounded-2xl shadow-md shadow-[0px_10px_30px_rgba(0,0,0,0.12)] overflow-hidden p-4 relative cursor-pointer hover:-translate-y-1 transition-all duration-300">
+
+
+
+                                <!-- Image -->
+                                <div class="flex items-center justify-center">
+
+                                    <img src="/assets/img/medicines/oziva-biotin.png"
+                                        class="object-contain max-h-[170px]" alt="medicine">
+
+                                </div>
+
+                                <!-- Name -->
+                                <h3 class="mt-4 text-gray font-semibold text-base leading-6">
+                                    Oziva Plant Based Biotin 10000mcg
+                                </h3>
+
+                                <!-- Rating -->
+                                <div class="flex items-center gap-1 mt-1">
+
+                                    <div class="flex items-center ">
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+                                        <span class="material-symbols-outlined  text-[16px] text-warm-yellow">
+                                            star
+                                        </span>
+
+
+                                        <span class="material-symbols-outlined  text-[16px] text-gray-light1">
+                                            star
+                                        </span>
+
+                                    </div>
+
+                                    <span class="text-xs font-normal text-gray-light1">
+                                        (118)
+                                    </span>
+
+                                </div>
+
+                                <!-- Price + Wishlist -->
+                                <div class="flex items-center justify-between mt-3">
+
+                                    <!-- Price -->
+                                    <div class="flex items-center gap-2">
+
+                                        <span class="text-xl font-bold text-gray">
+                                            $28.56
+                                        </span>
+
+                                        <span class="line-through text-gray text-xl font-normal">
+                                            $29.56
+                                        </span>
+
+                                    </div>
+
+                                    <!-- Wishlist -->
+                                    <button
+                                        class="wishlist-btn w-9 h-9 rounded-md bg-gray-tint flex items-center justify-center transition-all">
+
+                                        <span
+                                            class="material-symbols-outlined wishlist-icon text-gray-light1 text-[20px] transition-all">
+                                            favorite
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <!-- Add To Cart -->
+                                <button
+                                    onclick="event.preventDefault(); event.stopPropagation(); window.location.href='/src/Pharmacy/cart.html';"
+                                    class="w-full mt-4 bg-sea-green-deep text-white py-3 rounded-xl text-base font-normal cursor-pointer">
+
+                                    Add to Cart
+
+                                </button>
+                            </div>
+                        </a>
+
+                    
+
+                    </div>
+                </div>
             </div>
-            <button class="w-8 h-8 bg-gray-50 hover:bg-gray-100 border border-gray-100 text-gray-400 hover:text-red-500 rounded-lg flex items-center justify-center transition-colors">
-              ♡
-            </button>
-          </div>
-          <button class="w-full bg-[#147E6E] hover:bg-[#0f6356] text-white text-sm font-medium py-2 rounded-lg transition-colors shadow-sm">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 p-4 flex flex-col justify-between">
-        <div>
-          <div class="w-full h-44 bg-white flex items-center justify-center relative mb-4">
-            <img src="/assets/img/BIOTINBOX.png" alt="Oziva Biotin" class="object-contain max-h-full max-w-full">
-          </div>
-          <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px]">
-            Oziva Plant Based Biotin 10000mcg
-          </h3>
-          <div class="flex items-center space-x-1 mt-1.5 mb-3">
-            <div class="flex text-amber-400 text-xs">★★★★</div>
-            <div class="text-gray-300 text-xs">★</div>
-            <span class="text-xs text-gray-400 pl-1">(118)</span>
-          </div>
-        </div>
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-baseline space-x-1.5">
-              <span class="text-lg font-bold text-gray-800">$28.56</span>
-              <span class="text-sm text-gray-400 line-through">$29.56</span>
-            </div>
-            <button class="w-8 h-8 bg-gray-50 hover:bg-gray-100 border border-gray-100 text-gray-400 hover:text-red-500 rounded-lg flex items-center justify-center transition-colors">
-              ♡
-            </button>
-          </div>
-          <button class="w-full bg-[#147E6E] hover:bg-[#0f6356] text-white text-sm font-medium py-2 rounded-lg transition-colors shadow-sm">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 p-4 flex flex-col justify-between">
-        <div>
-          <div class="w-full h-44 bg-white flex items-center justify-center relative mb-4">
-            <img src="/assets/img/BIOTINBOX.png" alt="Shelcal 500mg" class="object-contain max-h-full max-w-full">
-          </div>
-          <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px]">
-            Shelcal 500mg Strip of 15 Tablets
-          </h3>
-          <div class="flex items-center space-x-1 mt-1.5 mb-3">
-            <div class="flex text-amber-400 text-xs">★★★★</div>
-            <div class="text-gray-300 text-xs">★</div>
-            <span class="text-xs text-gray-400 pl-1">(118)</span>
-          </div>
-        </div>
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-baseline space-x-1.5">
-              <span class="text-lg font-bold text-gray-800">$28.56</span>
-              <span class="text-sm text-gray-400 line-through">$29.56</span>
-            </div>
-            <button class="w-8 h-8 bg-gray-50 hover:bg-gray-100 border border-gray-100 text-gray-400 hover:text-red-500 rounded-lg flex items-center justify-center transition-colors">
-              ♡
-            </button>
-          </div>
-          <button class="w-full bg-[#147E6E] hover:bg-[#0f6356] text-white text-sm font-medium py-2 rounded-lg transition-colors shadow-sm">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 p-4 flex flex-col justify-between">
-        <div>
-          <div class="w-full h-44 bg-white flex items-center justify-center relative mb-4">
-            <img src="/assets/img/BIOTINBOX.png" alt="Shelcal 500mg alternative" class="object-contain max-h-full max-w-full">
-          </div>
-          <h3 class="text-sm font-semibold text-gray-800 line-clamp-2 min-h-[40px]">
-            Shelcal 500mg Strip of 15 Tablets
-          </h3>
-          <div class="flex items-center space-x-1 mt-1.5 mb-3">
-            <div class="flex text-amber-400 text-xs">★★★★</div>
-            <div class="text-gray-300 text-xs">★</div>
-            <span class="text-xs text-gray-400 pl-1">(118)</span>
-          </div>
-        </div>
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-baseline space-x-1.5">
-              <span class="text-lg font-bold text-gray-800">$28.56</span>
-              <span class="text-sm text-gray-400 line-through">$29.56</span>
-            </div>
-            <button class="w-8 h-8 bg-gray-50 hover:bg-gray-100 border border-gray-100 text-gray-400 hover:text-red-500 rounded-lg flex items-center justify-center transition-colors">
-              ♡
-            </button>
-          </div>
-          <button class="w-full bg-[#147E6E] hover:bg-[#0f6356] text-white text-sm font-medium py-2 rounded-lg transition-colors shadow-sm">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
 
        
 
-        <section class="max-w-8xl mx-auto mt-12 px-4 mb-20">
+        <section class="max-w-8xl mx-auto mt-5 px-4 mb-20">
             <h2 class="text-lg font-bold text-[#30363C] mb-8">People Also Ask</h2>
 
             <div class="flex flex-col gap-5">

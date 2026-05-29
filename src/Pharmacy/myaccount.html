@@ -1,419 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="My Account Page">
     <title>My Account</title>
-
-    <link rel="stylesheet" href="assets/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="./script/main.js"></script>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script src="/script/main.js"></script>
 </head>
-
-<body class="bg-gray-50">
-    <div class="container">
-        <header class="nav-menu px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+<body>
+    <div>
+        <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
             <div class="max-w-[150px] max-h-10">
-                <a href="#"><img src="assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+                <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
             </div>
-            <nav class="">
-                <div class="">
+            <nav>
+                <div>
                     <button id="menu-btn" class="md:hidden text-white focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
-                    <ul id="menu" class="hidden md:flex space-x-6 items-center">
-                        <li class="relative group">
-                            <a class="flex items-center focus:outline-none">
-                                Home
-                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                        <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <!-- Submenu -->
+                                </svg></a>
                             <ul
                                 class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                </li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
                             </ul>
                         </li>
-                        <li class="relative group">
-                            <a class="flex items-center focus:outline-none">
-                                Medicine
-                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
+                                </a>
+                        
+                        </li>
+                        <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <!-- Submenu -->
-                            <ul
-                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                </li>
-                            </ul>
+                                </svg></a></li>
+                        <li><a href="/src/records.html">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li>
+                            <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                                <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                    data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                            </div>
                         </li>
-                        <li class="relative group">
-                            <a class="flex items-center focus:outline-none">
-                                Maps
-                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <!-- Submenu -->
-                            <ul
-                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="relative group">
-                            <a class="flex items-center focus:outline-none">
-                                Services
-                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <!-- Submenu -->
-                            <ul
-                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#" class="">Records</a></li>
-                        <li><a href="#" class="">Rewards</a></li>
-                        <li><a href="#" class="">Support</a></li>
-                        <li><a href="#" class="text-[#238b6d]">Login/Sign Up</a></li>
+                        <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
                     </ul>
                 </div>
-                <!-- Mobile Menu -->
-                <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4">
+                <ul id="mobile-menu"
+                    class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
                     <li><a href="#" class="block">Home</a></li>
                     <li><a href="#" class="block">About</a></li>
-                    <li>
-                        <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
-                            Services
-                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
+                    <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg></button>
                         <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
-                            <li>
-                                <a href="#" class="block hover:text-gray-300">Web Design</a>
-                            </li>
-                            <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
-                            <li>
-                                <a href="#" class="block hover:text-gray-300">Consulting</a>
-                            </li>
+                            <li><a href="#" class="block">Web Design</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="block hover:text-gray-300">Contact</a></li>
+                    <li><a href="#" class="block">Contact</a></li>
                 </ul>
             </nav>
-        </header>
-        <div class=" mx-auto px-20 py-8 flex flex-col md:flex-row gap-8">
-
+        </header> 
+        <div class="mx-auto px-4 sm:px-8 lg:px-20 py-6 md:py-8 flex flex-col md:flex-row gap-6 md:gap-8 bg-light-gray-blue min-h-screen">
             <!-- Sidebar Navigation -->
-            <div class="w-full md:w-64 flex-shrink-0">
-                <div
-                    class=" flex justify-between items-center border px-4 py-2 gap-2 rounded-lg bg-gray-tint border-gray-200 mb-6">
-                    <span class=" text-gray-500 text-xs">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <input type="text" name="search-d" placeholder="What do you want to help?"
-                        class="w-full text-xs py-2 px-4 pr-10 rounded-full text-gray-dark-1 focus:outline-none">
-                </div>
-                <div class="mt-5">
+            <div class="w-full md:w-56 flex-shrink-0" data-account-sidebar>
+                <div>
                     <nav>
                         <ul class="space-y-3">
-                            <li><a href="/myaccount.html"
-                                    class="flex items-center text-white text-sm bg-green-light px-4 py-2 rounded font-semibold"><i
-                                        class="fas fa-user mr-3"></i> My Account</a></li>
-                            <li><a href="/mysave.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-bookmark mr-3"></i> My Save</a></li>
-                            <li><a href="/myuploads.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-upload mr-3"></i> My Uploads</a></li>
-                            <li><a href="/manageAddress.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-map-marker-alt mr-3"></i> Manage Address</a></li>
-                            <li><a href="/payment_methods.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-credit-card mr-3"></i> Payment Methods</a></li>
-                            <li><a href="/policy.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-file-alt mr-3"></i> Policy</a></li>
-                            <li><a href="/help-center.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-question-circle mr-3"></i> Help Center</a></li>
-                            <li><a href="/settings.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-cog mr-3"></i> Settings</a></li>
-                            <li><a href="#"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-sign-out-alt mr-3"></i> Logout</a></li>
+                            <li>
+                                <a href="/src/Pharmacy/myaccount.html">
+                                    <span class="material-symbols-outlined">person</span> My Accounts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/mysave.html">
+                                    <span class="material-symbols-outlined">favorite</span> Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/order-details.html">
+                                    <span class="material-symbols-outlined">order_approve</span> Order History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/myuploads.html">
+                                    <span class="material-symbols-outlined">list_alt</span> My Uploads
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/manageAddress.html">
+                                    <span class="material-symbols-outlined">globe_location_pin</span> Manage Address
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/payment_methods.html">
+                                    <span class="material-symbols-outlined">credit_card</span> Payment Methods
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/terms-conditions.html">
+                                    <span class="material-symbols-outlined">article</span> Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/help-center.html">
+                                    <span class="material-symbols-outlined">forum</span> Help Center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/settings.html">
+                                    <span class="material-symbols-outlined">settings</span> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">mode_off_on</span> Logout
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
 
             <!-- Main Content -->
-            <div class="flex-1">
+            <div id="account-view" class="flex-1">
                 <h1 class="text-2xl font-semibold text-black">Good Morning User :)</h1>
                 <h2 class="text-sm font-normal text-gray-700 mb-4">Edit all your Account Information</h2>
                 <!-- Account Information Card -->
-                <div class="bg-white mb-8 mx-auto flex  gap-4">
-                    <div class="flex flex-col items-center border border-gray-light3 p-6 rounded-lg">
-                        <img src="./assets/img/Profile-acc.png" alt="this" class="w-28 h-28 rounded-full mb-4">
-                            <div class="flex items-center justify-between mt-4">
-                                <button id="editBtn"
-                                    class="border border-green-light text-sm bg-white text-green-light px-4 py-2 rounded-4xl mr-2">Update</button>
-                               <div class="icon-trash-2"></div>
-                                    <button
-                                    class="flex items-center gap-1 text-sm text-gray-med px-4 py-2 hover:bg-green-light hover:text-white rounded-4xl"><i class="fa-solid fa-trash-can"></i>Remove</button>
-                            </div>    
+                <div class="mb-8 mx-auto flex flex-col gap-4">
+                    <div class="flex flex-col items-center p-6">
+                        <img id="profile-image" src="/assets/img/Profile-acc.png" alt="Profile"
+                            class="w-28 h-28 rounded-full mb-4 object-cover">
+                        <input type="file" id="profile-image-input" accept="image/*" class="hidden">
+                        <div class="flex items-center justify-between gap-5">
+                            <button id="profileRemoveBtn" type="button"
+                                class="flex items-center gap-1 text-sm px-4 py-2 border border-deep-teal-green text-deep-teal-green rounded-[5px] w-20">
+                                Remove
+                            </button>
+                            <button id="profileUpdateBtn" type="button"
+                                class="bg-green-light-8 border border-deep-teal-green text-sm text-white px-4 py-2 rounded-[5px] w-20">
+                                Update
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-6 gap-y-3 border border-gray-light3 p-6 rounded-lg relative">
+                    <div class="grid grid-cols-1 md:grid-cols-3 w-full gap-6 gap-y-5 p-6 relative">
                         <div>
-                            <label class="block text-gray-600 mb-1">First Name</label>
-                            <span>Gaurav</span>
+                            <label class="block text-gray-dark-1 font-normal mb-1">First Name</label>
+                            <span class="text-gray-med font-normal">Gaurav</span>
                         </div>
                         <div>
-                            <label class="block text-gray-600 mb-1">Last Name</label>
-                            <span>Yadav</span>
+                            <label class="block text-gray-dark-1 font-normal mb-1">Last Name</label>
+                            <span class="text-gray-med font-normal">Yadav</span>
                         </div>
                         <div>
-                            <label class="block text-gray-600 mb-1">Age</label>
-                           <span>29</span>
+                            <label class="block text-gray-dark-1 font-normal mb-1">Age</label>
+                           <span class="text-gray-med font-normal">29</span>
                         </div>
                         <div>
-                            <label class="block text-gray-600 mb-1">Gender</label>
-                            <span>Male</span>
+                            <label class="block text-gray-dark-1 font-normal mb-1">Gender</label>
+                            <span class="text-gray-med font-normal">Male</span>
                         </div>
                         <div>
-                            <label class="block text-gray-600 mb-1">Email</label>
-                            <Span>gaurav@gmail.com</Span>
+                            <label class="block text-gray-dark-1 font-normal mb-1">Phone No.</label>
+                            <span class="text-gray-med font-normal">+91 8345990258</span>
                         </div>
                         <div>
-                            <label class="block text-gray-600 mb-1">Phone No.</label>
-                            <span>+91 8345990258</span>
+                            <label class="block text-gray-dark-1 font-normal mb-1">Email</label>
+                            <Span class="text-gray-med font-normal">gaurav@gmail.com</Span>
                         </div>
                         <div>
-                            <label class="block text-gray-600 mb-1">Pan Card No.</label>
-                           <span>MSPPALS6729A</span>
+                            <label class="block text-gray-dark-1 font-normal mb-1">Pan Card No.</label>
+                           <span class="text-gray-med font-normal">MSPPALS6729A</span>
                         </div>
-                        <button onclick="openModal()" class="flex items-center justify-center w-7 h-7 rounded-lg bg-mint-cream absolute right-5 top-5 cursor-pointer">
-                            <img src="/assets/img/edit-icon.svg" alt="Edit">
+                        <button id="editBtn" type="button" class="flex items-center justify-center absolute right-5 top-5 cursor-pointer border border-deep-teal-green text-deep-teal-green text-sm px-2 py-1.5 rounded-[6px] gap-2 font-medium">
+                            <span class="material-symbols-outlined mini-icon">edit</span>Edit
                         </button>
                     </div>
                 </div>
 
                 <!-- Action Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-green-light p-6 rounded-lg shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
                     <!-- Donate Card -->
-                    <div class="bg-white rounded-sm border shadow p-4 text-white">
-                        <div class="flex items-center justify-start gap-4 mb-4">
-                            <i class="fa-solid fa-heart-circle-plus text-lg w-10 h-10 !flex items-center justify-center bg-green-light rounded-full p-4"></i>
-                            <h3 class="text-lg font-semibold text-gray-med">Donate</h3>
-                            <i class="fa-solid fa-greater-than text-gray-med"></i>
+                    <div class="bg-white rounded-xl border border-gray-light3 p-4 text-white">
+                        <div class="flex flex-col items-center justify-start gap-4 mb-2">
+                            <div class="w-[100px] h-[100px] bg-green-light rounded-full flex items-center justify-center">
+                                <img src="/assets/img/donate.svg" alt="Donate">
+                            </div>
+                            <div class="flex items-center justify-between gap-2 w-full">
+                               <h3 class="text-base font-semibold text-gray">Donate</h3>
+                               <div class="w-9 h-9 bg-green-light rounded-full flex items-center justify-center">
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                               </div>
+                            </div>
                         </div>
-                        <p class="mb-4 text-gray-700 text-sm font-normal">Your one step could feed underprivileged children and those in Need.</p>
+                        <p class="text-gray-700 text-sm font-normal">Your one step could feed underprivileged children and those in Need.</p>
                     </div>
 
                     <!-- My Orders Card -->
-                    <div class="bg-white rounded-sm border shadow p-4 text-white">
-                        <div class="flex items-center justify-start gap-4 mb-4">
-                            <i class="fa-solid fa-clipboard-list text-lg w-10 h-10 !flex items-center justify-center bg-green-light rounded-full p-4"></i>
-                            <h3 class="text-lg font-semibold text-gray-med">My Orders</h3>
-                            <i class="fa-solid fa-greater-than text-gray-med"></i>
+                    <div class="bg-white rounded-xl border border-gray-light3 p-4 text-white">
+                        <div class="flex flex-col items-center justify-start gap-4 mb-2">
+                            <div class="w-[100px] h-[100px] bg-green-light rounded-full flex items-center justify-center">
+                                <img src="/assets/img/my-order.svg" alt="My Order">
+                            </div>
+                            <div class="flex items-center justify-between gap-2 w-full">
+                               <h3 class="text-base font-semibold text-gray">My Orders</h3>
+                               <div class="w-9 h-9 bg-green-light rounded-full flex items-center justify-center">
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                               </div>
+                            </div>
                         </div>
-                        <p class="mb-4 text-gray-700 text-sm font-normal">Your one step could feed underprivileged children and those in Need.</p>
+                        <p class="text-gray-700 text-sm font-normal">See al your orders like order history, details and more.</p>
                     </div>
 
                     <!-- My Rewards Card -->
-                    <div class="bg-white rounded-sm border shadow p-4 text-white">
-                        <div class="flex items-center justify-start gap-4 mb-4">
-                            <i class="fa-solid fa-gift text-lg w-10 h-10 !flex items-center justify-center bg-green-light rounded-full p-4"></i>
-                            <h3 class="text-lg font-semibold text-gray-med">My Rewards</h3>
-                            <i class="fa-solid fa-greater-than text-gray-med"></i>
+                    <div class="bg-white rounded-xl border border-gray-light3 p-4 text-white">
+                        <div class="flex flex-col items-center justify-start gap-4 mb-2">
+                            <div class="w-[100px] h-[100px] bg-green-light rounded-full flex items-center justify-center">
+                                <img src="/assets/img/my-rewards.svg" alt="My Rewards">
+                            </div>
+                            <div class="flex items-center justify-between gap-2 w-full">
+                               <h3 class="text-base font-semibold text-gray">My Rewards</h3>
+                               <div class="w-9 h-9 bg-green-light rounded-full flex items-center justify-center">
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                               </div>
+                            </div>
                         </div>
-                        <p class="mb-4 text-gray-700 text-sm font-normal">Your one step could feed underprivileged children and those in Need.</p>
+                        <p class="text-gray-700 text-sm font-normal">See all your rewards, points and more.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div id="edit-modal" class="fixed inset-0 bg-black/60 backdrop-blur-[2px] hidden items-start justify-center z-50 pt-18">
-                <div class="bg-white w-full max-w-[704px] rounded-xl border border-platinum-gray shadow-[var(--box-shadow-6)] p-6 relative overflow-y-auto">
-                    <h2 class="text-xl font-semibold text-center mb-6 text-gray-med">Edit your Account Details</h2>
-                    <!-- Form -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <fieldset class="account-input">
-                            <legend class="legend-title">First Name</legend>
-                            <input type="text" class="inputs" value="Gaurav">
-                        </fieldset>
-                        <fieldset class="account-input">
-                            <legend class="legend-title">Last Name</legend>
-                            <input type="text" class="inputs" value="Yadav">
-                        </fieldset>
-                        <fieldset class="account-input">
-                            <legend class="legend-title">Gender</legend>
-                            <input type="text" class="inputs" value="Male">
-                        </fieldset>
-                        <fieldset class="account-input">
-                            <legend class="legend-title">Age</legend>
-                            <input type="text" class="inputs" value="24">
-                        </fieldset>
-                        <fieldset class="account-input">
-                            <legend class="legend-title">Email</legend>
-                            <input type="email" class="inputs" value="gaurav@aibuzz.com">
-                        </fieldset>
-                        <fieldset class="account-input">
-                            <legend class="legend-title">Pan Card No.</legend>
-                            <input type="text" class="inputs" value="GXBPM1012T">
-                        </fieldset>
-                        <fieldset class="account-input">
-                            <legend class="legend-title">Phone no.</legend>
-                            <input type="text" class="inputs" value="7387263849">
-                        </fieldset>
-
-                        <!-- OTP Section -->
-                        <div class="flex items-center gap-3 flex-wrap">
-                            <button class="border border-gray-light1 px-2 py-1.5 rounded-sm text-xs text-gray-light1 font-normal cursor-pointer">Send OTP</button>
-                            <span class="text-gray-light1 text-xs">Resend OTP (00:29 sec)</span>
+            <div class="edit-section flex-1 bg-white rounded-[10px] p-4 sm:p-6 md:p-8 hidden">
+                <h1 class="font-bold text-xl md:text-2xl text-charcoal-black">
+                    Edit details
+                </h1>
+                <div class="custom-hr"></div>
+                <form id="edit-profile-form" class="mt-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-first-name" class="legend-title">First Name</label>
+                            <input id="edit-first-name" type="text"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="Gaurav">
                         </div>
-
-                        <!-- OTP Inputs -->
-                        <div class="flex gap-5 border border-pale-blue-gray rounded-lg py-2 px-3">
-                            <input maxlength="1" class="otp" />
-                            <input maxlength="1" class="otp" />
-                            <input maxlength="1" class="otp" />
-                            <input maxlength="1" class="otp" />
-                            
-                            <button class="bg-sea-green-dark1 text-white px-3 py-0.5 rounded text-xs">
-                                Verify OTP
-                            </button>
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-last-name" class="legend-title">Last Name</label>
+                            <input id="edit-last-name" type="text"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="Yadav">
                         </div>
-                        <p class="text-vivid-blue text-xs pt-3 font-semibold">
-                            Phone Number Verified Successfully !
-                        </p>
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-age" class="legend-title">Age</label>
+                            <input id="edit-age" type="text"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="29">
+                        </div>
+                        <div class="flex flex-col gap-2 custom-select-container relative z-10">
+                            <label for="edit-gender" class="legend-title">Gender</label>
+                            <div class="relative w-full">
+                                <div class="relative w-full border border-cool-fog rounded-lg px-3 py-3">
+                                    <input id="edit-gender" type="text"
+                                        class="custom-select-input w-full pr-8 cursor-pointer text-sm text-gray-med focus:outline-none"
+                                        value="Male" readonly>
+                                    <span
+                                        class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-med text-xl gender-chevron">keyboard_arrow_down</span>
+                                </div>
+                                <div
+                                    class="custom-select-menu hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-lg border border-cool-fog shadow-lg z-20 overflow-hidden">
+                                    <ul class="py-1">
+                                        <li
+                                            class="custom-select-option block w-full text-left px-4 py-2.5 text-sm text-gray-med hover:bg-gray-100 cursor-pointer">
+                                            Male
+                                        </li>
+                                        <li
+                                            class="custom-select-option block w-full text-left px-4 py-2.5 text-sm text-gray-med hover:bg-gray-100 cursor-pointer">
+                                            Female
+                                        </li>
+                                        <li
+                                            class="custom-select-option block w-full text-left px-4 py-2.5 text-sm text-gray-med hover:bg-gray-100 cursor-pointer">
+                                            Other
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-phone" class="legend-title">Phone No.</label>
+                            <input id="edit-phone" type="tel"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="8345990258">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-email" class="legend-title">Email</label>
+                            <input id="edit-email" type="email"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="gaurav@gmail.com">
+                        </div>
+                        <div class="flex flex-col gap-2 md:col-span-2">
+                            <label for="edit-pan" class="legend-title">Pan Card No.</label>
+                            <input id="edit-pan" type="text"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="MSPPALS6729A">
+                        </div>
                     </div>
-                    <!-- Buttons -->
-                    <div class="flex justify-center gap-3 mt-6">
-                        <button onclick="closeModal()" class="border border-[#0881787A] text-sea-green2 font-semibold w-full max-w-[160px] px-4 py-2 rounded-lg">
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center sm:justify-end items-end sm:items-center gap-3">
+                        <button type="button" id="edit-cancel-btn"
+                            class="w-[343px] max-w-full px-4 py-2.5 text-sm sm:text-base font-semibold rounded-lg border border-deep-aqua-teal text-sea-green2">
                             Cancel
                         </button>
-                        <button class="bg-sea-green-dark1 text-white w-full max-w-[160px] px-4 py-2 rounded-lg">
+                        <button type="submit"
+                            class="w-[343px] max-w-full px-4 py-2.5 text-sm sm:text-base font-semibold rounded-lg bg-sea-green-dark1 text-white shadow-[0_4px_8px_rgba(8,129,120,0.25)]">
                             Save
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
-
+    <script src="/script/pharmacy/account-sidebar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
-         function openModal() {
-                console.log("click")
-                document.getElementById('edit-modal').classList.remove('hidden');
-                document.getElementById('edit-modal').classList.add('flex');
+        $(function () {
+            const $genderContainer = $(".edit-section .custom-select-container");
+
+            $genderContainer.on("click", ".custom-select-input, .gender-chevron", function (e) {
+                e.stopPropagation();
+                $(".custom-select-menu").not($genderContainer.find(".custom-select-menu")).addClass("hidden");
+                $genderContainer.find(".custom-select-menu").toggleClass("hidden");
+            });
+
+            $genderContainer.on("click", ".custom-select-option", function () {
+                $genderContainer.find(".custom-select-input").val($(this).text().trim());
+                $genderContainer.find(".custom-select-menu").addClass("hidden");
+            });
+
+            $(document).on("click", function (e) {
+                if (!$(e.target).closest(".edit-section .custom-select-container").length) {
+                    $genderContainer.find(".custom-select-menu").addClass("hidden");
+                }
+            });
+
+            const $accountView = $("#account-view");
+            const $editSection = $(".edit-section");
+
+            function showEditSection() {
+                $accountView.addClass("hidden");
+                $editSection.removeClass("hidden");
             }
 
-            function closeModal() {
-                document.getElementById('edit-modal').classList.add('hidden');
-                document.getElementById('edit-modal').classList.remove('flex');
+            function showAccountView() {
+                $editSection.addClass("hidden");
+                $accountView.removeClass("hidden");
             }
 
-            // Auto move OTP input
-            const otpInputs = document.querySelectorAll('.otp');
+            $("#editBtn").on("click", showEditSection);
 
-            otpInputs.forEach((input, index) => {
-            input.addEventListener('input', () => {
-                if (input.value && index < otpInputs.length - 1) {
-                otpInputs[index + 1].focus();
+            const PROFILE_IMAGE_KEY = "myaccount_profile_image";
+            const defaultProfileSrc = "/assets/img/Profile-acc.png";
+            const $profileImg = $("#profile-image");
+            const $profileInput = $("#profile-image-input");
+            const $profileUpdateBtn = $("#profileUpdateBtn");
+            let isProfileEditMode = false;
+            let pendingImageDataUrl = null;
+            let savedImageDataUrl = localStorage.getItem(PROFILE_IMAGE_KEY);
+
+            if (savedImageDataUrl) {
+                $profileImg.attr("src", savedImageDataUrl);
+            }
+
+            function resetProfileEditMode() {
+                isProfileEditMode = false;
+                pendingImageDataUrl = null;
+                $profileUpdateBtn.text("Update");
+                $profileInput.val("");
+            }
+
+            $profileUpdateBtn.on("click", function () {
+                if (!isProfileEditMode) {
+                    isProfileEditMode = true;
+                    $profileUpdateBtn.text("Save");
+                    $profileInput.trigger("click");
+                    return;
                 }
-            });
 
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'Backspace' && !input.value && index > 0) {
-                otpInputs[index - 1].focus();
+                if (pendingImageDataUrl) {
+                    localStorage.setItem(PROFILE_IMAGE_KEY, pendingImageDataUrl);
+                    savedImageDataUrl = pendingImageDataUrl;
+                    $profileImg.attr("src", savedImageDataUrl);
                 }
+
+                resetProfileEditMode();
             });
-            });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const editBtn = document.getElementById('editBtn');
-            const inputs = document.querySelectorAll('input, select');
-            let isEditing = false;
 
-            editBtn.addEventListener('click', function () {
-                isEditing = !isEditing;
-
-                if (isEditing) {
-                    editBtn.textContent = 'Save';
-                    editBtn.classList.remove('bg-blue-600');
-                    editBtn.classList.add('bg-green-600');
-
-                    inputs.forEach(input => {
-                        input.disabled = false;
-                        input.classList.add('bg-gray-50');
-                    });
-                } else {
-                    editBtn.textContent = 'Update';
-                    editBtn.classList.remove('bg-green-600');
-                    editBtn.classList.add('bg-blue-600');
-
-                    inputs.forEach(input => {
-                        input.disabled = true;
-                        input.classList.remove('bg-gray-50');
-                    });
-
-                    // Here you would typically save the data to a server
-                    alert('Information updated successfully!');
+            $profileInput.on("change", function () {
+                const file = this.files && this.files[0];
+                if (!file) {
+                    if (!pendingImageDataUrl && !savedImageDataUrl) {
+                        resetProfileEditMode();
+                    }
+                    return;
                 }
+
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    pendingImageDataUrl = event.target.result;
+                    $profileImg.attr("src", pendingImageDataUrl);
+                    $profileUpdateBtn.text("Save");
+                    isProfileEditMode = true;
+                };
+                reader.readAsDataURL(file);
             });
 
+            $("#profileRemoveBtn").on("click", function () {
+                localStorage.removeItem(PROFILE_IMAGE_KEY);
+                savedImageDataUrl = null;
+                pendingImageDataUrl = null;
+                $profileImg.attr("src", defaultProfileSrc);
+                resetProfileEditMode();
+            });
+
+            $("#edit-cancel-btn").on("click", showAccountView);
+
+            $("#edit-profile-form").on("submit", function (e) {
+                e.preventDefault();
+                showAccountView();
+            });
         });
     </script>
 </body>

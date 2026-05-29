@@ -1,194 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="My Account Page">
-    <title>My Save</title>
-
-    <link rel="stylesheet" href="assets/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>My Wishlist</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1" />
 </head>
 
-<body class="bg-gray-50 no-scrollbar">
-    <div class="container">
-        <header
-            class="nav-menu px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10 bg-soft-cloud shadow-(--box-shadow-4) backdrop-blur-xs">
+<body>
+    <div>
+        <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
             <div class="max-w-[150px] max-h-10">
                 <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
             </div>
-            <nav class="">
-                <div class="">
-                    <button id="menu-btn" class="md:hidden focus:outline-none">
+            <nav>
+                <div>
+                    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                     <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
-                        <li class="relative group">
-                            <a class="flex items-center focus:outline-none">
-                                Home
-                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <!-- Submenu -->
+                                </svg></a>
                             <ul
                                 class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                </li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
                             </ul>
                         </li>
-                        <li class="relative group">
-                            <a class="flex items-center focus:outline-none">
-                                Medicine
-                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
+                                </a>
+                        
+                        </li>
+                        <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <!-- Submenu -->
-                            <ul
-                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="relative group">
-                            <a class="flex items-center focus:outline-none">
-                                Maps
-                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </a>
-                            <!-- Submenu -->
-                            <ul
-                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Web Design</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">SEO</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-blue-100 font-normal">Consulting</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="/src/records.html" class="">Records</a></li>
-                        <li><a href="#" class="">Rewards</a></li>
-                        <li><a href="#" class="">Support</a></li>
+                                </svg></a></li>
+                        <li><a href="/src/records.html">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Support</a></li>
                         <li>
-                            <div
-                                class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
-                                <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p>
-                                <i data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                            <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                                <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                    data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
                             </div>
                         </li>
-                        <li>
-                            <img src="/assets/img/blog-profile.svg" alt="">
-                        </li>
+                        <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
                     </ul>
                 </div>
-                <!-- Mobile Menu -->
                 <ul id="mobile-menu"
                     class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
                     <li><a href="#" class="block">Home</a></li>
                     <li><a href="#" class="block">About</a></li>
-                    <li>
-                        <button id="mobile-submenu-btn" class="flex items-center w-full focus:outline-none">
-                            Services
-                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
+                    <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg></button>
                         <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
-                            <li>
-                                <a href="#" class="block hover:text-gray-300">Web Design</a>
-                            </li>
-                            <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
-                            <li>
-                                <a href="#" class="block hover:text-gray-300">Consulting</a>
-                            </li>
+                            <li><a href="#" class="block">Web Design</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="block hover:text-gray-300">Contact</a></li>
+                    <li><a href="#" class="block">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <div class="mx-auto px-5 lg:px-20 py-8 flex flex-col md:flex-row md:gap-4 lg:gap-8">
-
-            <div class="flex md:hidden p-4">
-                <i id="menu-toggle" data-lucide="menu" class="text-2xl cursor-pointer text-black"></i>
-            </div>
+        <div class="mx-auto px-4 sm:px-8 lg:px-20 py-6 md:py-8 flex flex-col md:flex-row gap-6 md:gap-8 bg-light-gray-blue min-h-screen">
             <!-- Sidebar Navigation -->
-            <div id="sidebar" class="w-full md:w-48 lg:w-64 flex-shrink-0 hidden md:block">
-                <div
-                    class=" flex justify-between items-center border px-4 py-2 gap-2 rounded-lg bg-gray-tint border-gray-200 mb-6">
-                    <span class=" text-gray-500 text-xs">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <input type="text" name="search-d" placeholder="What do you want to help?"
-                        class="w-full text-xs py-2 px-4 pr-10 rounded-full text-gray-dark-1 focus:outline-none">
-                </div>
-                <div class="mt-5">
+            <div class="w-full md:w-56 flex-shrink-0" data-account-sidebar>
+                <div>
                     <nav>
                         <ul class="space-y-3">
-                            <li><a href="/myaccount.html"
-                                    class="flex items-center text-white text-sm bg-green-light px-4 py-2 rounded font-semibold"><i
-                                        class="fas fa-user mr-3"></i> My Account</a></li>
-                            <li><a href="/mysave.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-bookmark mr-3"></i> My Save</a></li>
-                            <li><a href="/myuploads.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-upload mr-3"></i> My Uploads</a></li>
-                            <li><a href="/manageAddress.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-map-marker-alt mr-3"></i> Manage Address</a></li>
-                            <li><a href="/payment_methods.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-credit-card mr-3"></i> Payment Methods</a></li>
-                            <li><a href="/policy.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-file-alt mr-3"></i> Policy</a></li>
-                            <li><a href="/help-center.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-question-circle mr-3"></i> Help Center</a></li>
-                            <li><a href="/settings.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-cog mr-3"></i> Settings</a></li>
-                            <li><a href="#"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-sign-out-alt mr-3"></i> Logout</a></li>
+                            <li>
+                                <a href="/src/Pharmacy/myaccount.html">
+                                    <span class="material-symbols-outlined">person</span> My Accounts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/mysave.html">
+                                    <span class="material-symbols-outlined">favorite</span> Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/order-details.html">
+                                    <span class="material-symbols-outlined">order_approve</span> Order History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/myuploads.html">
+                                    <span class="material-symbols-outlined">list_alt</span> My Uploads
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/manageAddress.html">
+                                    <span class="material-symbols-outlined">globe_location_pin</span> Manage Address
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/payment_methods.html">
+                                    <span class="material-symbols-outlined">credit_card</span> Payment Methods
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/terms-conditions.html">
+                                    <span class="material-symbols-outlined">article</span> Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/help-center.html">
+                                    <span class="material-symbols-outlined">forum</span> Help Center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/settings.html">
+                                    <span class="material-symbols-outlined">settings</span> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">mode_off_on</span> Logout
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-
+            
             <!--Main Content-->
-            <div class="lg:ml-[4.625rem] bg-white border border-gray-light3 rounded-xl p-4 lg:p-8  w-full">
+            <div class="bg-white border border-gray-light3 rounded-xl p-4 sm:p-6 lg:p-8 w-full min-w-0">
                 <div class="flex flex-col gap-2.5">
                     <div class="flex items-center justify-between gap-4">
                         <!-- Breadcrumb Navigation -->
@@ -203,198 +150,335 @@
                                         </a>
                                     </li>
                                     <li class="flex items-center">
-                                        <i data-lucide="chevron-right"
-                                            class="w-4 h-4 align-middle text-dark-charcoal"></i>
-                                        <a href="#"
+                                        <span class="material-symbols-outlined text-dark-charcoal mini-icon">keyboard_arrow_right</span>
+                                        <a href="/src/Pharmacy/myaccount.html"
                                             class="font-normal text-base text-gray hover:text-sea-green-deep">Account</a>
                                     </li>
                                     <li class="flex items-center">
-                                        <i data-lucide="chevron-right"
-                                            class="w-4 h-4 align-middle text-dark-charcoal"></i>
+                                        <span class="material-symbols-outlined text-dark-charcoal mini-icon">keyboard_arrow_right</span>
                                         <span class="font-normal text-xs sm:text-base text-medium-gray">My save</span>
                                     </li>
                                 </ol>
                             </nav>
                         </div>
-                        <div class="flex justify-end">
-                            <a href="/myaccount.html">
-                                <i data-lucide="x" class="text-gray cursor-pointer w-7 h-7"></i>
-                            </a>
-                        </div>
                     </div>
-                    <div class="flex flex-col gap-2.5">
-                        <div class="flex flex-wrap items-center gap-2.5">
-                            <h1 class="font-bold text-xl text-charcoal-black">My save</h1>
+                    <div class="flex items-center justify-between gap-2.5 mt-2 w-full">
+                        <div class="flex items-center gap-2.5">
+                            <h1 class="font-semibold text-lg text-gray whitespace-nowrap">My save (12 results)</h1>
                         </div>
-                        <p class="font-normal text-sm text-charcoal-black">Here, you can view and manage uploaded files
-                        </p>
-                    </div>
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-2">
-                        <div class="flex items-center gap-4 relative w-full md:w-auto">
-                            <div
-                                class=" block  rounded-full border border-powder-aqua bg-transparent py-2 ml-3 md:ml-0 lg:px-3 text-xs sm:text-sm leading-tight  text-left cursor-pointer text-deep-teal-green placeholder:text-deep-teal-green">
-                                Places</div>
-                            <div
-                                class=" block  rounded-full border border-powder-aqua bg-transparent py-2 ml-3 md:ml-0 lg:px-3 text-xs sm:text-sm leading-tight  text-left cursor-pointer text-deep-teal-green placeholder:text-deep-teal-green">
-                                Medicines</div>
-                            <div
-                                class=" block  rounded-full border border-powder-aqua bg-transparent py-2 ml-3 md:ml-0 lg:px-3 text-xs sm:text-sm leading-tight  text-left cursor-pointer text-deep-teal-green placeholder:text-deep-teal-green">
-                                Purchase History</div>
-                            <div
-                                class=" block  rounded-full border border-powder-aqua bg-transparent py-2 ml-3 md:ml-0 lg:px-3 text-xs sm:text-sm leading-tight  text-left cursor-pointer text-deep-teal-green placeholder:text-deep-teal-green">
-                                Donation History</div>
-                        </div>
-
                         <!-- Search & Filter -->
-                        <div class="flex  items-stretch sm:items-center gap-3 w-full md:w-auto">
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3 w-full">
                             <div
-                                class="w-full sm:w-[18.75rem] h-11 border border-gainsboro-gray rounded-lg flex items-center gap-3 p-4">
-                                <i data-lucide="search"></i>
-                                <input type="text" class="w-full focus:border-none focus:outline-none"
-                                    placeholder="Search...">
+                                class="w-full sm:flex-1 lg:max-w-[18.75rem] min-h-11 border border-gainsboro-gray rounded-[10px] flex items-center gap-2 px-3 py-2">
+                                <span class="material-symbols-outlined text-gray shrink-0">search</span>
+                                <input id="wishlist-search" type="text"
+                                    class="w-full min-w-0 text-sm focus:outline-none"
+                                    placeholder="Search by name or categories">
                             </div>
-                            <div class="border border-powder-aqua rounded-lg p-2 flex justify-center items-center">
-                                <i data-lucide="funnel"></i>
+                            <div id="wishlist-filter" class="custom-select-container relative z-20 w-full sm:w-[11.5rem] shrink-0">
+                                <div
+                                    class="min-h-11 border border-sea-green2 rounded-[10px] flex items-center justify-between gap-2 px-3 py-2 cursor-pointer bg-white">
+                                    <input type="text"
+                                        class="custom-select-input w-full min-w-0 bg-transparent border-none text-sm text-sea-green2 focus:outline-none cursor-pointer"
+                                        value="All" readonly>
+                                    <span
+                                        class="material-symbols-outlined mini-icon text-sea-green2 shrink-0 pointer-events-none">keyboard_arrow_down</span>
+                                </div>
+                                <div
+                                    class="custom-select-menu hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-[10px] border border-gainsboro-gray shadow-lg overflow-hidden">
+                                    <ul class="py-1"></ul>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 sm:gap-4 pt-2" role="tablist" aria-label="Wishlist categories">
+                        <button type="button" data-tab="places" aria-selected="true"
+                            class="wishlist-tab-btn rounded-full bg-sea-green-dark1 py-2.5 px-4 sm:px-5 text-xs sm:text-sm font-medium text-white cursor-pointer whitespace-nowrap">
+                            Places
+                        </button>
+                        <button type="button" data-tab="medicines" aria-selected="false"
+                            class="wishlist-tab-btn rounded-full border border-charcoal-black bg-transparent py-2.5 px-4 sm:px-5 text-xs sm:text-sm font-medium text-gray cursor-pointer whitespace-nowrap">
+                            Medicines
+                        </button>
                     </div>
                 </div>
-                <div class="bg-white  pt-6 overflow-x-auto">
-                    <div class="max-w-6xl mx-auto">
-                        <!-- Hospital Cards Container -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white pt-4 sm:pt-6">
+                    <!-- Places Section -->
+                    <div id="wishlist-places-panel" class="max-w-6xl mx-auto w-full">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                             <!-- Card 1 -->
                             <div
-                                class="hospital-card bg-white rounded-xl overflow-hidden">
-                                <div class="p-3 flex gap-2">
-                                    <div class="">
-                                        <img src="./assets/img/hospital_img.png" alt="Zenith Hospital" class="w-full h-[92px] w-max-[92px] object-cover">
+                                class="hospital-card bg-white overflow-hidden" data-category="General Hospital">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/hospital_img.png" alt="Zenith Hospital" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray truncate">Zenith Hospital</h2>
+                                            <p class="text-sm text-sea-green-deep  mt-1">MMBS, DVV, BCS, DCH</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-0.5 rounded-[6px] flex justify-center">General Hospital</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h2 class="text-xl font-bold text-gray">Zenith Hospital</h2>
-                                        <p class="text-sm text-sea-green-deep  mt-1">MMBS, DVV, BCS, DCH</p>
-                                        <p class="text-[#7A5AF8] font-medium bg-purple-10 mt-1 p-1 rounded-md">General Hospital</p>
-                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled">bookmark</span>
                                 </div>
-                                 <div class="p-3 flex gap-2 justify-between">
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 hover:text-blue-900 flex justify-center font-normal items-center gap-1.5 rounded-md px-3">
-                                        <i class="fas fa-directions text-lg"></i> Directions
+                                 <div class="p-3 flex flex-col sm:flex-row flex-wrap gap-2">
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex justify-center font-normal items-center gap-1.5 rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">drag_pan</span> Directions
                                     </button>
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 hover:text-blue-900 flex justify-center font-normal gap-1.5 items-center rounded-md px-3">
-                                        <i class="fas fa-phone-alt text-lg"></i> Call
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex justify-center font-normal gap-1.5 items-center rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">call</span> Call
                                     </button>
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 p-2 hover:text-blue-900 flex font-normal items-center justify-center gap-1.5 rounded-md px-3">
-                                        <i class="fas fa-share-alt text-lg"></i> Share
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex font-normal items-center justify-center gap-1.5 rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">share_windows</span> Share
                                     </button>
                                 </div>
                             </div>
 
                             <!-- Card 2 -->
                             <div
-                                class="hospital-card bg-white rounded-xl overflow-hidden">
-                                <div class="p-3 flex gap-2">
-                                    <div class="">
-                                        <img src="./assets/img/hospital_img.png" alt="Zenith Hospital" class="w-full h-[92px] w-max-[92px] object-cover">
+                                class="hospital-card bg-white overflow-hidden" data-category="General Hospital">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/hospital_img.png" alt="Zenith Hospital" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray truncate">Zenith Hospital</h2>
+                                            <p class="text-sm text-sea-green-deep  mt-1">MMBS, DVV, BCS, DCH</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-0.5 rounded-[6px] flex justify-center">General Hospital</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h2 class="text-xl font-bold text-gray">Zenith Hospital</h2>
-                                        <p class="text-sm text-sea-green-deep  mt-1">MMBS, DVV, BCS, DCH</p>
-                                        <p class="text-[#7A5AF8] font-medium bg-purple-10 mt-1 p-1 rounded-md">General Hospital</p>
-                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled">bookmark</span>
                                 </div>
-                                 <div class="p-3 flex gap-2 justify-between">
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 hover:text-blue-900 flex justify-center font-normal items-center gap-1.5 rounded-md px-3">
-                                        <i class="fas fa-directions text-lg"></i> Directions
+                                 <div class="p-3 flex flex-col sm:flex-row flex-wrap gap-2">
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex justify-center font-normal items-center gap-1.5 rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">drag_pan</span> Directions
                                     </button>
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 hover:text-blue-900 flex justify-center font-normal gap-1.5 items-center rounded-md px-3">
-                                        <i class="fas fa-phone-alt text-lg"></i> Call
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex justify-center font-normal gap-1.5 items-center rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">call</span> Call
                                     </button>
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 p-2 hover:text-blue-900 flex font-normal items-center justify-center gap-1.5 rounded-md px-3">
-                                        <i class="fas fa-share-alt text-lg"></i> Share
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex font-normal items-center justify-center gap-1.5 rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">share_windows</span> Share
                                     </button>
                                 </div>
                             </div>
 
                             <!-- Card 3 -->
                            <div
-                                class="hospital-card bg-white rounded-xl overflow-hidden">
-                                <div class="p-3 flex gap-2">
-                                    <div class="">
-                                        <img src="./assets/img/hospital_img.png" alt="Zenith Hospital" class="w-full h-[92px] w-max-[92px] object-cover">
+                                class="hospital-card bg-white overflow-hidden" data-category="Multi-specialty">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/hospital_img.png" alt="Zenith Hospital" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray truncate">Zenith Hospital</h2>
+                                            <p class="text-sm text-sea-green-deep  mt-1">MMBS, DVV, BCS, DCH</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-0.5 rounded-[6px] flex justify-center">General Hospital</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h2 class="text-xl font-bold text-gray">Zenith Hospital</h2>
-                                        <p class="text-sm text-sea-green-deep  mt-1">MMBS, DVV, BCS, DCH</p>
-                                        <p class="text-[#7A5AF8] font-medium bg-purple-10 mt-1 p-1 rounded-md">General Hospital</p>
-                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled">bookmark</span>
                                 </div>
-                                <div class="p-3 flex gap-2 justify-between">
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 hover:text-blue-900 flex justify-center font-normal items-center gap-1.5 rounded-md px-3">
-                                        <i class="fas fa-directions text-lg"></i> Directions
+                                 <div class="p-3 flex flex-col sm:flex-row flex-wrap gap-2">
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex justify-center font-normal items-center gap-1.5 rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">drag_pan</span> Directions
                                     </button>
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 hover:text-blue-900 flex justify-center font-normal gap-1.5 items-center rounded-md px-3">
-                                        <i class="fas fa-phone-alt text-lg"></i> Call
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex justify-center font-normal gap-1.5 items-center rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">call</span> Call
                                     </button>
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 p-2 hover:text-blue-900 flex font-normal items-center justify-center gap-1.5 rounded-md px-3">
-                                        <i class="fas fa-share-alt text-lg"></i> Share
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex font-normal items-center justify-center gap-1.5 rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">share_windows</span> Share
                                     </button>
                                 </div>
                             </div>
                             <!-- Card 4 -->
                             <div
-                                class="hospital-card bg-white rounded-xl overflow-hidden">
-                                <div class="p-3 flex gap-2">
-                                    <div class="">
-                                        <img src="./assets/img/hospital_img.png" alt="Zenith Hospital" class="w-full h-[92px] w-max-[92px] object-cover">
+                                class="hospital-card bg-white overflow-hidden" data-category="Clinic">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/hospital_img.png" alt="Zenith Hospital" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray truncate">Zenith Hospital</h2>
+                                            <p class="text-sm text-sea-green-deep  mt-1">MMBS, DVV, BCS, DCH</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-0.5 rounded-[6px] flex justify-center">General Hospital</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h2 class="text-xl font-bold text-gray">Zenith Hospital</h2>
-                                        <p class="text-sm text-sea-green-deep  mt-1">MMBS, DVV, BCS, DCH</p>
-                                        <p class="text-[#7A5AF8] font-medium bg-purple-10 mt-1 p-1 rounded-md">General Hospital</p>
-                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled">bookmark</span>
                                 </div>
-                                <div class="p-3 flex gap-2 justify-between">
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 hover:text-blue-900 flex justify-center font-normal items-center gap-1.5 rounded-md px-3">
-                                        <i class="fas fa-directions text-lg"></i> Directions
+                                 <div class="p-3 flex flex-col sm:flex-row flex-wrap gap-2">
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex justify-center font-normal items-center gap-1.5 rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">drag_pan</span> Directions
                                     </button>
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 hover:text-blue-900 flex justify-center font-normal gap-1.5 items-center rounded-md px-3">
-                                        <i class="fas fa-phone-alt text-lg"></i> Call
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex justify-center font-normal gap-1.5 items-center rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">call</span> Call
                                     </button>
-                                    <button
-                                        class="text-gray w-32 border border-gray-light3 p-2 hover:text-blue-900 flex font-normal items-center justify-center gap-1.5 rounded-md px-3">
-                                        <i class="fas fa-share-alt text-lg"></i> Share
+                                    <button type="button"
+                                        class="text-gray flex-1 min-w-[5.5rem] border border-gray-light3 hover:text-blue-900 flex font-normal items-center justify-center gap-1.5 rounded-md px-2 py-2 text-sm">
+                                        <span class="material-symbols-outlined mini-icon">share_windows</span> Share
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medicine section -->
+                    <div id="wishlist-medicines-panel" class="max-w-6xl mx-auto w-full hidden">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                            <!-- Card 1 -->
+                            <div class="medicine-card bg-white overflow-hidden p-1" data-category="Protein">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/medicines/oziva-biotin.png" alt="Oziva Plant Based Biotin" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray line-clamp-2">Oziva Plant Based Biotin</h2>
+                                            <p class="text-sm text-sea-green-deep">100mg</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-1 text-sm rounded-[6px] w-fit">Protein</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled shrink-0">bookmark</span>
+                                </div>
+                                <div class="p-3 pt-0 flex justify-end">
+                                    <button type="button"
+                                        class="w-full sm:max-w-[190px] bg-sea-green-deep text-white flex justify-center font-normal items-center gap-1.5 rounded-[10px] px-3 py-2.5 text-sm">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="medicine-card bg-white overflow-hidden p-1" data-category="Paracetamol">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/medicines/shelcal.png" alt="Shelcal" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray line-clamp-2">Shelcal 500mg</h2>
+                                            <p class="text-sm text-sea-green-deep">Strip of 15 tablets</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-1 text-sm rounded-[6px] w-fit">Paracetamol</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled shrink-0">bookmark</span>
+                                </div>
+                                <div class="p-3 pt-0 flex justify-end">
+                                    <button type="button"
+                                        class="w-full sm:max-w-[190px] bg-sea-green-deep text-white flex justify-center font-normal items-center gap-1.5 rounded-[10px] px-3 py-2.5 text-sm">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="medicine-card bg-white overflow-hidden p-1" data-category="Protein">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/medicines/oziva-biotin.png" alt="Oziva Plant Based Biotin" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray line-clamp-2">Oziva Plant Based Biotin</h2>
+                                            <p class="text-sm text-sea-green-deep">100mg</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-1 text-sm rounded-[6px] w-fit">Protein</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled shrink-0">bookmark</span>
+                                </div>
+                                <div class="p-3 pt-0 flex justify-end">
+                                    <button type="button"
+                                        class="w-full sm:max-w-[190px] bg-sea-green-deep text-white flex justify-center font-normal items-center gap-1.5 rounded-[10px] px-3 py-2.5 text-sm">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="medicine-card bg-white overflow-hidden p-1" data-category="Paracetamol">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/medicines/shelcal.png" alt="Shelcal" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray line-clamp-2">Shelcal 500mg</h2>
+                                            <p class="text-sm text-sea-green-deep">Strip of 15 tablets</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-1 text-sm rounded-[6px] w-fit">Paracetamol</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled shrink-0">bookmark</span>
+                                </div>
+                                <div class="p-3 pt-0 flex justify-end">
+                                    <button type="button"
+                                        class="w-full sm:max-w-[190px] bg-sea-green-deep text-white flex justify-center font-normal items-center gap-1.5 rounded-[10px] px-3 py-2.5 text-sm">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="medicine-card bg-white overflow-hidden p-1" data-category="Protein">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/medicines/oziva-biotin.png" alt="Oziva Plant Based Biotin" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray line-clamp-2">Oziva Plant Based Biotin</h2>
+                                            <p class="text-sm text-sea-green-deep">100mg</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-1 text-sm rounded-[6px] w-fit">Protein</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled shrink-0">bookmark</span>
+                                </div>
+                                <div class="p-3 pt-0 flex justify-end">
+                                    <button type="button"
+                                        class="w-full sm:max-w-[190px] bg-sea-green-deep text-white flex justify-center font-normal items-center gap-1.5 rounded-[10px] px-3 py-2.5 text-sm">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="medicine-card bg-white overflow-hidden p-1" data-category="Vitamins">
+                                <div class="p-3 flex justify-between gap-2">
+                                    <div class="flex gap-3 sm:gap-4 min-w-0 flex-1">
+                                        <div class="w-16 h-16 sm:w-[92px] sm:h-[92px] shrink-0 rounded-md overflow-hidden">
+                                            <img src="/assets/img/medicines/shelcal.png" alt="Shelcal" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="flex flex-col gap-1 min-w-0">
+                                            <h2 class="text-base sm:text-xl font-bold text-gray line-clamp-2">Shelcal 500mg</h2>
+                                            <p class="text-sm text-sea-green-deep">Strip of 15 tablets</p>
+                                            <p class="bg-purple-10 text-purple-11 font-medium mt-1 p-1 text-sm rounded-[6px] w-fit">Vitamins</p>
+                                        </div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-sea-green-dark1 filled shrink-0">bookmark</span>
+                                </div>
+                                <div class="p-3 pt-0 flex justify-end">
+                                    <button type="button"
+                                        class="w-full sm:max-w-[190px] bg-sea-green-deep text-white flex justify-center font-normal items-center gap-1.5 rounded-[10px] px-3 py-2.5 text-sm">
+                                        Add to Cart
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center mt-8 space-x-2">
-                    <button id="prev-page" class="px-4 py-2 text-medium-gray rounded-md">Previous</button>
-                    <div id="page-numbers" class="flex space-x-2">
-                    </div>
-                    <button id="next-page" class="px-4 py-2 text-medium-gray rounded-md">Next</button>
-                </div>
             </div>
         </div>
     </div>
-
-    <script>
-        lucide.createIcons();
-    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="/script/myupload.js"></script>
+    <script src="/script/pharmacy/account-sidebar.js"></script>
+    <script src="/script/pharmacy/mysave.js"></script>
 </body>
 
 </html>

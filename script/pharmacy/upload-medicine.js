@@ -159,4 +159,46 @@
       });
     });
   }
+
+  const uploadMedicineBtn = document.querySelector(".uploadMedicineBtn");
+
+  if (uploadMedicineBtn) {
+    uploadMedicineBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const hasSelectedDoctor = Boolean(
+        document.querySelector('#doctorTags .tag-close[data-type="doctor"]'),
+      );
+      const hasSelectedPatient = Boolean(
+        document.querySelector('#patientTags .tag-close[data-type="patient"]'),
+      );
+      const hasUploadedPrescription = Array.from(
+        document.querySelectorAll(".medicine-upload-input"),
+      ).some(function (input) {
+        return input.files && input.files.length > 0;
+      });
+
+      if (!hasSelectedDoctor) {
+        alert("Please select a doctor.");
+        return;
+      }
+
+      if (!hasSelectedPatient) {
+        alert("Please select at least one patient.");
+        return;
+      }
+
+      if (!hasUploadedPrescription) {
+        alert("Please upload at least one prescription image.");
+        return;
+      }
+
+      const uploadSection = document.querySelector(".upload-medicine-section");
+      const reviewSection = document.querySelector(".review-medicine-section");
+
+      if (uploadSection) uploadSection.classList.add("hidden");
+      if (reviewSection) reviewSection.classList.remove("hidden");
+    });
+  }
+
 })();

@@ -1,4 +1,4 @@
-
+ lucide.createIcons();
 let allNotifications = [
     {
         id: "order1",
