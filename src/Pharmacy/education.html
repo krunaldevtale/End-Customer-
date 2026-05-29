@@ -378,6 +378,72 @@
                         class="w-[22.5rem] h-12 bg-deep-teal-green text-white rounded-lg py-[11px] px-[22px] font-bold text-[15px] payment-btn shadow-(--box-shadow-3) cursor-pointer">Payment</button>
                 </div>
             </div>
+
+            <!--Payment Processing Overlay-->
+            <div
+                class="fixed inset-0 bg-sea-green-dark1 z-9999 opacity-90 flex items-center justify-center paymentProcessingOverlay hidden">
+                <div class="flex flex-col items-center gap-[18px]">
+                    <!-- Starburst Spinner -->
+                    <div class="relative w-16 h-16">
+                        <div
+                            class="bar absolute left-1/2 top-1/2 w-2 h-5 -ml-1 rounded-full bg-white/80 origin-spinner rotate-0">
+                        </div>
+                        <div
+                            class="bar absolute left-1/2 top-1/2 w-2 h-5 -ml-1 rounded-full bg-white/80 origin-spinner rotate-45">
+                        </div>
+                        <div
+                            class="bar absolute left-1/2 top-1/2 w-2 h-5 -ml-1 rounded-full bg-white/80 origin-spinner rotate-90">
+                        </div>
+                        <div
+                            class="bar absolute left-1/2 top-1/2 w-2 h-5 -ml-1 rounded-full bg-white/80 origin-spinner rotate-[135deg]">
+                        </div>
+                        <div
+                            class="bar absolute left-1/2 top-1/2 w-2 h-5 -ml-1 rounded-full bg-white/80 origin-spinner rotate-180">
+                        </div>
+                        <div
+                            class="bar absolute left-1/2 top-1/2 w-2 h-5 -ml-1 rounded-full bg-white/80 origin-spinner rotate-[225deg]">
+                        </div>
+                        <div
+                            class="bar absolute left-1/2 top-1/2 w-2 h-5 -ml-1 rounded-full bg-white/80 origin-spinner rotate-270">
+                        </div>
+                        <div
+                            class="bar absolute left-1/2 top-1/2 w-2 h-5 -ml-1 rounded-full bg-white/80 origin-spinner rotate-[315deg]">
+                        </div>
+                    </div>
+                    <p class="font-bold text-[40px] text-white  text-center">Processing your payment… <br> Please don’t
+                        refresh or close this page</p>
+                </div>
+            </div>
+
+            <!--Donation Successfull Popup-->
+            <div
+                class="fixed inset-0 bg-transparent-black flex items-center justify-center donationSuccessPopup z-9999 hidden">
+                <div
+                    class="bg-white w-[447px] py-7 px-9 rounded-xl border border-platinum-gray flex flex-col gap-4 items-center">
+                    <img src="/assets/img/success-illustration.svg" alt="Success">
+                    <p class="font-bold text-2xl text-gray">Donation is Succesfull</p>
+                    <div class="flex flex-col gap-2 items-center">
+                        <p class="font-semibold text-lg text-gray">Your ₹500 will feed 10 children today </p>
+                        <div class="flex items-center gap-2.5">
+                            <p class="text-xs font-medium text-dark-gray">Congratulations! <span
+                                    class="font-semibold text-sea-green-dark1">234</span> Credit points to be credited
+                            </p>
+                            <img src="/assets/img/coin.svg" alt="coin">
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button onclick="window.location.href='donation.html'"
+                            class="w-[164px] h-12 rounded-lg border border-cool-fog flex items-center justify-center cursor-pointer ">
+                            <span class="font-bold text-base text-gray">Donate More</span>
+                        </button>
+
+                        <button
+                            class="w-[164px] h-12 rounded-lg bg-sea-green-dark1 flex items-center justify-center cursor-pointer ">
+                            <span class="font-bold text-base text-white">Go to Accounts</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     </div>
@@ -386,7 +452,8 @@
         lucide.createIcons();
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="/script/education.js"></script>
+    <script src="/script/pharmacy/education.js"></script>
+    <script src="/script/pharmacy/donation.js"></script>
 </body>
 
 </html>
