@@ -162,18 +162,15 @@
                 </a>
                 <span class="material-symbols-outlined">chevron_right</span>
                 <a href="#" class="font-normal text-base text-gray">
-                    Profile
+                    My Account
                 </a>
                 <span class="material-symbols-outlined">chevron_right</span>
                 <a href="appointments.html" class="font-normal text-base text-gray3">
-                    Appointment
+                    Order Details
                 </a>
             </div>
 
-            <div class="flex items-center gap-2.5">
-                <span class="material-symbols-outlined cursor-pointer">calendar_month</span>
-                <span class="material-symbols-outlined cursor-pointer text-3xl! pt-[1px]">close</span>
-            </div>
+
         </div>
 
         <div class="mt-1 border border-gray-light3 rounded-xl p-3 flex flex-col gap-2 w-full">
@@ -221,15 +218,17 @@
 
                 <div class="flex items-center gap-1 sm:gap-2.5 ">
                     <button
-                        class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer">
-                        <span class="material-symbols-outlined text-lg! text-gray">open_with</span>
-                        <span class="font-normal text-xs text-gray">Directions</span>
+                        class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-not-allowed"
+                        disabled>
+                        <span class="material-symbols-outlined text-lg! text-gray-light-3">open_with</span>
+                        <span class="font-normal text-xs text-gray-light-3">Directions</span>
                     </button>
 
                     <button
-                        class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer">
-                        <span class="material-symbols-outlined text-lg! text-gray">call</span>
-                        <span class="font-normal text-xs text-gray">Call</span>
+                        class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-not-allowed"
+                        disabled>
+                        <span class="material-symbols-outlined text-lg! text-gray-light-3">call</span>
+                        <span class="font-normal text-xs text-gray-light-3">Call</span>
                     </button>
 
                     <button
@@ -285,18 +284,78 @@
             </div>
         </div>
 
+        <!-- Order Summary -->
         <div class="bg-white border border-gray-light3 rounded-xl mt-5 overflow-hidden">
+
             <!-- Header -->
             <button
-                class="w-full flex justify-between items-center px-5 py-4 text-gray text-base font-semibold border-b border-gray-200">
+                class="w-full cursor-pointer flex justify-between items-center px-5 py-4 text-gray text-base font-semibold orderSummaryBtn">
 
                 <span>Order Summary</span>
 
-                <span class="material-symbols-outlined text-[22px]">
+                <span class="material-symbols-outlined text-[22px] transition-transform duration-300 ">
                     keyboard_arrow_down
                 </span>
 
             </button>
+            <div class="px-4 pb-4 orderSummaryDetails hidden">
+                <hr class="text-gray-light-3">
+                <div class="flex items-center justify-between pt-1">
+                    <p class="font-semibold text-base text-gray">Hospital Bed</p>
+                    <span class="font-normal text-xs text-gray-dark-1">Medicor</span>
+                </div>
+                <div class="flex items-center justify-end gap-[5px] pt-2">
+                    <p class="font-normal text-sm text-gray-dark-1 line-through">$640</p>
+                    <p class="font-semibold text-sm text-sea-green2">$384</p>
+                    <p class="font-normal text-xs text-gray">GST $40</p>
+                </div>
+                <div class="flex items-center justify-between pt-1">
+                    <p class="font-semibold text-base text-gray">Semi private room</p>
+                    <span class="font-normal text-xs text-gray-dark-1">Medicor</span>
+                </div>
+                <div class="flex items-center justify-end gap-[5px] pt-2">
+                    <p class="font-normal text-sm text-gray-dark-1 line-through">$640</p>
+                    <p class="font-semibold text-sm text-sea-green2">$384</p>
+                    <p class="font-normal text-xs text-gray">GST $40</p>
+                </div>
+                <div class="flex items-center justify-between pt-2">
+                    <p class="font-normal text-sm text-gray">Subtotal</p>
+                    <div class="flex items-center gap-[5px]">
+                        <p class="font-normal text-sm text-gray-dark-1 line-through">$640</p>
+                        <p class="font-semibold text-sm text-sea-green2">$384</p>
+                        <p class="font-normal text-xs text-gray">GST $40</p>
+                    </div>
+                </div>
+                <div class="flex flex-col max-w-[311px]">
+                    <hr class="text-gray-light-3">
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-normal text-sm text-gray">Express platform chargers</p>
+                        <p class="font-normal text-sm text-gray">$120</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-normal text-sm text-gray">Discount coupon applied</p>
+                        <p class="font-normal text-sm text-tomato-red">-$20.00</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-normal text-sm text-gray">GST applied</p>
+                        <p class="font-normal text-sm text-gray">$30</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between pt-2">
+                    <p class="font-semibold text-base text-gray">Total Amount</p>
+                    <p class="font-semibold text-base text-gray">$250.00</p>
+                </div>
+                <div class="max-w-[311px] flex items-center justify-between pt-2">
+                    <p class="font-normal text-sm text-gray">Total <span
+                            class="font-semibold text-sea-green-dark1">&#8377;1384</span></p>
+                    <button
+                        class="proforma-open-btn w-[132px] h-[30px] rounded-lg bg-transparent-light-sea-green1 border border-sea-green-dark1 flex items-center justify-center gap-2 cursor-pointer">
+                        <span class="font-normal text-sm text-gray">Proforma Bill</span>
+                        <span class="material-symbols-outlined text-gray text-xl">visibility</span>
+                    </button>
+                </div>
+            </div>
+
         </div>
 
         <div class="flex items-center justify-center gap-2 py-4 text-base font-bold text-dark-gray hidden">

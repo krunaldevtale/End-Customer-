@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 
-<body>
+<body class="no-scrollbar">
     <main class="min-h-screen px-[80px]">
         <section>
             <header class="nav-menu-records  py-2 mx-auto flex items-center justify-between relative z-10">
@@ -145,39 +145,18 @@
                     <span>›</span>
 
                     <a href="#" class="hover:text-sea-green-dark1 transition">
-                        Profile
+                        My account
                     </a>
                     <span>›</span>
 
-                    <a href="appointments.html" class="text-gray-700 font-medium hover:text-sea-green-dark1 transition">
-                        Appointment
+                    <a href="#" class="text-gray-700 font-medium hover:text-sea-green-dark1 transition">
+                        My Orders
                     </a>
-
-                </div>
-
-                <!-- Right Icons -->
-                <div class="flex items-center gap-2">
-
-                    <!-- Calendar Icon -->
-                    <button class="w-10 h-10 flex items-center justify-center text-gray ">
-
-                        <span class="material-symbols-outlined text-[20px]">
-                            calendar_month
-                        </span>
-
-                    </button>
-
-                    <!-- Close Icon -->
-                    <a href="#" class="w-10 h-10 flex items-center justify-center text-gray ">
-
-                        <span class="material-symbols-outlined text-[20px]">
-                            close
-                        </span>
-
+                    <span>›</span>
+                    <a href="#" class="text-gray-700 font-medium hover:text-sea-green-dark1 transition">
+                        Order Details
                     </a>
-
                 </div>
-
             </div>
 
 
@@ -235,15 +214,17 @@
 
                     <div class="flex items-center gap-1 sm:gap-2.5 ">
                         <button
-                            class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer">
-                            <span class="material-symbols-outlined text-lg! text-gray">open_with</span>
-                            <span class="font-normal text-xs text-gray">Directions</span>
+                            class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-not-allowed"
+                            disabled>
+                            <span class="material-symbols-outlined text-lg! text-gray-light-3">open_with</span>
+                            <span class="font-normal text-xs text-gray-light-3">Directions</span>
                         </button>
 
                         <button
-                            class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-pointer">
-                            <span class="material-symbols-outlined text-lg! text-gray">call</span>
-                            <span class="font-normal text-xs text-gray">Call</span>
+                            class="w-[100px] h-10 flex items-center justify-center gap-1.5 rounded-md border border-gray-light3 cursor-not-allowed"
+                            disabled>
+                            <span class="material-symbols-outlined text-lg! text-gray-light-3">call</span>
+                            <span class="font-normal text-xs text-gray-light-3">Call</span>
                         </button>
 
                         <button
@@ -448,17 +429,72 @@
             <div class="bg-white border border-gray-light3 rounded-xl mt-5 overflow-hidden">
 
                 <!-- Header -->
-                <button
-                    class="w-full flex justify-between items-center px-5 py-4 text-gray text-base font-semibold border-b border-gray-200">
+                <button class="w-full cursor-pointer flex justify-between items-center px-5 py-4 text-gray text-base font-semibold orderSummaryBtn">
 
                     <span>Order Summary</span>
 
-                    <span class="material-symbols-outlined text-[22px]">
+                    <span class="material-symbols-outlined text-[22px] transition-transform duration-300 ">
                         keyboard_arrow_down
                     </span>
 
                 </button>
-
+                <div class="px-4 pb-4 orderSummaryDetails hidden">
+                    <hr class="text-gray-light-3">
+                    <div class="flex items-center justify-between pt-1">
+                        <p class="font-semibold text-base text-gray">Hospital Bed</p>
+                        <span class="font-normal text-xs text-gray-dark-1">Medicor</span>
+                    </div>
+                    <div class="flex items-center justify-end gap-[5px] pt-2">
+                        <p class="font-normal text-sm text-gray-dark-1 line-through">$640</p>
+                        <p class="font-semibold text-sm text-sea-green2">$384</p>
+                        <p class="font-normal text-xs text-gray">GST $40</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-1">
+                        <p class="font-semibold text-base text-gray">Semi private room</p>
+                        <span class="font-normal text-xs text-gray-dark-1">Medicor</span>
+                    </div>
+                    <div class="flex items-center justify-end gap-[5px] pt-2">
+                        <p class="font-normal text-sm text-gray-dark-1 line-through">$640</p>
+                        <p class="font-semibold text-sm text-sea-green2">$384</p>
+                        <p class="font-normal text-xs text-gray">GST $40</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-normal text-sm text-gray">Subtotal</p>
+                        <div class="flex items-center gap-[5px]">
+                            <p class="font-normal text-sm text-gray-dark-1 line-through">$640</p>
+                            <p class="font-semibold text-sm text-sea-green2">$384</p>
+                            <p class="font-normal text-xs text-gray">GST $40</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col max-w-[311px]">
+                        <hr class="text-gray-light-3">
+                        <div class="flex items-center justify-between pt-2">
+                            <p class="font-normal text-sm text-gray">Express platform chargers</p>
+                            <p class="font-normal text-sm text-gray">$120</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2">
+                            <p class="font-normal text-sm text-gray">Discount coupon applied</p>
+                            <p class="font-normal text-sm text-tomato-red">-$20.00</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2">
+                            <p class="font-normal text-sm text-gray">GST applied</p>
+                            <p class="font-normal text-sm text-gray">$30</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-semibold text-base text-gray">Total Amount</p>
+                        <p class="font-semibold text-base text-gray">$250.00</p>
+                    </div>
+                    <div class="max-w-[311px] flex items-center justify-between pt-2">
+                        <p class="font-normal text-sm text-gray">Total <span
+                                class="font-semibold text-sea-green-dark1">&#8377;1384</span></p>
+                        <button
+                            class="proforma-open-btn w-[132px] h-[30px] rounded-lg bg-transparent-light-sea-green1 border border-sea-green-dark1 flex items-center justify-center gap-2 cursor-pointer">
+                            <span class="font-normal text-sm text-gray">Proforma Bill</span>
+                            <span class="material-symbols-outlined text-gray text-xl">visibility</span>
+                        </button>
+                    </div>
+                </div>
 
             </div>
 
@@ -674,74 +710,7 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>
-        //Share Popup
-        const openPopupBtns = document.querySelectorAll('.share-open-btn');
-        const popupOverlay = document.querySelector('.popup-overlay');
-        const closePopupBtn = document.querySelector('.popup-close-btn');
-
-        // Open Popup
-        openPopupBtns.forEach(button => {
-
-            button.addEventListener('click', () => {
-
-                popupOverlay.classList.remove('hidden');
-
-            });
-
-        });
-
-        // Close Popup
-        closePopupBtn.addEventListener('click', () => {
-
-            popupOverlay.classList.add('hidden');
-
-        });
-
-        // Close On Outside Click
-        popupOverlay.addEventListener('click', (e) => {
-
-            if (e.target === popupOverlay) {
-
-                popupOverlay.classList.add('hidden');
-
-            }
-
-        });
-
-        //Proforma Popup
-        // Open Popup
-        const proformaOpenBtn = document.querySelector('.proforma-open-btn');
-        const proformaPopup = document.querySelector('.proforma-popup-overlay');
-        const proformaCloseBtn = document.querySelector('.proforma-close-btn');
-
-        proformaOpenBtn.addEventListener('click', () => {
-
-            proformaPopup.classList.remove('hidden');
-
-        });
-
-        // Close Popup Button
-        proformaCloseBtn.addEventListener('click', () => {
-
-            proformaPopup.classList.add('hidden');
-
-        });
-
-        // Outside Click Close
-        proformaPopup.addEventListener('click', (e) => {
-
-            if (e.target === proformaPopup) {
-
-                proformaPopup.classList.add('hidden');
-
-            }
-
-        });
-
-
-    </script>
-
+    <script src="/script/appointment.js"></script>
 </body>
 
 </html>
