@@ -4,71 +4,1436 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Upload Medicine</title>
-    <link rel="stylesheet" href="/assets/output.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-</head>
-<body>
-    <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+    <link rel="stylesheet" href="/assets/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <div class="relative bg-background-gray">
+      <header
+        class="nav-menu px-4 sm:px-6 lg:px-10 xl:px-20 py-2 flex items-center justify-between relative z-10 w-full"
+      >
         <div class="max-w-[150px] max-h-10">
-            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+          <a href="home.html"
+            ><img
+              src="/assets/img/logo.png"
+              alt="logo"
+              class="max-w-[150px] max-h-10"
+          /></a>
         </div>
-        <nav>
-            <div>
-                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
-                    <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg></a>
-                        <ul
-                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
-                        </ul>
-                    </li>
-                    <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
-                               </a>
-                       
-                    </li>
-                    <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg></a></li>
-                    <li><a href="/src/records.html">Records</a></li>
-                    <li><a href="#">Rewards</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li>
-                        <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
-                            <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
-                                data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
-                        </div>
-                    </li>
-                    <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+        <nav class="">
+          <div class="">
+            <button
+              id="menu-btn"
+              class="md:hidden text-white focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+            <ul id="menu" class="hidden md:flex space-x-6 items-center">
+              <li class="relative group">
+                <a class="flex items-center focus:outline-none">
+                  Home
+                  <svg
+                    class="ml-1 w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <ul
+                  class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >Web Design</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >SEO</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >Consulting</a
+                    >
+                  </li>
                 </ul>
-            </div>
-            <ul id="mobile-menu"
-                class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
-                <li><a href="#" class="block">Home</a></li>
-                <li><a href="#" class="block">About</a></li>
-                <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg></button>
-                    <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
-                        <li><a href="#" class="block">Web Design</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="block">Contact</a></li>
+              </li>
+              <li class="relative group">
+                <a class="flex items-center focus:outline-none">
+                  Medicine
+                  <svg
+                    class="ml-1 w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <ul
+                  class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >Web Design</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >SEO</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >Consulting</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group">
+                <a class="flex items-center focus:outline-none">
+                  Maps
+                  <svg
+                    class="ml-1 w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <ul
+                  class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >Web Design</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >SEO</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >Consulting</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group">
+                <a class="flex items-center focus:outline-none">
+                  Services
+                  <svg
+                    class="ml-1 w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <ul
+                  class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >Web Design</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >SEO</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-blue-100 font-normal"
+                      >Consulting</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/src/records.html" class="">Records</a></li>
+              <li><a href="./rewards.html" class="">Rewards</a></li>
+              <li><a href="#" class="">Support</a></li>
+              <li>
+                <a href="#" class="open-auth-popup flex items-center gap-2"
+                  ><i class="fa-regular fa-user"></i
+                  ><span class="text-[#238b6d]">Login/Sign Up</span></a
+                >
+              </li>
             </ul>
+          </div>
+          <!-- Mobile Menu -->
+          <ul
+            id="mobile-menu"
+            class="md:hidden hidden flex-col space-y-2 mt-2 text-white px-4"
+          >
+            <li><a href="#" class="block">Home</a></li>
+            <li><a href="#" class="block">About</a></li>
+            <li>
+              <button
+                id="mobile-submenu-btn"
+                class="flex items-center w-full focus:outline-none"
+              >
+                Services
+                <svg
+                  class="ml-1 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <ul
+                id="mobile-submenu"
+                class="hidden flex-col pl-4 mt-1 space-y-1"
+              >
+                <li>
+                  <a href="#" class="block hover:text-gray-300">Web Design</a>
+                </li>
+                <li><a href="#" class="block hover:text-gray-300">SEO</a></li>
+                <li>
+                  <a href="#" class="block hover:text-gray-300">Consulting</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#" class="">Records</a></li>
+            <li><a href="rewards.html" class="">Rewards</a></li>
+            <li><a href="#" class="">Support</a></li>
+            <li>
+              <a href="#" class="open-auth-popup text-[#238b6d]"
+                >Login/Sign Up</a
+              >
+            </li>
+          </ul>
         </nav>
-    </header> 
+      </header>
+      <div
+        class="flex items-center lg:justify-center gap-[38px] px-3 pb-2.5 overflow-x-auto scrollbar-hide"
+      >
+        <p class="font-bold text-sm cursor-pointer whitespace-nowrap">
+          Buy Medicines
+        </p>
+        <p class="font-bold text-sm cursor-pointer whitespace-nowrap">
+          Find Doctors
+        </p>
+        <p class="font-bold text-sm cursor-pointer whitespace-nowrap">
+          Lab Tests
+        </p>
+        <p class="font-bold text-sm cursor-pointer whitespace-nowrap">
+          Circle Membership
+        </p>
+        <p class="font-bold text-sm cursor-pointer whitespace-nowrap">
+          Health Records
+        </p>
+        <p class="font-bold text-sm cursor-pointer whitespace-nowrap">
+          Credit Card New
+        </p>
+        <p class="font-bold text-sm cursor-pointer whitespace-nowrap">
+          Buy Insurance New
+        </p>
+      </div>
+
+      <section class="upload-medicine-section">
+        <!-- Upload Medicine Banner -->
+        <div
+          class="w-full h-[316px] bg-gradient-primary-background flex items-center justify-between px-3 lg:px-[120px]"
+        >
+          <div class="flex flex-col gap-1 items-center lg:items-start w-full">
+            <p
+              class="font-bold text-lg lg:text-[32px] text-white text-center lg:text-left"
+            >
+              Upload Medicine Images
+            </p>
+            <p
+              class="font-semibold text-xs lg:text-base text-light-yellow text-center lg:text-left"
+            >
+              Upload medicine images and we will identify the products for you!
+            </p>
+            <div class="flex items-center gap-4 pt-9">
+              <img src="/assets/img/wing-l.svg" alt="wings" />
+              <p class="font-semibold text-xs lg:text-[22px] text-white">
+                1 Lakh users prefer this method
+              </p>
+              <img src="/assets/img/wing-r.svg" alt="wings" />
+            </div>
+          </div>
+          <img
+            src="/assets/img/doctors/doctor-3.svg"
+            alt="doctor"
+            class="w-[225.66px] h-[296.18px] hidden lg:block"
+          />
+        </div>
+
+        <!-- Upload Medicine Section -->
+        <section class="py-12 px-5 flex flex-col lg:flex-row items-center justify-center gap-10">
+          <div class="w-full lg:w-[686px] h-[682px] relative">
+            <div class="w-full h-[608px] bg-white rounded-2xl p-8 space-y-9">
+              <div class="flex items-center justify-between gap-2">
+                <div>
+                  <h3
+                    class="text-sm md:text-base lg:text-xl font-medium md:font-semibold text-dark-charcoal-1"
+                  >
+                    Upload Medicines
+                  </h3>
+                  <span class="text-gray-medium text-xs md:text-sm lg:text-base"
+                    >Choose a file and upload securely to proceed.</span
+                  >
+                </div>
+                <div
+                  class="w-auto md:w-[104px] h-[50px] rounded-[8px] border border-border-light-1 flex items-end justify-between py-1.5 shadow-box-1 px-3 text-xs md:text-sm"
+                >
+                  <div class="flex flex-col items-start">
+                    <span class="text-green-light-5 font-semibold text-[10px]"
+                      >In Just</span
+                    >
+                    <span class="text-green-light-5 font-semibold text-sm"
+                      >5 mins</span
+                    >
+                  </div>
+                  <span class="material-symbols-outlined text-green-light-5"
+                    >history_2</span
+                  >
+                </div>
+              </div>
+              <div class="medicine-upload-zone space-y-2">
+                <div
+                  class="medicine-upload-area relative w-full h-[180px] border-2 border-dashed border-green-light rounded-[10px] flex items-center justify-center cursor-pointer overflow-hidden"
+                >
+                  <div
+                    class="medicine-upload-default flex flex-col items-center justify-center gap-2.5 pointer-events-none"
+                  >
+                    <img
+                      src="/assets/img/cloud-upload.svg"
+                      alt=""
+                      class="w-[40px] h-[40px]"
+                    />
+                    <span
+                      class="medicine-upload-label text-green-light text-sm lg:text-base leading-normal font-normal"
+                      >Click or Upload Front Image</span
+                    >
+                  </div>
+                  <div
+                    class="medicine-upload-preview hidden absolute inset-0 flex items-center justify-center p-6 pointer-events-none"
+                  >
+                    <img
+                      src=""
+                      alt=""
+                      class="medicine-upload-preview-img max-h-full max-w-full object-contain hidden"
+                    />
+                    <video
+                      class="medicine-upload-preview-video max-h-full max-w-full object-contain hidden"
+                      muted
+                      playsinline
+                    ></video>
+                  </div>
+                  <div
+                    class="medicine-upload-error hidden absolute inset-0 flex items-center justify-center pointer-events-none"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[72px] leading-none text-gray-light1 select-none"
+                      aria-hidden="true"
+                      >image</span
+                    >
+                  </div>
+                  <button
+                    type="button"
+                    class="medicine-upload-remove hidden absolute top-3 right-3 z-10 w-5 h-5 rounded-full border-2 border-gray bg-white flex items-center justify-center cursor-pointer"
+                    aria-label="Remove image"
+                  >
+                    <span
+                      class="material-symbols-outlined tiny-icon leading-none text-gray"
+                      >close</span
+                    >
+                  </button>
+                </div>
+                <input
+                  type="file"
+                  class="medicine-upload-input hidden"
+                  accept=".jpg,.jpeg,.png,.gif,.mp4,.mov,image/jpeg,image/png,image/gif,video/mp4,video/quicktime"
+                />
+                <span
+                  class="medicine-upload-hint text-gray font-normal text-xs lg:text-sm"
+                  >Video (MP4, MOV), and Image (JPG, PNG, GIF). Maximum file
+                  size: 1MB.</span
+                >
+              </div>
+              <div class="medicine-upload-zone space-y-2">
+                <div
+                  class="medicine-upload-area relative w-full h-[180px] border-2 border-dashed border-green-light rounded-[10px] flex items-center justify-center cursor-pointer overflow-hidden"
+                >
+                  <div
+                    class="medicine-upload-default flex flex-col items-center justify-center gap-2.5 pointer-events-none"
+                  >
+                    <img
+                      src="/assets/img/cloud-upload.svg"
+                      alt=""
+                      class="w-[40px] h-[40px]"
+                    />
+                    <span
+                      class="medicine-upload-label text-green-light text-sm lg:text-base leading-normal font-normal"
+                      >Click or Upload Back Image</span
+                    >
+                  </div>
+                  <div
+                    class="medicine-upload-preview hidden absolute inset-0 flex items-center justify-center p-6 pointer-events-none"
+                  >
+                    <img
+                      src=""
+                      alt=""
+                      class="medicine-upload-preview-img max-h-full max-w-full object-contain hidden"
+                    />
+                    <video
+                      class="medicine-upload-preview-video max-h-full max-w-full object-contain hidden"
+                      muted
+                      playsinline
+                    ></video>
+                  </div>
+                  <div
+                    class="medicine-upload-error hidden absolute inset-0 flex items-center justify-center pointer-events-none"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[72px] leading-none text-gray-light1 select-none"
+                      aria-hidden="true"
+                      >image</span
+                    >
+                  </div>
+                  <button
+                    type="button"
+                    class="medicine-upload-remove hidden absolute top-3 right-3 z-10 w-5 h-5 rounded-full border-2 border-gray bg-white flex items-center justify-center cursor-pointer"
+                    aria-label="Remove image"
+                  >
+                    <span
+                      class="material-symbols-outlined tiny-icon leading-none text-gray"
+                      >close</span
+                    >
+                  </button>
+                </div>
+                <input
+                  type="file"
+                  class="medicine-upload-input hidden"
+                  accept=".jpg,.jpeg,.png,.gif,.mp4,.mov,image/jpeg,image/png,image/gif,video/mp4,video/quicktime"
+                />
+                <span
+                  class="medicine-upload-hint text-gray font-normal text-xs lg:text-sm"
+                  data-error-text="Video (MP4, MOV), and Image (JPG, PNG, GIF). Maximum file size: 1MB."
+                  >Back Image (MFG Date, Batch No., Price).</span
+                >
+              </div>
+            </div>
+            <div
+              class="absolute w-full bottom-0 z-0 h-[84px] bg-blue-light-1 border-b border-r border-l border-blue-light-2 rounded-b-2xl p-5 flex items-center gap-2"
+            >
+              <img
+                src="/assets/img/offer.svg"
+                alt="offer"
+                class="w-[24px] h-[24px]"
+              />
+              <span
+                class="text-banner-blue text-base font-semibold leading-normal"
+              >
+                Upto 25%* discount
+                <span
+                  class="text-banner-blue text-xs font-normal leading-normal ml-1"
+                  >on every order</span
+                >
+              </span>
+            </div>
+          </div>
+          <div
+            class="w-full lg:w-[514px] h-[682px] bg-white rounded-2xl py-6 px-4 flex flex-col gap-9"
+          >
+            <p class="font-normal text-sm text-phantom-ash">
+              Make sure the prescription you upload contains the following
+              elements:
+            </p>
+            <div class="flex items-center justify-between px-4">
+              <div class="flex flex-col gap-2 items-center">
+                <div
+                  class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil"
+                >
+                  <p class="font-semibold text-sm text-ocean-slate">10 MB</p>
+                </div>
+                <p
+                  class="font-medium text-xs text-ocean-slate max-w-[54px] text-center"
+                >
+                  Maximum File Size
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-2 items-center">
+                <div
+                  class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil"
+                >
+                  <img src="/assets/img/medicine-details.svg" alt="" />
+                </div>
+                <p
+                  class="font-medium text-xs text-ocean-slate max-w-[54px] text-center"
+                >
+                  Medicine Details
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-2 items-center">
+                <div
+                  class="w-[66px] h-[66px] rounded-full flex items-center justify-center bg-emerald-veil"
+                >
+                  <img src="/assets/img/date-of-prescription.svg" alt="" />
+                </div>
+                <p
+                  class="font-medium text-xs text-ocean-slate max-w-[54px] text-center"
+                >
+                  Date Of Prescription
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5 px-2.5">
+              <span class="material-symbols-outlined text-sun-yellow"
+                >error</span
+              >
+              <p
+                class="font-normal text-xs italic text-phantom-ash max-w-[425px]"
+              >
+                Our pharmacist will dispense medicines only if the prescription
+                is valid & it meets all government regulations.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
+              <label for="doctor" class="font-semibold text-sm text-gray"
+                >Select Doctor</label
+              >
+              <div
+                class="flex items-center justify-between rounded-2xl py-2.5 px-1 cursor-pointer shadow-stepform-input bg-white-smoke"
+                id="doctorBox"
+              >
+                <input
+                  type="text"
+                  class="w-full cursor-pointer focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
+                  placeholder="Select Doctor"
+                  readonly
+                />
+                <span
+                  class="material-symbols-outlined cursor-pointer dropdown-toggle"
+                  >keyboard_arrow_down</span
+                >
+              </div>
+
+              <div
+                class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown z-9999"
+                id="doctorMenu"
+              >
+                <ul class="space-y-2" id="doctorList">
+                  <li
+                    class="font-normal text-base text-dark-gray cursor-pointer"
+                  >
+                    Gaurav
+                  </li>
+                  <li
+                    class="font-normal text-base text-dark-gray cursor-pointer"
+                  >
+                    Priyansh
+                  </li>
+                  <li
+                    class="font-normal text-base text-dark-gray cursor-pointer"
+                  >
+                    Rishi
+                  </li>
+                  <li
+                    class="font-normal text-base text-dark-gray cursor-pointer"
+                  >
+                    Custom : ___________
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2.5 dropdown-wrapper relative">
+              <label for="doctor" class="font-semibold text-sm text-gray"
+                >Select Patient</label
+              >
+              <div
+                class="flex items-center justify-between rounded-2xl py-2.5 px-1 cursor-pointer shadow-stepform-input bg-white-smoke"
+                id="patientBox"
+              >
+                <input
+                  type="text"
+                  class="w-full cursor-pointer focus:outline-none focus:ring-0 placeholder:text-sm placeholder:font-normal"
+                  placeholder="Select Patient"
+                  readonly
+                />
+                <span
+                  class="material-symbols-outlined cursor-pointer dropdown-toggle"
+                  >keyboard_arrow_down</span
+                >
+              </div>
+
+              <div
+                class="dropdown-menu hidden absolute top-20 w-full bg-white rounded-2xl py-2 px-1 shadow-dropdown z-9999"
+                id="patientMenu"
+              >
+                <ul class="space-y-2" id="patientList">
+                  <li
+                    class="font-normal text-base text-dark-gray cursor-pointer"
+                  >
+                    Gaurav
+                  </li>
+                  <li
+                    class="font-normal text-base text-dark-gray cursor-pointer"
+                  >
+                    Priyansh
+                  </li>
+                  <li
+                    class="font-normal text-base text-dark-gray cursor-pointer"
+                  >
+                    Rishi
+                  </li>
+                  <li
+                    class="font-normal text-base text-dark-gray cursor-pointer"
+                  >
+                    Custom : ___________
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <button class="w-[460px] h-12 rounded-lg flex items-center justify-center gap-2.5 shadow-uploadbtn bg-sea-green-dark1 cursor-pointer uploadMedicineBtn"
+              >
+                <span class="font-semibold text-sm text-white"
+                  >Upload Medicine Image</span
+                >
+              </button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section
+        class="hidden review-medicine-section bg-white p-8 flex flex-col gap-5"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <h3
+              class="text-gray-light-11 text-sm font-semibold md:text-base lg:text-xl leading-normal"
+            >
+              Review Medicine
+            </h3>
+            <span class="text-sm text-gray-light-9 font-normal leading-normal"
+              >Review and edit medicines before comparing prices and placing
+              your order.</span
+            >
+          </div>
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 shrink-0">
+            <button
+              type="button"
+              class="border border-gray-light-3 rounded-[8px] px-3 py-2 text-sm text-gray-dark-2 font-normal leading-normal shadow-box-2 flex items-center gap-2 whitespace-nowrap"
+            >
+              <span class="material-symbols-outlined mini-icon">cached</span>
+              Reprocess OCR
+            </button>
+            <button
+              type="button"
+              class="border border-gray-light-3 rounded-[8px] px-3 py-2 text-sm text-gray-dark-2 font-normal leading-normal shadow-box-2 flex items-center gap-2 whitespace-nowrap"
+            >
+              <span class="material-symbols-outlined mini-icon">edit</span>
+              Edit All Medicines
+            </button>
+          </div>
+        </div>
+        <div
+          class="w-full bg-orange-light rounded-[10px] p-4 border border-orange-light-2"
+        >
+          <div class="flex items-start sm:items-center gap-3 sm:gap-4">
+            <img
+              src="/assets/img/warning.svg"
+              alt=""
+              class="w-5 h-5 shrink-0 mt-0.5 sm:mt-0"
+            />
+            <span class="text-orange-light-3 text-sm font-medium leading-normal"
+              >Please review extracted medicines. You can edit any details
+              before proceeding.</span
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-5 lg:gap-6">
+          <!-- Prescription sidebar -->
+          <aside
+            class="w-full lg:w-[280px] lg:shrink-0 border border-gray-light-3 rounded-[14px] bg-white p-4 md:p-5 flex flex-col gap-5 shadow-box-3"
+          >
+            <div class="flex flex-col gap-3">
+              <p
+                class="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-light-12"
+              >
+                Prescription Image
+              </p>
+              <div
+                class="p-2 flex items-center justify-center min-h-[190px] w-full"
+              >
+                <img
+                  src="/assets/img/medicines/medicine-back.png"
+                  alt="Prescription preview"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+              <button
+                type="button"
+                class="w-full h-9 rounded-lg border border-gray-light-3 bg-white flex items-center justify-center gap-2 text-sm text-gray-dark-2 font-medium hover:bg-gray-light-4 transition-colors font-medium"
+              >
+                <span class="material-symbols-outlined tiny-icon"
+                  >open_in_full</span
+                >
+                View Full Size
+              </button>
+            </div>
+
+            <div class="h-px bg-gray-50"></div>
+
+            <div class="flex flex-col gap-2.5">
+              <p
+                class="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-light-12"
+              >
+                Patient
+              </p>
+              <div class="flex items-center gap-3">
+                <img
+                  src="/assets/img/patient-icon.svg"
+                  alt="Patient"
+                  class="w-10 h-10 rounded-full object-cover shrink-0"
+                />
+                <div class="min-w-0">
+                  <p
+                    class="text-sm font-semibold text-gray-light-11 leading-snug"
+                  >
+                    Gaurav (Self)
+                  </p>
+                  <p class="text-xs text-gray-light-9 font-normal">
+                    +91 98765 43210
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2.5">
+              <p
+                class="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-light-12"
+              >
+                Doctor
+              </p>
+              <div class="flex items-start gap-3">
+                <img
+                  src="/assets/img/blog-profile.svg"
+                  alt=""
+                  class="w-10 h-10 rounded-full object-cover shrink-0"
+                />
+                <div class="min-w-0 flex-1">
+                  <div class="flex items-center gap-1 flex-wrap">
+                    <p
+                      class="text-sm font-semibold text-gray-light-11 leading-snug"
+                    >
+                      Dr. Monika Sharma
+                    </p>
+                    <span
+                      class="material-symbols-outlined text-sea-green-dark1 text-base leading-none filled"
+                      >verified</span
+                    >
+                  </div>
+                  <div class="flex it gap-1">
+                    <p class="text-xs text-gray-light-9 font-normal">Dentist</p>
+                    <p class="text-xs text-gray-light-9 font-normal">
+                      Reg. No. 12345
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2.5">
+              <p
+                class="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-light-12"
+              >
+                Prescription Date
+              </p>
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-lg bg-mint-cream-1 flex items-center justify-center shrink-0"
+                >
+                  <span class="material-symbols-outlined text-green-light"
+                    >calendar_today</span
+                  >
+                </div>
+                <p class="text-sm font-semibold text-gray-light-11">
+                  12 February 2026
+                </p>
+              </div>
+            </div>
+          </aside>
+
+          <div class="h-full flex-1 min-w-0 flex flex-col gap-8">
+            <!-- Extracted medicines -->
+            <div
+              class="border border-gray-light-3 rounded-[14px] bg-white flex flex-col overflow-hidden shadow-box-3 h-[519px] relative"
+            >
+              <div
+                class="p-4 md:p-5 border-b border-gray-light-3 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+              >
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 min-w-0">
+                  <div
+                    class="w-8 h-8 rounded-full bg-mint-cream-1 flex items-center justify-center shrink-0"
+                  >
+                    <img
+                      src="/assets/img/shield-2.svg"
+                      alt="Shield"
+                      class="w-5 h-5"
+                    />
+                  </div>
+                  <h4
+                    class="text-base md:text-lg font-bold text-gray-light-11 leading-normal"
+                  >
+                    Extracted Medicines (3)
+                  </h4>
+                  <span
+                    class="inline-flex items-center rounded-full bg-mint-cream-2 px-3 py-1 text-xs font-semibold text-mint-cream-3 whitespace-nowrap"
+                    >AI Analysis Complete</span
+                  >
+                </div>
+                <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+                  <label
+                    class="flex items-center gap-2 cursor-pointer select-none"
+                  >
+                    <input
+                      type="checkbox"
+                      class="medicine-select-all accent-green-light w-4 h-4 cursor-pointer"
+                    />
+                    <span class="text-sm text-gray-dark-2 font-normal"
+                      >Select All</span
+                    >
+                  </label>
+                  <a href="/src/Pharmacy/cart.html">
+                    <button
+                      type="button"
+                      class="h-10 px-8 rounded-[12px] bg-deep-teal-green text-white text-sm font-semibold whitespace-nowrap"
+                    >
+                      View Cart
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto scrollbar-hide">
+                <table class="w-full min-w-[880px] text-left">
+                  <thead>
+                    <tr class="border-b border-gray-50 bg-white-4d">
+                      <th class="w-10 px-3 py-3"></th>
+                      <th
+                        class="px-3 py-3 text-[11px] font-medium tracking-wide text-gray-light-12 text-center"
+                      >
+                        <div class="flex items-center gap-1 justify-center">
+                          Medicine
+                          <span class="material-symbols-outlined tiny-icon"
+                            >info</span
+                          >
+                        </div>
+                      </th>
+                      <th
+                        class="px-3 py-3 text-[11px] font-medium tracking-wide text-gray-light-12 text-center"
+                      >
+                        Dosage
+                      </th>
+                      <th
+                        class="px-3 py-3 text-[11px] font-medium tracking-wide text-gray-light-12 text-center"
+                      >
+                        Method
+                      </th>
+                      <th
+                        class="px-3 py-3 text-[11px] font-medium tracking-wide text-gray-light-12 text-center"
+                      >
+                        Duration
+                      </th>
+                      <th
+                        class="px-3 py-3 text-[11px] font-medium tracking-wide text-gray-light-12 text-center"
+                      >
+                        Instruction
+                      </th>
+                      <th
+                        class="px-3 py-3 text-[11px] font-medium tracking-wide text-gray-light-12 text-center"
+                      >
+                        Status
+                      </th>
+                      <th
+                        class="px-3 py-3 text-[11px] font-medium tracking-wide text-gray-light-12 text-center"
+                      >
+                        Confidence
+                      </th>
+                      <th
+                        class="px-3 py-3 text-[11px] font-medium tracking-wide text-gray-light-12 text-center"
+                      >
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="align-middle">
+                      <td class="px-3 py-4 text-center">
+                        <input
+                          type="checkbox"
+                          class="medicine-row-check accent-sea-green-dark1 w-4 h-4 cursor-pointer"
+                          checked
+                        />
+                      </td>
+                      <td class="px-3 py-4 min-w-[140px] text-center">
+                        <p class="text-sm font-semibold text-gray-light-11">
+                          Abdowell Sachet
+                        </p>
+                        <p class="text-xs text-gray-light-9 mt-0.5">
+                          Paracetamol
+                        </p>
+                      </td>
+                      <td class="px-3 py-4 text-center">
+                        <div
+                          class="min-w-[72px] rounded-lg border border-dashed border-gray-light-13 bg-white px-3 py-2 text-sm text-gray-dark-2 text-center"
+                        >
+                          250 mg
+                        </div>
+                      </td>
+                      <td class="px-3 py-4 text-center">
+                        <div
+                          class="min-w-[56px] rounded-lg border border-dashed border-gray-light-13 bg-white px-3 py-2 text-sm text-gray-dark-2 text-center"
+                        >
+                          Oral
+                        </div>
+                      </td>
+                      <td class="px-3 py-4 text-center">
+                        <div
+                          class="min-w-[64px] rounded-lg border border-dashed border-gray-light-13 bg-white px-3 py-2 text-sm text-gray-dark-2 text-center"
+                        >
+                          3 days
+                        </div>
+                      </td>
+                      <td class="px-3 py-4 text-center">
+                        <div
+                          class="min-w-[96px] rounded-lg border border-dashed border-gray-light-13 bg-white px-3 py-2 text-sm text-gray-dark-2 text-center whitespace-nowrap"
+                        >
+                          Before meal
+                        </div>
+                      </td>
+                      <td class="px-3 py-4 text-center">
+                        <span
+                          class="inline-flex rounded-[10px] bg-purple-5 px-8 py-2 text-xs font-semibold text-vibrant-purple whitespace-nowrap"
+                          >NPPA</span
+                        >
+                      </td>
+                      <td class="px-3 py-4 text-center">
+                        <span
+                          class="inline-flex items-center gap-1.5 text-sm font-medium text-gray-dark-2 whitespace-nowrap"
+                        >
+                          <span
+                            class="w-1.5 h-1.5 rounded-full bg-sea-green-dark1 shrink-0"
+                          ></span>
+                          91%
+                        </span>
+                      </td>
+                      <td class="px-3 py-4 text-center">
+                        <button
+                          type="button"
+                          class="inline-flex items-center gap-1.5 rounded-[6px] border border-deep-teal-green bg-white px-3 py-2 text-sm text-deep-teal-green font-medium"
+                        >
+                          <span class="material-symbols-outlined mini-icon"
+                            >edit</span
+                          >
+                          Edit
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="absolute bottom-5 w-full px-4 md:px-6">
+                <div
+                  class="flex items-start sm:items-center gap-2.5 rounded-[10px] border border-green-light-7 bg-green-light-6 px-3 py-5 sm:px-4"
+                >
+                  <div
+                    class="bg-mint-cream-1 w-10 h-10 rounded-[4px] flex items-center justify-center shrink-0"
+                  >
+                    <img
+                      src="/assets/img/file-save.svg"
+                      alt=""
+                      class="w-5 h-5"
+                    />
+                  </div>
+                  <p
+                    class="text-xs sm:text-sm font-normal text-sea-green-dark1 leading-normal"
+                  >
+                    <span class="text-mint-cream-3 font-bold"
+                      >Changes saved automatically
+                    </span>
+                    • All edits are tracked for your safety
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row sm:items-center sm:justify-end gap-10"
+            >
+              <div class="flex items-start gap-2.5 min-w-0">
+                <div
+                  class="w-8 h-8 rounded-full bg-mint-cream-1 flex items-center justify-center shrink-0"
+                >
+                  <img
+                    src="/assets/img/shield-2.svg"
+                    alt="Shield"
+                    class="w-5 h-5"
+                  />
+                </div>
+                <p
+                  class="text-xs sm:text-sm text-gray-dark-2 font-semibold leading-normal"
+                >
+                  Review complete? <br />
+                  <span class="text-gray-light-9 font-normal"
+                    >Continue to compare prices from trusted sellers.</span
+                  >
+                </p>
+              </div>
+              <button
+                type="button"
+                class="w-full sm:w-auto h-11 px-8 rounded-[12px] bg-sea-green-dark1 text-white text-sm font-semibold shadow-uploadbtn hover:opacity-95 transition-opacity whitespace-nowrap shrink-0"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <!-- Top Footer Content -->
+        <div
+          class="bg-footer-green px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10"
+        >
+          <!-- Logo & Contact -->
+          <div class="flex flex-col gap-3.5">
+            <a href="#">
+              <img
+                src="/assets/img/logo.png"
+                alt="logo"
+                class="max-w-[150px] max-h-10"
+              />
+            </a>
+            <div class="flex flex-col gap-3">
+              <h3 class="text-15-semibold text-dark-charcoal">
+                Phone:
+                <span class="text-dim-gray text-15-normal"
+                  >(+123) 456-7898</span
+                >
+              </h3>
+              <h3 class="text-15-semibold text-dark-charcoal">
+                Email:
+                <span class="text-dim-gray text-15-normal"
+                  >hello@drodo.com</span
+                >
+              </h3>
+              <h3 class="text-15-semibold text-dark-charcoal">
+                Address:
+                <span class="text-dim-gray text-15-normal"
+                  >6890 Blvd, The Bronx, NY 1058, USA</span
+                >
+              </h3>
+            </div>
+            <!-- Social Icons -->
+            <div class="flex gap-3 flex-wrap">
+              <a href="#"
+                ><img src="/assets/img/facebook-icon.svg" alt="facebook-icon"
+              /></a>
+              <a href="#"
+                ><img src="/assets/img/twitter-icon.svg" alt="twitter-icon"
+              /></a>
+              <a href="#"
+                ><img src="/assets/img/Instagram-icon.svg" alt="Instagram-icon"
+              /></a>
+              <a href="#"
+                ><img src="/assets/img/linkdin-icon.svg" alt="linkdin-icon"
+              /></a>
+              <a href="#"
+                ><img src="/assets/img/Pinterest-icon.svg" alt="Pinterest-icon"
+              /></a>
+            </div>
+          </div>
+
+          <!-- Information -->
+          <nav class="footer-nav flex flex-col gap-7">
+            <div>
+              <h3 class="text-22-bold text-dark-slate">Information</h3>
+              <hr class="w-20 text-sea-green-deep border-t-2" />
+            </div>
+            <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </nav>
+
+          <!-- Customer Care -->
+          <nav class="footer-nav flex flex-col gap-7">
+            <div>
+              <h3 class="text-22-bold text-dark-slate">Customer Care</h3>
+              <hr class="w-20 text-sea-green-deep border-t-2" />
+            </div>
+            <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Order History</a></li>
+              <li><a href="#">Wishlist</a></li>
+              <li><a href="#">Records</a></li>
+              <li><a href="#">Rewards</a></li>
+              <li><a href="#">Help & FAQs</a></li>
+            </ul>
+          </nav>
+
+          <!-- Policy -->
+          <nav class="footer-nav flex flex-col gap-7">
+            <div>
+              <h3 class="text-22-bold text-dark-slate">Policy</h3>
+              <hr class="w-20 text-sea-green-deep border-t-2" />
+            </div>
+            <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Purchasing Policy</a></li>
+              <li><a href="#">Orders and Returns</a></li>
+            </ul>
+          </nav>
+
+          <!-- Newsletter -->
+          <nav class="flex flex-col gap-5">
+            <div>
+              <h3 class="text-22-bold text-dark-slate">Newsletter</h3>
+              <hr class="w-20 text-sea-green-deep border-t-2" />
+            </div>
+            <p class="text-15-normal text-dim-gray">
+              Sign up for our mailing list to get the latest updates & offers.
+            </p>
+            <div class="space-y-3">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="h-[50px] w-full py-3 px-4 text-muted-gray placeholder:text-muted-gray focus:outline-none focus:ring-0 rounded border border-light-gray text-15-normal"
+              />
+              <button
+                class="w-full py-3 px-6 flex items-center justify-center rounded bg-sea-green-deep text-15-semibold text-white hover:opacity-90 transition cursor-pointer"
+              >
+                Subscribe Now
+              </button>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Bottom Footer Strip -->
+        <div
+          class="bg-footer-green py-6 px-6 sm:px-10 md:px-16 xl:px-20 w-full"
+        >
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left"
+          >
+            <p class="text-dim-gray text-15-normal">
+              @ Avatar. Designed By Aibuzz
+            </p>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+              <p class="text-dim-gray text-15-normal">We accept payment via:</p>
+              <div
+                class="flex items-center flex-wrap gap-2 sm:gap-[10px] justify-center sm:justify-start"
+              >
+                <img
+                  src="/assets/img/payment-via-1.png"
+                  alt="payment-1"
+                  class="h-6"
+                />
+                <img
+                  src="/assets/img/payment-via-5.png"
+                  alt="payment-2"
+                  class="h-6"
+                />
+                <img
+                  src="/assets/img/payment-via-4.png"
+                  alt="payment-3"
+                  class="h-6"
+                />
+                <img
+                  src="/assets/img/payment-via-3.png"
+                  alt="payment-4"
+                  class="h-6"
+                />
+                <img
+                  src="/assets/img/payment-via-2.png"
+                  alt="payment-5"
+                  class="h-6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!--Upload Prescription Popup-->
+        <div class="upload-prescription-popup fixed inset-0 bg-transparent-black hidden flex items-center justify-center z-50">
+            <div class="bg-white max-w-[686px] w-full rounded-[12px] max-h-[600px] p-6 flex flex-col gap-4 overflow-y-auto no-scrollbar ">
+              <div class="flex items-center justify-between gap-2">
+                <div>
+                  <h3 class="text-sm md:text-base lg:text-xl font-medium md:font-semibold text-dark-charcoal-1">
+                    Upload Prescription
+                  </h3>
+                  <span class="text-gray-medium text-xs md:text-sm lg:text-base">Choose a file and upload securely to proceed.</span>
+                </div>
+                <div class="w-auto md:w-[104px] h-[50px] rounded-[8px] border border-border-light-1 flex items-end justify-between py-1.5 shadow-box-1 px-3 text-xs md:text-sm">
+                  <div class="flex flex-col items-start">
+                    <span class="text-green-light-5 font-semibold text-[10px]">In Just</span>
+                    <span class="text-green-light-5 font-semibold text-sm">5 mins</span>
+                  </div>
+                  <span class="material-symbols-outlined text-green-light-5">history_2</span>
+                </div>
+              </div>
+              <div class="space-y-2 mt-3">
+                  <div class="relative bg-soft-cloud-1 w-full h-[259px] border-2 border-dashed border-green-light rounded-[10px] flex items-center justify-center cursor-pointer overflow-hidden">
+                    <div class="flex flex-col items-center justify-center gap-2.5 pointer-events-none">
+                      <img src="/assets/img/upload-placeholder.svg" alt="upload-placeholder">
+                      <span class="text-dark-charcoal-1 text-sm lg:text-lg leading-normal font-medium">Drag and drop your files</span>
+                      <span class="text-gray-medium text-sm font-normal">JPEG, PND, PDF, and MP4 formats, up to 50MB</span>
+                      <button class="border border-dusty-lavender rounded-[10px] px-4 py-2 text-sm font-medium text-primary-blue bg-white mt-3">
+                        Select File
+                      </button>
+                    </div>
+                  </div>
+                
+              </div>
+              <span class="w-full text-center text-green-light-5 text-base font-semibold">Or</span>
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-obsidian-navy text-lg font-medium">Choose from Saved Prescriptions</h4>
+                  <button class="flex items-center gap-1.5 text-bright-green1 text-sm font-medium">View All <span class="material-symbols-outlined mini-icon">arrow_forward</span></button>
+                </div>
+                <div class="space-y-2">
+                  <div class="border border-silver-lilac rounded-[10px] p-2.5 hover:bg-soft-cloud-2 transition-all duration-300 flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-2.5">
+                      <img src="/assets/img/prescription.jpg" alt="prescription-1" class="w-28 h-28">
+                      <div class="flex flex-col">
+                        <span class="text-dark-charcoal-1 text-base font-medium">Prescription_June2026.pdf</span>
+                        <span class="text-gray-light-14 text-sm font-normal">Dr. Anjali Sharma</span>
+                        <span class="text-gray-light-14 text-sm font-normal">Uploaded: 12 June 2026</span>
+                        <span class="text-gray-light-14 text-sm font-normal">Medicines: Paracetamol 650 mg, Azithromycin, Levocetirizine 5 mg, Cough Syrup</span>
+                      </div>
+                    </div>
+                    <button class="border border-deep-teal-green text-deep-teal-green hover:bg-deep-teal-green rounded-[12px] px-8 py-2 text-sm font-medium hover:text-white transition-all duration-300">
+                      Select
+                    </button>
+                  </div>
+                  <div class="border border-silver-lilac rounded-[10px] p-2.5 hover:bg-soft-cloud-2 transition-all duration-300 flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-2.5">
+                      <img src="/assets/img/prescription.jpg" alt="prescription-1" class="w-28 h-28">
+                      <div class="flex flex-col">
+                        <span class="text-dark-charcoal-1 text-base font-medium">Diabetes_T1.pdf</span>
+                        <span class="text-gray-light-14 text-sm font-normal">Dr. Anjali Sharma</span>
+                        <span class="text-gray-light-14 text-sm font-normal">Uploaded: 12 June 2026</span>
+                        <span class="text-gray-light-14 text-sm font-normal">Medicines: Paracetamol 650 mg, Azithromycin, Levocetirizine 5 mg, Cough Syrup</span>
+                      </div>
+                    </div>
+                    <button class="border border-deep-teal-green text-deep-teal-green hover:bg-deep-teal-green rounded-[12px] px-8 py-2 text-sm font-medium hover:text-white transition-all duration-300">
+                      Select
+                    </button>
+                  </div>
+                </div>
+                <div class="flex items-center justify-center gap-2.5 mt-4">
+                  <button class="w-1/2 border border-deep-teal-green text-deep-teal-green rounded-[8px] py-3 text-sm font-semibold">Cancel</button>
+                  <button class="w-1/2 bg-deep-teal-green text-white rounded-[8px] py-3 text-sm font-semibold">Continue</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+      <!--View All Saved Prescriptions Popup-->
+      <div class="saved-prescriptions-popup fixed inset-0 bg-transparent-black flex hidden items-center justify-center z-50">
+          <div class="bg-white max-w-[686px] w-full rounded-[12px] max-h-[600px] p-6 flex flex-col gap-4 overflow-y-auto no-scrollbar ">
+            <div class="flex items-center justify-between gap-2">
+              <div>
+                <h3 class="text-sm md:text-base lg:text-xl font-medium md:font-semibold text-dark-charcoal-1">
+                  Saved Prescription
+                </h3>
+                <span class="text-gray-medium text-xs md:text-sm lg:text-base">Select a prescription to continue.</span>
+              </div>
+            </div>
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <h4 class="text-obsidian-navy text-base font-medium">Showing <span class="text-deep-teal-green font-semibold">24 saved prescriptions</span></h4>
+              </div>
+              <div class="space-y-2">
+                <div class="border border-silver-lilac rounded-[10px] p-2.5 hover:bg-soft-cloud-2 transition-all duration-300 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-2.5">
+                    <img src="/assets/img/prescription.jpg" alt="prescription-1" class="w-28 h-28">
+                    <div class="flex flex-col">
+                      <span class="text-dark-charcoal-1 text-base font-medium">Prescription_June2026.pdf</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Dr. Anjali Sharma</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Uploaded: 12 June 2026</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Medicines: Paracetamol 650 mg, Azithromycin, Levocetirizine 5 mg, Cough Syrup</span>
+                    </div>
+                  </div>
+                  <button class="border border-deep-teal-green text-deep-teal-green hover:bg-deep-teal-green rounded-[12px] px-8 py-2 text-sm font-medium hover:text-white transition-all duration-300">
+                    Select
+                  </button>
+                </div>
+                <div class="border border-silver-lilac rounded-[10px] p-2.5 hover:bg-soft-cloud-2 transition-all duration-300 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-2.5">
+                    <img src="/assets/img/prescription.jpg" alt="prescription-1" class="w-28 h-28">
+                    <div class="flex flex-col">
+                      <span class="text-dark-charcoal-1 text-base font-medium">Diabetes_T1.pdf</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Dr. Anjali Sharma</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Uploaded: 12 June 2026</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Medicines: Paracetamol 650 mg, Azithromycin, Levocetirizine 5 mg, Cough Syrup</span>
+                    </div>
+                  </div>
+                  <button class="border border-deep-teal-green text-deep-teal-green hover:bg-deep-teal-green rounded-[12px] px-8 py-2 text-sm font-medium hover:text-white transition-all duration-300">
+                    Select
+                  </button>
+                </div>
+                <div class="border border-silver-lilac rounded-[10px] p-2.5 hover:bg-soft-cloud-2 transition-all duration-300 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-2.5">
+                    <img src="/assets/img/prescription.jpg" alt="prescription-1" class="w-28 h-28">
+                    <div class="flex flex-col">
+                      <span class="text-dark-charcoal-1 text-base font-medium">Diabetes_T1.pdf</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Dr. Anjali Sharma</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Uploaded: 12 June 2026</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Medicines: Paracetamol 650 mg, Azithromycin, Levocetirizine 5 mg, Cough Syrup</span>
+                    </div>
+                  </div>
+                  <button class="border border-deep-teal-green text-deep-teal-green hover:bg-deep-teal-green rounded-[12px] px-8 py-2 text-sm font-medium hover:text-white transition-all duration-300">
+                    Select
+                  </button>
+                </div>
+                <div class="border border-silver-lilac rounded-[10px] p-2.5 hover:bg-soft-cloud-2 transition-all duration-300 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-2.5">
+                    <img src="/assets/img/prescription.jpg" alt="prescription-1" class="w-28 h-28">
+                    <div class="flex flex-col">
+                      <span class="text-dark-charcoal-1 text-base font-medium">Diabetes_T1.pdf</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Dr. Anjali Sharma</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Uploaded: 12 June 2026</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Medicines: Paracetamol 650 mg, Azithromycin, Levocetirizine 5 mg, Cough Syrup</span>
+                    </div>
+                  </div>
+                  <button class="border border-deep-teal-green text-deep-teal-green hover:bg-deep-teal-green rounded-[12px] px-8 py-2 text-sm font-medium hover:text-white transition-all duration-300">
+                    Select
+                  </button>
+                </div>
+                <div class="border border-silver-lilac rounded-[10px] p-2.5 hover:bg-soft-cloud-2 transition-all duration-300 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-2.5">
+                    <img src="/assets/img/prescription.jpg" alt="prescription-1" class="w-28 h-28">
+                    <div class="flex flex-col">
+                      <span class="text-dark-charcoal-1 text-base font-medium">Diabetes_T1.pdf</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Dr. Anjali Sharma</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Uploaded: 12 June 2026</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Medicines: Paracetamol 650 mg, Azithromycin, Levocetirizine 5 mg, Cough Syrup</span>
+                    </div>
+                  </div>
+                  <button class="border border-deep-teal-green text-deep-teal-green hover:bg-deep-teal-green rounded-[12px] px-8 py-2 text-sm font-medium hover:text-white transition-all duration-300">
+                    Select
+                  </button>
+                </div>
+                <div class="border border-silver-lilac rounded-[10px] p-2.5 hover:bg-soft-cloud-2 transition-all duration-300 flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-2.5">
+                    <img src="/assets/img/prescription.jpg" alt="prescription-1" class="w-28 h-28">
+                    <div class="flex flex-col">
+                      <span class="text-dark-charcoal-1 text-base font-medium">Diabetes_T1.pdf</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Dr. Anjali Sharma</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Uploaded: 12 June 2026</span>
+                      <span class="text-gray-light-14 text-sm font-normal">Medicines: Paracetamol 650 mg, Azithromycin, Levocetirizine 5 mg, Cough Syrup</span>
+                    </div>
+                  </div>
+                  <button class="border border-deep-teal-green text-deep-teal-green hover:bg-deep-teal-green rounded-[12px] px-8 py-2 text-sm font-medium hover:text-white transition-all duration-300">
+                    Select
+                  </button>
+                </div>
+              </div>
+              <div class="flex items-center justify-center gap-2.5 mt-4">
+                <button class="w-1/2 border border-deep-teal-green text-deep-teal-green rounded-[8px] py-3 text-sm font-semibold">Cancel</button>
+                <button class="w-1/2 bg-deep-teal-green text-white rounded-[8px] py-3 text-sm font-semibold">Continue</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script/pharmacy/upload-prescription.js"></script>
     <script src="/script/pharmacy/upload-medicine.js"></script>
     <script src="/script/pharmacy/upload-medicine-popup.js"></script>
   </body>
