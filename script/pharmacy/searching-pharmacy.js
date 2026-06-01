@@ -121,7 +121,17 @@ $(document).ready(function () {
     }
   })();
 
-  $(document).ready(function () {
+ 
+
+
+  
+});
+
+$(document).ready(function () {
+
+    // =========================
+    // OFFER DETAILS MODAL
+    // =========================
 
     $('.offerDetailsBtn').on('click', function () {
         $('.offer-modal')
@@ -129,24 +139,82 @@ $(document).ready(function () {
             .addClass('flex');
     });
 
-    $('.offer-modal-close').on('click', function () {
+    $('.offer-modal-close').on('click', function (e) {
+        e.stopPropagation();
+
         $('.offer-modal')
             .addClass('hidden')
             .removeClass('flex');
     });
 
     $('.offer-modal').on('click', function (e) {
-        if ($(e.target).hasClass('offer-modal')) {
+        if (e.target === this) {
             $(this)
                 .addClass('hidden')
                 .removeClass('flex');
         }
     });
 
-});
+    $('.offer-modal-content').on('click', function (e) {
+        e.stopPropagation();
+    });
 
 
-  
+    // =========================
+    // PROFORMA BILL POPUP
+    // =========================
+
+    $(document).on('click', '.proforma-open-btn', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $('.proforma-popup-overlay')
+            .removeClass('hidden')
+            .addClass('flex');
+    });
+
+    $(document).on('click', '.proforma-close-btn', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $('.proforma-popup-overlay')
+            .addClass('hidden')
+            .removeClass('flex');
+    });
+
+    $(document).on('click', '.proforma-popup-overlay', function (e) {
+
+        if (e.target === this) {
+            $(this)
+                .addClass('hidden')
+                .removeClass('flex');
+        }
+
+    });
+
+    $('.proforma-popup-overlay > div').on('click', function (e) {
+        e.stopPropagation();
+    });
+
+
+    // =========================
+    // ESC KEY CLOSE
+    // =========================
+
+    $(document).on('keydown', function (e) {
+
+        if (e.key === 'Escape') {
+
+            $('.proforma-popup-overlay')
+                .addClass('hidden')
+                .removeClass('flex');
+
+            $('.offer-modal')
+                .addClass('hidden')
+                .removeClass('flex');
+        }
+    });
+
 });
 
 
