@@ -1031,4 +1031,8 @@ $(document).ready(function () {
   $(document).on("click", ".addressDropdownToggle", function (e) {
     $(".savedAddress").removeClass("hidden");
   });
+
+  $('.backToHomeBtn').on('click',function(){
+    $('.cancellationSuccessfullPopup').addClass('hidden')
+  })
 });

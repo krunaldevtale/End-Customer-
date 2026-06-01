@@ -1,273 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Order History | Lab </title>
     <link rel="stylesheet" href="/assets/output.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-   
+
 </head>
+
 <body class="bg-white no-scrollbar">
 
-<div class="w-full max-w-[1600px] mx-auto min-h-screen">
-    <!-- Header (responsive + working mobile menu) -->
-    <header class="px-4 md:px-5 lg:px-20 py-2 mt-2 mx-auto flex items-center justify-between relative z-10">
-        <div class="max-w-[120px] md:max-w-[150px] max-h-10">
-            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="w-full h-auto max-h-10" onerror="this.src='https://placehold.co/120x40?text=MediCare'"/></a>
-        </div>
-        <nav>
-            <div>
-                <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    <div class="w-full max-w-[1600px] mx-auto min-h-screen">
+        <!-- Header (responsive + working mobile menu) -->
+        <header class="px-4 md:px-5 lg:px-20 py-2 mt-2 mx-auto flex items-center justify-between relative z-10">
+            <div class="max-w-[120px] md:max-w-[150px] max-h-10">
+                <a href="#"><img src="/assets/img/logo.png" alt="logo" class="w-full h-auto max-h-10"
+                        onerror="this.src='https://placehold.co/120x40?text=MediCare'" /></a>
+            </div>
+            <nav>
+                <div>
+                    <button id="menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                        <li class="relative group"><a
+                                class="flex items-center cursor-pointer text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Home
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a>
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group"><a
+                                class="flex items-center cursor-pointer text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Medicine
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a>
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible">
+                                <li><a href="#" class="block px-4 py-2">Web Design</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group"><a
+                                class="flex items-center cursor-pointer text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Maps
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a></li>
+                        <li><a href="/src/records.html"
+                                class="text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Records</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Rewards</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Support</a>
+                        </li>
+                        <li>
+                            <div class="bg-[#1A7A5E] text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                                <p class="font-semibold text-xs md:text-sm text-nowrap text-white">Referral - JH2JK123
+                                </p><i data-lucide="copy" class="w-4 h-4 cursor-pointer text-white"></i>
+                            </div>
+                        </li>
+                        <li><img src="/assets/img/blog-profile.svg" alt="profile"
+                                class="w-7 h-7 md:w-8 md:h-8 rounded-full"
+                                onerror="this.src='https://placehold.co/32x32'"></li>
+                    </ul>
+                </div>
+                <ul id="mobile-menu"
+                    class="md:hidden hidden flex-col space-y-2 mt-2 mr-5 rounded-md px-4 py-3 bg-white shadow-lg absolute right-0 top-12 z-20 w-48">
+                    <li><a href="#" class="block text-gray-800 font-semibold py-1">Home</a></li>
+                    <li><a href="#" class="block text-gray-800 font-semibold py-1">Medicine</a></li>
+                    <li><a href="#" class="block text-gray-800 font-semibold py-1">Records</a></li>
+                    <li><a href="#" class="block text-gray-800 font-semibold py-1">Rewards</a></li>
+                    <li><a href="#" class="block text-gray-800 font-semibold py-1">Support</a></li>
+                    <li>
+                        <div class="bg-[#1A7A5E] text-white rounded-md px-2 py-1 text-center text-sm">Referral -
+                            JH2JK123</div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="bg-white min-h-screen px-4 md:px-6 lg:px-20 py-4 md:py-5 font-sans">
+            <!-- Breadcrumb + Close -->
+            <div class="flex flex-wrap justify-between items-center gap-3 mb-6">
+                <div class="flex items-center gap-1 text-xs md:text-[16px] font-medium flex-wrap">
+                    <a href="home.html" class="text-gray hover:text-teal-700">Home</a><span
+                        class="text-gray-400">&gt;</span>
+                    <a href="#" class="text-gray hover:text-teal-700">Profile</a><span class="text-gray-400">&gt;</span>
+                    <a href="appointments.html" class="text-gray3 hover:text-teal-700">Appointment</a><span
+                        class="text-gray-400">&gt;</span>
+                    <span class="text-gray3 font-medium">Order History</span>
+                </div>
+                <button class="text-gray-800 hover:text-black transition flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-9 md:h-9" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
-                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
-                    <li class="relative group"><a class="flex items-center cursor-pointer text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Home <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></a>
-                        <ul class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10"><li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li><li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li></ul>
-                    </li>
-                    <li class="relative group"><a class="flex items-center cursor-pointer text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Medicine <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></a>
-                        <ul class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible"><li><a href="#" class="block px-4 py-2">Web Design</a></li></ul>
-                    </li>
-                    <li class="relative group"><a class="flex items-center cursor-pointer text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Maps <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></a></li>
-                    <li><a href="/src/records.html" class="text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Records</a></li>
-                    <li><a href="#" class="text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Rewards</a></li>
-                    <li><a href="#" class="text-gray-800 hover:text-teal-700 font-bold text-sm lg:text-base">Support</a></li>
-                    <li><div class="bg-[#1A7A5E] text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2"><p class="font-semibold text-xs md:text-sm text-nowrap text-white">Referral - JH2JK123</p><i data-lucide="copy" class="w-4 h-4 cursor-pointer text-white"></i></div></li>
-                    <li><img src="/assets/img/blog-profile.svg" alt="profile" class="w-7 h-7 md:w-8 md:h-8 rounded-full" onerror="this.src='https://placehold.co/32x32'"></li>
-                </ul>
             </div>
-            <ul id="mobile-menu" class="md:hidden hidden flex-col space-y-2 mt-2 mr-5 rounded-md px-4 py-3 bg-white shadow-lg absolute right-0 top-12 z-20 w-48">
-                <li><a href="#" class="block text-gray-800 font-semibold py-1">Home</a></li>
-                <li><a href="#" class="block text-gray-800 font-semibold py-1">Medicine</a></li>
-                <li><a href="#" class="block text-gray-800 font-semibold py-1">Records</a></li>
-                <li><a href="#" class="block text-gray-800 font-semibold py-1">Rewards</a></li>
-                <li><a href="#" class="block text-gray-800 font-semibold py-1">Support</a></li>
-                <li><div class="bg-[#1A7A5E] text-white rounded-md px-2 py-1 text-center text-sm">Referral - JH2JK123</div></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="bg-white min-h-screen px-4 md:px-6 lg:px-20 py-4 md:py-5 font-sans">
-        <!-- Breadcrumb + Close -->
-        <div class="flex flex-wrap justify-between items-center gap-3 mb-6">
-            <div class="flex items-center gap-1 text-xs md:text-[16px] font-medium flex-wrap">
-                <a href="home.html" class="text-gray hover:text-teal-700">Home</a><span class="text-gray-400">&gt;</span>
-                <a href="#" class="text-gray hover:text-teal-700">Profile</a><span class="text-gray-400">&gt;</span>
-                <a href="appointments.html" class="text-gray3 hover:text-teal-700">Appointment</a><span class="text-gray-400">&gt;</span>
-                <span class="text-gray3 font-medium">Order History</span>
-            </div>
-            <button class="text-gray-800 hover:text-black transition flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-9 md:h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
+            <!-- Header Actions -->
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 gap-4">
+                <h2 class="text-[24px] font-semibold text-gray">Order Details</h2>
+                <div class="flex flex-wrap items-center gap-3">
+                    <div class="relative w-full sm:w-auto">
+                        <input type="text" placeholder="Search by name or categories" id="searchInput"
+                            class="w-full sm:w-[260px] md:w-[380px] bg-white border border-gray-200 rounded-md py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
 
-        <!-- Header Actions -->
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 gap-4">
-            <h2 class="text-[24px] font-semibold text-gray">Order Details</h2>
-            <div class="flex flex-wrap items-center gap-3">
-                <div class="relative w-full sm:w-auto">
-                    <input type="text" placeholder="Search by name or categories" id="searchInput" class="w-full sm:w-[260px] md:w-[380px] bg-white border border-gray-200 rounded-md py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-1 focus:ring-teal-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                    <div class="relative dropdown-wrapper">
+                        <button
+                            class="flex items-center cursor-pointer gap-1 border border-teal-700 text-sea-green2 rounded-md px-3 py-1 text-xs md:text-sm font-medium hover:bg-teal-700 hover:text-white transition">
+                            <span class="material-symbols-outlined pt-0.5">keyboard_arrow_down</span>
+                            Filter
+                        </button>
+                        <div
+                            class="dropdown-menu hidden absolute bg-white shadow-xl rounded-md border border-gray-light-3 z-9999 w-full">
+                            <ul class="space-y-2 px-3 py-2">
+                                <li class="cursor-pointer">10</li>
+                                <li class="cursor-pointer">20</li>
+                                <li class="cursor-pointer">50</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
                 </div>
-                <button class="flex items-center gap-1 border border-teal-700 text-sea-green2 rounded-md px-3 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-medium hover:bg-teal-700 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M19 9l-7 7-7-7" /></svg>Filter</button>
-               <button class="view-btn flex items-center gap-1 border border-teal-700 text-sea-green2 rounded-md px-3 py-1.5 md:px-5 md:py-2 text-xs md:text-sm font-medium hover:bg-teal-700 hover:text-white transition">
-    
-    <img src="/assets/img/file_export.svg" 
-         alt="" 
-         class="view-icon transition duration-200">
-
-    View
-</button>
             </div>
-        </div>
 
-        <!-- Dropdowns (fixed image positioning) -->
-        <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-6">
-            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                <div class="relative flex items-center w-full sm:w-auto">
-                    <select class="appearance-none bg-[#F3FFFB] border border-[#088178]/20 rounded-full pl-10 pr-8 py-2 text-sm text-sea-green2 font-semibold w-full sm:min-w-[280px] md:min-w-[380px] h-[38px] focus:outline-none">
-                        <option>Aniket</option>
+            <!-- Dropdowns (fixed image positioning) -->
+            <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 mb-6">
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <div class="relative flex items-center w-full sm:w-auto">
+                        <select
+                            class="appearance-none bg-[#F3FFFB] border border-[#088178]/20 rounded-full pl-10 pr-8 py-2 text-sm text-sea-green2 font-semibold w-full sm:min-w-[280px] md:min-w-[380px] h-[38px] focus:outline-none">
+                            <option>Aniket</option>
+                        </select>
+                        <img src="/assets/img/Profile-acc.png" class="dropdown-img"
+                            onerror="this.src='https://placehold.co/24x24?text=A'">
+                        <span class="material-symbols-outlined absolute right-2 pointer-events-none text-xl"
+                            style="color:#088178;">arrow_drop_down</span>
+                    </div>
+                    <div class="relative flex items-center w-full sm:w-auto">
+                        <select
+                            class="appearance-none bg-[#F3FFFB] border border-[#088178]/20 rounded-full pl-10 pr-8 py-2 text-sm text-sea-green2 font-semibold w-full sm:min-w-[240px] md:min-w-[280px] h-[38px] focus:outline-none">
+                            <option>Dr. Monika Singh</option>
+                        </select>
+                        <img src="/assets/img/blog-profile.svg" class="dropdown-img"
+                            onerror="this.src='https://placehold.co/24x24?text=DM'">
+                        <span class="material-symbols-outlined absolute right-2 pointer-events-none text-xl"
+                            style="color:#088178;">arrow_drop_down</span>
+                    </div>
+                </div>
+                <div class="relative w-full md:w-auto">
+                    <select
+                        class="appearance-none bg-white border border-gray-200 rounded-md pl-4 pr-10 py-2 text-sm text-gray-light1 w-full md:min-w-[320px] focus:outline-none">
+                        <option>Featured first</option>
                     </select>
-                    <img src="/assets/img/Profile-acc.png" class="dropdown-img" onerror="this.src='https://placehold.co/24x24?text=A'">
-                    <span class="material-symbols-outlined absolute right-2 pointer-events-none text-xl" style="color:#088178;">arrow_drop_down</span>
-                </div>
-                <div class="relative flex items-center w-full sm:w-auto">
-                    <select class="appearance-none bg-[#F3FFFB] border border-[#088178]/20 rounded-full pl-10 pr-8 py-2 text-sm text-sea-green2 font-semibold w-full sm:min-w-[240px] md:min-w-[280px] h-[38px] focus:outline-none">
-                        <option>Dr. Monika Singh</option>
-                    </select>
-                    <img src="/assets/img/blog-profile.svg" class="dropdown-img" onerror="this.src='https://placehold.co/24x24?text=DM'">
-                    <span class="material-symbols-outlined absolute right-2 pointer-events-none text-xl" style="color:#088178;">arrow_drop_down</span>
+                    <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
                 </div>
             </div>
-            <div class="relative w-full md:w-auto">
-                <select class="appearance-none bg-white border border-gray-200 rounded-md pl-4 pr-10 py-2 text-sm text-gray-light1 w-full md:min-w-[320px] focus:outline-none">
-                    <option>Featured first</option>
-                </select>
-                <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-            </div>
-        </div>
 
-        <!-- Tabs -->
-        <div class="flex justify-between items-center mb-6 flex-wrap gap-3">
-            <div class="flex flex-wrap items-center gap-2 overflow-x-auto no-scrollbar pb-1 w-full sm:w-auto" id="tabsContainer">
-                <button data-category="all" class="tab-btn active px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">All</button>
-                <button data-category="Pharmacy" class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Pharmacy</button>
-                <button data-category="Doctor" class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Doctor</button>
-                <button data-category="Hospital" class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Hospital</button>
-                <button data-category="Labs" class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Labs</button>
-            </div>
-            <button class="text-teal-700 hover:scale-110 transition">
-               <img src="/assets/img/arrow.svg" alt="">
-            </button>
-        </div>
-
-       
-
-        <!-- Orders Table -->
-        <div class="table-container">
-            <div class="bg-white shadow-sm border border-gray-100 rounded-lg">
-                <div class="grid grid-cols-5 bg-[#088178] text-white text-sm font-bold table-header">
-                    <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Order ID</div>
-                    <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Agenda’s</div>
-                    <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Price</div>
-                    <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Status</div>
-                    <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Actions</div>
+            <!-- Tabs -->
+            <div class="flex justify-between items-center mb-6 flex-wrap gap-3">
+                <div class="flex flex-wrap items-center gap-2 overflow-x-auto no-scrollbar pb-1 w-full sm:w-auto"
+                    id="tabsContainer">
+                    <button data-category="all"
+                        class="tab-btn active px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">All</button>
+                    <button data-category="Pharmacy"
+                        class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Pharmacy</button>
+                    <button data-category="Doctor"
+                        class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Doctor</button>
+                    <button data-category="Hospital"
+                        class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Hospital</button>
+                    <button data-category="Labs"
+                        class="tab-btn px-4 md:px-4 py-2 whitespace-nowrap rounded-full border bg-white text-sm font-semibold text-gray">Labs</button>
                 </div>
-                <div id="ordersListContainer"></div>
+                <button class="text-teal-700 hover:scale-110 transition">
+                    <img src="/assets/img/arrow.svg" alt="">
+                </button>
             </div>
-        </div>
 
-        <!-- Pagination -->
-        <div id="paginationWrapper" class="flex items-center justify-center gap-1 mt-8 flex-wrap"></div>
 
-        <!-- Referral Banner (poster always visible) -->
-        <div class="mt-10 md:mt-12 bg-gradient-to-r from-[#53d4c3] to-[#21a495] rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="text-white text-center md:text-left">
-                <h3 class="font-bold text-xl md:text-2xl mb-1">Refer and Earn</h3>
-                <p class="text-sm md:text-base text-white/90">Invite family and friends to earn cashbacks</p>
+
+            <!-- Orders Table -->
+            <div class="table-container">
+                <div class="bg-white shadow-sm border border-gray-100 rounded-lg">
+                    <div class="grid grid-cols-5 bg-[#088178] text-white text-sm font-bold table-header">
+                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Order ID</div>
+                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Agenda’s</div>
+                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Price</div>
+                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Status</div>
+                        <div class="py-3 md:py-5 text-center text-xs md:text-sm tracking-wider">Actions</div>
+                    </div>
+                    <div id="ordersListContainer"></div>
+                </div>
             </div>
-            <button class="bg-[#1A7A5E] text-white px-6 md:px-8 py-1.5 rounded-full border border-white font-bold text-base md:text-lg hover:bg-[#005a52] transition shadow-md whitespace-nowrap">Invite Now</button>
-            <!-- Poster image with fallback – never hidden -->
-            <img src="/assets/img/Group.svg" class="w-24 md:w-32 object-contain" alt="referral" onerror="this.src='https://placehold.co/128x80?text=Refer+Earn'">
-        </div>
-    </section>
-</div>
 
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-    // ========== DATASET (unchanged) ==========
-    const baseOrders = [
-        { id: "10023", agendaName: "General Consultation", datetime: "28/04/2025 - 09:30 AM", price: "₹850", status: "Successful", category: "Doctor" },
-        { id: "10024", agendaName: "Medicine Delivery", datetime: "28/04/2025 - 11:15 AM", price: "₹420", status: "Successful", category: "Pharmacy" },
-        { id: "65555", agendaName: "Lab", datetime: "27/04/2025 - 04:00 PM", price: "₹750", status: "Ongoing", category: "Labs" },
-        { id: "10026", agendaName: "Physiotherapy", datetime: "27/04/2025 - 04:30 PM", price: "₹1250", status: "Successful", category: "Hospital" },
-        { id: "10027", agendaName: "Cardio Checkup", datetime: "26/04/2025 - 10:00 AM", price: "₹2100", status: "Ongoing", category: "Doctor" },
-        { id: "65556", agendaName: "Blood Test", datetime: "26/04/2025 - 04:00 AM", price: "₹750", status: "Successful", category: "Labs" },
-        { id: "10029", agendaName: "Emergency Medicine", datetime: "25/04/2025 - 07:20 PM", price: "₹780", status: "Successful", category: "Pharmacy" },
-        { id: "10030", agendaName: "Orthopedic Visit", datetime: "25/04/2025 - 12:00 PM", price: "₹1500", status: "Successful", category: "Hospital" },
-        { id: "10031", agendaName: "Dermatology", datetime: "24/04/2025 - 03:30 PM", price: "₹1100", status: "Ongoing", category: "Doctor" },
-        { id: "65557", agendaName: "Lab", datetime: "24/04/2025 - 04:00 PM", price: "₹750", status: "Successful", category: "Labs" },
-        { id: "10033", agendaName: "Prescription Meds", datetime: "23/04/2025 - 10:15 AM", price: "₹320", status: "Successful", category: "Pharmacy" },
-        { id: "10034", agendaName: "Maternity Care", datetime: "23/04/2025 - 05:00 PM", price: "₹2450", status: "Ongoing", category: "Hospital" },
-        { id: "10035", agendaName: "Neurology Consult", datetime: "22/04/2025 - 09:00 AM", price: "₹1950", status: "Successful", category: "Doctor" },
-        { id: "10036", agendaName: "Home Healthcare", datetime: "22/04/2025 - 02:30 PM", price: "₹1800", status: "Successful", category: "Hospital" },
-        { id: "65558", agendaName: "Lab", datetime: "21/04/2025 - 04:00 AM", price: "₹750", status: "Successful", category: "Labs" },
-        { id: "10038", agendaName: "Vitamins Supply", datetime: "21/04/2025 - 04:00 PM", price: "₹290", status: "Ongoing", category: "Pharmacy" }
-    ];
+            <!-- Pagination -->
+            <div id="paginationWrapper" class="flex items-center justify-center gap-1 mt-8 flex-wrap"></div>
 
-    function generateExtraItems(category, currentCount, startIdOffset) {
-        const needed = 20 - currentCount;
-        const extra = [];
-        const agendaMap = {
-            Doctor: ["Routine Checkup", "ENT Specialist", "Psychiatrist Consult", "Pulmonology Visit", "Gastroenterology", "Ortho Follow-up", "Vaccination Drive", "Wellness Exam", "Pediatric Check", "Cardiac Stress Test", "Thyroid Consultation", "Sleep Study Review", "Dermatology Follow-up", "Neurology Review", "Immunotherapy", "Pain Management"],
-            Pharmacy: ["Pain Relief Tablets", "Antibiotic Course", "Insulin Pens", "Multivitamin Pack", "Cough Syrup", "Nasal Spray", "Antihistamines", "Calcium Supplements", "Digestive Enzymes", "First Aid Kit", "BP Monitor Device", "Diabetes Care Pack", "Fever Reducer", "Antifungal Cream", "Eye Drops", "Probiotics"],
-            Hospital: ["ICU Admission", "Daycare Surgery", "Physical Rehab", "Neonatal Care", "Emergency Trauma", "Cardiac Rehab", "Maternity Discharge", "Burn Unit Care", "Stroke Recovery", "Post-Op Care", "Dialysis Session", "Chemotherapy", "Radiotherapy", "Plastic Surgery", "Pain Clinic", "General Ward Stay"],
-            Labs: ["Vitamin Profile", "Iron Deficiency Test", "Allergy Panel", "Hormone Test", "Genetic Screening", "Pap Smear", "PSA Test", "Urine Culture", "Stool Test", "PCR Swab", "ECG Monitoring", "Echo Test", "Liver Function", "Kidney Function", "Bone Density", "HbA1c Test"]
-        };
-        const statusOptions = ["Successful", "Ongoing"];
-        let idCounter = startIdOffset;
-        for (let i = 0; i < needed; i++) {
-            const agendaList = agendaMap[category] || ["Standard Service"];
-            const agenda = agendaList[i % agendaList.length] + " " + (i+1);
-            const randomPrice = Math.floor(Math.random() * (4500 - 250 + 1) + 250);
-            const priceFormatted = `₹${randomPrice}`;
-            const randomStatus = statusOptions[Math.floor(Math.random() * statusOptions.length)];
-            const day = 10 + (i % 18);
-            const hour = 8 + (i % 12);
-            const minute = i % 60;
-            const datetime = `${day}/05/2025 - ${hour.toString().padStart(2,'0')}:${minute.toString().padStart(2,'0')} ${hour>=12 ? 'PM' : 'AM'}`;
-            extra.push({ id: `${idCounter++}`, agendaName: agenda, datetime: datetime, price: priceFormatted, status: randomStatus, category: category });
-        }
-        return { items: extra };
-    }
+            <!-- Referral Banner (poster always visible) -->
+            <div
+                class="mt-10 md:mt-12 bg-gradient-to-r from-[#53d4c3] to-[#21a495] rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="text-white text-center md:text-left">
+                    <h3 class="font-bold text-xl md:text-2xl mb-1">Refer and Earn</h3>
+                    <p class="text-sm md:text-base text-white/90">Invite family and friends to earn cashbacks</p>
+                </div>
+                <button
+                    class="bg-[#1A7A5E] text-white px-6 md:px-8 py-1.5 rounded-full border border-white font-bold text-base md:text-lg hover:bg-[#005a52] transition shadow-md whitespace-nowrap">Invite
+                    Now</button>
+                <!-- Poster image with fallback – never hidden -->
+                <img src="/assets/img/Group.svg" class="w-24 md:w-32 object-contain" alt="referral"
+                    onerror="this.src='https://placehold.co/128x80?text=Refer+Earn'">
+            </div>
+        </section>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // ========== DATASET (unchanged) ==========
+        const baseOrders = [
+            { id: "10023", agendaName: "General Consultation", datetime: "28/04/2025 - 09:30 AM", price: "₹850", status: "Successful", category: "Doctor" },
+            { id: "10024", agendaName: "Medicine Delivery", datetime: "28/04/2025 - 11:15 AM", price: "₹420", status: "Successful", category: "Pharmacy" },
+            { id: "65555", agendaName: "Lab", datetime: "27/04/2025 - 04:00 PM", price: "₹750", status: "Ongoing", category: "Labs" },
+            { id: "10026", agendaName: "Physiotherapy", datetime: "27/04/2025 - 04:30 PM", price: "₹1250", status: "Successful", category: "Hospital" },
+            { id: "10027", agendaName: "Cardio Checkup", datetime: "26/04/2025 - 10:00 AM", price: "₹2100", status: "Ongoing", category: "Doctor" },
+            { id: "65556", agendaName: "Blood Test", datetime: "26/04/2025 - 04:00 AM", price: "₹750", status: "Successful", category: "Labs" },
+            { id: "10029", agendaName: "Emergency Medicine", datetime: "25/04/2025 - 07:20 PM", price: "₹780", status: "Successful", category: "Pharmacy" },
+            { id: "10030", agendaName: "Orthopedic Visit", datetime: "25/04/2025 - 12:00 PM", price: "₹1500", status: "Successful", category: "Hospital" },
+            { id: "10031", agendaName: "Dermatology", datetime: "24/04/2025 - 03:30 PM", price: "₹1100", status: "Ongoing", category: "Doctor" },
+            { id: "65557", agendaName: "Lab", datetime: "24/04/2025 - 04:00 PM", price: "₹750", status: "Successful", category: "Labs" },
+            { id: "10033", agendaName: "Prescription Meds", datetime: "23/04/2025 - 10:15 AM", price: "₹320", status: "Successful", category: "Pharmacy" },
+            { id: "10034", agendaName: "Maternity Care", datetime: "23/04/2025 - 05:00 PM", price: "₹2450", status: "Ongoing", category: "Hospital" },
+            { id: "10035", agendaName: "Neurology Consult", datetime: "22/04/2025 - 09:00 AM", price: "₹1950", status: "Successful", category: "Doctor" },
+            { id: "10036", agendaName: "Home Healthcare", datetime: "22/04/2025 - 02:30 PM", price: "₹1800", status: "Successful", category: "Hospital" },
+            { id: "65558", agendaName: "Lab", datetime: "21/04/2025 - 04:00 AM", price: "₹750", status: "Successful", category: "Labs" },
+            { id: "10038", agendaName: "Vitamins Supply", datetime: "21/04/2025 - 04:00 PM", price: "₹290", status: "Ongoing", category: "Pharmacy" }
+        ];
 
-    let doctorItems = baseOrders.filter(o => o.category === "Doctor");
-    let pharmacyItems = baseOrders.filter(o => o.category === "Pharmacy");
-    let hospitalItems = baseOrders.filter(o => o.category === "Hospital");
-    let labsItems = baseOrders.filter(o => o.category === "Labs");
-    
-    let doctorExtra = generateExtraItems("Doctor", doctorItems.length, 20001);
-    let pharmacyExtra = generateExtraItems("Pharmacy", pharmacyItems.length, 21001);
-    let hospitalExtra = generateExtraItems("Hospital", hospitalItems.length, 22001);
-    let labsExtra = generateExtraItems("Labs", labsItems.length, 23001);
-    
-    const fullOrdersDataset = [
-        ...doctorItems, ...doctorExtra.items,
-        ...pharmacyItems, ...pharmacyExtra.items,
-        ...hospitalItems, ...hospitalExtra.items,
-        ...labsItems, ...labsExtra.items
-    ];
-    
-    let currentCategory = "all";
-    let currentPage = 1;
-    const rowsPerPage = 5;
-    let searchKeyword = "";
-    
-    const ordersContainer = document.getElementById("ordersListContainer");
-    const paginationWrapper = document.getElementById("paginationWrapper");
-    const searchInput = document.getElementById("searchInput");
-    
-    function getFilteredOrders() {
-        let filtered = [...fullOrdersDataset];
-        if (currentCategory !== "all") filtered = filtered.filter(order => order.category === currentCategory);
-        if (searchKeyword.trim() !== "") {
-            const kw = searchKeyword.trim().toLowerCase();
-            filtered = filtered.filter(order => order.agendaName.toLowerCase().includes(kw) || order.id.includes(kw));
+        function generateExtraItems(category, currentCount, startIdOffset) {
+            const needed = 20 - currentCount;
+            const extra = [];
+            const agendaMap = {
+                Doctor: ["Routine Checkup", "ENT Specialist", "Psychiatrist Consult", "Pulmonology Visit", "Gastroenterology", "Ortho Follow-up", "Vaccination Drive", "Wellness Exam", "Pediatric Check", "Cardiac Stress Test", "Thyroid Consultation", "Sleep Study Review", "Dermatology Follow-up", "Neurology Review", "Immunotherapy", "Pain Management"],
+                Pharmacy: ["Pain Relief Tablets", "Antibiotic Course", "Insulin Pens", "Multivitamin Pack", "Cough Syrup", "Nasal Spray", "Antihistamines", "Calcium Supplements", "Digestive Enzymes", "First Aid Kit", "BP Monitor Device", "Diabetes Care Pack", "Fever Reducer", "Antifungal Cream", "Eye Drops", "Probiotics"],
+                Hospital: ["ICU Admission", "Daycare Surgery", "Physical Rehab", "Neonatal Care", "Emergency Trauma", "Cardiac Rehab", "Maternity Discharge", "Burn Unit Care", "Stroke Recovery", "Post-Op Care", "Dialysis Session", "Chemotherapy", "Radiotherapy", "Plastic Surgery", "Pain Clinic", "General Ward Stay"],
+                Labs: ["Vitamin Profile", "Iron Deficiency Test", "Allergy Panel", "Hormone Test", "Genetic Screening", "Pap Smear", "PSA Test", "Urine Culture", "Stool Test", "PCR Swab", "ECG Monitoring", "Echo Test", "Liver Function", "Kidney Function", "Bone Density", "HbA1c Test"]
+            };
+            const statusOptions = ["Successful", "Ongoing"];
+            let idCounter = startIdOffset;
+            for (let i = 0; i < needed; i++) {
+                const agendaList = agendaMap[category] || ["Standard Service"];
+                const agenda = agendaList[i % agendaList.length] + " " + (i + 1);
+                const randomPrice = Math.floor(Math.random() * (4500 - 250 + 1) + 250);
+                const priceFormatted = `₹${randomPrice}`;
+                const randomStatus = statusOptions[Math.floor(Math.random() * statusOptions.length)];
+                const day = 10 + (i % 18);
+                const hour = 8 + (i % 12);
+                const minute = i % 60;
+                const datetime = `${day}/05/2025 - ${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')} ${hour >= 12 ? 'PM' : 'AM'}`;
+                extra.push({ id: `${idCounter++}`, agendaName: agenda, datetime: datetime, price: priceFormatted, status: randomStatus, category: category });
+            }
+            return { items: extra };
         }
-        return filtered;
-    }
-    
-    function getCategoryIconHtml(category) {
-        if (category === "Labs") {
-            return `<div class="w-7 h-7 md:w-10 md:h-10 rounded-full bg-[#FFE5EC] flex items-center justify-center flex-shrink-0"><img src="/assets/img/Shape.png" class="w-3.5 h-3.5 md:w-5 md:h-5 object-contain" alt="Lab Icon" onerror="this.src='https://placehold.co/28x28?text=i'"></div>`;
-        } else {
-            return `<div class="w-4 h-4 md:w-5 md:h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><div class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-green-500"></div></div>`;
+
+        let doctorItems = baseOrders.filter(o => o.category === "Doctor");
+        let pharmacyItems = baseOrders.filter(o => o.category === "Pharmacy");
+        let hospitalItems = baseOrders.filter(o => o.category === "Hospital");
+        let labsItems = baseOrders.filter(o => o.category === "Labs");
+
+        let doctorExtra = generateExtraItems("Doctor", doctorItems.length, 20001);
+        let pharmacyExtra = generateExtraItems("Pharmacy", pharmacyItems.length, 21001);
+        let hospitalExtra = generateExtraItems("Hospital", hospitalItems.length, 22001);
+        let labsExtra = generateExtraItems("Labs", labsItems.length, 23001);
+
+        const fullOrdersDataset = [
+            ...doctorItems, ...doctorExtra.items,
+            ...pharmacyItems, ...pharmacyExtra.items,
+            ...hospitalItems, ...hospitalExtra.items,
+            ...labsItems, ...labsExtra.items
+        ];
+
+        let currentCategory = "all";
+        let currentPage = 1;
+        const rowsPerPage = 5;
+        let searchKeyword = "";
+
+        const ordersContainer = document.getElementById("ordersListContainer");
+        const paginationWrapper = document.getElementById("paginationWrapper");
+        const searchInput = document.getElementById("searchInput");
+
+        function getFilteredOrders() {
+            let filtered = [...fullOrdersDataset];
+            if (currentCategory !== "all") filtered = filtered.filter(order => order.category === currentCategory);
+            if (searchKeyword.trim() !== "") {
+                const kw = searchKeyword.trim().toLowerCase();
+                filtered = filtered.filter(order => order.agendaName.toLowerCase().includes(kw) || order.id.includes(kw));
+            }
+            return filtered;
         }
-    }
-    
-    function renderOrders() {
-        const filtered = getFilteredOrders();
-        const totalPages = Math.max(1, Math.ceil(filtered.length / rowsPerPage));
-        if (currentPage > totalPages) currentPage = totalPages;
-        if (currentPage < 1) currentPage = 1;
-        const startIdx = (currentPage - 1) * rowsPerPage;
-        const paginatedOrders = filtered.slice(startIdx, startIdx + rowsPerPage);
-        
-        if (paginatedOrders.length === 0) {
-            ordersContainer.innerHTML = `<div class="text-center py-12 text-gray-500 text-base">No orders found for this category</div>`;
-            return;
+
+        function getCategoryIconHtml(category) {
+            if (category === "Labs") {
+                return `<div class="w-7 h-7 md:w-10 md:h-10 rounded-full bg-[#FFE5EC] flex items-center justify-center flex-shrink-0"><img src="/assets/img/Shape.png" class="w-3.5 h-3.5 md:w-5 md:h-5 object-contain" alt="Lab Icon" onerror="this.src='https://placehold.co/28x28?text=i'"></div>`;
+            } else {
+                return `<div class="w-4 h-4 md:w-5 md:h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><div class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-green-500"></div></div>`;
+            }
         }
-        
-        let rowsHtml = "";
-        paginatedOrders.forEach(order => {
-            const statusClass = order.status === "Ongoing" ? "status-ongoing" : "status-success";
-            const iconHtml = getCategoryIconHtml(order.category);
-            rowsHtml += `
+
+        function renderOrders() {
+            const filtered = getFilteredOrders();
+            const totalPages = Math.max(1, Math.ceil(filtered.length / rowsPerPage));
+            if (currentPage > totalPages) currentPage = totalPages;
+            if (currentPage < 1) currentPage = 1;
+            const startIdx = (currentPage - 1) * rowsPerPage;
+            const paginatedOrders = filtered.slice(startIdx, startIdx + rowsPerPage);
+
+            if (paginatedOrders.length === 0) {
+                ordersContainer.innerHTML = `<div class="text-center py-12 text-gray-500 text-base">No orders found for this category</div>`;
+                return;
+            }
+
+            let rowsHtml = "";
+            paginatedOrders.forEach(order => {
+                const statusClass = order.status === "Ongoing" ? "status-ongoing" : "status-success";
+                const iconHtml = getCategoryIconHtml(order.category);
+                rowsHtml += `
                 <div class="order-row grid grid-cols-5 items-center py-3 md:py-6 text-xs md:text-sm border-b border-gray-100">
                     <div class="text-center font-medium text-gray-600">${order.id}</div>
                     <div class="flex items-center justify-start pl-4 md:pl-12 gap-2 md:gap-4">
@@ -282,92 +367,121 @@
                     <div class="text-center"><button class="text-[#007d73] font-semibold hover:underline text-xs md:text-sm view-details-btn" data-id="${order.id}">View Details</button></div>
                 </div>
             `;
-        });
-        ordersContainer.innerHTML = rowsHtml;
-        document.querySelectorAll('.view-details-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => alert(`Order details for ID ${btn.getAttribute('data-id')} — (demo)`));
-        });
-    }
-    
-    function escapeHtml(str) { return str.replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;});}
-    
-    function renderPagination() {
-        const filtered = getFilteredOrders();
-        const totalPages = Math.ceil(filtered.length / rowsPerPage);
-        if (totalPages <= 1 && filtered.length > 0) {
-            paginationWrapper.innerHTML = `<div class="text-gray-400 text-xs md:text-sm">Page 1 of 1</div>`;
-            return;
-        } else if (filtered.length === 0) {
-            paginationWrapper.innerHTML = ``;
-            return;
-        }
-        let paginationHtml = `<button class="prev-page text-gray-500 font-medium hover:text-teal-700 px-2 md:px-3 py-1 rounded transition text-sm">Previous</button>`;
-        for (let i = 1; i <= totalPages; i++) {
-            const activeClass = (i === currentPage) ? 'active-page' : '';
-            paginationHtml += `<button class="page-num ${activeClass} text-sm" data-page="${i}">${i}</button>`;
-        }
-        paginationHtml += `<button class="next-page text-gray-500 font-medium hover:text-teal-700 px-2 md:px-3 py-1 rounded transition text-sm">Next</button>`;
-        paginationWrapper.innerHTML = paginationHtml;
-        
-        const prevBtn = paginationWrapper.querySelector('.prev-page');
-        const nextBtn = paginationWrapper.querySelector('.next-page');
-        const pageBtns = paginationWrapper.querySelectorAll('.page-num');
-        if (prevBtn) prevBtn.addEventListener('click', () => { if (currentPage > 1) { currentPage--; renderOrders(); renderPagination(); } });
-        if (nextBtn) nextBtn.addEventListener('click', () => { if (currentPage < totalPages) { currentPage++; renderOrders(); renderPagination(); } });
-        pageBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const page = parseInt(btn.getAttribute('data-page'));
-                if (!isNaN(page) && page !== currentPage) {
-                    currentPage = page;
-                    renderOrders();
-                    renderPagination();
-                }
             });
-        });
-    }
-    
-    function updateActiveTab(category) {
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            if (btn.getAttribute('data-category') === category) btn.classList.add('active');
-            else btn.classList.remove('active');
-        });
-    }
-    
-    function switchCategory(category) {
-        currentCategory = category;
-        currentPage = 1;
-        updateActiveTab(category);
-        renderOrders();
-        renderPagination();
-    }
-    
-    let debounceTimer;
-    function onSearchInput() {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => {
-            searchKeyword = searchInput.value;
+            ordersContainer.innerHTML = rowsHtml;
+            document.querySelectorAll('.view-details-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => alert(`Order details for ID ${btn.getAttribute('data-id')} — (demo)`));
+            });
+        }
+
+        function escapeHtml(str) { return str.replace(/[&<>]/g, function (m) { if (m === '&') return '&amp;'; if (m === '<') return '&lt;'; if (m === '>') return '&gt;'; return m; }); }
+
+        function renderPagination() {
+            const filtered = getFilteredOrders();
+            const totalPages = Math.ceil(filtered.length / rowsPerPage);
+            if (totalPages <= 1 && filtered.length > 0) {
+                paginationWrapper.innerHTML = `<div class="text-gray-400 text-xs md:text-sm">Page 1 of 1</div>`;
+                return;
+            } else if (filtered.length === 0) {
+                paginationWrapper.innerHTML = ``;
+                return;
+            }
+            let paginationHtml = `<button class="prev-page text-gray-500 font-medium hover:text-teal-700 px-2 md:px-3 py-1 rounded transition text-sm">Previous</button>`;
+            for (let i = 1; i <= totalPages; i++) {
+                const activeClass = (i === currentPage) ? 'active-page' : '';
+                paginationHtml += `<button class="page-num ${activeClass} text-sm" data-page="${i}">${i}</button>`;
+            }
+            paginationHtml += `<button class="next-page text-gray-500 font-medium hover:text-teal-700 px-2 md:px-3 py-1 rounded transition text-sm">Next</button>`;
+            paginationWrapper.innerHTML = paginationHtml;
+
+            const prevBtn = paginationWrapper.querySelector('.prev-page');
+            const nextBtn = paginationWrapper.querySelector('.next-page');
+            const pageBtns = paginationWrapper.querySelectorAll('.page-num');
+            if (prevBtn) prevBtn.addEventListener('click', () => { if (currentPage > 1) { currentPage--; renderOrders(); renderPagination(); } });
+            if (nextBtn) nextBtn.addEventListener('click', () => { if (currentPage < totalPages) { currentPage++; renderOrders(); renderPagination(); } });
+            pageBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const page = parseInt(btn.getAttribute('data-page'));
+                    if (!isNaN(page) && page !== currentPage) {
+                        currentPage = page;
+                        renderOrders();
+                        renderPagination();
+                    }
+                });
+            });
+        }
+
+        function updateActiveTab(category) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                if (btn.getAttribute('data-category') === category) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+        }
+
+        function switchCategory(category) {
+            currentCategory = category;
             currentPage = 1;
+            updateActiveTab(category);
             renderOrders();
             renderPagination();
-        }, 300);
-    }
-    
-    function init() {
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => switchCategory(btn.getAttribute('data-category')));
-        });
-        updateActiveTab('all');
-        renderOrders();
-        renderPagination();
-        if(searchInput) searchInput.addEventListener('input', onSearchInput);
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if(menuBtn && mobileMenu) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    }
-    
-    if(typeof lucide !== 'undefined') lucide.createIcons();
-    document.addEventListener('DOMContentLoaded', init);
+        }
 
-</script>
+        let debounceTimer;
+        function onSearchInput() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                searchKeyword = searchInput.value;
+                currentPage = 1;
+                renderOrders();
+                renderPagination();
+            }, 300);
+        }
+
+        function init() {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', () => switchCategory(btn.getAttribute('data-category')));
+            });
+            updateActiveTab('all');
+            renderOrders();
+            renderPagination();
+            if (searchInput) searchInput.addEventListener('input', onSearchInput);
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        }
+
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', init);
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".dropdown-wrapper").on("click", function (e) {
+                e.stopPropagation();
+                const $menu = $(this).find(".dropdown-menu");
+                const $arrow = $(this).find(".material-symbols-outlined");
+
+                $menu.toggleClass("hidden");
+                $arrow.toggleClass("rotate-180");
+            });
+
+            // Close on outside click
+            $(document).on("click", function () {
+                $(".dropdown-menu").addClass("hidden");
+                $(".dropdown-wrapper .material-symbols-outlined").removeClass("rotate-180");
+            });
+
+            // Optional: handle item selection
+            $(".dropdown-menu li").on("click", function (e) {
+                e.stopPropagation();
+                const value = $(this).text();
+                $(this).closest(".dropdown-wrapper").find("button").contents().last().replaceWith(" " + value);
+                $(this).closest(".dropdown-menu").addClass("hidden");
+                $(this).closest(".dropdown-wrapper").find(".material-symbols-outlined").removeClass("rotate-180");
+            });
+        })
+    </script>
 </body>
+
 </html>
