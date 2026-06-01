@@ -34,4 +34,67 @@ $(document).ready(function () {
       $("#proformaPopup").addClass("hidden").removeClass("flex");
     }
   });
+
+  $(".orderSummaryBtn").on("click", function () {
+    $(".orderSummaryDetails").toggleClass("hidden");
+    $(this).find(".material-symbols-outlined").toggleClass("rotate-180");
+  });
+
+  //Share Popup
+  const openPopupBtns = document.querySelectorAll(".share-open-btn");
+  const popupOverlay = document.querySelector(".popup-overlay");
+  const closePopupBtn = document.querySelector(".popup-close-btn");
+
+  // Open Popup
+  openPopupBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+      popupOverlay.classList.remove("hidden");
+    });
+  });
+
+  // Close Popup
+  closePopupBtn.addEventListener("click", () => {
+    popupOverlay.classList.add("hidden");
+  });
+
+  // Close On Outside Click
+  popupOverlay.addEventListener("click", (e) => {
+    if (e.target === popupOverlay) {
+      popupOverlay.classList.add("hidden");
+    }
+  });
+
+  //Proforma Popup
+  // Open Popup
+  const proformaOpenBtn = document.querySelector(".proforma-open-btn");
+  const proformaPopup = document.querySelector(".proforma-popup-overlay");
+  const proformaCloseBtn = document.querySelector(".proforma-close-btn");
+
+  proformaOpenBtn.addEventListener("click", () => {
+    proformaPopup.classList.remove("hidden");
+  });
+
+  // Close Popup Button
+  // proformaCloseBtn.addEventListener("click", () => {
+  //   proformaPopup.classList.add("hidden");
+  // });
+
+  // Outside Click Close
+  // proformaPopup.addEventListener("click", (e) => {
+  //   if (e.target === proformaPopup) {
+  //     proformaPopup.classList.add("hidden");
+  //   }
+  // });
+
+  $(".proformaBtn").on("click", function (e) {
+    e.stopPropagation();
+    $(".proformaBillPopup").removeClass("hidden");
+  });
+
+  // Close when clicking the dark overlay (not the inner white box)
+  $(".proformaBillPopup").on("click", function (e) {
+    if ($(e.target).hasClass("proformaBillPopup")) {
+      $(".proformaBillPopup").addClass("hidden");
+    }
+  });
 });
