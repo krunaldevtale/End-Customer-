@@ -205,3 +205,30 @@
     
     if(typeof lucide !== 'undefined') lucide.createIcons();
     document.addEventListener('DOMContentLoaded', init);
+
+
+    $(document).ready(function () {
+            $(".dropdown-wrapper").on("click", function (e) {
+                e.stopPropagation();
+                const $menu = $(this).find(".dropdown-menu");
+                const $arrow = $(this).find(".material-symbols-outlined");
+
+                $menu.toggleClass("hidden");
+                $arrow.toggleClass("rotate-180");
+            });
+
+            // Close on outside click
+            $(document).on("click", function () {
+                $(".dropdown-menu").addClass("hidden");
+                $(".dropdown-wrapper .material-symbols-outlined").removeClass("rotate-180");
+            });
+
+            // Optional: handle item selection
+            $(".dropdown-menu li").on("click", function (e) {
+                e.stopPropagation();
+                const value = $(this).text();
+                $(this).closest(".dropdown-wrapper").find("button").contents().last().replaceWith(" " + value);
+                $(this).closest(".dropdown-menu").addClass("hidden");
+                $(this).closest(".dropdown-wrapper").find(".material-symbols-outlined").removeClass("rotate-180");
+            });
+        })
