@@ -88,6 +88,8 @@
   --color-soft-cloud-2: #F3FFFC;
   --color-soft-cloud-1: #F3FFFCD1;
   --color-gray-light-14: #949FB1;
+  --color-purple-10: #7A5AF81A;
+  --color-purple-11: #7A5AF8;
     /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
   --box-shadow-2: 0 12px 24px -4px rgba(145, 158, 171, 0.12);
@@ -253,7 +255,9 @@
   --color-blush-pink:#FFD1D2;
   --color-raspberry-pink:#E62552;
   --color-fresh-ivory:#F0FDF4;
+  --color-green-light-8:#0E6A41;
   --color-transparent-emerald-green:#065F46B2;
+  --color-light-gray-blue:#F8F8FD;
   --gradient-primary: linear-gradient(101.19deg, #088178 7.07%, #238B6D 104.98%);
   --gradient-yellow: linear-gradient(90deg, #EAA91F 0%, rgba(234, 169, 31, 0) 97.57%);
   --gradient-auth-popup: linear-gradient(135deg, #138A72 0%, #0D9488 100%);
@@ -288,7 +292,8 @@
   --shadow-box-3: 0px 1px 4px 0px #0000000A;
   --shadow-prescriptionbox: 0px 1px 4px 0px #0000000A;
   --shadow-medicine-box: 0px 1px 2px -1px #0000001A, 0px 1px 3px 0px #0000001A;
-
+  --shadow-box-4: 0px 3px 4px 0px #0000001A;
+  --shadow-box-5: -1px -1px 8px 0px #00000014 inset;
 
   /* Font Size and Font Weight */
   --text-30-bold: 1.875rem;
@@ -571,8 +576,9 @@ input[type="number"] {
 .nav-menu-records {
   max-height: 78px;
   height: 78px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   width: 100%;
+  box-shadow: var(--shadow-box-4);
 }
 
 .nav-menu-records ul li {
@@ -769,7 +775,7 @@ input[type="time"]::-ms-expand {
 }
 
 .legend-title {
-  @apply text-gray-light1 text-xs font-normal
+  @apply text-gray text-sm font-medium;
 }
 
 /* Login Page */
@@ -1121,3 +1127,22 @@ input[type="time"]::-ms-expand {
     'GRAD' 0,
     'opsz' 24;
 }
+
+@layer utilities {
+    .origin-spinner { transform-origin: center -16px; }
+}
+
+@keyframes starburst-fade {
+    0%   { opacity: 1; }
+    100% { opacity: 0.15; }
+}
+
+.bar { animation: starburst-fade 0.8s linear infinite; }
+.bar:nth-child(1) { animation-delay: 0s; }
+.bar:nth-child(2) { animation-delay: -0.7s; }
+.bar:nth-child(3) { animation-delay: -0.6s; }
+.bar:nth-child(4) { animation-delay: -0.5s; }
+.bar:nth-child(5) { animation-delay: -0.4s; }
+.bar:nth-child(6) { animation-delay: -0.3s; }
+.bar:nth-child(7) { animation-delay: -0.2s; }
+.bar:nth-child(8) { animation-delay: -0.1s; }
