@@ -318,7 +318,7 @@
 
                         <div class="flex items-center justify-end mt-5 gap-5">
 
-                             <button
+                            <button
                                 class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-sea-green-dark1 offerDetailsBtn">
                                 <span class="font-bold text-xs text-sea-green-dark1">Offer Details</span>
                             </button>
@@ -382,7 +382,7 @@
 
                         <div class="flex items-center justify-end mt-5 gap-5">
 
-                             <button
+                            <button
                                 class="w-[86px] h-[30px] flex items-center justify-center rounded-lg cursor-pointer border border-sea-green-dark1 offerDetailsBtn">
                                 <span class="font-bold text-xs text-sea-green-dark1">Offer Details</span>
                             </button>
@@ -403,10 +403,11 @@
                 </div>
             </div>
 
-            <div
-                class="offer-modal fixed inset-0 hidden items-center justify-center z-[9999] bg-black/40 ">
+            <!-- Order Details  -->
+           <div class="offer-modal fixed inset-0 hidden items-center justify-center z-[9999] bg-black/40">
 
-                <div class="offer-modal-content bg-white rounded-2xl w-[85%] max-w-4xl p-6 relative">
+                <div
+                    class="offer-modal-content bg-white rounded-2xl w-[85%] max-w-4xl max-h-[90vh] overflow-y-auto p-6 relative">
 
                     <button
                         class="offer-modal-close absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200">
@@ -425,150 +426,367 @@
 
                         <!-- Left Section -->
                         <div class="border border-gray-light3 rounded-2xl p-5">
-                            <div class="flex items-center gap-4">
-                                <img src="/assets/img/Pharmacy.svg" class="w-14 h-14 rounded-full object-cover" alt="">
 
-                                <div>
-                                    <h3 class="font-semibold text-lg text-gray">Pharmacy #1234</h3>
-                                    <div class="text-sm text-yellow-500">
-                                        ★★★★☆
+                            <!-- Pharmacy Header -->
+                            <div class="flex items-start justify-between">
+                                <div class="flex items-center gap-3">
+                                    <img src="/assets/img/Pharmacy.svg" class="w-14 h-14 rounded-full object-cover"
+                                        alt="">
+
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <h3 class="font-semibold text-lg text-gray">
+                                                Pharmacy #1234
+                                            </h3>
+
+                                            <img src="/assets/img/quick-delivery.png" alt="Quick Delivery" class="h-5">
+                                        </div>
+
+                                        <div class="flex items-center gap-1 mt-1">
+                                            <span class="text-base font-normal text-dark-gray">
+                                                4.3
+                                            </span>
+
+                                            <div class="flex text-ochre-yellow text-base">
+                                                ★★★★★
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <p class="text-sm font-normal whitespace-nowrap">
+                                    Order #R32512
+                                </p>
                             </div>
 
-                            <hr class="my-4">
+                            <hr class="my-4 border-deep-teal">
 
-                            <div class="flex justify-between text-sm text-gray-600">
+                            <!-- Order Info -->
+                            <div class="flex justify-between text-base font-normal text-gray-dark-1">
                                 <span>Placed today at - 03:43 PM</span>
-                                <span>Item X4</span>
+                                <span class="text-gray">Item X4</span>
                             </div>
 
-                            <div class="flex justify-between text-sm text-gray-600 mt-2">
+                            <div class="flex justify-between items-center text-base font-normal text-gray-dark-1 mt-2">
                                 <span>6km away</span>
-                                <span>4 Hours</span>
+
+                                <div class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-gray-dark-1 text-lg">
+                                        schedule
+                                    </span>
+                                    <span class="text-lg font-semibold text-gray">4 hours</span>
+                                </div>
                             </div>
 
-                            <div class="mt-4 flex justify-between">
-                                <span class="text-gray-500">Price</span>
-                                <span class="font-semibold">
-                                    <span class="line-through text-gray-400">$640</span>
-                                    <span class="text-green-600">$384</span>
-                                </span>
+                            <!-- Price -->
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="text-base font-normal text-gray-dark-1">Price</span>
+
+                                <div class="flex items-center gap-2">
+                                    <span class="text-gray-dark-1 text-lg font-normal">
+                                        $640
+                                    </span>
+
+                                    <span class="text-lg font-semibold text-sea-green2">
+                                        $384
+                                    </span>
+
+                                    <span class="text-gray text-base font-normal">
+                                        GST $40
+                                    </span>
+                                </div>
                             </div>
 
-                            <!-- Order Status -->
-                            <div class="mt-8">
-                                <div class="flex justify-between items-center">
-                                    <div class="w-3 h-3 bg-teal-600 rounded-full"></div>
-                                    <div class="flex-1 h-[2px] bg-teal-600"></div>
+                            <hr class="my-3 border-gray-light3">
 
-                                    <div class="w-3 h-3 bg-teal-600 rounded-full"></div>
-                                    <div class="flex-1 h-[2px] bg-gray-300"></div>
+                            <!-- Progress -->
+                            <div class="mt-5">
 
-                                    <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    <div class="flex-1 h-[2px] bg-gray-300"></div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 rounded-full bg-sea-green2"></div>
+                                    <div class="flex-1 h-[2px] bg-sea-green2"></div>
 
-                                    <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    <div class="flex-1 h-[2px] bg-gray-300"></div>
+                                    <div class="w-3 h-3 rounded-full bg-sea-green2"></div>
+                                    <div class="flex-1 h-[2px] bg-muted-gray1"></div>
 
-                                    <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
+                                    <div class="w-3 h-3 rounded-full bg-muted-gray1"></div>
+                                    <div class="flex-1 h-[2px] bg-muted-gray1"></div>
+
+                                    <div class="w-3 h-3 rounded-full bg-muted-gray1"></div>
+                                    <div class="flex-1 h-[2px] bg-muted-gray1"></div>
+
+                                    <div class="w-3 h-3 rounded-full bg-muted-gray1"></div>
                                 </div>
 
-                                <div class="flex justify-between text-xs text-gray-500 mt-2">
-                                    <span>Enquiry</span>
+                                <div class="flex justify-between text-base font-medium text-gray-light1 mt-3">
+                                    <span class="text-gray">Enquiry</span>
                                     <span>Offer</span>
                                     <span>Cancel</span>
                                     <span>Order</span>
                                     <span>Expired</span>
                                 </div>
+
                             </div>
 
-                            <!-- Address -->
-                            <div class="border rounded-xl p-4 mt-6">
-                                <h3 class="font-semibold text-lg mb-4">
-                                    Delivery Address
-                                </h3>
+                            <!-- Delivery Address Card -->
+                            <div class="border border-gray-light3 rounded-2xl mt-6 overflow-hidden">
 
-                                <div class="space-y-3 text-gray-600">
-                                    <p><strong>Name :</strong> Alexa Smith</p>
-                                    <p><strong>Phone :</strong> +100 12457896</p>
-                                    <p><strong>Address :</strong> California City, USA</p>
+                                <div class="px-5 py-4 border-b border-gray-light3 bg-mist-white">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-gray text-[22px]">
+                                            location_city
+                                        </span>
+
+
+                                        <h3 class="font-semibold text-xl text-gray">
+                                            Delivery Address
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <div class="p-5 space-y-5">
+
+                                    <!-- Name -->
+                                    <div class="flex items-center gap-4">
+                                        <span class="material-symbols-outlined text-gray-dark-1 text-[22px]">
+                                            person
+                                        </span>
+
+                                        <div class="flex items-center gap-4">
+                                            <span class="text-gray text-lg font-normal min-w-[60px]">Name</span>
+                                            <span class="text-gray-dark-1">:</span>
+                                            <span class="text-gray text-lg font-normal">Alexa Smith</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div class="flex items-center gap-4">
+                                        <span class="material-symbols-outlined text-gray-dark-1 text-[22px]">
+                                            call
+                                        </span>
+
+                                        <div class="flex items-center gap-4">
+                                            <span class="text-gray text-lg font-normal min-w-[60px]">Phone</span>
+                                            <span class="text-gray-dark-1">:</span>
+                                            <span class="text-gray text-lg font-normal">+100 12457896</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Address -->
+                                    <div class="flex items-center gap-4">
+                                        <span class="material-symbols-outlined text-gray-dark-1 text-[22px]">
+                                            location_on
+                                        </span>
+
+                                        <div class="flex items-center gap-4">
+                                            <span class="text-gray text-lg font-normal min-w-[60px]">Address</span>
+                                            <span class="text-gray-dark-1">:</span>
+                                            <span class="text-gray text-lg font-normal">California City, USA</span>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
+
                         </div>
 
                         <!-- Right Section -->
-                        <div class="border rounded-2xl p-5">
-                            <h3 class="font-semibold text-xl mb-5">
+                        <div class="border border-gray-light3 rounded-2xl p-5">
+
+                            <h3 class="font-semibold text-lg text-gray mb-4">
                                 Order Summary
                             </h3>
 
-                            <div class="space-y-5">
-                                <div class="flex justify-between">
-                                    <span>Vitamin D3 Tablet</span>
-                                    <span class="text-green-600 font-semibold">$384</span>
+                            <hr class="border-gray-light3 mb-4">
+
+                            <!-- Product 1 -->
+                            <div class="mb-5">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-gray text-base font-semibold">
+                                        Vitamin D3 Tablet
+                                    </span>
+
+                                    <span class="text-gray-dark-1 text-base font-normal">
+                                        Medicor
+                                    </span>
                                 </div>
 
-                                <div class="flex justify-between">
-                                    <span>Vitamin D3 Tablet</span>
-                                    <span class="text-green-600 font-semibold">$384</span>
-                                </div>
 
-                                <div class="flex justify-between">
-                                    <span>Vitamin B12 Tablet</span>
-                                    <span class="text-green-600 font-semibold">$384</span>
-                                </div>
-                            </div>
+                                <div class="flex justify-end items-center gap-2 mt-2">
+                                    <span class="text-gray-dark-1 text-lg font-normal">
+                                        $640
+                                    </span>
 
-                            <hr class="my-5">
+                                    <span class="text-lg font-semibold text-sea-green2">
+                                        $384
+                                    </span>
 
-                            <div class="space-y-2 text-gray-600">
-                                <div class="flex justify-between">
-                                    <span>Subtotal</span>
-                                    <span>$1384</span>
-                                </div>
-
-                                <div class="flex justify-between">
-                                    <span>Express platform charges</span>
-                                    <span>$120</span>
-                                </div>
-
-                                <div class="flex justify-between text-red-500">
-                                    <span>Discount coupon applied</span>
-                                    <span>- $20</span>
-                                </div>
-
-                                <div class="flex justify-between">
-                                    <span>GST applied</span>
-                                    <span>$30</span>
+                                    <span class="text-gray text-base font-normal">
+                                        GST $40
+                                    </span>
                                 </div>
                             </div>
 
-                            <hr class="my-5">
+                            <!-- Product 2 -->
+                            <div class="mb-5">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-gray text-base font-semibold">
+                                        Vitamin D3 Tablet
+                                    </span>
 
-                            <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold">
+                                    <span class="text-gray-dark-1 text-base font-normal">
+                                        Medicor
+                                    </span>
+                                </div>
+
+                                <div class="flex justify-end items-center gap-2 mt-2">
+                                    <span class="text-gray-dark-1 text-lg font-normal">
+                                        $640
+                                    </span>
+
+                                    <span class="text-lg font-semibold text-sea-green2">
+                                        $384
+                                    </span>
+
+                                    <span class="text-gray text-base font-normal">
+                                        GST $40
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="mb-5">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-gray text-base font-semibold">
+                                        Vitamin B12 Tablet
+                                    </span>
+
+                                    <span class="text-gray-dark-1 text-base font-normal">
+                                        Medicor
+                                    </span>
+                                </div>
+
+                                <div class="flex justify-end items-center gap-2 mt-2">
+                                    <span class="text-gray-dark-1 text-lg font-normal">
+                                        $640
+                                    </span>
+
+                                    <span class="text-lg font-semibold text-sea-green2">
+                                        $384
+                                    </span>
+
+                                    <span class="text-gray text-base font-normal">
+                                        GST $40
+                                    </span>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Summary -->
+                            <div class="space-y-2">
+
+                                <div class="flex justify-between items-center">
+                                    <span class="text-gray text-base font-normal">Subtotal</span>
+
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-gray-dark-1 text-lg font-normal">
+                                            $640
+                                        </span>
+
+                                        <span class="text-lg font-semibold text-sea-green2">
+                                            $384
+                                        </span>
+
+                                        <span class="text-gray text-base font-normal">
+                                            GST $40
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <hr class="border-gray-light3 my-4">
+
+                                <div class="flex justify-between">
+                                    <span class="text-base font-normal text-gray">Express platform chargers</span>
+                                    <span class="text-base font-normal text-gray">$120.00</span>
+                                </div>
+
+                                <div class="flex justify-between">
+                                    <span class="text-base font-normal text-gray">Discount coupon applied</span>
+                                    <span class="text-base font-normal text-tomato-red">-$20.00</span>
+                                </div>
+
+                                <div class="flex justify-between">
+                                    <span class="text-base font-normal text-gray">GST applied</span>
+                                    <span class="text-base font-normal text-gray">$30.00</span>
+                                </div>
+
+                            </div>
+
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-lg font-semibold text-gray">
                                     Total Amount
                                 </span>
 
-                                <span class="text-2xl font-bold text-sea-green-dark1">
+                                <span class="text-lg font-semibold text-gray">
                                     $250.00
                                 </span>
                             </div>
 
-                            <div class="flex justify-end gap-3 mt-8">
-                                <button class="px-8 py-2 border border-red-300 text-red-500 rounded-lg">
-                                    Cancel
-                                </button>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-base font-normal text-gray">
+                                    Total
+                                    <span class="text-sea-green-dark1 text-base font-semibold">
+                                        ₹1384
+                                    </span>
+                                </span>
 
-                                <button class="px-8 py-2 bg-sea-green-dark1 text-white rounded-lg">
-                                    Accept
+
+
+                                <button
+                                    class="proforma-open-btn w-[132px] h-[30px] rounded-lg bg-transparent-light-sea-green1 border border-sea-green-dark1 flex items-center justify-center gap-2 cursor-pointer">
+                                    <span class="font-normal text-sm text-gray">Proforma Bill</span>
+                                    <span class="material-symbols-outlined text-gray text-xl">visibility</span>
                                 </button>
                             </div>
+
                         </div>
 
                     </div>
 
+                    <div class="flex justify-end gap-3 mt-8">
+                        <button class="px-8 py-2 border border-red-300 text-red-500 rounded-lg">
+                            Cancel
+                        </button>
+
+                        <button class="px-8 py-2 bg-sea-green-dark1 text-white rounded-lg">
+                            Accept
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+           
+           
+
+            <!-- Popup -->
+           <div class="proforma-popup-overlay fixed inset-0 bg-black/40 z-[10000] hidden items-center justify-center p-4">
+
+                <div class="bg-white rounded-2xl shadow-2xl relative max-w-lg w-full p-4">
+
+                    <button class="proforma-close-btn absolute top-4 right-4">
+
+                        <span class="material-symbols-outlined text-[28px] cursor-pointer">
+                            close
+                        </span>
+
+                    </button>
+
+                    <img src="/assets/img/appointments/proforma-bill.png" alt="proforma bill"
+                        class="w-full h-auto rounded-xl object-contain mt-6">
 
                 </div>
 
