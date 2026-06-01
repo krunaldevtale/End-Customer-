@@ -120,4 +120,34 @@ $(document).ready(function () {
       initMap(12.9716, 77.5946);
     }
   })();
+
+  $(document).ready(function () {
+
+    $('.offerDetailsBtn').on('click', function () {
+        $('.offer-modal')
+            .removeClass('hidden')
+            .addClass('flex');
+    });
+
+    $('.offer-modal-close').on('click', function () {
+        $('.offer-modal')
+            .addClass('hidden')
+            .removeClass('flex');
+    });
+
+    $('.offer-modal').on('click', function (e) {
+        if ($(e.target).hasClass('offer-modal')) {
+            $(this)
+                .addClass('hidden')
+                .removeClass('flex');
+        }
+    });
+
 });
+
+
+  
+});
+
+
+
