@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>Product Description</title>
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+       
+        .scrollbar-hide {
+            scrollbar-width: none;  
+            -ms-overflow-style: none;  
+        }
+        
+        .overflow-x-auto {
+            overflow-x: auto;
+        }
+    </style>
      
 </head>
 
@@ -89,16 +105,12 @@
 <div class="md:col-span-5 bg-[#F1F1F1] relative flex flex-col justify-between overflow-visible px-6">
   <div class="w-full overflow-visible">
     <img 
-      src="/assets/img/Medical img products for poster.svg" 
+      src="/assets/img/Medical img products for poster (2).svg" 
       alt="Oziva Plant Based Products" 
     class="w-full  h-auto max-h-[400px] md:max-h-[500px] mt-5 object-contain scale-105"
     />
   </div>
-  <div class="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-10">
-    <span class="w-2.5 h-2.5 rounded-full bg-[#008060]"></span>
-    <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
-    <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
-  </div>
+  
 </div>
 
   <div class="md:col-span-7 bg-[#F8F9FA] p-6 md:p-10 flex flex-col justify-between">
@@ -276,194 +288,171 @@ share
     </div>
 </section>
 
-        <section class="max-w-8xl mx-auto mt-8 px-4 mb-3">
-            <div class="bg-[#E9F9F4] rounded-xl p-8 relative overflow-hidden">
+       <section class="max-w-8xl mx-auto mt-8 px-4 mb-3">
+    <div class="bg-[#E9F9F4] rounded-xl p-8 relative overflow-hidden">
 
-                <!-- Rating Section -->
-                <div class="mb-10">
-                    <!-- SAME LINE -->
-                    <div class="flex items-center gap-2 mb-6 flex-wrap">
-                        <img src="/assets/img/GoogleIcon.svg" class="w-5 h-5" alt="Google">
-
-                        <span class="font-bold text-gray-800 text-sm">4.6 Stars</span>
-
-                        <!-- Stars -->
-                        <div class="flex items-center text-gray-300 text-xs gap-[2px]">
-                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
-                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
-                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
-                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
-                            <i data-lucide="star" class="w-3 h-3 fill-gray-300 text-gray-300"></i>
-                        </div>
-
-                        <span class="text-sm text-[#4F585E] border-l border-gray-300 pl-2">
-                            | 7+ Lakhs Ratings & Reviews
-                        </span>
-                    </div>
-
-                    <!-- Increased Slider Width -->
-                    <div class="space-y-2 max-w-2xl">
-                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
-                            <span class="w-10">5 Star</span>
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="bg-yellow-400 h-full w-[83%] rounded-full"></div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
-                            <span class="w-10">4 Star</span>
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="bg-yellow-400 h-full w-[74%] rounded-full"></div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
-                            <span class="w-10">3 Star</span>
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="bg-yellow-400 h-full w-[66%] rounded-full"></div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
-                            <span class="w-10">2 Star</span>
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="bg-yellow-400 h-full w-[57%] rounded-full"></div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
-                            <span class="w-10">1 Star</span>
-                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                <div class="bg-yellow-400 h-full w-[14%] rounded-full"></div>
-                            </div>
-                        </div>
+        <!-- Rating Section (unchanged) -->
+        <div class="mb-10">
+            <div class="flex items-center gap-2 mb-6 flex-wrap">
+                <img src="/assets/img/GoogleIcon.svg" class="w-5 h-5" alt="Google">
+                <span class="font-bold text-gray-800 text-sm">4.6 Stars</span>
+                <div class="flex items-center text-gray-300 text-xs gap-[2px]">
+                    <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                    <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                    <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                    <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                    <i data-lucide="star" class="w-3 h-3 fill-gray-300 text-gray-300"></i>
+                </div>
+                <span class="text-sm text-[#4F585E] border-l border-gray-300 pl-2">
+                    | 7+ Lakhs Ratings & Reviews
+                </span>
+            </div>
+            <div class="space-y-2 max-w-2xl">
+                <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                    <span class="w-10">5 Star</span>
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="bg-yellow-400 h-full w-[83%] rounded-full"></div>
                     </div>
                 </div>
-
-                <!-- Users -->
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="flex -space-x-2">
-                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
-                            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=100"
-                            alt="User">
-
-                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
-                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=100"
-                            alt="User">
-                    </div>
-
-                    <div>
-                        <h3 class="text-[#10847E] font-semibold text-lg leading-tight">
-                            Over 10 million happy users
-                        </h3>
-
-                        <p class="text-[#30363C] font-semibold">PharmEasyLabs</p>
+                <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                    <span class="w-10">4 Star</span>
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="bg-yellow-400 h-full w-[74%] rounded-full"></div>
                     </div>
                 </div>
-
-                <!-- Quote -->
-                <i data-lucide="quote" class="absolute left-4 bottom-32 w-24 h-24 text-emerald-100 -z-0 opacity-50"></i>
-
-                <!-- BOXES untouched -->
-                <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide relative z-10">
-
-                    <div
-                        class="min-w-[290px] h-[200px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
-                        <p class="text-[#30363C] text-sm leading-relaxed mb-6">
-                           Value for money and reasonable rates
-after discounts..
-                        </p>
-
-                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                            <div class="flex items-center gap-2">
-                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
-                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
-                                </div>
-
-                                <span class="text-sm font-bold text-[#4F585E]">
-                                    Pankaj Roy   30 Apr '25
-                                </span>
-                            </div>
-
-                            
-                        </div>
+                <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                    <span class="w-10">3 Star</span>
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="bg-yellow-400 h-full w-[66%] rounded-full"></div>
                     </div>
-
-                  <div
-    class="min-w-[205px] h-[200px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            The phlebotomist and other staff
-involved are really accurate and
-helpful. Wish I could give more than
-10.
-                        </p>
-
-                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                            <div class="flex items-center gap-2">
-                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
-                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
-                                </div>
-
-                                <span class="text-sm font-bold text-[#4F585E]">
-                                    Suryabhan... 01 Jul '24
-                                </span>
-                            </div>
-
-                           
-                        </div>
+                </div>
+                <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                    <span class="w-10">2 Star</span>
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="bg-yellow-400 h-full w-[57%] rounded-full"></div>
                     </div>
-
-                    <div
-                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                           Best service provided by pharmacy
-                        </p>
-
-                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                            <div class="flex items-center gap-2">
-                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
-                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
-                                </div>
-
-                                <span class="text-sm font-bold text-[#4F585E]">
-                                    Sana 06 May '25
-                                </span>
-                            </div>
-
-                           
-                        </div>
+                </div>
+                <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                    <span class="w-10">1 Star</span>
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="bg-yellow-400 h-full w-[14%] rounded-full"></div>
                     </div>
-
-                    <div
-                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            Aqib Khan, who came to collect the
-sample is one the best technicians I
-have seen so far. He is very efficient,
-calm and the sample collection was a
-painless pr
-                        </p>
-
-                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                            <div class="flex items-center gap-2">
-                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
-                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
-                                </div>
-
-                                <span class="text-sm font-bold text-[#4F585E]">
-                                    Suryabhan...
-                                </span>
-                            </div>
-
-                            <span class="text-[10px] text-[#4F585E]">
-                                01 Jul '24
-                            </span>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Users -->
+        <div class="flex items-center gap-4 mb-8">
+            <div class="flex -space-x-2">
+                <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                    src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=100"
+                    alt="User">
+                <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=100"
+                    alt="User">
+            </div>
+            <div>
+                <h3 class="text-[#10847E] font-semibold text-lg leading-tight">
+                    Over 10 million happy users
+                </h3>
+                <p class="text-[#30363C] font-semibold">PharmEasyLabs</p>
+            </div>
+        </div>
+
+        <!-- Quote Icon -->
+        <i data-lucide="quote" class="absolute left-4 bottom-32 w-24 h-24 text-emerald-100 -z-0 opacity-50"></i>
+
+        <!-- Review Cards Slider – exactly five cards, all same size (280x200) -->
+        <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide relative z-10">
+
+            <!-- Card 1: Value for money -->
+            <div class="min-w-[280px] w-[280px] h-[200px] flex-shrink-0 bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                <p class="text-[#30363C] text-sm leading-relaxed line-clamp-3">
+                    Value for money and reasonable rates after discounts..
+                </p>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                        </div>
+                        <span class="text-sm font-bold text-[#4F585E]">
+                            Pankaj Roy &nbsp; 30 Apr '25
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Helpful staff -->
+            <div class="min-w-[280px] w-[280px] h-[200px] flex-shrink-0 bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                    The phlebotomist and other staff involved are really accurate and helpful. Wish I could give more than 10.
+                </p>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                        </div>
+                        <span class="text-sm font-bold text-[#4F585E]">
+                            Suryabhan... 01 Jul '24
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Best service -->
+            <div class="min-w-[280px] w-[280px] h-[200px] flex-shrink-0 bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                    Best service provided by pharmacy
+                </p>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                        </div>
+                        <span class="text-sm font-bold text-[#4F585E]">
+                            Sana 06 May '25
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: SECOND LAST CARD – properly styled (long review, fixed text, consistent spacing) -->
+            <div class="min-w-[280px] w-[280px] h-[200px] flex-shrink-0 bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                    Aqib Khan, who came to collect the sample is one of the best technicians I have seen so far. He is very efficient, calm and the sample collection was a painless process.
+                </p>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                        </div>
+                        <span class="text-sm font-bold text-[#4F585E]">
+                            Suryabhan... 12 Jul '24
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: LAST CARD – now same size as others (full width, no longer half-box) -->
+            <div class="min-w-[280px] w-[280px] h-[200px] flex-shrink-0 bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                   Very usefull app thank you
+                </p>
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                        </div>
+                        <span class="text-sm font-bold text-[#4F585E]">
+                            Bhavna 03 Jan '26
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
        
         <section class="max-w-9xl mx-auto mt-1 px-4  font-sans">
