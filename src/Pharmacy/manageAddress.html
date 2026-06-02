@@ -1,134 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="My Account Page">
     <title>Manage Address</title>
-
-    <link rel="stylesheet" href="assets/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
-
-<body class="bg-gray-50 no-scrollbar">
-    <div class="container">
+<body>
+    <main>
         <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
-        <div class="max-w-[150px] max-h-10">
-            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
-        </div>
-        <nav>
-            <div>
-                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
-                    <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg></a>
-                        <ul
-                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+            <div class="max-w-[150px] max-h-10">
+                <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+            </div>
+            <nav>
+                <div>
+                    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                        <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a>
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
+                                </a>
+                        
+                        </li>
+                        <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a></li>
+                        <li><a href="/src/records.html">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li>
+                            <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                                <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                    data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                            </div>
+                        </li>
+                        <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                    </ul>
+                </div>
+                <ul id="mobile-menu"
+                    class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                    <li><a href="#" class="block">Home</a></li>
+                    <li><a href="#" class="block">About</a></li>
+                    <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg></button>
+                        <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                            <li><a href="#" class="block">Web Design</a></li>
                         </ul>
                     </li>
-                    <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
-                               </a>
-                       
-                    </li>
-                    <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg></a></li>
-                    <li><a href="/src/records.html">Records</a></li>
-                    <li><a href="#">Rewards</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li>
-                        <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
-                            <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
-                                data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
-                        </div>
-                    </li>
-                    <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                    <li><a href="#" class="block">Contact</a></li>
                 </ul>
-            </div>
-            <ul id="mobile-menu"
-                class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
-                <li><a href="#" class="block">Home</a></li>
-                <li><a href="#" class="block">About</a></li>
-                <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg></button>
-                    <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
-                        <li><a href="#" class="block">Web Design</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="block">Contact</a></li>
-            </ul>
-        </nav>
-    </header> 
-        <div class=" mx-auto px-5 lg:px-20 py-8 flex flex-col md:flex-row md:gap-4 lg:gap-8">
-            <div class="flex md:hidden p-4">
-                <i id="menu-toggle" data-lucide="menu" class="text-2xl cursor-pointer text-black"></i>
-            </div>
+            </nav>
+        </header>
+        <div class="mx-auto px-4 sm:px-8 lg:px-20 py-6 md:py-8 flex flex-col md:flex-row gap-6 md:gap-8 bg-light-gray-blue h-[calc(100vh-78px)]">
             <!-- Sidebar Navigation -->
-            <div id="sidebar" class="w-full md:w-48 lg:w-64 flex-shrink-0 hidden md:block">
-                <div
-                    class=" flex justify-between items-center border px-4 py-2 gap-2 rounded-lg bg-gray-tint border-gray-200 mb-6">
-                    <span class=" text-gray-500 text-xs">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <input type="text" name="search-d" placeholder="What do you want to help?"
-                        class="w-full text-xs py-2 px-4 pr-10 rounded-full text-gray-dark-1 focus:outline-none">
-                </div>
-                <div class="mt-5">
+            <div class="w-full md:w-56 flex-shrink-0" data-account-sidebar>
+                <div>
                     <nav>
                         <ul class="space-y-3">
-                            <li><a href="/myaccount.html"
-                                    class="flex items-center text-white text-sm bg-green-light px-4 py-2 rounded font-semibold"><i
-                                        class="fas fa-user mr-3"></i> My Account</a></li>
-                            <li><a href="/mysave.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-bookmark mr-3"></i> My Save</a></li>
-                            <li><a href="/myuploads.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-upload mr-3"></i> My Uploads</a></li>
-                            <li><a href="/manageAddress.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-map-marker-alt mr-3"></i> Manage Address</a></li>
-                            <li><a href="/payment_methods.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-credit-card mr-3"></i> Payment Methods</a></li>
-                            <li><a href="/policy.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-file-alt mr-3"></i> Policy</a></li>
-                            <li><a href="/help-center.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-question-circle mr-3"></i> Help Center</a></li>
-                            <li><a href="/settings.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-cog mr-3"></i> Settings</a></li>
-                            <li><a href="#"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-sign-out-alt mr-3"></i> Logout</a></li>
+                            <li>
+                                <a href="/src/Pharmacy/myaccount.html">
+                                    <span class="material-symbols-outlined">person</span> My Accounts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/mysave.html">
+                                    <span class="material-symbols-outlined">favorite</span> Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/order-history.html">
+                                    <span class="material-symbols-outlined">order_approve</span> Order History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/myuploads.html">
+                                    <span class="material-symbols-outlined">list_alt</span> My Uploads
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/manageAddress.html">
+                                    <span class="material-symbols-outlined">globe_location_pin</span> Manage Address
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/payment_methods.html">
+                                    <span class="material-symbols-outlined">credit_card</span> Payment Methods
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/terms-conditions.html">
+                                    <span class="material-symbols-outlined">article</span> Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/help-center.html">
+                                    <span class="material-symbols-outlined">forum</span> Help Center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/settings.html">
+                                    <span class="material-symbols-outlined">settings</span> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">mode_off_on</span> Logout
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-           
 
             <!--Main Content-->
-            <div
-                class="lg:ml-[4.625rem] bg-white border border-gray-light3 rounded-xl p-4 lg:p-8 max-w-[65rem] w-full overflow-y-auto">
+            <div class="bg-white border border-gray-light3 rounded-xl p-4 sm:p-6 lg:p-8 w-full min-w-0 overflow-y-auto scrollbar">
                 <div class="flex flex-col gap-2.5">
                     <div class="flex items-center justify-between gap-4">
                         <!-- Breadcrumb Navigation -->
@@ -143,311 +149,206 @@
                                         </a>
                                     </li>
                                     <li class="flex items-center">
-                                        <i data-lucide="chevron-right"
-                                            class="w-4 h-4 align-middle text-dark-charcoal"></i>
-                                        <a href="#"
-                                            class="font-normal text-base text-gray hover:text-sea-green-deep">Account</a>
+                                        <span class="material-symbols-outlined text-dark-charcoal mini-icon">keyboard_arrow_right</span>
+                                        <a href="/src/Pharmacy/myaccount.html"
+                                            class="font-normal text-base text-gray hover:text-sea-green-deep">My Accounts</a>
                                     </li>
                                     <li class="flex items-center">
-                                        <i data-lucide="chevron-right"
-                                            class="w-4 h-4 align-middle text-dark-charcoal"></i>
-                                        <span class="font-normal text-xs sm:text-base text-medium-gray">Manage
-                                            Address</span>
+                                        <span class="material-symbols-outlined text-dark-charcoal mini-icon">keyboard_arrow_right</span>
+                                        <span class="font-normal text-xs sm:text-base text-medium-gray">Address</span>
                                     </li>
                                 </ol>
                             </nav>
                         </div>
-                        <div class="flex justify-end">
-                            <a href="/myaccount.html">
-                                <i data-lucide="x" class="text-gray cursor-pointer w-7 h-7"></i>
-                            </a>
-                        </div>
                     </div>
-                    <div class="flex flex-col gap-2.5">
-                        <h1 class="font-bold text-xl text-charcoal-black">Addresses</h1>
-                        <p class="font-normal text-sm text-charcoal-black">
-                            Here, you can view and manage your Address
-                        </p>
-                    </div>
-                    <!--Add Address Button-->
-                    <div class="flex md:justify-end">
-                        <button
-                            class="md:w-1/3 border border-powder-aqua rounded-[38px] flex items-center justify-center gap-2 p-1 cursor-pointer popup-btn"
-                            data-popup="newAddressPopup">
-                            <img src="/assets/img/location-pin.svg" alt="">
-                            <h1 class="font-medium text-sm text-deep-teal-green">Add New Address</h1>
-                        </button>
-                    </div>
-                    <!--Addresses-->
-                    <div class="pt-6 grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8 lg:gap-x-10 gap-y-6 cards">
-                        <div
-                            class="bg-white  rounded-[10px] pb-3 flex flex-col gap-[18px] shadow-(--box-shadow-1) w-full max-w-[26.063rem] address-card">
-                            <img src="/assets/img/address-map.svg" alt="Map Image" class="w-full h-24 object-cover">
-                            <div class="flex flex-col gap-2.5 px-3 lg:px-5 pb-2">
-                                <h1 class="font-bold text-lg text-dark-gray">Delhi,India</h1>
-                                <p class="text-base font-normal text-dark-gray">Block H, Neb Sarai, Sainik Farm, New
-                                    Delhi, Delhi 110062</p>
-                            </div>
-                            <div class="px-3 lg:px-5 flex items-center justify-between">
-                                <button
-                                    class="border border-tomato-red rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 cursor-pointer remove-address-btn">
-                                    <span class="font-normal text-base text-tomato-red">Remove</span>
-                                </button>
-                                <button
-                                    class="bg-deep-teal-green text-white rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 flex items-center gap-2.5 cursor-pointer copy-address-btn">
-                                    <span class="font-normal text-base">Copy</span>
-                                    <i data-lucide="copy" class="h-6 w-6"></i>
-                                </button>
-                            </div>
+                    <section class="js-manage-address flex flex-col gap-5 mt-3">
+                        <!-- List view -->
+                        <div class="js-address-list-view flex flex-col gap-5">
+                            <h1 class="font-semibold text-lg text-gray">Address</h1>
+                            <button type="button"
+                                class="js-show-add-form w-full min-h-12 rounded-lg border border-light-sea-green3 bg-white text-sea-green2 text-sm sm:text-base font-semibold">
+                                Add New Address
+                            </button>
+                            <div class="js-address-list grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8"></div>
+                            <p class="js-address-empty hidden text-center py-10 text-sm text-smoky-blue-gray">
+                                No saved addresses yet. Click &quot;Add New Address&quot; to get started.
+                            </p>
                         </div>
-                        <div
-                            class="bg-white  rounded-[10px] pb-3 flex flex-col gap-[18px] shadow-(--box-shadow-1) w-full max-w-[26.063rem] address-card">
-                            <img src="/assets/img/address-map.svg" alt="Map Image" class="w-full h-24 object-cover">
-                            <div class="flex flex-col gap-2.5 px-3 lg:px-5 pb-2">
-                                <h1 class="font-bold text-lg text-dark-gray">Delhi,India</h1>
-                                <p class="text-base font-normal text-dark-gray">Block H, Neb Sarai, Sainik Farm, New
-                                    Delhi, Delhi 110062</p>
-                            </div>
-                            <div class="px-3 lg:px-5 flex items-center justify-between">
-                                <button
-                                    class="border border-tomato-red rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 cursor-pointer remove-address-btn">
-                                    <span class="font-normal text-base text-tomato-red">Remove</span>
-                                </button>
-                                <button
-                                    class="bg-deep-teal-green text-white rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 flex items-center gap-2.5 cursor-pointer copy-address-btn">
-                                    <span class="font-normal text-base">Copy</span>
-                                    <i data-lucide="copy" class="h-6 w-6"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="bg-white  rounded-[10px] pb-3 flex flex-col gap-[18px] shadow-(--box-shadow-1) w-full max-w-[26.063rem] address-card">
-                            <img src="/assets/img/address-map.svg" alt="Map Image" class="w-full h-24 object-cover">
-                            <div class="flex flex-col gap-2.5 px-3 lg:px-5 pb-2">
-                                <h1 class="font-bold text-lg text-dark-gray">Delhi,India</h1>
-                                <p class="text-base font-normal text-dark-gray">Block H, Neb Sarai, Sainik Farm, New
-                                    Delhi, Delhi 110062</p>
-                            </div>
-                            <div class="px-3 lg:px-5 flex items-center justify-between">
-                                <button
-                                    class="border border-tomato-red rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 cursor-pointer remove-address-btn">
-                                    <span class="font-normal text-base text-tomato-red">Remove</span>
-                                </button>
-                                <button
-                                    class="bg-deep-teal-green text-white rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 flex items-center gap-2.5 cursor-pointer copy-address-btn">
-                                    <span class="font-normal text-base">Copy</span>
-                                    <i data-lucide="copy" class="h-6 w-6"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="bg-white  rounded-[10px] pb-3 flex flex-col gap-[18px] shadow-(--box-shadow-1) w-full max-w-[26.063rem] address-card">
-                            <img src="/assets/img/address-map.svg" alt="Map Image" class="w-full h-24 object-cover">
-                            <div class="flex flex-col gap-2.5 px-3 lg:px-5 pb-2">
-                                <h1 class="font-bold text-lg text-dark-gray">Delhi,India</h1>
-                                <p class="text-base font-normal text-dark-gray">Block H, Neb Sarai, Sainik Farm, New
-                                    Delhi, Delhi 110062</p>
-                            </div>
-                            <div class="px-3 lg:px-5 flex items-center justify-between">
-                                <button
-                                    class="border border-tomato-red rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 cursor-pointer remove-address-btn">
-                                    <span class="font-normal text-base text-tomato-red">Remove</span>
-                                </button>
-                                <button
-                                    class="bg-deep-teal-green text-white rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 flex items-center gap-2.5 cursor-pointer copy-address-btn">
-                                    <span class="font-normal text-base">Copy</span>
-                                    <i data-lucide="copy" class="h-6 w-6"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="bg-white  rounded-[10px] pb-3 flex flex-col gap-[18px] shadow-(--box-shadow-1) w-full max-w-[26.063rem] address-card">
-                            <img src="/assets/img/address-map.svg" alt="Map Image" class="w-full h-24 object-cover">
-                            <div class="flex flex-col gap-2.5 px-3 lg:px-5 pb-2">
-                                <h1 class="font-bold text-lg text-dark-gray">Delhi,India</h1>
-                                <p class="text-base font-normal text-dark-gray">Block H, Neb Sarai, Sainik Farm, New
-                                    Delhi, Delhi 110062</p>
-                            </div>
-                            <div class="px-3 lg:px-5 flex items-center justify-between">
-                                <button
-                                    class="border border-tomato-red rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 cursor-pointer remove-address-btn">
-                                    <span class="font-normal text-base text-tomato-red">Remove</span>
-                                </button>
-                                <button
-                                    class="bg-deep-teal-green text-white rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 flex items-center gap-2.5 cursor-pointer copy-address-btn">
-                                    <span class="font-normal text-base">Copy</span>
-                                    <i data-lucide="copy" class="h-6 w-6"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="bg-white  rounded-[10px] pb-3 flex flex-col gap-[18px] shadow-(--box-shadow-1) w-full max-w-[26.063rem] address-card">
-                            <img src="/assets/img/address-map.svg" alt="Map Image" class="w-full h-24 object-cover">
-                            <div class="flex flex-col gap-2.5 px-3 lg:px-5 pb-2">
-                                <h1 class="font-bold text-lg text-dark-gray">Delhi,India</h1>
-                                <p class="text-base font-normal text-dark-gray">Block H, Neb Sarai, Sainik Farm, New
-                                    Delhi, Delhi 110062</p>
-                            </div>
-                            <div class="px-3 lg:px-5 flex items-center justify-between">
-                                <button
-                                    class="border border-tomato-red rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 cursor-pointer remove-address-btn">
-                                    <span class="font-normal text-base text-tomato-red">Remove</span>
-                                </button>
-                                <button
-                                    class="bg-deep-teal-green text-white rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 flex items-center gap-2.5 cursor-pointer copy-address-btn">
-                                    <span class="font-normal text-base">Copy</span>
-                                    <i data-lucide="copy" class="h-6 w-6"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div
-                            class="bg-white  rounded-[10px] pb-3 flex flex-col gap-[18px] shadow-(--box-shadow-1) w-full max-w-[26.063rem] address-card">
-                            <img src="/assets/img/address-map.svg" alt="Map Image" class="w-full h-24 object-cover">
-                            <div class="flex flex-col gap-2.5 px-3 lg:px-5 pb-2">
-                                <h1 class="font-bold text-lg text-dark-gray">Delhi,India</h1>
-                                <p class="text-base font-normal text-dark-gray">Block H, Neb Sarai, Sainik Farm, New
-                                    Delhi, Delhi 110062</p>
-                            </div>
-                            <div class="px-3 lg:px-5 flex items-center justify-between">
-                                <button
-                                    class="border border-tomato-red rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 cursor-pointer remove-address-btn">
-                                    <span class="font-normal text-base text-tomato-red">Remove</span>
-                                </button>
-                                <button
-                                    class="bg-deep-teal-green text-white rounded-[10px] px-3 h-8 lg:px-5 lg:h-12 flex items-center gap-2.5 cursor-pointer copy-address-btn">
-                                    <span class="font-normal text-base">Copy</span>
-                                    <i data-lucide="copy" class="h-6 w-6"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Pagination-->
-                    <div class="flex justify-center mt-8 space-x-2">
-                        <button id="prev-page" class="px-4 py-2 text-medium-gray rounded-md">Previous</button>
-                        <div id="page-numbers" class="flex space-x-2">
-                        </div>
-                        <button id="next-page" class="px-4 py-2 text-medium-gray rounded-md">Next</button>
-                    </div>
-                </div>
-                <!--Add New Address popup-->
-                <div
-                    class="newAddressPopup fixed inset-0 flex justify-center   hidden bg-transparent-black backdrop-blur-[2px]  z-100">
-                    <div
-                        class="bg-white rounded-xl border border-platinum-gray w-full max-w-[44rem] h-full max-h-[28.625rem] mt-[8rem] lg:mt-[11.75rem] py-7 px-9 ">
-                        <div class="flex flex-col gap-8 ">
-                            <h1 class="font-semibold text-2xl text-gray-med text-center">Add Shipping Address</h1>
-                            <div class="grid grid-cols-2 gap-x-4 gap-y-6">
-                                <div class="input-group">
-                                    <input type="text" id="firstName" class="w-full" placeholder=" " required />
-                                    <label for="firstName">First Name</label>
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" id="lastName" class="w-full" placeholder=" " required />
-                                    <label for="lastName">Last Name</label>
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" id="phone" class="w-full" placeholder=" " required />
-                                    <label for="phone">Phone no.</label>
-                                </div>
-                                <div class="input-group relative w-64">
-                                    <input type="text" id="country" class="w-full" placeholder=" " required readonly />
-                                    <label for="country">
-                                        Country
-                                    </label>
-                                    <div class="absolute right-4 top-3 cursor-pointer">
-                                        <i data-lucide="chevron-down"
-                                            class="transition-transform duration-200 dropdown-toggle"></i>
-                                    </div>
-                                    <ul
-                                        class="dropdown-menu hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg">
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">India</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">China</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Indonesia</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Malaysia</li>
-                                    </ul>
-                                </div>
-                                <div class="input-group relative w-64">
-                                    <input type="text" id="state"
-                                        class="w-full px-3 py-3 border border-gray-300 rounded-lg bg-white outline-none cursor-pointer"
-                                        placeholder=" " required readonly />
-                                    <label for="state">
-                                        State
-                                    </label>
-                                    <div class="absolute right-4 top-3 cursor-pointer">
-                                        <i data-lucide="chevron-down"
-                                            class="transition-transform duration-200 dropdown-toggle"></i>
-                                    </div>
-                                    <ul
-                                        class="dropdown-menu hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg">
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Karnataka</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Maharashtra</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Delhi</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Haryana</li>
-                                    </ul>
-                                </div>
-                                <div class="input-group relative w-64">
-                                    <input type="text" id="city" class="w-full" placeholder=" " required readonly />
-                                    <label for="city">
-                                        City
-                                    </label>
-                                    <div class="absolute right-4 top-3 cursor-pointer">
-                                        <i data-lucide="chevron-down"
-                                            class="transition-transform duration-200 dropdown-toggle"></i>
-                                    </div>
-                                    <ul
-                                        class="dropdown-menu hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg">
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Delhi</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Mumbai</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Bangalore</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">Chennai</li>
-                                    </ul>
-                                </div>
-                                <div class="input-group relative w-64">
-                                    <input type="text" id="zipcode" class="w-full" placeholder=" " required readonly />
-                                    <label for="zipcode">
-                                        Zip Code
-                                    </label>
-                                    <div class="absolute right-4 top-3 cursor-pointer">
-                                        <i data-lucide="chevron-down"
-                                            class="transition-transform duration-200 dropdown-toggle"></i>
-                                    </div>
-                                    <ul
-                                        class="dropdown-menu hidden absolute z-10 w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-lg">
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">4110061</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">4110062</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">4110063</li>
-                                        <li class="px-3 py-2 hover:bg-gray-100 cursor-pointer">4110064</li>
-                                    </ul>
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" id="address" class="w-full" placeholder=" " required />
-                                    <label for="address">Address</label>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-center gap-[27px]">
-                                <button
-                                    class="w-40 border border-pewter-blue text-teal-green py-[11px] px-[22px] font-bold text-[15px] rounded-xl cursor-pointer close-popup"
-                                    data-popup="newAddressPopup">Cancel</button>
-                                <button
-                                    class="w-40 bg-deep-teal-green py-[11px] px-[22px] rounded-lg font-bold text-[15px] cursor-pointer save-address-btn text-white shadow-(--box-shadow-btn)">Save</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Text copied toaster message-->
-                <div
-                    class="toast hidden fixed top-5 left-1/2 bg-deep-teal-green text-white px-4 py-2 rounded-lg shadow-lg z-50">
 
+                        <!-- Add address panel -->
+                        <div class="js-address-add-panel hidden flex flex-col gap-5">
+                            <h2 class="text-xl sm:text-2xl font-bold text-gray">
+                                <span class="border-b-4 border-sea-green2 pb-1">Add your</span> Address
+                            </h2>
+                            <form class="js-address-add-form border border-gray-light3 rounded-xl p-4 sm:p-6 lg:p-8 flex flex-col gap-4 sm:gap-5 bg-white">
+                                <input type="text" name="firstName" placeholder="First Name"
+                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                <input type="text" name="lastName" placeholder="Last Name"
+                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                <input type="tel" name="phone" placeholder="Phone"
+                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                <input type="text" name="address" placeholder="Address"
+                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                <input type="text" name="area" placeholder="Area"
+                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                <input type="text" name="zipCode" placeholder="Zip Code"
+                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                <input type="text" name="city" placeholder="City"
+                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                <div class="js-custom-dropdown js-form-dropdown custom-select-container relative w-full z-20" data-value="India">
+                                    <button type="button"
+                                        class="js-custom-dropdown-trigger js-form-dropdown-trigger w-full min-h-11 border border-gainsboro-gray rounded-[10px] flex items-center justify-between gap-2 px-4 py-2 cursor-pointer bg-white"
+                                        aria-expanded="false" aria-haspopup="listbox">
+                                        <span class="js-custom-dropdown-label text-sm text-gray-light1">Country</span>
+                                        <span class="material-symbols-outlined text-gray-light1 shrink-0 pointer-events-none">keyboard_arrow_down</span>
+                                    </button>
+                                    <div class="js-custom-dropdown-menu custom-select-menu hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-[10px] border border-gainsboro-gray shadow-lg overflow-hidden z-30">
+                                        <ul class="py-1" role="listbox">
+                                            <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="India" data-label="India">India</li>
+                                            <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="USA" data-label="USA">USA</li>
+                                            <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="UK" data-label="UK">UK</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-1">
+                                    <p class="text-sm font-semibold text-gray">Choose Address Type</p>
+                                    <div class="flex flex-wrap items-center gap-2 sm:gap-3" role="group" aria-label="Address type">
+                                        <button type="button" data-type="home"
+                                            class="js-address-type-btn active flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gray-tint text-gray text-sm font-medium border border-transparent hover:border-gray-light3 transition">
+                                            <span class="material-symbols-outlined text-lg">home</span> Home
+                                        </button>
+                                        <button type="button" data-type="office"
+                                            class="js-address-type-btn flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gray-tint text-gray text-sm font-medium border border-transparent hover:border-gray-light3 transition">
+                                            <span class="material-symbols-outlined text-lg">apartment</span> Office
+                                        </button>
+                                        <button type="button" data-type="city"
+                                            class="js-address-type-btn flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gray-tint text-gray text-sm font-medium border border-transparent hover:border-gray-light3 transition">
+                                            <span class="material-symbols-outlined text-lg">location_city</span> City
+                                        </button>
+                                    </div>
+                                </div>
+                                <label class="flex items-center gap-2.5 cursor-pointer">
+                                    <input type="checkbox" name="isDefault" class="js-add-default w-4 h-4 rounded border-gray-light3 text-sea-green2 focus:ring-sea-green2">
+                                    <span class="text-sm font-medium text-gray">Set Default Address</span>
+                                </label>
+                                <div class="flex justify-end pt-2">
+                                    <button type="submit"
+                                        class="save-address-btn w-full sm:w-auto min-w-[140px] min-h-11 px-8 bg-sea-green2 text-white rounded-[10px] text-sm font-semibold hover:bg-sea-green-deep transition shadow-sm">
+                                        Save Now
+                                    </button>
+                                </div>
+                            </form>
+                            <button type="button" class="js-cancel-add text-sm text-sea-green2 font-medium hover:underline self-start">
+                                &larr; Back to addresses
+                            </button>
+                        </div>
+
+                        <!-- Edit address panel -->
+                        <div class="js-address-edit-panel hidden flex flex-col gap-5">
+                            <h2 class="text-xl sm:text-2xl font-bold text-gray">
+                                <span class="border-b-4 border-sea-green2 pb-1">Edit</span> Address
+                            </h2>
+                            <form class="js-address-edit-form border border-gray-light3 rounded-xl p-4 sm:p-6 lg:p-8 flex flex-col gap-5 sm:gap-6 bg-white">
+                                <input type="hidden" name="id" class="js-edit-id" value="">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                                    <div class="flex flex-col gap-1.5">
+                                        <label class="text-sm text-gray-dark-1">First Name</label>
+                                        <input type="text" name="firstName"
+                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <label class="text-sm text-gray-dark-1">Last Name</label>
+                                        <input type="text" name="lastName"
+                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <label class="text-sm text-gray-dark-1">Phone No.</label>
+                                        <input type="tel" name="phone"
+                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <label class="text-sm text-gray-dark-1">Address</label>
+                                        <input type="text" name="address"
+                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <label class="text-sm text-gray-dark-1">Area</label>
+                                        <input type="text" name="area"
+                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <label class="text-sm text-gray-dark-1">Zip Code</label>
+                                        <input type="text" name="zipCode"
+                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <label class="text-sm text-gray-dark-1">City</label>
+                                        <input type="text" name="city"
+                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <label class="text-sm text-gray-dark-1">Country</label>
+                                        <div class="js-custom-dropdown js-form-dropdown custom-select-container relative w-full z-20" data-value="India">
+                                            <button type="button"
+                                                class="js-custom-dropdown-trigger js-form-dropdown-trigger w-full min-h-11 border border-gainsboro-gray rounded-[10px] flex items-center justify-between gap-2 px-4 py-2 cursor-pointer bg-white"
+                                                aria-expanded="false" aria-haspopup="listbox">
+                                                <span class="js-custom-dropdown-label text-sm text-gray">India</span>
+                                                <span class="material-symbols-outlined text-gray-light1 shrink-0 pointer-events-none">keyboard_arrow_down</span>
+                                            </button>
+                                            <div class="js-custom-dropdown-menu custom-select-menu hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-[10px] border border-gainsboro-gray shadow-lg overflow-hidden z-30">
+                                                <ul class="py-1" role="listbox">
+                                                    <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="India" data-label="India">India</li>
+                                                    <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="USA" data-label="USA">USA</li>
+                                                    <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="UK" data-label="UK">UK</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col sm:flex-row justify-center gap-3 pt-2">
+                                    <button type="button"
+                                        class="js-cancel-edit w-full sm:w-auto min-w-[120px] min-h-11 px-8 border border-sea-green2 text-sea-green2 rounded-[10px] text-sm font-semibold hover:bg-soft-cloud-2 transition">
+                                        Cancel
+                                    </button>
+                                    <button type="submit"
+                                        class="js-save-edit w-full sm:w-auto min-w-[120px] min-h-11 px-10 bg-sea-green2 text-white rounded-[10px] text-sm font-semibold hover:bg-sea-green-deep transition shadow-sm">
+                                        Save
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
                 </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Remove confirmation modal -->
+    <div class="js-remove-modal fixed inset-0 bg-black/40 z-50 hidden items-center justify-center p-4" role="dialog"
+        aria-modal="true" aria-labelledby="remove-modal-title">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-5 sm:p-6 text-center">
+            <h2 id="remove-modal-title" class="text-lg font-semibold text-gray mb-2">Remove address?</h2>
+            <p class="text-sm text-smoky-blue-gray mb-6">This address will be removed from your saved list.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-3">
+                <button type="button"
+                    class="js-remove-cancel px-8 py-2.5 border border-gray-light3 text-gray rounded-lg font-semibold text-sm hover:bg-gray-tint transition">
+                    Cancel
+                </button>
+                <button type="button"
+                    class="js-remove-confirm px-8 py-2.5 border border-strong-red text-strong-red rounded-lg font-semibold text-sm hover:bg-pale-pink transition">
+                    Remove
+                </button>
             </div>
         </div>
     </div>
 
-    <script>
-        lucide.createIcons();
-    </script>
+    <!-- Toast -->
+    <div class="toast hidden fixed top-5 left-1/2 -translate-x-1/2 bg-sea-green-deep text-white px-4 py-2 rounded-lg shadow-lg z-[60] text-sm font-medium"></div>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="/script/manageAddress.js"></script>
+    <script src="/script/pharmacy/account-sidebar.js"></script>
+    <script src="/script/components/ui-controls.js"></script>
+    <script src="/script/pharmacy/manageAddress.js"></script>
 </body>
 
 </html>
