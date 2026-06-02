@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="My Account Page">
+    <title>Term & Condition</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+         .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #147A53;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #0e5b3e;
+  }
+    </style>
+</head>
+<body>
+    <div>
+        <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+            <div class="max-w-[150px] max-h-10">
+                <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+            </div>
+            <nav>
+                <div>
+                    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                        <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a>
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
+                                </a>
+                        
+                        </li>
+                        <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a></li>
+                        <li><a href="/src/records.html">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li>
+                            <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                                <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                    data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                            </div>
+                        </li>
+                        <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                    </ul>
+                </div>
+                <ul id="mobile-menu"
+                    class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                    <li><a href="#" class="block">Home</a></li>
+                    <li><a href="#" class="block">About</a></li>
+                    <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg></button>
+                        <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                            <li><a href="#" class="block">Web Design</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="block">Contact</a></li>
+                </ul>
+            </nav>
+        </header> 
+        <div class="mx-auto px-4 sm:px-8 lg:px-20 py-6 md:py-8 flex flex-col md:flex-row gap-6 md:gap-8 bg-light-gray-blue min-h-screen">
+            <!-- Sidebar Navigation -->
+            <div class="w-full md:w-56 flex-shrink-0" data-account-sidebar>
+                <div>
+                    <nav>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="/src/Pharmacy/myaccount.html">
+                                    <span class="material-symbols-outlined">person</span> My Accounts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/mysave.html">
+                                    <span class="material-symbols-outlined">favorite</span> Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/order-history.html">
+                                    <span class="material-symbols-outlined">order_approve</span> Order History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/myuploads.html">
+                                    <span class="material-symbols-outlined">list_alt</span> My Uploads
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/manageAddress.html">
+                                    <span class="material-symbols-outlined">globe_location_pin</span> Manage Address
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/payment_methods.html">
+                                    <span class="material-symbols-outlined">credit_card</span> Payment Methods
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/terms-conditions.html">
+                                    <span class="material-symbols-outlined">article</span> Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/help-center.html">
+                                    <span class="material-symbols-outlined">forum</span> Help Center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/settings.html">
+                                    <span class="material-symbols-outlined">settings</span> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">mode_off_on</span> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+           <div class="bg-white border border-gray-light3 rounded-xl p-4 sm:p-6 lg:p-8 w-full min-w-0 overflow-y-auto scrollbar">
+  <div class="max-w-6xl mx-auto">
+
+    <nav class="text-sm mb-5 flex items-center space-x-2 font-sans font-medium">
+      <a href="#" class=" text-gray ">Home</a>
+      <span class="text-slate-400 font-normal">&gt;</span>
+      <a href="#" class=" text-gray ">My Accounts</a>
+      <span class="text-slate-400 font-normal">&gt;</span>
+      <span class="text-gray3 font-normal">Terms & Conditions</span>
+    </nav>
+    
+    <h1 class="text-xl md:text-2xl font-semibold text-gray mb-8 font-sans">Terms & Conditions</h1>
+    
+    <div class="flex flex-wrap gap-2 md:gap-3 mb-6 pb-4">
+      <button onclick="switchTab('terms')" id="tab-terms" class="px-5 py-2 text-sm font-medium rounded-full transition-colors bg-[#147A53] text-white border border-charcoal-black">
+        Terms oF uses
+      </button>
+      <button onclick="switchTab('privacy')" id="tab-privacy" class="px-5 py-2 text-sm font-medium rounded-full transition-colors bg-transparent text-slate-600 border border-charcoal-black hover:bg-gray-50/10">
+        Privacy Policy
+      </button>
+      <button onclick="switchTab('disclaimer')" id="tab-disclaimer" class="px-5 py-2 text-sm font-medium rounded-full transition-colors bg-transparent text-slate-600 border border-charcoal-black hover:bg-gray-50/10">
+        Disclaimer
+      </button>
+    </div>
+
+    <!-- Added id="dynamic-title" to allow JavaScript tracking -->
+    <h2 id="dynamic-title" class="text-lg md:text-xl font-bold text-sea-green-dark1 mb-4 ml-6 font-sans">Terms of Uses Conditions</h2>
+
+    <div class="max-h-[75vh] overflow-y-auto custom-scrollbar text-sm md:text-base leading-relaxed text-gray4 font-medium font-sans pl-4 pr-2 ml-2">
+      
+      <div id="content-terms" class="tab-content">
+        <p>Introduction</p>
+        <p>Welcome to Drodo. By accessing or using our platform, including medicine ordering, appointment booking, diagnostics, and healthcare services, you agree to comply with these Terms of Use. Please read them carefully before using the platform.</p>
+        <p>Acceptance of Terms</p>
+        <p>By registering, browsing, or using Drodo services, you agree to:
+          <p>• Follow all applicable laws and regulations</p> 
+          <p>• Provide accurate information </p>
+          <p>• Use the platform responsibly</p>
+          <p> • Accept all platform policies and updates</p>
+          <p> If you do not agree with any part of these terms, please discontinue use of the platform.</p>
+        <p>Services Offered</p>
+        <p>Drodo provides:</p>
+        <p> • Online medicine ordering</p>
+        <p> • Doctor appointments </p>
+        <p>• Lab test bookings </p>
+        <p>• Hospital consultation support</p>
+        <p> • Prescription uploads and management</p>
+        <p> • Healthcare records and reports</p>
+        <p> • Payment and wallet services</p>
+        <p> Drodo acts as a technology platform connecting users with pharmacies, hospitals, labs, and healthcare providers.</p>
+        <p>User Responsibilities</p>
+        <p>Users are responsible for:</p>
+        <p> • Uploading valid prescriptions </p>
+        <p>• Providing accurate medical and personal details </p>
+        <p>• Maintaining account confidentiality </p>
+        <p>• Using the platform only for lawful healthcare purposes</p>
+        <p> Any misuse, fraudulent activity, or fake bookings may lead to account suspension.</p>
+        <p>Prescription & Medicine Policy</p>
+        <p>• Certain medicines require a valid prescription from a licensed doctor. </p>
+        <p>• Uploaded prescriptions may be verified before processing. </p>
+        <p>• Medicine availability and pricing may vary by pharmacy and location.</p>
+        <p> • Orders may be cancelled if prescriptions are invalid or medicines are unavailable.</p>
+        <p>Appointments & Consultations</p>
+        <p>Appointment timings depend on doctor, lab, and hospital availability. Delays or rescheduling may occur due to emergencies or operational reasons.</p>
+        <p>Users are responsible for attending appointments on time. Repeated no-shows may result in cancellation charges as per platform policy.</p>
+        <p>Payments & Refunds</p>
+        <p>Payments can be made using:</p>
+        <p> • UPI </p>
+        <p>• Debit/Credit Cards</p>
+        <p> • Net Banking </p>
+        <p>• Wallets Refund timelines may vary depending on payment providers, pharmacies, hospitals, or laboratories.</p>
+        <p>Account Suspension</p>
+        <p>Drodo reserves the right to suspend or terminate accounts involved in:</p>
+        <p> • Fraudulent activities</p>
+        <p> • Abuse or misconduct </p>
+        <p> • Fake prescriptions or bookings </p>
+        <p> • Violation of platform policies</p>
+        <p>Modifications to Terms</p>
+        <p>Drodo may update these Terms of Use periodically. Continued use of the platform indicates acceptance of updated terms.</p>
+      </div>
+
+      <div id="content-privacy" class="tab-content  hidden">
+        <p>Your Privacy Matters</p>
+        <p>Drodo values your privacy and is committed to protecting your personal and medical information with secure technology and industry-standard practices.</p>
+        <p>Information We Collect</p>
+        <p>We may collect: </p>
+        <p>• Name, age, gender, and contact details</p>
+        <p> • Delivery addresses</p>
+        <p> • Prescriptions and medical reports</p>
+        <p> • Appointment and order history </p>
+        <p>• Payment information</p>
+        <p> • Device and location data</p>
+        <p>How We Use Your Information</p>
+        <p>Your information helps us:</p>
+        <p> • Process medicine orders </p>
+        <p>• Book appointments and lab tests</p>
+        <p> • Deliver healthcare services efficiently </p>
+        <p>• Improve platform experience</p> 
+        <p>• Send important alerts and updates</p>
+        <p> • Provide customer support</p>
+        <p>Data Protection & Security</p>
+        <p>All personal and medical data uploaded on Drodo is securely encrypted and protected against unauthorized access. We continuously monitor our systems to ensure safety and reliability.</p>
+        <p>Sharing of Information</p>
+        <p>Your information is shared only with trusted healthcare partners such as:</p>
+        <p> • Verified pharmacies</p>
+        <p> • Doctors and hospitals </p>
+        <p>• Diagnostic laboratories </p>
+        <p>• Delivery partners Information is shared only when necessary to complete healthcare services.</p>
+        <p>User Control & Rights</p>
+        <p>Users can:</p>
+        <p> • Edit profile information</p>
+        <p> • Manage saved addresses and payment methods</p> 
+        <p>• Delete uploaded files </p>
+        <p>• Access order and appointment history </p>
+        <p>• Contact support for privacy concerns</p>
+        <p>Cookies & Analytics</p>
+        <p>Drodo may use cookies and analytics tools to:</p>
+        <p> • Improve website performance</p>
+        <p> • Personalize user experience</p>
+        <p> • Analyze platform usage</p>
+        <p>Updates to Privacy Policy</p>
+        <p>This Privacy Policy may be updated periodically. Users are encouraged to review it regularly.</p>
+      </div>
+
+      <div id="content-disclaimer" class="tab-content  hidden">
+        <p class="font-bold text-bold-dark text-lg mb-4">Your Agreement</p>
+        <p>Healthcare Service Disclaimer</p>
+        <p> Drodo is a healthcare facilitation platform and does not directly provide medical advice, diagnosis, treatment, or emergency services.</p>
+        <p>Medical Advice Disclaimer</p>
+        <p> The information available on the platform is for informational purposes only and should not replace professional medical consultation. Always consult qualified healthcare professionals before taking medications or medical decisions.</p>
+        <p>Prescription Responsibility </p> 
+        <p>Users must upload genuine and valid prescriptions issued by licensed medical practitioners. Drodo reserves the right to reject unclear, incomplete, or invalid prescriptions.</p>
+        <p>Appointment & Service Availability</p>
+        <p> Doctor consultations, lab tests, and hospital services are subject to availability and operational conditions.</p>
+        <p> Drodo is not responsible for delays caused by:</p>
+        <p> • Healthcare providers </p>
+        <p>• Laboratories</p>
+        <p> • Delivery partners </p>
+        <p>• Technical interruptions </p>
+        <p>• Emergency situations</p>
+        <p>Medicine Availability & Pricing</p>
+         Medicine prices, brands, discounts, and stock availability may change without prior notice depending on pharmacy inventory and location.</p>
+        <p>Emergency Disclaimer</p>
+       <p>  Drodo should not be used during medical emergencies.</p>
+       <p> For emergency medical assistance, please immediately contact nearby hospitals or emergency services.</p>
+        <p>Third-Party Services Drodo integrates with third-party pharmacies, payment gateways, hospitals, laboratories, and delivery providers. Their services and policies may apply independently.</p>
+        <p>Limitation of Liability</p>
+        <p> Drodo shall not be held responsible for:</p>
+        <p> • Medical outcomes</p>
+        <p> • Prescription misuse </p>
+        <p>• Delayed deliveries</p>
+        <p> • Service interruptions </p>
+        <p>• Third-party provider issues </p>
+        <p>• User negligence or incorrect information submitted on the platform.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+            <div class="edit-section flex-1 bg-white rounded-[10px] p-4 sm:p-6 md:p-8 hidden">
+                <h1 class="font-bold text-xl md:text-2xl text-charcoal-black">
+                    Edit details
+                </h1>
+                <div class="custom-hr"></div>
+                <form id="edit-profile-form" class="mt-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-first-name" class="legend-title">First Name</label>
+                            <input id="edit-first-name" type="text"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="Gaurav">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-last-name" class="legend-title">Last Name</label>
+                            <input id="edit-last-name" type="text"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="Yadav">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-age" class="legend-title">Age</label>
+                            <input id="edit-age" type="text"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="29">
+                        </div>
+                        <div class="flex flex-col gap-2 custom-select-container relative z-10">
+                            <label for="edit-gender" class="legend-title">Gender</label>
+                            <div class="relative w-full">
+                                <div class="relative w-full border border-cool-fog rounded-lg px-3 py-3">
+                                    <input id="edit-gender" type="text"
+                                        class="custom-select-input w-full pr-8 cursor-pointer text-sm text-gray-med focus:outline-none"
+                                        value="Male" readonly>
+                                    <span
+                                        class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-med text-xl gender-chevron">keyboard_arrow_down</span>
+                                </div>
+                                <div
+                                    class="custom-select-menu hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-lg border border-cool-fog shadow-lg z-20 overflow-hidden">
+                                    <ul class="py-1">
+                                        <li
+                                            class="custom-select-option block w-full text-left px-4 py-2.5 text-sm text-gray-med hover:bg-gray-100 cursor-pointer">
+                                            Male
+                                        </li>
+                                        <li
+                                            class="custom-select-option block w-full text-left px-4 py-2.5 text-sm text-gray-med hover:bg-gray-100 cursor-pointer">
+                                            Female
+                                        </li>
+                                        <li
+                                            class="custom-select-option block w-full text-left px-4 py-2.5 text-sm text-gray-med hover:bg-gray-100 cursor-pointer">
+                                            Other
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-phone" class="legend-title">Phone No.</label>
+                            <input id="edit-phone" type="tel"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="8345990258">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="edit-email" class="legend-title">Email</label>
+                            <input id="edit-email" type="email"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="gaurav@gmail.com">
+                        </div>
+                        <div class="flex flex-col gap-2 md:col-span-2">
+                            <label for="edit-pan" class="legend-title">Pan Card No.</label>
+                            <input id="edit-pan" type="text"
+                                class="w-full border border-cool-fog rounded-lg px-3 py-3 text-sm text-gray-med focus:outline-none"
+                                value="MSPPALS6729A">
+                        </div>
+                    </div>
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center sm:justify-end items-end sm:items-center gap-3">
+                        <button type="button" id="edit-cancel-btn"
+                            class="w-[343px] max-w-full px-4 py-2.5 text-sm sm:text-base font-semibold rounded-lg border border-deep-aqua-teal text-sea-green2">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                            class="w-[343px] max-w-full px-4 py-2.5 text-sm sm:text-base font-semibold rounded-lg bg-sea-green-dark1 text-white shadow-[0_4px_8px_rgba(8,129,120,0.25)]">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/script/pharmacy/account-sidebar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script/main.js"></script>
+    <script src="/script/pharmacy/term-condition.js"></script>
+
+</body>
+
+</html>
