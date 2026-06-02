@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="My Account Page">
-    <title>My Uploads</title>
+    <title>Order History</title>
     <link rel="stylesheet" href="/assets/output.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1" />
 </head>
 <body>
     <main>
@@ -155,7 +153,7 @@
                                     </li>
                                     <li class="flex items-center">
                                         <span class="material-symbols-outlined text-dark-charcoal mini-icon">keyboard_arrow_right</span>
-                                        <span class="font-normal text-xs sm:text-base text-medium-gray">My Uploads</span>
+                                        <span class="font-normal text-xs sm:text-base text-medium-gray">Order History</span>
                                     </li>
                                 </ol>
                             </nav>
@@ -163,7 +161,7 @@
                     </div>
                     <div class="flex items-center justify-between gap-2.5 mt-2 w-full">
                         <div class="flex items-center gap-2.5">
-                            <h1 class="font-semibold text-lg text-gray whitespace-nowrap">My Uploads</h1>
+                            <h1 class="font-semibold text-lg text-gray whitespace-nowrap">Order History</h1>
                         </div>
                         <!-- Search & Filter -->
                         <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3 w-full">
@@ -171,14 +169,14 @@
                                 class="w-full sm:flex-1 lg:max-w-[18.75rem] min-h-11 border border-gainsboro-gray rounded-[10px] flex items-center gap-2 px-3 py-2">
                                 <span class="material-symbols-outlined text-gray shrink-0">search</span>
                                 <input type="text"
-                                    class="js-my-uploads-search w-full min-w-0 text-sm focus:outline-none"
-                                    placeholder="Search by patient, doctor or document">
+                                    class="js-order-history-search w-full min-w-0 text-sm focus:outline-none"
+                                    placeholder="Search by name or categories">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Filters, tabs & uploads table -->
-                    <section class="js-my-uploads-section flex flex-col gap-5 mt-2">
+                    <!-- Order filters, tabs & table -->
+                    <section class="js-order-history-section flex flex-col gap-5 mt-2">
                         <!-- Patient & doctor dropdowns -->
                         <div class="flex flex-col sm:flex-row gap-3 w-full">
                             <div class="js-custom-dropdown custom-select-container" data-value="aniket">
@@ -222,74 +220,55 @@
                         <!-- Category tabs + calendar icon -->
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                             <div class="js-tab-group flex flex-wrap items-center gap-2 overflow-x-auto no-scrollbar pb-1 w-full sm:w-auto"
-                                role="tablist" aria-label="upload categories">
+                                role="tablist" aria-label="Order categories">
                                 <button type="button" role="tab" data-filter="all" aria-selected="true"
-                                    class="js-tab-btn tab-btn active px-4 py-2 whitespace-nowrap rounded-full border text-sm font-semibold">All</button>
-                                <button type="button" role="tab" data-filter="Prescription" aria-selected="false"
-                                    class="js-tab-btn tab-btn px-4 py-2 whitespace-nowrap rounded-full border text-sm font-semibold">Prescription</button>
-                                <button type="button" role="tab" data-filter="Bill" aria-selected="false"
-                                    class="js-tab-btn tab-btn px-4 py-2 whitespace-nowrap rounded-full border text-sm font-semibold">Bill</button>
-                                <button type="button" role="tab" data-filter="Medicine" aria-selected="false"
-                                    class="js-tab-btn tab-btn px-4 py-2 whitespace-nowrap rounded-full border text-sm font-semibold">Medicine</button>
+                                    class="js-tab-btn tab-btn active px-4 py-2">All</button>
+                                <button type="button" role="tab" data-filter="Pharmacy" aria-selected="false"
+                                    class="js-tab-btn tab-btn px-4 py-2">Pharmacy</button>
+                                <button type="button" role="tab" data-filter="Doctor" aria-selected="false"
+                                    class="js-tab-btn tab-btn px-4 py-2">Doctor</button>
+                                <button type="button" role="tab" data-filter="Hospital" aria-selected="false"
+                                    class="js-tab-btn tab-btn px-4 py-2">Hospital</button>
+                                <button type="button" role="tab" data-filter="Lab" aria-selected="false"
+                                    class="js-tab-btn tab-btn px-4 py-2">Lab</button>
                             </div>
                             <button type="button"
-                                class="uploads-calendar-btn self-end sm:self-auto shrink-0 p-1.5 rounded-lg text-sea-green2 hover:bg-soft-cloud-2 transition"
+                                class="order-history-calendar-btn self-end sm:self-auto shrink-0 p-1.5 rounded-lg text-sea-green2 hover:bg-soft-cloud-2 transition"
                                 aria-label="Open calendar">
                                <span class="material-symbols-outlined">calendar_month</span>
                             </button>
                         </div>
 
-                        <!-- Uploads table -->
+                        <!-- Orders table -->
                         <div class="table-container -mx-1 sm:mx-0">
                             <div class="bg-white overflow-hidden shadow-sm min-w-0">
                                 <div
                                     class="table-header grid grid-cols-5 bg-teal-green text-white text-xs md:text-sm font-bold">
-                                    <div class="py-3 md:py-4 text-center tracking-wide">Document Type</div>
-                                    <div class="py-3 md:py-4 text-center tracking-wide">Patient Name</div>
-                                    <div class="py-3 md:py-4 text-center tracking-wide">Doctor Name</div>
-                                    <div class="py-3 md:py-4 text-center tracking-wide">Date &amp; Time</div>
+                                    <div class="py-3 md:py-4 text-center tracking-wide">Order ID</div>
+                                    <div class="py-3 md:py-4 text-center tracking-wide">Details</div>
+                                    <div class="py-3 md:py-4 text-center tracking-wide">Price</div>
+                                    <div class="py-3 md:py-4 text-center tracking-wide">Status</div>
                                     <div class="py-3 md:py-4 text-center tracking-wide">Actions</div>
                                 </div>
-                                <div class="js-upload-rows min-h-[120px]"></div>
+                                <div class="js-order-rows min-h-[120px]"></div>
                                 <p
-                                    class="js-upload-empty hidden text-center py-10 text-sm text-smoky-blue-gray">
-                                    No uploads found for this category.
+                                    class="js-order-empty hidden text-center py-10 text-sm text-smoky-blue-gray">
+                                    No orders found for this category.
                                 </p>
                             </div>
                         </div>
 
                         <!-- Pagination -->
-                        <nav class="js-upload-pagination flex items-center justify-center gap-1 flex-wrap mt-2"
-                            aria-label="My uploads pagination"></nav>
+                        <nav class="js-order-pagination flex items-center justify-center gap-1 flex-wrap mt-2"
+                            aria-label="Order history pagination"></nav>
                     </section>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- Document preview popup -->
-    <div class="js-upload-preview-popup fixed inset-0 bg-black/40 z-50 hidden items-center justify-center p-4"
-        role="dialog" aria-modal="true" aria-labelledby="upload-preview-title">
-        <div class="bg-white rounded-2xl shadow-2xl relative w-full max-w-2xl max-h-[90vh] flex flex-col p-4 sm:p-6 ">
-            <div class="flex items-center justify-between gap-3 mb-4">
-                <h2 id="upload-preview-title" class="text-lg font-semibold text-gray">Document Preview</h2>
-                <button type="button"
-                    class="js-upload-preview-close flex items-center justify-center text-gray hover:text-sea-green-deep transition"
-                    aria-label="Close preview">
-                    <span class="material-symbols-outlined text-[28px]">close</span>
-                </button>
-            </div>
-            <div class="overflow-auto flex-1 min-h-0 no-scrollbar">
-                <img src="/assets/img/prescription-2.svg" alt="Prescription preview"
-                    class="js-upload-preview-image w-full h-auto rounded-xl object-contain" />
-            </div>
-        </div>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/script/pharmacy/account-sidebar.js"></script>
     <script src="/script/components/ui-controls.js"></script>
-    <script src="/script/pharmacy/myupload.js"></script>
+    <script src="/script/pharmacy/order-history.js"></script>
 </body>
-
 </html>
