@@ -76,7 +76,7 @@
                 { type: 'bot', text: 'How do I get a refund if my order is cancelled?', timestamp: new Date() }
             ];
             
-            let pendingAttachment = null; // { type: 'image', dataURL, name, file }
+            let pendingAttachment = null; 
             
             // Helper: format time HH:MM AM/PM
             function formatTime(date) {
@@ -328,10 +328,10 @@
         const issueTypes = ['Service Request', 'Payment Issue', 'Account Verification', 'Order Modification', 'Refund Request', 'Delivery Complaint'];
         const statuses = ['On Hold', 'Resolved', 'Active', 'Closed'];
         const statusColors = {
-            'On Hold': 'bg-amber-100 text-amber-700',
-            'Resolved': 'bg-emerald-100 text-emerald-700',
-            'Active': 'bg-blue-100 text-blue-700',
-            'Closed': 'bg-red-100 text-red-600'
+            'On Hold': 'bg-[#F79E1B78] font-semibold   text-[#6F4E01]',
+            'Resolved': 'bg-[#CAF8E4] font-semibold text-[#088178]',
+            'Active': 'bg-[#1890FF2E] font-semibold text-[#1890FF]',
+            'Closed': 'bg-[#FFD1D2] font-semibold text-[#E62552]'
         };
         const issueToTypeMap = {
             'Service Request': 'Order & Bidding',
@@ -493,11 +493,11 @@
                 const row = tbody.insertRow();
                 row.className = 'hover:bg-gray-50 transition';
                 row.innerHTML = `
-                    <td class="px-5 py-4 text-center font-semibold text-gray-800">${t.ticketId}</td>
-                    <td class="px-5 py-4 text-center text-gray-700">${t.issue}</td>
-                    <td class="px-5 py-4 text-center text-gray-700">${t.date}</td>
-                    <td class="px-5 py-4 text-center"><span class="inline-block px-4 py-1.5 rounded-full ${statusColors[t.status]} font-medium text-xs min-w-[85px]">${t.status}</span></td>
-                    <td class="px-5 py-4 text-center"><span class="material-symbols-outlined text-sea-green-deep cursor-pointer hover:opacity-80 text-xl">visibility</span></td>
+                    <td class="px-5 py-1.5 text-center  text-[#212B36]">${t.ticketId}</td>
+                    <td class="px-5 py-1.5 text-center text-[#212B36]">${t.issue}</td>
+                    <td class="px-5 py-1.5 text-center text-[#212B36]">${t.date}</td>
+                    <td class="px-5 py-1.5 text-center"><span class="inline-block w-[110px] h-[38px] px-6 py-2 rounded-lg ${statusColors[t.status]} font-semibold text-sm min-w-[85px]">${t.status}</span></td>
+                    <td class="px-5 py-4 text-center"><span class="material-symbols-outlined text-sea-green-deep cursor-pointer hover:opacity-80 text-xs">visibility</span></td>
                 `;
             });
             attachModalTriggers();
