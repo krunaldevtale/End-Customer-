@@ -1,133 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="My Account Page">
     <title>Settings</title>
-
-    <link rel="stylesheet" href="assets/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
-
-<body class="bg-gray-50 no-scrollbar">
-    <div class="container">
+<body>
+    <main>
         <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
-        <div class="max-w-[150px] max-h-10">
-            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
-        </div>
-        <nav>
-            <div>
-                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
-                    <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg></a>
-                        <ul
-                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+            <div class="max-w-[150px] max-h-10">
+                <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+            </div>
+            <nav>
+                <div>
+                    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                        <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a>
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
+                                </a>
+                        
+                        </li>
+                        <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a></li>
+                        <li><a href="/src/records.html">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li>
+                            <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                                <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                    data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                            </div>
+                        </li>
+                        <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                    </ul>
+                </div>
+                <ul id="mobile-menu"
+                    class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                    <li><a href="#" class="block">Home</a></li>
+                    <li><a href="#" class="block">About</a></li>
+                    <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg></button>
+                        <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                            <li><a href="#" class="block">Web Design</a></li>
                         </ul>
                     </li>
-                    <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
-                               </a>
-                       
-                    </li>
-                    <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg></a></li>
-                    <li><a href="/src/records.html">Records</a></li>
-                    <li><a href="#">Rewards</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li>
-                        <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
-                            <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
-                                data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
-                        </div>
-                    </li>
-                    <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                    <li><a href="#" class="block">Contact</a></li>
                 </ul>
-            </div>
-            <ul id="mobile-menu"
-                class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
-                <li><a href="#" class="block">Home</a></li>
-                <li><a href="#" class="block">About</a></li>
-                <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg></button>
-                    <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
-                        <li><a href="#" class="block">Web Design</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="block">Contact</a></li>
-            </ul>
-        </nav>
-    </header> 
-        <div class=" mx-auto px-5 lg:px-20 py-8 flex flex-col md:flex-row md:gap-4 lg:gap-8">
-            <div class="flex md:hidden p-4">
-                <i id="menu-toggle" data-lucide="menu" class="text-2xl cursor-pointer text-black"></i>
-            </div>
+            </nav>
+        </header>
+        <div class="mx-auto px-4 sm:px-8 lg:px-20 py-6 md:py-8 flex flex-col md:flex-row gap-6 md:gap-8 bg-light-gray-blue sm:h-[calc(100vh-78px)] overflow-y-auto scrollbar">
             <!-- Sidebar Navigation -->
-            <div id="sidebar" class="w-full md:w-48 lg:w-64 flex-shrink-0 hidden md:block">
-                <div
-                    class=" flex justify-between items-center border px-4 py-2 gap-2 rounded-lg bg-gray-tint border-gray-200 mb-6">
-                    <span class=" text-gray-500 text-xs">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <input type="text" name="search-d" placeholder="What do you want to help?"
-                        class="w-full text-xs py-2 px-4 pr-10 rounded-full text-gray-dark-1 focus:outline-none">
-                </div>
-                <div class="mt-5">
+            <div class="w-full md:w-56 flex-shrink-0" data-account-sidebar>
+                <div>
                     <nav>
                         <ul class="space-y-3">
-                            <li><a href="/myaccount.html"
-                                    class="flex items-center text-white text-sm bg-green-light px-4 py-2 rounded font-semibold"><i
-                                        class="fas fa-user mr-3"></i> My Account</a></li>
-                            <li><a href="/mysave.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-bookmark mr-3"></i> My Save</a></li>
-                            <li><a href="/myuploads.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-upload mr-3"></i> My Uploads</a></li>
-                            <li><a href="/manageAddress.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-map-marker-alt mr-3"></i> Manage Address</a></li>
-                            <li><a href="/payment_methods.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-credit-card mr-3"></i> Payment Methods</a></li>
-                            <li><a href="/policy.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-file-alt mr-3"></i> Policy</a></li>
-                            <li><a href="/help-center.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-question-circle mr-3"></i> Help Center</a></li>
-                            <li><a href="/settings.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-cog mr-3"></i> Settings</a></li>
-                            <li><a href="#"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-sign-out-alt mr-3"></i> Logout</a></li>
+                            <li>
+                                <a href="/src/Pharmacy/myaccount.html">
+                                    <span class="material-symbols-outlined">person</span> My Accounts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/mysave.html">
+                                    <span class="material-symbols-outlined">favorite</span> Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/order-history.html">
+                                    <span class="material-symbols-outlined">order_approve</span> Order History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/myuploads.html">
+                                    <span class="material-symbols-outlined">list_alt</span> My Uploads
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/manageAddress.html">
+                                    <span class="material-symbols-outlined">globe_location_pin</span> Manage Address
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/payment_methods.html">
+                                    <span class="material-symbols-outlined">credit_card</span> Payment Methods
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/terms-conditions.html">
+                                    <span class="material-symbols-outlined">article</span> Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/help-center.html">
+                                    <span class="material-symbols-outlined">forum</span> Help Center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/settings.html">
+                                    <span class="material-symbols-outlined">settings</span> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">mode_off_on</span> Logout
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
 
-
             <!--Main Content-->
-            <div class="lg:ml-[4.625rem] bg-white border border-gray-light3 rounded-xl p-4 lg:p-8 max-w-[65rem] w-full">
+            <div class="bg-white border border-gray-light3 rounded-[20px] p-4 sm:p-6 lg:p-8 w-full min-w-0 overflow-y-auto scrollbar">
                 <div class="flex flex-col gap-2.5">
                     <div class="flex items-center justify-between gap-4">
                         <!-- Breadcrumb Navigation -->
@@ -142,169 +149,140 @@
                                         </a>
                                     </li>
                                     <li class="flex items-center">
-                                        <i data-lucide="chevron-right"
-                                            class="w-4 h-4 align-middle text-dark-charcoal"></i>
-                                        <a href="/myaccount.html"
-                                            class="font-normal text-base text-gray hover:text-sea-green-deep">Account</a>
+                                        <span class="material-symbols-outlined text-dark-charcoal mini-icon">keyboard_arrow_right</span>
+                                        <a href="/src/Pharmacy/myaccount.html"
+                                            class="font-normal text-base text-gray hover:text-sea-green-deep">My Accounts</a>
                                     </li>
                                     <li class="flex items-center">
-                                        <i data-lucide="chevron-right"
-                                            class="w-4 h-4 align-middle text-dark-charcoal"></i>
+                                        <span class="material-symbols-outlined text-dark-charcoal mini-icon">keyboard_arrow_right</span>
                                         <span class="font-normal text-xs sm:text-base text-medium-gray">Settings</span>
                                     </li>
                                 </ol>
                             </nav>
                         </div>
-                        <div class="flex justify-end">
-                            <a href="/myaccount.html">
-                                <i data-lucide="x" class="text-gray cursor-pointer w-7 h-7"></i>
-                            </a>
-                        </div>
                     </div>
-                    <div class="flex flex-col gap-2.5">
-                        <h1 class="font-bold text-xl text-charcoal-black">Settings</h1>
-                        <p class="font-normal text-sm text-charcoal-black">
-                            Here, you can view and manage your Settings
-                        </p>
+                    <div class="flex items-center mt-2">
+                        <h1 class="font-semibold text-lg text-gray whitespace-nowrap">Settings</h1>
                     </div>
-                    <!--Tabs-->
-                    <div class="flex items-center gap-4 pt-4 overflow-x-auto no-scrollbar">
-                        <div class="tab-btn active" data-tab="general">
-                            General Setting
-                        </div>
-                        <div class="tab-btn" data-tab="notification">
-                            Notifications Setting
-                        </div>
-                    </div>
-                    <!--General Setting Tab Content -->
-                    <div class="mt-6">
-                        <div class="tab-content" id="general">
+                    <p class="font-semibold text-lg text-jet-black mt-5">
+                        Notification Channel Management
+                    </p>
 
-                        </div>
-
-                        <!--Notification Setting Tab Content-->
-                        <div class="hidden tab-content" id="notification">
-                            <p class="font-semibold text-lg text-jet-black">
-                                Notification Channel Management
-                            </p>
-
-                            <div>
-                                <!-- Notification Toggles -->
-                                <div class="flex flex-col gap-5 pt-5">
-                                    <!-- Reusable Switch Block -->
-                                    <div class="flex flex-col sm:flex-row justify-between gap-2 sm:items-center">
-                                        <p class="text-base font-normal text-jet-black">In-app Notifications</p>
-                                        <div class="flex items-center gap-3 justify-between">
-                                            <p class="font-normal text-sm text-dark-gray">
-                                                Manage In-app updates.
-                                            </p>
-                                            <label class="cursor-pointer">
-                                                <input type="checkbox" class="sr-only peer" checked />
-                                                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full 
-                                  peer-checked:after:translate-x-full 
-                                  after:content-[''] after:absolute after:top-[2px] after:start-[2px] 
-                                  after:bg-white  after:rounded-full after:w-5 after:h-5 
-                                  after:transition-all peer-checked:bg-deep-teal-green"></div>
-                                            </label>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="flex flex-col sm:flex-row justify-between gap-2 sm:items-center">
-                                        <p class="text-base font-normal text-jet-black">Email Notifications</p>
-                                        <div class="flex items-center gap-3 justify-between">
-                                            <p class="font-normal text-sm text-dark-gray">
-                                                Manage Email updates.
-                                            </p>
-                                            <label class="inline-flex items-center gap-3 cursor-pointer">
-
-                                                <input type="checkbox" value="" class="sr-only peer" checked />
-                                                <div
-                                                    class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white  after:rounded-full after:w-5 after:h-5 after:transition-all peer-checked:bg-deep-teal-green">
-                                                </div>
-                                            </label>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="flex flex-col sm:flex-row justify-between gap-2 sm:items-center">
-                                        <p class="text-base font-normal text-jet-black">Push Notifications</p>
-                                        <div class="flex items-center gap-3 justify-between">
-                                            <p class="font-normal text-sm text-dark-gray">
-                                                Enable/Disable App alerts.
-                                            </p>
-                                            <label class="inline-flex items-center gap-3 cursor-pointer">
-
-                                                <input type="checkbox" value="" class="sr-only peer" checked />
-                                                <div
-                                                    class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white  after:rounded-full after:w-5 after:h-5 after:transition-all peer-checked:bg-deep-teal-green">
-                                                </div>
-                                            </label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Priority Level Management -->
-                            <div class=" pt-5">
-                                <p class="font-semibold text-lg text-jet-black">Priority Level Management</p>
-                                <div class="flex flex-col gap-5 pt-5">
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-base font-normal text-jet-black">
-                                            Regulatory Alerts
-                                            <span class="font-normal text-sm text-dark-gray">(Will Be Sent on
-                                                Updates)</span>
-                                        </p>
-                                        <input type="checkbox"
-                                            class="w-5 h-5 accent-deep-teal-green text-xl rounded-sm focus:ring-0 focus:outline-none focus:ring-offset-0 cursor-pointer" />
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <p class="text-base font-normal text-jet-black">
-                                            Promotions & Offers
-                                            <span class="font-normal text-sm text-dark-gray">(Will Be Sent on
-                                                Updates)</span>
-                                        </p>
-                                        <input type="checkbox"
-                                            class="w-5 h-5 accent-deep-teal-green text-xl rounded-sm focus:ring-0 focus:outline-none focus:ring-offset-0 cursor-pointer" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Quiet Hours Setting -->
-                            <div class=" pt-6">
-                                <p class="font-semibold text-lg">Quiet Hours Setting</p>
-                                <div class="flex flex-col lg:flex-row lg:justify-between gap-4 pt-4">
-                                    <p class="text-base font-normal">
-                                        Pick Time to start Quiet Mode
+                    <div>
+                        <!-- Notification Toggles -->
+                        <div class="flex flex-col gap-5 pt-5">
+                            <!-- Reusable Switch Block -->
+                            <div class="flex flex-col sm:flex-row justify-between gap-2 sm:items-center">
+                                <p class="text-base font-normal text-jet-black">In-app Notifications</p>
+                                <div class="flex items-center gap-3 justify-between">
+                                    <p class="font-normal text-sm text-dark-gray">
+                                        Manage In-app updates.
                                     </p>
-                                    <div class="flex flex-col sm:flex-row gap-4 items-center">
-                                        <!-- Start Time -->
-                                        <div class="relative w-full sm:w-40">
-                                            <label for="start-time"
-                                                class="block text-sm font-medium text-gray-700">Start Time</label>
-                                            <input type="time" id="start-time"
-                                                class=" border rounded px-3 py-2 w-full pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-dark-blue"
-                                                min="09:00" max="18:00" value="09:00" required />
-                                            <i data-lucide="timer" data-target="start-time"
-                                                class="trigger-time material-symbols-outlined absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 cursor-pointer">
-                                                timer
-                                        </i>
-                                        </div>
+                                    <label class="cursor-pointer">
+                                        <input type="checkbox" class="sr-only peer" checked />
+                                        <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full 
+                            peer-checked:after:translate-x-full 
+                            after:content-[''] after:absolute after:top-[2px] after:start-[2px] 
+                            after:bg-white  after:rounded-full after:w-5 after:h-5 
+                            after:transition-all peer-checked:bg-deep-teal-green"></div>
+                                    </label>
+                                </div>
+                            </div>
 
-                                        <!-- End Time -->
-                                        <div class="relative w-full sm:w-40">
-                                            <label for="end-time" class="block text-sm font-medium text-gray-700">End
-                                                Time</label>
-                                            <input type="time" id="end-time"
-                                                class="appearance-none accent-none border rounded px-3 py-2 w-full pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-dark-blue"
-                                                min="09:00" max="18:00" value="17:00" required />
-                                            <i data-lucide="timer" data-target="end-time"
-                                                class="trigger-time material-symbols-outlined absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 cursor-pointer">
-                                                timer
-                                            </i>
+
+                            <div class="flex flex-col sm:flex-row justify-between gap-2 sm:items-center">
+                                <p class="text-base font-normal text-jet-black">Email Notifications</p>
+                                <div class="flex items-center gap-3 justify-between">
+                                    <p class="font-normal text-sm text-dark-gray">
+                                        Manage Email updates.
+                                    </p>
+                                    <label class="inline-flex items-center gap-3 cursor-pointer">
+
+                                        <input type="checkbox" value="" class="sr-only peer" checked />
+                                        <div
+                                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white  after:rounded-full after:w-5 after:h-5 after:transition-all peer-checked:bg-deep-teal-green">
                                         </div>
-                                    </div>
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row justify-between gap-2 sm:items-center">
+                                <p class="text-base font-normal text-jet-black">Push Notifications</p>
+                                <div class="flex items-center gap-3 justify-between">
+                                    <p class="font-normal text-sm text-dark-gray">
+                                        Enable/Disable App alerts.
+                                    </p>
+                                    <label class="inline-flex items-center gap-3 cursor-pointer">
+
+                                        <input type="checkbox" value="" class="sr-only peer" checked />
+                                        <div
+                                            class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white  after:rounded-full after:w-5 after:h-5 after:transition-all peer-checked:bg-deep-teal-green">
+                                        </div>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Priority Level Management -->
+                    <div class=" pt-5">
+                        <p class="font-semibold text-lg text-jet-black">Priority Level Management</p>
+                        <div class="flex flex-col gap-5 pt-5">
+                            <div class="flex justify-between items-center">
+                                <p class="text-base font-normal text-jet-black">
+                                    Regulatory Alerts
+                                    <span class="font-normal text-sm text-dark-gray">(Will Be Sent on
+                                        Updates)</span>
+                                </p>
+                                <input type="checkbox"
+                                    class="w-5 h-5 accent-deep-teal-green text-xl rounded-sm focus:ring-0 focus:outline-none focus:ring-offset-0 cursor-pointer" />
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-base font-normal text-jet-black">
+                                    Promotions & Offers
+                                    <span class="font-normal text-sm text-dark-gray">(Will Be Sent on
+                                        Updates)</span>
+                                </p>
+                                <input type="checkbox"
+                                    class="w-5 h-5 accent-deep-teal-green text-xl rounded-sm focus:ring-0 focus:outline-none focus:ring-offset-0 cursor-pointer" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiet Hours Setting -->
+                    <div class=" pt-6">
+                        <p class="font-semibold text-lg">Quiet Hours Setting</p>
+                        <div class="flex flex-col lg:flex-row lg:justify-between gap-4 pt-4">
+                            <p class="text-base font-normal">
+                                Pick Time to start Quiet Mode
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4 items-center">
+                                <!-- Start Time -->
+                                <div class="relative w-full sm:w-40">
+                                    <label for="start-time"
+                                        class="block text-sm font-medium text-gray-700">Start Time</label>
+                                    <input type="time" id="start-time"
+                                        class=" border rounded px-3 py-2 w-full pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-dark-blue"
+                                        min="09:00" max="18:00" value="09:00" required />
+                                    <i data-lucide="timer" data-target="start-time"
+                                        class="trigger-time material-symbols-outlined absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 cursor-pointer">
+                                        timer
+                                </i>
+                                </div>
+
+                                <!-- End Time -->
+                                <div class="relative w-full sm:w-40">
+                                    <label for="end-time" class="block text-sm font-medium text-gray-700">End
+                                        Time</label>
+                                    <input type="time" id="end-time"
+                                        class="appearance-none accent-none border rounded px-3 py-2 w-full pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-dark-blue"
+                                        min="09:00" max="18:00" value="17:00" required />
+                                    <i data-lucide="timer" data-target="end-time"
+                                        class="trigger-time material-symbols-outlined absolute right-2 top-10 transform -translate-y-1/2 text-gray-500 cursor-pointer">
+                                        timer
+                                    </i>
                                 </div>
                             </div>
                         </div>
@@ -312,13 +290,10 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <script>
-        lucide.createIcons();
-    </script>
+    </main>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="/script/settings.js"></script>
+     <script src="/script/pharmacy/account-sidebar.js"></script>
+    <script src="/script/pharmacy/settings.js"></script>
 </body>
 
 </html>
