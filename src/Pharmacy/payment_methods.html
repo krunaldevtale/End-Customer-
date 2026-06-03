@@ -8,371 +8,407 @@
     <meta name="description" content="My Account Page">
     <title>Payment Methods</title>
 
-    <link rel="stylesheet" href="assets/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
 </head>
 
 <body class="bg-gray-50 no-scrollbar">
     <div class="container">
         <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
-        <div class="max-w-[150px] max-h-10">
-            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
-        </div>
-        <nav>
-            <div>
-                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
-                    <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+            <div class="max-w-[150px] max-h-10">
+                <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+            </div>
+            <nav>
+                <div>
+                    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                        <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a>
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
+                            </a>
+
+                        </li>
+                        <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a></li>
+                        <li><a href="/src/records.html">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li>
+                            <div
+                                class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                                <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                    data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                            </div>
+                        </li>
+                        <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                    </ul>
+                </div>
+                <ul id="mobile-menu"
+                    class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                    <li><a href="#" class="block">Home</a></li>
+                    <li><a href="#" class="block">About</a></li>
+                    <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg
+                                class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></a>
-                        <ul
-                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                            </svg></button>
+                        <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                            <li><a href="#" class="block">Web Design</a></li>
                         </ul>
                     </li>
-                    <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
-                               </a>
-                       
-                    </li>
-                    <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg></a></li>
-                    <li><a href="/src/records.html">Records</a></li>
-                    <li><a href="#">Rewards</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li>
-                        <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
-                            <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
-                                data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
-                        </div>
-                    </li>
-                    <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                    <li><a href="#" class="block">Contact</a></li>
                 </ul>
-            </div>
-            <ul id="mobile-menu"
-                class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
-                <li><a href="#" class="block">Home</a></li>
-                <li><a href="#" class="block">About</a></li>
-                <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg></button>
-                    <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
-                        <li><a href="#" class="block">Web Design</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="block">Contact</a></li>
-            </ul>
-        </nav>
-    </header> 
+            </nav>
+        </header>
         <div class=" mx-auto md:px-5 lg:px-20 py-8 flex flex-col md:flex-row md:gap-4 lg:gap-8">
 
-            <!-- Sidebar Navigation -->
-            <div class="flex md:hidden p-4">
-                <i id="menu-toggle" data-lucide="menu" class="text-2xl cursor-pointer text-black"></i>
-            </div>
-            <!-- Sidebar Navigation -->
-            <div id="sidebar" class="w-full md:w-48 lg:w-64 flex-shrink-0 hidden md:block">
-                <div
-                    class=" flex justify-between items-center border px-4 py-2 gap-2 rounded-lg bg-gray-tint border-gray-200 mb-6">
-                    <span class=" text-gray-500 text-xs">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <input type="text" name="search-d" placeholder="What do you want to help?"
-                        class="w-full text-xs py-2 px-4 pr-10 rounded-full text-gray-dark-1 focus:outline-none">
-                </div>
-                <div class="mt-5">
+            <div class="w-full md:w-56 flex-shrink-0" data-account-sidebar>
+                <div>
                     <nav>
                         <ul class="space-y-3">
-                            <li><a href="/myaccount.html"
-                                    class="flex items-center text-white text-sm bg-green-light px-4 py-2 rounded font-semibold"><i
-                                        class="fas fa-user mr-3"></i> My Account</a></li>
-                            <li><a href="/mysave.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-bookmark mr-3"></i> My Save</a></li>
-                            <li><a href="/myuploads.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-upload mr-3"></i> My Uploads</a></li>
-                            <li><a href="/manageAddress.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-map-marker-alt mr-3"></i> Manage Address</a></li>
-                            <li><a href="/payment_methods.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-credit-card mr-3"></i> Payment Methods</a></li>
-                            <li><a href="/policy.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-file-alt mr-3"></i> Policy</a></li>
-                            <li><a href="/help-center.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-question-circle mr-3"></i> Help Center</a></li>
-                            <li><a href="/settings.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-cog mr-3"></i> Settings</a></li>
-                            <li><a href="#"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-sign-out-alt mr-3"></i> Logout</a></li>
+                            <li>
+                                <a href="/src/Pharmacy/myaccount.html">
+                                    <span class="material-symbols-outlined">person</span> My Accounts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/mysave.html">
+                                    <span class="material-symbols-outlined">favorite</span> Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/order-history.html">
+                                    <span class="material-symbols-outlined">order_approve</span> Order History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/myuploads.html">
+                                    <span class="material-symbols-outlined">list_alt</span> My Uploads
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/manageAddress.html">
+                                    <span class="material-symbols-outlined">globe_location_pin</span> Manage Address
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/payment_methods.html">
+                                    <span class="material-symbols-outlined">credit_card</span> Payment Methods
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/terms-conditions.html">
+                                    <span class="material-symbols-outlined">article</span> Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/help-center.html">
+                                    <span class="material-symbols-outlined">forum</span> Help Center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/settings.html">
+                                    <span class="material-symbols-outlined">settings</span> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">mode_off_on</span> Logout
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
 
 
-
             <!--Main Content-->
-            <div class="flex-1 bg-white border border-gray-light3 rounded-xl md:p-4 lg:p-8">
-                <div class="flex flex-col gap-4 p-4 sm:p-6">
-                    <!-- Top Bar -->
-                    <div class="flex items-center justify-between">
-                        <!-- Breadcrumb Navigation -->
-                        <nav class="flex items-center text-gray-500 text-sm overflow-x-auto" aria-label="Breadcrumb">
-                            <ol class="inline-flex items-center space-x-1 whitespace-nowrap">
-                                <li class="inline-flex items-center">
-                                    <a href="index.html"
-                                        class="inline-flex items-center font-normal text-base text-gray hover:text-sea-green-deep">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="flex items-center">
-                                    <i data-lucide="chevron-right" class="w-4 h-4 align-middle text-dark-charcoal"></i>
-                                    <a href="myaccount.html"
-                                        class="font-normal text-base text-gray hover:text-sea-green-deep">Account</a>
-                                </li>
-                                <li class="flex items-center">
-                                    <i data-lucide="chevron-right" class="w-4 h-4 align-middle text-dark-charcoal"></i>
-                                    <span class="font-normal text-xs sm:text-base text-medium-gray">
-                                        Payment Methods
-                                    </span>
-                                </li>
-                            </ol>
-                        </nav>
+            <div
+                class="flex-1 bg-white border border-cool-fog shadow-payment-method rounded-[20px] p-4 lg:p-6 flex flex-col gap-6">
+                <div class="flex items-center gap-0.5">
+                    <a href="/index.html" class="font-normal text-base text-gray">Home</a>
+                    <span class="material-symbols-outlined text-dark-charcoal pt-0.5 text-xl!">chevron_right</span>
+                    <a href="myaccount.html" class="font-normal text-base text-gray">My Accounts</a>
+                    <span class="material-symbols-outlined text-dark-charcoal pt-0.5 text-xl!">chevron_right</span>
+                    <a href="payment_methods.html" class="font-normal text-base text-medium-gray">Payment Methods</a>
+                </div>
 
-                        <!-- Close Icon -->
-                        <a href="myaccount.html" class="flex-shrink-0">
-                            <i data-lucide="x" class="text-gray cursor-pointer w-6 h-6 sm:w-7 sm:h-7"></i>
-                        </a>
+                <p class="font-semibold text-lg text-gray heading">Payment Methods</p>
+
+                <button
+                    class="w-full h-12 flex items-center justify-center border border-light-sea-green3 rounded-lg cursor-pointer addNewPaymentBtn">
+                    <span class="font-bold text-[15px] text-sea-green2">Add New Payment</span>
+                </button>
+
+                <div class="flex flex-col gap-3 h-[250px] scrollbar overflow-y-auto paymentMethods">
+                    <div class="payment-method flex items-center justify-between">
+                        <div class="flex flex-col gap-2.5">
+                            <p class="font-semibold text-base text-jet-black">SBI bank credit card</p>
+                            <div class="flex items-center gap-1.5">
+                                <p class="font-semibold text-xs text-gray4">**9101</p>
+                                <img src="/assets/img/visa.svg" alt="visa">
+                                <p class="font-semibold text-xs text-gray4">|</p>
+                                <p class="font-semibold text-xs text-gray4">Anil Kumar</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2.5">
+                            <button class="payment-buttons border border-tomato-red deleteBtn">
+                                <span class="text-tomato-red">Delete</span>
+                            </button>
+
+                            <button class="payment-buttons border border-sea-green-dark1 editBtn">
+                                <span class="material-symbols-outlined text-sea-green-dark1 text-lg!">edit</span>
+                                <span class="text-sea-green-dark1">Edit</span>
+                            </button>
+                        </div>
                     </div>
 
-                    <!-- Heading Section -->
-                    <div class="flex flex-col gap-2">
-                        <h1 class="font-bold text-xl text-charcoal-black">Payment Methods</h1>
-                        <p class="font-normal text-sm text-charcoal-black">
-                            Here, you can view and manage your payment methods
-                        </p>
+                    <div class="payment-method flex items-center justify-between">
+                        <div class="flex flex-col gap-2.5">
+                            <p class="font-semibold text-base text-jet-black">SBI bank credit card</p>
+                            <div class="flex items-center gap-1.5">
+                                <p class="font-semibold text-xs text-gray4">**9101</p>
+                                <img src="/assets/img/visa.svg" alt="visa">
+                                <p class="font-semibold text-xs text-gray4">|</p>
+                                <p class="font-semibold text-xs text-gray4">Anil Kumar</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2.5">
+                            <button class="payment-buttons border border-tomato-red deleteBtn">
+                                <span class="text-tomato-red">Delete</span>
+                            </button>
+
+                            <button class="payment-buttons border border-sea-green-dark1 editBtn">
+                                <span class="material-symbols-outlined text-sea-green-dark1 text-lg!">edit</span>
+                                <span class="text-sea-green-dark1">Edit</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="payment-method flex items-center justify-between">
+                        <div class="flex flex-col gap-2.5">
+                            <p class="font-semibold text-base text-jet-black">SBI bank credit card</p>
+                            <div class="flex items-center gap-1.5">
+                                <p class="font-semibold text-xs text-gray4">**9101</p>
+                                <img src="/assets/img/visa.svg" alt="visa">
+                                <p class="font-semibold text-xs text-gray4">|</p>
+                                <p class="font-semibold text-xs text-gray4">Anil Kumar</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2.5">
+                            <button class="payment-buttons border border-tomato-red deleteBtn">
+                                <span class="text-tomato-red">Delete</span>
+                            </button>
+
+                            <button class="payment-buttons border border-sea-green-dark1 editBtn">
+                                <span class="material-symbols-outlined text-sea-green-dark1 text-lg!">edit</span>
+                                <span class="text-sea-green-dark1">Edit</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="payment-method flex items-center justify-between">
+                        <div class="flex flex-col gap-2.5">
+                            <p class="font-semibold text-base text-jet-black">SBI bank credit card</p>
+                            <div class="flex items-center gap-1.5">
+                                <p class="font-semibold text-xs text-gray4">**9101</p>
+                                <img src="/assets/img/visa.svg" alt="visa">
+                                <p class="font-semibold text-xs text-gray4">|</p>
+                                <p class="font-semibold text-xs text-gray4">Anil Kumar</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2.5">
+                            <button class="payment-buttons border border-tomato-red deleteBtn">
+                                <span class="text-tomato-red">Delete</span>
+                            </button>
+
+                            <button class="payment-buttons border border-sea-green-dark1 editBtn">
+                                <span class="material-symbols-outlined text-sea-green-dark1 text-lg!">edit</span>
+                                <span class="text-sea-green-dark1">Edit</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
+                <!--Edit Card Details Section-->
+                <section class="editCardDetails hidden">
+                    <p class="font-bold text-3xl text-gray-dark">Edit Card Details</p>
+                    <div class="w-full h-[1px] bg-light-gray flex items-center mt-3">
+                        <div class="w-[100px] h-[3px] bg-sea-green-deep"></div>
+                    </div>
 
-                <!-- Add Payment Button -->
-                <div class="flex justify-end mb-6 mt-6">
-                    <div class="flex items-center gap-2">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-5 lg:gap-y-10 pt-5">
+                        <div class="flex flex-col gap-2">
+                            <label for="name" class="font-semibold text-sm text-gray">Name on Card</label>
+                            <input type="text"
+                                class="w-full border border-cool-fog rounded-lg py-2.5 px-2  focus:ring-0 focus:outline-none font-semibold text-sm"
+                                value="Gaurav">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="number" class="font-semibold text-sm text-gray">Card Number</label>
+                            <input type="number"
+                                class="w-full border border-cool-fog rounded-lg py-2.5 px-2  focus:ring-0 focus:outline-none font-semibold text-sm"
+                                value="8345990258">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="expiry" class="font-semibold text-sm text-gray">Expiration Date</label>
+                            <input type="number"
+                                class="w-full border border-cool-fog rounded-lg py-2.5 px-2  focus:ring-0 focus:outline-none font-semibold text-sm"
+                                value="0726">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="cvv" class="font-semibold text-sm text-gray">CVC/CVV</label>
+                            <input type="number"
+                                class="w-full border border-cool-fog rounded-lg py-2.5 px-2  focus:ring-0 focus:outline-none font-semibold text-sm"
+                                value="272">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row justify-end lg:items-center gap-5 lg:gap-10 pt-10">
                         <button
-                            class="cursor-pointer open-modal flex items-center gap-2 border border-deep-teal px-6 text-sea-green-deep py-2 rounded-full text-sm font-medium">
-                            <!-- Small Circle Icon -->
-                            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-deep-teal ">
-                                <img src="/assets/img/payment card.svg" alt="Payment Card"
-                                    class="w-6 h-6 object-contain" />
-                            </span>
-                            Add new Payment
+                            class="w-full lg:w-[343px] h-12 flex items-center justify-center border border-light-sea-green3 rounded-lg cursor-pointer cancelEditBtn">
+                            <span class="font-bold text-[15px] text-sea-green2">Cancel</span>
+                        </button>
+
+                        <button
+                            class="w-full lg:w-[343px] h-12 flex items-center justify-center bg-sea-green-dark1 rounded-lg cursor-pointer shadow-saveBtn saveEditBtn">
+                            <span class="font-bold text-[15px] text-white">Save</span>
                         </button>
                     </div>
-                </div>
+                </section>
 
-                <!--Add new payment popup-->
-
-                <div class="payment-modal hidden fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                    <div class="modal-content bg-white rounded-xl shadow-lg w-full max-w-lg p-6">
-                        <h2 class="text-2xl font-semibold text-center mb-6">Add New Payment</h2>
-                        <form class="grid grid-cols-2 gap-4">
-                            <div class="relative w-full">
-                                <!-- Label -->
-                                <label class="absolute -top-2 left-3 bg-white px-1 text-sm text-gray-500">
-                                    Full Name
-                                </label>
-
-                                <!-- Input -->
-                                <input type="text"
-                                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-deep-teal" />
+                <!--Add New Payment Popup-->
+                <section
+                    class="fixed inset-0 bg-transparent-black flex items-center justify-center addNewPaymentPopup z-9999 hidden">
+                    <div
+                        class="bg-white  lg:w-[986px] rounded-xl p-6 border border-gray-light-3 shadow-payment-popup flex flex-col gap-4">
+                        <p class="font-bold text-base text-eerie-black">Choose Payment Method</p>
+                        <div class="border border-gray-50 rounded-[14px]">
+                            <div class="py-3 px-4 flex items-center gap-4 border-t border-gray-50 methodType">
+                                <input type="radio" class="accent-sea-green-dark1 cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-dusty-blue-gray text-lg!">credit_card</span>
+                                    <div class="flex flex-col gap-0.5">
+                                        <p class="font-medium text-[13px] text-eerie-black">Credit / Debit Card</p>
+                                        <p class="font-normal text-[10px] text-soft-slate-gray">Visa, Mastercard</p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="relative w-full">
-                                <!-- Label overlaps the border -->
-                                <label class="absolute -top-2 left-3 bg-white px-1 text-sm font-medium text-gray-500">
-                                    Card Number
-                                </label>
-
-                                <!-- Input box -->
-                                <input type="text"
-                                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none   focus:border-deep-teal" />
+                            <div class="py-3 px-4 flex items-center gap-4 border-t border-gray-50 methodType">
+                                <input type="radio" class="accent-sea-green-dark1 cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-dusty-blue-gray text-lg!">mobile_2</span>
+                                    <div class="flex flex-col gap-0.5">
+                                        <p class="font-medium text-[13px] text-eerie-black">UPI</p>
+                                        <p class="font-normal text-[10px] text-soft-slate-gray">Google Pay,Phonepe,BHIM
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="relative w-full">
-                                <label class="absolute -top-2 left-3 bg-white px-1 text-sm font-normal text-gray-500">
-                                    CVV
-                                </label>
-                                <input type="text"
-                                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none   focus:border-deep-teal" />
+                            <div class="py-3 px-4 flex items-center gap-4 border-t border-gray-50 methodType">
+                                <input type="radio" class="accent-sea-green-dark1 cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-dusty-blue-gray text-lg!">account_balance</span>
+                                    <div class="flex flex-col gap-0.5">
+                                        <p class="font-medium text-[13px] text-eerie-black">Net Banking</p>
+                                        <p class="font-normal text-[10px] text-soft-slate-gray">All Major Banks</p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="relative w-full">
-                                <label class="absolute -top-2 left-3 bg-white px-1 text-sm font-normal text-gray-500">
-                                    Expiry Date
-                                </label>
-                                <input type="text"
-                                    class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none  focus:border-deep-teal " />
+                            <div class="py-3 px-4 flex items-center gap-4 border-t border-gray-50 methodType">
+                                <input type="radio" class="accent-sea-green-dark1 cursor-pointer">
+                                <div class="flex items-center gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-dusty-blue-gray text-lg!">account_balance_wallet</span>
+                                    <div class="flex flex-col gap-0.5">
+                                        <p class="font-medium text-[13px] text-eerie-black">Wallet</p>
+                                        <p class="font-normal text-[10px] text-soft-slate-gray">Drodo credits,Mobikwik
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-green-light-6 border border-green-light-7 rounded-[10px] py-2.5 px-4 flex items-center gap-3">
+                            <span class="material-symbols-outlined text-sea-green-dark1 text-xl!">lock</span>
+                            <p class="font-medium text-xs text-forest-teal">Your payment information is secure and
+                                encrypted</p>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="border border-light-gray1 py-3 rounded-[10px] flex flex-col items-center gap-1">
+                                <span class="material-symbols-outlined text-sea-green-dark1">electric_bolt</span>
+                                <p class="font-bold text-[11px] text-eerie-black">Instant Confirmation</p>
+                                <p class="font-normal text-[10px] text-soft-slate-gray">Get confirmed immediately</p>
                             </div>
 
+                            <div class="border border-light-gray1 py-3 rounded-[10px] flex flex-col items-center gap-1">
+                                <span class="material-symbols-outlined text-sea-green-dark1">shield</span>
+                                <p class="font-bold text-[11px] text-eerie-black">Secure & Private</p>
+                                <p class="font-normal text-[10px] text-soft-slate-gray">Data protected always</p>
+                            </div>
+
+                            <div class="border border-light-gray1 py-3 rounded-[10px] flex flex-col items-center gap-1">
+                                <span class="material-symbols-outlined text-sea-green-dark1">support_agent</span>
+                                <p class="font-bold text-[11px] text-eerie-black">24/7 Support</p>
+                                <p class="font-normal text-[10px] text-soft-slate-gray">Always here to help</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--Card Details-->
+                <section class="cardDetails hidden">
+                    <p class="font-bold text-3xl text-gray-dark">Add New Card Details</p>
+                    <div class="w-full h-[1px] bg-light-gray flex items-center mt-3">
+                        <div class="w-[100px] h-[3px] bg-sea-green-deep"></div>
+                    </div>
+                    <div class="mt-5 border border-gray-light3 rounded-xl p-4">
+                        <form class="space-y-4">
+                            <input type="text" class="w-full border border-cool-fog rounded-lg focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base py-3 px-3.5" placeholder="Name on Card">
+                            <input type="number" class="w-full border border-cool-fog rounded-lg focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base py-3 px-3.5" placeholder="Card Number">
+                            <input type="number" class="w-full border border-cool-fog rounded-lg focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base py-3 px-3.5" placeholder="Expiration Date">
+                            <input type="number" class="w-full border border-cool-fog rounded-lg focus:ring-0 focus:outline-none placeholder:font-normal placeholder:text-base placeholder:text-gray-light1 font-normal text-base py-3 px-3.5" placeholder="CVC/CVV">
+                            <div class="flex justify-end">
+                                <button class="w-[343px] h-12 flex items-center justify-center rounded-lg cursor-pointer bg-sea-green-dark1" type="button">
+                                    <span class="font-bold text-[15px] text-white">Save Now</span>
+                                </button>
+                            </div>
                         </form>
-                        <div class="flex justify-center gap-4 mt-6">
-                            <button
-                                class="close-modal px-10 py-2 border border-sea-green2 text-sea-green2 rounded-lg cursor-pointer ">
-                                Cancel
-                            </button>
-                            <button class="save-modal px-12 py-2 bg-sea-green2 text-white rounded-lg cursor-pointer ">
-                                Save
-                            </button>
-                        </div>
                     </div>
-                </div>
-
-                <!-- Toast Notification -->
-                <div class="toast hidden fixed top-5 left-1/2 transform -translate-x-1/2 
-            bg-deep-teal-green text-white px-4 py-2 rounded-lg shadow-lg z-50">
-                </div>
-
-
-                <!-- Payment Card -->
-                <div class="payment-methods space-y-4">
-
-
-                    <div class="payment-card p-4 border border-gray-200 rounded-xl flex items-center justify-between">
-                        <div>
-                            <p class="card-title font-semibold text-base text-gray-900">SBI bank credit card</p>
-                            <p class="card-subtitle card-subtitle text-xs text-gray-600 font-semibold flex items-center gap-x-3">
-                                **9101 <img src="/assets/img/visa.svg" alt="Visa" class="w-8 h-8" /> | Anil Kumar
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="pencil" class=" edit-btn w-6 h-6 text-emerald-600 cursor-pointer"></i>
-                            <i data-lucide="trash-2" class="delete-btn w-6 h-6 text-red-600 cursor-pointer"></i>
-                        </div>
-                    </div>
-
-                    <div class="payment-card p-4 border border-gray-200 rounded-xl flex items-center justify-between">
-                        <div>
-                            <p class="card-title font-semibold text-base text-gray-900">Amazon pay ICICI bank credit card</p>
-                            <p class="card-subtitle text-xs text-gray-600 font-semibold flex items-center gap-x-3">
-                                **3425 <img src="/assets/img/visa.svg" alt="Visa" class="w-8 h-8" /> | Gaurav Yadav
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="pencil" class="edit-btn w-6 h-6 text-emerald-600 cursor-pointer"></i>
-                            <i data-lucide="trash-2" class="delete-btn w-6 h-6 text-red-600 cursor-pointer"></i>
-                        </div>
-                    </div>
-
-                    <div class="payment-card p-4 border border-gray-200 rounded-xl flex items-center justify-between">
-                        <div>
-                            <p class="card-title font-semibold text-base text-gray-900">HDFC bank debit card</p>
-                            <p class="card-subtitle text-xs text-gray-600 font-semibold flex items-center gap-x-3">
-                                **5678 <img src="/assets/img/visa.svg" alt="Visa" class="w-8 h-8" /> | Priya Sharma
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="pencil" class="edit-btn w-6 h-6 text-emerald-600 cursor-pointer"></i>
-                            <i data-lucide="trash-2" class="delete-btn w-6 h-6 text-red-600 cursor-pointer"></i>
-                        </div>
-                    </div>
-
-                    <div class="payment-card p-4 border border-gray-200 rounded-xl flex items-center justify-between">
-                        <div>
-                            <p class="card-title font-semibold text-base text-gray-900">Axis bank credit card</p>
-                            <p class="card-subtitle text-xs text-gray-600 font-semibold flex items-center gap-x-3">
-                                **4455 <img src="/assets/img/visa.svg" alt="Visa" class="w-8 h-8" /> | Sneha Patel
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="pencil" class="edit-btn w-6 h-6 text-emerald-600 cursor-pointer"></i>
-                            <i data-lucide="trash-2" class="delete-btn w-6 h-6 text-red-600 cursor-pointer"></i>
-                        </div>
-                    </div>
-
-                    <div class="payment-card p-4 border border-gray-200 rounded-xl flex items-center justify-between">
-                        <div>
-                            <p class="card-title font-semibold text-base text-gray-900">Kotak Mahindra debit card</p>
-                            <p class="card-subtitle text-xs text-gray-600 font-semibold flex items-center gap-x-3">
-                                **8899 <img src="/assets/img/visa.svg" alt="Visa" class="w-8 h-8" /> | Rahul Mehta
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="pencil" class="edit-btn w-6 h-6 text-emerald-600 cursor-pointer"></i>
-                            <i data-lucide="trash-2" class="delete-btn w-6 h-6 text-red-600 cursor-pointer"></i>
-                        </div>
-                    </div>
-
-                    <div class="payment-card p-4 border border-gray-200 rounded-xl flex items-center justify-between">
-                        <div>
-                            <p class="card-title font-semibold text-base text-gray-900">ICICI Platinum card</p>
-                            <p class="card-subtitle text-xs text-gray-600 font-semibold flex items-center gap-x-3">
-                                **1234 <img src="/assets/img/visa.svg" alt="Visa" class="w-8 h-8" /> | Sunita Reddy
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="pencil" class="edit-btn w-6 h-6 text-emerald-600 cursor-pointer"></i>
-                            <i data-lucide="trash-2" class="delete-btn w-6 h-6 text-red-600 cursor-pointer"></i>
-                        </div>
-                    </div>
-
-                    <div class="payment-card p-4 border border-gray-200 rounded-xl flex items-center justify-between">
-                        <div>
-                            <p class="card-title font-semibold text-base text-gray-900">HSBC debit card</p>
-                            <p class="card-subtitle text-xs text-gray-600 font-semibold flex items-center gap-x-3">
-                                **5566 <img src="/assets/img/visa.svg" alt="Visa" class="w-8 h-8" /> | Deepak Verma
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="pencil" class="edit-btn w-6 h-6 text-emerald-600 cursor-pointer"></i>
-                            <i data-lucide="trash-2" class="delete-btn w-6 h-6 text-red-600 cursor-pointer"></i>
-                        </div>
-                    </div>
-
-                    <div class="payment-card p-4 border border-gray-200 rounded-xl flex items-center justify-between">
-                        <div>
-                            <p class="card-title font-semibold text-base text-gray-900">Standard Chartered credit card</p>
-                            <p class="card-subtitle text-xs text-gray-600 font-semibold flex items-center gap-x-3">
-                                **7788 <img src="/assets/img/visa.svg" alt="Visa" class="w-8 h-8" /> | Kavita Das
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="pencil" class="edit-btn w-6 h-6 text-emerald-600 cursor-pointer"></i>
-                            <i data-lucide="trash-2" class="delete-btn w-6 h-6 text-red-600 cursor-pointer"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pagination -->
-                <div class="pagination flex justify-center items-center gap-2 mt-6 text-sm">
-                    <button class="prev-page text-sm font-bold text-gray3">
-                        Previous
-                    </button>
-                    <button class="page-btn px-3 py-1.5 rounded bg-sea-green-dark text-white" data-page="1">1</button>
-                    <button class="page-btn px-3 py-1.5 rounded bg-gray-200 text-black" data-page="2">2</button>
-                    <button class="page-btn px-3 py-1.5 rounded bg-gray-200 text-black" data-page="3">3</button>
-                    <button class="next-page text-sm font-bold text-gray3">
-                        Next
-                    </button>
-                </div>
-
+                </section>
             </div>
 
         </div>
@@ -382,12 +418,13 @@
 
 
     <script>
-        lucide.createIcons();
+
 
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/script/pharmacy/account-sidebar.js"></script>
     <script src="/script/myupload.js"></script>
-    <script src="/script/payment_methods.js"></script>
+    <script src="/script/pharmacy/payment_methods.js"></script>
 </body>
 
 </html>
