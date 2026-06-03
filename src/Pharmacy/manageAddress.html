@@ -72,7 +72,7 @@
                 </ul>
             </nav>
         </header>
-        <div class="mx-auto px-4 sm:px-8 lg:px-20 py-6 md:py-8 flex flex-col md:flex-row gap-6 md:gap-8 bg-light-gray-blue h-[calc(100vh-78px)]">
+        <div class="mx-auto px-4 sm:px-8 lg:px-20 py-6 md:py-8 flex flex-col md:flex-row gap-6 md:gap-8 bg-light-gray-blue sm:h-[calc(100vh-78px)] overflow-y-auto scrollbar">
             <!-- Sidebar Navigation -->
             <div class="w-full md:w-56 flex-shrink-0" data-account-sidebar>
                 <div>
@@ -134,7 +134,7 @@
             </div>
 
             <!--Main Content-->
-            <div class="bg-white border border-gray-light3 rounded-xl p-4 sm:p-6 lg:p-8 w-full min-w-0 overflow-y-auto scrollbar">
+            <div class="bg-white border border-gray-light3 rounded-[20px] p-4 sm:p-6 lg:p-8 w-full min-w-0 overflow-y-auto scrollbar">
                 <div class="flex flex-col gap-2.5">
                     <div class="flex items-center justify-between gap-4">
                         <!-- Breadcrumb Navigation -->
@@ -177,32 +177,35 @@
 
                         <!-- Add address panel -->
                         <div class="js-address-add-panel hidden flex flex-col gap-5">
-                            <h2 class="text-xl sm:text-2xl font-bold text-gray">
-                                <span class="border-b-4 border-sea-green2 pb-1">Add your</span> Address
-                            </h2>
-                            <form class="js-address-add-form border border-gray-light3 rounded-xl p-4 sm:p-6 lg:p-8 flex flex-col gap-4 sm:gap-5 bg-white">
+                            <div>
+                                <h2 class="text-xl sm:text-2xl font-bold text-gray">
+                                Add your Address
+                                </h2>
+                                <div class="custom-hr"></div>
+                            </div>
+                            <form class="js-address-add-form border border-gray-light3 rounded-xl p-4 flex flex-col gap-4 sm:gap-5 bg-white">
                                 <input type="text" name="firstName" placeholder="First Name"
-                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                    class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none" required>
                                 <input type="text" name="lastName" placeholder="Last Name"
-                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                    class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none" required>
                                 <input type="tel" name="phone" placeholder="Phone"
-                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                    class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none" required>
                                 <input type="text" name="address" placeholder="Address"
-                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                    class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none" required>
                                 <input type="text" name="area" placeholder="Area"
-                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                    class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none" required>
                                 <input type="text" name="zipCode" placeholder="Zip Code"
-                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                    class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none" required>
                                 <input type="text" name="city" placeholder="City"
-                                    class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none focus:border-sea-green2" required>
+                                    class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray placeholder:text-gray-light1 focus:outline-none" required>
                                 <div class="js-custom-dropdown js-form-dropdown custom-select-container relative w-full z-20" data-value="India">
                                     <button type="button"
-                                        class="js-custom-dropdown-trigger js-form-dropdown-trigger w-full min-h-11 border border-gainsboro-gray rounded-[10px] flex items-center justify-between gap-2 px-4 py-2 cursor-pointer bg-white"
+                                        class="js-custom-dropdown-trigger js-form-dropdown-trigger w-full min-h-11 border border-cool-fog rounded-lg flex items-center justify-between gap-2 px-4 py-2 cursor-pointer bg-white"
                                         aria-expanded="false" aria-haspopup="listbox">
                                         <span class="js-custom-dropdown-label text-sm text-gray-light1">Country</span>
                                         <span class="material-symbols-outlined text-gray-light1 shrink-0 pointer-events-none">keyboard_arrow_down</span>
                                     </button>
-                                    <div class="js-custom-dropdown-menu custom-select-menu hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-[10px] border border-gainsboro-gray shadow-lg overflow-hidden z-30">
+                                    <div class="js-custom-dropdown-menu custom-select-menu hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-lg border border-cool-fog shadow-lg overflow-hidden z-30">
                                         <ul class="py-1" role="listbox">
                                             <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="India" data-label="India">India</li>
                                             <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="USA" data-label="USA">USA</li>
@@ -214,16 +217,18 @@
                                     <p class="text-sm font-semibold text-gray">Choose Address Type</p>
                                     <div class="flex flex-wrap items-center gap-2 sm:gap-3" role="group" aria-label="Address type">
                                         <button type="button" data-type="home"
-                                            class="js-address-type-btn active flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gray-tint text-gray text-sm font-medium border border-transparent hover:border-gray-light3 transition">
-                                            <span class="material-symbols-outlined text-lg">home</span> Home
+                                            class="js-address-type-btn active flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gray-light3 shadow-addressType text-gray text-sm font-medium border border-transparent">
+                                            <img src="/assets/img/home-icon.svg" alt="home" class="w-5 h-5"> Home
                                         </button>
                                         <button type="button" data-type="office"
-                                            class="js-address-type-btn flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gray-tint text-gray text-sm font-medium border border-transparent hover:border-gray-light3 transition">
-                                            <span class="material-symbols-outlined text-lg">apartment</span> Office
+                                            class="js-address-type-btn flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gray-light3 shadow-addressType text-gray text-sm font-medium border border-transparent">
+                                            <img src="/assets/img/building-icon.svg" alt="office" class="w-5 h-5">
+                                            Office
                                         </button>
                                         <button type="button" data-type="city"
-                                            class="js-address-type-btn flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gray-tint text-gray text-sm font-medium border border-transparent hover:border-gray-light3 transition">
-                                            <span class="material-symbols-outlined text-lg">location_city</span> City
+                                            class="js-address-type-btn flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gray-light3 shadow-addressType text-gray text-sm font-medium border border-transparent">
+                                            <img src="/assets/img/city-icon.svg" alt="city" class="w-5 h-5">
+                                            City
                                         </button>
                                     </div>
                                 </div>
@@ -233,69 +238,69 @@
                                 </label>
                                 <div class="flex justify-end pt-2">
                                     <button type="submit"
-                                        class="save-address-btn w-full sm:w-auto min-w-[140px] min-h-11 px-8 bg-sea-green2 text-white rounded-[10px] text-sm font-semibold hover:bg-sea-green-deep transition shadow-sm">
+                                        class="save-address-btn max-w-[343px] w-full min-h-11 px-8 bg-sea-green2 text-white rounded-lg text-sm font-semibold hover:bg-sea-green-deep transition shadow-save-address-btn">
                                         Save Now
                                     </button>
                                 </div>
                             </form>
-                            <button type="button" class="js-cancel-add text-sm text-sea-green2 font-medium hover:underline self-start">
-                                &larr; Back to addresses
-                            </button>
                         </div>
 
                         <!-- Edit address panel -->
                         <div class="js-address-edit-panel hidden flex flex-col gap-5">
-                            <h2 class="text-xl sm:text-2xl font-bold text-gray">
-                                <span class="border-b-4 border-sea-green2 pb-1">Edit</span> Address
-                            </h2>
-                            <form class="js-address-edit-form border border-gray-light3 rounded-xl p-4 sm:p-6 lg:p-8 flex flex-col gap-5 sm:gap-6 bg-white">
+                            <div>
+                                <h2 class="text-xl sm:text-2xl font-bold text-gray">
+                                Edit Address
+                                </h2>
+                                <div class="custom-hr"></div>
+                            </div>
+                            <form class="js-address-edit-form flex flex-col gap-5 sm:gap-6 bg-white">
                                 <input type="hidden" name="id" class="js-edit-id" value="">
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm text-gray-dark-1">First Name</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-10">
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm text-gray">First Name</label>
                                         <input type="text" name="firstName"
-                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                            class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
                                     </div>
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm text-gray-dark-1">Last Name</label>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm text-gray">Last Name</label>
                                         <input type="text" name="lastName"
-                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                            class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
                                     </div>
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm text-gray-dark-1">Phone No.</label>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm text-gray">Phone No.</label>
                                         <input type="tel" name="phone"
-                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                            class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
                                     </div>
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm text-gray-dark-1">Address</label>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm text-gray">Address</label>
                                         <input type="text" name="address"
-                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                            class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
                                     </div>
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm text-gray-dark-1">Area</label>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm text-gray">Area</label>
                                         <input type="text" name="area"
-                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                            class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
                                     </div>
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm text-gray-dark-1">Zip Code</label>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm text-gray">Zip Code</label>
                                         <input type="text" name="zipCode"
-                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                            class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
                                     </div>
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm text-gray-dark-1">City</label>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm text-gray">City</label>
                                         <input type="text" name="city"
-                                            class="w-full min-h-11 border border-gainsboro-gray rounded-[10px] px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
+                                            class="w-full min-h-11 border border-cool-fog rounded-lg px-4 text-sm text-gray focus:outline-none focus:border-sea-green2" required>
                                     </div>
-                                    <div class="flex flex-col gap-1.5">
-                                        <label class="text-sm text-gray-dark-1">Country</label>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="text-sm text-gray">Country</label>
                                         <div class="js-custom-dropdown js-form-dropdown custom-select-container relative w-full z-20" data-value="India">
                                             <button type="button"
-                                                class="js-custom-dropdown-trigger js-form-dropdown-trigger w-full min-h-11 border border-gainsboro-gray rounded-[10px] flex items-center justify-between gap-2 px-4 py-2 cursor-pointer bg-white"
+                                                class="js-custom-dropdown-trigger js-form-dropdown-trigger w-full min-h-11 border border-cool-fog rounded-lg flex items-center justify-between gap-2 px-4 py-2 cursor-pointer bg-white"
                                                 aria-expanded="false" aria-haspopup="listbox">
                                                 <span class="js-custom-dropdown-label text-sm text-gray">India</span>
                                                 <span class="material-symbols-outlined text-gray-light1 shrink-0 pointer-events-none">keyboard_arrow_down</span>
                                             </button>
-                                            <div class="js-custom-dropdown-menu custom-select-menu hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-[10px] border border-gainsboro-gray shadow-lg overflow-hidden z-30">
+                                            <div class="js-custom-dropdown-menu custom-select-menu hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-lg border border-cool-fog shadow-lg overflow-hidden z-30">
                                                 <ul class="py-1" role="listbox">
                                                     <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="India" data-label="India">India</li>
                                                     <li role="option" class="js-custom-dropdown-option custom-select-option px-4 py-2.5 text-sm text-gray-med hover:bg-gray-tint cursor-pointer" data-value="USA" data-label="USA">USA</li>
@@ -305,13 +310,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex flex-col sm:flex-row justify-center gap-3 pt-2">
+                                <div class="flex flex-col sm:flex-row justify-end gap-3 pt-2">
                                     <button type="button"
-                                        class="js-cancel-edit w-full sm:w-auto min-w-[120px] min-h-11 px-8 border border-sea-green2 text-sea-green2 rounded-[10px] text-sm font-semibold hover:bg-soft-cloud-2 transition">
+                                        class="js-cancel-edit max-w-[343px] w-full min-h-11 px-8 border border-sea-green2 text-sea-green2 rounded-lg text-sm font-semibold">
                                         Cancel
                                     </button>
                                     <button type="submit"
-                                        class="js-save-edit w-full sm:w-auto min-w-[120px] min-h-11 px-10 bg-sea-green2 text-white rounded-[10px] text-sm font-semibold hover:bg-sea-green-deep transition shadow-sm">
+                                        class="js-save-edit max-w-[343px] w-full min-h-11 px-10 bg-deep-teal-green text-white rounded-lg text-sm font-semibold shadow-save-address-btn">
                                         Save
                                     </button>
                                 </div>
@@ -324,19 +329,27 @@
     </main>
 
     <!-- Remove confirmation modal -->
-    <div class="js-remove-modal fixed inset-0 bg-black/40 z-50 hidden items-center justify-center p-4" role="dialog"
-        aria-modal="true" aria-labelledby="remove-modal-title">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-5 sm:p-6 text-center">
-            <h2 id="remove-modal-title" class="text-lg font-semibold text-gray mb-2">Remove address?</h2>
-            <p class="text-sm text-smoky-blue-gray mb-6">This address will be removed from your saved list.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-3">
+    <div class="js-remove-modal fixed inset-0 bg-transparent-black z-50 hidden items-center justify-center p-4 backdrop-blur-[1px]" role="dialog" aria-modal="true" aria-labelledby="remove-modal-title">
+        <div class="bg-white rounded-lg w-full max-w-md px-4 py-4">
+            <div class="flex items-center justify-between">
+                <h2 id="remove-modal-title" class="text-lg font-semibold text-dark-gray">Remove Address</h2>
+                <button type="button" class="w-12 h-12 rounded-[10px] border border-deep-teal-green flex items-center justify-center">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <img src="/assets/img/successful.svg" alt="successful" class="h-full mx-auto mb-4">
+            <div class="flex flex-col gap-2 max-w-[270px] mx-auto">
+                <p class="text-base text-center text-black font-normal">Are you sure you want to remove this saved address?</p>
+                <p class="text-dark-gray font-normal text-center text-sm">This action cannot be undone.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center gap-3 mt-4">
                 <button type="button"
-                    class="js-remove-cancel px-8 py-2.5 border border-gray-light3 text-gray rounded-lg font-semibold text-sm hover:bg-gray-tint transition">
+                    class="js-remove-cancel max-w-[197px] w-full px-8 py-2.5 border border-cool-fog text-gray rounded-lg font-semibold text-sm">
                     Cancel
                 </button>
                 <button type="button"
-                    class="js-remove-confirm px-8 py-2.5 border border-strong-red text-strong-red rounded-lg font-semibold text-sm hover:bg-pale-pink transition">
-                    Remove
+                    class="js-remove-confirm max-w-[197px] w-full px-8 py-2.5 bg-tomato-red text-white rounded-lg font-semibold text-sm">
+                    Confirmed
                 </button>
             </div>
         </div>
