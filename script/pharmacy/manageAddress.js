@@ -9,9 +9,9 @@
   };
 
   const TYPE_ICONS = {
-    home: "home",
-    office: "apartment",
-    city: "location_city",
+    home: "<img src='/assets/img/home-icon.svg' alt='home' class='w-5 h-5'>",
+    office: "<img src='/assets/img/building-icon.svg' alt='office' class='w-5 h-5'>",
+    city: "<img src='/assets/img/city-icon.svg' alt='city' class='w-5 h-5'>",
   };
 
   let addresses = [
