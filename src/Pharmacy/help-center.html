@@ -6,129 +6,352 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="My Account Page">
-    <title>Help Center</title>
+    <title>Help Centre</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1" />
 
-    <link rel="stylesheet" href="assets/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .email-preview-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+        }
+
+        .email-remove-img-btn {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .email-relative-group {
+            position: relative;
+            display: inline-block;
+        }
+
+        .chat-bubble-bot {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            max-width: 80%;
+        }
+
+        .chat-bubble-user {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 80%;
+            margin-left: auto;
+        }
+
+        .bubble-text-bot {
+            background-color: #CAF8E4;
+            /* background-color: #ecfdf5; */
+            /* border-radius: 18px 18px 18px 4px; */
+            padding: 10px 14px;
+            font-size: 0.875rem;
+            color: #1f2937;
+            border: 1px solid #d1fae5;
+        }
+
+        .bubble-text-user {
+            background-color: #0d9488;
+            color: white;
+            border-radius: 18px 18px 4px 18px;
+            padding: 10px 14px;
+            font-size: 0.875rem;
+        }
+
+        .avatar-bot {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #4f46e5);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .avatar-bot span {
+            font-size: 18px;
+        }
+
+        .chat-time {
+            font-size: 0.7rem;
+            color: #9ca3af;
+            margin-top: 4px;
+            margin-left: 42px;
+        }
+
+        .user-time {
+            text-align: right;
+            font-size: 0.7rem;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+
+        .attachment-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            border-radius: 20px;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+        }
+
+        .attachment-img-preview {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .recording-active {
+            color: #ef4444;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #ticketModal:not(.hidden) {
+            display: flex;
+        }
+
+        #ticketModal {
+            transition: opacity 0.2s ease;
+        }
+
+        .modal-image-remove {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background-color: #ef4444;
+            color: white;
+            border-radius: 9999px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid white;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 9999px;
+
+            padding: 6px 14px;
+            /* 14px 20px ki jagah */
+
+            font-size: 14px;
+            font-weight: 500;
+            color: #4b5563;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .chip-remove {
+            cursor: pointer;
+            color: #4b5563;
+            font-size: 16px !important;
+            line-height: 1;
+        }
+
+        .chip-remove {
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1;
+            color: #64748b;
+        }
+
+        .chip-remove:hover {
+            color: #ef4444;
+        }
+
+        .preview-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+        }
+
+        .remove-img-btn {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .relative-group {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-50 no-scrollbar">
-    <div class="container">
-       <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
-        <div class="max-w-[150px] max-h-10">
-            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
-        </div>
-        <nav>
-            <div>
-                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
-                    <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+<body>
+    <div>
+        <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+            <div class="max-w-[150px] max-h-10">
+                <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+            </div>
+            <nav>
+                <div>
+                    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                        <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a>
+                            <ul
+                                class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
+                            </a>
+
+                        </li>
+                        <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg></a></li>
+                        <li><a href="/src/records.html">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li>
+                            <div
+                                class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                                <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                    data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                            </div>
+                        </li>
+                        <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                    </ul>
+                </div>
+                <ul id="mobile-menu"
+                    class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                    <li><a href="#" class="block">Home</a></li>
+                    <li><a href="#" class="block">About</a></li>
+                    <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg
+                                class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></a>
-                        <ul
-                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                            </svg></button>
+                        <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                            <li><a href="#" class="block">Web Design</a></li>
                         </ul>
                     </li>
-                    <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
-                               </a>
-                       
-                    </li>
-                    <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg></a></li>
-                    <li><a href="/src/records.html">Records</a></li>
-                    <li><a href="#">Rewards</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li>
-                        <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
-                            <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
-                                data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
-                        </div>
-                    </li>
-                    <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                    <li><a href="#" class="block">Contact</a></li>
                 </ul>
-            </div>
-            <ul id="mobile-menu"
-                class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
-                <li><a href="#" class="block">Home</a></li>
-                <li><a href="#" class="block">About</a></li>
-                <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg></button>
-                    <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
-                        <li><a href="#" class="block">Web Design</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="block">Contact</a></li>
-            </ul>
-        </nav>
-    </header> 
-        <div class=" mx-auto px-5 lg:px-20 py-8 flex flex-col md:flex-row md:gap-4 lg:gap-8">
-            <div class="flex md:hidden p-4">
-                <i id="menu-toggle" data-lucide="menu" class="text-2xl cursor-pointer text-black"></i>
-            </div>
+            </nav>
+        </header>
+        <div
+            class="mx-auto px-4 sm:px-8 lg:px-20 py-6 md:py-8 flex flex-col md:flex-row gap-6 md:gap-8 bg-light-gray-blue min-h-screen">
             <!-- Sidebar Navigation -->
-            <div id="sidebar" class="w-full md:w-48 lg:w-64 flex-shrink-0 hidden md:block">
-                <div
-                    class=" flex justify-between items-center border px-4 py-2 gap-2 rounded-lg bg-gray-tint border-gray-200 mb-6">
-                    <span class=" text-gray-500 text-xs">
-                        <i class="fas fa-search"></i>
-                    </span>
-                    <input type="text" name="search-d" placeholder="What do you want to help?"
-                        class="w-full text-xs py-2 px-4 pr-10 rounded-full text-gray-dark-1 focus:outline-none">
-                </div>
-                <div class="mt-5">
+            <div class="w-full md:w-56 flex-shrink-0" data-account-sidebar>
+                <div>
                     <nav>
                         <ul class="space-y-3">
-                            <li><a href="/myaccount.html"
-                                    class="flex items-center text-white text-sm bg-green-light px-4 py-2 rounded font-semibold"><i
-                                        class="fas fa-user mr-3"></i> My Account</a></li>
-                            <li><a href="/mysave.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-bookmark mr-3"></i> My Save</a></li>
-                            <li><a href="/myuploads.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-upload mr-3"></i> My Uploads</a></li>
-                            <li><a href="/manageAddress.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-map-marker-alt mr-3"></i> Manage Address</a></li>
-                            <li><a href="/payment_methods.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-credit-card mr-3"></i> Payment Methods</a></li>
-                            <li><a href="/policy.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-file-alt mr-3"></i> Policy</a></li>
-                            <li><a href="/help-center.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-question-circle mr-3"></i> Help Center</a></li>
-                            <li><a href="/settings.html"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-cog mr-3"></i> Settings</a></li>
-                            <li><a href="#"
-                                    class="flex items-center text-gray-med text-sm hover:bg-green-light hover:text-white px-4 py-2 rounded font-normal"><i
-                                        class="fas fa-sign-out-alt mr-3"></i> Logout</a></li>
+                            <li>
+                                <a href="/src/Pharmacy/myaccount.html">
+                                    <span class="material-symbols-outlined">person</span> My Accounts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/mysave.html">
+                                    <span class="material-symbols-outlined">favorite</span> Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/order-history.html">
+                                    <span class="material-symbols-outlined">order_approve</span> Order History
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/myuploads.html">
+                                    <span class="material-symbols-outlined">list_alt</span> My Uploads
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/manageAddress.html">
+                                    <span class="material-symbols-outlined">globe_location_pin</span> Manage Address
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/payment_methods.html">
+                                    <span class="material-symbols-outlined">credit_card</span> Payment Methods
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/terms-conditions.html">
+                                    <span class="material-symbols-outlined">article</span> Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/help-center.html">
+                                    <span class="material-symbols-outlined">forum</span> Help Center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/src/Pharmacy/settings.html">
+                                    <span class="material-symbols-outlined">settings</span> Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">mode_off_on</span> Logout
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
 
-
             <!--Main Content-->
-            <div
-                class="lg:ml-[4.625rem] bg-white border border-gray-light3 rounded-xl p-4 lg:p-8 max-w-[65rem] w-full overflow-y-auto">
+            <div class="bg-white border border-gray-light3 rounded-xl p-4 sm:p-6 lg:p-8 w-full min-w-0">
                 <div class="flex flex-col gap-2.5">
                     <div class="flex items-center justify-between gap-4">
                         <!-- Breadcrumb Navigation -->
@@ -143,176 +366,547 @@
                                         </a>
                                     </li>
                                     <li class="flex items-center">
-                                        <i data-lucide="chevron-right"
-                                            class="w-4 h-4 align-middle text-dark-charcoal"></i>
-                                        <a href="/myaccount.html"
-                                            class="font-normal text-base text-gray hover:text-sea-green-deep">Account</a>
+                                        <span
+                                            class="material-symbols-outlined text-dark-charcoal mini-icon">keyboard_arrow_right</span>
+                                        <a href="/src/Pharmacy/myaccount.html"
+                                            class="font-normal text-base text-gray hover:text-sea-green-deep"> My
+                                            Account</a>
                                     </li>
                                     <li class="flex items-center">
-                                        <i data-lucide="chevron-right"
-                                            class="w-4 h-4 align-middle text-dark-charcoal"></i>
+                                        <span
+                                            class="material-symbols-outlined text-dark-charcoal mini-icon">keyboard_arrow_right</span>
                                         <span class="font-normal text-xs sm:text-base text-medium-gray">Help
-                                            Center</span>
+                                            Centre</span>
                                     </li>
                                 </ol>
                             </nav>
                         </div>
-                        <div class="flex justify-end">
-                            <a href="/myaccount.html">
-                                <i data-lucide="x" class="text-gray cursor-pointer w-7 h-7"></i>
-                            </a>
+                    </div>
+                    <div class="flex items-center justify-between gap-2.5 mt-2 w-full">
+                        <div class="flex items-center gap-2.5">
+                            <h1 class="font-semibold text-lg text-gray whitespace-nowrap">Help Centre</h1>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-2.5">
-                        <h1 class="font-bold text-xl text-charcoal-black">Help Center</h1>
-                        <p class="font-normal text-sm text-charcoal-black">
-                            Here, you can view and manage your Issues
-                        </p>
+
+                    <!-- Top Navigation Pills / Buttons -->
+                    <div class="flex flex-wrap items-center gap-2.5 mt-5 pb-4 ">
+                        <button id="tab-faq" onclick="switchHelpTab('faq')"
+                            class="px-5 py-2 rounded-full text-sm font-medium bg-sea-green-deep text-white transition">FAQ</button>
+                        <button id="tab-report" onclick="switchHelpTab('report')"
+                            class="px-5 py-2 rounded-full text-sm font-medium border border-gray-light3 text-gray hover:bg-gray-50 transition">Report
+                            an Issue</button>
+                        <button id="tab-email" onclick="switchHelpTab('email')"
+                            class="px-5 py-2 rounded-full text-sm font-medium border border-gray-light3 text-gray hover:bg-gray-50 transition">Email
+                            Support</button>
+                        <button id="tab-chat" onclick="switchHelpTab('chat')"
+                            class="px-5 py-2 rounded-full text-sm font-medium border border-gray-light3 text-gray hover:bg-gray-50 transition">Chat
+                            Support</button>
+                        <button id="tab-history" onclick="switchHelpTab('history')"
+                            class="px-5 py-2 rounded-full text-sm font-medium border border-gray-light3 text-gray hover:bg-gray-50 transition">Ticket
+                            History</button>
                     </div>
-                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-4">
-                        <div class="max-w-40 flex items-center h-9 px-11 sm:px-4 lg:px-8 rounded-[20px] border border-gainsboro-gray cursor-pointer help-option popup-btn"
-                            data-popup="reportIssuePopup">
-                            <p class="font-semibold text-xs lg:text-sm text-gray text-nowrap">Report an Issue</p>
-                        </div>
-                        <div
-                            class="max-w-40 flex items-center h-9 px-11 sm:px-4 lg:px-8 rounded-[20px] border border-gainsboro-gray cursor-pointer help-option">
-                            <p class="font-semibold text-xs lg:text-sm text-gray text-nowrap">Ticket History</p>
-                        </div>
-                        <div
-                            class="max-w-40 flex items-center h-9 px-11 sm:px-4 lg:px-8 rounded-[20px] border border-gainsboro-gray cursor-pointer help-option">
-                            <p class="font-semibold text-xs lg:text-sm text-gray text-nowrap">Email Support</p>
-                        </div>
-                        <div
-                            class="max-w-40 flex items-center h-9 px-11 sm:px-4 lg:px-8 rounded-[20px] border border-gainsboro-gray cursor-pointer help-option">
-                            <p class="font-semibold text-xs lg:text-sm text-gray text-nowrap">Chat Support</p>
-                        </div>
-                    </div>
-                </div>
-                <!--Report Issue Popup-->
-                <div
-                    class="reportIssuePopup fixed inset-0 flex justify-center   hidden bg-transparent-black backdrop-blur-[2px]  z-100">
-                    <div
-                        class="bg-white w-[49.375rem]  max-h-[24.5rem] mt-40 rounded-[15px] p-4 overflow-y-auto no-scrollbar">
-                        <div class="flex flex-col">
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center gap-2">
-                                    <svg class="w-6 h-6">
-                                        <use xlink:href="/assets/img/icons.svg#report-issue"></use>
-                                    </svg>
-                                    <span class="text-gray font-normal text-xl">Report Issue</span>
+
+                    <!-- TAB CONTENT CONTAINER -->
+                    <div class="w-full">
+
+                        <!-- MODULE 1: FAQ PANEL -->
+                       
+                            <div id="content-faq" class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
+                           
+                               <aside class="lg:col-span-4 w-full">
+  <nav class="flex flex-col border border-gray-light3 rounded-xl overflow-hidden bg-white">
+    <a href="#"
+       class="flex items-center justify-between p-4 bg-white text-sea-green-deep font-medium transition group border-b border-gray-light3">
+      <span class="text-night-black font-bold text-sm sm:text-base">Order enquiry</span>
+      <span class="material-symbols-outlined text-xl text-sea-green-deep transition-transform group-hover:translate-x-0.5">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group border-b border-gray-light3">
+      <span class="text-sm text-normal-gray font-bold sm:text-base">Delivery</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group border-b border-gray-light3">
+      <span class="text-sm text-normal-gray font-bold sm:text-base">Payments</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group border-b border-gray-light3">
+      <span class="text-sm text-normal-gray font-bold sm:text-base">Returns</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group border-b border-gray-light3">
+      <span class="text-sm text-normal-gray font-bold sm:text-base">General enquiries</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group border-b border-gray-light3">
+      <span class="text-sm text-normal-gray font-bold sm:text-base">Netmeds wallet</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group border-b border-gray-light3">
+      <span class="text-sm text-normal-gray font-bold sm:text-base">Business opportunities</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group border-b border-gray-light3">
+      <span class="text-sm text-normal-gray font-bold sm:text-base">Referrals</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group border-b border-gray-light3">
+      <span class="text-sm text-normal-gray font-bold sm:text-base">Assisted ordering</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group border-b border-gray-light3">
+      <span class="text-sm text-normal-gray font-bold sm:text-base">Online consultations</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+    <a href="#"
+       class="flex items-center justify-between p-4 text-gray hover:bg-gray-50 transition group">
+      <!-- Last item has no border-bottom to avoid double border with the container -->
+      <span class="text-sm text-normal-gray font-bold sm:text-base">Ratings and Reviews</span>
+      <span class="material-symbols-outlined text-xl text-medium-gray group-hover:translate-x-0.5 transition-transform">keyboard_arrow_right</span>
+    </a>
+  </nav>
+</aside>
+                          
+                                 <main class="lg:col-span-8 w-full">
+                                <h2 class="text-base sm:text-lg font-semibold text-gray mb-4">Order enquiry</h2>
+                                <div class="divide-y divide-gray-light3 border-b border-gray-light3">
+                                    <details class="group py-3.5">
+                                        <summary
+                                            class="flex items-center justify-between cursor-pointer font-medium text-sm sm:text-base text-normal-gray font-bold hover:text-sea-green-deep transition list-none [&::-webkit-details-marker]:hidden">
+                                            <span>How do I cancel my order?</span>
+                                            <span
+                                                class="material-symbols-outlined text-sea-green-deep transition-transform duration-200 group-open:rotate-180">keyboard_arrow_down</span>
+                                        </summary>
+                                        <div class="mt-2.5 text-sm text-medium-gray leading-relaxed">To cancel your
+                                            order, navigate to your 'Ticket History' panel, choose the specific active
+                                            order item, and hit 'Cancel Order'.</div>
+                                    </details>
+                                    <details class="group py-3.5">
+                                        <summary
+                                            class="flex items-center justify-between cursor-pointer font-medium text-sm sm:text-base text-normal-gray font-bold hover:text-sea-green-deep transition list-none [&::-webkit-details-marker]:hidden">
+                                            <span>How can I track my order?</span>
+                                            <span
+                                                class="material-symbols-outlined text-sea-green-deep transition-transform duration-200 group-open:rotate-180">keyboard_arrow_down</span>
+                                        </summary>
+                                        <div class="mt-2.5 text-sm text-medium-gray leading-relaxed">Tracking metrics
+                                            become live immediately post-dispatch inside your transactional details
+                                            panels.</div>
+                                    </details>
+                                    <details class="group py-3.5">
+                                        <summary
+                                            class="flex items-center justify-between cursor-pointer font-medium text-sm sm:text-base text-normal-gray font-bold hover:text-sea-green-deep transition list-none [&::-webkit-details-marker]:hidden">
+                                            <span>Items are missing from my order?</span>
+                                            <span
+                                                class="material-symbols-outlined text-sea-green-deep transition-transform duration-200 group-open:rotate-180">keyboard_arrow_down</span>
+                                        </summary>
+                                        <div class="mt-2.5 text-sm text-medium-gray leading-relaxed">If items are
+                                            missing, please confirm package labels or verify with local delivery drivers
+                                            before submitting claims support.</div>
+                                    </details>
+                                    <details class="group py-3.5">
+                                        <summary
+                                            class="flex items-center justify-between cursor-pointer font-medium text-sm sm:text-base text-normal-gray font-bold hover:text-sea-green-deep transition list-none [&::-webkit-details-marker]:hidden">
+                                            <span>I want to modify my order?</span>
+                                            <span
+                                                class="material-symbols-outlined text-sea-green-deep transition-transform duration-200 group-open:rotate-180">keyboard_arrow_down</span>
+                                        </summary>
+                                        <div class="mt-2.5 text-sm text-medium-gray leading-relaxed">Order modifications
+                                            can be initiated if fulfillment operations have not started processing items
+                                            in production bins.</div>
+                                    </details>
+                                    <details class="group py-3.5">
+                                        <summary
+                                            class="flex items-center justify-between cursor-pointer font-medium text-sm sm:text-base text-normal-gray font-bold hover:text-sea-green-deep transition list-none [&::-webkit-details-marker]:hidden">
+                                            <span>Items are different from what I ordered?</span>
+                                            <span
+                                                class="material-symbols-outlined text-sea-green-deep transition-transform duration-200 group-open:rotate-180">keyboard_arrow_down</span>
+                                        </summary>
+                                        <div class="mt-2.5 text-sm text-medium-gray leading-relaxed">Please document
+                                            mismatched package contents via image capture guidelines and report issues
+                                            instantly below.</div>
+                                    </details>
+                                    <details class="group py-3.5">
+                                        <summary
+                                            class="flex items-center justify-between cursor-pointer font-medium text-sm sm:text-base text-normal-gray font-bold hover:text-sea-green-deep transition list-none [&::-webkit-details-marker]:hidden">
+                                            <span>How do i get an invoice from order?</span>
+                                            <span
+                                                class="material-symbols-outlined text-sea-green-deep transition-transform duration-200 group-open:rotate-180">keyboard_arrow_down</span>
+                                        </summary>
+                                        <div class="mt-2.5 text-sm text-medium-gray leading-relaxed">Official receipts
+                                            and tax files can be saved down under account archives available following
+                                            checkout success events.</div>
+                                    </details>
+                                    <details class="group py-3.5">
+                                        <summary
+                                            class="flex items-center justify-between cursor-pointer font-medium text-sm sm:text-base text-normal-gray font-bold hover:text-sea-green-deep transition list-none [&::-webkit-details-marker]:hidden">
+                                            <span>How can I do online payment?</span>
+                                            <span
+                                                class="material-symbols-outlined text-sea-green-deep transition-transform duration-200 group-open:rotate-180">keyboard_arrow_down</span>
+                                        </summary>
+                                        <div class="mt-2.5 text-sm text-medium-gray leading-relaxed">We receive major
+                                            credit structures, digital platform wallets, unified routing frameworks, and
+                                            safe banking links.</div>
+                                    </details>
+                                    <details class="group py-3.5">
+                                        <summary
+                                            class="flex items-center justify-between cursor-pointer font-medium text-sm sm:text-base text-normal-gray font-bold hover:text-sea-green-deep transition list-none [&::-webkit-details-marker]:hidden">
+                                            <span>When will I receive my order?</span>
+                                            <span
+                                                class="material-symbols-outlined text-sea-green-deep transition-transform duration-200 group-open:rotate-180">keyboard_arrow_down</span>
+                                        </summary>
+                                        <div class="mt-2.5 text-sm text-medium-gray leading-relaxed">Transit tracking
+                                            times fluctuate matching localized destination addresses and targeted
+                                            selected dispatch modes.</div>
+                                    </details>
+                                    <details class="group py-3.5">
+                                        <summary
+                                            class="flex items-center justify-between cursor-pointer font-medium text-sm sm:text-base text-normal-gray font-bold hover:text-sea-green-deep transition list-none [&::-webkit-details-marker]:hidden">
+                                            <span>I have received Damaged products.</span>
+                                            <span
+                                                class="material-symbols-outlined text-sea-green-deep transition-transform duration-200 group-open:rotate-180">keyboard_arrow_down</span>
+                                        </summary>
+                                        <div class="mt-2.5 text-sm text-medium-gray leading-relaxed">Damaged item sets
+                                            are covered under full resolution processing when verified through rapid
+                                            support review chains.</div>
+                                    </details>
                                 </div>
-                                <div class="flex items-center gap-2">
-                                    <div class="border border-deep-teal rounded-lg p-2.5 cursor-pointer">
-                                        <i data-lucide="x" data-popup="reportIssuePopup" class="close-popup"></i>
-                                    </div>
-                                </div>
+                            </main>
+                        </div>
+
+                        <!-- MODULE 2: REPORT AN ISSUE PANEL (ENHANCED MULTI-SELECT + IMAGE PREVIEW) -->
+                        <div id="content-report"
+                            class="hidden flex flex-col items-center mt-3 max-w-6xl mx-auto w-full min-h-[720px]">
+                            <div class="w-34 h-34 flex items-center justify-center mb-3">
+                                <img src="/assets/img/illustration.svg" alt="">
                             </div>
-                            <p class="font-normal text-sm text-charcoal-black pt-2">Review the extracted data below. You
-                                can
-                                edit and manage it before sharing</p>
-                            <div class="mt-4 p-2.5 border border-dashed rounded-[20px] upload-area">
-                                <div class="flex flex-col items-center gap-2.5">
-                                    <div
-                                        class="w-9 h-9 rounded-full bg-mint-cream cursor-pointer flex items-center justify-center">
-                                        <i data-lucide="move-up" class="m-2"></i>
-                                    </div>
-                                    <span class="font-bold text-base text-deep-teal-green cursor-pointer">Click
-                                        here</span>
-                                    <p class="font-normal text-xs text-smoky-blue-gray">Please upload a clear image of
-                                        the
-                                        prescription showing doctor and patient details.</p>
-                                </div>
-                            </div>
-                            <input type="file" id="fileInput" name="upload-file" accept="image/*" class="hidden">
-                            <div class="hidden flex justify-between items-center fileInfo pt-4">
-                                <span class="fileName font-normal text-xs text-slate-gray truncate"></span>
-                            </div>
-                            <div class="mt-4 flex items-center justify-between patient-doctor-dropdowns gap-2">
-                                <!-- Patient Dropdown Container -->
-                                <div class="custom-select-container relative z-10 w-full max-w-[23.188rem]">
-                                    <div
-                                        class="flex items-center  px-3 sm:px-2 py-2 bg-white rounded-full  cursor-pointer border border-gray my-1 md:my-0">
-                                        <!-- Placeholder image for Patient icon -->
-                                        <img src="/assets/img/patient-icon.svg" alt="Patient"
-                                            class="h-8 w-8 rounded-full">
-                                        <div class="relative w-full">
-                                            <input
-                                                class="custom-select-input block w-full bg-transparent border-none py-2 px-3 text-sm leading-tight focus:outline-none appearance-none text-left cursor-pointer text-gray placeholder:text-gray"
-                                                placeholder="Patient" readonly>
-                                            <div
-                                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                                                <!-- SVG for down arrow -->
-                                                <img src="/assets/img/down-arrow.svg" alt="">
+                            <h3 class="text-lg  text-gray mb-6">How can we help you ?</h3>
+
+                            <form id="enhancedReportForm" class="w-full space-y-6">
+                                <!-- Multi-Select: Issue Type (chip-based) -->
+                                <div>
+                                    <label class="block text-sm  text-gray mb-2">Select a Issue Type</label>
+                                    <div class="relative" id="issueTypeMultiselect">
+                                        <div class="w-full bg-white border border-gray-300 rounded-xl px-4 py-2.5 flex items-center flex-wrap gap-2 min-h-[56px] cursor-pointer justify-between"
+                                            id="issueTypeTrigger">
+                                            <div class="flex flex-wrap items-center gap-2 flex-1"
+                                                id="issueTypeChipsContainer">
+                                                <span class="text-gray-400 text-sm" id="issueTypePlaceholder">Select
+                                                    options...</span>
                                             </div>
+                                            <span class="material-symbols-outlined text-gray-500">expand_more</span>
                                         </div>
-                                    </div>
-                                    <!-- Patient Dropdown Menu -->
-                                    <div
-                                        class="custom-select-menu hidden absolute top-full left-2 z-10 w-full bg-white rounded-md shadow-lg mt-1 overflow-hidden border">
-                                        <ul class="py-1">
-                                            <li
-                                                class="custom-select-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none cursor-pointer">
-                                                Patient 1
-                                            </li>
-                                            <li
-                                                class="custom-select-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none cursor-pointer">
-                                                Patient 2
-                                            </li>
-                                        </ul>
+                                        <div class="absolute left-0 right-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-lg z-20 hidden max-h-60 overflow-y-auto"
+                                            id="issueTypeDropdown">
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Order & Bidding">Order & Bidding</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Payments">Payments</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Delivery">Delivery</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Account Verification">Account Verification</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Returns">Returns</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="General Enquiries">General Enquiries</div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <!-- Doctor Dropdown Container -->
-                                <div class="custom-select-container relative z-10 w-full max-w-[23.188rem]">
-                                    <div
-                                        class="flex items-center  px-3 sm:px-2 py-2 bg-white rounded-full  cursor-pointer border border-gray my-1 md:my-0">
-                                        <!-- Placeholder image for Doctor icon -->
-                                        <img src="/assets/img/doctor-icon.svg" alt="Doctor"
-                                            class="h-8 w-8 rounded-full">
-                                        <div class="relative w-full">
-                                            <input
-                                                class="custom-select-input block w-full bg-transparent border-none py-2 px-3 text-sm leading-tight focus:outline-none appearance-none text-left cursor-pointer text-gray placeholder:text-gray"
-                                                placeholder="Doctor" readonly>
-                                            <div
-                                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                                                <!-- SVG for down arrow -->
-                                                <img src="/assets/img/down-arrow.svg" alt="">
+                                <!-- Multi-Select: Issue (chip-based) -->
+                                <div>
+                                    <label class="block text-sm text-gray mb-2">Select a Issue</label>
+                                    <div class="relative" id="issueItemMultiselect">
+                                        <div class="w-full bg-white border border-gray-300 rounded-xl px-4 py-2.5 flex items-center flex-wrap gap-2 min-h-[56px] cursor-pointer justify-between"
+                                            id="issueItemTrigger">
+                                            <div class="flex flex-wrap items-center gap-2 flex-1"
+                                                id="issueItemChipsContainer">
+                                                <span class="text-gray-400 text-sm" id="issueItemPlaceholder">Select
+                                                    issues...</span>
                                             </div>
+                                            <span class="material-symbols-outlined text-gray-500">expand_more</span>
+                                        </div>
+                                        <div class="absolute left-0 right-0 mt-1 bg-white border border-gray-200 rounded-xl shadow-lg z-20 hidden max-h-60 overflow-y-auto"
+                                            id="issueItemDropdown">
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="My accepted bid disappeared">My accepted bid disappeared
+                                            </div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Payment failure / declined">Payment failure / declined</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Order not delivered">Order not delivered</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Wrong item received">Wrong item received</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Account login issue">Account login issue</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Refund not processed">Refund not processed</div>
+                                            <div class="option-item px-4 py-2.5 hover:bg-teal-50 cursor-pointer text-gray-700"
+                                                data-value="Coupon code error">Coupon code error</div>
                                         </div>
                                     </div>
-                                    <!-- Patient Dropdown Menu -->
-                                    <div
-                                        class="custom-select-menu hidden absolute top-full left-4 z-10 w-full bg-white rounded-md shadow-lg mt-1 overflow-hidden border">
-                                        <ul class="py-1">
-                                            <li
-                                                class="custom-select-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none cursor-pointer">
-                                                Doctor 1
-                                            </li>
-                                            <li
-                                                class="custom-select-option block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none cursor-pointer">
-                                                Doctor 2
-                                            </li>
-                                        </ul>
+                                </div>
+
+                                <!-- Description -->
+                                <div>
+                                    <label class="block text-sm  text-gray mb-2">Description</label>
+                                    <input type="text" id="issueDescriptionInput" value="My accepted bid disappeared"
+                                        class="w-full border border-gray-300 rounded-xl p-3.5 text-gray-800 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none">
+                                </div>
+
+                                <!-- Upload Image with preview -->
+                                <div>
+                                    <label class="block text-sm  text-gray mb-2">Upload Image</label>
+                                    <div id="uploadTrigger"
+                                        class="border-2 border-dashed border-gray rounded-xl p-6 flex flex-col items-center justify-center  hover:bg-gray-100 transition cursor-pointer">
+                                        <span
+                                            class="material-symbols-outlined text-gray-500 text-3xl">cloud_upload</span>
+                                        <p class="text-sm text-gray-600 font-medium mt-1">Upload png, jpg, or video</p>
+                                        <p class="text-xs text-gray-400 mt-0.5">Max File Size 1MB</p>
                                     </div>
+                                    <input type="file" id="imageFileInput"
+                                        accept="image/png, image/jpeg, image/jpg, video/mp4" style="display: none;">
+                                    <div id="imagePreviewArea" class="flex flex-wrap gap-3 mt-3"></div>
+                                </div>
+
+                                <div class="pt-3">
+                                    <button type="submit"
+                                        class="w-full bg-sea-green2 text-white font-semibold py-3.5 rounded-xl shadow-md hover:bg-teal-800 transition">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- MODULE 3: EMAIL SUPPORT PANEL -->
+                        <div id="content-email" class= " mt-5 hidden max-w-5xl mx-auto w-full">
+                            <form id="enhancedEmailForm" class="space-y-6">
+                                <!-- Email Address -->
+                                <div>
+                                    <label class="block text-sm  text-gray mb-2">Email Address</label>
+                                    <input type="email" placeholder="yourmail@gmail.com"
+                                        class="w-full border border-gray-300 rounded-xl p-3.5 text-gray-800 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 outline-none">
+                                </div>
+
+                                <!-- Message -->
+                                <div>
+                                    <label class="block text-sm  text-gray mb-2">Message</label>
+                                    <textarea rows="6" placeholder="Type here....."
+                                        class="w-full border border-gray-300 rounded-xl p-3.5 text-gray-800 focus:border-teal-500 focus:ring-1 focus:ring-teal-500 resize-none"></textarea>
+                                </div>
+
+                                <!-- Upload Image with preview (same as report panel) -->
+                                <div>
+                                    <label class="block text-sm text-gray- mb-2">Upload Image</label>
+                                    <div id="emailUploadTrigger"
+                                        class="border-2 border-dashed border-gray rounded-xl p-6 flex flex-col items-center justify-center  hover:bg-gray-100 transition cursor-pointer">
+                                        <span
+                                            class="material-symbols-outlined text-gray-500 text-3xl">cloud_upload</span>
+                                        <p class="text-sm text-gray-600 font-medium mt-1">Upload png, jpg, or video</p>
+                                        <p class="text-xs text-gray-400 mt-0.5">Max File Size 1MB</p>
+                                    </div>
+                                    <input type="file" id="emailFileInput"
+                                        accept="image/png, image/jpeg, image/jpg, video/mp4" style="display: none;">
+                                    <div id="emailPreviewArea" class="flex flex-wrap gap-3 mt-3"></div>
+                                </div>
+
+                                <!-- Send Button -->
+                                <div class="pt-2">
+                                    <button type="submit"
+                                        class="w-full bg-sea-green2 text-white font-semibold py-3.5 rounded-xl shadow-md hover:bg-opacity-95 transition">Send</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+                        <!-- MODULE 4: CHAT SUPPORT PANEL -->
+              <div id="content-chat" class="mt-1 flex flex-col w-full bg-white rounded-xl px-6">
+
+  <!-- Today Divider -->
+  <div class="flex items-center my-4 w-full">
+    <div class="flex-1 border-t border-gray-200"></div>
+    <span class="px-3 text-xs font-semibold text-gray bg-white">Today</span>
+    <div class="flex-1 border-t border-gray-200"></div>
+  </div>
+
+  <!-- Chat Messages Container -->
+  <div id="chatMessagesContainer" class="flex flex-col space-y-3 max-h-[480px] overflow-y-auto py-4">
+  </div>
+
+  <!-- Input Area -->
+  <div class="mt-4 border border-gray-300 rounded-full flex items-center px-4 py-2 bg-white gap-2">
+    <input type="text" id="chatInput" placeholder="Type your message..." class="flex-1 bg-transparent border-none text-sm text-gray-800 focus:outline-none">
+    <div class="flex items-center gap-1.5 text-medium-gray">
+      <span id="chatAttachBtn" class="material-symbols-outlined text-xl cursor-pointer hover:text-sea-green-deep transition">attach_file</span>
+      <input type="file" id="chatFileInput" accept="image/*,video/*,application/pdf" style="display:none;">
+      <span id="chatVoiceBtn" class="material-symbols-outlined text-xl cursor-pointer hover:text-sea-green-deep transition">mic</span>
+      <button id="sendChatBtn" class="p-1.5 bg-sea-green-deep text-white rounded-full flex items-center justify-center w-8 h-8 hover:bg-opacity-90 transition">
+        <span class="material-symbols-outlined text-lg">send</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Attachment Preview -->
+  <div id="chatAttachmentPreview" class="py-3 flex flex-wrap gap-2 items-center"></div>
+</div>
+
+                        <!-- MODULE 5: TICKET HISTORY PANEL (with final modal design) -->
+                        <div id="content-history" class="hidden w-full">
+                            <div
+                                class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-5">
+                                <h2 class="text-lg font-semibold text-gray">Ticket history</h2>
+                                <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+                                    <div class="relative flex items-center w-full sm:w-80">
+                                        <span
+                                            class="material-symbols-outlined absolute left-3  text-lg">search</span>
+                                        <input type="text" id="ticketSearchInput"
+                                            placeholder="Search by name or categories"
+                                            class="w-full border border-gray-300 rounded-xl py-2.5 pl-10 pr-4 text-sm text-gray4 focus:outline-none focus:border-sea-green-deep shadow-sm">
+                                    </div>
+                                    <button id="sortBtn"
+                                        class="flex items-center gap-1 px-4 py-2 border border-sea-green2 rounded-xl text-sm text-sea-green-deep font-medium bg-white hover:bg-gray-50 transition">
+                                        <span class="material-symbols-outlined text-base">expand_more</span>Sort
+                                    </button>
+                                    <button id="filterBtn"
+                                        class="flex items-center gap-1 px-4 py-2 border border-sea-green2 rounded-xl text-sm text-sea-green-deep font-medium bg-white hover:bg-gray-50 transition">
+                                        <span class="material-symbols-outlined text-base">filter_list</span>Filter
+                                    </button>
                                 </div>
                             </div>
-                            <div class="mt-4 flex items-center justify-center">
-                                <button
-                                    class="px-4 py-0.5 rounded-lg bg-deep-teal-green text-white w-48 h-10 cursor-pointer font-semibold text-sm getDetailsBtn">Get
-                                    Details</button>
+
+                            <div class="w-full overflow-x-auto border border-gray-200  shadow-sm">
+                                <table class="w-full min-w-[800px] border-collapse">
+                                    <thead class="bg-sea-green2 text-white">
+                                        <tr>
+                                            <th
+                                                class="px-7 py-4 text-center font-semibold text-lg border-r border-white/30">
+                                                Ticket ID</th>
+                                            <th
+                                                class="px-7 py-4 text-center font-semibold text-lg border-r border-white/30">
+                                                Issue</th>
+                                            <th
+                                                class="px-7 py-4 text-center font-semibold text-lg border-r border-white/30">
+                                                Date</th>
+                                            <th
+                                                class="px-7 py-4 text-center font-semibold text-lg border-r border-white/30">
+                                                Status</th>
+                                            <th class="px-7 py-4 text-lg text-center text-lg">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ticketTableBody" class="divide-y divide-gray-100 bg-white"></tbody>
+                                </table>
+                            </div>
+
+                            <div class="flex items-center justify-center gap-4 mt-6 text-sm font-medium text-gray-600">
+                                <button id="prevPageBtn"
+                                    class="hover:text-sea-green-deep transition px-3 py-1 rounded-md">Previous</button>
+                                <div id="paginationNumbers" class="flex items-center gap-2"></div>
+                                <button id="nextPageBtn"
+                                    class="hover:text-sea-green-deep transition px-3 py-1 rounded-md">Next</button>
                             </div>
                         </div>
+
+                        <!-- MODAL POPUP - Exact design from image -->
+                        <div id="ticketModal"
+                            class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 font-sans hidden">
+                            <div class="bg-white rounded-3xl w-full max-w-[580px] p-8 shadow-xl relative text-left">
+                                <!-- Close button -->
+                                <button id="closeModalBtn"
+                                    class="absolute top-6 right-6 w-11 h-11 flex items-center justify-center border border-gray-200 rounded-xl text-gray-500 hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+
+                                <div class="mb-6">
+                                    <h2 id="modalIssueTitle" class="text-xl font-semibold text-gray-800">Payment Issue
+                                    </h2>
+                                    <div class="flex items-center gap-3 mt-1">
+                                        <span id="modalTicketId"
+                                            class="text-sm font-medium text-gray-500">#778755</span>
+                                        <span id="modalStatusBadge"
+                                            class="text-sm font-semibold text-[#32B947]">Successful</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-5">
+                                    <!-- Issue Type -->
+                                    <div>
+                                        <label class="block text-[13px] font-medium text-gray-600 mb-2">Issue
+                                            Type</label>
+                                        <div id="modalIssueType"
+                                            class="w-full border border-gray-200 rounded-2xl px-4 py-3.5 text-sm text-gray-700 bg-white">
+                                            Order & Bidding
+                                        </div>
+                                    </div>
+
+                                    <!-- Issue -->
+                                    <div>
+                                        <label class="block text-[13px] font-medium text-gray-600 mb-2">Issue</label>
+                                        <div id="modalIssueDesc"
+                                            class="w-full border border-gray-200 rounded-2xl px-4 py-3.5 text-sm text-gray-700 bg-white">
+                                            My accepted bid disappeared
+                                        </div>
+                                    </div>
+
+                                    <!-- Uploaded Images (multiple previews) -->
+                                    <div>
+                                        <label class="block text-[13px] font-medium text-gray-600 mb-2.5">Uploaded
+                                            Image</label>
+                                        <div id="modalImagesContainer" class="flex gap-4 flex-wrap">
+                                            <!-- Dynamic images will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-8 pt-6 border-t border-gray-100">
+                                    <div class="flex items-center gap-2 mb-2 text-gray-800">
+                                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor"
+                                            stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <h4 class="text-[15px] font-semibold">Still Facing Issues ?</h4>
+                                    </div>
+
+                                    <p class="text-xs text-gray-500 mb-4 leading-relaxed">
+                                        This issue had been closed. if you need further help on this, you can
+                                    </p>
+
+                                    <button id="startNewConversationBtn"
+                                        class="flex items-center gap-2.5 border border-gray-300 rounded-full px-5 py-2.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 transition-colors">
+                                        <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                            stroke-width="2" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                                        </svg>
+                                        Start new conversation
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
                     </div>
+
+
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        lucide.createIcons();
-    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="/script/help-center.js"></script>
+    <script src="/script/pharmacy/account-sidebar.js"></script>
+    <script src="/script/pharmacy/mysave.js"></script>
+    <script src="/script/pharmacy/help-center.js"></script>
 </body>
 
 </html>
