@@ -79,14 +79,26 @@
 
     <main class="bg-gray-50 min-h-screen pb-12">
 
-       <!-- Back Button -->
-       <div class="px-4 sm:px-6 lg:px-10 xl:px-20 py-4">
-        <a href="/src/Doctor/home.html">
-            <button class="max-w-[163px] w-full border border-sea-green-dark1 text-sea-green-dark1 py-2 rounded-lg font-semibold">
-                Back
-            </button>
-        </a>
-       </div>
+      
+<div class="max-w-[1380px] mx-auto px-4 pt-4 flex items-center justify-between">
+
+    
+    <button
+        class="border border-sea-green-dark2 text-sea-green-dark2 px-10 py-2 rounded-md text-sm font-medium hover:bg-sea-green-dark2 hover:text-white transition">
+        Back
+    </button>
+
+    <!-- Close Button -->
+    <button
+        class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md text-gray-500 hover:bg-red-50 hover:text-red-500 hover:border-red-300 transition">
+
+        <span class="material-symbols-outlined">
+            close
+        </span>
+
+    </button>
+
+</div>
 
 <!-- Doctor Details Section -->
     <div class=" max-w-9xl mx-auto px-4 py-6">
@@ -94,7 +106,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
 
         <!-- Left Card -->
-        <!-- <div class="lg:col-span-4 bg-white border border-gray-200 rounded-md p-3"> -->
+       
             <div class="lg:col-span-4  bg-white border border-gray-200 rounded-md w-[85%]  h-[550px]">
             <div class="overflow-hidden rounded-md">
              <img

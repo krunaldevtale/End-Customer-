@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Notification Page">
+    <title>Cart | MedFlow</title>
+
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./script/main.js"></script>
+
+</head>
+<body>
+     <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+        <div class="max-w-[150px] max-h-10">
+            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+        </div>
+        <nav>
+            <div>
+                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                    <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a>
+                        <ul
+                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group"><a href="./medicine.html" class="flex items-center">Medicine
+                        </a>
+
+                    </li>
+                    <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a></li>
+                    <li><a href="/src/records.html">Records</a></li>
+                    <li><a href="#">Rewards</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li>
+                        <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                            <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                        </div>
+                    </li>
+                    <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                </ul>
+            </div>
+            <ul id="mobile-menu"
+                class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                <li><a href="#" class="block">Home</a></li>
+                <li><a href="#" class="block">About</a></li>
+                <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                        <li><a href="#" class="block">Web Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="block">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<div class="py-6 text-center" style="background: linear-gradient(135deg, #084433, #238B6D);">
+            <h2 class="text-white text-2xl font-bold">Flat 20% OFF on First Order</h2>
+            <p class="text-[#F5B326] text-sm mt-1">Upload prescription and we will do the rest for you!</p>
+        </div> 
+
+   <div class="w-full max-w-[1600px] mx-auto pt-6 pb-6 pr-6 pl-12 md:pl-20 bg-white rounded-lg font-sans">
+  <div class="mb-8">
+    <h2 class="text-2xl font-bold text-gray-dark">Add your Address</h2>
+    <div class="w-16 h-1 bg-sea-green2 mt-2"></div>
+  </div>
+
+  <div class="border border-gray-100 rounded-xl p-6 shadow-sm">
+    <form class="space-y-4" onsubmit="event.preventDefault();">
+      
+      <div>
+        <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:border-sea-green2 transition" placeholder="First Name" />
+      </div>
+
+      <div>
+        <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:border-sea-green2 transition" placeholder="Last Name" />
+      </div>
+
+      <div>
+        <input type="tel" class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:border-sea-green2 transition" placeholder="Phone" />
+      </div>
+
+      <div>
+        <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-700 placeholder-gray-400 focus:outline-none focus:border-sea-green2 transition" placeholder="Address" />
+      </div>
+
+      <div class="relative">
+        <select class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-400 bg-white appearance-none focus:outline-none focus:border-sea-green2 transition cursor-pointer">
+          <option value="" disabled selected hidden>Area</option>
+          <option value="area_1">Piplani petrol pump</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+
+      <div class="relative">
+        <select class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-400 bg-white appearance-none focus:outline-none focus:border-sea-green2 transition cursor-pointer">
+          <option value="" disabled selected hidden>City</option>
+          <option value="bhopal">Bhopal</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+
+      <div class="relative">
+        <select class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-400 bg-white appearance-none focus:outline-none focus:border-sea-green2 transition cursor-pointer">
+          <option value="" disabled selected hidden>Zip Code</option>
+          <option value="462022">462022</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+
+      <div class="relative">
+        <select class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-400 bg-white appearance-none focus:outline-none focus:border-sea-green2 transition cursor-pointer">
+          <option value="" disabled selected hidden>Country</option>
+          <option value="india">India</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-2 gap-4">
+        <span class="text-[18px] font-semibold text-gray">Choose Address Type</span>
+        
+        <div id="add-type-group" class="flex gap-2">
+          <button type="button" class="addr-btn flex items-center gap-2 bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-800 active:scale-95 px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer border border-transparent hover:border-gray-300">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            Home
+          </button>
+          
+          <button type="button" class="addr-btn flex items-center gap-2 bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-800 active:scale-95 px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer border border-transparent hover:border-gray-300">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            Office
+          </button>
+          
+          <button type="button" class="addr-btn flex items-center gap-2 bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-800 active:scale-95 px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer border border-transparent hover:border-gray-300">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            City
+          </button>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-4 border-t border-gray-50 gap-4">
+        <label class="flex items-center gap-2 cursor-pointer select-none">
+          <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-sea-green2 focus:ring-sea-green2 cursor-pointer" />
+          <span class="text-sm font-normal text-dark-gray">Set Default Address</span>
+        </label>
+        
+        <button type="submit" class="w-full sm:w-auto bg-sea-green2 hover:opacity-90 text-white font-medium px-30 py-3 rounded-lg shadow-md active:scale-[0.98] transition text-center cursor-pointer">
+          Save Now
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script>
+  const typeButtons = document.querySelectorAll('.addr-btn');
+
+  typeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      
+      typeButtons.forEach(btn => {
+        btn.classList.remove('bg-sea-green2', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-gray-100', 'text-gray-600', 'hover:bg-gray-200', 'hover:border-gray-300');
+      });
+
+     
+      button.classList.remove('bg-gray-100', 'text-gray-600', 'hover:bg-gray-200', 'hover:border-gray-300');
+      button.classList.add('bg-sea-green2', 'text-white', 'shadow-sm');
+    });
+  });
+</script>
+
+
+     <footer>
+            <!-- Top Footer Content -->
+            <div
+                class="bg-gray-tint px-6 sm:px-10 md:px-16 xl:px-20 py-16 md:py-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+                <!-- Logo & Contact -->
+                <div class="flex flex-col gap-3.5">
+
+                    <a href="#">
+                        <img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" />
+                    </a>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Phone:
+                            <span class="text-dim-gray text-15-normal">(+123) 456-7898</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Email:
+                            <span class="text-dim-gray text-15-normal">hello@drodo.com</span>
+                        </h3>
+                        <h3 class="text-15-semibold text-dark-charcoal">
+                            Address:
+                            <span class="text-dim-gray text-15-normal">6890 Blvd, The Bronx, NY 1058, USA</span>
+                        </h3>
+                    </div>
+                    <!-- Social Icons -->
+                    <div class="flex gap-3 flex-wrap">
+                        <a href="#"><img src="/assets/img/facebook-icon.svg" alt="facebook-icon" /></a>
+                        <a href="#"><img src="/assets/img/twitter-icon.svg" alt="twitter-icon" /></a>
+                        <a href="#"><img src="/assets/img/Instagram-icon.svg" alt="Instagram-icon" /></a>
+                        <a href="#"><img src="/assets/img/linkdin-icon.svg" alt="linkdin-icon" /></a>
+                        <a href="#"><img src="/assets/img/Pinterest-icon.svg" alt="Pinterest-icon" /></a>
+                    </div>
+                </div>
+
+                <!-- Information -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Information</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Customer Care -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Customer Care</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Records</a></li>
+                        <li><a href="#">Rewards</a></li>
+                        <li><a href="#">Help & FAQs</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Policy -->
+                <nav class="footer-nav flex flex-col gap-7">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Policy</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <ul class="space-y-3 list-disc text-15-normal text-dim-gray pl-4">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Purchasing Policy</a></li>
+                        <li><a href="#">Orders and Returns</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Newsletter -->
+                <nav class="flex flex-col gap-5">
+                    <div>
+                        <h3 class="text-22-bold text-dark-slate">Newsletter</h3>
+                        <hr class="w-20 text-sea-green-deep border-t-2" />
+                    </div>
+                    <p class="text-15-normal text-dim-gray">
+                        Sign up for our mailing list to get the latest updates & offers.
+                    </p>
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Enter your email address"
+                            class="h-[50px] w-full py-3 px-4 text-muted-gray placeholder:text-muted-gray focus:outline-none focus:ring-0 rounded border border-light-gray text-15-normal" />
+                        <button
+                            class="w-full py-3 px-6 flex items-center justify-center rounded bg-sea-green-deep text-15-semibold text-white hover:opacity-90 transition cursor-pointer">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Bottom Footer Strip -->
+            <div class="bg-snow-gray py-6 px-6 sm:px-10 md:px-16 xl:px-20 w-full">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                    <p class="text-dim-gray text-15-normal">
+                        @ Avatar. Designed By Aibuzz
+                    </p>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <p class="text-dim-gray text-15-normal">
+                            We accept payment via:
+                        </p>
+                        <div class="flex items-center flex-wrap gap-2 sm:gap-[10px] justify-center sm:justify-start">
+                            <img src="/assets/img/payment-via-1.png" alt="payment-1" class="h-6" />
+                            <img src="/assets/img/payment-via-5.png" alt="payment-2" class="h-6" />
+                            <img src="/assets/img/payment-via-4.png" alt="payment-3" class="h-6" />
+                            <img src="/assets/img/payment-via-3.png" alt="payment-4" class="h-6" />
+                            <img src="/assets/img/payment-via-2.png" alt="payment-5" class="h-6" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
